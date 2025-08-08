@@ -18,4 +18,4 @@ Cangjie API Public Repository, which includes Cangjie API interface declarations
 
 ## Related Repositories
 
-[cangjie_api](https://gitcode.com/Cangjie/cangjie-api/tree/dev)
+[cangjie_ark_interop](https://gitcode.com/Cangjie/cangjie-api/tree/dev)
