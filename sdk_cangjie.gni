@@ -85,10 +85,10 @@ template("cj_ohos_sdk_shared_lib") {
     }
 }
 
-cangjie_api_path = "//arkcompiler/cangjie_api" 
+cangjie_api_path = "//arkcompiler/cangjie_ark_interop"
 cangjie_systemapi_api = "${cangjie_api_path}/api"
 cangjie_sdk_macro_libs = [
-  "//foundation/arkui/arkui_cangjie_api/ohos:ohos.state_macro_manage",
+  "//foundation/arkui/arkui_cangjie_wrapper/ohos:ohos.state_macro_manage",
   "${cangjie_systemapi_api}/ohos/interop:ohos.ark_interop_macro"
 ]
 template("cj_ohos_sdk_macro") {
