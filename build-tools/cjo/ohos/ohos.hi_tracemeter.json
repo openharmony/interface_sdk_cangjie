@@ -1,0 +1,1229 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.hi_tracemeter",
+  pkgDepInfo: "{\"package\":\"ohos.hi_tracemeter\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"hi_trace_meter.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"hi_trace_meter.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"hi_trace_meter.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"hi_trace_meter.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}}]}]}",
+  imports: [
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.hi_tracemeter/hi_trace_meter.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 7
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.hi_tracemeter",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 75,
+        ignore: false
+      },
+      identifier: "FfiOHOSHiTraceStartAsyncTrace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSHiTraceStartAsyncTrace",
+      exportId: "FfiOHOSHiTraceStartAsyncTrace",
+      mangledBeforeSema: "18ohos.hi_tracemeter29FfiOHOSHiTraceStartAsyncTraceF7CStringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 15917977042311241706
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                2,
+                3
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 53,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN18ohos.hi_tracemeter29FfiOHOSHiTraceStartAsyncTraceHkiE4nameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 68,
+        ignore: false
+      },
+      identifier: "taskId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 55,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN18ohos.hi_tracemeter29FfiOHOSHiTraceStartAsyncTraceHkiE6taskIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.hi_tracemeter",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 76,
+        ignore: false
+      },
+      identifier: "FfiOHOSHiTraceFinishAsyncTrace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSHiTraceFinishAsyncTrace",
+      exportId: "FfiOHOSHiTraceFinishAsyncTrace",
+      mangledBeforeSema: "18ohos.hi_tracemeter30FfiOHOSHiTraceFinishAsyncTraceF7CStringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 15917977042311241706
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                5,
+                6
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 54,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN18ohos.hi_tracemeter30FfiOHOSHiTraceFinishAsyncTraceHkiE4nameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 69,
+        ignore: false
+      },
+      identifier: "taskId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN18ohos.hi_tracemeter30FfiOHOSHiTraceFinishAsyncTraceHkiE6taskIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.hi_tracemeter",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 2,
+        ignore: false
+      },
+      identifier: "HiTraceMeter",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeterE",
+      exportId: "_CN18ohos.hi_tracemeter12HiTraceMeterE",
+      mangledBeforeSema: "18ohos.hi_tracemeter12HiTraceMeterC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16979810359688402845
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          9
+        ],
+        body: [
+          8,
+          11,
+          14
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.hi_tracemeter",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 6,
+        ignore: false
+      },
+      identifier: "startTrace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter10startTraceHRNat6StringEi",
+      exportId: "_CN18ohos.hi_tracemeter12HiTraceMeter10startTraceHRNat6StringEi",
+      mangledBeforeSema: "18ohos.hi_tracemeter12HiTraceMeterC10startTraceF6Stringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 14619357020873386698
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                9,
+                10
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 47,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 35,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter10startTraceHRNat6StringEiE4nameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 62,
+        ignore: false
+      },
+      identifier: "taskId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter10startTraceHRNat6StringEiE6taskIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.hi_tracemeter",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 6,
+        ignore: false
+      },
+      identifier: "finishTrace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter11finishTraceHRNat6StringEi",
+      exportId: "_CN18ohos.hi_tracemeter12HiTraceMeter11finishTraceHRNat6StringEi",
+      mangledBeforeSema: "18ohos.hi_tracemeter12HiTraceMeterC11finishTraceF6Stringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 9665790248894556070
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12,
+                13
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 48,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter11finishTraceHRNat6StringEiE4nameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.hi_tracemeter",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 63,
+        ignore: false
+      },
+      identifier: "taskId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter11finishTraceHRNat6StringEiE6taskIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.hi_tracemeter",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 14,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 26,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN18ohos.hi_tracemeter12HiTraceMeter6<init>Hv",
+      exportId: "_CN18ohos.hi_tracemeter12HiTraceMeter6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 49,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.HiviewDFX.HiTrace",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.HiviewDFX.HiTrace",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.HiviewDFX.HiTrace",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

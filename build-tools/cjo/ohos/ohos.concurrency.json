@@ -1,0 +1,673 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.concurrency",
+  pkgDepInfo: "{\"package\":\"ohos.concurrency\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_concurrency.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_concurrency.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}]}",
+  imports: [
+
+  ],
+  allFiles: [
+    "ohos.concurrency/cj_concurrency.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5,
+        isC: true
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.concurrency",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 74,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPostTaskToMainThread",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkPostTaskToMainThread",
+      exportId: "FfiOHOSAceFrameworkPostTaskToMainThread",
+      mangledBeforeSema: "16ohos.concurrency39FfiOHOSAceFrameworkPostTaskToMainThreadFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17024195639762876925
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                2
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.concurrency",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 67,
+        ignore: false
+      },
+      identifier: "taskId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.concurrency39FfiOHOSAceFrameworkPostTaskToMainThreadHlE6taskIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.concurrency",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 53,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkHasContainer",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "FfiOHOSAceFrameworkHasContainer",
+      exportId: "FfiOHOSAceFrameworkHasContainer",
+      mangledBeforeSema: "16ohos.concurrency31FfiOHOSAceFrameworkHasContainerF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.concurrency",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 2,
+        ignore: false
+      },
+      identifier: "launch",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "_CN16ohos.concurrency6launchHF0uE",
+      exportId: "_CN16ohos.concurrency6launchHF0uE",
+      mangledBeforeSema: "16ohos.concurrency6launchFFu$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1003470351078417993
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                5
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.concurrency",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 36,
+        ignore: false
+      },
+      identifier: "task",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.concurrency6launchHF0uEE4taskE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.concurrency",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 2,
+        ignore: false
+      },
+      identifier: "hasContainer",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "_CN16ohos.concurrency12hasContainerHv",
+      exportId: "_CN16ohos.concurrency12hasContainerHv",
+      mangledBeforeSema: "16ohos.concurrency12hasContainerF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14171122364763433482
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "12"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "12"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

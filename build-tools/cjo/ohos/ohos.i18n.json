@@ -1,0 +1,10107 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.i18n",
+  pkgDepInfo: "{\"package\":\"ohos.i18n\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"calendar.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}},{\"file\":\"i18n_common.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}},{\"file\":\"system.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"calendar.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}},{\"file\":\"i18n_common.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}},{\"file\":\"system.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"calendar.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}},{\"file\":\"i18n_common.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":21}},{\"file\":\"system.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"i18n_common.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":30}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"i18n_common.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":27}}]},{\"package\":\"std.time\",\"isStd\":true,\"imports\":[{\"file\":\"calendar.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":25}},{\"file\":\"i18n_common.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":25}}]}]}",
+  imports: [
+    "std.time",
+    "std.core",
+    "ohos.ffi",
+    "std.collection"
+  ],
+  allFiles: [
+    "ohos.i18n/calendar.cj",
+    "ohos.i18n/i18n_common.cj",
+    "ohos.i18n/system.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 25,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "time"
+          ],
+          identifier: "DateTime",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "deriving"
+          ],
+          identifier: "Derive",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 25,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "time"
+          ],
+          identifier: "DateTime",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 22,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 23,
+            column: 30,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "HashMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 20,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Float64"
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        1,
+        1,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 37
+        }
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        8,
+        1,
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5,
+        isC: true
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        1
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 50
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNbb8DateTimeE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        1,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        1,
+        1,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        39
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        25
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 39
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32,
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN8ohos.ffi14RemoteDataLiteE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        1,
+        32
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        3,
+        3,
+        4,
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 120
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 51
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6ObjectE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 46,
+        ignore: false
+      },
+      identifier: "INVALID_PARAMETER",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN9ohos.i18n17INVALID_PARAMETERE",
+      mangledBeforeSema: "9ohos.i18n17INVALID_PARAMETERV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 15244975355939719537
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 64,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarSetTime",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "FfiOHOSCalendarSetTime",
+      exportId: "FfiOHOSCalendarSetTime",
+      mangledBeforeSema: "9ohos.i18n22FfiOHOSCalendarSetTimeFld$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11071495572996256535
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                3,
+                4
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 42,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n22FfiOHOSCalendarSetTimeHldE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 57,
+        ignore: false
+      },
+      identifier: "time",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN9ohos.i18n22FfiOHOSCalendarSetTimeHldE4timeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 88,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarSetDate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSCalendarSetDate",
+      exportId: "FfiOHOSCalendarSetDate",
+      mangledBeforeSema: "9ohos.i18n22FfiOHOSCalendarSetDateFliii$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7299199592475322457
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                6,
+                7,
+                8,
+                9
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 42,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n22FfiOHOSCalendarSetDateHliiiE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 55,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n22FfiOHOSCalendarSetDateHliiiE4yearE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 57,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 69,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 57,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n22FfiOHOSCalendarSetDateHliiiE5monthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 71,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 81,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 71,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n22FfiOHOSCalendarSetDateHliiiE3dayE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 93,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarSetOfDay",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSCalendarSetOfDay",
+      exportId: "FfiOHOSCalendarSetOfDay",
+      mangledBeforeSema: "9ohos.i18n23FfiOHOSCalendarSetOfDayFliii$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8276099384269653718
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                11,
+                12,
+                13,
+                14
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 43,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n23FfiOHOSCalendarSetOfDayHliiiE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 56,
+        ignore: false
+      },
+      identifier: "hour",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n23FfiOHOSCalendarSetOfDayHliiiE4hourE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 71,
+        ignore: false
+      },
+      identifier: "minute",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 58,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n23FfiOHOSCalendarSetOfDayHliiiE6minuteE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 73,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 86,
+        ignore: false
+      },
+      identifier: "second",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 73,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n23FfiOHOSCalendarSetOfDayHliiiE6secondE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 72,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarSetTimeZone",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FfiOHOSCalendarSetTimeZone",
+      exportId: "FfiOHOSCalendarSetTimeZone",
+      mangledBeforeSema: "9ohos.i18n26FfiOHOSCalendarSetTimeZoneFl7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 14323387851922065004
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16,
+                17
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 46,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n26FfiOHOSCalendarSetTimeZoneHlkE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 65,
+        ignore: false
+      },
+      identifier: "timeZone",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN9ohos.i18n26FfiOHOSCalendarSetTimeZoneHlkE8timeZoneE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 56,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarGetTimeZone",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FfiOHOSCalendarGetTimeZone",
+      exportId: "FfiOHOSCalendarGetTimeZone",
+      mangledBeforeSema: "9ohos.i18n26FfiOHOSCalendarGetTimeZoneFl$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 46,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n26FfiOHOSCalendarGetTimeZoneHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 60,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarGetFirstDayOfWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSCalendarGetFirstDayOfWeek",
+      exportId: "FfiOHOSCalendarGetFirstDayOfWeek",
+      mangledBeforeSema: "9ohos.i18n32FfiOHOSCalendarGetFirstDayOfWeekFl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                21
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 52,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n32FfiOHOSCalendarGetFirstDayOfWeekHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 73,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarSetFirstDayOfWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSCalendarSetFirstDayOfWeek",
+      exportId: "FfiOHOSCalendarSetFirstDayOfWeek",
+      mangledBeforeSema: "9ohos.i18n32FfiOHOSCalendarSetFirstDayOfWeekFli$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                23,
+                24
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 52,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n32FfiOHOSCalendarSetFirstDayOfWeekHliE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 66,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n32FfiOHOSCalendarSetFirstDayOfWeekHliE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 68,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarGetMinimalDaysInFirstWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSCalendarGetMinimalDaysInFirstWeek",
+      exportId: "FfiOHOSCalendarGetMinimalDaysInFirstWeek",
+      mangledBeforeSema: "9ohos.i18n40FfiOHOSCalendarGetMinimalDaysInFirstWeekFl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                26
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 60,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n40FfiOHOSCalendarGetMinimalDaysInFirstWeekHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 81,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarSetMinimalDaysInFirstWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSCalendarSetMinimalDaysInFirstWeek",
+      exportId: "FfiOHOSCalendarSetMinimalDaysInFirstWeek",
+      mangledBeforeSema: "9ohos.i18n40FfiOHOSCalendarSetMinimalDaysInFirstWeekFli$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28,
+                29
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 60,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n40FfiOHOSCalendarSetMinimalDaysInFirstWeekHliE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 74,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n40FfiOHOSCalendarSetMinimalDaysInFirstWeekHliE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 62,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarGet",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FfiOHOSCalendarGet",
+      exportId: "FfiOHOSCalendarGet",
+      mangledBeforeSema: "9ohos.i18n18FfiOHOSCalendarGetFl7CString$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16944170000880587743
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                31,
+                32
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 38,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n18FfiOHOSCalendarGetHlkE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 54,
+        ignore: false
+      },
+      identifier: "field",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN9ohos.i18n18FfiOHOSCalendarGetHlkE5fieldE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 76,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarGetDisplayName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSCalendarGetDisplayName",
+      exportId: "FfiOHOSCalendarGetDisplayName",
+      mangledBeforeSema: "9ohos.i18n29FfiOHOSCalendarGetDisplayNameFl7CString$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16246092249677047920
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                34,
+                35
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 49,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n29FfiOHOSCalendarGetDisplayNameHlkE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 66,
+        ignore: false
+      },
+      identifier: "locale",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN9ohos.i18n29FfiOHOSCalendarGetDisplayNameHlkE6localeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 64,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarIsWeekend",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSCalendarIsWeekend",
+      exportId: "FfiOHOSCalendarIsWeekend",
+      mangledBeforeSema: "9ohos.i18n24FfiOHOSCalendarIsWeekendFl5CDate$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10206839410142117733
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38,
+                39
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 40,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CDate",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 40,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN9ohos.i18n5CDateE",
+      exportId: "_CN9ohos.i18n5CDateE",
+      mangledBeforeSema: "9ohos.i18n5CDateS",
+      hash: {
+        instVar: 10447885751863529295,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          105,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 44,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 35,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n24FfiOHOSCalendarIsWeekendHlRNY_5CDateEE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 57,
+        ignore: false
+      },
+      identifier: "date",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN9ohos.i18n24FfiOHOSCalendarIsWeekendHlRNY_5CDateEE4dateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 99,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarAdd",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "FfiOHOSCalendarAdd",
+      exportId: "FfiOHOSCalendarAdd",
+      mangledBeforeSema: "9ohos.i18n18FfiOHOSCalendarAddFl7CStringi8CPointer<i>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17195342195234366664
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41,
+                42,
+                43,
+                44
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 38,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n18FfiOHOSCalendarAddHlkiPiE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 54,
+        ignore: false
+      },
+      identifier: "field",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN9ohos.i18n18FfiOHOSCalendarAddHlkiPiE5fieldE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 69,
+        ignore: false
+      },
+      identifier: "amount",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n18FfiOHOSCalendarAddHlkiPiE6amountE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 71,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 92,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 71,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN9ohos.i18n18FfiOHOSCalendarAddHlkiPiE4codeIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 60,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarGetTimeInMillis",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "FfiOHOSCalendarGetTimeInMillis",
+      exportId: "FfiOHOSCalendarGetTimeInMillis",
+      mangledBeforeSema: "9ohos.i18n30FfiOHOSCalendarGetTimeInMillisFl$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                46
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 50,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n30FfiOHOSCalendarGetTimeInMillisHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 67,
+        ignore: false
+      },
+      identifier: "FfiOHOSCalendarCompareDays",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "FfiOHOSCalendarCompareDays",
+      exportId: "FfiOHOSCalendarCompareDays",
+      mangledBeforeSema: "9ohos.i18n26FfiOHOSCalendarCompareDaysFl5CDate$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10206839410142117733
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                48,
+                49
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 46,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n26FfiOHOSCalendarCompareDaysHlRNY_5CDateEE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 59,
+        ignore: false
+      },
+      identifier: "date",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN9ohos.i18n26FfiOHOSCalendarCompareDaysHlRNY_5CDateEE4dateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 291,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Calendar",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 2
+            },
+            {
+              name: "atomicservice",
+              expr: 3
+            },
+            {
+              name: "crossplatform",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "_CN9ohos.i18n8CalendarE",
+      exportId: "_CN9ohos.i18n8CalendarE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14226628559908992850,
+        srcUse: 0,
+        bodyHash: 2735527074477264981
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          44
+        ],
+        body: [
+          51,
+          53,
+          54,
+          56,
+          58,
+          80,
+          82,
+          83,
+          84,
+          86,
+          87,
+          89,
+          91,
+          93,
+          96,
+          99,
+          100
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN9ohos.i18n8Calendar6<init>Hl",
+      exportId: "_CN9ohos.i18n8Calendar6<init>Hl",
+      mangledBeforeSema: "9ohos.i18n8CalendarC6<init>Fl$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 852377103796679156
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                52
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 19,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n8Calendar4initHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 6,
+        ignore: false
+      },
+      identifier: "~init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678146887663648,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN9ohos.i18n8Calendar5~initHv",
+      exportId: "_CN9ohos.i18n8Calendar5~initHv",
+      mangledBeforeSema: "9ohos.i18n8CalendarC5~initF$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10860964577305253375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 82,
+        column: 6,
+        ignore: false
+      },
+      identifier: "setTime",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "atomicservice",
+              expr: 8
+            },
+            {
+              name: "crossplatform",
+              expr: 9
+            },
+            {
+              name: "stagemodelonly",
+              expr: 10
+            },
+            {
+              name: "syscap",
+              expr: 11
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN9ohos.i18n8Calendar7setTimeHRNbb8DateTimeE",
+      exportId: "_CN9ohos.i18n8Calendar7setTimeHRNbb8DateTimeE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC7setTimeF8DateTime$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13613429863914408186
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 39,
+        ignore: false
+      },
+      identifier: "date",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN9ohos.i18n8Calendar7setTimeHRNbb8DateTimeEE4dateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 6,
+        ignore: false
+      },
+      identifier: "setTime",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 12
+            },
+            {
+              name: "atomicservice",
+              expr: 13
+            },
+            {
+              name: "crossplatform",
+              expr: 14
+            },
+            {
+              name: "stagemodelonly",
+              expr: 15
+            },
+            {
+              name: "syscap",
+              expr: 16
+            }
+          ]
+        }
+      ],
+      type: 26,
+      mangledName: "_CN9ohos.i18n8Calendar7setTimeHd",
+      exportId: "_CN9ohos.i18n8Calendar7setTimeHd",
+      mangledBeforeSema: "9ohos.i18n8CalendarC7setTimeFd$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2753630264594763605
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                57
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 38,
+        ignore: false
+      },
+      identifier: "time",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN9ohos.i18n8Calendar7setTimeHdE4timeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 6,
+        ignore: false
+      },
+      identifier: "set",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 17
+            },
+            {
+              name: "atomicservice",
+              expr: 18
+            },
+            {
+              name: "crossplatform",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiii",
+      exportId: "_CN9ohos.i18n8Calendar3setHiiiiii",
+      mangledBeforeSema: "9ohos.i18n8CalendarC3setFiiii!4hour=i!6minute=i!6second=$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17284352500761821669
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                59,
+                60,
+                61,
+                62,
+                67,
+                73
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                63,
+                68,
+                74
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 32,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE4yearE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 46,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE5monthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 58,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE3dayE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 77,
+        ignore: false
+      },
+      identifier: "hour",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE4hourE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 22
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 75,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 77,
+        ignore: false
+      },
+      identifier: "hour.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CPI9ohos.i18n8Calendar3setHiiiiiiE4hourHiii",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64,
+                65,
+                66
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 32,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE6hour.3HiiiE4yearE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 46,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE6hour.3HiiiE5monthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 58,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE6hour.3HiiiE3dayE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 98,
+        ignore: false
+      },
+      identifier: "minute",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE6minuteE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 23
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 96,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 98,
+        ignore: false
+      },
+      identifier: "minute.4",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CPI9ohos.i18n8Calendar3setHiiiiiiE6minuteHiiii",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                69,
+                70,
+                71,
+                72
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 32,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8minute.4HiiiiE4yearE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 46,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8minute.4HiiiiE5monthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 58,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8minute.4HiiiiE3dayE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 77,
+        ignore: false
+      },
+      identifier: "hour",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8minute.4HiiiiE4hourE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 100,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 119,
+        ignore: false
+      },
+      identifier: "second",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 100,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE6secondE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 24
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 117,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 119,
+        ignore: false
+      },
+      identifier: "second.5",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CPI9ohos.i18n8Calendar3setHiiiiiiE6secondHiiiii",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                75,
+                76,
+                77,
+                78,
+                79
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 32,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8second.5HiiiiiE4yearE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 46,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8second.5HiiiiiE5monthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 58,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8second.5HiiiiiE3dayE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 77,
+        ignore: false
+      },
+      identifier: "hour",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8second.5HiiiiiE4hourE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 98,
+        ignore: false
+      },
+      identifier: "minute",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3setHiiiiiiE8second.5HiiiiiE6minuteE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 6,
+        ignore: false
+      },
+      identifier: "setTimeZone",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 25
+            },
+            {
+              name: "atomicservice",
+              expr: 26
+            },
+            {
+              name: "crossplatform",
+              expr: 27
+            },
+            {
+              name: "stagemodelonly",
+              expr: 28
+            },
+            {
+              name: "syscap",
+              expr: 29
+            }
+          ]
+        }
+      ],
+      type: 31,
+      mangledName: "_CN9ohos.i18n8Calendar11setTimeZoneHRNat6StringE",
+      exportId: "_CN9ohos.i18n8Calendar11setTimeZoneHRNat6StringE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC11setTimeZoneF6String$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1142854620242982363
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 45,
+        ignore: false
+      },
+      identifier: "timeZone",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN9ohos.i18n8Calendar11setTimeZoneHRNat6StringEE8timeZoneE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getTimeZone",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 30
+            },
+            {
+              name: "atomicservice",
+              expr: 31
+            },
+            {
+              name: "crossplatform",
+              expr: 32
+            },
+            {
+              name: "stagemodelonly",
+              expr: 33
+            },
+            {
+              name: "syscap",
+              expr: 34
+            }
+          ]
+        }
+      ],
+      type: 33,
+      mangledName: "_CN9ohos.i18n8Calendar11getTimeZoneHv",
+      exportId: "_CN9ohos.i18n8Calendar11getTimeZoneHv",
+      mangledBeforeSema: "9ohos.i18n8CalendarC11getTimeZoneF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8162361224968796581
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getFirstDayOfWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 35
+            },
+            {
+              name: "atomicservice",
+              expr: 36
+            },
+            {
+              name: "crossplatform",
+              expr: 37
+            },
+            {
+              name: "stagemodelonly",
+              expr: 38
+            },
+            {
+              name: "syscap",
+              expr: 39
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "_CN9ohos.i18n8Calendar17getFirstDayOfWeekHv",
+      exportId: "_CN9ohos.i18n8Calendar17getFirstDayOfWeekHv",
+      mangledBeforeSema: "9ohos.i18n8CalendarC17getFirstDayOfWeekF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4976047805520294840
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 6,
+        ignore: false
+      },
+      identifier: "setFirstDayOfWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 40
+            },
+            {
+              name: "atomicservice",
+              expr: 41
+            },
+            {
+              name: "crossplatform",
+              expr: 42
+            },
+            {
+              name: "stagemodelonly",
+              expr: 43
+            },
+            {
+              name: "syscap",
+              expr: 44
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN9ohos.i18n8Calendar17setFirstDayOfWeekHi",
+      exportId: "_CN9ohos.i18n8Calendar17setFirstDayOfWeekHi",
+      mangledBeforeSema: "9ohos.i18n8CalendarC17setFirstDayOfWeekFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3115202790759359035
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                85
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 47,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 35,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar17setFirstDayOfWeekHiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 175,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getMinimalDaysInFirstWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 175,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 45
+            },
+            {
+              name: "atomicservice",
+              expr: 46
+            },
+            {
+              name: "crossplatform",
+              expr: 47
+            },
+            {
+              name: "stagemodelonly",
+              expr: 48
+            },
+            {
+              name: "syscap",
+              expr: 49
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "_CN9ohos.i18n8Calendar25getMinimalDaysInFirstWeekHv",
+      exportId: "_CN9ohos.i18n8Calendar25getMinimalDaysInFirstWeekHv",
+      mangledBeforeSema: "9ohos.i18n8CalendarC25getMinimalDaysInFirstWeekF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11958129234592439291
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 6,
+        ignore: false
+      },
+      identifier: "setMinimalDaysInFirstWeek",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 50
+            },
+            {
+              name: "atomicservice",
+              expr: 51
+            },
+            {
+              name: "crossplatform",
+              expr: 52
+            },
+            {
+              name: "stagemodelonly",
+              expr: 53
+            },
+            {
+              name: "syscap",
+              expr: 54
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN9ohos.i18n8Calendar25setMinimalDaysInFirstWeekHi",
+      exportId: "_CN9ohos.i18n8Calendar25setMinimalDaysInFirstWeekHi",
+      mangledBeforeSema: "9ohos.i18n8CalendarC25setMinimalDaysInFirstWeekFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 10305298455408645074
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                88
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 55,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar25setMinimalDaysInFirstWeekHiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 6,
+        ignore: false
+      },
+      identifier: "get",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 55
+            },
+            {
+              name: "atomicservice",
+              expr: 56
+            },
+            {
+              name: "crossplatform",
+              expr: 57
+            },
+            {
+              name: "stagemodelonly",
+              expr: 58
+            },
+            {
+              name: "syscap",
+              expr: 59
+            }
+          ]
+        }
+      ],
+      type: 36,
+      mangledName: "_CN9ohos.i18n8Calendar3getHRNat6StringE",
+      exportId: "_CN9ohos.i18n8Calendar3getHRNat6StringE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC3getF6String$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15665283830308278845
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                90
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 34,
+        ignore: false
+      },
+      identifier: "field",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN9ohos.i18n8Calendar3getHRNat6StringEE5fieldE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 226,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getDisplayName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 60
+            },
+            {
+              name: "atomicservice",
+              expr: 61
+            },
+            {
+              name: "crossplatform",
+              expr: 62
+            },
+            {
+              name: "stagemodelonly",
+              expr: 63
+            },
+            {
+              name: "syscap",
+              expr: 64
+            }
+          ]
+        }
+      ],
+      type: 37,
+      mangledName: "_CN9ohos.i18n8Calendar14getDisplayNameHRNat6StringE",
+      exportId: "_CN9ohos.i18n8Calendar14getDisplayNameHRNat6StringE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC14getDisplayNameF6String$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2724080235583341184
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                92
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 46,
+        ignore: false
+      },
+      identifier: "locale",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 32,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN9ohos.i18n8Calendar14getDisplayNameHRNat6StringEE6localeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 243,
+        column: 6,
+        ignore: false
+      },
+      identifier: "isWeekend",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 65
+            },
+            {
+              name: "atomicservice",
+              expr: 66
+            },
+            {
+              name: "crossplatform",
+              expr: 67
+            },
+            {
+              name: "stagemodelonly",
+              expr: 68
+            },
+            {
+              name: "syscap",
+              expr: 69
+            }
+          ]
+        }
+      ],
+      type: 38,
+      mangledName: "_CN9ohos.i18n8Calendar9isWeekendHNNat6OptionIRNbb8DateTimeEE",
+      exportId: "_CN9ohos.i18n8Calendar9isWeekendHNNat6OptionIRNbb8DateTimeEE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC9isWeekendFO1_8DateTime!4date=$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15871470840035443013
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                94
+              ],
+              desugars: [
+                95
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 50,
+        ignore: false
+      },
+      identifier: "date",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 39,
+      mangledName: "_CN9ohos.i18n8Calendar9isWeekendHNNat6OptionIRNbb8DateTimeEEE4dateIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 46,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 50,
+        ignore: false
+      },
+      identifier: "date.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CPI9ohos.i18n8Calendar9isWeekendHNNat6OptionIRNbb8DateTimeEEE4dateHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 39
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 6,
+        ignore: false
+      },
+      identifier: "add",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 70
+            },
+            {
+              name: "atomicservice",
+              expr: 71
+            },
+            {
+              name: "crossplatform",
+              expr: 72
+            },
+            {
+              name: "stagemodelonly",
+              expr: 73
+            },
+            {
+              name: "syscap",
+              expr: 74
+            }
+          ]
+        }
+      ],
+      type: 41,
+      mangledName: "_CN9ohos.i18n8Calendar3addHRNat6StringEi",
+      exportId: "_CN9ohos.i18n8Calendar3addHRNat6StringEi",
+      mangledBeforeSema: "9ohos.i18n8CalendarC3addF6Stringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13965993214921185674
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                97,
+                98
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 34,
+        ignore: false
+      },
+      identifier: "field",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN9ohos.i18n8Calendar3addHRNat6StringEiE5fieldE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 49,
+        ignore: false
+      },
+      identifier: "amount",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n8Calendar3addHRNat6StringEiE6amountE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 275,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getTimeInMillis",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 75
+            },
+            {
+              name: "atomicservice",
+              expr: 76
+            },
+            {
+              name: "crossplatform",
+              expr: 77
+            },
+            {
+              name: "stagemodelonly",
+              expr: 78
+            },
+            {
+              name: "syscap",
+              expr: 79
+            }
+          ]
+        }
+      ],
+      type: 42,
+      mangledName: "_CN9ohos.i18n8Calendar15getTimeInMillisHv",
+      exportId: "_CN9ohos.i18n8Calendar15getTimeInMillisHv",
+      mangledBeforeSema: "9ohos.i18n8CalendarC15getTimeInMillisF$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 730310746384944769
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 290,
+        column: 6,
+        ignore: false
+      },
+      identifier: "compareDays",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 80
+            },
+            {
+              name: "atomicservice",
+              expr: 81
+            },
+            {
+              name: "crossplatform",
+              expr: 82
+            },
+            {
+              name: "stagemodelonly",
+              expr: 83
+            },
+            {
+              name: "syscap",
+              expr: 84
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN9ohos.i18n8Calendar11compareDaysHRNbb8DateTimeE",
+      exportId: "_CN9ohos.i18n8Calendar11compareDaysHRNbb8DateTimeE",
+      mangledBeforeSema: "9ohos.i18n8CalendarC11compareDaysF8DateTime$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14029027280862722485
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                101
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 43,
+        ignore: false
+      },
+      identifier: "date",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN9ohos.i18n8Calendar11compareDaysHRNbb8DateTimeEE4dateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 97,
+        ignore: false
+      },
+      identifier: "ERROR_CODE_MAP",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN9ohos.i18n14ERROR_CODE_MAPE",
+      exportId: "_CN9ohos.i18n14ERROR_CODE_MAPE",
+      mangledBeforeSema: "9ohos.i18n14ERROR_CODE_MAPV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 6691898836708533825
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorMsg",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN9ohos.i18n11getErrorMsgHi",
+      exportId: "_CN9ohos.i18n11getErrorMsgHi",
+      mangledBeforeSema: "9ohos.i18n11getErrorMsgFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 16049631421228687868
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                104
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 39,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN9ohos.i18n11getErrorMsgHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140210331680,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 47,
+      mangledName: "_CN9ohos.i18n5CDate6<init>HRNbb8DateTimeE",
+      exportId: "_CN9ohos.i18n5CDate6<init>HRNbb8DateTimeE",
+      mangledBeforeSema: "9ohos.i18n5CDateS6<init>F8DateTime$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4683542286529983937
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                106
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 49,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 49,
+        column: 24,
+        ignore: false
+      },
+      identifier: "date",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 49,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN9ohos.i18n5CDate4initHRNbb8DateTimeEE4dateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140210331680,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN9ohos.i18n5CDate6<init>Hv",
+      exportId: "_CN9ohos.i18n5CDate6<init>Hv",
+      mangledBeforeSema: "9ohos.i18n5CDateS6<init>F$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12013953844197484559
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 24,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN9ohos.i18n5CDate4yearK_E",
+      mangledBeforeSema: "9ohos.i18n5CDateS4year$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 25,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN9ohos.i18n5CDate5monthK_E",
+      mangledBeforeSema: "9ohos.i18n5CDateS5month$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 23,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN9ohos.i18n5CDate3dayK_E",
+      mangledBeforeSema: "9ohos.i18n5CDateS3day$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 30,
+        ignore: false
+      },
+      identifier: "icuUdate",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN9ohos.i18n5CDate8icuUdateK_E",
+      mangledBeforeSema: "9ohos.i18n5CDateS8icuUdate$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 25,
+        ignore: false
+      },
+      identifier: "isNull",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN9ohos.i18n5CDate6isNullK_E",
+      mangledBeforeSema: "9ohos.i18n5CDateS6isNull$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 49,
+      mangledName: "_CN9ohos.i18n5CDate6<init>Hllldb",
+      exportId: "_CN9ohos.i18n5CDate6<init>Hllldb",
+      mangledBeforeSema: "9ohos.i18n5CDateS5CDateYl!L4yearl!L5monthl!L3dayd!L8icuUdateb!L6isNull",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                114,
+                115,
+                116,
+                117,
+                118
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 24,
+        ignore: false
+      },
+      identifier: "year",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n5CDate4initHllldbE4yearE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 25,
+        ignore: false
+      },
+      identifier: "month",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n5CDate4initHllldbE5monthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 23,
+        ignore: false
+      },
+      identifier: "day",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN9ohos.i18n5CDate4initHllldbE3dayE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 30,
+        ignore: false
+      },
+      identifier: "icuUdate",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN9ohos.i18n5CDate4initHllldbE8icuUdateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.i18n",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 25,
+        ignore: false
+      },
+      identifier: "isNull",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN9ohos.i18n5CDate4initHllldbE6isNullE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 57,
+        ignore: false
+      },
+      identifier: "FfiI18nSystemGetAppPreferredLanguage",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 50,
+      mangledName: "FfiI18nSystemGetAppPreferredLanguage",
+      exportId: "FfiI18nSystemGetAppPreferredLanguage",
+      mangledBeforeSema: "9ohos.i18n36FfiI18nSystemGetAppPreferredLanguageF$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 51,
+        column: 2,
+        ignore: false
+      },
+      identifier: "System",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 85
+            },
+            {
+              name: "atomicservice",
+              expr: 86
+            },
+            {
+              name: "crossplatform",
+              expr: 87
+            },
+            {
+              name: "form",
+              expr: 88
+            },
+            {
+              name: "stagemodelonly",
+              expr: 89
+            },
+            {
+              name: "syscap",
+              expr: 90
+            }
+          ]
+        }
+      ],
+      type: 51,
+      mangledName: "_CN9ohos.i18n6SystemE",
+      exportId: "_CN9ohos.i18n6SystemE",
+      mangledBeforeSema: "9ohos.i18n6SystemC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8886223601042507364
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          53
+        ],
+        body: [
+          121,
+          122
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 50,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getAppPreferredLanguage",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 91
+            },
+            {
+              name: "atomicservice",
+              expr: 92
+            },
+            {
+              name: "crossplatform",
+              expr: 93
+            },
+            {
+              name: "stagemodelonly",
+              expr: 94
+            },
+            {
+              name: "syscap",
+              expr: 95
+            }
+          ]
+        }
+      ],
+      type: 33,
+      mangledName: "_CN9ohos.i18n6System23getAppPreferredLanguageHv",
+      exportId: "_CN9ohos.i18n6System23getAppPreferredLanguageHv",
+      mangledBeforeSema: "9ohos.i18n6SystemC23getAppPreferredLanguageF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 14384415253709693550
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.i18n",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 14,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 20,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 52,
+      mangledName: "_CN9ohos.i18n6System6<init>Hv",
+      exportId: "_CN9ohos.i18n6System6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 51
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 46,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "890001i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 43,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 102,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 102,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 75,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 77,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 96,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 98,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 117,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 119,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 146,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 146,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 158,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 158,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 160,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 160,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 171,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 171,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 182,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 182,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 184,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 184,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 196,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 196,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 197,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 197,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 199,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 199,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 246,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 246,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 247,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 247,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 249,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 249,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 250,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 250,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 265,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 265,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 267,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 267,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 268,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 268,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 278,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 278,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 279,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 279,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 281,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 281,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 282,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 282,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 15,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 43,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 36,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 36,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 38,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 38,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 39,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 39,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 40,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 40,
+        column: 47,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.I18n",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

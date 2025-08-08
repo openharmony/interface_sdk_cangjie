@@ -1,0 +1,2363 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.security.permission_request_result",
+  pkgDepInfo: "{\"package\":\"ohos.security.permission_request_result\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":19},\"end\":{\"line\":19,\"column\":29}},{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":31},\"end\":{\"line\":19,\"column\":38}},{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":40},\"end\":{\"line\":19,\"column\":48}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.ffi"
+  ],
+  allFiles: [
+    "ohos.security.permission_request_result/permission_request_result.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "BusinessException",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 29,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "CArrString",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 31,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 38,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "CArrI32",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 40,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 48,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "CArrBool",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 3
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        1
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        7
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        8
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 11
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi10CArrStringE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi7CArrI32E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi8CArrBoolE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13,
+        14,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 11
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 20
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 37,
+        ignore: false
+      },
+      identifier: "INVALID_PARA",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result12INVALID_PARAE",
+      mangledBeforeSema: "39ohos.security.permission_request_result12INVALID_PARAV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 13648101376757221858
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 39,
+        ignore: false
+      },
+      identifier: "OUT_MEMORY_ERR",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result14OUT_MEMORY_ERRE",
+      mangledBeforeSema: "39ohos.security.permission_request_result14OUT_MEMORY_ERRV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 12135208628074757153
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 2
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 2,
+        ignore: false
+      },
+      identifier: "PermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 3
+            },
+            {
+              name: "atomicservice",
+              expr: 4
+            },
+            {
+              name: "crossplatform",
+              expr: 5
+            },
+            {
+              name: "stagemodelonly",
+              expr: 6
+            },
+            {
+              name: "syscap",
+              expr: 7
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResultE",
+      exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResultE",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC",
+      hash: {
+        instVar: 3893028482419474548,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 9879271093696820533
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          12
+        ],
+        body: [
+          4,
+          5,
+          6,
+          7,
+          10
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 42,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 8
+            },
+            {
+              name: "atomicservice",
+              expr: 9
+            },
+            {
+              name: "crossplatform",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult11permissionsK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC11permissionsV$$5Array<6String>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 9879271093696820533
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 41,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "atomicservice",
+              expr: 14
+            },
+            {
+              name: "crossplatform",
+              expr: 15
+            },
+            {
+              name: "stagemodelonly",
+              expr: 16
+            },
+            {
+              name: "syscap",
+              expr: 17
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult11authResultsK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC11authResultsV$$5Array<i>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 9879271093696820533
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 55,
+        ignore: false
+      },
+      identifier: "dialogShownResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713952,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 18
+            },
+            {
+              name: "atomicservice",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult18dialogShownResultsK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC18dialogShownResultsV$$O1_5Array<b>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 5920447280866511034
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "atomicservice",
+              expr: 23
+            },
+            {
+              name: "crossplatform",
+              expr: 24
+            },
+            {
+              name: "stagemodelonly",
+              expr: 25
+            },
+            {
+              name: "syscap",
+              expr: 26
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult6<init>HRNat5ArrayIRNat6StringEERNatY5_IiE",
+      exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult6<init>HRNat5ArrayIRNat6StringEERNatY5_IiE",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC6<init>F5Array<6String>5Array<i>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4498572267580184409
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                9
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 35,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult4initHRNat5ArrayIRNat6StringEERNatY5_IiEE11permissionsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 34,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult4initHRNat5ArrayIRNat6StringEERNatY5_IiEE11authResultsIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fromCPermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297729568,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultE",
+      exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultE",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC28fromCPermissionRequestResultF24CPermissionRequestResult$$23PermissionRequestResult",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 8035971499611947038,
+        bodyHash: 15878252429138090497
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CPermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResultE",
+      exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResultE",
+      mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS",
+      hash: {
+        instVar: 15568607740374442259,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 76,
+        ignore: false
+      },
+      identifier: "cRet",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultEE4cRetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 36,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult11permissionsK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS11permissions$$10CArrString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 33,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult11authResultsK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS11authResults$$7CArrI32",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 41,
+        ignore: false
+      },
+      identifier: "dialogShownResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult18dialogShownResultsK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS18dialogShownResults$$8CArrBool",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult6<init>HRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolE",
+      exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult6<init>HRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolE",
+      mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS24CPermissionRequestResultY10CArrString!L11permissions7CArrI32!L11authResults8CArrBool!L18dialogShownResults",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                17,
+                18,
+                19
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 11
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 36,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE11permissionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 33,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE11authResultsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 41,
+        ignore: false
+      },
+      identifier: "dialogShownResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE18dialogShownResultsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 2,
+        ignore: false
+      },
+      identifier: "RetDataCPermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResultE",
+      exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResultE",
+      mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS",
+      hash: {
+        instVar: 8676581028210127916,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 24,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult4codeK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS4code$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 43,
+        ignore: false
+      },
+      identifier: "data",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult4dataK_E",
+      mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS4data$$24CPermissionRequestResult",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.security.permission_request_result",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult6<init>HiRNY_24CPermissionRequestResultE",
+      exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult6<init>HiRNY_24CPermissionRequestResultE",
+      mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS31RetDataCPermissionRequestResultYi!L4code24CPermissionRequestResult!L4data",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24,
+                25
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 24,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult4initHiRNY_24CPermissionRequestResultEE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.security.permission_request_result",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 43,
+        ignore: false
+      },
+      identifier: "data",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult4initHiRNY_24CPermissionRequestResultEE4dataE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 37,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "12100001"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 39,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "12100008"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    }
+  ],
+  access: "Protected",
+  moduleName: ""
+}

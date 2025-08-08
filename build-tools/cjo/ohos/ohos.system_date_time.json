@@ -1,0 +1,4499 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.system_date_time",
+  pkgDepInfo: "{\"package\":\"ohos.system_date_time\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_date_time_common.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":19}},{\"file\":\"cj_date_time_error.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}},{\"file\":\"system_date_time.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_date_time_common.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"cj_date_time_error.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"system_date_time.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"cj_date_time_common.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":20}},{\"file\":\"cj_date_time_error.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_date_time_common.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":21}},{\"file\":\"system_date_time.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"cj_date_time_error.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":24}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.ffi"
+  ],
+  allFiles: [
+    "ohos.system_date_time/cj_date_time_common.cj",
+    "ohos.system_date_time/cj_date_time_error.cj",
+    "ohos.system_date_time/system_date_time.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 24,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 20,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 2
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13,
+        isC: true
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi10RetDataI64E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 18,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi14RetDataCStringE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 27
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 12
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 12
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 19
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 31,
+        ignore: false
+      },
+      identifier: "SYSTEM_ERROR",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN21ohos.system_date_time12SYSTEM_ERRORE",
+      mangledBeforeSema: "21ohos.system_date_time12SYSTEM_ERRORV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 1724553154241096973
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 2,
+        ignore: false
+      },
+      identifier: "TimeType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 2
+            },
+            {
+              name: "atomicservice",
+              expr: 3
+            },
+            {
+              name: "crossplatform",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.system_date_time8TimeTypeE",
+      exportId: "_CN21ohos.system_date_time8TimeTypeE",
+      mangledBeforeSema: "21ohos.system_date_time8TimeTypeU",
+      hash: {
+        instVar: 1649117071628450824,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15028841106425512402
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          3,
+          4,
+          5
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 47,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 12,
+        ignore: false
+      },
+      identifier: "STARTUP",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "atomicservice",
+              expr: 8
+            },
+            {
+              name: "crossplatform",
+              expr: 9
+            },
+            {
+              name: "stagemodelonly",
+              expr: 10
+            },
+            {
+              name: "syscap",
+              expr: 11
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.system_date_time8TimeType7STARTUPKE",
+      mangledBeforeSema: "21ohos.system_date_time8TimeTypeU7STARTUPV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 15028841106425512402
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 11,
+        ignore: false
+      },
+      identifier: "ACTIVE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 12
+            },
+            {
+              name: "atomicservice",
+              expr: 13
+            },
+            {
+              name: "crossplatform",
+              expr: 14
+            },
+            {
+              name: "stagemodelonly",
+              expr: 15
+            },
+            {
+              name: "syscap",
+              expr: 16
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.system_date_time8TimeType6ACTIVEKE",
+      mangledBeforeSema: "21ohos.system_date_time8TimeTypeU6ACTIVEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 15028841106425512402
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138163511328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN21ohos.system_date_time8TimeType8getValueHv",
+      exportId: "_CN21ohos.system_date_time8TimeType8getValueHv",
+      mangledBeforeSema: "21ohos.system_date_time8TimeTypeU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 6948856276963357170
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 51,
+        ignore: false
+      },
+      identifier: "SYSTEM_DATE_TIME_DOMAIN_ID",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.system_date_time26SYSTEM_DATE_TIME_DOMAIN_IDE",
+      exportId: "_CN21ohos.system_date_time26SYSTEM_DATE_TIME_DOMAIN_IDE",
+      mangledBeforeSema: "21ohos.system_date_time26SYSTEM_DATE_TIME_DOMAIN_IDV$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9188016290261038401
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 32,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorInfo",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN21ohos.system_date_time12getErrorInfoHi",
+      exportId: "_CN21ohos.system_date_time12getErrorInfoHi",
+      mangledBeforeSema: "21ohos.system_date_time12getErrorInfoFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 17776227921822886538
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 30,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN21ohos.system_date_time12getErrorInfoHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 2,
+        ignore: false
+      },
+      identifier: "throwIfNotSuccess",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN21ohos.system_date_time17throwIfNotSuccessHi",
+      exportId: "_CN21ohos.system_date_time17throwIfNotSuccessHi",
+      mangledBeforeSema: "21ohos.system_date_time17throwIfNotSuccessFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 11020835007967284475
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                10
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 35,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN21ohos.system_date_time17throwIfNotSuccessHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 61,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysDateTimeSetTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FfiOHOSSysDateTimeSetTime",
+      exportId: "FfiOHOSSysDateTimeSetTime",
+      mangledBeforeSema: "21ohos.system_date_time25FfiOHOSSysDateTimeSetTimeFl$$7RetCode",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 14419238959392400773
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 51,
+        ignore: false
+      },
+      identifier: "time",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN21ohos.system_date_time25FfiOHOSSysDateTimeSetTimeHlE4timeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 72,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysDateTimegetCurrentTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSSysDateTimegetCurrentTime",
+      exportId: "FfiOHOSSysDateTimegetCurrentTime",
+      mangledBeforeSema: "21ohos.system_date_time32FfiOHOSSysDateTimegetCurrentTimeFb$$10RetDataI64",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16587735031536041971
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 59,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time32FfiOHOSSysDateTimegetCurrentTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 75,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysDateTimegetRealActiveTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSSysDateTimegetRealActiveTime",
+      exportId: "FfiOHOSSysDateTimegetRealActiveTime",
+      mangledBeforeSema: "21ohos.system_date_time35FfiOHOSSysDateTimegetRealActiveTimeFb$$10RetDataI64",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16587735031536041971
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 62,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time35FfiOHOSSysDateTimegetRealActiveTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 69,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysDateTimegetRealTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSSysDateTimegetRealTime",
+      exportId: "FfiOHOSSysDateTimegetRealTime",
+      mangledBeforeSema: "21ohos.system_date_time29FfiOHOSSysDateTimegetRealTimeFb$$10RetDataI64",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16587735031536041971
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 56,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time29FfiOHOSSysDateTimegetRealTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 65,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysDateTimeGetTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSSysDateTimeGetTime",
+      exportId: "FfiOHOSSysDateTimeGetTime",
+      mangledBeforeSema: "21ohos.system_date_time25FfiOHOSSysDateTimeGetTimeFb$$10RetDataI64",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16587735031536041971
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                20
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 52,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 30,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time25FfiOHOSSysDateTimeGetTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 84,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysDateTimeGetUptime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSSysDateTimeGetUptime",
+      exportId: "FfiOHOSSysDateTimeGetUptime",
+      mangledBeforeSema: "21ohos.system_date_time27FfiOHOSSysDateTimeGetUptimeFib$$10RetDataI64",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6666334936506397752
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22,
+                23
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 57,
+        ignore: false
+      },
+      identifier: "timeType",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN21ohos.system_date_time27FfiOHOSSysDateTimeGetUptimeHibE8timeTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 59,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 71,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 59,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time27FfiOHOSSysDateTimeGetUptimeHibE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 63,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysSetTimezone",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSSysSetTimezone",
+      exportId: "FfiOHOSSysSetTimezone",
+      mangledBeforeSema: "21ohos.system_date_time21FfiOHOSSysSetTimezoneF7CString$$7RetCode",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 12594513924217570928
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                25
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 53,
+        ignore: false
+      },
+      identifier: "Timezone",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN21ohos.system_date_time21FfiOHOSSysSetTimezoneHkE8TimezoneE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 36,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 36,
+        column: 53,
+        ignore: false
+      },
+      identifier: "FfiOHOSSysGetTimezone",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 36,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "FfiOHOSSysGetTimezone",
+      exportId: "FfiOHOSSysGetTimezone",
+      mangledBeforeSema: "21ohos.system_date_time21FfiOHOSSysGetTimezoneF$$14RetDataCString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 18
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 136,
+        column: 2,
+        ignore: false
+      },
+      identifier: "SystemDateTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 17
+            },
+            {
+              name: "crossplatform",
+              expr: 18
+            },
+            {
+              name: "stagemodelonly",
+              expr: 19
+            },
+            {
+              name: "syscap",
+              expr: 20
+            }
+          ]
+        }
+      ],
+      type: 19,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTimeE",
+      exportId: "_CN21ohos.system_date_time14SystemDateTimeE",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16135125531322057734
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          26
+        ],
+        body: [
+          28,
+          31,
+          34,
+          37,
+          40,
+          45,
+          46
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getCurrentTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 21
+            },
+            {
+              name: "deprecated",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime14getCurrentTimeHb",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime14getCurrentTimeHb",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC14getCurrentTimeFb!6isNano=$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 7546544479299350335
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                29
+              ],
+              desugars: [
+                30
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 60,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime14getCurrentTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 25
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 55,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 60,
+        ignore: false
+      },
+      identifier: "isNano.0",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CPI21ohos.system_date_time14SystemDateTime14getCurrentTimeHbE6isNanoHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 73,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getRealActiveTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 26
+            },
+            {
+              name: "deprecated",
+              expr: 27
+            },
+            {
+              name: "stagemodelonly",
+              expr: 28
+            },
+            {
+              name: "syscap",
+              expr: 29
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime17getRealActiveTimeHb",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime17getRealActiveTimeHb",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC17getRealActiveTimeFb!6isNano=$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 1936655444298401191
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                32
+              ],
+              desugars: [
+                33
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 63,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime17getRealActiveTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 30
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 58,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 63,
+        ignore: false
+      },
+      identifier: "isNano.0",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CPI21ohos.system_date_time14SystemDateTime17getRealActiveTimeHbE6isNanoHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 88,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getRealTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 31
+            },
+            {
+              name: "deprecated",
+              expr: 32
+            },
+            {
+              name: "stagemodelonly",
+              expr: 33
+            },
+            {
+              name: "syscap",
+              expr: 34
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime11getRealTimeHb",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime11getRealTimeHb",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC11getRealTimeFb!6isNano=$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 16230711578680788657
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                36
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 57,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime11getRealTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 35
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 52,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 57,
+        ignore: false
+      },
+      identifier: "isNano.0",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CPI21ohos.system_date_time14SystemDateTime11getRealTimeHbE6isNanoHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 103,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getTime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 36
+            },
+            {
+              name: "crossplatform",
+              expr: 37
+            },
+            {
+              name: "stagemodelonly",
+              expr: 38
+            },
+            {
+              name: "syscap",
+              expr: 39
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime7getTimeHb",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime7getTimeHb",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC7getTimeFb!6isNano=$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 725217540110033673
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38
+              ],
+              desugars: [
+                39
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 53,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 32,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime7getTimeHbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 40
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 48,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 53,
+        ignore: false
+      },
+      identifier: "isNano.0",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CPI21ohos.system_date_time14SystemDateTime7getTimeHbE6isNanoHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 118,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getUptime",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 41
+            },
+            {
+              name: "crossplatform",
+              expr: 42
+            },
+            {
+              name: "stagemodelonly",
+              expr: 43
+            },
+            {
+              name: "syscap",
+              expr: 44
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime9getUptimeHNNY_8TimeTypeEb",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime9getUptimeHNNY_8TimeTypeEb",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC9getUptimeF8TimeTypeb!6isNano=$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 11983063720505222269
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41,
+                42
+              ],
+              desugars: [
+                0,
+                43
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 52,
+        ignore: false
+      },
+      identifier: "timeType",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime9getUptimeHNNY_8TimeTypeEbE8timeTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 75,
+        ignore: false
+      },
+      identifier: "isNano",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime9getUptimeHNNY_8TimeTypeEbE6isNanoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 45
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 70,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 75,
+        ignore: false
+      },
+      identifier: "isNano.1",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CPI21ohos.system_date_time14SystemDateTime9getUptimeHNNY_8TimeTypeEbE6isNanoHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.system_date_time",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 52,
+        ignore: false
+      },
+      identifier: "timeType",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime9getUptimeHNNY_8TimeTypeEbE8isNano.1HY3_E8timeTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 129,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 135,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getTimezone",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 129,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 46
+            },
+            {
+              name: "crossplatform",
+              expr: 47
+            },
+            {
+              name: "stagemodelonly",
+              expr: 48
+            },
+            {
+              name: "syscap",
+              expr: 49
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime11getTimezoneHv",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime11getTimezoneHv",
+      mangledBeforeSema: "21ohos.system_date_time14SystemDateTimeC11getTimezoneF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 14002820708943387579
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.system_date_time",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 14,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 28,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN21ohos.system_date_time14SystemDateTime6<init>Hv",
+      exportId: "_CN21ohos.system_date_time14SystemDateTime6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 19
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 31,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 49,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 39,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 40,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 40,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 49,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 49,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 50,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 50,
+        column: 23,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 51,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 51,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 52,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 52,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 60,
+        ignore: false
+      },
+      type: 12,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "false",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 64,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 64,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 65,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 65,
+        column: 23,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 66,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 66,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 67,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 67,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 69,
+        column: 63,
+        ignore: false
+      },
+      type: 12,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "false",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 79,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 79,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 80,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 80,
+        column: 23,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 81,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 81,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 82,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 82,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 84,
+        column: 57,
+        ignore: false
+      },
+      type: 12,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "false",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 94,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 94,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 95,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 96,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 96,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 97,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 97,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 99,
+        column: 53,
+        ignore: false
+      },
+      type: 12,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "false",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 109,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 109,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 110,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 110,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 111,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 111,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 112,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 112,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 70,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 114,
+        column: 75,
+        ignore: false
+      },
+      type: 12,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "false",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 124,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 124,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 125,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 125,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 126,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 126,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 127,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 127,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.MiscServices.Time",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

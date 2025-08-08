@@ -1,0 +1,1389 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.bluetooth",
+  pkgDepInfo: "{\"package\":\"ohos.bluetooth\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"error_message.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"error_message.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"error_message.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":20}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"error_message.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":30}}]}]}",
+  imports: [
+    "ohos.hilog",
+    "std.collection",
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.bluetooth/error_message.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 30,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "HashMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN10ohos.hilog12HilogChannelE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        1,
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 45,
+        ignore: false
+      },
+      identifier: "SERVICE_STOPPED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth15SERVICE_STOPPEDE",
+      mangledBeforeSema: "14ohos.bluetooth15SERVICE_STOPPEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 10691391996500868976
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 48,
+        ignore: false
+      },
+      identifier: "BLUETOOTH_DISABLED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth18BLUETOOTH_DISABLEDE",
+      mangledBeforeSema: "14ohos.bluetooth18BLUETOOTH_DISABLEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 1223593053764361423
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 2
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 51,
+        ignore: false
+      },
+      identifier: "PROFILE_NOT_SUPPORTED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth21PROFILE_NOT_SUPPORTEDE",
+      mangledBeforeSema: "14ohos.bluetooth21PROFILE_NOT_SUPPORTEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 3885733214922073937
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 3
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 50,
+        ignore: false
+      },
+      identifier: "DEVICE_NOT_CONNECTED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth20DEVICE_NOT_CONNECTEDE",
+      mangledBeforeSema: "14ohos.bluetooth20DEVICE_NOT_CONNECTEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 1078238537721520017
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 4
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 80,
+        ignore: false
+      },
+      identifier: "THE_MAXIMUM_NUMBER_OF_CONNECTIONS_HAS_BEEN_REACHED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth50THE_MAXIMUM_NUMBER_OF_CONNECTIONS_HAS_BEEN_REACHEDE",
+      mangledBeforeSema: "14ohos.bluetooth50THE_MAXIMUM_NUMBER_OF_CONNECTIONS_HAS_BEEN_REACHEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 16908166165406347846
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 5
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 66,
+        ignore: false
+      },
+      identifier: "THE_VALUE_OF_PROXY_IS_A_NULL_POINTER",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth36THE_VALUE_OF_PROXY_IS_A_NULL_POINTERE",
+      mangledBeforeSema: "14ohos.bluetooth36THE_VALUE_OF_PROXY_IS_A_NULL_POINTERV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 18083975895699663671
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 6
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 46,
+        ignore: false
+      },
+      identifier: "OPERATION_FAILED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth16OPERATION_FAILEDE",
+      mangledBeforeSema: "14ohos.bluetooth16OPERATION_FAILEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 10381465033433472958
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 7
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 40,
+        ignore: false
+      },
+      identifier: "IPC_FAILED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth10IPC_FAILEDE",
+      mangledBeforeSema: "14ohos.bluetooth10IPC_FAILEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 12487566736835072354
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 8
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 44,
+        ignore: false
+      },
+      identifier: "READ_FORBIDDEN",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth14READ_FORBIDDENE",
+      mangledBeforeSema: "14ohos.bluetooth14READ_FORBIDDENV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 12280024607247729284
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 9
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 45,
+        ignore: false
+      },
+      identifier: "WRITE_FORBIDDEN",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth15WRITE_FORBIDDENE",
+      mangledBeforeSema: "14ohos.bluetooth15WRITE_FORBIDDENV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 17770705891591989855
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 10
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 38,
+        ignore: false
+      },
+      identifier: "IO_ERROR",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth8IO_ERRORE",
+      mangledBeforeSema: "14ohos.bluetooth8IO_ERRORV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 6324418024234395215
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 11
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 37,
+        ignore: false
+      },
+      identifier: "INVALID_PARAMETER",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN14ohos.bluetooth17INVALID_PARAMETERE",
+      mangledBeforeSema: "14ohos.bluetooth17INVALID_PARAMETERV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 1872140237780858559
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 12
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 73,
+        ignore: false
+      },
+      identifier: "BLUETOOTH_LOG",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678138029281584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN14ohos.bluetooth13BLUETOOTH_LOGE",
+      exportId: "_CN14ohos.bluetooth13BLUETOOTH_LOGE",
+      mangledBeforeSema: "14ohos.bluetooth13BLUETOOTH_LOGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 1273861709373161920,
+        bodyHash: 2328496287875926972
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ERROR_CODE_MAP",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN14ohos.bluetooth14ERROR_CODE_MAPE",
+      exportId: "_CN14ohos.bluetooth14ERROR_CODE_MAPE",
+      mangledBeforeSema: "14ohos.bluetooth14ERROR_CODE_MAPV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 18054616398936569209
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorMsg",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN14ohos.bluetooth11getErrorMsgHi",
+      exportId: "_CN14ohos.bluetooth11getErrorMsgHi",
+      mangledBeforeSema: "14ohos.bluetooth11getErrorMsgFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 6125879487405962884
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 39,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN14ohos.bluetooth11getErrorMsgHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 2,
+        ignore: false
+      },
+      identifier: "checkRet",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN14ohos.bluetooth8checkRetHi",
+      exportId: "_CN14ohos.bluetooth8checkRetHi",
+      mangledBeforeSema: "14ohos.bluetooth8checkRetFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 7385712719892813335
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.bluetooth",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 41,
+        ignore: false
+      },
+      identifier: "errorCode",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN14ohos.bluetooth8checkRetHiE9errorCodeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 45,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900001i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 48,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900003i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 51,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900004i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 50,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900005i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 70,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 80,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900006i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 66,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900008i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 46,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900099i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 40,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2900100i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 44,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2901000i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 45,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2901001i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 38,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2901054i32"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 37,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "401"
+      }
+    }
+  ],
+  moduleName: ""
+}

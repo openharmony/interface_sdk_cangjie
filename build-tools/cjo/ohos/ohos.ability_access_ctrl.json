@@ -1,0 +1,7861 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.ability_access_ctrl",
+  pkgDepInfo: "{\"package\":\"ohos.ability_access_ctrl\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":19}},{\"file\":\"cj_ability_access_ctrl_error.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":25,\"column\":1},\"end\":{\"line\":25,\"column\":21}},{\"file\":\"cj_ability_access_ctrl_error.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":32}},{\"file\":\"cj_ability_access_ctrl_error.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":30}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":27}}]},{\"package\":\"std.sync\",\"isStd\":true,\"imports\":[{\"file\":\"cj_ability_access_ctrl.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":22}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.ffi",
+    "ohos.hilog",
+    "ohos.ability_access_ctrl",
+    "ohos.base",
+    "std.collection"
+  ],
+  allFiles: [
+    "ohos.ability_access_ctrl/cj_ability_access_ctrl.cj",
+    "ohos.ability_access_ctrl/cj_ability_access_ctrl_error.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 32,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "ArrayList",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "deriving"
+          ],
+          identifier: "Derive",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 22,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "sync"
+          ],
+          identifier: "Mutex",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 25,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 25,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 30,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "HashMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 4
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 5
+        }
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        7
+      ]
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        9
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        9,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        9,
+        12,
+        13,
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi8CArrUI32E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi10CArrStringE"
+        }
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        13,
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        13,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        1,
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19,
+        20,
+        19,
+        20
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        2
+      ]
+    },
+    {
+      kind: "UIntNative"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN10ohos.hilog12HilogChannelE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 49
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 22
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat8ToStringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        22
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        22
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 28
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 61
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        1
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        33
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        28
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        30,
+        31
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 29
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        36
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 29
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 69
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi7CArrI32E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi8CArrBoolE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13,
+        38,
+        39
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 36
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 78
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        36
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 41
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 84
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 45
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 86
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 43
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        30,
+        48
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        49,
+        51
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        50
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CN9ohos.base10AsyncErrorE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        29
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 22
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        1,
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 5,
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 37,
+        ignore: false
+      },
+      identifier: "INVALID_PARA",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl12INVALID_PARAE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl12INVALID_PARAV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 16552852510124508635
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 39,
+        ignore: false
+      },
+      identifier: "OUT_MEMORY_ERR",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl14OUT_MEMORY_ERRE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl14OUT_MEMORY_ERRV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 8920162084610498934
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 2
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 54,
+        ignore: false
+      },
+      identifier: "SECURITY_DOMAIN_ACCESSTOKEN",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl27SECURITY_DOMAIN_ACCESSTOKENE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl27SECURITY_DOMAIN_ACCESSTOKENV$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 16240271060753335556
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 3
+      }
+    },
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 33,
+        ignore: false
+      },
+      identifier: "Permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138029278224,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl11PermissionsE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl11PermissionsT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 7637660711197506453,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 4
+      }
+    },
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 35,
+        ignore: false
+      },
+      identifier: "StageContext",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl12StageContextE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl12StageContextT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 5551473034810251168,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 6
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 104,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlCheckAccessTokenSync",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAbilityAccessCtrlCheckAccessTokenSync",
+      exportId: "FfiOHOSAbilityAccessCtrlCheckAccessTokenSync",
+      mangledBeforeSema: "24ohos.ability_access_ctrl44FfiOHOSAbilityAccessCtrlCheckAccessTokenSyncFj7CString$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 14634018693627493140
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7,
+                8
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 70,
+        ignore: false
+      },
+      identifier: "tokenID",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 55,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN24ohos.ability_access_ctrl44FfiOHOSAbilityAccessCtrlCheckAccessTokenSyncHjkE7tokenIDE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 72,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 96,
+        ignore: false
+      },
+      identifier: "cPermissionName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 72,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN24ohos.ability_access_ctrl44FfiOHOSAbilityAccessCtrlCheckAccessTokenSyncHjkE15cPermissionNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 40,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlGrantUserGrantedPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSAbilityAccessCtrlGrantUserGrantedPermission",
+      exportId: "FfiOHOSAbilityAccessCtrlGrantUserGrantedPermission",
+      mangledBeforeSema: "24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlGrantUserGrantedPermissionFj7CStringj$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17853158272356936983
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                10,
+                11,
+                12
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 76,
+        ignore: false
+      },
+      identifier: "tokenID",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlGrantUserGrantedPermissionHjkjE7tokenIDE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 78,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 102,
+        ignore: false
+      },
+      identifier: "cPermissionName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 78,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlGrantUserGrantedPermissionHjkjE15cPermissionNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 32,
+        ignore: false
+      },
+      identifier: "permissionFlags",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlGrantUserGrantedPermissionHjkjE15permissionFlagsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 40,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermission",
+      exportId: "FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermission",
+      mangledBeforeSema: "24ohos.ability_access_ctrl51FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermissionFj7CStringj$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17853158272356936983
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14,
+                15,
+                16
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 77,
+        ignore: false
+      },
+      identifier: "tokenID",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN24ohos.ability_access_ctrl51FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermissionHjkjE7tokenIDE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 103,
+        ignore: false
+      },
+      identifier: "cPermissionName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN24ohos.ability_access_ctrl51FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermissionHjkjE15cPermissionNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 32,
+        ignore: false
+      },
+      identifier: "permissionFlags",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN24ohos.ability_access_ctrl51FfiOHOSAbilityAccessCtrlRevokeUserGrantedPermissionHjkjE15permissionFlagsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 127,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlOn",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAbilityAccessCtrlOn",
+      exportId: "FfiOHOSAbilityAccessCtrlOn",
+      mangledBeforeSema: "24ohos.ability_access_ctrl26FfiOHOSAbilityAccessCtrlOnF7CString8CArrUI3210CArrStringl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7939662654741374410
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18,
+                19,
+                20,
+                21
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 51,
+        ignore: false
+      },
+      identifier: "cType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN24ohos.ability_access_ctrl26FfiOHOSAbilityAccessCtrlOnHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE5cTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 75,
+        ignore: false
+      },
+      identifier: "cTokenIDList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN24ohos.ability_access_ctrl26FfiOHOSAbilityAccessCtrlOnHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE12cTokenIDListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 104,
+        ignore: false
+      },
+      identifier: "cPermissionList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN24ohos.ability_access_ctrl26FfiOHOSAbilityAccessCtrlOnHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE15cPermissionListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 106,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 119,
+        ignore: false
+      },
+      identifier: "funcId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 106,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN24ohos.ability_access_ctrl26FfiOHOSAbilityAccessCtrlOnHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE6funcIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 128,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlOff",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAbilityAccessCtrlOff",
+      exportId: "FfiOHOSAbilityAccessCtrlOff",
+      mangledBeforeSema: "24ohos.ability_access_ctrl27FfiOHOSAbilityAccessCtrlOffF7CString8CArrUI3210CArrStringl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7939662654741374410
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                23,
+                24,
+                25,
+                26
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 52,
+        ignore: false
+      },
+      identifier: "cType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN24ohos.ability_access_ctrl27FfiOHOSAbilityAccessCtrlOffHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE5cTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 76,
+        ignore: false
+      },
+      identifier: "cTokenIDList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN24ohos.ability_access_ctrl27FfiOHOSAbilityAccessCtrlOffHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE12cTokenIDListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 78,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 105,
+        ignore: false
+      },
+      identifier: "cPermissionList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 78,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN24ohos.ability_access_ctrl27FfiOHOSAbilityAccessCtrlOffHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE15cPermissionListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 107,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 120,
+        ignore: false
+      },
+      identifier: "funcId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 107,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN24ohos.ability_access_ctrl27FfiOHOSAbilityAccessCtrlOffHkRN8ohos.ffi8CArrUI32ERNY4_10CArrStringElE6funcIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 25,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlRequestPermissionsFromUser",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSAbilityAccessCtrlRequestPermissionsFromUser",
+      exportId: "FfiOHOSAbilityAccessCtrlRequestPermissionsFromUser",
+      mangledBeforeSema: "24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserF12StageContext10CArrStringl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 14988393477737378523
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28,
+                29,
+                30
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 82,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserHPuRN8ohos.ffi10CArrStringElE7contextIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 84,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 111,
+        ignore: false
+      },
+      identifier: "cPermissionList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 84,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserHPuRN8ohos.ffi10CArrStringElE15cPermissionListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 18,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserHPuRN8ohos.ffi10CArrStringElE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 43,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFunc",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFunc",
+      exportId: "FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFunc",
+      mangledBeforeSema: "24ohos.ability_access_ctrl59FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFuncF12StageContext10CArrString8CPointer<u>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7864113145511780227
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                32,
+                33,
+                34
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 70,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 91,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 70,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN24ohos.ability_access_ctrl59FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFuncHPuRN8ohos.ffi10CArrStringEPuE7contextIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 93,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 120,
+        ignore: false
+      },
+      identifier: "cPermissionList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 93,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN24ohos.ability_access_ctrl59FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFuncHPuRN8ohos.ffi10CArrStringEPuE15cPermissionListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 36,
+        ignore: false
+      },
+      identifier: "callbackPtr",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN24ohos.ability_access_ctrl59FfiOHOSAbilityAccessCtrlRequestPermissionsFromUserByStdFuncHPuRN8ohos.ffi10CArrStringEPuE11callbackPtrIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 25,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlRequestPermissionOnSetting",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSAbilityAccessCtrlRequestPermissionOnSetting",
+      exportId: "FfiOHOSAbilityAccessCtrlRequestPermissionOnSetting",
+      mangledBeforeSema: "24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionOnSettingF12StageContext10CArrStringl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 14988393477737378523
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                36,
+                37,
+                38
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 82,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionOnSettingHPuRN8ohos.ffi10CArrStringElE7contextIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 84,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 111,
+        ignore: false
+      },
+      identifier: "cPermissionList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 84,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionOnSettingHPuRN8ohos.ffi10CArrStringElE15cPermissionListE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 18,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN24ohos.ability_access_ctrl50FfiOHOSAbilityAccessCtrlRequestPermissionOnSettingHPuRN8ohos.ffi10CArrStringElE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 112,
+        ignore: false
+      },
+      identifier: "FfiOHOSAbilityAccessCtrlRequestGlobalSwitch",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "FfiOHOSAbilityAccessCtrlRequestGlobalSwitch",
+      exportId: "FfiOHOSAbilityAccessCtrlRequestGlobalSwitch",
+      mangledBeforeSema: "24ohos.ability_access_ctrl43FfiOHOSAbilityAccessCtrlRequestGlobalSwitchF12StageContextil$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 4819775326995728947
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                40,
+                41,
+                42
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 75,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN24ohos.ability_access_ctrl43FfiOHOSAbilityAccessCtrlRequestGlobalSwitchHPuilE7contextIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 94,
+        ignore: false
+      },
+      identifier: "switchType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN24ohos.ability_access_ctrl43FfiOHOSAbilityAccessCtrlRequestGlobalSwitchHPuilE10switchTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 96,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 105,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 96,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN24ohos.ability_access_ctrl43FfiOHOSAbilityAccessCtrlRequestGlobalSwitchHPuilE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 112,
+        ignore: false
+      },
+      identifier: "memcpy_s",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "memcpy_s",
+      exportId: "memcpy_s",
+      mangledBeforeSema: "24ohos.ability_access_ctrl8memcpy_sF8CPointer<j>r8CPointer<j>r$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7434300100672367992
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44,
+                45,
+                46,
+                47
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 41,
+        ignore: false
+      },
+      identifier: "dest",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN24ohos.ability_access_ctrl8memcpy_sHPjrPjrE4destIjE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 62,
+        ignore: false
+      },
+      identifier: "destMax",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN24ohos.ability_access_ctrl8memcpy_sHPjrPjrE7destMaxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 85,
+        ignore: false
+      },
+      identifier: "src",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN24ohos.ability_access_ctrl8memcpy_sHPjrPjrE3srcIjE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 87,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 104,
+        ignore: false
+      },
+      identifier: "count",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 87,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN24ohos.ability_access_ctrl8memcpy_sHPjrPjrE5countE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 86,
+        ignore: false
+      },
+      identifier: "ACCESS_LOG",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN24ohos.ability_access_ctrl10ACCESS_LOGE",
+      exportId: "_CN24ohos.ability_access_ctrl10ACCESS_LOGE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl10ACCESS_LOGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7784123858676698119
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 71,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 97,
+        column: 13,
+        ignore: false
+      },
+      identifier: "GrantStatus",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 71,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "atomicservice",
+              expr: 5
+            },
+            {
+              name: "crossplatform",
+              expr: 6
+            },
+            {
+              name: "stagemodelonly",
+              expr: 7
+            },
+            {
+              name: "syscap",
+              expr: 8
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "_CN24ohos.ability_access_ctrl11GrantStatusE",
+      exportId: "_CN24ohos.ability_access_ctrl11GrantStatusE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl11GrantStatusU",
+      hash: {
+        instVar: 5167867480842694906,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17555140184239870560
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          50,
+          51,
+          52
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 64,
+          column: 850,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 79,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 79,
+        column: 33,
+        ignore: false
+      },
+      identifier: "PERMISSION_DENIED",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 79,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 9
+            },
+            {
+              name: "atomicservice",
+              expr: 10
+            },
+            {
+              name: "crossplatform",
+              expr: 11
+            },
+            {
+              name: "stagemodelonly",
+              expr: 12
+            },
+            {
+              name: "syscap",
+              expr: 13
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl11GrantStatus17PERMISSION_DENIEDKE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl11GrantStatusU17PERMISSION_DENIEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 17555140184239870560
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 87,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 87,
+        column: 34,
+        ignore: false
+      },
+      identifier: "PERMISSION_GRANTED",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 87,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 14
+            },
+            {
+              name: "atomicservice",
+              expr: 15
+            },
+            {
+              name: "crossplatform",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl11GrantStatus18PERMISSION_GRANTEDKE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl11GrantStatusU18PERMISSION_GRANTEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 17555140184239870560
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 90,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 96,
+        column: 17,
+        ignore: false
+      },
+      identifier: "toGrantStatus",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 90,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        144678413041418784,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN24ohos.ability_access_ctrl11GrantStatus13toGrantStatusHi",
+      exportId: "_CN24ohos.ability_access_ctrl11GrantStatus13toGrantStatusHi",
+      mangledBeforeSema: "24ohos.ability_access_ctrl11GrantStatusU13toGrantStatusFi$$11GrantStatus",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 8035971499611947038,
+        bodyHash: 1463906622955644233
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 22
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 90,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 90,
+        column: 53,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 90,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN24ohos.ability_access_ctrl11GrantStatus13toGrantStatusHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 98,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 111,
+        column: 13,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 98,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusEU00000003GZZLZK_E",
+      mangledBeforeSema: "11GrantStatus<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          24
+        ],
+        body: [
+          55
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 99,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 110,
+        column: 17,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 99,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusE8toStringHv",
+      exportId: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusE8toStringHv",
+      mangledBeforeSema: "24ohos.ability_access_ctrl7Extend!11GrantStatus<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4453362879173388459
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 112,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 123,
+        column: 13,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 112,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusEU00000003GZZLZK0_E",
+      mangledBeforeSema: "11GrantStatus<:9Equatable<11GrantStatus>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 16532009234028671988
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          26
+        ],
+        body: [
+          57,
+          59
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 113,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 119,
+        column: 17,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 113,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusEeqHY1_",
+      exportId: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusEeqHY1_",
+      mangledBeforeSema: "24ohos.ability_access_ctrl7Extend!11GrantStatus<:9Equatable<11GrantStatus>X2==F11GrantStatus$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5706008285838651625
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                58
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 113,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 113,
+        column: 58,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 113,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 120,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 122,
+        column: 17,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 120,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusEneHY1_",
+      exportId: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusEneHY1_",
+      mangledBeforeSema: "24ohos.ability_access_ctrl7Extend!11GrantStatus<:9Equatable<11GrantStatus>X2!=F11GrantStatus$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 9327628955280943882
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                60
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 120,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 120,
+        column: 58,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 4,
+        line: 120,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN24ohos.ability_access_ctrlXNNY_11GrantStatusE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 2,
+        ignore: false
+      },
+      identifier: "PermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "atomicservice",
+              expr: 20
+            },
+            {
+              name: "crossplatform",
+              expr: 21
+            },
+            {
+              name: "stagemodelonly",
+              expr: 22
+            },
+            {
+              name: "syscap",
+              expr: 23
+            }
+          ]
+        }
+      ],
+      type: 29,
+      mangledName: "_CN24ohos.ability_access_ctrl23PermissionRequestResultE",
+      exportId: "_CN24ohos.ability_access_ctrl23PermissionRequestResultE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl23PermissionRequestResultC",
+      hash: {
+        instVar: 1710852016615986992,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 9879271093696820533
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          37
+        ],
+        body: [
+          62,
+          63,
+          64,
+          65,
+          68
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 42,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 24
+            },
+            {
+              name: "atomicservice",
+              expr: 25
+            },
+            {
+              name: "crossplatform",
+              expr: 26
+            },
+            {
+              name: "stagemodelonly",
+              expr: 27
+            },
+            {
+              name: "syscap",
+              expr: 28
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl23PermissionRequestResult11permissionsK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl23PermissionRequestResultC11permissionsV$$5Array<6String>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 9879271093696820533
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 41,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 29
+            },
+            {
+              name: "atomicservice",
+              expr: 30
+            },
+            {
+              name: "crossplatform",
+              expr: 31
+            },
+            {
+              name: "stagemodelonly",
+              expr: 32
+            },
+            {
+              name: "syscap",
+              expr: 33
+            }
+          ]
+        }
+      ],
+      type: 31,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl23PermissionRequestResult11authResultsK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl23PermissionRequestResultC11authResultsV$$5Array<i>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 9879271093696820533
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 55,
+        ignore: false
+      },
+      identifier: "dialogShownResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713952,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 34
+            },
+            {
+              name: "atomicservice",
+              expr: 35
+            },
+            {
+              name: "stagemodelonly",
+              expr: 36
+            },
+            {
+              name: "syscap",
+              expr: 37
+            }
+          ]
+        }
+      ],
+      type: 32,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl23PermissionRequestResult18dialogShownResultsK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl23PermissionRequestResultC18dialogShownResultsV$$O1_5Array<b>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 17857314613659753970
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 38
+            },
+            {
+              name: "atomicservice",
+              expr: 39
+            },
+            {
+              name: "crossplatform",
+              expr: 40
+            },
+            {
+              name: "stagemodelonly",
+              expr: 41
+            },
+            {
+              name: "syscap",
+              expr: 42
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "_CN24ohos.ability_access_ctrl23PermissionRequestResult6<init>HRNat5ArrayIRNat6StringEERNatY5_IiE",
+      exportId: "_CN24ohos.ability_access_ctrl23PermissionRequestResult6<init>HRNat5ArrayIRNat6StringEERNatY5_IiE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl23PermissionRequestResultC6<init>F5Array<6String>5Array<i>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3657770915876253066
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                66,
+                67
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 142,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 142,
+        column: 35,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 142,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN24ohos.ability_access_ctrl23PermissionRequestResult4initHRNat5ArrayIRNat6StringEERNatY5_IiEE11permissionsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 34,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN24ohos.ability_access_ctrl23PermissionRequestResult4initHRNat5ArrayIRNat6StringEERNatY5_IiEE11authResultsIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fromCPermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297729568,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CN24ohos.ability_access_ctrl23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultE",
+      exportId: "_CN24ohos.ability_access_ctrl23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl23PermissionRequestResultC28fromCPermissionRequestResultF24CPermissionRequestResult$$23PermissionRequestResult",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 8035971499611947038,
+        bodyHash: 13660904221015450996
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                70
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 197,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CPermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN24ohos.ability_access_ctrl24CPermissionRequestResultE",
+      exportId: "_CN24ohos.ability_access_ctrl24CPermissionRequestResultE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl24CPermissionRequestResultS",
+      hash: {
+        instVar: 12607240431397236408,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          71,
+          72,
+          73,
+          74
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 76,
+        ignore: false
+      },
+      identifier: "cRet",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN24ohos.ability_access_ctrl23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultEE4cRetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 36,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult11permissionsK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl24CPermissionRequestResultS11permissions$$10CArrString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 194,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 194,
+        column: 33,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 194,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult11authResultsK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl24CPermissionRequestResultS11authResults$$7CArrI32",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 41,
+        ignore: false
+      },
+      identifier: "dialogShownResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 39,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult18dialogShownResultsK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl24CPermissionRequestResultS18dialogShownResults$$8CArrBool",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 196,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult6<init>HRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolE",
+      exportId: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult6<init>HRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl24CPermissionRequestResultS24CPermissionRequestResultY10CArrString!L11permissions7CArrI32!L11authResults8CArrBool!L18dialogShownResults",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                75,
+                76,
+                77
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 36
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 36,
+        ignore: false
+      },
+      identifier: "permissions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE11permissionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 194,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 194,
+        column: 33,
+        ignore: false
+      },
+      identifier: "authResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 194,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE11authResultsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 41,
+        ignore: false
+      },
+      identifier: "dialogShownResults",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 39,
+      mangledName: "_CN24ohos.ability_access_ctrl24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE18dialogShownResultsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 205,
+        column: 2,
+        ignore: false
+      },
+      identifier: "RetDataCPermissionRequestResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 41,
+      mangledName: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResultE",
+      exportId: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResultE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl31RetDataCPermissionRequestResultS",
+      hash: {
+        instVar: 2954505259870397524,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          79,
+          80,
+          81
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 24,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResult4codeK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl31RetDataCPermissionRequestResultS4code$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 43,
+        ignore: false
+      },
+      identifier: "data",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "",
+      exportId: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResult4dataK_E",
+      mangledBeforeSema: "24ohos.ability_access_ctrl31RetDataCPermissionRequestResultS4data$$24CPermissionRequestResult",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResult6<init>HiRNY_24CPermissionRequestResultE",
+      exportId: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResult6<init>HiRNY_24CPermissionRequestResultE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl31RetDataCPermissionRequestResultS31RetDataCPermissionRequestResultYi!L4code24CPermissionRequestResult!L4data",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                82,
+                83
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 41
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 24,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResult4initHiRNY_24CPermissionRequestResultEE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 43,
+        ignore: false
+      },
+      identifier: "data",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN24ohos.ability_access_ctrl31RetDataCPermissionRequestResult4initHiRNY_24CPermissionRequestResultEE4dataE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 2,
+        ignore: false
+      },
+      identifier: "AbilityAccessCtrl",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 43
+            },
+            {
+              name: "atomicservice",
+              expr: 44
+            },
+            {
+              name: "crossplatform",
+              expr: 45
+            },
+            {
+              name: "stagemodelonly",
+              expr: 46
+            },
+            {
+              name: "syscap",
+              expr: 47
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN24ohos.ability_access_ctrl17AbilityAccessCtrlE",
+      exportId: "_CN24ohos.ability_access_ctrl17AbilityAccessCtrlE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl17AbilityAccessCtrlC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8724908025628042108
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          37
+        ],
+        body: [
+          85,
+          87
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 6,
+        ignore: false
+      },
+      identifier: "createAtManager",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 48
+            },
+            {
+              name: "atomicservice",
+              expr: 49
+            },
+            {
+              name: "crossplatform",
+              expr: 50
+            },
+            {
+              name: "stagemodelonly",
+              expr: 51
+            },
+            {
+              name: "syscap",
+              expr: 52
+            }
+          ]
+        }
+      ],
+      type: 44,
+      mangledName: "_CN24ohos.ability_access_ctrl17AbilityAccessCtrl15createAtManagerHv",
+      exportId: "_CN24ohos.ability_access_ctrl17AbilityAccessCtrl15createAtManagerHv",
+      mangledBeforeSema: "24ohos.ability_access_ctrl17AbilityAccessCtrlC15createAtManagerF$$9AtManager",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 7808822129649502446
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 45
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 241,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 328,
+        column: 2,
+        ignore: false
+      },
+      identifier: "AtManager",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 241,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 53
+            },
+            {
+              name: "atomicservice",
+              expr: 54
+            },
+            {
+              name: "stagemodelonly",
+              expr: 55
+            },
+            {
+              name: "syscap",
+              expr: 56
+            }
+          ]
+        }
+      ],
+      type: 45,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManagerE",
+      exportId: "_CN24ohos.ability_access_ctrl9AtManagerE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl9AtManagerC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6242759869049305221
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          37
+        ],
+        body: [
+          88,
+          92,
+          95
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 14,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 31,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN24ohos.ability_access_ctrl17AbilityAccessCtrl6<init>Hv",
+      exportId: "_CN24ohos.ability_access_ctrl17AbilityAccessCtrl6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 43
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 293,
+        column: 6,
+        ignore: false
+      },
+      identifier: "requestPermissionsFromUser",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 57
+            },
+            {
+              name: "atomicservice",
+              expr: 58
+            },
+            {
+              name: "crossplatform",
+              expr: 59
+            },
+            {
+              name: "stagemodelonly",
+              expr: 60
+            },
+            {
+              name: "syscap",
+              expr: 61
+            }
+          ]
+        }
+      ],
+      type: 47,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager26requestPermissionsFromUserHPuRNat5ArrayIRNat6StringEEF0uNNat6OptionICN9ohos.base10AsyncErrorEENNatYB_ICNY_23PermissionRequestResultEEE",
+      exportId: "_CN24ohos.ability_access_ctrl9AtManager26requestPermissionsFromUserHPuRNat5ArrayIRNat6StringEEF0uNNat6OptionICN9ohos.base10AsyncErrorEENNatYB_ICNY_23PermissionRequestResultEEE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl9AtManagerC26requestPermissionsFromUserF12StageContext5Array<11Permissions>13AsyncCallback<23PermissionRequestResult>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11229425583527620697
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                89,
+                90,
+                91
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 65,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager26requestPermissionsFromUserHPuRNat5ArrayIRNat6StringEEF0uNNat6OptionICN9ohos.base10AsyncErrorEENNatYB_ICNY_23PermissionRequestResultEEEE7contextIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 67,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 101,
+        ignore: false
+      },
+      identifier: "permissionList",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 67,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager26requestPermissionsFromUserHPuRNat5ArrayIRNat6StringEEF0uNNat6OptionICN9ohos.base10AsyncErrorEENNatYB_ICNY_23PermissionRequestResultEEEE14permissionListIY7_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 265,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 265,
+        column: 57,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 265,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562984313159712,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager26requestPermissionsFromUserHPuRNat5ArrayIRNat6StringEEF0uNNat6OptionICN9ohos.base10AsyncErrorEENNatYB_ICNY_23PermissionRequestResultEEEE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 327,
+        column: 6,
+        ignore: false
+      },
+      identifier: "checkAccessToken",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 62
+            },
+            {
+              name: "atomicservice",
+              expr: 63
+            },
+            {
+              name: "crossplatform",
+              expr: 64
+            },
+            {
+              name: "stagemodelonly",
+              expr: 65
+            },
+            {
+              name: "syscap",
+              expr: 66
+            }
+          ]
+        }
+      ],
+      type: 52,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager16checkAccessTokenHjRNat6StringE",
+      exportId: "_CN24ohos.ability_access_ctrl9AtManager16checkAccessTokenHjRNat6StringE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl9AtManagerC16checkAccessTokenFj11Permissions$$11GrantStatus",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11349549020181209572
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                93,
+                94
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 22
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 49,
+        ignore: false
+      },
+      identifier: "tokenID",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager16checkAccessTokenHjRNat6StringEE7tokenIDE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 78,
+        ignore: false
+      },
+      identifier: "permissionName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 316,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager16checkAccessTokenHjRNat6StringEE14permissionNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 241,
+        column: 14,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 241,
+        column: 23,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 44,
+      mangledName: "_CN24ohos.ability_access_ctrl9AtManager6<init>Hv",
+      exportId: "_CN24ohos.ability_access_ctrl9AtManager6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 45
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 22,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ERROR_CODE_MAP",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 22,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 53,
+      mangledName: "_CN24ohos.ability_access_ctrl14ERROR_CODE_MAPE",
+      exportId: "_CN24ohos.ability_access_ctrl14ERROR_CODE_MAPE",
+      mangledBeforeSema: "24ohos.ability_access_ctrl14ERROR_CODE_MAPV$$7HashMap<i6String>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 10364170087358662199
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.ability_access_ctrl",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 47,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorInfo",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 54,
+      mangledName: "_CN24ohos.ability_access_ctrl12getErrorInfoHi",
+      exportId: "_CN24ohos.ability_access_ctrl12getErrorInfoHi",
+      mangledBeforeSema: "24ohos.ability_access_ctrl12getErrorInfoFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 9330085175445821702
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                98
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.ability_access_ctrl",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 30,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN24ohos.ability_access_ctrl12getErrorInfoHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 37,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "12100001"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 39,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "12100008"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 54,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0xD005A01"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 65,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 65,
+        column: 13,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 66,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 66,
+        column: 30,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 67,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 67,
+        column: 30,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 68,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 68,
+        column: 31,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 69,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 69,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 73,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 73,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 74,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 74,
+        column: 35,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 75,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 75,
+        column: 35,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 76,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 76,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 77,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 77,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 81,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 81,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 82,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 82,
+        column: 35,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 83,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 83,
+        column: 35,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 84,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 84,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 4,
+        line: 85,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 4,
+        line: 85,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 102,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 102,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 210,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 210,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 226,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 226,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 227,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 227,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 228,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 228,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 236,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 236,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 24,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 238,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 238,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 260,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 260,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 310,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 310,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 311,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 311,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 312,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 312,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 313,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 313,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 314,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 314,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Security.AccessToken",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

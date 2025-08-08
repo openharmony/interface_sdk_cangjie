@@ -1,0 +1,6189 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.telephony_call",
+  pkgDepInfo: "{\"package\":\"ohos.telephony_call\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.ability\",\"isStd\":false,\"imports\":[{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":22}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"number_format_options.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":19}},{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}},{\"file\":\"telephony_call_ffi.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}}]},{\"package\":\"ohos.encoding.json\",\"isStd\":false,\"imports\":[{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"number_format_options.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":18}},{\"file\":\"telephony_call_ffi.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"number_format_options.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"number_format_options.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}},{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"number_format_options.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":24}},{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":24}},{\"file\":\"telephony_call.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":24}}]}]}",
+  imports: [
+    "ohos.hilog",
+    "std.collection",
+    "std.core",
+    "ohos.ability"
+  ],
+  allFiles: [
+    "ohos.telephony_call/number_format_options.cj",
+    "ohos.telephony_call/telephony_call.cj",
+    "ohos.telephony_call/telephony_call_ffi.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 24,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 22,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ability"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 24,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "encoding",
+            "json"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 22,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 23,
+            column: 24,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 24,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 24,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN10ohos.hilog12HilogChannelE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        1,
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 8
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 12
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 20
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 11
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 24
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN12ohos.ability16UIAbilityContextE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 14
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        28,
+        28,
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 28,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        1
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        28,
+        1,
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        28
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 57,
+        ignore: false
+      },
+      identifier: "ERROR_CELLUAR_DATA_SERVICE_UNAVAILABLE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call38ERROR_CELLUAR_DATA_SERVICE_UNAVAILABLEE",
+      mangledBeforeSema: "19ohos.telephony_call38ERROR_CELLUAR_DATA_SERVICE_UNAVAILABLEV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 5299045577008478852
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 73,
+        ignore: false
+      },
+      identifier: "TELEPHONY_CALL_LOG",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN19ohos.telephony_call18TELEPHONY_CALL_LOGE",
+      exportId: "_CN19ohos.telephony_call18TELEPHONY_CALL_LOGE",
+      mangledBeforeSema: "19ohos.telephony_call18TELEPHONY_CALL_LOGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 12275340129903459288
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ERROR_CODE_MAP",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678138029281584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN19ohos.telephony_call14ERROR_CODE_MAPE",
+      exportId: "_CN19ohos.telephony_call14ERROR_CODE_MAPE",
+      mangledBeforeSema: "19ohos.telephony_call14ERROR_CODE_MAPV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 1273861709373161920,
+        bodyHash: 8013005600872439914
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorCode",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN19ohos.telephony_call12getErrorCodeHi",
+      exportId: "_CN19ohos.telephony_call12getErrorCodeHi",
+      mangledBeforeSema: "19ohos.telephony_call12getErrorCodeFi$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10291062923164105038
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                5
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 30,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN19ohos.telephony_call12getErrorCodeHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorMsg",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN19ohos.telephony_call11getErrorMsgHi",
+      exportId: "_CN19ohos.telephony_call11getErrorMsgHi",
+      mangledBeforeSema: "19ohos.telephony_call11getErrorMsgFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 11063927195948394078
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 39,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN19ohos.telephony_call11getErrorMsgHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 2,
+        ignore: false
+      },
+      identifier: "EmergencyNumberOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 2
+            },
+            {
+              name: "stagemodelonly",
+              expr: 3
+            },
+            {
+              name: "syscap",
+              expr: 4
+            }
+          ]
+        }
+      ],
+      type: 7,
+      mangledName: "_CN19ohos.telephony_call22EmergencyNumberOptionsE",
+      exportId: "_CN19ohos.telephony_call22EmergencyNumberOptionsE",
+      mangledBeforeSema: "19ohos.telephony_call22EmergencyNumberOptionsU",
+      hash: {
+        instVar: 9454743329524389666,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          9,
+          10,
+          11
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 79,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 16,
+        ignore: false
+      },
+      identifier: "SLOT_ID_ONE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 5
+            },
+            {
+              name: "stagemodelonly",
+              expr: 6
+            },
+            {
+              name: "syscap",
+              expr: 7
+            }
+          ]
+        }
+      ],
+      type: 7,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call22EmergencyNumberOptions11SLOT_ID_ONEKE",
+      mangledBeforeSema: "19ohos.telephony_call22EmergencyNumberOptionsU11SLOT_ID_ONEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 16,
+        ignore: false
+      },
+      identifier: "SLOT_ID_TWO",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 8
+            },
+            {
+              name: "stagemodelonly",
+              expr: 9
+            },
+            {
+              name: "syscap",
+              expr: 10
+            }
+          ]
+        }
+      ],
+      type: 7,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call22EmergencyNumberOptions11SLOT_ID_TWOKE",
+      mangledBeforeSema: "19ohos.telephony_call22EmergencyNumberOptionsU11SLOT_ID_TWOV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138163511328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN19ohos.telephony_call22EmergencyNumberOptions8getValueHv",
+      exportId: "_CN19ohos.telephony_call22EmergencyNumberOptions8getValueHv",
+      mangledBeforeSema: "19ohos.telephony_call22EmergencyNumberOptionsU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 5712543011818812820
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 146,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CallState",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 11
+            },
+            {
+              name: "stagemodelonly",
+              expr: 12
+            },
+            {
+              name: "syscap",
+              expr: 13
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "_CN19ohos.telephony_call9CallStateE",
+      exportId: "_CN19ohos.telephony_call9CallStateE",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU",
+      hash: {
+        instVar: 10298313457954518603,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14780517314966248544
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 120,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 23,
+        ignore: false
+      },
+      identifier: "CALL_STATE_UNKNOWN",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 14
+            },
+            {
+              name: "stagemodelonly",
+              expr: 15
+            },
+            {
+              name: "syscap",
+              expr: 16
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call9CallState18CALL_STATE_UNKNOWNKE",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU18CALL_STATE_UNKNOWNV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 20,
+        ignore: false
+      },
+      identifier: "CALL_STATE_IDLE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 17
+            },
+            {
+              name: "stagemodelonly",
+              expr: 18
+            },
+            {
+              name: "syscap",
+              expr: 19
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call9CallState15CALL_STATE_IDLEKE",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU15CALL_STATE_IDLEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 23,
+        ignore: false
+      },
+      identifier: "CALL_STATE_RINGING",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 20
+            },
+            {
+              name: "stagemodelonly",
+              expr: 21
+            },
+            {
+              name: "syscap",
+              expr: 22
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call9CallState18CALL_STATE_RINGINGKE",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU18CALL_STATE_RINGINGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 23,
+        ignore: false
+      },
+      identifier: "CALL_STATE_OFFHOOK",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 23
+            },
+            {
+              name: "stagemodelonly",
+              expr: 24
+            },
+            {
+              name: "syscap",
+              expr: 25
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call9CallState18CALL_STATE_OFFHOOKKE",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU18CALL_STATE_OFFHOOKV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138163495968,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 26
+            },
+            {
+              name: "stagemodelonly",
+              expr: 27
+            },
+            {
+              name: "syscap",
+              expr: 28
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "_CN19ohos.telephony_call9CallState8getValueHv",
+      exportId: "_CN19ohos.telephony_call9CallState8getValueHv",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15742592119726436401
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 6,
+        ignore: false
+      },
+      identifier: "parse",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        144678138163499552,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN19ohos.telephony_call9CallState5parseHi",
+      exportId: "_CN19ohos.telephony_call9CallState5parseHi",
+      mangledBeforeSema: "19ohos.telephony_call9CallStateU5parseFi$$9CallState",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 8035971499611947038,
+        bodyHash: 10380785418356641653
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 43,
+        ignore: false
+      },
+      identifier: "val",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN19ohos.telephony_call9CallState5parseHiE3valE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 2,
+        ignore: false
+      },
+      identifier: "NumberFormatOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 29
+            },
+            {
+              name: "stagemodelonly",
+              expr: 30
+            },
+            {
+              name: "syscap",
+              expr: 31
+            }
+          ]
+        }
+      ],
+      type: 11,
+      mangledName: "_CN19ohos.telephony_call19NumberFormatOptionsE",
+      exportId: "_CN19ohos.telephony_call19NumberFormatOptionsE",
+      mangledBeforeSema: "19ohos.telephony_call19NumberFormatOptionsC",
+      hash: {
+        instVar: 3382101395589888281,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          13
+        ],
+        body: [
+          21,
+          22
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 35,
+        ignore: false
+      },
+      identifier: "countryCode",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 32
+            },
+            {
+              name: "stagemodelonly",
+              expr: 33
+            },
+            {
+              name: "syscap",
+              expr: 34
+            }
+          ]
+        }
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN19ohos.telephony_call19NumberFormatOptions11countryCodeK_E",
+      mangledBeforeSema: "19ohos.telephony_call19NumberFormatOptionsC11countryCodeV$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 1273861709373161920,
+        bodyHash: 13889038395717991727
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 35
+            },
+            {
+              name: "stagemodelonly",
+              expr: 36
+            },
+            {
+              name: "syscap",
+              expr: 37
+            }
+          ]
+        }
+      ],
+      type: 12,
+      mangledName: "_CN19ohos.telephony_call19NumberFormatOptions6<init>HRNat6StringE",
+      exportId: "_CN19ohos.telephony_call19NumberFormatOptions6<init>HRNat6StringE",
+      mangledBeforeSema: "19ohos.telephony_call19NumberFormatOptionsC6<init>F6String$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2317711748073680477
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                23
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 11
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 36,
+        ignore: false
+      },
+      identifier: "countryCode",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call19NumberFormatOptions4initHRNat6StringEE11countryCodeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 210,
+        column: 2,
+        ignore: false
+      },
+      identifier: "TelephonyCall",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 38
+            },
+            {
+              name: "stagemodelonly",
+              expr: 39
+            },
+            {
+              name: "syscap",
+              expr: 40
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCallE",
+      exportId: "_CN19ohos.telephony_call13TelephonyCallE",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7901751406577383524
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          13
+        ],
+        body: [
+          25,
+          28,
+          30,
+          33,
+          36,
+          38,
+          39,
+          40,
+          41,
+          46
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 6,
+        ignore: false
+      },
+      identifier: "formatPhoneNumberToE164",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 41
+            },
+            {
+              name: "stagemodelonly",
+              expr: 42
+            },
+            {
+              name: "syscap",
+              expr: 43
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall23formatPhoneNumberToE164HRNat6StringEY3_",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall23formatPhoneNumberToE164HRNat6StringEY3_",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC23formatPhoneNumberToE164F6String6String$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 14820259850802840597
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                26,
+                27
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 67,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall23formatPhoneNumberToE164HRNat6StringEY3_E11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 69,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 88,
+        ignore: false
+      },
+      identifier: "countryCode",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 69,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall23formatPhoneNumberToE164HRNat6StringEY3_E11countryCodeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 6,
+        ignore: false
+      },
+      identifier: "makeCall",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 44
+            },
+            {
+              name: "atomicservice",
+              expr: 45
+            },
+            {
+              name: "stagemodelonly",
+              expr: 46
+            },
+            {
+              name: "syscap",
+              expr: 47
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall8makeCallHRNat6StringE",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall8makeCallHRNat6StringE",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC8makeCallF6String$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 7082536490714313534
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                29
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 52,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall8makeCallHRNat6StringEE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 97,
+        column: 6,
+        ignore: false
+      },
+      identifier: "makeCall",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 48
+            },
+            {
+              name: "atomicservice",
+              expr: 49
+            },
+            {
+              name: "stagemodelonly",
+              expr: 50
+            },
+            {
+              name: "syscap",
+              expr: 51
+            }
+          ]
+        }
+      ],
+      type: 18,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall8makeCallHCN12ohos.ability16UIAbilityContextERNat6StringE",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall8makeCallHCN12ohos.ability16UIAbilityContextERNat6StringE",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC8makeCallF16UIAbilityContext6String$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 9459496819663946957
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                31,
+                32
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 58,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall8makeCallHCN12ohos.ability16UIAbilityContextERNat6StringEE7contextE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 79,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall8makeCallHCN12ohos.ability16UIAbilityContextERNat6StringEE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 122,
+        column: 6,
+        ignore: false
+      },
+      identifier: "isEmergencyPhoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 52
+            },
+            {
+              name: "stagemodelonly",
+              expr: 53
+            },
+            {
+              name: "syscap",
+              expr: 54
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringENNY_22EmergencyNumberOptionsE",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringENNY_22EmergencyNumberOptionsE",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC22isEmergencyPhoneNumberF6String22EmergencyNumberOptions$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 3187134759096283850
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                34,
+                35
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 66,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringENNY_22EmergencyNumberOptionsEE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 99,
+        ignore: false
+      },
+      identifier: "options",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 108,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringENNY_22EmergencyNumberOptionsEE7optionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 132,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 134,
+        column: 6,
+        ignore: false
+      },
+      identifier: "isEmergencyPhoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 132,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 55
+            },
+            {
+              name: "stagemodelonly",
+              expr: 56
+            },
+            {
+              name: "syscap",
+              expr: 57
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringE",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringE",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC22isEmergencyPhoneNumberF6String$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 865760750972503864
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                37
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 132,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 132,
+        column: 66,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 132,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall22isEmergencyPhoneNumberHRNat6StringEE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 144,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 146,
+        column: 6,
+        ignore: false
+      },
+      identifier: "hasCall",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 144,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 58
+            },
+            {
+              name: "stagemodelonly",
+              expr: 59
+            },
+            {
+              name: "syscap",
+              expr: 60
+            }
+          ]
+        }
+      ],
+      type: 23,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall7hasCallHv",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall7hasCallHv",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC7hasCallF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 12091247031854499488
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 156,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 159,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getCallState",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 156,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 61
+            },
+            {
+              name: "stagemodelonly",
+              expr: 62
+            },
+            {
+              name: "syscap",
+              expr: 63
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall12getCallStateHv",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall12getCallStateHv",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC12getCallStateF$$9CallState",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 3991408013514818677
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 169,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 173,
+        column: 6,
+        ignore: false
+      },
+      identifier: "hasVoiceCapability",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 169,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 64
+            },
+            {
+              name: "stagemodelonly",
+              expr: 65
+            },
+            {
+              name: "syscap",
+              expr: 66
+            }
+          ]
+        }
+      ],
+      type: 23,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall18hasVoiceCapabilityHv",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall18hasVoiceCapabilityHv",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC18hasVoiceCapabilityF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 3032499249200614371
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 186,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 209,
+        column: 6,
+        ignore: false
+      },
+      identifier: "formatPhoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 186,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 67
+            },
+            {
+              name: "stagemodelonly",
+              expr: 68
+            },
+            {
+              name: "syscap",
+              expr: 69
+            }
+          ]
+        }
+      ],
+      type: 25,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall17formatPhoneNumberHRNat6StringECNY_19NumberFormatOptionsE",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall17formatPhoneNumberHRNat6StringECNY_19NumberFormatOptionsE",
+      mangledBeforeSema: "19ohos.telephony_call13TelephonyCallC17formatPhoneNumberF6String19NumberFormatOptions!7options=$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 314546750375145616
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                42,
+                43
+              ],
+              desugars: [
+                0,
+                44
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 28,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall17formatPhoneNumberHRNat6StringECNY_19NumberFormatOptionsEE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 188,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 188,
+        column: 66,
+        ignore: false
+      },
+      identifier: "options",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 188,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall17formatPhoneNumberHRNat6StringECNY_19NumberFormatOptionsEE7optionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 188,
+        column: 41,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 188,
+        column: 66,
+        ignore: false
+      },
+      identifier: "options.1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CPI19ohos.telephony_call13TelephonyCall17formatPhoneNumberHRNat6StringECNY_19NumberFormatOptionsEE7optionsHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                45
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 11
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 28,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall17formatPhoneNumberHRNat6StringECNY_19NumberFormatOptionsEE9options.1HY3_E11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 14,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 27,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN19ohos.telephony_call13TelephonyCall6<init>Hv",
+      exportId: "_CN19ohos.telephony_call13TelephonyCall6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 14
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 43,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallFormatPhoneNumberToE164",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "FfiOHOSTelephonyCallFormatPhoneNumberToE164",
+      exportId: "FfiOHOSTelephonyCallFormatPhoneNumberToE164",
+      mangledBeforeSema: "19ohos.telephony_call43FfiOHOSTelephonyCallFormatPhoneNumberToE164F7CString7CString8CPointer<i>$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3516003447959607834
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                48,
+                49,
+                50
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 74,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN19ohos.telephony_call43FfiOHOSTelephonyCallFormatPhoneNumberToE164HkkPiE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 76,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 96,
+        ignore: false
+      },
+      identifier: "countryCode",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 76,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN19ohos.telephony_call43FfiOHOSTelephonyCallFormatPhoneNumberToE164HkkPiE11countryCodeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 33,
+        ignore: false
+      },
+      identifier: "errCode",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 23,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN19ohos.telephony_call43FfiOHOSTelephonyCallFormatPhoneNumberToE164HkkPiE7errCodeIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 42,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallInit",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "FfiOHOSTelephonyCallInit",
+      exportId: "FfiOHOSTelephonyCallInit",
+      mangledBeforeSema: "19ohos.telephony_call24FfiOHOSTelephonyCallInitF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 56,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallHasVoiceCapability",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "FfiOHOSTelephonyCallHasVoiceCapability",
+      exportId: "FfiOHOSTelephonyCallHasVoiceCapability",
+      mangledBeforeSema: "19ohos.telephony_call38FfiOHOSTelephonyCallHasVoiceCapabilityF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 126,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallFormatPhoneNumber",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "FfiOHOSTelephonyCallFormatPhoneNumber",
+      exportId: "FfiOHOSTelephonyCallFormatPhoneNumber",
+      mangledBeforeSema: "19ohos.telephony_call37FfiOHOSTelephonyCallFormatPhoneNumberF7CString7CString8CPointer<i>$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3516003447959607834
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                54,
+                55,
+                56
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 68,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN19ohos.telephony_call37FfiOHOSTelephonyCallFormatPhoneNumberHkkPiE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 70,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 90,
+        ignore: false
+      },
+      identifier: "countryCode",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 70,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN19ohos.telephony_call37FfiOHOSTelephonyCallFormatPhoneNumberHkkPiE11countryCodeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 92,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 116,
+        ignore: false
+      },
+      identifier: "errCode",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 29,
+        column: 92,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN19ohos.telephony_call37FfiOHOSTelephonyCallFormatPhoneNumberHkkPiE7errCodeIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 51,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallGetCallState",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "FfiOHOSTelephonyCallGetCallState",
+      exportId: "FfiOHOSTelephonyCallGetCallState",
+      mangledBeforeSema: "19ohos.telephony_call32FfiOHOSTelephonyCallGetCallStateF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 33,
+        column: 45,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallHasCall",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 33,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "FfiOHOSTelephonyCallHasCall",
+      exportId: "FfiOHOSTelephonyCallHasCall",
+      mangledBeforeSema: "19ohos.telephony_call27FfiOHOSTelephonyCallHasCallF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 121,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallIsEmergencyPhoneNumber",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "FfiOHOSTelephonyCallIsEmergencyPhoneNumber",
+      exportId: "FfiOHOSTelephonyCallIsEmergencyPhoneNumber",
+      mangledBeforeSema: "19ohos.telephony_call42FfiOHOSTelephonyCallIsEmergencyPhoneNumberF7CStringi8CPointer<i>$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 13361777074110563736
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                60,
+                61,
+                62
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 73,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN19ohos.telephony_call42FfiOHOSTelephonyCallIsEmergencyPhoneNumberHkiPiE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 75,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 88,
+        ignore: false
+      },
+      identifier: "slotId",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN19ohos.telephony_call42FfiOHOSTelephonyCallIsEmergencyPhoneNumberHkiPiE6slotIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 90,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 114,
+        ignore: false
+      },
+      identifier: "errCode",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 90,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN19ohos.telephony_call42FfiOHOSTelephonyCallIsEmergencyPhoneNumberHkiPiE7errCodeIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.telephony_call",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 67,
+        ignore: false
+      },
+      identifier: "FfiOHOSTelephonyCallMakeCall",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "FfiOHOSTelephonyCallMakeCall",
+      exportId: "FfiOHOSTelephonyCallMakeCall",
+      mangledBeforeSema: "19ohos.telephony_call28FfiOHOSTelephonyCallMakeCallF7CString$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6489895022883487044
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.telephony_call",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 59,
+        ignore: false
+      },
+      identifier: "phoneNumber",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN19ohos.telephony_call28FfiOHOSTelephonyCallMakeCallHkE11phoneNumberE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 57,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-2"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 162,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 164,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 164,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 40,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 40,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 66,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 66,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 67,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 67,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 68,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 68,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 69,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 69,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 85,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 85,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 86,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 86,
+        column: 28,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 87,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 87,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 88,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 88,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 104,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 104,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 106,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 106,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 128,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 128,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 140,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 140,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 141,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 141,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 142,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 142,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 152,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 152,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 153,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 153,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 154,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 154,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 165,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 165,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 166,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 166,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 167,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 167,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 182,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 182,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 183,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 183,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Telephony.CallManager",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

@@ -1,0 +1,148 @@
+# Copyright (c) 2025 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/cangjie/cjc_toolchain.gni")
+
+template("cj_ohos_sdk_header_copy") {
+    forward_variables_from(invoker, [
+        "source_dir",
+        "out_relative_dir",
+        "extension",
+        "exculde_dirs"
+    ])
+
+    action(target_name) {
+      script = "//interface/sdk_cangjie/build-tools/script/copy_files.py"
+      inputs = [ source_dir ]
+      args = [
+        "--input",
+        rebase_path("${source_dir}", root_build_dir),
+        "--output",
+        rebase_path("${target_out_dir}/${out_relative_dir}", root_build_dir),
+      ]
+      if (defined(extension)) {
+        args += [
+          "--extension",
+          extension
+        ]
+      }
+      if (defined(exculde_dirs)) {
+        args += [
+          "--exclude-dirs",
+          string_join(",", exculde_dirs)
+        ]
+      }
+      outputs = [ "${target_out_dir}/${out_relative_dir}" ]
+    }
+}
+
+template("cj_ohos_sdk_shared_lib") {
+    forward_variables_from(invoker, [
+      "toolchain",
+      "platform",
+      "module_name",
+    ])
+
+    _input_dir = "//interface/sdk_cangjie/build-tools/cjo/ohos"
+    if (module_name == "kit") {
+        _input_dir = "//interface/sdk_cangjie/build-tools/cjo/kit"
+    }
+
+    _output_dir = "${target_out_dir}/cangjie_sdk/api/lib/${platform}/${module_name}"
+    _flatc_path = "//prebuilts/cangjie_sdk/build-tools/flatc/${build_tools_arch}/flatc"
+    _fbs_path = "//interface/sdk_cangjie/build-tools/cjo/ModuleFormat.fbs"
+
+    deps = ["build-tools/lib/mock:ohos.mock(${toolchain})"]
+    _mock_t_out = get_label_info(deps[0], "target_out_dir")
+    _mock_so_target = "${_mock_t_out}/libohos.mock.so"
+
+    action(target_name) {
+        script = "//interface/sdk_cangjie/build-tools/script/process_libs.py"
+        inputs = [ _input_dir ] 
+        args = [
+            "--input-dir",
+            rebase_path(_input_dir, root_build_dir),
+            "--output-dir",
+            rebase_path(_output_dir, root_build_dir),
+            "--mock",
+            rebase_path(_mock_so_target, root_build_dir),
+            "--flatc",
+            rebase_path(_flatc_path, root_build_dir),
+            "--fbs",
+            rebase_path(_fbs_path, root_build_dir)
+        ]
+        outputs = [ _output_dir ]
+    }
+}
+
+cangjie_api_path = "//arkcompiler/cangjie_api" 
+cangjie_systemapi_api = "${cangjie_api_path}/api"
+cangjie_sdk_macro_libs = [
+  "//foundation/arkui/arkui_cangjie_api/ohos:ohos.state_macro_manage",
+  "${cangjie_systemapi_api}/ohos/interop:ohos.ark_interop_macro"
+]
+template("cj_ohos_sdk_macro") {
+  ohos_copy(target_name) {
+    forward_variables_from(invoker, [
+      "toolchain",
+      "module_name",
+      "dyn_extension",
+    ])
+
+    sources = []
+    deps = []
+    foreach(item, cangjie_sdk_macro_libs) {
+      deps += [ 
+        "${item}(${toolchain})",
+        "${item}_cjo(${toolchain})"
+      ]
+      t_out = get_label_info("${item}(${toolchain})", "target_out_dir")
+      t_name = get_label_info("${item}(${toolchain})", "name")
+
+      sources += [ 
+        "${t_out}/lib-macro_${t_name}${dyn_extension}",
+        "${t_out}/${t_name}.cjo"
+      ]
+ 
+    }
+
+    outputs = [ "${target_out_dir}/cangjie_sdk/api/macro/${module_name}/{{source_file_part}}" ]
+    module_source_dir = "${target_out_dir}/cangjie_sdk/api/macro/${module_name}/"
+    module_install_name = ""
+  }
+}
+
+template("cj_ohos_sdk_copy") {
+    forward_variables_from(invoker, [
+        "out_relative_dir",
+    ])
+
+  _module_info_target = "${target_name}_info"
+
+  group(target_name) {
+    deps = []
+    if (defined(invoker.deps)) {
+      deps += invoker.deps
+    }
+    deps += [ ":${_module_info_target}" ]
+  }
+
+  _target_name = target_name
+  generate_module_info(_module_info_target) {
+    module_type = "unknown"
+    module_install_name = ""
+    module_name = _target_name
+    module_source_dir = "${target_out_dir}/${out_relative_dir}"
+    install_enable = false
+  }
+}

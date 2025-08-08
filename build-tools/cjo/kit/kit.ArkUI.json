@@ -1,0 +1,313 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "kit.ArkUI",
+  pkgDepInfo: "{\"package\":\"kit.ArkUI\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":28,\"column\":1},\"end\":{\"line\":28,\"column\":26}}]},{\"package\":\"ohos.component\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":29,\"column\":1},\"end\":{\"line\":29,\"column\":31}}]},{\"package\":\"ohos.display\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":29}},{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":47}},{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":61}}]},{\"package\":\"ohos.router\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":45,\"column\":1},\"end\":{\"line\":45,\"column\":28}}]},{\"package\":\"ohos.state_manage\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":30,\"column\":1},\"end\":{\"line\":30,\"column\":34}}]},{\"package\":\"ohos.ui_resource\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":51,\"column\":1},\"end\":{\"line\":51,\"column\":33}}]},{\"package\":\"ohos.window\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}},{\"file\":\"index.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":45}},{\"file\":\"index.cj\",\"begin\":{\"line\":25,\"column\":1},\"end\":{\"line\":25,\"column\":59}}]}]}",
+  imports: [
+    "ohos.display",
+    "ohos.window",
+    "ohos.base",
+    "ohos.component",
+    "ohos.state_manage",
+    "ohos.router",
+    "ohos.ui_resource"
+  ],
+  allFiles: [
+    "kit.ArkUI/index.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 29,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "display"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 47,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "display"
+          ],
+          identifier: "Rect",
+          asIdentifier: "DisplayRect",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 61,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "display"
+          ],
+          identifier: "Orientation",
+          asIdentifier: "DisplayOrientation",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "window"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 45,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "window"
+          ],
+          identifier: "Rect",
+          asIdentifier: "WindowRect",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 25,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 25,
+            column: 59,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "window"
+          ],
+          identifier: "Orientation",
+          asIdentifier: "WindowOrientation",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 28,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 28,
+            column: 26,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 29,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 29,
+            column: 31,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "component"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 30,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 30,
+            column: 34,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "state_manage"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 45,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 45,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "router"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 51,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 51,
+            column: 33,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ui_resource"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+
+  ],
+  allDecls: [
+
+  ],
+  allExprs: [
+
+  ],
+  moduleName: ""
+}

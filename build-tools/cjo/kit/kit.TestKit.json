@@ -1,0 +1,125 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "kit.TestKit",
+  pkgDepInfo: "{\"package\":\"kit.TestKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.ability_delegator_registry\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":48}}]},{\"package\":\"ohos.test_runner\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":33}}]},{\"package\":\"ohos.ui_test\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":29}}]}]}",
+  imports: [
+    "ohos.ability_delegator_registry",
+    "ohos.test_runner",
+    "ohos.ui_test"
+  ],
+  allFiles: [
+    "kit.TestKit/index.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 48,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ability_delegator_registry"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 33,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "test_runner"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 29,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ui_test"
+          ],
+          identifier: "*",
+          asIdentifier: "",
+          reExport: "Public"
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+
+  ],
+  allDecls: [
+
+  ],
+  allExprs: [
+
+  ],
+  moduleName: ""
+}

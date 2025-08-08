@@ -1,0 +1,4775 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.settings",
+  pkgDepInfo: "{\"package\":\"ohos.settings\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"settings.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}},{\"file\":\"settings_common.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}},{\"file\":\"settings_ffi.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"settings.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}},{\"file\":\"settings_common.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}},{\"file\":\"settings_ffi.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"settings.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":21}},{\"file\":\"settings_common.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"settings.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":30}}]}]}",
+  imports: [
+    "std.collection",
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.settings/settings.cj",
+    "ohos.settings/settings_common.cj",
+    "ohos.settings/settings_ffi.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 30,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "HashMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        1,
+        3
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        8,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        7
+      ]
+    },
+    {
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 6
+        },
+        upperBounds: [
+          9
+        ]
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat8ToStringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        11,
+        3,
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 11
+        },
+        upperBounds: [
+          9
+        ]
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 12
+        },
+        upperBounds: [
+          9
+        ]
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 17
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 21
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 27
+        }
+      }
+    },
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 38
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        19,
+        19,
+        19,
+        20
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 19,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        1
+      ]
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 46,
+        ignore: false
+      },
+      identifier: "SYSTEM_INTERNAL_ERROR",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN13ohos.settings21SYSTEM_INTERNAL_ERRORE",
+      mangledBeforeSema: "13ohos.settings21SYSTEM_INTERNAL_ERRORV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 17129447050631405820
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 88,
+        ignore: false
+      },
+      identifier: "ERROR_CODE_MAP",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN13ohos.settings14ERROR_CODE_MAPE",
+      exportId: "_CN13ohos.settings14ERROR_CODE_MAPE",
+      mangledBeforeSema: "13ohos.settings14ERROR_CODE_MAPV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 5194003724801928967
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorMsg",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN13ohos.settings11getErrorMsgHi",
+      exportId: "_CN13ohos.settings11getErrorMsgHi",
+      mangledBeforeSema: "13ohos.settings11getErrorMsgFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 16072810092557858410
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                4
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 29,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN13ohos.settings11getErrorMsgHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          6
+        ],
+        constraints: [
+          {
+            begin: {
+              file: 1,
+              pkgId: 0,
+              line: 43,
+              column: 89,
+              ignore: false
+            },
+            end: {
+              file: 1,
+              pkgId: 0,
+              line: 43,
+              column: 103,
+              ignore: false
+            },
+            type: 8,
+            uppers: [
+              9
+            ]
+          }
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185328,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 2
+            },
+            {
+              name: "stagemodelonly",
+              expr: 3
+            },
+            {
+              name: "syscap",
+              expr: 4
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN13ohos.settings8getValueIG_HPuG_RNat6StringE",
+      mangledBeforeSema: "13ohos.settings8getValue<1T>F12StageContext1T6String$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14624466861967514493,
+        srcUse: 0,
+        bodyHash: 12003685796464208880
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7,
+                8,
+                9
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 22,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 23,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 46,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 55,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 57,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 73,
+        ignore: false
+      },
+      identifier: "defValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 57,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          11,
+          12
+        ],
+        constraints: [
+          {
+            begin: {
+              file: 1,
+              pkgId: 0,
+              line: 67,
+              column: 107,
+              ignore: false
+            },
+            end: {
+              file: 1,
+              pkgId: 0,
+              line: 67,
+              column: 120,
+              ignore: false
+            },
+            type: 11,
+            uppers: [
+              9
+            ]
+          },
+          {
+            begin: {
+              file: 1,
+              pkgId: 0,
+              line: 68,
+              column: 5,
+              ignore: false
+            },
+            end: {
+              file: 1,
+              pkgId: 0,
+              line: 68,
+              column: 19,
+              ignore: false
+            },
+            type: 12,
+            uppers: [
+              9
+            ]
+          }
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185328,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 5
+            },
+            {
+              name: "stagemodelonly",
+              expr: 6
+            },
+            {
+              name: "syscap",
+              expr: 7
+            }
+          ]
+        }
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "_CN13ohos.settings8getValueIG_G0_HPuG_RNat6StringEG0_",
+      mangledBeforeSema: "13ohos.settings8getValue<1T1P>F12StageContext1T6String1P$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 9335375171295733991,
+        srcUse: 0,
+        bodyHash: 1525991941104262675
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                13,
+                14,
+                15,
+                16
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 22,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 23,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 26,
+        ignore: false
+      },
+      identifier: "P",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 49,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 58,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 76,
+        ignore: false
+      },
+      identifier: "defValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 78,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 91,
+        ignore: false
+      },
+      identifier: "domainName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 78,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 54,
+        column: 2,
+        ignore: false
+      },
+      identifier: "DomainName",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 8
+            },
+            {
+              name: "stagemodelonly",
+              expr: 9
+            },
+            {
+              name: "syscap",
+              expr: 10
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "_CN13ohos.settings10DomainNameE",
+      exportId: "_CN13ohos.settings10DomainNameE",
+      mangledBeforeSema: "13ohos.settings10DomainNameU",
+      hash: {
+        instVar: 6494452430890057638,
+        virt: 0,
+        sig: 16676675738088800124,
+        srcUse: 0,
+        bodyHash: 15428055429972372394
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+          9
+        ],
+        body: [
+          18,
+          19,
+          20
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 2,
+          pkgId: 0,
+          line: 40,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 18,
+        ignore: false
+      },
+      identifier: "DEVICE_SHARED",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 11
+            },
+            {
+              name: "stagemodelonly",
+              expr: 12
+            },
+            {
+              name: "syscap",
+              expr: 13
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN13ohos.settings10DomainName13DEVICE_SHAREDKE",
+      mangledBeforeSema: "13ohos.settings10DomainNameU13DEVICE_SHAREDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 18,
+        ignore: false
+      },
+      identifier: "USER_PROPERTY",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 14
+            },
+            {
+              name: "stagemodelonly",
+              expr: 15
+            },
+            {
+              name: "syscap",
+              expr: 16
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN13ohos.settings10DomainName13USER_PROPERTYKE",
+      mangledBeforeSema: "13ohos.settings10DomainNameU13USER_PROPERTYV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 47,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 47,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        144678138163528736,
+        16
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 17
+            },
+            {
+              name: "stagemodelonly",
+              expr: 18
+            },
+            {
+              name: "syscap",
+              expr: 19
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN13ohos.settings10DomainName8toStringHv",
+      exportId: "_CN13ohos.settings10DomainName8toStringHv",
+      mangledBeforeSema: "13ohos.settings10DomainNameU8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14716094797071440440
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 61,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 102,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Date",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 61,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 20
+            },
+            {
+              name: "stagemodelonly",
+              expr: 21
+            },
+            {
+              name: "syscap",
+              expr: 22
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "_CN13ohos.settings4DateE",
+      exportId: "_CN13ohos.settings4DateE",
+      mangledBeforeSema: "13ohos.settings4DateU",
+      hash: {
+        instVar: 15856867409914119185,
+        virt: 0,
+        sig: 16676675738088800124,
+        srcUse: 0,
+        bodyHash: 15428055429972372394
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+          9
+        ],
+        body: [
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 2,
+          pkgId: 0,
+          line: 86,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 67,
+        column: 16,
+        ignore: false
+      },
+      identifier: "DATE_FORMAT",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 23
+            },
+            {
+              name: "stagemodelonly",
+              expr: 24
+            },
+            {
+              name: "syscap",
+              expr: 25
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "",
+      exportId: "_CN13ohos.settings4Date11DATE_FORMATKE",
+      mangledBeforeSema: "13ohos.settings4DateU11DATE_FORMATV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 16,
+        ignore: false
+      },
+      identifier: "TIME_FORMAT",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 26
+            },
+            {
+              name: "stagemodelonly",
+              expr: 27
+            },
+            {
+              name: "syscap",
+              expr: 28
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "",
+      exportId: "_CN13ohos.settings4Date11TIME_FORMATKE",
+      mangledBeforeSema: "13ohos.settings4DateU11TIME_FORMATV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 79,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 79,
+        column: 19,
+        ignore: false
+      },
+      identifier: "AUTO_GAIN_TIME",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 79,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 29
+            },
+            {
+              name: "stagemodelonly",
+              expr: 30
+            },
+            {
+              name: "syscap",
+              expr: 31
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "",
+      exportId: "_CN13ohos.settings4Date14AUTO_GAIN_TIMEKE",
+      mangledBeforeSema: "13ohos.settings4DateU14AUTO_GAIN_TIMEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 85,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 85,
+        column: 24,
+        ignore: false
+      },
+      identifier: "AUTO_GAIN_TIME_ZONE",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 85,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 32
+            },
+            {
+              name: "stagemodelonly",
+              expr: 33
+            },
+            {
+              name: "syscap",
+              expr: 34
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "",
+      exportId: "_CN13ohos.settings4Date19AUTO_GAIN_TIME_ZONEKE",
+      mangledBeforeSema: "13ohos.settings4DateU19AUTO_GAIN_TIME_ZONEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 93,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 101,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 93,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        144678138163528736,
+        16
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 35
+            },
+            {
+              name: "stagemodelonly",
+              expr: 36
+            },
+            {
+              name: "syscap",
+              expr: 37
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN13ohos.settings4Date8toStringHv",
+      exportId: "_CN13ohos.settings4Date8toStringHv",
+      mangledBeforeSema: "13ohos.settings4DateU8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14014824791606708961
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 185,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Display",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 38
+            },
+            {
+              name: "stagemodelonly",
+              expr: 39
+            },
+            {
+              name: "syscap",
+              expr: 40
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "_CN13ohos.settings7DisplayE",
+      exportId: "_CN13ohos.settings7DisplayE",
+      mangledBeforeSema: "13ohos.settings7DisplayU",
+      hash: {
+        instVar: 7824448234799706313,
+        virt: 0,
+        sig: 16676675738088800124,
+        srcUse: 0,
+        bodyHash: 15428055429972372394
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+          9
+        ],
+        body: [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 2,
+          pkgId: 0,
+          line: 164,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 15,
+        ignore: false
+      },
+      identifier: "FONT_SCALE",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 41
+            },
+            {
+              name: "stagemodelonly",
+              expr: 42
+            },
+            {
+              name: "syscap",
+              expr: 43
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display10FONT_SCALEKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU10FONT_SCALEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 121,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 121,
+        column: 29,
+        ignore: false
+      },
+      identifier: "SCREEN_BRIGHTNESS_STATUS",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 121,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 44
+            },
+            {
+              name: "stagemodelonly",
+              expr: 45
+            },
+            {
+              name: "syscap",
+              expr: 46
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display24SCREEN_BRIGHTNESS_STATUSKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU24SCREEN_BRIGHTNESS_STATUSV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 27,
+        ignore: false
+      },
+      identifier: "AUTO_SCREEN_BRIGHTNESS",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 47
+            },
+            {
+              name: "stagemodelonly",
+              expr: 48
+            },
+            {
+              name: "syscap",
+              expr: 49
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display22AUTO_SCREEN_BRIGHTNESSKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU22AUTO_SCREEN_BRIGHTNESSV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 133,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 133,
+        column: 23,
+        ignore: false
+      },
+      identifier: "SCREEN_OFF_TIMEOUT",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 133,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 50
+            },
+            {
+              name: "stagemodelonly",
+              expr: 51
+            },
+            {
+              name: "syscap",
+              expr: 52
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display18SCREEN_OFF_TIMEOUTKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU18SCREEN_OFF_TIMEOUTV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 139,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 139,
+        column: 28,
+        ignore: false
+      },
+      identifier: "DEFAULT_SCREEN_ROTATION",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 139,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 53
+            },
+            {
+              name: "stagemodelonly",
+              expr: 54
+            },
+            {
+              name: "syscap",
+              expr: 55
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display23DEFAULT_SCREEN_ROTATIONKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU23DEFAULT_SCREEN_ROTATIONV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 145,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 145,
+        column: 28,
+        ignore: false
+      },
+      identifier: "ANIMATOR_DURATION_SCALE",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 145,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 56
+            },
+            {
+              name: "stagemodelonly",
+              expr: 57
+            },
+            {
+              name: "syscap",
+              expr: 58
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display23ANIMATOR_DURATION_SCALEKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU23ANIMATOR_DURATION_SCALEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 151,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 151,
+        column: 31,
+        ignore: false
+      },
+      identifier: "TRANSITION_ANIMATION_SCALE",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 151,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 59
+            },
+            {
+              name: "stagemodelonly",
+              expr: 60
+            },
+            {
+              name: "syscap",
+              expr: 61
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display26TRANSITION_ANIMATION_SCALEKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU26TRANSITION_ANIMATION_SCALEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 157,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 157,
+        column: 27,
+        ignore: false
+      },
+      identifier: "WINDOW_ANIMATION_SCALE",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 157,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 62
+            },
+            {
+              name: "stagemodelonly",
+              expr: 63
+            },
+            {
+              name: "syscap",
+              expr: 64
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display22WINDOW_ANIMATION_SCALEKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU22WINDOW_ANIMATION_SCALEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 163,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 163,
+        column: 29,
+        ignore: false
+      },
+      identifier: "DISPLAY_INVERSION_STATUS",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 163,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 65
+            },
+            {
+              name: "stagemodelonly",
+              expr: 66
+            },
+            {
+              name: "syscap",
+              expr: 67
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN13ohos.settings7Display24DISPLAY_INVERSION_STATUSKE",
+      mangledBeforeSema: "13ohos.settings7DisplayU24DISPLAY_INVERSION_STATUSV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7827766512322743965
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 171,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 171,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        144678138163528736,
+        16
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 68
+            },
+            {
+              name: "stagemodelonly",
+              expr: 69
+            },
+            {
+              name: "syscap",
+              expr: 70
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN13ohos.settings7Display8toStringHv",
+      exportId: "_CN13ohos.settings7Display8toStringHv",
+      mangledBeforeSema: "13ohos.settings7DisplayU8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14722709942815401311
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 21,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 21,
+        column: 35,
+        ignore: false
+      },
+      identifier: "StageContext",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 21,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "",
+      exportId: "_CN13ohos.settings12StageContextE",
+      mangledBeforeSema: "13ohos.settings12StageContextT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 5551473034810251168,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 6
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.settings",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 39,
+        ignore: false
+      },
+      identifier: "FfiSettingsGetValue",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "FfiSettingsGetValue",
+      exportId: "FfiSettingsGetValue",
+      mangledBeforeSema: "13ohos.settings19FfiSettingsGetValueF12StageContext7CString7CString7CString8CPointer<i>$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5121129946415756688
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                40,
+                41,
+                42,
+                43,
+                44
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 19
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 51,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 30,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN13ohos.settings19FfiSettingsGetValueHPukkkPiE7contextIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 66,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN13ohos.settings19FfiSettingsGetValueHPukkkPiE4nameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 82,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN13ohos.settings19FfiSettingsGetValueHPukkkPiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 84,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 103,
+        ignore: false
+      },
+      identifier: "domainName",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 84,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN13ohos.settings19FfiSettingsGetValueHPukkkPiE10domainNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.settings",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 29,
+        ignore: false
+      },
+      identifier: "ret",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 25,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN13ohos.settings19FfiSettingsGetValueHPukkkPiE3retIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 46,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "14700104"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 30,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 30,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 45,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 57,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 58,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 58,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 59,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 59,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 69,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 69,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 70,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 70,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 75,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 75,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 76,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 76,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 81,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 81,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 83,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 83,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 89,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 89,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 106,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 106,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 107,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 107,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 111,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 111,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 112,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 112,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 113,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 113,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 117,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 117,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 119,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 119,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 123,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 123,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 124,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 124,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 125,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 125,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 135,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 135,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 136,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 136,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 137,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 137,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 141,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 141,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 142,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 142,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 143,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 143,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 147,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 147,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 148,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 148,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 149,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 149,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 153,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 153,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 154,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 154,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 155,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 155,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 159,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 159,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 160,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 160,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 161,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 161,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Audio.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 167,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 167,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 168,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 168,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 169,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 169,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Applications.Settings.Core",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}
