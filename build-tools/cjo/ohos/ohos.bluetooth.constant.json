@@ -1,0 +1,1368 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.bluetooth.constant",
+  pkgDepInfo: "{\"package\":\"ohos.bluetooth.constant\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"constant.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":21}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"constant.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":22}}]}]}",
+  imports: [
+    "ohos.bluetooth.constant",
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.bluetooth.constant/constant.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 22,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "deriving"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat8ToStringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        1
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Bool"
+    }
+  ],
+  allDecls: [
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 29,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 65,
+        column: 13,
+        ignore: false
+      },
+      identifier: "ProfileConnectionState",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 29,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "_CN23ohos.bluetooth.constant22ProfileConnectionStateE",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionStateE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU",
+      hash: {
+        instVar: 15875579704859938130,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11820397875190442587
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 24,
+          column: 1070,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 35,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 35,
+        column: 34,
+        ignore: false
+      },
+      identifier: "STATE_DISCONNECTED",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 35,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState18STATE_DISCONNECTEDKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU18STATE_DISCONNECTEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 5753089655142409548
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 41,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 41,
+        column: 32,
+        ignore: false
+      },
+      identifier: "STATE_CONNECTING",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 41,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState16STATE_CONNECTINGKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU16STATE_CONNECTINGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 5753089655142409548
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 31,
+        ignore: false
+      },
+      identifier: "STATE_CONNECTED",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState15STATE_CONNECTEDKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU15STATE_CONNECTEDV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 5753089655142409548
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 53,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 53,
+        column: 35,
+        ignore: false
+      },
+      identifier: "STATE_DISCONNECTING",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 53,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState19STATE_DISCONNECTINGKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU19STATE_DISCONNECTINGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 5753089655142409548
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 56,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 64,
+        column: 17,
+        ignore: false
+      },
+      identifier: "parse",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 56,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678413041406496,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN23ohos.bluetooth.constant22ProfileConnectionState5parseHi",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState5parseHi",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU5parseFi$$22ProfileConnectionState",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 8035971499611947038,
+        bodyHash: 13443760016612557318
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 56,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 56,
+        column: 56,
+        ignore: false
+      },
+      identifier: "state",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 56,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN23ohos.bluetooth.constant22ProfileConnectionState5parseHiE5stateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 66,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 83,
+        column: 13,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 66,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateEUconstant$K_E",
+      mangledBeforeSema: "22ProfileConnectionState<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          4
+        ],
+        body: [
+          9
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 67,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 82,
+        column: 17,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 67,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateE8toStringHv",
+      exportId: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateE8toStringHv",
+      mangledBeforeSema: "23ohos.bluetooth.constant7Extend!22ProfileConnectionState<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16097333884197998334
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 84,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 97,
+        column: 13,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 84,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateEUconstant$K0_E",
+      mangledBeforeSema: "22ProfileConnectionState<:9Equatable<22ProfileConnectionState>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 5205141457396306731
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          7
+        ],
+        body: [
+          11,
+          13
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 85,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 93,
+        column: 17,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 85,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateEeqHY1_",
+      exportId: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateEeqHY1_",
+      mangledBeforeSema: "23ohos.bluetooth.constant7Extend!22ProfileConnectionState<:9Equatable<22ProfileConnectionState>X2==F22ProfileConnectionState$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16601938067507348918
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 85,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 85,
+        column: 69,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 85,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.bluetooth.constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 94,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 96,
+        column: 17,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 94,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateEneHY1_",
+      exportId: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateEneHY1_",
+      mangledBeforeSema: "23ohos.bluetooth.constant7Extend!22ProfileConnectionState<:9Equatable<22ProfileConnectionState>X2!=F22ProfileConnectionState$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7593376240846648436
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.bluetooth.constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 94,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 94,
+        column: 69,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 94,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN23ohos.bluetooth.constantXNNY_22ProfileConnectionStateE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 25,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 25,
+        column: 13,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 26,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 26,
+        column: 31,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 27,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 27,
+        column: 66,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Communication.Bluetooth.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 31,
+        column: 15,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 31,
+        column: 17,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 32,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 32,
+        column: 35,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 33,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 33,
+        column: 71,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Communication.Bluetooth.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 37,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 37,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 39,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 39,
+        column: 71,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Communication.Bluetooth.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 43,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 43,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 44,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 44,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 45,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 45,
+        column: 71,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Communication.Bluetooth.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 49,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 49,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 50,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 50,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 51,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 51,
+        column: 71,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Communication.Bluetooth.Core",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

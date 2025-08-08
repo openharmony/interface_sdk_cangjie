@@ -1,0 +1,45 @@
+{
+  "name": "@interface/sdk_cangjie",
+  "description": "openharmony sdk",
+  "version": "6.0",
+  "license": "Apache License 2.0",
+  "homePage": "https://gitee.com/openharmony/interface_sdk-js",
+  "repository": "https://gitee.com/openharmony/interface_sdk-js",
+  "supplier": "Organization: OpenHarmony",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "interface/sdk_cangjie"
+  },
+  "readmePath": {
+    "zh": "README_zh.md"
+  },
+  "dirs": {},
+  "scripts": {},
+  "component": {
+    "name": "sdk",
+    "description": "openharmony sdk",
+    "subsystem": "sdk",
+    "features": [],
+    "adapted_system_type": [
+      "standard"
+    ],
+    "rom": "0KB",
+    "ram": "0KB",
+    "deps": {
+      "components": [],
+      "third_party": []
+    },
+    "build": {
+      "sub_component": [],
+      "inner_api": [
+        {
+          "name": "//interface/sdk_cangjie:sdk_compiler"
+        },
+        {
+          "name": "//interface/sdk_cangjie:sdk_compilers"
+        }
+      ],
+      "test": []
+    }
+  }
+}

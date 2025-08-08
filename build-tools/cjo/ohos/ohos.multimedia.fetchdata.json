@@ -1,0 +1,313 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.multimedia.fetchdata",
+  pkgDepInfo: "{\"package\":\"ohos.multimedia.fetchdata\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[]}",
+  imports: [
+
+  ],
+  allFiles: [
+    "ohos.multimedia.fetchdata/fetchdata.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Interface",
+      typeArgs: [
+        2
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 2
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Int64"
+    }
+  ],
+  allDecls: [
+    {
+      kind: "InterfaceDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.fetchdata",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          2
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 18,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 20,
+        column: 2,
+        ignore: false
+      },
+      identifier: "FetchData",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 18,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144678138029278384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN25ohos.multimedia.fetchdata9FetchDataIG_E",
+      mangledBeforeSema: "25ohos.multimedia.fetchdata9FetchData<1>I",
+      hash: {
+        instVar: 0,
+        virt: 18278214466781121325,
+        sig: 700112495420756188,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "InterfaceInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          3
+        ]
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.multimedia.fetchdata",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 18,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 18,
+        column: 29,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 18,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.multimedia.fetchdata9FetchDataIG_E_TG1T",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.fetchdata",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 19,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 19,
+        column: 37,
+        ignore: false
+      },
+      identifier: "create",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 19,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297845280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN25ohos.multimedia.fetchdata9FetchDataIG_E6createHl",
+      mangledBeforeSema: "25ohos.multimedia.fetchdata9FetchData<1>I6createFl$$1T",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                4
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.fetchdata",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 19,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 19,
+        column: 33,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 19,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+
+  ],
+  access: "Protected",
+  moduleName: ""
+}
