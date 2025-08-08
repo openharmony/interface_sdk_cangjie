@@ -182,7 +182,7 @@ ohos_copy("sdk_compiler") {
 
 ohos_copy("sdk_compiler_modules") {
   deps = [ ":sdk_compiler" ]
-  sources = [ "//interface/sdk_cangjie/api/Cangjie/third_party" ]
+  sources = [ "//interface/sdk-cangjie/api/Cangjie/third_party" ]
   outputs = ["${target_out_dir}/cangjie_sdk/build-tools/modules/linux_ohos_aarch64_cjnative"]
   module_source_dir = "${target_out_dir}/cangjie_sdk/build-tools/modules"
   module_install_name = ""
