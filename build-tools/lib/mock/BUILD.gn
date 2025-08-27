@@ -13,9 +13,9 @@
 
 import("//build/cangjie/cjc.gni")
 
-ohos_cj_library("ohos.mock") {
+ohos_cangjie_shared_library("ohos.mock") {
   sources = [ "mock.cj" ]
 
   subsystem_name = "sdk"
-  part_name = "sdk-cangjie"
+  part_name = "sdk_cangjie"
 }

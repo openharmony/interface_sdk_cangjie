@@ -1,0 +1,6027 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.span",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.span\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_span.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.native_struct\",\"isStd\":false,\"imports\":[{\"file\":\"cj_span.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":44}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_span.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_span.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":19}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_span.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}}]},{\"package\":\"ohos.resource\",\"isStd\":false,\"imports\":[{\"file\":\"cj_span.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":23}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.arkui.component.native_struct",
+    "ohos.base",
+    "ohos.arkui.component.common"
+  ],
+  allFiles: [
+    "ohos.arkui.component.span/cj_span.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 44,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "native_struct"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 23,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "resource"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        3
+      ]
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 6
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        17,
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        20
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        18,
+        20
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        20,
+        17,
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        20,
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN34ohos.arkui.component.native_struct15CBorderRadiusesE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14,
+        17,
+        18,
+        14,
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 58
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 27
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN9ohos.base11ResourceStrE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        31
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 58
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        34
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        36
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common9FontStyleE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        38
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common10FontWeightE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        41,
+        34
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common18TextDecorationTypeE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        41
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 34
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        44
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common8TextCaseE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        46
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        47
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common10ClickEventE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common13ContainerBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 46,
+        ignore: false
+      },
+      identifier: "VectorNativeTextShadows",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.span23VectorNativeTextShadowsE",
+      mangledBeforeSema: "25ohos.arkui.component.span23VectorNativeTextShadowsT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 5551473034810251168,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 2
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 82,
+        ignore: false
+      },
+      identifier: "FFICJCreateVectorNativeTextShadows",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "FFICJCreateVectorNativeTextShadows",
+      exportId: "FFICJCreateVectorNativeTextShadows",
+      mangledBeforeSema: "25ohos.arkui.component.span34FFICJCreateVectorNativeTextShadowsFl$$23VectorNativeTextShadows",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 15872513787347707347
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                3
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 56,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.span34FFICJCreateVectorNativeTextShadowsHlE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 80,
+        ignore: false
+      },
+      identifier: "FFICJVectorNativeTextShadowsDelete",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FFICJVectorNativeTextShadowsDelete",
+      exportId: "FFICJVectorNativeTextShadowsDelete",
+      mangledBeforeSema: "25ohos.arkui.component.span34FFICJVectorNativeTextShadowsDeleteF23VectorNativeTextShadows$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 152954416589269567
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                5
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 73,
+        ignore: false
+      },
+      identifier: "vec",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.span34FFICJVectorNativeTextShadowsDeleteHPuE3vecIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CJVectorNativeTextShadows",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadowsE",
+      exportId: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadowsE",
+      mangledBeforeSema: "25ohos.arkui.component.span25CJVectorNativeTextShadowsC",
+      hash: {
+        instVar: 16760459511525804896,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          12
+        ],
+        body: [
+          7,
+          8,
+          10,
+          12,
+          13
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 43,
+        ignore: false
+      },
+      identifier: "vecHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows9vecHandleK_E",
+      mangledBeforeSema: "25ohos.arkui.component.span25CJVectorNativeTextShadowsC9vecHandleV$$23VectorNativeTextShadows",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows6<init>HPu",
+      exportId: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows6<init>HPu",
+      mangledBeforeSema: "25ohos.arkui.component.span25CJVectorNativeTextShadowsC6<init>F23VectorNativeTextShadows$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 16252882922280053090
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                9
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 38,
+        ignore: false
+      },
+      identifier: "vec",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows4initHPuE3vecIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows6<init>Hl",
+      exportId: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows6<init>Hl",
+      mangledBeforeSema: "25ohos.arkui.component.span25CJVectorNativeTextShadowsC6<init>Fl$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 1874734156263929398
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                11
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 21,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows4initHlE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 6,
+        ignore: false
+      },
+      identifier: "free",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows4freeHv",
+      exportId: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows4freeHv",
+      mangledBeforeSema: "25ohos.arkui.component.span25CJVectorNativeTextShadowsC4freeF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 6204236150351129976
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getNativeHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows15getNativeHandleHv",
+      exportId: "_CN25ohos.arkui.component.span25CJVectorNativeTextShadows15getNativeHandleHv",
+      mangledBeforeSema: "25ohos.arkui.component.span25CJVectorNativeTextShadowsC15getNativeHandleF$$23VectorNativeTextShadows",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 8935306471574239721
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 63,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSpanCreate",
+      exportId: "FfiOHOSAceFrameworkSpanCreate",
+      mangledBeforeSema: "25ohos.arkui.component.span29FfiOHOSAceFrameworkSpanCreateF7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 1509617802016434127
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                15
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 56,
+        ignore: false
+      },
+      identifier: "content",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN25ohos.arkui.component.span29FfiOHOSAceFrameworkSpanCreateHkE7contentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 66,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetOnClick",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSAceFrameworkSpanSetOnClick",
+      exportId: "FfiOHOSAceFrameworkSpanSetOnClick",
+      mangledBeforeSema: "25ohos.arkui.component.span33FfiOHOSAceFrameworkSpanSetOnClickFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5609522965981233593
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                17
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 59,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.span33FfiOHOSAceFrameworkSpanSetOnClickHlE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 82,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetFontSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiOHOSAceFrameworkSpanSetFontSize",
+      exportId: "FfiOHOSAceFrameworkSpanSetFontSize",
+      mangledBeforeSema: "25ohos.arkui.component.span34FfiOHOSAceFrameworkSpanSetFontSizeFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11898746855095837726
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19,
+                20
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 62,
+        ignore: false
+      },
+      identifier: "fontSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.span34FfiOHOSAceFrameworkSpanSetFontSizeHdiE8fontSizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 75,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span34FfiOHOSAceFrameworkSpanSetFontSizeHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 73,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetFontWeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSpanSetFontWeight",
+      exportId: "FfiOHOSAceFrameworkSpanSetFontWeight",
+      mangledBeforeSema: "25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetFontWeightF7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7349242205498356254
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 66,
+        ignore: false
+      },
+      identifier: "fontWeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetFontWeightHkE10fontWeightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 70,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetFontColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "FfiOHOSAceFrameworkSpanSetFontColor",
+      exportId: "FfiOHOSAceFrameworkSpanSetFontColor",
+      mangledBeforeSema: "25ohos.arkui.component.span35FfiOHOSAceFrameworkSpanSetFontColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6445843403209709433
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 63,
+        ignore: false
+      },
+      identifier: "textColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN25ohos.arkui.component.span35FfiOHOSAceFrameworkSpanSetFontColorHjE9textColorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 69,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetFontStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "FfiOHOSAceFrameworkSpanSetFontStyle",
+      exportId: "FfiOHOSAceFrameworkSpanSetFontStyle",
+      mangledBeforeSema: "25ohos.arkui.component.span35FfiOHOSAceFrameworkSpanSetFontStyleFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 13687149343013254881
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                26
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 62,
+        ignore: false
+      },
+      identifier: "fontStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span35FfiOHOSAceFrameworkSpanSetFontStyleHiE9fontStyleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 73,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetFontFamily",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSpanSetFontFamily",
+      exportId: "FfiOHOSAceFrameworkSpanSetFontFamily",
+      mangledBeforeSema: "25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetFontFamilyF7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7638402001289814357
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 66,
+        ignore: false
+      },
+      identifier: "fontFamily",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetFontFamilyHkE10fontFamilyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 84,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetLetterSpacing",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiOHOSAceFrameworkSpanSetLetterSpacing",
+      exportId: "FfiOHOSAceFrameworkSpanSetLetterSpacing",
+      mangledBeforeSema: "25ohos.arkui.component.span39FfiOHOSAceFrameworkSpanSetLetterSpacingFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5418772974102526114
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30,
+                31
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 64,
+        ignore: false
+      },
+      identifier: "space",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.span39FfiOHOSAceFrameworkSpanSetLetterSpacingHdiE5spaceE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 66,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 77,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 66,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span39FfiOHOSAceFrameworkSpanSetLetterSpacingHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 67,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetTextCase",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "FfiOHOSAceFrameworkSpanSetTextCase",
+      exportId: "FfiOHOSAceFrameworkSpanSetTextCase",
+      mangledBeforeSema: "25ohos.arkui.component.span34FfiOHOSAceFrameworkSpanSetTextCaseFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8508955466096240475
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                33
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 60,
+        ignore: false
+      },
+      identifier: "textCase",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span34FfiOHOSAceFrameworkSpanSetTextCaseHiE8textCaseE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 90,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetDecoration",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "FfiOHOSAceFrameworkSpanSetDecoration",
+      exportId: "FfiOHOSAceFrameworkSpanSetDecoration",
+      mangledBeforeSema: "25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetDecorationFij$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5777662895316119540
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35,
+                36
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 63,
+        ignore: false
+      },
+      identifier: "typeValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetDecorationHijE9typeValueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 65,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 83,
+        ignore: false
+      },
+      identifier: "colorValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 65,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetDecorationHijE10colorValueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 86,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetLineHeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiOHOSAceFrameworkSpanSetLineHeight",
+      exportId: "FfiOHOSAceFrameworkSpanSetLineHeight",
+      mangledBeforeSema: "25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetLineHeightFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8745727254841649316
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38,
+                39
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 66,
+        ignore: false
+      },
+      identifier: "lineHeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetLineHeightHdiE10lineHeightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 79,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetLineHeightHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 94,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetBaselineOffset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiOHOSAceFrameworkSpanSetBaselineOffset",
+      exportId: "FfiOHOSAceFrameworkSpanSetBaselineOffset",
+      mangledBeforeSema: "25ohos.arkui.component.span40FfiOHOSAceFrameworkSpanSetBaselineOffsetFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16407851582159261149
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41,
+                42
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 74,
+        ignore: false
+      },
+      identifier: "baselineOffset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.span40FfiOHOSAceFrameworkSpanSetBaselineOffsetHdiE14baselineOffsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 76,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 87,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 76,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span40FfiOHOSAceFrameworkSpanSetBaselineOffsetHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 83,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetTextShadow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSAceFrameworkSpanSetTextShadow",
+      exportId: "FfiOHOSAceFrameworkSpanSetTextShadow",
+      mangledBeforeSema: "25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetTextShadowF22VectorNativeTextShadow$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 76,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.span36FfiOHOSAceFrameworkSpanSetTextShadowHPuE5valueIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 106,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetTextBackgroundStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkSpanSetTextBackgroundStyle",
+      exportId: "FfiOHOSAceFrameworkSpanSetTextBackgroundStyle",
+      mangledBeforeSema: "25ohos.arkui.component.span45FfiOHOSAceFrameworkSpanSetTextBackgroundStyleFjdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 15485179156086562683
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                46,
+                47,
+                48
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 69,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN25ohos.arkui.component.span45FfiOHOSAceFrameworkSpanSetTextBackgroundStyleHjdiE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 71,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 86,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 71,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.span45FfiOHOSAceFrameworkSpanSetTextBackgroundStyleHjdiE6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 88,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 99,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 88,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span45FfiOHOSAceFrameworkSpanSetTextBackgroundStyleHjdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 107,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetTextBackgroundStyleBorder",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "FfiOHOSAceFrameworkSpanSetTextBackgroundStyleBorder",
+      exportId: "FfiOHOSAceFrameworkSpanSetTextBackgroundStyleBorder",
+      mangledBeforeSema: "25ohos.arkui.component.span51FfiOHOSAceFrameworkSpanSetTextBackgroundStyleBorderFj15CBorderRadiuses$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11108506140995878768
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                50,
+                51
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 75,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN25ohos.arkui.component.span51FfiOHOSAceFrameworkSpanSetTextBackgroundStyleBorderHjRN34ohos.arkui.component.native_struct15CBorderRadiusesEE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 100,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN25ohos.arkui.component.span51FfiOHOSAceFrameworkSpanSetTextBackgroundStyleBorderHjRN34ohos.arkui.component.native_struct15CBorderRadiusesEE6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 138,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSpanSetFont",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "FfiOHOSAceFrameworkSpanSetFont",
+      exportId: "FfiOHOSAceFrameworkSpanSetFont",
+      mangledBeforeSema: "25ohos.arkui.component.span30FfiOHOSAceFrameworkSpanSetFontF7CStringdi7CStringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7032885219956914348
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53,
+                54,
+                55,
+                56,
+                57
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 60,
+        ignore: false
+      },
+      identifier: "fontFamily",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN25ohos.arkui.component.span30FfiOHOSAceFrameworkSpanSetFontHkdikiE10fontFamilyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 79,
+        ignore: false
+      },
+      identifier: "fontSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.span30FfiOHOSAceFrameworkSpanSetFontHkdikiE8fontSizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 81,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 92,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 81,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span30FfiOHOSAceFrameworkSpanSetFontHkdikiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 94,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 113,
+        ignore: false
+      },
+      identifier: "fontWeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 94,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN25ohos.arkui.component.span30FfiOHOSAceFrameworkSpanSetFontHkdikiE10fontWeightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 115,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 131,
+        ignore: false
+      },
+      identifier: "fontStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 115,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.span30FfiOHOSAceFrameworkSpanSetFontHkdikiE9fontStyleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 82,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 278,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Span",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 82,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "_CN25ohos.arkui.component.span4SpanE",
+      exportId: "_CN25ohos.arkui.component.span4SpanE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 6438789364046432450,
+        srcUse: 0,
+        bodyHash: 9919930819008549481
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          48
+        ],
+        body: [
+          59,
+          61,
+          63,
+          65,
+          67,
+          69,
+          71,
+          76,
+          78,
+          80,
+          82
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 28,
+      mangledName: "_CN25ohos.arkui.component.span4Span6<init>HCN9ohos.base11ResourceStrE",
+      exportId: "_CN25ohos.arkui.component.span4Span6<init>HCN9ohos.base11ResourceStrE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC6<init>F11ResourceStr$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5306066217476464142
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                60
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 35,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN25ohos.arkui.component.span4Span4initHCN9ohos.base11ResourceStrEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fontSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "_CN25ohos.arkui.component.span4Span8fontSizeHCN9ohos.base6LengthE",
+      exportId: "_CN25ohos.arkui.component.span4Span8fontSizeHCN9ohos.base6LengthE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC8fontSizeF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3702300336701240732
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                62
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 39,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN25ohos.arkui.component.span4Span8fontSizeHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fontColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 33,
+      mangledName: "_CN25ohos.arkui.component.span4Span9fontColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN25ohos.arkui.component.span4Span9fontColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC9fontColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7381818479491182350
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 47,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CN25ohos.arkui.component.span4Span9fontColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 158,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fontStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN25ohos.arkui.component.span4Span9fontStyleHNN27ohos.arkui.component.common9FontStyleE",
+      exportId: "_CN25ohos.arkui.component.span4Span9fontStyleHNN27ohos.arkui.component.common9FontStyleE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC9fontStyleF9FontStyle$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 971430927938409016
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                66
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 43,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN25ohos.arkui.component.span4Span9fontStyleHNN27ohos.arkui.component.common9FontStyleEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fontWeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 37,
+      mangledName: "_CN25ohos.arkui.component.span4Span10fontWeightHNN27ohos.arkui.component.common10FontWeightE",
+      exportId: "_CN25ohos.arkui.component.span4Span10fontWeightHNN27ohos.arkui.component.common10FontWeightE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC10fontWeightF10FontWeight$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17526504122868879488
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                68
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 45,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN25ohos.arkui.component.span4Span10fontWeightHNN27ohos.arkui.component.common10FontWeightEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fontFamily",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 39,
+      mangledName: "_CN25ohos.arkui.component.span4Span10fontFamilyHCN9ohos.base11ResourceStrE",
+      exportId: "_CN25ohos.arkui.component.span4Span10fontFamilyHCN9ohos.base11ResourceStrE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC10fontFamilyF11ResourceStr$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 18253247809107211324
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                70
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 46,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN25ohos.arkui.component.span4Span10fontFamilyHCN9ohos.base11ResourceStrEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 220,
+        column: 6,
+        ignore: false
+      },
+      identifier: "decoration",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 40,
+      mangledName: "_CN25ohos.arkui.component.span4Span10decorationHNN27ohos.arkui.component.common18TextDecorationTypeECN9ohos.base13ResourceColorE",
+      exportId: "_CN25ohos.arkui.component.span4Span10decorationHNN27ohos.arkui.component.common18TextDecorationTypeECN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC10decorationF18TextDecorationType!14decorationType13ResourceColor!5color=$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3953919438270220981
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72,
+                73
+              ],
+              desugars: [
+                0,
+                74
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 63,
+        ignore: false
+      },
+      identifier: "decorationType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 41,
+      mangledName: "_CN25ohos.arkui.component.span4Span10decorationHNN27ohos.arkui.component.common18TextDecorationTypeECN9ohos.base13ResourceColorEE14decorationTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 65,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 100,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 65,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CN25ohos.arkui.component.span4Span10decorationHNN27ohos.arkui.component.common18TextDecorationTypeECN9ohos.base13ResourceColorEE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 89,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 100,
+        ignore: false
+      },
+      identifier: "color.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CPI25ohos.arkui.component.span4Span10decorationHNN27ohos.arkui.component.common18TextDecorationTypeECN9ohos.base13ResourceColorEE5colorHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                75
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 34
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 63,
+        ignore: false
+      },
+      identifier: "decorationType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 41,
+      mangledName: "_CN25ohos.arkui.component.span4Span10decorationHNN27ohos.arkui.component.common18TextDecorationTypeECN9ohos.base13ResourceColorEE7color.1HY3_E14decorationTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 234,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 6,
+        ignore: false
+      },
+      identifier: "letterSpacing",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 234,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 25
+            },
+            {
+              name: "stagemodelonly",
+              expr: 26
+            },
+            {
+              name: "syscap",
+              expr: 27
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "_CN25ohos.arkui.component.span4Span13letterSpacingHCN9ohos.base6LengthE",
+      exportId: "_CN25ohos.arkui.component.span4Span13letterSpacingHCN9ohos.base6LengthE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC13letterSpacingF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6703300987382879219
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                77
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 234,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 234,
+        column: 44,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 234,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN25ohos.arkui.component.span4Span13letterSpacingHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 6,
+        ignore: false
+      },
+      identifier: "textCase",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 28
+            },
+            {
+              name: "stagemodelonly",
+              expr: 29
+            },
+            {
+              name: "syscap",
+              expr: 30
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN25ohos.arkui.component.span4Span8textCaseHNN27ohos.arkui.component.common8TextCaseE",
+      exportId: "_CN25ohos.arkui.component.span4Span8textCaseHNN27ohos.arkui.component.common8TextCaseE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC8textCaseF8TextCase$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8978029392470658554
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 41,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 44,
+      mangledName: "_CN25ohos.arkui.component.span4Span8textCaseHNN27ohos.arkui.component.common8TextCaseEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 270,
+        column: 6,
+        ignore: false
+      },
+      identifier: "onClickInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN25ohos.arkui.component.span4Span12onClickInnerHF0uCN27ohos.arkui.component.common10ClickEventEE",
+      exportId: "_CN25ohos.arkui.component.span4Span12onClickInnerHF0uCN27ohos.arkui.component.common10ClickEventEE",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC12onClickInnerFFu10ClickEvent$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 13321038320804818183
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.span",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 72,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562984313159712,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN25ohos.arkui.component.span4Span12onClickInnerHF0uCN27ohos.arkui.component.common10ClickEventEEE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.span",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 277,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 277,
+        column: 34,
+        ignore: false
+      },
+      identifier: "pop",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 277,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        144678138297716768,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN25ohos.arkui.component.span4Span3popHv",
+      exportId: "_CN25ohos.arkui.component.span4Span3popHv",
+      mangledBeforeSema: "25ohos.arkui.component.span4SpanC3popF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 3896943645232062074
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 250,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 250,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 251,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 251,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

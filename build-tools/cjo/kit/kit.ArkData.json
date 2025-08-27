@@ -6,14 +6,14 @@
     patch_num: 0
   },
   fullPkgName: "kit.ArkData",
-  pkgDepInfo: "{\"package\":\"kit.ArkData\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.data\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":26}}]},{\"package\":\"ohos.data_share_predicates\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":43}}]},{\"package\":\"ohos.distributed_kv_store\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":42}}]},{\"package\":\"ohos.preferences\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":33}}]},{\"package\":\"ohos.relational_store\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":38}}]},{\"package\":\"ohos.values_bucket\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":35}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.ArkData\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.data\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":26}}]},{\"package\":\"ohos.data.data_share_predicates\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":48}}]},{\"package\":\"ohos.data.distributed_kv_store\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":47}}]},{\"package\":\"ohos.data.preferences\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":38}}]},{\"package\":\"ohos.data.relational_store\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":43}}]},{\"package\":\"ohos.data.values_bucket\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":40}}]}]}",
   imports: [
     "ohos.data",
-    "ohos.data_share_predicates",
-    "ohos.distributed_kv_store",
-    "ohos.preferences",
-    "ohos.relational_store",
-    "ohos.values_bucket"
+    "ohos.data.data_share_predicates",
+    "ohos.data.distributed_kv_store",
+    "ohos.data.preferences",
+    "ohos.data.relational_store",
+    "ohos.data.values_bucket"
   ],
   allFiles: [
     "kit.ArkData/index.cj"
@@ -56,11 +56,12 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 43,
+            column: 48,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "data",
             "data_share_predicates"
           ],
           identifier: "*",
@@ -79,11 +80,12 @@
             file: 1,
             pkgId: 0,
             line: 20,
-            column: 42,
+            column: 47,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "data",
             "distributed_kv_store"
           ],
           identifier: "*",
@@ -102,11 +104,12 @@
             file: 1,
             pkgId: 0,
             line: 21,
-            column: 33,
+            column: 38,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "data",
             "preferences"
           ],
           identifier: "*",
@@ -125,11 +128,12 @@
             file: 1,
             pkgId: 0,
             line: 22,
-            column: 38,
+            column: 43,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "data",
             "relational_store"
           ],
           identifier: "*",
@@ -148,11 +152,12 @@
             file: 1,
             pkgId: 0,
             line: 23,
-            column: 35,
+            column: 40,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "data",
             "values_bucket"
           ],
           identifier: "*",

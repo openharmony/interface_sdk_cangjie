@@ -1,0 +1,3563 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.callback_invoke",
+  pkgDepInfo: "{\"package\":\"ohos.callback_invoke\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"callback_object.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":33}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"callback_object.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.business_exception"
+  ],
+  allFiles: [
+    "ohos.callback_invoke/callback_object.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 33,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Type",
+      typeArgs: [
+        2
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 2
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 3
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 5
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        11
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN23ohos.business_exception17BusinessExceptionE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        14
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 9
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 10
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        18,
+        19
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 15
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 16
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 17
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        18,
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        23,
+        24,
+        25,
+        26
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 23
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 24
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 25
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 26
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 27
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        23,
+        24,
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 22
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        30,
+        31
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 34
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 35
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 36
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        30
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 31
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 29
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        35
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 41
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 42
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 35
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 34
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      generic: {
+        typeParameters: [
+          2
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 43,
+        ignore: false
+      },
+      identifier: "Callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138029278352,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke8CallbackIG_E",
+      mangledBeforeSema: "20ohos.callback_invoke8Callback<1>T",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2039118144415694368,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 3
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 22,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 23,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 40,
+        ignore: false
+      },
+      identifier: "CallbackObject",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316272,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "_CN20ohos.callback_invoke14CallbackObjectE",
+      exportId: "_CN20ohos.callback_invoke14CallbackObjectE",
+      mangledBeforeSema: "20ohos.callback_invoke14CallbackObjectC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          7
+        ],
+        body: [
+          4
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 37,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN20ohos.callback_invoke14CallbackObject6<init>Hv",
+      exportId: "_CN20ohos.callback_invoke14CallbackObject6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Callback0Argument",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316272,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "_CN20ohos.callback_invoke17Callback0ArgumentE",
+      exportId: "_CN20ohos.callback_invoke17Callback0ArgumentE",
+      mangledBeforeSema: "20ohos.callback_invoke17Callback0ArgumentC",
+      hash: {
+        instVar: 0,
+        virt: 10595339052135946940,
+        sig: 9795672652845086431,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 59,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN20ohos.callback_invoke17Callback0Argument6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEE",
+      exportId: "_CN20ohos.callback_invoke17Callback0Argument6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEE",
+      mangledBeforeSema: "20ohos.callback_invoke17Callback0ArgumentC6invokeFO1_17BusinessException$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 12705229697744186221
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 52,
+        ignore: false
+      },
+      identifier: "err",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN20ohos.callback_invoke17Callback0Argument6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEEE3errIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 40,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN20ohos.callback_invoke17Callback0Argument6<init>Hv",
+      exportId: "_CN20ohos.callback_invoke17Callback0Argument6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          10
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Callback1Argument",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316400,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke17Callback1ArgumentIG_E",
+      mangledBeforeSema: "20ohos.callback_invoke17Callback1Argument<1>C",
+      hash: {
+        instVar: 0,
+        virt: 8700257307085695379,
+        sig: 12113352279576823967,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          11,
+          14
+        ]
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 42,
+        ignore: false
+      },
+      identifier: "A",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 67,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke17Callback1ArgumentIG_E6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEEG_",
+      mangledBeforeSema: "20ohos.callback_invoke17Callback1Argument<1>C6invokeFO1_17BusinessException1A$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 13126325829033278194
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12,
+                13
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 52,
+        ignore: false
+      },
+      identifier: "err",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 60,
+        ignore: false
+      },
+      identifier: "arg",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 40,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke17Callback1ArgumentIG_E6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          16,
+          17
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Callback2Argument",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316400,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 17,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke17Callback2ArgumentIG_G0_E",
+      mangledBeforeSema: "20ohos.callback_invoke17Callback2Argument<2>C",
+      hash: {
+        instVar: 0,
+        virt: 4095061811742124072,
+        sig: 12259073446628319338,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          18,
+          22
+        ]
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 42,
+        ignore: false
+      },
+      identifier: "A",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 45,
+        ignore: false
+      },
+      identifier: "B",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 77,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke17Callback2ArgumentIG_G0_E6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEEG_G0_",
+      mangledBeforeSema: "20ohos.callback_invoke17Callback2Argument<2>C6invokeFO1_17BusinessException1A1B$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 17683780879585294271
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19,
+                20,
+                21
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 52,
+        ignore: false
+      },
+      identifier: "err",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 61,
+        ignore: false
+      },
+      identifier: "arg1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 63,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 70,
+        ignore: false
+      },
+      identifier: "arg2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 63,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 40,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke17Callback2ArgumentIG_G0_E6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          24,
+          25,
+          26,
+          27
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Callback3ArgumentWithReturn",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316400,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke27Callback3ArgumentWithReturnIG_G0_G1_G2_E",
+      mangledBeforeSema: "20ohos.callback_invoke27Callback3ArgumentWithReturn<4>C",
+      hash: {
+        instVar: 0,
+        virt: 450419919979232197,
+        sig: 7932492498056915324,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          28,
+          33
+        ]
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 52,
+        ignore: false
+      },
+      identifier: "A",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 55,
+        ignore: false
+      },
+      identifier: "B",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 57,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 58,
+        ignore: false
+      },
+      identifier: "C",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 57,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 61,
+        ignore: false
+      },
+      identifier: "D",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 83,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke27Callback3ArgumentWithReturnIG_G0_G1_G2_E6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEEG_G0_G1_",
+      mangledBeforeSema: "20ohos.callback_invoke27Callback3ArgumentWithReturn<4>C6invokeFO1_17BusinessException1A1B1C$$1D",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 16284579446550415640
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                29,
+                30,
+                31,
+                32
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 52,
+        ignore: false
+      },
+      identifier: "err",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 61,
+        ignore: false
+      },
+      identifier: "arg1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 63,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 70,
+        ignore: false
+      },
+      identifier: "arg2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 63,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 72,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 79,
+        ignore: false
+      },
+      identifier: "arg3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 72,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 50,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke27Callback3ArgumentWithReturnIG_G0_G1_G2_E6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 22
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          35,
+          36
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Callback1ArgumentWithReturn",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316400,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 29,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke27Callback1ArgumentWithReturnIG_G0_E",
+      mangledBeforeSema: "20ohos.callback_invoke27Callback1ArgumentWithReturn<2>C",
+      hash: {
+        instVar: 0,
+        virt: 4261037986311637671,
+        sig: 12259073446628319338,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          37,
+          40
+        ]
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 52,
+        ignore: false
+      },
+      identifier: "A",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 55,
+        ignore: false
+      },
+      identifier: "B",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 65,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke27Callback1ArgumentWithReturnIG_G0_E6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEEG_",
+      mangledBeforeSema: "20ohos.callback_invoke27Callback1ArgumentWithReturn<2>C6invokeFO1_17BusinessException1A$$1B",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 16732839927631317039
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38,
+                39
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 31
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 52,
+        ignore: false
+      },
+      identifier: "err",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 61,
+        ignore: false
+      },
+      identifier: "arg1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 50,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke27Callback1ArgumentWithReturnIG_G0_E6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          42
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 82,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CallbackWithReturn",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316400,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke18CallbackWithReturnIG_E",
+      mangledBeforeSema: "20ohos.callback_invoke18CallbackWithReturn<1>C",
+      hash: {
+        instVar: 0,
+        virt: 16339436712147362121,
+        sig: 12113352279576823967,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          43,
+          45
+        ]
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 43,
+        ignore: false
+      },
+      identifier: "A",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 56,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke18CallbackWithReturnIG_E6invokeHNNat6OptionICN23ohos.business_exception17BusinessExceptionEE",
+      mangledBeforeSema: "20ohos.callback_invoke18CallbackWithReturn<1>C6invokeFO1_17BusinessException$$1A",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 12705229697744186221
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 35
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.callback_invoke",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 52,
+        ignore: false
+      },
+      identifier: "err",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.callback_invoke",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 41,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 37,
+      mangledName: "",
+      exportId: "_CN20ohos.callback_invoke18CallbackWithReturnIG_E6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 34
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

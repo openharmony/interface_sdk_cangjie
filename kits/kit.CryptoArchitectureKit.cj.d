@@ -14,6 +14,6 @@
  */
 
 package kit.CryptoArchitectureKit
-public import ohos.crypto.*
+public import ohos.security.crypto_framework.*
 
 

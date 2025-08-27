@@ -14,6 +14,6 @@
  */
 
 package kit.ArkGraphics2D
-public import ohos.color_manager.*
+public import ohos.graphics.color_space_manager.*
 
 

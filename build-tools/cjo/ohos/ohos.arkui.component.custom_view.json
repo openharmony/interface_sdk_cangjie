@@ -1,0 +1,2311 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.custom_view",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.custom_view\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"remote_view.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":29}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"remote_view.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"remote_view.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"remote_view.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":30}},{\"file\":\"remote_view.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":32}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.base",
+    "ohos.ffi"
+  ],
+  allFiles: [
+    "ohos.arkui.component.custom_view/remote_view.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 29,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "ReuseParams",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 30,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "HashMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 32,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "ArrayList",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN9ohos.base11ReuseParamsE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN8ohos.ffi7FFIDataE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 2,
+        ignore: false
+      },
+      identifier: "RemoteView",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316272,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteViewE",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteViewE",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC",
+      hash: {
+        instVar: 0,
+        virt: 5658619148009271584,
+        sig: 9569821444767631996,
+        srcUse: 313184535967830658,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          14
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          23,
+          24
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView6<init>Hv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView6<init>Hv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC6<init>F$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 829285043157541794
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 30,
+        ignore: false
+      },
+      identifier: "build",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297844768,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView5buildHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView5buildHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC5buildF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 41,
+        ignore: false
+      },
+      identifier: "rerender",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298237984,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView8rerenderHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView8rerenderHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC8rerenderF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 2152084855452252170
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 74,
+        ignore: false
+      },
+      identifier: "purgeVariableDependenciesOnElmtId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298237984,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView33purgeVariableDependenciesOnElmtIdHl",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView33purgeVariableDependenciesOnElmtIdHl",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC33purgeVariableDependenciesOnElmtIdFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 16012758620696609188
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                6
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 64,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView33purgeVariableDependenciesOnElmtIdHlE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 49,
+        ignore: false
+      },
+      identifier: "aboutToAppear",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView13aboutToAppearHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView13aboutToAppearHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC13aboutToAppearF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 631515436633166905
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 46,
+        ignore: false
+      },
+      identifier: "onPageShow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView10onPageShowHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView10onPageShowHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC10onPageShowF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 18254799860071395300
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 46,
+        ignore: false
+      },
+      identifier: "onPageHide",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView10onPageHideHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView10onPageHideHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC10onPageHideF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 17244488140847454293
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 6,
+        ignore: false
+      },
+      identifier: "onBackPress",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView11onBackPressHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView11onBackPressHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC11onBackPressF$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 15916840006140635385
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 59,
+        ignore: false
+      },
+      identifier: "updateWithJson",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView14updateWithJsonHRNat6StringE",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView14updateWithJsonHRNat6StringE",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC14updateWithJsonF6String$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 8410530264241116113
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 49,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView14updateWithJsonHRNat6StringEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 50,
+        ignore: false
+      },
+      identifier: "pageTransition",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView14pageTransitionHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView14pageTransitionHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC14pageTransitionF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 12362293970707297842
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 51,
+        ignore: false
+      },
+      identifier: "onAboutToRender",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView15onAboutToRenderHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView15onAboutToRenderHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC15onAboutToRenderF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 7119341025305948224
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 49,
+        ignore: false
+      },
+      identifier: "onAfterRender",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView13onAfterRenderHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView13onAfterRenderHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC13onAfterRenderF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 11057352069335570669
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 52,
+        ignore: false
+      },
+      identifier: "aboutToDisappear",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView16aboutToDisappearHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView16aboutToDisappearHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC16aboutToDisappearF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 5610863521656760337
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 54,
+        ignore: false
+      },
+      identifier: "onAboutToBeDeleted",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView18onAboutToBeDeletedHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView18onAboutToBeDeletedHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC18onAboutToBeDeletedF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 10582104955866327833
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 64,
+        ignore: false
+      },
+      identifier: "forceCompleteRerender",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298237984,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 11,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView21forceCompleteRerenderHb",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView21forceCompleteRerenderHb",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC21forceCompleteRerenderFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 17575001446595632512
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 54,
+        ignore: false
+      },
+      identifier: "deep",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView21forceCompleteRerenderHbE4deepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 46,
+        ignore: false
+      },
+      identifier: "onDidBuild",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView10onDidBuildHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView10onDidBuildHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC10onDidBuildF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 17420967955688562281
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 70,
+        ignore: false
+      },
+      identifier: "aboutToReuseInternal",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView20aboutToReuseInternalHCN9ohos.base11ReuseParamsE",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView20aboutToReuseInternalHCN9ohos.base11ReuseParamsE",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC20aboutToReuseInternalF11ReuseParams$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 16935044520575833143
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 60,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView20aboutToReuseInternalHCN9ohos.base11ReuseParamsEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 58,
+        ignore: false
+      },
+      identifier: "aboutToRecycleInternal",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView22aboutToRecycleInternalHv",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView22aboutToRecycleInternalHv",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC22aboutToRecycleInternalF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 11317705208993275418
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 56,
+        ignore: false
+      },
+      identifier: "recycleSelf",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        144678138298241056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView11recycleSelfHRNat6StringE",
+      exportId: "_CN32ohos.arkui.component.custom_view10RemoteView11recycleSelfHRNat6StringE",
+      mangledBeforeSema: "32ohos.arkui.component.custom_view10RemoteViewC11recycleSelfF6String$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 6029406924600920868,
+        bodyHash: 2086395290488755280
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                25
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.custom_view",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 46,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN32ohos.arkui.component.custom_view10RemoteView11recycleSelfHRNat6StringEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

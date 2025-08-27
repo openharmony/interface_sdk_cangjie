@@ -1,0 +1,5532 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.pattern_lock",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.pattern_lock\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.native_struct\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":44}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":35}}]},{\"package\":\"ohos.arkui.component.view\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_pattern_lock.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":28}}]}]}",
+  imports: [
+    "ohos.ffi",
+    "std.core",
+    "ohos.base",
+    "ohos.arkui.component.common"
+  ],
+  allFiles: [
+    "ohos.arkui.component.pattern_lock/cj_pattern_lock.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 44,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "native_struct"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "view"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        3,
+        4,
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        8,
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 44
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN8ohos.ffi14RemoteDataLiteE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 48
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        22
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 20
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        16
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 22
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 48
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        31
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common8ViewBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CJCircleStyleOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsS",
+      hash: {
+        instVar: 8708050779184018252,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 26,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions5colorK_E",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsS5color$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 28,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions6radiusK_E",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsS6radius$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 30,
+        ignore: false
+      },
+      identifier: "radiusUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions10radiusUnitK_E",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsS10radiusUnit$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 35,
+        ignore: false
+      },
+      identifier: "enableWaveEffect",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions16enableWaveEffectK_E",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsS16enableWaveEffect$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions6<init>Hjdib",
+      exportId: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions6<init>Hjdib",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock20CJCircleStyleOptionsS20CJCircleStyleOptionsYj!L5colord!L6radiusi!L10radiusUnitb!L16enableWaveEffect",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7,
+                8,
+                9,
+                10
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 26,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions4initHjdibE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 28,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions4initHjdibE6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 30,
+        ignore: false
+      },
+      identifier: "radiusUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions4initHjdibE10radiusUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 35,
+        ignore: false
+      },
+      identifier: "enableWaveEffect",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock20CJCircleStyleOptions4initHjdibE16enableWaveEffectE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 71,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FfiOHOSAceFrameworkPatternLockCreate",
+      exportId: "FfiOHOSAceFrameworkPatternLockCreate",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock36FfiOHOSAceFrameworkPatternLockCreateFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11515365755077236368
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 64,
+        ignore: false
+      },
+      identifier: "controller",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock36FfiOHOSAceFrameworkPatternLockCreateHlE10controllerE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 96,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockActivateCircleStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSAceFrameworkPatternLockActivateCircleStyle",
+      exportId: "FfiOHOSAceFrameworkPatternLockActivateCircleStyle",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock49FfiOHOSAceFrameworkPatternLockActivateCircleStyleF20CJCircleStyleOptions$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11720157453919770723
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 89,
+        ignore: false
+      },
+      identifier: "options",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock49FfiOHOSAceFrameworkPatternLockActivateCircleStyleHRNY_20CJCircleStyleOptionsEE7optionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 75,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockonDotConnect",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FfiOHOSAceFrameworkPatternLockonDotConnect",
+      exportId: "FfiOHOSAceFrameworkPatternLockonDotConnect",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockonDotConnectFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5609522965981233593
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 68,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockonDotConnectHlE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 80,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockOnPatternComplete",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FfiOHOSAceFrameworkPatternLockOnPatternComplete",
+      exportId: "FfiOHOSAceFrameworkPatternLockOnPatternComplete",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock47FfiOHOSAceFrameworkPatternLockOnPatternCompleteFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5609522965981233593
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 73,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 58,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock47FfiOHOSAceFrameworkPatternLockOnPatternCompleteHlE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 74,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockSelectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkPatternLockSelectedColor",
+      exportId: "FfiOHOSAceFrameworkPatternLockSelectedColor",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock43FfiOHOSAceFrameworkPatternLockSelectedColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                20
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 67,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock43FfiOHOSAceFrameworkPatternLockSelectedColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 68,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockAutoReset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FfiOHOSAceFrameworkPatternLockAutoReset",
+      exportId: "FfiOHOSAceFrameworkPatternLockAutoReset",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock39FfiOHOSAceFrameworkPatternLockAutoResetFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 61,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock39FfiOHOSAceFrameworkPatternLockAutoResetHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 70,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockPathColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkPatternLockPathColor",
+      exportId: "FfiOHOSAceFrameworkPatternLockPathColor",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock39FfiOHOSAceFrameworkPatternLockPathColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 63,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock39FfiOHOSAceFrameworkPatternLockPathColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 72,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockActiveColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkPatternLockActiveColor",
+      exportId: "FfiOHOSAceFrameworkPatternLockActiveColor",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock41FfiOHOSAceFrameworkPatternLockActiveColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                26
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 65,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock41FfiOHOSAceFrameworkPatternLockActiveColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 73,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockRegularColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkPatternLockRegularColor",
+      exportId: "FfiOHOSAceFrameworkPatternLockRegularColor",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockRegularColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 66,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockRegularColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 87,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockCircleRadius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkPatternLockCircleRadius",
+      exportId: "FfiOHOSAceFrameworkPatternLockCircleRadius",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockCircleRadiusFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30,
+                31
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 67,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockCircleRadiusHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 69,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 80,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 69,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock42FfiOHOSAceFrameworkPatternLockCircleRadiusHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 85,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockSideLength",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkPatternLockSideLength",
+      exportId: "FfiOHOSAceFrameworkPatternLockSideLength",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock40FfiOHOSAceFrameworkPatternLockSideLengthFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                33,
+                34
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 65,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock40FfiOHOSAceFrameworkPatternLockSideLengthHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 67,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 78,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 67,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock40FfiOHOSAceFrameworkPatternLockSideLengthHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 86,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockStrokeWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkPatternLockStrokeWidth",
+      exportId: "FfiOHOSAceFrameworkPatternLockStrokeWidth",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock41FfiOHOSAceFrameworkPatternLockStrokeWidthFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                36,
+                37
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 66,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock41FfiOHOSAceFrameworkPatternLockStrokeWidthHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 79,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock41FfiOHOSAceFrameworkPatternLockStrokeWidthHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 65,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockControllerCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSAceFrameworkPatternLockControllerCreate",
+      exportId: "FfiOHOSAceFrameworkPatternLockControllerCreate",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock46FfiOHOSAceFrameworkPatternLockControllerCreateF$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 76,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockControllerReset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FfiOHOSAceFrameworkPatternLockControllerReset",
+      exportId: "FfiOHOSAceFrameworkPatternLockControllerReset",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock45FfiOHOSAceFrameworkPatternLockControllerResetFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8586438104150755449
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                40
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 69,
+        ignore: false
+      },
+      identifier: "selfID",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock45FfiOHOSAceFrameworkPatternLockControllerResetHlE6selfIDE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 113,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPatternLockControllerSetChallengeResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSAceFrameworkPatternLockControllerSetChallengeResult",
+      exportId: "FfiOHOSAceFrameworkPatternLockControllerSetChallengeResult",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock58FfiOHOSAceFrameworkPatternLockControllerSetChallengeResultFll$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11213650672517175550
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                42,
+                43
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 69,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 82,
+        ignore: false
+      },
+      identifier: "selfID",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 69,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock58FfiOHOSAceFrameworkPatternLockControllerSetChallengeResultHllE6selfIDE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 84,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 106,
+        ignore: false
+      },
+      identifier: "challengeResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 84,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock58FfiOHOSAceFrameworkPatternLockControllerSetChallengeResultHllE15challengeResultE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 2,
+        ignore: false
+      },
+      identifier: "PatternLockController",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock21PatternLockControllerE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock21PatternLockControllerE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock21PatternLockControllerC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14226628559908992850,
+        srcUse: 0,
+        bodyHash: 185930299456535473
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          19
+        ],
+        body: [
+          45,
+          46,
+          47
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 17,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock21PatternLockController6<init>Hv",
+      exportId: "_CN33ohos.arkui.component.pattern_lock21PatternLockController6<init>Hv",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock21PatternLockControllerC6<init>F$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16137141979517874444
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 6,
+        ignore: false
+      },
+      identifier: "~init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678146887663648,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock21PatternLockController5~initHv",
+      exportId: "_CN33ohos.arkui.component.pattern_lock21PatternLockController5~initHv",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock21PatternLockControllerC5~initF$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 721732986316517452
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 6,
+        ignore: false
+      },
+      identifier: "reset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 18,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock21PatternLockController5resetHv",
+      exportId: "_CN33ohos.arkui.component.pattern_lock21PatternLockController5resetHv",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock21PatternLockControllerC5resetF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15457695886070879661
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 339,
+        column: 2,
+        ignore: false
+      },
+      identifier: "PatternLock",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLockE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLockE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 1260918797365511318,
+        srcUse: 0,
+        bodyHash: 5438727650205164930
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          33
+        ],
+        body: [
+          49,
+          52,
+          54,
+          56,
+          58,
+          60,
+          62,
+          64,
+          66,
+          68
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock6<init>HNNat6OptionICNY_21PatternLockControllerEE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock6<init>HNNat6OptionICNY_21PatternLockControllerEE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC6<init>FO1_21PatternLockController!10controller=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5902214735886177413
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                50
+              ],
+              desugars: [
+                51
+              ]
+            }
+          ],
+          retType: 20
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 59,
+        ignore: false
+      },
+      identifier: "controller",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock4initHNNat6OptionICNY_21PatternLockControllerEEE10controllerIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 55,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 59,
+        ignore: false
+      },
+      identifier: "controller.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CPI33ohos.arkui.component.pattern_lock11PatternLock4initHNNat6OptionICNY_21PatternLockControllerEEE10controllerHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 22
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 160,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock13selectedColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock13selectedColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC13selectedColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8725298573871986053
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 51,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock13selectedColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 6,
+        ignore: false
+      },
+      identifier: "pathColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock9pathColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock9pathColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC9pathColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5277201201712527938
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 47,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock9pathColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 6,
+        ignore: false
+      },
+      identifier: "activeColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock11activeColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock11activeColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC11activeColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15710321160514923194
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                57
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 49,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock11activeColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 6,
+        ignore: false
+      },
+      identifier: "regularColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 25
+            },
+            {
+              name: "stagemodelonly",
+              expr: 26
+            },
+            {
+              name: "syscap",
+              expr: 27
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock12regularColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock12regularColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC12regularColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6782915736601322213
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                59
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 50,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 30,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock12regularColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 238,
+        column: 6,
+        ignore: false
+      },
+      identifier: "autoReset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 28
+            },
+            {
+              name: "stagemodelonly",
+              expr: 29
+            },
+            {
+              name: "syscap",
+              expr: 30
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock9autoResetHb",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock9autoResetHb",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC9autoResetFb$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13908983570247230594
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                61
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 38,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 233,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock9autoResetHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 256,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 6,
+        ignore: false
+      },
+      identifier: "circleRadius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 256,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 31
+            },
+            {
+              name: "stagemodelonly",
+              expr: 32
+            },
+            {
+              name: "syscap",
+              expr: 33
+            }
+          ]
+        }
+      ],
+      type: 28,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock12circleRadiusHCN9ohos.base6LengthE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock12circleRadiusHCN9ohos.base6LengthE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC12circleRadiusF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4195903892144270141
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                63
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 256,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 256,
+        column: 43,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 256,
+        column: 30,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock12circleRadiusHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 6,
+        ignore: false
+      },
+      identifier: "sideLength",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 34
+            },
+            {
+              name: "stagemodelonly",
+              expr: 35
+            },
+            {
+              name: "syscap",
+              expr: 36
+            }
+          ]
+        }
+      ],
+      type: 28,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock10sideLengthHCN9ohos.base6LengthE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock10sideLengthHCN9ohos.base6LengthE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC10sideLengthF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 147034719108092400
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                65
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 41,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 280,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock10sideLengthHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 304,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 310,
+        column: 6,
+        ignore: false
+      },
+      identifier: "pathStrokeWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 304,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 37
+            },
+            {
+              name: "stagemodelonly",
+              expr: 38
+            },
+            {
+              name: "syscap",
+              expr: 39
+            }
+          ]
+        }
+      ],
+      type: 28,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock15pathStrokeWidthHCN9ohos.base6LengthE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock15pathStrokeWidthHCN9ohos.base6LengthE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC15pathStrokeWidthF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 482929443318106873
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                67
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 304,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 304,
+        column: 46,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 304,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock15pathStrokeWidthHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 324,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 338,
+        column: 6,
+        ignore: false
+      },
+      identifier: "onPatternComplete",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 324,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 40
+            },
+            {
+              name: "stagemodelonly",
+              expr: 41
+            },
+            {
+              name: "syscap",
+              expr: 42
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock17onPatternCompleteHF0uRNat5ArrayIiEE",
+      exportId: "_CN33ohos.arkui.component.pattern_lock11PatternLock17onPatternCompleteHF0uRNat5ArrayIiEE",
+      mangledBeforeSema: "33ohos.arkui.component.pattern_lock11PatternLockC17onPatternCompleteFFu5Array<i>$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3214451707875810258
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                69
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.pattern_lock",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 324,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 324,
+        column: 67,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 324,
+        column: 35,
+        ignore: false
+      },
+      attributes: [
+        562984313159712,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN33ohos.arkui.component.pattern_lock11PatternLock17onPatternCompleteHF0uRNat5ArrayIiEEE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 171,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 171,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 210,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 210,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 252,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 253,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 253,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 254,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 276,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 276,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 277,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 277,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 278,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 278,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 300,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 300,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 301,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 301,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 302,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 302,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 320,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 320,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 321,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 321,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 322,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 322,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

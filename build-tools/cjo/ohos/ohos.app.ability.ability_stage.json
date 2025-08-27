@@ -1,0 +1,5070 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.app.ability.ability_stage",
+  pkgDepInfo: "{\"package\":\"ohos.app.ability.ability_stage\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.app.ability.configuration\",\"isStd\":false,\"imports\":[{\"file\":\"ability_stage.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":40}}]},{\"package\":\"ohos.app.ability.ui_ability\",\"isStd\":false,\"imports\":[{\"file\":\"ability_stage.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":37}}]},{\"package\":\"ohos.app.ability.want\",\"isStd\":false,\"imports\":[{\"file\":\"ability_stage.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":31}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"ability_stage.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"hilog.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"ability_stage.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"ability_stage.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":24}}]}]}",
+  imports: [
+    "ohos.app.ability.configuration",
+    "std.core",
+    "ohos.app.ability.ui_ability",
+    "ohos.ffi",
+    "ohos.hilog"
+  ],
+  allFiles: [
+    "ohos.app.ability.ability_stage/ability_stage.cj",
+    "ohos.app.ability.ability_stage/hilog.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 24,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 40,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "app",
+            "ability",
+            "configuration"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 31,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "app",
+            "ability",
+            "want"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "app",
+            "ability",
+            "ui_ability"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 20,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 2
+        }
+      }
+    },
+    {
+      kind: "UIntNative"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        7
+      ]
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 4
+        }
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 11,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN30ohos.app.ability.configuration15CJConfigurationE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        20
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN30ohos.app.ability.configuration14CConfigurationE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        12,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        12,
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 55
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 22
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 57
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        27
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.app.ability.ui_ability19AbilityStageContextE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29,
+        30
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 25
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        25
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 27
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN8ohos.ffi7FFIDataE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CN10ohos.hilog12HilogChannelE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 44,
+        ignore: false
+      },
+      identifier: "ERR_INVALID_INSTANCE_CODE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage25ERR_INVALID_INSTANCE_CODEE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage25ERR_INVALID_INSTANCE_CODEV$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 731811721249126322
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 37,
+        ignore: false
+      },
+      identifier: "AbilityStageHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage18AbilityStageHandleE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage18AbilityStageHandleT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 7405861394213088031,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 3
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 109,
+        ignore: false
+      },
+      identifier: "RegisterCJAbilityStageFuncs",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "RegisterCJAbilityStageFuncs",
+      exportId: "RegisterCJAbilityStageFuncs",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage27RegisterCJAbilityStageFuncsF5CFunc<Fu8CPointer<19CJAbilityStageFuncs>>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 4414692136649340017
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                5
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CJAbilityStageFuncs",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncsE",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncsE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS",
+      hash: {
+        instVar: 2212470922855196203,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 102,
+        ignore: false
+      },
+      identifier: "registerFunc",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.app.ability.ability_stage27RegisterCJAbilityStageFuncsHFCuPRNY_19CJAbilityStageFuncsEEE12registerFuncE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 81,
+        ignore: false
+      },
+      identifier: "FFIAbilityGetAbilityStageContext",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FFIAbilityGetAbilityStageContext",
+      exportId: "FFIAbilityGetAbilityStageContext",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage32FFIAbilityGetAbilityStageContextF18AbilityStageHandle$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 4742754359054534074
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 73,
+        ignore: false
+      },
+      identifier: "handle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN30ohos.app.ability.ability_stage32FFIAbilityGetAbilityStageContextHrE6handleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 56,
+        ignore: false
+      },
+      identifier: "loadAbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs16loadAbilityStageK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS16loadAbilityStage$$5CFunc<Fl7CString>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 56,
+        ignore: false
+      },
+      identifier: "releaseAbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs19releaseAbilityStageK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS19releaseAbilityStage$$5CFunc<Ful>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 57,
+        ignore: false
+      },
+      identifier: "abilityStageOnCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs20abilityStageOnCreateK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS20abilityStageOnCreate$$5CFunc<Ful>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 76,
+        ignore: false
+      },
+      identifier: "abilityStageOnAcceptWant",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs24abilityStageOnAcceptWantK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS24abilityStageOnAcceptWant$$5CFunc<F7CStringl10WantHandle>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 88,
+        ignore: false
+      },
+      identifier: "abilityStageOnConfigurationUpdated",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs34abilityStageOnConfigurationUpdatedK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS34abilityStageOnConfigurationUpdated$$5CFunc<Ful15CJConfiguration>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 69,
+        ignore: false
+      },
+      identifier: "abilityStageOnMemoryLevel",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs25abilityStageOnMemoryLevelK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS25abilityStageOnMemoryLevel$$5CFunc<Fuli>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 73,
+        ignore: false
+      },
+      identifier: "abilityStageInit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs16abilityStageInitK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS16abilityStageInit$$5CFunc<Ful18AbilityStageHandle>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 88,
+        ignore: false
+      },
+      identifier: "abilityStageOnConfigurationUpdated2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs35abilityStageOnConfigurationUpdated2K_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS35abilityStageOnConfigurationUpdated2$$5CFunc<Ful14CConfiguration>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 58,
+        ignore: false
+      },
+      identifier: "abilityStageOnDestroy",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs21abilityStageOnDestroyK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS21abilityStageOnDestroy$$5CFunc<Ful>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 83,
+        ignore: false
+      },
+      identifier: "abilityStageOnNewProcessRequest",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs31abilityStageOnNewProcessRequestK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS31abilityStageOnNewProcessRequest$$5CFunc<F7CStringl10WantHandle>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs6<init>HFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_",
+      exportId: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs6<init>HFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19CJAbilityStageFuncsS19CJAbilityStageFuncsY5CFunc<Fl7CString>!L16loadAbilityStage5CFunc<Ful>!L19releaseAbilityStage5CFunc<Ful>!L20abilityStageOnCreate5CFunc<F7CStringl10WantHandle>!L24abilityStageOnAcceptWant5CFunc<Ful15CJConfiguration>!L34abilityStageOnConfigurationUpdated5CFunc<Fuli>!L25abilityStageOnMemoryLevel5CFunc<Ful18AbilityStageHandle>!L16abilityStageInit5CFunc<Ful14CConfiguration>!L35abilityStageOnConfigurationUpdated25CFunc<Ful>!L21abilityStageOnDestroy5CFunc<F7CStringl10WantHandle>!L31abilityStageOnNewProcessRequest",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 56,
+        ignore: false
+      },
+      identifier: "loadAbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E16loadAbilityStageE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 56,
+        ignore: false
+      },
+      identifier: "releaseAbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E19releaseAbilityStageE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 57,
+        ignore: false
+      },
+      identifier: "abilityStageOnCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E20abilityStageOnCreateE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 76,
+        ignore: false
+      },
+      identifier: "abilityStageOnAcceptWant",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E24abilityStageOnAcceptWantE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 88,
+        ignore: false
+      },
+      identifier: "abilityStageOnConfigurationUpdated",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E34abilityStageOnConfigurationUpdatedE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 69,
+        ignore: false
+      },
+      identifier: "abilityStageOnMemoryLevel",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E25abilityStageOnMemoryLevelE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 73,
+        ignore: false
+      },
+      identifier: "abilityStageInit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E16abilityStageInitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 88,
+        ignore: false
+      },
+      identifier: "abilityStageOnConfigurationUpdated2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E35abilityStageOnConfigurationUpdated2E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 58,
+        ignore: false
+      },
+      identifier: "abilityStageOnDestroy",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E21abilityStageOnDestroyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 83,
+        ignore: false
+      },
+      identifier: "abilityStageOnNewProcessRequest",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN30ohos.app.ability.ability_stage19CJAbilityStageFuncs4initHFClkEFCulEY5_FCklrEFCulRN30ohos.app.ability.configuration15CJConfigurationEEFCuliEFCulrEFCulRNY9_14CConfigurationEEY5_Y6_E31abilityStageOnNewProcessRequestE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 2,
+        ignore: false
+      },
+      identifier: "abilityStageInit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN30ohos.app.ability.ability_stage16abilityStageInitHlr",
+      exportId: "_CN30ohos.app.ability.ability_stage16abilityStageInitHlr",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage16abilityStageInitFl18AbilityStageHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 7527189170599122191
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30,
+                31
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 32,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage16abilityStageInitHlrE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 72,
+        ignore: false
+      },
+      identifier: "abilityStageHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN30ohos.app.ability.ability_stage16abilityStageInitHlrE18abilityStageHandleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 2,
+        ignore: false
+      },
+      identifier: "loadAbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN30ohos.app.ability.ability_stage16loadAbilityStageHk",
+      exportId: "_CN30ohos.app.ability.ability_stage16loadAbilityStageHk",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage16loadAbilityStageF7CString$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 5815357189847484627
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                33
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 42,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN30ohos.app.ability.ability_stage16loadAbilityStageHkE10moduleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 2,
+        ignore: false
+      },
+      identifier: "releaseAbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.ability_stage19releaseAbilityStageHl",
+      exportId: "_CN30ohos.app.ability.ability_stage19releaseAbilityStageHl",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage19releaseAbilityStageFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 934798825936681809
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 35,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage19releaseAbilityStageHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 2,
+        ignore: false
+      },
+      identifier: "abilityStageOnCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.ability_stage20abilityStageOnCreateHl",
+      exportId: "_CN30ohos.app.ability.ability_stage20abilityStageOnCreateHl",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage20abilityStageOnCreateFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 8472763741978978696
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                37
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 36,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage20abilityStageOnCreateHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 46,
+        ignore: false
+      },
+      identifier: "abilityStageOnDestroy",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.ability_stage21abilityStageOnDestroyHl",
+      exportId: "_CN30ohos.app.ability.ability_stage21abilityStageOnDestroyHl",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage21abilityStageOnDestroyFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 17787784110907600329
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                39
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 36,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage21abilityStageOnDestroyHlE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 2,
+        ignore: false
+      },
+      identifier: "abilityStageOnAcceptWant",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN30ohos.app.ability.ability_stage24abilityStageOnAcceptWantHlr",
+      exportId: "_CN30ohos.app.ability.ability_stage24abilityStageOnAcceptWantHlr",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage24abilityStageOnAcceptWantFl10WantHandle$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 14721153116989093709
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41,
+                42
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 11
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 40,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage24abilityStageOnAcceptWantHlrE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 55,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN30ohos.app.ability.ability_stage24abilityStageOnAcceptWantHlrE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 2,
+        ignore: false
+      },
+      identifier: "abilityStageOnNewProcessRequest",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN30ohos.app.ability.ability_stage31abilityStageOnNewProcessRequestHlr",
+      exportId: "_CN30ohos.app.ability.ability_stage31abilityStageOnNewProcessRequestHlr",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage31abilityStageOnNewProcessRequestFl10WantHandle$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3213751390879021976
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44,
+                45
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 11
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 47,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage31abilityStageOnNewProcessRequestHlrE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 62,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN30ohos.app.ability.ability_stage31abilityStageOnNewProcessRequestHlrE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 2,
+        ignore: false
+      },
+      identifier: "abilityStageOnConfigurationUpdated",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN30ohos.app.ability.ability_stage34abilityStageOnConfigurationUpdatedHlRN30ohos.app.ability.configuration15CJConfigurationE",
+      exportId: "_CN30ohos.app.ability.ability_stage34abilityStageOnConfigurationUpdatedHlRN30ohos.app.ability.configuration15CJConfigurationE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage34abilityStageOnConfigurationUpdatedFl15CJConfiguration$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12110294331077157444
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                47,
+                48
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 49,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage34abilityStageOnConfigurationUpdatedHlRN30ohos.app.ability.configuration15CJConfigurationEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 69,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN30ohos.app.ability.ability_stage34abilityStageOnConfigurationUpdatedHlRN30ohos.app.ability.configuration15CJConfigurationEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 79,
+        ignore: false
+      },
+      identifier: "abilityStageOnConfigurationUpdated2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.app.ability.ability_stage35abilityStageOnConfigurationUpdated2HlRN30ohos.app.ability.configuration14CConfigurationE",
+      exportId: "_CN30ohos.app.ability.ability_stage35abilityStageOnConfigurationUpdated2HlRN30ohos.app.ability.configuration14CConfigurationE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage35abilityStageOnConfigurationUpdated2Fl14CConfiguration$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 11079420243875175649
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                50,
+                51
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 50,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage35abilityStageOnConfigurationUpdated2HlRN30ohos.app.ability.configuration14CConfigurationEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 69,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN30ohos.app.ability.ability_stage35abilityStageOnConfigurationUpdated2HlRN30ohos.app.ability.configuration14CConfigurationEE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 60,
+        ignore: false
+      },
+      identifier: "abilityStageOnMemoryLevel",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN30ohos.app.ability.ability_stage25abilityStageOnMemoryLevelHli",
+      exportId: "_CN30ohos.app.ability.ability_stage25abilityStageOnMemoryLevelHli",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage25abilityStageOnMemoryLevelFli$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10993429961355656055
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53,
+                54
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 40,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 32,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.ability_stage25abilityStageOnMemoryLevelHliE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 50,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN30ohos.app.ability.ability_stage25abilityStageOnMemoryLevelHliE1_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 26,
+        ignore: false
+      },
+      identifier: "AbilityStageImpl",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN30ohos.app.ability.ability_stage16AbilityStageImplE",
+      exportId: "_CN30ohos.app.ability.ability_stage16AbilityStageImplE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage16AbilityStageImplC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          24
+        ],
+        body: [
+          56
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 7,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 23,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN30ohos.app.ability.ability_stage16AbilityStageImpl6<init>Hv",
+      exportId: "_CN30ohos.app.ability.ability_stage16AbilityStageImpl6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 22
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 218,
+        column: 2,
+        ignore: false
+      },
+      identifier: "AbilityStage",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        144678412907709488,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 2
+            },
+            {
+              name: "stagemodelonly",
+              expr: 3
+            },
+            {
+              name: "syscap",
+              expr: 4
+            }
+          ]
+        }
+      ],
+      type: 25,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStageE",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStageE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC",
+      hash: {
+        instVar: 14294809635397679813,
+        virt: 11581245543121960107,
+        sig: 9569821444767631996,
+        srcUse: 6029406924600920868,
+        bodyHash: 11602667326144665991
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          37
+        ],
+        body: [
+          58,
+          59,
+          60,
+          63,
+          65,
+          69,
+          71,
+          72
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 100,
+        ignore: false
+      },
+      identifier: "abilityStageContext",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297714976,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage19abilityStageContextK_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC19abilityStageContextV$$6Option<19AbilityStageContext>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 17327286262165285715,
+        bodyHash: 2043726073688974800
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 61,
+        ignore: false
+      },
+      identifier: "impl_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297714976,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage5impl_K_E",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC5impl_V$$16AbilityStageImpl",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 1273861709373161920,
+        bodyHash: 10233218336770005892
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 6,
+        ignore: false
+      },
+      identifier: "registerCreator",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678138297714208,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 5
+            },
+            {
+              name: "stagemodelonly",
+              expr: 6
+            },
+            {
+              name: "syscap",
+              expr: 7
+            }
+          ]
+        }
+      ],
+      type: 28,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage15registerCreatorHRNat6StringEF0CNY_Y0_EE",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage15registerCreatorHRNat6StringEF0CNY_Y0_EE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC15registerCreatorF6StringF12AbilityStage$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 8035971499611947038,
+        bodyHash: 9301060618957901211
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                61,
+                62
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 58,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage15registerCreatorHRNat6StringEF0CNY_Y0_EEE10moduleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 87,
+        ignore: false
+      },
+      identifier: "creator",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage15registerCreatorHRNat6StringEF0CNY_Y0_EEE7creatorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 167,
+        column: 6,
+        ignore: false
+      },
+      identifier: "create",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297729568,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage6createHRNat6StringE",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage6createHRNat6StringE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC6createF6String$$6Option<12AbilityStage>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 8035971499611947038,
+        bodyHash: 17739290306162811734
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 42,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage6createHRNat6StringEE10moduleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 6,
+        ignore: false
+      },
+      identifier: "context",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        144115188352680992,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 8
+            },
+            {
+              name: "stagemodelonly",
+              expr: 9
+            },
+            {
+              name: "syscap",
+              expr: 10
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage7contextE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC7contextP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 12256306071942807962,
+        bodyHash: 16135290005938111378
+      },
+      info_type: "PropInfo",
+      info: {
+        isMutable: true,
+        setters: [
+          66
+        ],
+        getters: [
+          68
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$contextset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage7contextpsHCN27ohos.app.ability.ui_ability19AbilityStageContextE",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage7contextpsHCN27ohos.app.ability.ui_ability19AbilityStageContextE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage7contextP12AbilityStageC3setF$$19AbilityStageContext",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 1678792870737559514
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                67
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 18,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage11$contextsetHCN27ohos.app.ability.ui_ability19AbilityStageContextEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 181,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$contextget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 181,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage7contextpgHv",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage7contextpgHv",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage7contextP12AbilityStageC3getF$$19AbilityStageContext",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12491776920400504191
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 6,
+        ignore: false
+      },
+      identifier: "abilityStageInit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage16abilityStageInitHr",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage16abilityStageInitHr",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC16abilityStageInitF18AbilityStageHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 8698128011320609890
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                70
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 53,
+        ignore: false
+      },
+      identifier: "remote",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage16abilityStageInitHrE6remoteE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 41,
+        ignore: false
+      },
+      identifier: "onCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678138298237984,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 11
+            },
+            {
+              name: "stagemodelonly",
+              expr: 12
+            },
+            {
+              name: "syscap",
+              expr: 13
+            }
+          ]
+        }
+      ],
+      type: 36,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage8onCreateHv",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage8onCreateHv",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage12AbilityStageC8onCreateF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 6029406924600920868,
+        bodyHash: 15620058025438530639
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 31,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1297599645052044384,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN30ohos.app.ability.ability_stage12AbilityStage6<init>Hv",
+      exportId: "_CN30ohos.app.ability.ability_stage12AbilityStage6<init>Hv",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 25
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 2,
+        ignore: false
+      },
+      identifier: "abilityStageCjFuncsRegister",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.app.ability.ability_stage27abilityStageCjFuncsRegisterHPRNY_19CJAbilityStageFuncsE",
+      exportId: "_CN30ohos.app.ability.ability_stage27abilityStageCjFuncsRegisterHPRNY_19CJAbilityStageFuncsE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage27abilityStageCjFuncsRegisterF8CPointer<19CJAbilityStageFuncs>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 708631573518144443
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                74
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 71,
+        ignore: false
+      },
+      identifier: "result",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN30ohos.app.ability.ability_stage27abilityStageCjFuncsRegisterHPRNY_19CJAbilityStageFuncsEE6resultIY3_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 97,
+        ignore: false
+      },
+      identifier: "REGISTER_ABILITY_STAGE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN30ohos.app.ability.ability_stage22REGISTER_ABILITY_STAGEE",
+      exportId: "_CN30ohos.app.ability.ability_stage22REGISTER_ABILITY_STAGEE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage22REGISTER_ABILITY_STAGEV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9488967158448853490
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.ability_stage",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 20,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 20,
+        column: 59,
+        ignore: false
+      },
+      identifier: "ABILITY_LOG",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 20,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN30ohos.app.ability.ability_stage11ABILITY_LOGE",
+      exportId: "_CN30ohos.app.ability.ability_stage11ABILITY_LOGE",
+      mangledBeforeSema: "30ohos.app.ability.ability_stage11ABILITY_LOGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 11153182241336478132
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 44,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 59,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

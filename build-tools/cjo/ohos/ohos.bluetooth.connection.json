@@ -6,9 +6,9 @@
     patch_num: 0
   },
   fullPkgName: "ohos.bluetooth.connection",
-  pkgDepInfo: "{\"package\":\"ohos.bluetooth.connection\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"connection.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.bluetooth\",\"isStd\":false,\"imports\":[{\"file\":\"connection.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":24}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"connection.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"connection.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.bluetooth.connection\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[]}",
   imports: [
-    "std.core"
+
   ],
   allFiles: [
     "ohos.bluetooth.connection/connection.cj",
@@ -17,94 +17,6 @@
   allFileImports: [
     {
       importSpecs: [
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 18,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 18,
-            column: 19,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "base"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 19,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 19,
-            column: 24,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "bluetooth"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 20,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 20,
-            column: 18,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "ffi"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 21,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 21,
-            column: 21,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "labels"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
         {
           begin: {
             file: 1,
@@ -160,36 +72,12 @@
     {
       kind: "Func",
       typeArgs: [
-        2
+        2,
+        3
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 3
-      }
-    },
-    {
-      kind: "Struct",
-      typeArgs: [
-
-      ],
-      info_type: "CompositeTyInfo",
-      info: {
-        declPtr: {
-          decl: "_CNat6StringE"
-        }
-      }
-    },
-    {
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        5,
-        6
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 3,
+        retType: 5,
         isC: true
       }
     },
@@ -199,151 +87,16 @@
     {
       kind: "CPointer",
       typeArgs: [
-        7
+        4
       ]
     },
     {
       kind: "Int32"
+    },
+    {
     }
   ],
   allDecls: [
-    {
-      kind: "FuncDecl",
-      isTopLevel: true,
-      fullPkgName: "ohos.bluetooth.connection",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 1,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 2,
-        ignore: false
-      },
-      identifier: "setLocalName",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 13,
-        ignore: false
-      },
-      attributes: [
-        144678412907185200,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 1
-            },
-            {
-              name: "deprecated",
-              expr: 2
-            },
-            {
-              name: "permission",
-              expr: 3
-            },
-            {
-              name: "stagemodelonly",
-              expr: 4
-            },
-            {
-              name: "syscap",
-              expr: 5
-            }
-          ]
-        }
-      ],
-      type: 1,
-      mangledName: "_CN25ohos.bluetooth.connection12setLocalNameHRNat6StringE",
-      exportId: "_CN25ohos.bluetooth.connection12setLocalNameHRNat6StringE",
-      mangledBeforeSema: "25ohos.bluetooth.connection12setLocalNameF6String$$u",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 0,
-        bodyHash: 8761011528644706472
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-                2
-              ],
-              desugars: [
-                0
-              ]
-            }
-          ],
-          retType: 3
-        }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.bluetooth.connection",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 26,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 38,
-        ignore: false
-      },
-      identifier: "name",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 26,
-        ignore: false
-      },
-      attributes: [
-        562949953421344,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 2,
-      mangledName: "_CN25ohos.bluetooth.connection12setLocalNameHRNat6StringEE4nameE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
     {
       kind: "FuncDecl",
       isTopLevel: true,
@@ -381,7 +134,7 @@
       annotations: [
 
       ],
-      type: 4,
+      type: 1,
       mangledName: "FfiBluetoothConSetLocalName",
       exportId: "FfiBluetoothConSetLocalName",
       mangledBeforeSema: "25ohos.bluetooth.connection27FfiBluetoothConSetLocalNameF7CString8CPointer<i>$$u",
@@ -398,8 +151,8 @@
           paramLists: [
             {
               params: [
-                4,
-                5
+                2,
+                3
               ],
               desugars: [
                 0,
@@ -407,7 +160,7 @@
               ]
             }
           ],
-          retType: 3
+          retType: 5
         }
       }
     },
@@ -443,7 +196,7 @@
       annotations: [
 
       ],
-      type: 5,
+      type: 2,
       mangledName: "_CN25ohos.bluetooth.connection27FfiBluetoothConSetLocalNameHkPiE4nameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -490,7 +243,7 @@
       annotations: [
 
       ],
-      type: 6,
+      type: 3,
       mangledName: "_CN25ohos.bluetooth.connection27FfiBluetoothConSetLocalNameHkPiE7errCodeIiE",
       exportId: "",
       mangledBeforeSema: "",
@@ -507,114 +260,7 @@
     }
   ],
   allExprs: [
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 39,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 39,
-        column: 7,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 40,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 40,
-        column: 19,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 41,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 41,
-        column: 51,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "ohos.permission.ACCESS_BLUETOOTH",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 42,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 42,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 43,
-        column: 13,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 43,
-        column: 60,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.Communication.Bluetooth.Core",
-        constKind: "String"
-      }
-    }
+
   ],
   moduleName: ""
 }

@@ -1,0 +1,8621 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.slider",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.slider\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"slider.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"slider.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"slider.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"slider.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"slider.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":28}}]}]}",
+  imports: [
+    "ohos.arkui.component.common",
+    "ohos.base",
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.arkui.component.slider/slider.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        9
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        12,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        3,
+        2,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Float32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19,
+        19,
+        4,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        3,
+        12,
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 75
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2,
+        26,
+        27,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 24
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common11SliderStyleE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common4AxisE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2,
+        26
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 27
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2,
+        26,
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        36
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 75
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        40
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        41
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN9ohos.base11ResourceStrE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 40
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        44
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        46
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        47
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common16SliderChangeModeE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common8ViewBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CJSliderCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreateE",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreateE",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS",
+      hash: {
+        instVar: 12923554110930561557,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 27,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate5valueK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS5value$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 25,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate3minK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS3min$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 25,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate3maxK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS3max$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 26,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate4stepK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS4step$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 25,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate5styleK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS5style$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 29,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate9directionK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS9direction$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 26,
+        ignore: false
+      },
+      identifier: "reverse",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate7reverseK_E",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS7reverse$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate6<init>Hddddiib",
+      exportId: "_CN27ohos.arkui.component.slider14CJSliderCreate6<init>Hddddiib",
+      mangledBeforeSema: "27ohos.arkui.component.slider14CJSliderCreateS14CJSliderCreateYd!L5valued!L3mind!L3maxd!L4stepi!L5stylei!L9directionb!L7reverse",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 27,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 25,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 25,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 26,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE4stepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 25,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 29,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 26,
+        ignore: false
+      },
+      identifier: "reverse",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider14CJSliderCreate4initHddddiibE7reverseE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 70,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSAceFrameworkSliderCreate",
+      exportId: "FfiOHOSAceFrameworkSliderCreate",
+      mangledBeforeSema: "27ohos.arkui.component.slider31FfiOHOSAceFrameworkSliderCreateF14CJSliderCreate$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 63,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN27ohos.arkui.component.slider31FfiOHOSAceFrameworkSliderCreateHRNY_14CJSliderCreateEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 66,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderBlockColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkSliderBlockColor",
+      exportId: "FfiOHOSAceFrameworkSliderBlockColor",
+      mangledBeforeSema: "27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderBlockColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                20
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 59,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderBlockColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 66,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderTrackColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkSliderTrackColor",
+      exportId: "FfiOHOSAceFrameworkSliderTrackColor",
+      mangledBeforeSema: "27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderTrackColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 59,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderTrackColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 69,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderSelectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkSliderSelectedColor",
+      exportId: "FfiOHOSAceFrameworkSliderSelectedColor",
+      mangledBeforeSema: "27ohos.arkui.component.slider38FfiOHOSAceFrameworkSliderSelectedColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 62,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN27ohos.arkui.component.slider38FfiOHOSAceFrameworkSliderSelectedColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 64,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderShowSteps",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSAceFrameworkSliderShowSteps",
+      exportId: "FfiOHOSAceFrameworkSliderShowSteps",
+      mangledBeforeSema: "27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderShowStepsFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9105857542882105954
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                26
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 57,
+        ignore: false
+      },
+      identifier: "isShow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderShowStepsHbE6isShowE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 104,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderShowTipsNew",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkSliderShowTipsNew",
+      exportId: "FfiOHOSAceFrameworkSliderShowTipsNew",
+      mangledBeforeSema: "27ohos.arkui.component.slider36FfiOHOSAceFrameworkSliderShowTipsNewFb7CStringb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10731542347152208794
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28,
+                29,
+                30
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 59,
+        ignore: false
+      },
+      identifier: "isShow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider36FfiOHOSAceFrameworkSliderShowTipsNewHbkbE6isShowE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 77,
+        ignore: false
+      },
+      identifier: "content",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN27ohos.arkui.component.slider36FfiOHOSAceFrameworkSliderShowTipsNewHbkbE7contentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 97,
+        ignore: false
+      },
+      identifier: "contentExist",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider36FfiOHOSAceFrameworkSliderShowTipsNewHbkbE12contentExistE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 84,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderTrackThickness",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSliderTrackThickness",
+      exportId: "FfiOHOSAceFrameworkSliderTrackThickness",
+      mangledBeforeSema: "27ohos.arkui.component.slider39FfiOHOSAceFrameworkSliderTrackThicknessFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                32,
+                33
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 64,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider39FfiOHOSAceFrameworkSliderTrackThicknessHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 66,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 77,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 66,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider39FfiOHOSAceFrameworkSliderTrackThicknessHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 65,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderMaxLabel",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSAceFrameworkSliderMaxLabel",
+      exportId: "FfiOHOSAceFrameworkSliderMaxLabel",
+      mangledBeforeSema: "27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderMaxLabelFd$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 58,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderMaxLabelHdE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 65,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderMinLabel",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSAceFrameworkSliderMinLabel",
+      exportId: "FfiOHOSAceFrameworkSliderMinLabel",
+      mangledBeforeSema: "27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderMinLabelFd$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                37
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 58,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderMinLabelHdE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 66,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderOnChange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSAceFrameworkSliderOnChange",
+      exportId: "FfiOHOSAceFrameworkSliderOnChange",
+      mangledBeforeSema: "27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderOnChangeFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5609522965981233593
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                39
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 59,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderOnChangeHlE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 72,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderBlockBorderColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkSliderBlockBorderColor",
+      exportId: "FfiOHOSAceFrameworkSliderBlockBorderColor",
+      mangledBeforeSema: "27ohos.arkui.component.slider41FfiOHOSAceFrameworkSliderBlockBorderColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 65,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN27ohos.arkui.component.slider41FfiOHOSAceFrameworkSliderBlockBorderColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 86,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderBlockBorderWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSliderBlockBorderWidth",
+      exportId: "FfiOHOSAceFrameworkSliderBlockBorderWidth",
+      mangledBeforeSema: "27ohos.arkui.component.slider41FfiOHOSAceFrameworkSliderBlockBorderWidthFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                43,
+                44
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 66,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider41FfiOHOSAceFrameworkSliderBlockBorderWidthHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 79,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider41FfiOHOSAceFrameworkSliderBlockBorderWidthHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 126,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderBlockSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "FfiOHOSAceFrameworkSliderBlockSize",
+      exportId: "FfiOHOSAceFrameworkSliderBlockSize",
+      mangledBeforeSema: "27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderBlockSizeFdidi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11563947322617979071
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                46,
+                47,
+                48,
+                49
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 62,
+        ignore: false
+      },
+      identifier: "widthVal",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderBlockSizeHdidiE8widthValE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 80,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderBlockSizeHdidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 82,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 100,
+        ignore: false
+      },
+      identifier: "heightVal",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 82,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderBlockSizeHdidiE9heightValE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 102,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 119,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 102,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderBlockSizeHdidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 78,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderMinResponsiveDistance",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "FfiOHOSAceFrameworkSliderMinResponsiveDistance",
+      exportId: "FfiOHOSAceFrameworkSliderMinResponsiveDistance",
+      mangledBeforeSema: "27ohos.arkui.component.slider46FfiOHOSAceFrameworkSliderMinResponsiveDistanceFf$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                51
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 57,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 71,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 57,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN27ohos.arkui.component.slider46FfiOHOSAceFrameworkSliderMinResponsiveDistanceHfE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 90,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderSelectedBorderRadius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSliderSelectedBorderRadius",
+      exportId: "FfiOHOSAceFrameworkSliderSelectedBorderRadius",
+      mangledBeforeSema: "27ohos.arkui.component.slider45FfiOHOSAceFrameworkSliderSelectedBorderRadiusFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53,
+                54
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 70,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider45FfiOHOSAceFrameworkSliderSelectedBorderRadiusHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 72,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 83,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 72,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider45FfiOHOSAceFrameworkSliderSelectedBorderRadiusHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 70,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderInteractionMode",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "FfiOHOSAceFrameworkSliderInteractionMode",
+      exportId: "FfiOHOSAceFrameworkSliderInteractionMode",
+      mangledBeforeSema: "27ohos.arkui.component.slider40FfiOHOSAceFrameworkSliderInteractionModeFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                56
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 63,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider40FfiOHOSAceFrameworkSliderInteractionModeHiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 111,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderSlideRange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "FfiOHOSAceFrameworkSliderSlideRange",
+      exportId: "FfiOHOSAceFrameworkSliderSlideRange",
+      mangledBeforeSema: "27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderSlideRangeFffbb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 2891837409397163175
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                58,
+                59,
+                60,
+                61
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 59,
+        ignore: false
+      },
+      identifier: "from",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderSlideRangeHffbbE4fromE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 72,
+        ignore: false
+      },
+      identifier: "to",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderSlideRangeHffbbE2toE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 74,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 89,
+        ignore: false
+      },
+      identifier: "fromExist",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 74,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderSlideRangeHffbbE9fromExistE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 91,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 104,
+        ignore: false
+      },
+      identifier: "toExist",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 91,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderSlideRangeHffbbE7toExistE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 65,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderStepColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkSliderStepColor",
+      exportId: "FfiOHOSAceFrameworkSliderStepColor",
+      mangledBeforeSema: "27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderStepColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                63
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 58,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN27ohos.arkui.component.slider34FfiOHOSAceFrameworkSliderStepColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 78,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderStepSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSliderStepSize",
+      exportId: "FfiOHOSAceFrameworkSliderStepSize",
+      mangledBeforeSema: "27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderStepSizeFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                65,
+                66
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 58,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderStepSizeHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 60,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 71,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 60,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider33FfiOHOSAceFrameworkSliderStepSizeHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 87,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderTrackBorderRadius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkSliderTrackBorderRadius",
+      exportId: "FfiOHOSAceFrameworkSliderTrackBorderRadius",
+      mangledBeforeSema: "27ohos.arkui.component.slider42FfiOHOSAceFrameworkSliderTrackBorderRadiusFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                68,
+                69
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 67,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider42FfiOHOSAceFrameworkSliderTrackBorderRadiusHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 69,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 80,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 69,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider42FfiOHOSAceFrameworkSliderTrackBorderRadiusHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 58,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderContentModifier",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "FfiOHOSAceFrameworkSliderContentModifier",
+      exportId: "FfiOHOSAceFrameworkSliderContentModifier",
+      mangledBeforeSema: "27ohos.arkui.component.slider40FfiOHOSAceFrameworkSliderContentModifierF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 98,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkSliderBlockStyle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkSliderBlockStyle",
+      exportId: "FfiOHOSAceFrameworkSliderBlockStyle",
+      mangledBeforeSema: "27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderBlockStyleFi7CStringl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 7214293355576239866
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72,
+                73,
+                74
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 59,
+        ignore: false
+      },
+      identifier: "type",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderBlockStyleHiklE4typeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 75,
+        ignore: false
+      },
+      identifier: "image",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderBlockStyleHiklE5imageE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 91,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN27ohos.arkui.component.slider35FfiOHOSAceFrameworkSliderBlockStyleHiklE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Slider",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN27ohos.arkui.component.slider6SliderE",
+      exportId: "_CN27ohos.arkui.component.slider6SliderE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 1260918797365511318,
+        srcUse: 0,
+        bodyHash: 14797884937871228036
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          49
+        ],
+        body: [
+          76,
+          112,
+          114,
+          116,
+          118,
+          120,
+          125,
+          127,
+          129,
+          131
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 25,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider6<init>HddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEb",
+      exportId: "_CN27ohos.arkui.component.slider6Slider6<init>HddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEb",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC6<init>Fd!3min=d!3max=d!4step=d!5value=11SliderStyle!5style=4Axis!9direction=b!7reverse=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1713233727395653710
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                77,
+                79,
+                82,
+                86,
+                91,
+                97,
+                104
+              ],
+              desugars: [
+                78,
+                80,
+                83,
+                87,
+                92,
+                98,
+                105
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 7
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 25,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE3minHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 8
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 25,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE3maxHd",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE5max.1HdE3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE4stepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 9
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 26,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      identifier: "step.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE4stepHdd",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                84,
+                85
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE6step.2HddE3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE6step.2HddE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 30,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 27,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 30,
+        ignore: false
+      },
+      identifier: "value.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE5valueHddd",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                88,
+                89,
+                90
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7value.3HdddE3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7value.3HdddE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7value.3HdddE4stepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 49,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 31,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 49,
+        ignore: false
+      },
+      identifier: "style.4",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE5styleHdddd",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                93,
+                94,
+                95,
+                96
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7style.4HddddE3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7style.4HddddE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7style.4HddddE4stepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 30,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7style.4HddddE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 43,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 28,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 43,
+        ignore: false
+      },
+      identifier: "direction.5",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9directionHddddY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                99,
+                100,
+                101,
+                102,
+                103
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE11direction.5HddddY3_E3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE11direction.5HddddY3_E3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE11direction.5HddddY3_E4stepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 30,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE11direction.5HddddY3_E5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 49,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE11direction.5HddddY3_E5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 31,
+        ignore: false
+      },
+      identifier: "reverse",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7reverseE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 10
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 26,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 31,
+        ignore: false
+      },
+      identifier: "reverse.6",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE7reverseHddddY3_Y6_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                106,
+                107,
+                108,
+                109,
+                110,
+                111
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      identifier: "min",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9reverse.6HddddY3_Y6_E3minE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9reverse.6HddddY3_Y6_E3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      identifier: "step",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9reverse.6HddddY3_Y6_E4stepE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 30,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9reverse.6HddddY3_Y6_E5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 49,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9reverse.6HddddY3_Y6_E5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 43,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 100,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider4initHddddNN27ohos.arkui.component.common11SliderStyleENNY4_4AxisEbE9reverse.6HddddY3_Y6_E9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 6,
+        ignore: false
+      },
+      identifier: "blockColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 11
+            },
+            {
+              name: "stagemodelonly",
+              expr: 12
+            },
+            {
+              name: "syscap",
+              expr: 13
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider10blockColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider10blockColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC10blockColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15968261689695539218
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                113
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 48,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider10blockColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 6,
+        ignore: false
+      },
+      identifier: "trackColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 14
+            },
+            {
+              name: "stagemodelonly",
+              expr: 15
+            },
+            {
+              name: "syscap",
+              expr: 16
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider10trackColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider10trackColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC10trackColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3863444680241245695
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                115
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 48,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider10trackColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 161,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 17
+            },
+            {
+              name: "stagemodelonly",
+              expr: 18
+            },
+            {
+              name: "syscap",
+              expr: 19
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider13selectedColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider13selectedColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC13selectedColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14566359454577182854
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                117
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 51,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider13selectedColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 6,
+        ignore: false
+      },
+      identifier: "showSteps",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 20
+            },
+            {
+              name: "stagemodelonly",
+              expr: 21
+            },
+            {
+              name: "syscap",
+              expr: 22
+            }
+          ]
+        }
+      ],
+      type: 38,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider9showStepsHb",
+      exportId: "_CN27ohos.arkui.component.slider6Slider9showStepsHb",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC9showStepsFb$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13230117605818366446
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                119
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 38,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider9showStepsHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 193,
+        column: 6,
+        ignore: false
+      },
+      identifier: "showTips",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 23
+            },
+            {
+              name: "stagemodelonly",
+              expr: 24
+            },
+            {
+              name: "syscap",
+              expr: 25
+            }
+          ]
+        }
+      ],
+      type: 39,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider8showTipsHbNNat6OptionICN9ohos.base11ResourceStrEE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider8showTipsHbNNat6OptionICN9ohos.base11ResourceStrEE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC8showTipsFbO1_11ResourceStr!7content=$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15162528699069481108
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                121,
+                122
+              ],
+              desugars: [
+                0,
+                123
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 37,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider8showTipsHbNNat6OptionICN9ohos.base11ResourceStrEEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 68,
+        ignore: false
+      },
+      identifier: "content",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider8showTipsHbNNat6OptionICN9ohos.base11ResourceStrEEE7contentIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 64,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 68,
+        ignore: false
+      },
+      identifier: "content.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CPI27ohos.arkui.component.slider6Slider8showTipsHbNNat6OptionICN9ohos.base11ResourceStrEEE7contentHb",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                124
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 40
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 37,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider8showTipsHbNNat6OptionICN9ohos.base11ResourceStrEEE9content.1HbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 6,
+        ignore: false
+      },
+      identifier: "trackThickness",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 26
+            },
+            {
+              name: "stagemodelonly",
+              expr: 27
+            },
+            {
+              name: "syscap",
+              expr: 28
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider14trackThicknessHCN9ohos.base6LengthE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider14trackThicknessHCN9ohos.base6LengthE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC14trackThicknessF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1599520055479383437
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                126
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 45,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 32,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 44,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider14trackThicknessHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 6,
+        ignore: false
+      },
+      identifier: "onChange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 29
+            },
+            {
+              name: "stagemodelonly",
+              expr: 30
+            },
+            {
+              name: "syscap",
+              expr: 31
+            }
+          ]
+        }
+      ],
+      type: 45,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider8onChangeHF0udNN27ohos.arkui.component.common16SliderChangeModeEE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider8onChangeHF0udNN27ohos.arkui.component.common16SliderChangeModeEE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC8onChangeFFud16SliderChangeMode$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15006389278696965899
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                128
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 71,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562984313159712,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider8onChangeHF0udNN27ohos.arkui.component.common16SliderChangeModeEEE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 6,
+        ignore: false
+      },
+      identifier: "blockBorderColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 32
+            },
+            {
+              name: "stagemodelonly",
+              expr: 33
+            },
+            {
+              name: "syscap",
+              expr: 34
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider16blockBorderColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN27ohos.arkui.component.slider6Slider16blockBorderColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC16blockBorderColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15696224095137968957
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                130
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.slider",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 54,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider16blockBorderColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.slider",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 37,
+        ignore: false
+      },
+      identifier: "pop",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN27ohos.arkui.component.slider6Slider3popHv",
+      exportId: "_CN27ohos.arkui.component.slider6Slider3popHv",
+      mangledBeforeSema: "27ohos.arkui.component.slider6SliderC3popF$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 15712518104670517473
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0.0",
+        constKind: "Float"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 30,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "100.0",
+        constKind: "Float"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "1.0",
+        constKind: "Float"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 31,
+        ignore: false
+      },
+      type: 4,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "false",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 129,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 142,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 142,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 153,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 154,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 154,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 164,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 164,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 166,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 196,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 196,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 197,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 197,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 210,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 210,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 228,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 228,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

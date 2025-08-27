@@ -6,9 +6,9 @@
     patch_num: 0
   },
   fullPkgName: "kit.Arkweb",
-  pkgDepInfo: "{\"package\":\"kit.Arkweb\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.webview\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":29}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.Arkweb\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.web.webview\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":33}}]}]}",
   imports: [
-    "ohos.webview"
+    "ohos.web.webview"
   ],
   allFiles: [
     "kit.Arkweb/index.cj"
@@ -28,11 +28,12 @@
             file: 1,
             pkgId: 0,
             line: 18,
-            column: 29,
+            column: 33,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "web",
             "webview"
           ],
           identifier: "*",
