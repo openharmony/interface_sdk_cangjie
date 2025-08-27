@@ -6,7 +6,7 @@
     patch_num: 0
   },
   fullPkgName: "ohos.security.permission_request_result",
-  pkgDepInfo: "{\"package\":\"ohos.security.permission_request_result\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":19},\"end\":{\"line\":19,\"column\":29}},{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":31},\"end\":{\"line\":19,\"column\":38}},{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":40},\"end\":{\"line\":19,\"column\":48}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.security.permission_request_result\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":49}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":19},\"end\":{\"line\":19,\"column\":29}},{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":31},\"end\":{\"line\":19,\"column\":38}},{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":19,\"column\":40},\"end\":{\"line\":19,\"column\":48}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"permission_request_result.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}]}",
   imports: [
     "std.core",
     "ohos.ffi"
@@ -29,12 +29,12 @@
             file: 1,
             pkgId: 0,
             line: 18,
-            column: 35,
+            column: 49,
             ignore: false
           },
           prefixPaths: [
             "ohos",
-            "base"
+            "business_exception"
           ],
           identifier: "BusinessException",
           asIdentifier: ""
@@ -206,21 +206,9 @@
       }
     },
     {
-      kind: "Enum",
-      typeArgs: [
-        7
-      ],
-      info_type: "CompositeTyInfo",
-      info: {
-        declPtr: {
-          decl: "_CNat6OptionIG_E"
-        }
-      }
-    },
-    {
       kind: "Struct",
       typeArgs: [
-        8
+        7
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -246,7 +234,7 @@
     {
       kind: "Func",
       typeArgs: [
-        11
+        10
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -320,13 +308,13 @@
     {
       kind: "Func",
       typeArgs: [
+        12,
         13,
-        14,
-        15
+        14
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 11
+        retType: 10
       }
     },
     {
@@ -346,11 +334,11 @@
       kind: "Func",
       typeArgs: [
         1,
-        11
+        10
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 17
+        retType: 16
       }
     }
   ],
@@ -466,14 +454,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 35,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 113,
+        line: 121,
         column: 2,
         ignore: false
       },
@@ -481,7 +469,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 35,
         column: 14,
         ignore: false
       },
@@ -499,20 +487,12 @@
               expr: 3
             },
             {
-              name: "atomicservice",
+              name: "stagemodelonly",
               expr: 4
             },
             {
-              name: "crossplatform",
-              expr: 5
-            },
-            {
-              name: "stagemodelonly",
-              expr: 6
-            },
-            {
               name: "syscap",
-              expr: 7
+              expr: 5
             }
           ]
         }
@@ -522,16 +502,16 @@
       exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResultE",
       mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC",
       hash: {
-        instVar: 3893028482419474548,
+        instVar: 5480041030510238968,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 9879271093696820533
+        bodyHash: 1550488866834949078
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          12
+          11
         ],
         body: [
           4,
@@ -548,14 +528,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 46,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 46,
         column: 42,
         ignore: false
       },
@@ -563,7 +543,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 46,
         column: 16,
         ignore: false
       },
@@ -578,23 +558,15 @@
           args: [
             {
               name: "",
-              expr: 8
-            },
-            {
-              name: "atomicservice",
-              expr: 9
-            },
-            {
-              name: "crossplatform",
-              expr: 10
+              expr: 6
             },
             {
               name: "stagemodelonly",
-              expr: 11
+              expr: 7
             },
             {
               name: "syscap",
-              expr: 12
+              expr: 8
             }
           ]
         }
@@ -608,7 +580,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 9879271093696820533
+        bodyHash: 2018656483626772811
       },
       info_type: "VarInfo",
       info: {
@@ -621,14 +593,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 49,
+        line: 59,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 49,
+        line: 59,
         column: 41,
         ignore: false
       },
@@ -636,7 +608,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 49,
+        line: 59,
         column: 16,
         ignore: false
       },
@@ -651,23 +623,15 @@
           args: [
             {
               name: "",
-              expr: 13
-            },
-            {
-              name: "atomicservice",
-              expr: 14
-            },
-            {
-              name: "crossplatform",
-              expr: 15
+              expr: 9
             },
             {
               name: "stagemodelonly",
-              expr: 16
+              expr: 10
             },
             {
               name: "syscap",
-              expr: 17
+              expr: 11
             }
           ]
         }
@@ -681,7 +645,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 9879271093696820533
+        bodyHash: 2018656483626772811
       },
       info_type: "VarInfo",
       info: {
@@ -694,22 +658,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 72,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 57,
-        column: 55,
+        line: 72,
+        column: 50,
         ignore: false
       },
       identifier: "dialogShownResults",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 72,
         column: 16,
         ignore: false
       },
@@ -724,19 +688,15 @@
           args: [
             {
               name: "",
-              expr: 18
-            },
-            {
-              name: "atomicservice",
-              expr: 19
+              expr: 12
             },
             {
               name: "stagemodelonly",
-              expr: 20
+              expr: 13
             },
             {
               name: "syscap",
-              expr: 21
+              expr: 14
             }
           ]
         }
@@ -744,13 +704,13 @@
       type: 6,
       mangledName: "",
       exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult18dialogShownResultsK_E",
-      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC18dialogShownResultsV$$O1_5Array<b>",
+      mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC18dialogShownResultsV$$",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 5920447280866511034
+        bodyHash: 4141839595769868870
       },
       info_type: "VarInfo",
       info: {
@@ -767,14 +727,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 66,
+        line: 74,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 72,
+        line: 80,
         column: 6,
         ignore: false
       },
@@ -782,52 +742,27 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 66,
-        column: 12,
+        line: 74,
+        column: 15,
         ignore: false
       },
       attributes: [
-        144678140445197344,
+        144678140445200416,
         0
       ],
       annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 22
-            },
-            {
-              name: "atomicservice",
-              expr: 23
-            },
-            {
-              name: "crossplatform",
-              expr: 24
-            },
-            {
-              name: "stagemodelonly",
-              expr: 25
-            },
-            {
-              name: "syscap",
-              expr: 26
-            }
-          ]
-        }
+
       ],
-      type: 9,
+      type: 8,
       mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult6<init>HRNat5ArrayIRNat6StringEERNatY5_IiE",
       exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult6<init>HRNat5ArrayIRNat6StringEERNatY5_IiE",
       mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC6<init>F5Array<6String>5Array<i>$$",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 4498572267580184409
+        bodyHash: 6406094480358519644
       },
       info_type: "FuncInfo",
       info: {
@@ -854,14 +789,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 67,
+        line: 75,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 67,
+        line: 75,
         column: 35,
         ignore: false
       },
@@ -869,7 +804,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 67,
+        line: 75,
         column: 9,
         ignore: false
       },
@@ -901,14 +836,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 68,
+        line: 76,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 68,
+        line: 76,
         column: 34,
         ignore: false
       },
@@ -916,7 +851,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 68,
+        line: 76,
         column: 9,
         ignore: false
       },
@@ -952,14 +887,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 82,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 112,
+        line: 120,
         column: 6,
         ignore: false
       },
@@ -967,27 +902,27 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 74,
-        column: 17,
+        line: 82,
+        column: 27,
         ignore: false
       },
       attributes: [
-        144678138297729568,
+        144678138297717280,
         0
       ],
       annotations: [
 
       ],
-      type: 10,
+      type: 9,
       mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultE",
       exportId: "_CN39ohos.security.permission_request_result23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultE",
       mangledBeforeSema: "39ohos.security.permission_request_result23PermissionRequestResultC28fromCPermissionRequestResultF24CPermissionRequestResult$$23PermissionRequestResult",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 520285295869893810,
+        sig: 2687969717096398320,
         srcUse: 8035971499611947038,
-        bodyHash: 15878252429138090497
+        bodyHash: 10711071048424217718
       },
       info_type: "FuncInfo",
       info: {
@@ -1017,14 +952,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 116,
+        line: 124,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 122,
+        line: 130,
         column: 2,
         ignore: false
       },
@@ -1032,25 +967,25 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 116,
-        column: 8,
+        line: 124,
+        column: 18,
         ignore: false
       },
       attributes: [
-        144686934122315824,
+        144686934122303536,
         0
       ],
       annotations: [
 
       ],
-      type: 11,
+      type: 10,
       mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResultE",
       exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResultE",
       mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS",
       hash: {
         instVar: 15568607740374442259,
         virt: 0,
-        sig: 520285295869893810,
+        sig: 2687969717096398320,
         srcUse: 0,
         bodyHash: 10474287441897005386
       },
@@ -1073,23 +1008,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 74,
-        column: 46,
+        line: 82,
+        column: 56,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 74,
-        column: 76,
+        line: 82,
+        column: 86,
         ignore: false
       },
       identifier: "cRet",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 74,
-        column: 46,
+        line: 82,
+        column: 56,
         ignore: false
       },
       attributes: [
@@ -1099,7 +1034,7 @@
       annotations: [
 
       ],
-      type: 11,
+      type: 10,
       mangledName: "_CN39ohos.security.permission_request_result23PermissionRequestResult28fromCPermissionRequestResultHRNY_24CPermissionRequestResultEE4cRetE",
       exportId: "",
       mangledBeforeSema: "",
@@ -1120,14 +1055,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 118,
+        line: 126,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 118,
+        line: 126,
         column: 36,
         ignore: false
       },
@@ -1135,7 +1070,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 118,
+        line: 126,
         column: 13,
         ignore: false
       },
@@ -1146,7 +1081,7 @@
       annotations: [
 
       ],
-      type: 13,
+      type: 12,
       mangledName: "",
       exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult11permissionsK_E",
       mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS11permissions$$10CArrString",
@@ -1168,14 +1103,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 127,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 127,
         column: 33,
         ignore: false
       },
@@ -1183,7 +1118,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 127,
         column: 13,
         ignore: false
       },
@@ -1194,7 +1129,7 @@
       annotations: [
 
       ],
-      type: 14,
+      type: 13,
       mangledName: "",
       exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult11authResultsK_E",
       mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS11authResults$$7CArrI32",
@@ -1216,14 +1151,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 120,
+        line: 128,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 120,
+        line: 128,
         column: 41,
         ignore: false
       },
@@ -1231,7 +1166,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 120,
+        line: 128,
         column: 13,
         ignore: false
       },
@@ -1242,7 +1177,7 @@
       annotations: [
 
       ],
-      type: 15,
+      type: 14,
       mangledName: "",
       exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult18dialogShownResultsK_E",
       mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS18dialogShownResults$$8CArrBool",
@@ -1268,14 +1203,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 117,
+        line: 125,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 121,
+        line: 129,
         column: 9,
         ignore: false
       },
@@ -1283,7 +1218,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 117,
+        line: 125,
         column: 5,
         ignore: false
       },
@@ -1294,7 +1229,7 @@
       annotations: [
 
       ],
-      type: 16,
+      type: 15,
       mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult6<init>HRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolE",
       exportId: "_CN39ohos.security.permission_request_result24CPermissionRequestResult6<init>HRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolE",
       mangledBeforeSema: "39ohos.security.permission_request_result24CPermissionRequestResultS24CPermissionRequestResultY10CArrString!L11permissions7CArrI32!L11authResults8CArrBool!L18dialogShownResults",
@@ -1322,7 +1257,7 @@
               ]
             }
           ],
-          retType: 11
+          retType: 10
         }
       }
     },
@@ -1332,14 +1267,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 118,
+        line: 126,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 118,
+        line: 126,
         column: 36,
         ignore: false
       },
@@ -1347,7 +1282,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 118,
+        line: 126,
         column: 13,
         ignore: false
       },
@@ -1358,7 +1293,7 @@
       annotations: [
 
       ],
-      type: 13,
+      type: 12,
       mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE11permissionsE",
       exportId: "",
       mangledBeforeSema: "",
@@ -1380,14 +1315,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 127,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 127,
         column: 33,
         ignore: false
       },
@@ -1395,7 +1330,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 127,
         column: 13,
         ignore: false
       },
@@ -1406,7 +1341,7 @@
       annotations: [
 
       ],
-      type: 14,
+      type: 13,
       mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE11authResultsE",
       exportId: "",
       mangledBeforeSema: "",
@@ -1428,14 +1363,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 120,
+        line: 128,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 120,
+        line: 128,
         column: 41,
         ignore: false
       },
@@ -1443,7 +1378,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 120,
+        line: 128,
         column: 13,
         ignore: false
       },
@@ -1454,7 +1389,7 @@
       annotations: [
 
       ],
-      type: 15,
+      type: 14,
       mangledName: "_CN39ohos.security.permission_request_result24CPermissionRequestResult4initHRN8ohos.ffi10CArrStringERNY4_7CArrI32ERNY4_8CArrBoolEE18dialogShownResultsE",
       exportId: "",
       mangledBeforeSema: "",
@@ -1481,14 +1416,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 125,
+        line: 133,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 130,
+        line: 138,
         column: 2,
         ignore: false
       },
@@ -1496,25 +1431,25 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 125,
-        column: 8,
+        line: 133,
+        column: 18,
         ignore: false
       },
       attributes: [
-        144686934122315824,
+        144686934122303536,
         0
       ],
       annotations: [
 
       ],
-      type: 17,
+      type: 16,
       mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResultE",
       exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResultE",
       mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS",
       hash: {
-        instVar: 8676581028210127916,
+        instVar: 12435920730572907932,
         virt: 0,
-        sig: 520285295869893810,
+        sig: 2687969717096398320,
         srcUse: 0,
         bodyHash: 10474287441897005386
       },
@@ -1536,27 +1471,27 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 127,
+        line: 135,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 127,
-        column: 24,
+        line: 135,
+        column: 34,
         ignore: false
       },
       identifier: "code",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 127,
-        column: 13,
+        line: 135,
+        column: 23,
         ignore: false
       },
       attributes: [
-        144678155242717280,
+        144678155242704992,
         0
       ],
       annotations: [
@@ -1584,33 +1519,33 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 128,
+        line: 136,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 128,
-        column: 43,
+        line: 136,
+        column: 53,
         ignore: false
       },
       identifier: "data",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 128,
-        column: 13,
+        line: 136,
+        column: 23,
         ignore: false
       },
       attributes: [
-        144678155242717280,
+        144678155242704992,
         0
       ],
       annotations: [
 
       ],
-      type: 11,
+      type: 10,
       mangledName: "",
       exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult4dataK_E",
       mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS4data$$24CPermissionRequestResult",
@@ -1636,14 +1571,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 126,
+        line: 134,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 129,
+        line: 137,
         column: 9,
         ignore: false
       },
@@ -1651,7 +1586,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 126,
+        line: 134,
         column: 5,
         ignore: false
       },
@@ -1662,10 +1597,10 @@
       annotations: [
 
       ],
-      type: 18,
+      type: 17,
       mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult6<init>HiRNY_24CPermissionRequestResultE",
       exportId: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult6<init>HiRNY_24CPermissionRequestResultE",
-      mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS31RetDataCPermissionRequestResultYi!L4code24CPermissionRequestResult!L4data",
+      mangledBeforeSema: "39ohos.security.permission_request_result31RetDataCPermissionRequestResultS31RetDataCPermissionRequestResultYi!RL4code24CPermissionRequestResult!RL4data",
       hash: {
         instVar: 0,
         virt: 0,
@@ -1688,7 +1623,7 @@
               ]
             }
           ],
-          retType: 17
+          retType: 16
         }
       }
     },
@@ -1698,23 +1633,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 127,
+        line: 135,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 127,
-        column: 24,
+        line: 135,
+        column: 34,
         ignore: false
       },
       identifier: "code",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 127,
-        column: 13,
+        line: 135,
+        column: 23,
         ignore: false
       },
       attributes: [
@@ -1746,23 +1681,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 128,
+        line: 136,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 128,
-        column: 43,
+        line: 136,
+        column: 53,
         ignore: false
       },
       identifier: "data",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 128,
-        column: 13,
+        line: 136,
+        column: 23,
         ignore: false
       },
       attributes: [
@@ -1772,7 +1707,7 @@
       annotations: [
 
       ],
-      type: 11,
+      type: 10,
       mangledName: "_CN39ohos.security.permission_request_result31RetDataCPermissionRequestResult4initHiRNY_24CPermissionRequestResultEE4dataE",
       exportId: "",
       mangledBeforeSema: "",
@@ -1839,14 +1774,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 31,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 31,
         column: 7,
         ignore: false
       },
@@ -1860,58 +1795,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
-        column: 20,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 27,
-        column: 24,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 28,
-        column: 20,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 28,
-        column: 24,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 29,
+        line: 32,
         column: 21,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 32,
         column: 25,
         ignore: false
       },
@@ -1926,14 +1817,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 33,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 33,
         column: 52,
         ignore: false
       },
@@ -1948,108 +1839,20 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 42,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 42,
         column: 11,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
         strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 35,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 35,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 36,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 36,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 37,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 37,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 38,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 38,
-        column: 56,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.Security.AccessToken",
-        constKind: "String"
       }
     },
     {
@@ -2058,78 +1861,13 @@
         file: 1,
         pkgId: 0,
         line: 43,
-        column: 9,
+        column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 43,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 44,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 44,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 45,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 46,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 46,
         column: 29,
         ignore: false
       },
@@ -2144,14 +1882,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 47,
+        line: 44,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 47,
+        line: 44,
         column: 56,
         ignore: false
       },
@@ -2166,14 +1904,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 55,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 55,
         column: 11,
         ignore: false
       },
@@ -2187,36 +1925,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 53,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 53,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 54,
+        line: 56,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 29,
         ignore: false
       },
@@ -2231,14 +1947,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 57,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 57,
         column: 56,
         ignore: false
       },
@@ -2253,14 +1969,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 60,
+        line: 68,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 60,
+        line: 68,
         column: 11,
         ignore: false
       },
@@ -2274,58 +1990,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 61,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 61,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 62,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 62,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 63,
+        line: 69,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 63,
+        line: 69,
         column: 29,
         ignore: false
       },
@@ -2340,14 +2012,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 64,
+        line: 70,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 64,
+        line: 70,
         column: 56,
         ignore: false
       },

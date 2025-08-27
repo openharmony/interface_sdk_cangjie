@@ -1,0 +1,7576 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.multimedia.media",
+  pkgDepInfo: "{\"package\":\"ohos.multimedia.media\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"avimage_generator.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":33}},{\"file\":\"media_common.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":33}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"avimage_generator.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"media_common.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"media_common.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":31}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"avimage_generator.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}},{\"file\":\"media_common.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]},{\"package\":\"ohos.multimedia.image\",\"isStd\":false,\"imports\":[{\"file\":\"avimage_generator.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":38}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"media_common.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":24}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"media_common.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":27}}]}]}",
+  imports: [
+    "ohos.multimedia.image",
+    "ohos.ffi",
+    "ohos.hilog",
+    "std.collection",
+    "std.core",
+    "ohos.multimedia.media"
+  ],
+  allFiles: [
+    "ohos.multimedia.media/avimage_generator.cj",
+    "ohos.multimedia.media/media_common.cj",
+    "ohos.multimedia.media/media_ffi.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 33,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 38,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "multimedia",
+            "image"
+          ],
+          identifier: "PixelMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 31,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "hilog"
+          ],
+          identifier: "HilogChannel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 33,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 23,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "deriving"
+          ],
+          identifier: "Derive",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 24,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 24,
+            column: 24,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2,
+        isC: true
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        7
+      ]
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 6
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        4,
+        2,
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 13
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 21
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 26
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        21,
+        22
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 31
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 32
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN21ohos.multimedia.image8PixelMapE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi14RemoteDataLiteE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN10ohos.hilog12HilogChannelE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        2,
+        27
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 27
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        27,
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        4,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 22
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CNat8ToStringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 27
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        21
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        21
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 41
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        4,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        22
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 27,
+        ignore: false
+      },
+      identifier: "LOG_CORE",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media8LOG_COREE",
+      mangledBeforeSema: "21ohos.multimedia.media8LOG_COREV$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 14538227123997330265
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 44,
+        ignore: false
+      },
+      identifier: "LOG_DOMAIN_PLAYER",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media17LOG_DOMAIN_PLAYERE",
+      mangledBeforeSema: "21ohos.multimedia.media17LOG_DOMAIN_PLAYERV$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 376436873483857960
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 2
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 42,
+        ignore: false
+      },
+      identifier: "MEDIA_MEMORY_ERROR",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media18MEDIA_MEMORY_ERRORE",
+      mangledBeforeSema: "21ohos.multimedia.media18MEDIA_MEMORY_ERRORV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 18113213518960796428
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 3
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 44,
+        ignore: false
+      },
+      identifier: "FfiCreateAVImageGenerator",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "FfiCreateAVImageGenerator",
+      exportId: "FfiCreateAVImageGenerator",
+      mangledBeforeSema: "21ohos.multimedia.media25FfiCreateAVImageGeneratorF$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 88,
+        ignore: false
+      },
+      identifier: "FfiAVImageGeneratorGetFdSrc",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "FfiAVImageGeneratorGetFdSrc",
+      exportId: "FfiAVImageGeneratorGetFdSrc",
+      mangledBeforeSema: "21ohos.multimedia.media27FfiAVImageGeneratorGetFdSrcFl8CPointer<17CAVFileDescriptor>$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9459658174866701686
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                7,
+                8
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 19,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CAVFileDescriptor",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 19,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144686934122303536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptorE",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptorE",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS",
+      hash: {
+        instVar: 6431468049007249370,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 4300598774459805235
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          77,
+          78,
+          79,
+          80,
+          82,
+          86
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 47,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media27FfiAVImageGeneratorGetFdSrcHlPRNY_17CAVFileDescriptorEE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 80,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN21ohos.multimedia.media27FfiAVImageGeneratorGetFdSrcHlPRNY_17CAVFileDescriptorEE2fdIY3_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 78,
+        ignore: false
+      },
+      identifier: "FfiAVImageGeneratorSetFdSrc",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiAVImageGeneratorSetFdSrc",
+      exportId: "FfiAVImageGeneratorSetFdSrc",
+      mangledBeforeSema: "21ohos.multimedia.media27FfiAVImageGeneratorSetFdSrcFl17CAVFileDescriptor$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9459658174866701686
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                10,
+                11
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 47,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media27FfiAVImageGeneratorSetFdSrcHlRNY_17CAVFileDescriptorEE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 70,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN21ohos.multimedia.media27FfiAVImageGeneratorSetFdSrcHlRNY_17CAVFileDescriptorEE2fdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 101,
+        ignore: false
+      },
+      identifier: "FfiFetchFrameByTime",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FfiFetchFrameByTime",
+      exportId: "FfiFetchFrameByTime",
+      mangledBeforeSema: "21ohos.multimedia.media19FfiFetchFrameByTimeFlli15CPixelMapParams$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 4151013173389934342
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14,
+                15,
+                16,
+                17
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 40,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 52,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CPixelMapParams",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 40,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144686934122303536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN21ohos.multimedia.media15CPixelMapParamsE",
+      exportId: "_CN21ohos.multimedia.media15CPixelMapParamsE",
+      mangledBeforeSema: "21ohos.multimedia.media15CPixelMapParamsS",
+      hash: {
+        instVar: 1690226706828518879,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          87,
+          88,
+          89,
+          91
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 39,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 30,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media19FfiFetchFrameByTimeHlliRNY_15CPixelMapParamsEE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 54,
+        ignore: false
+      },
+      identifier: "timeUs",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media19FfiFetchFrameByTimeHlliRNY_15CPixelMapParamsEE6timeUsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 69,
+        ignore: false
+      },
+      identifier: "option",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media19FfiFetchFrameByTimeHlliRNY_15CPixelMapParamsEE6optionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 71,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 93,
+        ignore: false
+      },
+      identifier: "param",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 71,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN21ohos.multimedia.media19FfiFetchFrameByTimeHlliRNY_15CPixelMapParamsEE5paramE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 54,
+        ignore: false
+      },
+      identifier: "FfiAVImageGeneratorRelease",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiAVImageGeneratorRelease",
+      exportId: "FfiAVImageGeneratorRelease",
+      mangledBeforeSema: "21ohos.multimedia.media26FfiAVImageGeneratorReleaseFl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 46,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media26FfiAVImageGeneratorReleaseHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 2,
+        ignore: false
+      },
+      identifier: "createAVImageGenerator",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 12,
+      mangledName: "_CN21ohos.multimedia.media22createAVImageGeneratorHv",
+      exportId: "_CN21ohos.multimedia.media22createAVImageGeneratorHv",
+      mangledBeforeSema: "21ohos.multimedia.media22createAVImageGeneratorF$$16AVImageGenerator",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6821088045804668631
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 2,
+        ignore: false
+      },
+      identifier: "AVImageGenerator",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGeneratorE",
+      exportId: "_CN21ohos.multimedia.media16AVImageGeneratorE",
+      mangledBeforeSema: "21ohos.multimedia.media16AVImageGeneratorC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14226628559908992850,
+        srcUse: 0,
+        bodyHash: 13315905923389749601
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          24
+        ],
+        body: [
+          22,
+          24,
+          25,
+          30,
+          36
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator6<init>Hl",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator6<init>Hl",
+      mangledBeforeSema: "21ohos.multimedia.media16AVImageGeneratorC6<init>Fl$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 5009632847671511581
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                23
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 19,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator4initHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 6,
+        ignore: false
+      },
+      identifier: "~init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678146887663648,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator5~initHv",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator5~initHv",
+      mangledBeforeSema: "21ohos.multimedia.media16AVImageGeneratorC5~initF$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12844935004486685488
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fdSrc",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        144115188352680992,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 17,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator5fdSrcE",
+      mangledBeforeSema: "21ohos.multimedia.media16AVImageGeneratorC5fdSrcP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 1063643857899411029,
+        bodyHash: 14854183482775140118
+      },
+      info_type: "PropInfo",
+      info: {
+        isMutable: true,
+        setters: [
+          27
+        ],
+        getters: [
+          29
+        ]
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 80,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 137,
+        column: 2,
+        ignore: false
+      },
+      identifier: "AVFileDescriptor",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 80,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 17,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptorE",
+      exportId: "_CN21ohos.multimedia.media16AVFileDescriptorE",
+      mangledBeforeSema: "21ohos.multimedia.media16AVFileDescriptorC",
+      hash: {
+        instVar: 7359635795324283243,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3398440298789434496
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          33
+        ],
+        body: [
+          45,
+          46,
+          47,
+          48
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$fdSrcset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator5fdSrcpsHCNY_16AVFileDescriptorE",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator5fdSrcpsHCNY_16AVFileDescriptorE",
+      mangledBeforeSema: "21ohos.multimedia.media5fdSrcP16AVImageGeneratorC3setF$$16AVFileDescriptor",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4082521304988130916
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 18,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator9$fdSrcsetHCNY_16AVFileDescriptorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$fdSrcget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator5fdSrcpgHv",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator5fdSrcpgHv",
+      mangledBeforeSema: "21ohos.multimedia.media5fdSrcP16AVImageGeneratorC3getF$$16AVFileDescriptor",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 7999662809975271767
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fetchFrameByTime",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator16fetchFrameByTimeHlNNY_19AVImageQueryOptionsECNY_14PixelMapParamsE",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator16fetchFrameByTimeHlNNY_19AVImageQueryOptionsECNY_14PixelMapParamsE",
+      mangledBeforeSema: "21ohos.multimedia.media16AVImageGeneratorC16fetchFrameByTimeFl19AVImageQueryOptions14PixelMapParams$$8PixelMap",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14805468849072811693
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                33,
+                34,
+                35
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 200,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 246,
+        column: 14,
+        ignore: false
+      },
+      identifier: "AVImageQueryOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 200,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 50
+            },
+            {
+              name: "stagemodelonly",
+              expr: 51
+            },
+            {
+              name: "syscap",
+              expr: 52
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "_CN21ohos.multimedia.media19AVImageQueryOptionsE",
+      exportId: "_CN21ohos.multimedia.media19AVImageQueryOptionsE",
+      mangledBeforeSema: "21ohos.multimedia.media19AVImageQueryOptionsU",
+      hash: {
+        instVar: 6797332564743934329,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11094258399876205009
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 2,
+          pkgId: 0,
+          line: 195,
+          column: 1291,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 149,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 188,
+        column: 2,
+        ignore: false
+      },
+      identifier: "PixelMapParams",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 149,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 36
+            },
+            {
+              name: "stagemodelonly",
+              expr: 37
+            },
+            {
+              name: "syscap",
+              expr: 38
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "_CN21ohos.multimedia.media14PixelMapParamsE",
+      exportId: "_CN21ohos.multimedia.media14PixelMapParamsE",
+      mangledBeforeSema: "21ohos.multimedia.media14PixelMapParamsC",
+      hash: {
+        instVar: 14695366837130031715,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14854183482775140118
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          33
+        ],
+        body: [
+          57,
+          58,
+          59
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 47,
+        ignore: false
+      },
+      identifier: "timeUs",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator16fetchFrameByTimeHlNNY_19AVImageQueryOptionsECNY_14PixelMapParamsEE6timeUsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 77,
+        ignore: false
+      },
+      identifier: "options",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator16fetchFrameByTimeHlNNY_19AVImageQueryOptionsECNY_14PixelMapParamsEE7optionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 100,
+        ignore: false
+      },
+      identifier: "param",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator16fetchFrameByTimeHlNNY_19AVImageQueryOptionsECNY_14PixelMapParamsEE5paramE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 146,
+        column: 6,
+        ignore: false
+      },
+      identifier: "release",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "_CN21ohos.multimedia.media16AVImageGenerator7releaseHv",
+      exportId: "_CN21ohos.multimedia.media16AVImageGenerator7releaseHv",
+      mangledBeforeSema: "21ohos.multimedia.media16AVImageGeneratorC7releaseF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14676933225369275298
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 77,
+        ignore: false
+      },
+      identifier: "AV_PLAYER_LOG",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN21ohos.multimedia.media13AV_PLAYER_LOGE",
+      exportId: "_CN21ohos.multimedia.media13AV_PLAYER_LOGE",
+      mangledBeforeSema: "21ohos.multimedia.media13AV_PLAYER_LOGV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 2348785612130238255
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 51,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ERROR_CODE_MAP",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 30,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678138029293872,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN21ohos.multimedia.media14ERROR_CODE_MAPE",
+      exportId: "_CN21ohos.multimedia.media14ERROR_CODE_MAPE",
+      mangledBeforeSema: "21ohos.multimedia.media14ERROR_CODE_MAPV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 11618128341799038436
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 61,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getErrorMsg",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN21ohos.multimedia.media11getErrorMsgHi",
+      exportId: "_CN21ohos.multimedia.media11getErrorMsgHi",
+      mangledBeforeSema: "21ohos.multimedia.media11getErrorMsgFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 7548522136318199567
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                40
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 29,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media11getErrorMsgHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 67,
+        column: 2,
+        ignore: false
+      },
+      identifier: "throwIfNotSuccess",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN21ohos.multimedia.media17throwIfNotSuccessHiRNat6StringEY2_",
+      exportId: "_CN21ohos.multimedia.media17throwIfNotSuccessHiRNat6StringEY2_",
+      mangledBeforeSema: "21ohos.multimedia.media17throwIfNotSuccessFi6String6String$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12781316891649951200
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                42,
+                43,
+                44
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 35,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media17throwIfNotSuccessHiRNat6StringEY2_E4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 54,
+        ignore: false
+      },
+      identifier: "className",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN21ohos.multimedia.media17throwIfNotSuccessHiRNat6StringEY2_E9classNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 56,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 72,
+        ignore: false
+      },
+      identifier: "funcName",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 56,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN21ohos.multimedia.media17throwIfNotSuccessHiRNat6StringEY2_E8funcNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 92,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 92,
+        column: 25,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 92,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media16AVFileDescriptor2fdK_E",
+      mangledBeforeSema: "21ohos.multimedia.media16AVFileDescriptorC2fdV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 3398440298789434496
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 29,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 25
+            },
+            {
+              name: "stagemodelonly",
+              expr: 26
+            },
+            {
+              name: "syscap",
+              expr: 27
+            }
+          ]
+        }
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media16AVFileDescriptor6offsetK_E",
+      mangledBeforeSema: "21ohos.multimedia.media16AVFileDescriptorC6offsetV$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 3398440298789434496
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 29,
+        ignore: false
+      },
+      identifier: "length",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 28
+            },
+            {
+              name: "stagemodelonly",
+              expr: 29
+            },
+            {
+              name: "syscap",
+              expr: 30
+            }
+          ]
+        }
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media16AVFileDescriptor6lengthK_E",
+      mangledBeforeSema: "21ohos.multimedia.media16AVFileDescriptorC6lengthV$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 3398440298789434496
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 128,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 136,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 128,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 31
+            },
+            {
+              name: "stagemodelonly",
+              expr: 32
+            },
+            {
+              name: "syscap",
+              expr: 33
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor6<init>Hill",
+      exportId: "_CN21ohos.multimedia.media16AVFileDescriptor6<init>Hill",
+      mangledBeforeSema: "21ohos.multimedia.media16AVFileDescriptorC6<init>Fil!6offset=l!6length=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15119258099846847897
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                49,
+                50,
+                53
+              ],
+              desugars: [
+                0,
+                51,
+                54
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 18,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor4initHillE2fdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 27,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor4initHillE6offsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 34
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 26,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 27,
+        ignore: false
+      },
+      identifier: "offset.1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CPI21ohos.multimedia.media16AVFileDescriptor4initHillE6offsetHi",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                52
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 18,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor4initHillE8offset.1HiE2fdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 28,
+        ignore: false
+      },
+      identifier: "length",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor4initHillE6lengthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 35
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 26,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 28,
+        ignore: false
+      },
+      identifier: "length.2",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CPI21ohos.multimedia.media16AVFileDescriptor4initHillE6lengthHil",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55,
+                56
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 18,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor4initHillE8length.2HilE2fdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 27,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media16AVFileDescriptor4initHillE8length.2HilE6offsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 161,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 161,
+        column: 28,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 161,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 39
+            },
+            {
+              name: "stagemodelonly",
+              expr: 40
+            },
+            {
+              name: "syscap",
+              expr: 41
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media14PixelMapParams5widthK_E",
+      mangledBeforeSema: "21ohos.multimedia.media14PixelMapParamsC5widthV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 14854183482775140118
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 174,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 174,
+        column: 29,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 174,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 42
+            },
+            {
+              name: "stagemodelonly",
+              expr: 43
+            },
+            {
+              name: "syscap",
+              expr: 44
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media14PixelMapParams6heightK_E",
+      mangledBeforeSema: "21ohos.multimedia.media14PixelMapParamsC6heightV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 14854183482775140118
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 187,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 45
+            },
+            {
+              name: "stagemodelonly",
+              expr: 46
+            },
+            {
+              name: "syscap",
+              expr: 47
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "_CN21ohos.multimedia.media14PixelMapParams6<init>Hii",
+      exportId: "_CN21ohos.multimedia.media14PixelMapParams6<init>Hii",
+      mangledBeforeSema: "21ohos.multimedia.media14PixelMapParamsC6<init>Fi!5width=i!6height=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5519918285204064361
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                60,
+                62
+              ],
+              desugars: [
+                61,
+                63
+              ]
+            }
+          ],
+          retType: 22
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 35,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media14PixelMapParams4initHiiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 48
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 33,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 35,
+        ignore: false
+      },
+      identifier: "width.0",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CPI21ohos.multimedia.media14PixelMapParams4initHiiE5widthHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 56,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media14PixelMapParams4initHiiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 49
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 54,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 56,
+        ignore: false
+      },
+      identifier: "height.1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CPI21ohos.multimedia.media14PixelMapParams4initHiiE6heightHi",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 35,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media14PixelMapParams4initHiiE8height.1HiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 207,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 207,
+        column: 37,
+        ignore: false
+      },
+      identifier: "AvImageQueryNextSync",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 207,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 53
+            },
+            {
+              name: "stagemodelonly",
+              expr: 54
+            },
+            {
+              name: "syscap",
+              expr: 55
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media19AVImageQueryOptions20AvImageQueryNextSyncKE",
+      mangledBeforeSema: "21ohos.multimedia.media19AVImageQueryOptionsU20AvImageQueryNextSyncV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 11094258399876205009
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 216,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 216,
+        column: 41,
+        ignore: false
+      },
+      identifier: "AvImageQueryPreviousSync",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 216,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 56
+            },
+            {
+              name: "stagemodelonly",
+              expr: 57
+            },
+            {
+              name: "syscap",
+              expr: 58
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media19AVImageQueryOptions24AvImageQueryPreviousSyncKE",
+      mangledBeforeSema: "21ohos.multimedia.media19AVImageQueryOptionsU24AvImageQueryPreviousSyncV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 11094258399876205009
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 225,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 225,
+        column: 40,
+        ignore: false
+      },
+      identifier: "AvImageQueryClosestSync",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 225,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 59
+            },
+            {
+              name: "stagemodelonly",
+              expr: 60
+            },
+            {
+              name: "syscap",
+              expr: 61
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media19AVImageQueryOptions23AvImageQueryClosestSyncKE",
+      mangledBeforeSema: "21ohos.multimedia.media19AVImageQueryOptionsU23AvImageQueryClosestSyncV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 11094258399876205009
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 234,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 234,
+        column: 36,
+        ignore: false
+      },
+      identifier: "AvImageQueryClosest",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 234,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 62
+            },
+            {
+              name: "stagemodelonly",
+              expr: 63
+            },
+            {
+              name: "syscap",
+              expr: 64
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media19AVImageQueryOptions19AvImageQueryClosestKE",
+      mangledBeforeSema: "21ohos.multimedia.media19AVImageQueryOptionsU19AvImageQueryClosestV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 11094258399876205009
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 237,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 245,
+        column: 18,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 237,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        144678413041418272,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CN21ohos.multimedia.media19AVImageQueryOptions8getValueHv",
+      exportId: "_CN21ohos.multimedia.media19AVImageQueryOptions8getValueHv",
+      mangledBeforeSema: "21ohos.multimedia.media19AVImageQueryOptionsU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10998961925166091392
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 247,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 264,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 247,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsEUmedia_common$K_E",
+      mangledBeforeSema: "19AVImageQueryOptions<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          37
+        ],
+        body: [
+          71
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 248,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 263,
+        column: 18,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 248,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsE8toStringHv",
+      exportId: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsE8toStringHv",
+      mangledBeforeSema: "21ohos.multimedia.media7Extend!19AVImageQueryOptions<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14360187492883150271
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 265,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 278,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 265,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsEUmedia_common$K0_E",
+      mangledBeforeSema: "19AVImageQueryOptions<:9Equatable<19AVImageQueryOptions>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 17214285859001692217
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          39
+        ],
+        body: [
+          73,
+          75
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 266,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 274,
+        column: 18,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 266,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsEeqHY1_",
+      exportId: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsEeqHY1_",
+      mangledBeforeSema: "21ohos.multimedia.media7Extend!19AVImageQueryOptions<:9Equatable<19AVImageQueryOptions>X2==F19AVImageQueryOptions$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4794103022757198081
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                74
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 41
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 266,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 266,
+        column: 67,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 266,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 275,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 277,
+        column: 18,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 275,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsEneHY1_",
+      exportId: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsEneHY1_",
+      mangledBeforeSema: "21ohos.multimedia.media7Extend!19AVImageQueryOptions<:9Equatable<19AVImageQueryOptions>X2!=F19AVImageQueryOptions$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2259102424981791097
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                76
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 41
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 275,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 275,
+        column: 67,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 1,
+        pkgId: 6,
+        line: 275,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN21ohos.multimedia.mediaXNNY_19AVImageQueryOptionsE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 20,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 20,
+        column: 27,
+        ignore: false
+      },
+      identifier: "fd_",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 20,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138062833696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptor3fd_K_E",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS3fd_V$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 21,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 21,
+        column: 31,
+        ignore: false
+      },
+      identifier: "offset_",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 21,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138062833696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptor7offset_K_E",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS7offset_V$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 31,
+        ignore: false
+      },
+      identifier: "length_",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 22,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138062833696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptor7length_K_E",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS7length_V$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140210319392,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor6<init>HCNY_16AVFileDescriptorE",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptor6<init>HCNY_16AVFileDescriptorE",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS6<init>F16AVFileDescriptor$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 894360578655456247
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 52,
+        ignore: false
+      },
+      identifier: "fileDescriptor",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor4initHCNY_16AVFileDescriptorEE14fileDescriptorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140210331680,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 43,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor6<init>Hill",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptor6<init>Hill",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS6<init>Fill$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 18409024275507902634
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                83,
+                84,
+                85
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 19,
+        ignore: false
+      },
+      identifier: "fd",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor4initHillE2fdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 34,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor4initHillE6offsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 49,
+        ignore: false
+      },
+      identifier: "length",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 28,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor4initHillE6lengthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 36,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toCJObject",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 34,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        144678138062835744,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN21ohos.multimedia.media17CAVFileDescriptor10toCJObjectHv",
+      exportId: "_CN21ohos.multimedia.media17CAVFileDescriptor10toCJObjectHv",
+      mangledBeforeSema: "21ohos.multimedia.media17CAVFileDescriptorS10toCJObjectF$$16AVFileDescriptor",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 17737047451774731935
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 32,
+        ignore: false
+      },
+      identifier: "width_",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        144678138062835744,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media15CPixelMapParams6width_K_E",
+      mangledBeforeSema: "21ohos.multimedia.media15CPixelMapParamsS6width_V$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 33,
+        ignore: false
+      },
+      identifier: "height_",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 42,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        144678138062835744,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN21ohos.multimedia.media15CPixelMapParams7height_K_E",
+      mangledBeforeSema: "21ohos.multimedia.media15CPixelMapParamsS7height_V$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 46,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140210319392,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 44,
+      mangledName: "_CN21ohos.multimedia.media15CPixelMapParams6<init>HCNY_14PixelMapParamsE",
+      exportId: "_CN21ohos.multimedia.media15CPixelMapParams6<init>HCNY_14PixelMapParamsE",
+      mangledBeforeSema: "21ohos.multimedia.media15CPixelMapParamsS6<init>F14PixelMapParams$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 3422716205227764488
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                90
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 41,
+        ignore: false
+      },
+      identifier: "param",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 44,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN21ohos.multimedia.media15CPixelMapParams4initHCNY_14PixelMapParamsEE5paramE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.multimedia.media",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 51,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140210319392,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN21ohos.multimedia.media15CPixelMapParams6<init>Hii",
+      exportId: "_CN21ohos.multimedia.media15CPixelMapParams6<init>Hii",
+      mangledBeforeSema: "21ohos.multimedia.media15CPixelMapParamsS6<init>Fii$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 11859781323884160667
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                92,
+                93
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 32,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media15CPixelMapParams4initHiiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.multimedia.media",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 47,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 48,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.multimedia.media15CPixelMapParams4initHiiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 27,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "3"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 44,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0xD002B2B"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 42,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "5400101"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 65,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 65,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 69,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 69,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 69,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 76,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 76,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 78,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 78,
+        column: 53,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 88,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 88,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 89,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 89,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 90,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 101,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 101,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 102,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 102,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 103,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 103,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 114,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 114,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 116,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 124,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 124,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 125,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 125,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 126,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 126,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 130,
+        column: 27,
+        ignore: false
+      },
+      type: 4,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 131,
+        column: 28,
+        ignore: false
+      },
+      type: 4,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 145,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 145,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 146,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 146,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 147,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 147,
+        column: 65,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 157,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 157,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 158,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 158,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 159,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 159,
+        column: 69,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 170,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 170,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 171,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 171,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 172,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 172,
+        column: 69,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 180,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 180,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 181,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 181,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 182,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 182,
+        column: 69,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 35,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 184,
+        column: 56,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "-1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 196,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 196,
+        column: 14,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 197,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 197,
+        column: 32,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 198,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 198,
+        column: 72,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 203,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 203,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 204,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 204,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 205,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 205,
+        column: 77,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 212,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 212,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 213,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 213,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 214,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 214,
+        column: 77,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 221,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 221,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 222,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 222,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 223,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 223,
+        column: 77,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 230,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 230,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 231,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 231,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 6,
+        line: 232,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 6,
+        line: 232,
+        column: 77,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Multimedia.Media.AVImageGenerator",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

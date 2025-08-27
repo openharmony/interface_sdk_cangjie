@@ -6,7 +6,7 @@
     patch_num: 0
   },
   fullPkgName: "ohos.bluetooth.constant",
-  pkgDepInfo: "{\"package\":\"ohos.bluetooth.constant\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"constant.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":21}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"constant.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":22}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.bluetooth.constant\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"constant.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"constant.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":27}}]}]}",
   imports: [
     "ohos.bluetooth.constant",
     "std.core"
@@ -29,14 +29,14 @@
             file: 1,
             pkgId: 0,
             line: 18,
-            column: 22,
+            column: 27,
             ignore: false
           },
           prefixPaths: [
             "std",
             "deriving"
           ],
-          identifier: "*",
+          identifier: "Derive",
           asIdentifier: ""
         },
         {
@@ -51,14 +51,14 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 21,
+            column: 28,
             ignore: false
           },
           prefixPaths: [
             "ohos",
             "labels"
           ],
-          identifier: "*",
+          identifier: "APILevel",
           asIdentifier: ""
         },
         {
@@ -188,14 +188,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 29,
+        line: 30,
         column: 11,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 65,
+        line: 71,
         column: 13,
         ignore: false
       },
@@ -203,7 +203,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 29,
+        line: 30,
         column: 23,
         ignore: false
       },
@@ -236,7 +236,7 @@
       exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionStateE",
       mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU",
       hash: {
-        instVar: 15875579704859938130,
+        instVar: 14266346775896885229,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
@@ -258,8 +258,8 @@
         ellipsisPos: {
           file: 1,
           pkgId: 0,
-          line: 24,
-          column: 1070,
+          line: 25,
+          column: 1122,
           ignore: false
         }
       }
@@ -270,22 +270,22 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 35,
+        line: 37,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 35,
-        column: 34,
+        line: 37,
+        column: 33,
         ignore: false
       },
-      identifier: "STATE_DISCONNECTED",
+      identifier: "StateDisconnected",
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 35,
+        line: 37,
         column: 16,
         ignore: false
       },
@@ -315,8 +315,8 @@
       ],
       type: 1,
       mangledName: "",
-      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState18STATE_DISCONNECTEDKE",
-      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU18STATE_DISCONNECTEDV$$",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState17StateDisconnectedKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU17StateDisconnectedV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -334,22 +334,22 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 41,
+        line: 44,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 41,
-        column: 32,
+        line: 44,
+        column: 31,
         ignore: false
       },
-      identifier: "STATE_CONNECTING",
+      identifier: "StateConnecting",
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 41,
+        line: 44,
         column: 16,
         ignore: false
       },
@@ -379,8 +379,8 @@
       ],
       type: 1,
       mangledName: "",
-      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState16STATE_CONNECTINGKE",
-      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU16STATE_CONNECTINGV$$",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState15StateConnectingKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU15StateConnectingV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -398,22 +398,22 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 47,
+        line: 51,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 47,
-        column: 31,
+        line: 51,
+        column: 30,
         ignore: false
       },
-      identifier: "STATE_CONNECTED",
+      identifier: "StateConnected",
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 47,
+        line: 51,
         column: 16,
         ignore: false
       },
@@ -443,8 +443,8 @@
       ],
       type: 1,
       mangledName: "",
-      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState15STATE_CONNECTEDKE",
-      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU15STATE_CONNECTEDV$$",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState14StateConnectedKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU14StateConnectedV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -462,22 +462,22 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 53,
+        line: 58,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 53,
-        column: 35,
+        line: 58,
+        column: 34,
         ignore: false
       },
-      identifier: "STATE_DISCONNECTING",
+      identifier: "StateDisconnecting",
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 53,
+        line: 58,
         column: 16,
         ignore: false
       },
@@ -507,8 +507,8 @@
       ],
       type: 1,
       mangledName: "",
-      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState19STATE_DISCONNECTINGKE",
-      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU19STATE_DISCONNECTINGV$$",
+      exportId: "_CN23ohos.bluetooth.constant22ProfileConnectionState18StateDisconnectingKE",
+      mangledBeforeSema: "23ohos.bluetooth.constant22ProfileConnectionStateU18StateDisconnectingV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -530,14 +530,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 56,
+        line: 62,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 64,
+        line: 70,
         column: 17,
         ignore: false
       },
@@ -545,7 +545,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 56,
+        line: 62,
         column: 38,
         ignore: false
       },
@@ -565,7 +565,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 8035971499611947038,
-        bodyHash: 13443760016612557318
+        bodyHash: 15588683969114494140
       },
       info_type: "FuncInfo",
       info: {
@@ -590,14 +590,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 56,
+        line: 62,
         column: 44,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 56,
+        line: 62,
         column: 56,
         ignore: false
       },
@@ -605,7 +605,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 56,
+        line: 62,
         column: 44,
         ignore: false
       },
@@ -642,14 +642,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 66,
+        line: 72,
         column: 12,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 83,
+        line: 89,
         column: 13,
         ignore: false
       },
@@ -657,7 +657,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 66,
+        line: 72,
         column: 12,
         ignore: false
       },
@@ -699,14 +699,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 67,
+        line: 73,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 82,
+        line: 88,
         column: 17,
         ignore: false
       },
@@ -714,7 +714,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 67,
+        line: 73,
         column: 28,
         ignore: false
       },
@@ -734,7 +734,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16097333884197998334
+        bodyHash: 12188481663874702511
       },
       info_type: "FuncInfo",
       info: {
@@ -764,14 +764,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 84,
+        line: 90,
         column: 12,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 97,
+        line: 103,
         column: 13,
         ignore: false
       },
@@ -779,7 +779,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 84,
+        line: 90,
         column: 12,
         ignore: false
       },
@@ -822,14 +822,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 85,
+        line: 91,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 93,
+        line: 99,
         column: 17,
         ignore: false
       },
@@ -837,7 +837,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 85,
+        line: 91,
         column: 37,
         ignore: false
       },
@@ -857,7 +857,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16601938067507348918
+        bodyHash: 16484936713321557929
       },
       info_type: "FuncInfo",
       info: {
@@ -883,14 +883,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 85,
+        line: 91,
         column: 40,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 85,
+        line: 91,
         column: 69,
         ignore: false
       },
@@ -898,7 +898,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 85,
+        line: 91,
         column: 40,
         ignore: false
       },
@@ -934,14 +934,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 94,
+        line: 100,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 96,
+        line: 102,
         column: 17,
         ignore: false
       },
@@ -949,7 +949,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 94,
+        line: 100,
         column: 37,
         ignore: false
       },
@@ -969,7 +969,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 7593376240846648436
+        bodyHash: 408004944932808728
       },
       info_type: "FuncInfo",
       info: {
@@ -995,14 +995,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 94,
+        line: 100,
         column: 40,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 94,
+        line: 100,
         column: 69,
         ignore: false
       },
@@ -1010,7 +1010,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 94,
+        line: 100,
         column: 40,
         ignore: false
       },
@@ -1043,14 +1043,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 25,
+        line: 26,
         column: 11,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 25,
+        line: 26,
         column: 13,
         ignore: false
       },
@@ -1064,14 +1064,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 26,
+        line: 27,
         column: 27,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 26,
+        line: 27,
         column: 31,
         ignore: false
       },
@@ -1086,14 +1086,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 27,
+        line: 28,
         column: 19,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 27,
+        line: 28,
         column: 66,
         ignore: false
       },
@@ -1108,14 +1108,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 31,
+        line: 33,
         column: 15,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 31,
+        line: 33,
         column: 17,
         ignore: false
       },
@@ -1129,79 +1129,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 32,
-        column: 31,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 1,
-        line: 32,
-        column: 35,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 1,
-        line: 33,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 1,
-        line: 33,
-        column: 71,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.Communication.Bluetooth.Core",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 1,
-        line: 37,
-        column: 16,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 1,
-        line: 37,
-        column: 18,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 1,
-        line: 38,
+        line: 34,
         column: 32,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 38,
+        line: 34,
         column: 36,
         ignore: false
       },
@@ -1216,14 +1151,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 39,
+        line: 35,
         column: 24,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 39,
+        line: 35,
         column: 71,
         ignore: false
       },
@@ -1238,14 +1173,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 43,
+        line: 40,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 43,
+        line: 40,
         column: 18,
         ignore: false
       },
@@ -1259,14 +1194,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 44,
+        line: 41,
         column: 32,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 44,
+        line: 41,
         column: 36,
         ignore: false
       },
@@ -1281,14 +1216,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 45,
+        line: 42,
         column: 24,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 45,
+        line: 42,
         column: 71,
         ignore: false
       },
@@ -1296,6 +1231,49 @@
       info: {
         strValue: "SystemCapability.Communication.Bluetooth.Core",
         constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 48,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 48,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
       }
     },
     {
@@ -1304,13 +1282,35 @@
         file: 0,
         pkgId: 1,
         line: 49,
-        column: 16,
+        column: 24,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
         line: 49,
+        column: 71,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Communication.Bluetooth.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
         column: 18,
         ignore: false
       },
@@ -1324,14 +1324,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 50,
+        line: 55,
         column: 32,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 50,
+        line: 55,
         column: 36,
         ignore: false
       },
@@ -1346,14 +1346,14 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 51,
+        line: 56,
         column: 24,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 51,
+        line: 56,
         column: 71,
         ignore: false
       },

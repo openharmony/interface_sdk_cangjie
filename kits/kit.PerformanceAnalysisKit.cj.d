@@ -14,8 +14,8 @@
  */
 
 package kit.PerformanceAnalysisKit
-public import ohos.hi_tracemeter.*
-public import ohos.hiappevent.*
+public import ohos.hi_trace_meter.*
+public import ohos.hiviewdfx.hi_app_event.*
 public import ohos.hilog.*
 
 

@@ -24,10 +24,20 @@ public import ohos.window.Rect as WindowRect
 public import ohos.window.Orientation as WindowOrientation
 // ui component
 public import ohos.base.*
-public import ohos.component.*
-public import ohos.state_manage.*
-// font// public import ohos.font.*// measure// public import ohos.measure.*// observer// public import ohos.arkui.observer.*// prompt_action// public import ohos.prompt_action.*// router
+public import ohos.arkui.component.*
+public import ohos.arkui.state_management.*
+// font
+public import ohos.font.*
+// measure
+public import ohos.measure.*
+// prompt_action
+public import ohos.prompt_action.*
+// router
 public import ohos.router.*
-// animator// public import ohos.animator.*// resource methods
-public import ohos.ui_resource.*
+// animator
+public import ohos.animator.*
+// curves
+public import ohos.curves.*
+// component snapshot
+public import ohos.arkui.component_snapshot.*
 

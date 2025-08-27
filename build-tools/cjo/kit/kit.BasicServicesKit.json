@@ -6,10 +6,10 @@
     patch_num: 0
   },
   fullPkgName: "kit.BasicServicesKit",
-  pkgDepInfo: "{\"package\":\"kit.BasicServicesKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.battery_info\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":34}}]},{\"package\":\"ohos.common_event_manager\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":42}}]},{\"package\":\"ohos.device_info\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":33}}]},{\"package\":\"ohos.request.agent\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":35}}]},{\"package\":\"ohos.settings\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":30}}]},{\"package\":\"ohos.system_date_time\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":38}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.BasicServicesKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.battery_info\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":34}}]},{\"package\":\"ohos.common_event_manager\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":42}}]},{\"package\":\"ohos.device_info\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":33}}]},{\"package\":\"ohos.request\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":29}}]},{\"package\":\"ohos.settings\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":30}}]},{\"package\":\"ohos.system_date_time\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":38}}]}]}",
   imports: [
     "ohos.device_info",
-    "ohos.request.agent",
+    "ohos.request",
     "ohos.settings",
     "ohos.common_event_manager",
     "ohos.system_date_time",
@@ -56,13 +56,12 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 35,
+            column: 29,
             ignore: false
           },
           prefixPaths: [
             "ohos",
-            "request",
-            "agent"
+            "request"
           ],
           identifier: "*",
           asIdentifier: "",
