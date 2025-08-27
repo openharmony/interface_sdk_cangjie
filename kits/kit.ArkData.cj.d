@@ -15,10 +15,10 @@
 
 package kit.ArkData
 public import ohos.data.*
-public import ohos.data_share_predicates.*
-public import ohos.distributed_kv_store.*
-public import ohos.preferences.*
-public import ohos.relational_store.*
-public import ohos.values_bucket.*
+public import ohos.data.data_share_predicates.*
+public import ohos.data.distributed_kv_store.*
+public import ohos.data.preferences.*
+public import ohos.data.relational_store.*
+public import ohos.data.values_bucket.*
 
 

@@ -1,0 +1,3198 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.element_name",
+  pkgDepInfo: "{\"package\":\"ohos.element_name\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"element_name.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":21}}]}]}",
+  imports: [
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.element_name/element_name.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "UIntNative"
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 2
+        }
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        4,
+        4,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        4,
+        4,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10,
+        isC: true
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        3
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 23
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13,
+        13,
+        13,
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 12
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13,
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13,
+        13,
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 12
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6ObjectE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 20,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 20,
+        column: 45,
+        ignore: false
+      },
+      identifier: "ElementNameHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 20,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678138029293584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name17ElementNameHandleE",
+      mangledBeforeSema: "17ohos.element_name17ElementNameHandleT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 7405861394213088031,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 2
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ElementNameParams",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN17ohos.element_name17ElementNameParamsE",
+      exportId: "_CN17ohos.element_name17ElementNameParamsE",
+      mangledBeforeSema: "17ohos.element_name17ElementNameParamsS",
+      hash: {
+        instVar: 17194145246648400889,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 30,
+        ignore: false
+      },
+      identifier: "deviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name17ElementNameParams8deviceIdK_E",
+      mangledBeforeSema: "17ohos.element_name17ElementNameParamsS8deviceId$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 32,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name17ElementNameParams10bundleNameK_E",
+      mangledBeforeSema: "17ohos.element_name17ElementNameParamsS10bundleName$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 33,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name17ElementNameParams11abilityNameK_E",
+      mangledBeforeSema: "17ohos.element_name17ElementNameParamsS11abilityName$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 32,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name17ElementNameParams10moduleNameK_E",
+      mangledBeforeSema: "17ohos.element_name17ElementNameParamsS10moduleName$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN17ohos.element_name17ElementNameParams6<init>Hkkkk",
+      exportId: "_CN17ohos.element_name17ElementNameParams6<init>Hkkkk",
+      mangledBeforeSema: "17ohos.element_name17ElementNameParamsS17ElementNameParamsY7CString!L8deviceId7CString!L10bundleName7CString!L11abilityName7CString!L10moduleName",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                9,
+                10,
+                11
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 30,
+        ignore: false
+      },
+      identifier: "deviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name17ElementNameParams4initHkkkkE8deviceIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 32,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name17ElementNameParams4initHkkkkE10bundleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 33,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name17ElementNameParams4initHkkkkE11abilityNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 32,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name17ElementNameParams4initHkkkkE10moduleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 21,
+        ignore: false
+      },
+      identifier: "FFICJElementNameCreateWithContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FFICJElementNameCreateWithContent",
+      exportId: "FFICJElementNameCreateWithContent",
+      mangledBeforeSema: "17ohos.element_name33FFICJElementNameCreateWithContentF7CString7CString7CString7CString$$17ElementNameHandle",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9888382920327454106
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                13,
+                14,
+                15,
+                16
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 22,
+        ignore: false
+      },
+      identifier: "deviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name33FFICJElementNameCreateWithContentHkkkkE8deviceIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 24,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name33FFICJElementNameCreateWithContentHkkkkE10bundleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 25,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name33FFICJElementNameCreateWithContentHkkkkE11abilityNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 24,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN17ohos.element_name33FFICJElementNameCreateWithContentHkkkkE10moduleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 74,
+        ignore: false
+      },
+      identifier: "FFICJElementNameDelete",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FFICJElementNameDelete",
+      exportId: "FFICJElementNameDelete",
+      mangledBeforeSema: "17ohos.element_name22FFICJElementNameDeleteF17ElementNameHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11764440756486329191
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 67,
+        ignore: false
+      },
+      identifier: "elementName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN17ohos.element_name22FFICJElementNameDeleteHrE11elementNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 109,
+        ignore: false
+      },
+      identifier: "FFICJElementNameGetElementNameInfo",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FFICJElementNameGetElementNameInfo",
+      exportId: "FFICJElementNameGetElementNameInfo",
+      mangledBeforeSema: "17ohos.element_name34FFICJElementNameGetElementNameInfoF17ElementNameHandle$$8CPointer<17ElementNameParams>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11764440756486329191
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                20
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 79,
+        ignore: false
+      },
+      identifier: "elementName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN17ohos.element_name34FFICJElementNameGetElementNameInfoHrE11elementNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 96,
+        ignore: false
+      },
+      identifier: "FFICJElementNameParamsDelete",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FFICJElementNameParamsDelete",
+      exportId: "FFICJElementNameParamsDelete",
+      mangledBeforeSema: "17ohos.element_name28FFICJElementNameParamsDeleteF8CPointer<17ElementNameParams>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11880969973375878899
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 89,
+        ignore: false
+      },
+      identifier: "elementNameParams",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN17ohos.element_name28FFICJElementNameParamsDeleteHPRNY_17ElementNameParamsEE17elementNameParamsIY3_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ElementName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 12,
+      mangledName: "_CN17ohos.element_name11ElementNameE",
+      exportId: "_CN17ohos.element_name11ElementNameE",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC",
+      hash: {
+        instVar: 15997926775515765639,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14646970263757259942
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          20
+        ],
+        body: [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          41,
+          43,
+          45
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 32,
+        ignore: false
+      },
+      identifier: "deviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name11ElementName8deviceIdK_E",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC8deviceIdV$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 6761279315505198926
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 34,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name11ElementName10bundleNameK_E",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC10bundleNameV$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 6761279315505198926
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 35,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name11ElementName11abilityNameK_E",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC11abilityNameV$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 6761279315505198926
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 34,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name11ElementName10moduleNameK_E",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC10moduleNameV$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 6761279315505198926
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 35,
+        ignore: false
+      },
+      identifier: "shortName_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297714720,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "",
+      exportId: "_CN17ohos.element_name11ElementName10shortName_K_E",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC10shortName_V$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN17ohos.element_name11ElementName6<init>HRNat6StringEY3_Y3_Y3_",
+      exportId: "_CN17ohos.element_name11ElementName6<init>HRNat6StringEY3_Y3_Y3_",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC6<init>F6String6String6String!8deviceId=6String!10moduleName=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4693531930099152931
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30,
+                31,
+                32,
+                36
+              ],
+              desugars: [
+                0,
+                0,
+                33,
+                37
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 35,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E10bundleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 56,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E11abilityNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 80,
+        ignore: false
+      },
+      identifier: "deviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 58,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E8deviceIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 19
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 78,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 80,
+        ignore: false
+      },
+      identifier: "deviceId.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CPI17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E8deviceIdHY3_Y3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                34,
+                35
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 35,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E10deviceId.2HY3_Y3_E10bundleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 56,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E10deviceId.2HY3_Y3_E11abilityNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 82,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 106,
+        ignore: false
+      },
+      identifier: "moduleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 82,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E10moduleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 20
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 104,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 106,
+        ignore: false
+      },
+      identifier: "moduleName.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CPI17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E10moduleNameHY3_Y3_Y3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38,
+                39,
+                40
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 35,
+        ignore: false
+      },
+      identifier: "bundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E12moduleName.3HY3_Y3_Y3_E10bundleNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 37,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 56,
+        ignore: false
+      },
+      identifier: "abilityName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E12moduleName.3HY3_Y3_Y3_E11abilityNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 80,
+        ignore: false
+      },
+      identifier: "deviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 58,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN17ohos.element_name11ElementName4initHRNat6StringEY3_Y3_Y3_E12moduleName.3HY3_Y3_Y3_E8deviceIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140445200416,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN17ohos.element_name11ElementName6<init>Hr",
+      exportId: "_CN17ohos.element_name11ElementName6<init>Hr",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC6<init>F17ElementNameHandle$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 15894875957753891990
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                42
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 56,
+        ignore: false
+      },
+      identifier: "elementNameHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN17ohos.element_name11ElementName4initHrE17elementNameHandleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 6,
+        ignore: false
+      },
+      identifier: "release",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        144678138297717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN17ohos.element_name11ElementName7releaseHr",
+      exportId: "_CN17ohos.element_name11ElementName7releaseHr",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC7releaseF17ElementNameHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 8035971499611947038,
+        bodyHash: 2496566598873922675
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.element_name",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 71,
+        ignore: false
+      },
+      identifier: "elementNameHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 35,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN17ohos.element_name11ElementName7releaseHrE17elementNameHandleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.element_name",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 6,
+        ignore: false
+      },
+      identifier: "createElementNameHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        144678138297716768,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN17ohos.element_name11ElementName23createElementNameHandleHv",
+      exportId: "_CN17ohos.element_name11ElementName23createElementNameHandleHv",
+      mangledBeforeSema: "17ohos.element_name11ElementNameC23createElementNameHandleF$$17ElementNameHandle",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 2094393506715369540
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 66,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.BundleManager.BundleFramework.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 66,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.BundleManager.BundleFramework.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.BundleManager.BundleFramework.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 89,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.BundleManager.BundleFramework.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 102,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 102,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.BundleManager.BundleFramework.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.BundleManager.BundleFramework.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 78,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 80,
+        ignore: false
+      },
+      type: 13,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 104,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 106,
+        ignore: false
+      },
+      type: 13,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "",
+        constKind: "String"
+      }
+    }
+  ],
+  access: "Protected",
+  moduleName: ""
+}

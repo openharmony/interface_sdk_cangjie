@@ -6,10 +6,10 @@
     patch_num: 0
   },
   fullPkgName: "kit.CoreFileKit",
-  pkgDepInfo: "{\"package\":\"kit.CoreFileKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.file_fileuri\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":34}}]},{\"package\":\"ohos.file_fs\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":29}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.CoreFileKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.file.fileuri\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":34}}]},{\"package\":\"ohos.file.fs\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":29}}]}]}",
   imports: [
-    "ohos.file_fs",
-    "ohos.file_fileuri"
+    "ohos.file.fs",
+    "ohos.file.fileuri"
   ],
   allFiles: [
     "kit.CoreFileKit/index.cj"
@@ -34,7 +34,8 @@
           },
           prefixPaths: [
             "ohos",
-            "file_fs"
+            "file",
+            "fs"
           ],
           identifier: "*",
           asIdentifier: "",
@@ -57,7 +58,8 @@
           },
           prefixPaths: [
             "ohos",
-            "file_fileuri"
+            "file",
+            "fileuri"
           ],
           identifier: "*",
           asIdentifier: "",

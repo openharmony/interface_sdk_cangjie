@@ -1,0 +1,5579 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.common_event_subscribe_info",
+  pkgDepInfo: "{\"package\":\"ohos.common_event_subscribe_info\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"common_event_subscribe_info.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"common_event_subscribe_info_ffi.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":27}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"common_event_subscribe_info.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}]}",
+  imports: [
+    "std.core",
+    "ohos.ffi"
+  ],
+  allFiles: [
+    "ohos.common_event_subscribe_info/common_event_subscribe_info.cj",
+    "ohos.common_event_subscribe_info/common_event_subscribe_info_ffi.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "CArrString",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        6,
+        6,
+        7,
+        7,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        5
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        5
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        8
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        6,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        6,
+        6,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        6,
+        6,
+        7,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi14RemoteDataLiteE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        24,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        25
+      ]
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        25
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 25,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 31,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi10CArrStringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        31
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15,
+        isC: true
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 260,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CommonEventSubscribeInfo",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfoE",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfoE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC",
+      hash: {
+        instVar: 7795904866937767920,
+        virt: 0,
+        sig: 14226628559908992850,
+        srcUse: 0,
+        bodyHash: 17005207729818620020
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          21
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          34,
+          36,
+          37,
+          39,
+          41,
+          43,
+          45,
+          47
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 36,
+        ignore: false
+      },
+      identifier: "hasPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297729312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo13hasPermissionK_E",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC13hasPermissionV$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 17327286262165285715,
+        bodyHash: 11732986345490656712
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 34,
+        ignore: false
+      },
+      identifier: "hasDeviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297729312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo11hasDeviceIdK_E",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC11hasDeviceIdV$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 17327286262165285715,
+        bodyHash: 7019231503187590533
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 32,
+        ignore: false
+      },
+      identifier: "hasUserId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297729312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo9hasUserIdK_E",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC9hasUserIdV$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 17327286262165285715,
+        bodyHash: 246888358029459160
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 34,
+        ignore: false
+      },
+      identifier: "hasPriority",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297729312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo11hasPriorityK_E",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC11hasPriorityV$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 17327286262165285715,
+        bodyHash: 759923531892562758
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 36,
+        ignore: false
+      },
+      identifier: "hasBundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297729312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo13hasBundleNameK_E",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC13hasBundleNameV$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 17327286262165285715,
+        bodyHash: 16885245094342408363
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 3,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6<init>HRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6<init>HRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC6<init>F5Array<6String>O1_6String!19publisherPermission=O1_6String!17publisherDeviceId=O1_i!6userId=O1_i!8priority=O1_6String!19publisherBundleName=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1643541248746945762
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                9,
+                12,
+                16,
+                21,
+                27
+              ],
+              desugars: [
+                0,
+                10,
+                13,
+                17,
+                22,
+                28
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 30,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E6eventsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E19publisherPermissionIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 41,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherPermission.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CPI32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E19publisherPermissionHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                11
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 30,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E21publisherPermission.1HY3_E6eventsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 43,
+        ignore: false
+      },
+      identifier: "publisherDeviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E17publisherDeviceIdIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 39,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 43,
+        ignore: false
+      },
+      identifier: "publisherDeviceId.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CPI32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E17publisherDeviceIdHY3_Y8_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14,
+                15
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 30,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E19publisherDeviceId.2HY3_Y8_E6eventsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E19publisherDeviceId.2HY3_Y8_E19publisherPermissionIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 31,
+        ignore: false
+      },
+      identifier: "userId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E6userIdIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 27,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 31,
+        ignore: false
+      },
+      identifier: "userId.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CPI32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E6userIdHY3_Y8_Y8_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18,
+                19,
+                20
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 30,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E8userId.3HY3_Y8_Y8_E6eventsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E8userId.3HY3_Y8_Y8_E19publisherPermissionIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 43,
+        ignore: false
+      },
+      identifier: "publisherDeviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E8userId.3HY3_Y8_Y8_E17publisherDeviceIdIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 33,
+        ignore: false
+      },
+      identifier: "priority",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E8priorityIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 29,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 33,
+        ignore: false
+      },
+      identifier: "priority.4",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CPI32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E8priorityHY3_Y8_Y8_YA_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                23,
+                24,
+                25,
+                26
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 30,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E10priority.4HY3_Y8_Y8_YA_E6eventsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E10priority.4HY3_Y8_Y8_YA_E19publisherPermissionIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 43,
+        ignore: false
+      },
+      identifier: "publisherDeviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E10priority.4HY3_Y8_Y8_YA_E17publisherDeviceIdIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 31,
+        ignore: false
+      },
+      identifier: "userId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E10priority.4HY3_Y8_Y8_YA_E6userIdIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherBundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E19publisherBundleNameIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 41,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherBundleName.5",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CPI32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E19publisherBundleNameHY3_Y8_Y8_YA_YA_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 30,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E21publisherBundleName.5HY3_Y8_Y8_YA_YA_E6eventsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 45,
+        ignore: false
+      },
+      identifier: "publisherPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E21publisherBundleName.5HY3_Y8_Y8_YA_YA_E19publisherPermissionIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 43,
+        ignore: false
+      },
+      identifier: "publisherDeviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E21publisherBundleName.5HY3_Y8_Y8_YA_YA_E17publisherDeviceIdIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 31,
+        ignore: false
+      },
+      identifier: "userId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E21publisherBundleName.5HY3_Y8_Y8_YA_YA_E6userIdIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 33,
+        ignore: false
+      },
+      identifier: "priority",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHRNat5ArrayIRNat6StringEENNat6OptionIY6_EY8_NNatY9_IiEYA_Y8_E21publisherBundleName.5HY3_Y8_Y8_YA_YA_E8priorityIiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 79,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140445200416,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6<init>Hl",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6<init>Hl",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC6<init>Fl$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 15874249169541489735
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 29,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo4initHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 83,
+        column: 6,
+        ignore: false
+      },
+      identifier: "~init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 81,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678146887663648,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo5~initHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo5~initHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC5~initF$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 9274252825415283259
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 6,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 94,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144115188344292384,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 4,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6eventsIRNat6StringEE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC6eventsP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 1981073112319155939,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "PropInfo",
+      info: {
+        setters: [
+
+        ],
+        getters: [
+          38
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$eventsget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6eventspgHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6eventspgHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info6eventsP24CommonEventSubscribeInfoC3getF$$5Array<6String>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12211734913049905741
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 6,
+        ignore: false
+      },
+      identifier: "publisherPermission",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144115188344292384,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo19publisherPermissionIRNat6StringEE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC19publisherPermissionP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 5881875643891848886,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "PropInfo",
+      info: {
+        setters: [
+
+        ],
+        getters: [
+          40
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$publisherPermissionget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo19publisherPermissionpgHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo19publisherPermissionpgHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info19publisherPermissionP24CommonEventSubscribeInfoC3getF$$O1_6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 1864211393147702280
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 148,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 160,
+        column: 6,
+        ignore: false
+      },
+      identifier: "publisherDeviceId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 148,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144115188344292384,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo17publisherDeviceIdIRNat6StringEE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC17publisherDeviceIdP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 5881875643891848886,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "PropInfo",
+      info: {
+        setters: [
+
+        ],
+        getters: [
+          42
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$publisherDeviceIdget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo17publisherDeviceIdpgHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo17publisherDeviceIdpgHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info17publisherDeviceIdP24CommonEventSubscribeInfoC3getF$$O1_6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 8335917270022316209
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 6,
+        ignore: false
+      },
+      identifier: "userId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144115188344292384,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 7,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6userIdIiE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC6userIdP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 10092971684721124894,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "PropInfo",
+      info: {
+        setters: [
+
+        ],
+        getters: [
+          44
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$userIdget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6userIdpgHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo6userIdpgHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info6userIdP24CommonEventSubscribeInfoC3getF$$O1_i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3871930454918370574
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 197,
+        column: 6,
+        ignore: false
+      },
+      identifier: "priority",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144115188344292384,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 7,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo8priorityIiE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC8priorityP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 10092971684721124894,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "PropInfo",
+      info: {
+        setters: [
+
+        ],
+        getters: [
+          46
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 196,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$priorityget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo8prioritypgHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo8prioritypgHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info8priorityP24CommonEventSubscribeInfoC3getF$$O1_i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 1879948889488658874
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "PropDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 220,
+        column: 6,
+        ignore: false
+      },
+      identifier: "publisherBundleName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144115188344292384,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo19publisherBundleNameIRNat6StringEE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info24CommonEventSubscribeInfoC19publisherBundleNameP",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 5881875643891848886,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "PropInfo",
+      info: {
+        setters: [
+
+        ],
+        getters: [
+          48
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 219,
+        column: 10,
+        ignore: false
+      },
+      identifier: "$publisherBundleNameget",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 209,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo19publisherBundleNamepgHv",
+      exportId: "_CN32ohos.common_event_subscribe_info24CommonEventSubscribeInfo19publisherBundleNamepgHv",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info19publisherBundleNameP24CommonEventSubscribeInfoC3getF$$O1_6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 17848254796644750891
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 281,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getInfoId",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN32ohos.common_event_subscribe_info9getInfoIdHRNat5ArrayIRNat6StringEE",
+      exportId: "_CN32ohos.common_event_subscribe_info9getInfoIdHRNat5ArrayIRNat6StringEE",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info9getInfoIdF5Array<6String>$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 11199735767491127097
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                50
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 37,
+        ignore: false
+      },
+      identifier: "events",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 262,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN32ohos.common_event_subscribe_info9getInfoIdHRNat5ArrayIRNat6StringEEE6eventsIY5_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 287,
+        column: 2,
+        ignore: false
+      },
+      identifier: "freeCpCString",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138033487920,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN32ohos.common_event_subscribe_info13freeCpCStringHPkl",
+      exportId: "_CN32ohos.common_event_subscribe_info13freeCpCStringHPkl",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info13freeCpCStringF8CPointer<7CString>l$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 9677190336280667545
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                52,
+                53
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 48,
+        ignore: false
+      },
+      identifier: "cp",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "_CN32ohos.common_event_subscribe_info13freeCpCStringHPklE2cpIkE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 62,
+        ignore: false
+      },
+      identifier: "index",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info13freeCpCStringHPklE5indexE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 59,
+        ignore: false
+      },
+      identifier: "CJ_SetPermission",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "CJ_SetPermission",
+      exportId: "CJ_SetPermission",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info16CJ_SetPermissionFl7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55,
+                56
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 36,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info16CJ_SetPermissionHlkE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 52,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 21,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN32ohos.common_event_subscribe_info16CJ_SetPermissionHlkE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 57,
+        ignore: false
+      },
+      identifier: "CJ_SetDeviceId",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "CJ_SetDeviceId",
+      exportId: "CJ_SetDeviceId",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info14CJ_SetDeviceIdFl7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                58,
+                59
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 34,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info14CJ_SetDeviceIdHlkE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 50,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN32ohos.common_event_subscribe_info14CJ_SetDeviceIdHlkE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 53,
+        ignore: false
+      },
+      identifier: "CJ_SetUserId",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "CJ_SetUserId",
+      exportId: "CJ_SetUserId",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info12CJ_SetUserIdFli$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                61,
+                62
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 32,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info12CJ_SetUserIdHliE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 46,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN32ohos.common_event_subscribe_info12CJ_SetUserIdHliE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 55,
+        ignore: false
+      },
+      identifier: "CJ_SetPriority",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "CJ_SetPriority",
+      exportId: "CJ_SetPriority",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info14CJ_SetPriorityFli$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64,
+                65
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 34,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info14CJ_SetPriorityHliE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 48,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN32ohos.common_event_subscribe_info14CJ_SetPriorityHliE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 59,
+        ignore: false
+      },
+      identifier: "CJ_SetBundleName",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "CJ_SetBundleName",
+      exportId: "CJ_SetBundleName",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info16CJ_SetBundleNameFl7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3025508756334209375
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                67,
+                68
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 36,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info16CJ_SetBundleNameHlkE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 52,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN32ohos.common_event_subscribe_info16CJ_SetBundleNameHlkE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 46,
+        ignore: false
+      },
+      identifier: "CJ_GetPermission",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "CJ_GetPermission",
+      exportId: "CJ_GetPermission",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info16CJ_GetPermissionFl$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                70
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 25
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 36,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 31,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info16CJ_GetPermissionHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 44,
+        ignore: false
+      },
+      identifier: "CJ_GetDeviceId",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "CJ_GetDeviceId",
+      exportId: "CJ_GetDeviceId",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info14CJ_GetDeviceIdFl$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 25
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 34,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info14CJ_GetDeviceIdHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 40,
+        ignore: false
+      },
+      identifier: "CJ_GetUserId",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "CJ_GetUserId",
+      exportId: "CJ_GetUserId",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info12CJ_GetUserIdFl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                74
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 32,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info12CJ_GetUserIdHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 42,
+        ignore: false
+      },
+      identifier: "CJ_GetPriority",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "CJ_GetPriority",
+      exportId: "CJ_GetPriority",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info14CJ_GetPriorityFl$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                76
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 34,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 25,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info14CJ_GetPriorityHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 46,
+        ignore: false
+      },
+      identifier: "CJ_GetBundleName",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "CJ_GetBundleName",
+      exportId: "CJ_GetBundleName",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info16CJ_GetBundleNameFl$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                78
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 25
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 36,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info16CJ_GetBundleNameHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 45,
+        ignore: false
+      },
+      identifier: "CJ_GetEvents",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "CJ_GetEvents",
+      exportId: "CJ_GetEvents",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info12CJ_GetEventsFl$$10CArrString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17863552069961376991
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                80
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 31
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 32,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN32ohos.common_event_subscribe_info12CJ_GetEventsHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.common_event_subscribe_info",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 69,
+        ignore: false
+      },
+      identifier: "CJ_CreateCommonEventSubscribeInfo",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "CJ_CreateCommonEventSubscribeInfo",
+      exportId: "CJ_CreateCommonEventSubscribeInfo",
+      mangledBeforeSema: "32ohos.common_event_subscribe_info33CJ_CreateCommonEventSubscribeInfoF10CArrString$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9591595674467555776
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                82
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.common_event_subscribe_info",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 61,
+        ignore: false
+      },
+      identifier: "event",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN32ohos.common_event_subscribe_info33CJ_CreateCommonEventSubscribeInfoHRN8ohos.ffi10CArrStringEE5eventE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 146,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 146,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 188,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 205,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 205,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    }
+  ],
+  access: "Protected",
+  moduleName: ""
+}

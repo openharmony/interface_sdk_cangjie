@@ -1,0 +1,8517 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.shape",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.shape\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"circle.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}},{\"file\":\"ellipse.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}},{\"file\":\"path.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}},{\"file\":\"rect.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}},{\"file\":\"shape_base.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"circle.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}},{\"file\":\"ellipse.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}},{\"file\":\"path.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}},{\"file\":\"rect.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}},{\"file\":\"shape_base.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"circle.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":18}},{\"file\":\"ellipse.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":18}},{\"file\":\"path.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":18}},{\"file\":\"rect.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":18}},{\"file\":\"shape_base.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"circle.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}},{\"file\":\"ellipse.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}},{\"file\":\"path.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}},{\"file\":\"rect.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}},{\"file\":\"shape_base.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]}]}",
+  imports: [
+    "ohos.base",
+    "std.core",
+    "ohos.ffi"
+  ],
+  allFiles: [
+    "ohos.arkui.shape/circle.cj",
+    "ohos.arkui.shape/ellipse.cj",
+    "ohos.arkui.shape/path.cj",
+    "ohos.arkui.shape/rect.cj",
+    "ohos.arkui.shape/shape_base.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 18,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 20,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 3,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 4,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 4,
+            pkgId: 0,
+            line: 18,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 4,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 4,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 4,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 4,
+            pkgId: 0,
+            line: 20,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 4,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 4,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 4,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 4,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 5,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 5,
+            pkgId: 0,
+            line: 18,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 5,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 5,
+            pkgId: 0,
+            line: 19,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 5,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 5,
+            pkgId: 0,
+            line: 20,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 5,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 5,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 5,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 5,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        3,
+        2,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 6
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 5
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 13
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 19
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 11
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        3,
+        2,
+        3,
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 34
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base11ResourceStrE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 18
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        7,
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 18
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        2,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 24,
+        isC: true
+      }
+    },
+    {
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 62
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 25
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 28
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 62
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        30
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 24,
+        isC: true
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4,
+        2,
+        3,
+        2,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 24,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        34
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 35
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 13
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 35
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 35
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN8ohos.ffi14RemoteDataLiteE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 125,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCircleInsCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkCircleInsCreate",
+      exportId: "FfiOHOSAceFrameworkCircleInsCreate",
+      mangledBeforeSema: "16ohos.arkui.shape34FfiOHOSAceFrameworkCircleInsCreateFdidi$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11888240612358911924
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                2,
+                3,
+                4,
+                5
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 63,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkCircleInsCreateHdidiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 65,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 81,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 65,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkCircleInsCreateHdidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 83,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 98,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 83,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkCircleInsCreateHdidiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 100,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 117,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 100,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkCircleInsCreateHdidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CircleShape",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "_CN16ohos.arkui.shape11CircleShapeE",
+      exportId: "_CN16ohos.arkui.shape11CircleShapeE",
+      mangledBeforeSema: "16ohos.arkui.shape11CircleShapeC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 12635436245809918957,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          10
+        ],
+        body: [
+          7
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "_CN16ohos.arkui.shape11CircleShape6<init>HCN9ohos.base6LengthEY3_",
+      exportId: "_CN16ohos.arkui.shape11CircleShape6<init>HCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "16ohos.arkui.shape11CircleShapeC6<init>F6Length!5width=6Length!6height=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1518755834819106576
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                10
+              ],
+              desugars: [
+                9,
+                11
+              ]
+            }
+          ],
+          retType: 5
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape11CircleShape4initHCN9ohos.base6LengthEY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 34,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CPI16ohos.arkui.shape11CircleShape4initHCN9ohos.base6LengthEY3_E5widthHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape11CircleShape4initHCN9ohos.base6LengthEY3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 58,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CPI16ohos.arkui.shape11CircleShape4initHCN9ohos.base6LengthEY3_E6heightHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape11CircleShape4initHCN9ohos.base6LengthEY3_E8height.1HY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 42,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 156,
+        column: 2,
+        ignore: false
+      },
+      identifier: "BaseShape",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 42,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907316272,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 39
+            },
+            {
+              name: "stagemodelonly",
+              expr: 40
+            },
+            {
+              name: "syscap",
+              expr: 41
+            }
+          ]
+        }
+      ],
+      type: 10,
+      mangledName: "_CN16ohos.arkui.shape9BaseShapeE",
+      exportId: "_CN16ohos.arkui.shape9BaseShapeE",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14226628559908992850,
+        srcUse: 313184535967830658,
+        bodyHash: 18421814429178687325
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          38
+        ],
+        body: [
+          98,
+          100,
+          102,
+          104,
+          106,
+          109
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 126,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkEllipseInsCreate",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkEllipseInsCreate",
+      exportId: "FfiOHOSAceFrameworkEllipseInsCreate",
+      mangledBeforeSema: "16ohos.arkui.shape35FfiOHOSAceFrameworkEllipseInsCreateFdidi$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11888240612358911924
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                15,
+                16,
+                17,
+                18
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 64,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkEllipseInsCreateHdidiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 66,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 82,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 66,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkEllipseInsCreateHdidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 84,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 99,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 84,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkEllipseInsCreateHdidiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 101,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 118,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 23,
+        column: 101,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkEllipseInsCreateHdidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 49,
+        column: 2,
+        ignore: false
+      },
+      identifier: "EllipseShape",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 30,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 11,
+      mangledName: "_CN16ohos.arkui.shape12EllipseShapeE",
+      exportId: "_CN16ohos.arkui.shape12EllipseShapeE",
+      mangledBeforeSema: "16ohos.arkui.shape12EllipseShapeC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 12635436245809918957,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          10
+        ],
+        body: [
+          20
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 48,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 12,
+      mangledName: "_CN16ohos.arkui.shape12EllipseShape6<init>HCN9ohos.base6LengthEY3_",
+      exportId: "_CN16ohos.arkui.shape12EllipseShape6<init>HCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "16ohos.arkui.shape12EllipseShapeC6<init>F6Length!5width=6Length!6height=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 10202874697070653875
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                21,
+                23
+              ],
+              desugars: [
+                22,
+                24
+              ]
+            }
+          ],
+          retType: 11
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape12EllipseShape4initHCN9ohos.base6LengthEY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 34,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width.0",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CPI16ohos.arkui.shape12EllipseShape4initHCN9ohos.base6LengthEY3_E5widthHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape12EllipseShape4initHCN9ohos.base6LengthEY3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 58,
+        ignore: true
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height.1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CPI16ohos.arkui.shape12EllipseShape4initHCN9ohos.base6LengthEY3_E6heightHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                25
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape12EllipseShape4initHCN9ohos.base6LengthEY3_E8height.1HY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 68,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPathInsCreate",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkPathInsCreate",
+      exportId: "FfiOHOSAceFrameworkPathInsCreate",
+      mangledBeforeSema: "16ohos.arkui.shape32FfiOHOSAceFrameworkPathInsCreateF7CString$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 2296422132448623199
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                27
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 60,
+        ignore: false
+      },
+      identifier: "commands",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 24,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN16ohos.arkui.shape32FfiOHOSAceFrameworkPathInsCreateHkE8commandsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 34,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkPathInsCreateWithSize",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "FfiOHOSAceFrameworkPathInsCreateWithSize",
+      exportId: "FfiOHOSAceFrameworkPathInsCreateWithSize",
+      mangledBeforeSema: "16ohos.arkui.shape40FfiOHOSAceFrameworkPathInsCreateWithSizeFdidi7CString$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5368378281333249463
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 65,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkPathInsCreateWithSizeHdidikE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 67,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 83,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 67,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkPathInsCreateWithSizeHdidikE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 85,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 100,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 85,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkPathInsCreateWithSizeHdidikE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 102,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 119,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 26,
+        column: 102,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkPathInsCreateWithSizeHdidikE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 26,
+        ignore: false
+      },
+      identifier: "commands",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkPathInsCreateWithSizeHdidikE8commandsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 77,
+        column: 2,
+        ignore: false
+      },
+      identifier: "PathShape",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 35,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "_CN16ohos.arkui.shape9PathShapeE",
+      exportId: "_CN16ohos.arkui.shape9PathShapeE",
+      mangledBeforeSema: "16ohos.arkui.shape9PathShapeC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 12635436245809918957,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          10
+        ],
+        body: [
+          35,
+          38
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 51,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 17,
+      mangledName: "_CN16ohos.arkui.shape9PathShape6<init>HCN9ohos.base11ResourceStrE",
+      exportId: "_CN16ohos.arkui.shape9PathShape6<init>HCN9ohos.base11ResourceStrE",
+      mangledBeforeSema: "16ohos.arkui.shape9PathShapeC6<init>F11ResourceStr!8commands=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6439923737948981043
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                36
+              ],
+              desugars: [
+                37
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 44,
+        ignore: false
+      },
+      identifier: "commands",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN16ohos.arkui.shape9PathShape4initHCN9ohos.base11ResourceStrEE8commandsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 19
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 42,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 44,
+        ignore: false
+      },
+      identifier: "commands.0",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CPI16ohos.arkui.shape9PathShape4initHCN9ohos.base11ResourceStrEE8commandsHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 18
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 76,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 20
+            },
+            {
+              name: "stagemodelonly",
+              expr: 21
+            },
+            {
+              name: "syscap",
+              expr: 22
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "_CN16ohos.arkui.shape9PathShape6<init>HCN9ohos.base6LengthEY3_CNY4_11ResourceStrE",
+      exportId: "_CN16ohos.arkui.shape9PathShape6<init>HCN9ohos.base6LengthEY3_CNY4_11ResourceStrE",
+      mangledBeforeSema: "16ohos.arkui.shape9PathShapeC6<init>F6Length!5width6Length!6height11ResourceStr!8commands=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13123926861357426040
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                39,
+                40,
+                41
+              ],
+              desugars: [
+                0,
+                0,
+                42
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 31,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9PathShape4initHCN9ohos.base6LengthEY3_CNY4_11ResourceStrEE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 48,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9PathShape4initHCN9ohos.base6LengthEY3_CNY4_11ResourceStrEE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 77,
+        ignore: false
+      },
+      identifier: "commands",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN16ohos.arkui.shape9PathShape4initHCN9ohos.base6LengthEY3_CNY4_11ResourceStrEE8commandsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 23
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 75,
+        ignore: true
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 77,
+        ignore: false
+      },
+      identifier: "commands.2",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CPI16ohos.arkui.shape9PathShape4initHCN9ohos.base6LengthEY3_CNY4_11ResourceStrEE8commandsHY3_Y3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                43,
+                44
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 18
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 31,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9PathShape4initHCN9ohos.base6LengthEY3_CNY4_11ResourceStrEE10commands.2HY3_Y3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 48,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9PathShape4initHCN9ohos.base6LengthEY3_CNY4_11ResourceStrEE10commands.2HY3_Y3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 119,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkRectInsCreate",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkRectInsCreate",
+      exportId: "FfiOHOSAceFrameworkRectInsCreate",
+      mangledBeforeSema: "16ohos.arkui.shape32FfiOHOSAceFrameworkRectInsCreateFdidi$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11888240612358911924
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                46,
+                47,
+                48,
+                49
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 43,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 57,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 43,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape32FfiOHOSAceFrameworkRectInsCreateHdidiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 59,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 75,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 59,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape32FfiOHOSAceFrameworkRectInsCreateHdidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 92,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape32FfiOHOSAceFrameworkRectInsCreateHdidiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 94,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 111,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 24,
+        column: 94,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape32FfiOHOSAceFrameworkRectInsCreateHdidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 118,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkRectSetInsRadiusWidth",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkRectSetInsRadiusWidth",
+      exportId: "FfiOHOSAceFrameworkRectSetInsRadiusWidth",
+      mangledBeforeSema: "16ohos.arkui.shape40FfiOHOSAceFrameworkRectSetInsRadiusWidthFldi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 14293488665950133275
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                51,
+                52,
+                53
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 65,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkRectSetInsRadiusWidthHldiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 67,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 87,
+        ignore: false
+      },
+      identifier: "radiusWidth",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 67,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkRectSetInsRadiusWidthHldiE11radiusWidthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 89,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 111,
+        ignore: false
+      },
+      identifier: "radiusWidthUnit",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 26,
+        column: 89,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape40FfiOHOSAceFrameworkRectSetInsRadiusWidthHldiE15radiusWidthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 121,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkRectSetInsRadiusHeight",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkRectSetInsRadiusHeight",
+      exportId: "FfiOHOSAceFrameworkRectSetInsRadiusHeight",
+      mangledBeforeSema: "16ohos.arkui.shape41FfiOHOSAceFrameworkRectSetInsRadiusHeightFldi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3169775143360832849
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55,
+                56,
+                57
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 66,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape41FfiOHOSAceFrameworkRectSetInsRadiusHeightHldiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 89,
+        ignore: false
+      },
+      identifier: "radiusHeight",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape41FfiOHOSAceFrameworkRectSetInsRadiusHeightHldiE12radiusHeightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 91,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 114,
+        ignore: false
+      },
+      identifier: "radiusHeightUnit",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 28,
+        column: 91,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape41FfiOHOSAceFrameworkRectSetInsRadiusHeightHldiE16radiusHeightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 103,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkRectSetInsRadius",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkRectSetInsRadius",
+      exportId: "FfiOHOSAceFrameworkRectSetInsRadius",
+      mangledBeforeSema: "16ohos.arkui.shape35FfiOHOSAceFrameworkRectSetInsRadiusFldi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 13400378330093132535
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                59,
+                60,
+                61
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 60,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkRectSetInsRadiusHldiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 77,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkRectSetInsRadiusHldiE6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 96,
+        ignore: false
+      },
+      identifier: "radiusUnit",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 30,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkRectSetInsRadiusHldiE10radiusUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 38,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 96,
+        column: 2,
+        ignore: false
+      },
+      identifier: "RectShape",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 38,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 24
+            },
+            {
+              name: "stagemodelonly",
+              expr: 25
+            },
+            {
+              name: "syscap",
+              expr: 26
+            }
+          ]
+        }
+      ],
+      type: 25,
+      mangledName: "_CN16ohos.arkui.shape9RectShapeE",
+      exportId: "_CN16ohos.arkui.shape9RectShapeE",
+      mangledBeforeSema: "16ohos.arkui.shape9RectShapeC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 12635436245809918957,
+        srcUse: 0,
+        bodyHash: 2064779436225370107
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          10
+        ],
+        body: [
+          63,
+          69,
+          71,
+          73
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 56,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 27
+            },
+            {
+              name: "stagemodelonly",
+              expr: 28
+            },
+            {
+              name: "syscap",
+              expr: 29
+            }
+          ]
+        }
+      ],
+      type: 26,
+      mangledName: "_CN16ohos.arkui.shape9RectShape6<init>HCN9ohos.base6LengthEY3_",
+      exportId: "_CN16ohos.arkui.shape9RectShape6<init>HCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "16ohos.arkui.shape9RectShapeC6<init>F6Length!5width=6Length!6height=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2254254451384767890
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                64,
+                66
+              ],
+              desugars: [
+                65,
+                67
+              ]
+            }
+          ],
+          retType: 25
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9RectShape4initHCN9ohos.base6LengthEY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 34,
+        ignore: true
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width.0",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CPI16ohos.arkui.shape9RectShape4initHCN9ohos.base6LengthEY3_E5widthHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9RectShape4initHCN9ohos.base6LengthEY3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 58,
+        ignore: true
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height.1",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CPI16ohos.arkui.shape9RectShape4initHCN9ohos.base6LengthEY3_E6heightHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                68
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 38,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9RectShape4initHCN9ohos.base6LengthEY3_E8height.1HY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 69,
+        column: 6,
+        ignore: false
+      },
+      identifier: "radiusWidth",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 63,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 30
+            },
+            {
+              name: "stagemodelonly",
+              expr: 31
+            },
+            {
+              name: "syscap",
+              expr: 32
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "_CN16ohos.arkui.shape9RectShape11radiusWidthHCN9ohos.base6LengthE",
+      exportId: "_CN16ohos.arkui.shape9RectShape11radiusWidthHCN9ohos.base6LengthE",
+      mangledBeforeSema: "16ohos.arkui.shape9RectShapeC11radiusWidthF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16570358533866173936
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                70
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 63,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 63,
+        column: 42,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 63,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9RectShape11radiusWidthHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 76,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 82,
+        column: 6,
+        ignore: false
+      },
+      identifier: "radiusHeight",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 76,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 33
+            },
+            {
+              name: "stagemodelonly",
+              expr: 34
+            },
+            {
+              name: "syscap",
+              expr: 35
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "_CN16ohos.arkui.shape9RectShape12radiusHeightHCN9ohos.base6LengthE",
+      exportId: "_CN16ohos.arkui.shape9RectShape12radiusHeightHCN9ohos.base6LengthE",
+      mangledBeforeSema: "16ohos.arkui.shape9RectShapeC12radiusHeightF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3204305253003416323
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 76,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 76,
+        column: 43,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 76,
+        column: 30,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9RectShape12radiusHeightHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 89,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 95,
+        column: 6,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 89,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 36
+            },
+            {
+              name: "stagemodelonly",
+              expr: 37
+            },
+            {
+              name: "syscap",
+              expr: 38
+            }
+          ]
+        }
+      ],
+      type: 27,
+      mangledName: "_CN16ohos.arkui.shape9RectShape6radiusHCN9ohos.base6LengthE",
+      exportId: "_CN16ohos.arkui.shape9RectShape6radiusHCN9ohos.base6LengthE",
+      mangledBeforeSema: "16ohos.arkui.shape9RectShapeC6radiusF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16026882452633288987
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                74
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 89,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 89,
+        column: 37,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 4,
+        pkgId: 0,
+        line: 89,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9RectShape6radiusHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 81,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkShapeSetInsFill",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "FfiOHOSAceFrameworkShapeSetInsFill",
+      exportId: "FfiOHOSAceFrameworkShapeSetInsFill",
+      mangledBeforeSema: "16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsFillFlj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6393167221155291288
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                76,
+                77
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 59,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsFillHljE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 74,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 25,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsFillHljE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 96,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkShapeSetInsWidth",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkShapeSetInsWidth",
+      exportId: "FfiOHOSAceFrameworkShapeSetInsWidth",
+      mangledBeforeSema: "16ohos.arkui.shape35FfiOHOSAceFrameworkShapeSetInsWidthFldi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10067008368806911480
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79,
+                80,
+                81
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 60,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkShapeSetInsWidthHldiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 76,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkShapeSetInsWidthHldiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 78,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 89,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 27,
+        column: 78,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape35FfiOHOSAceFrameworkShapeSetInsWidthHldiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 97,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkShapeSetInsHeight",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FfiOHOSAceFrameworkShapeSetInsHeight",
+      exportId: "FfiOHOSAceFrameworkShapeSetInsHeight",
+      mangledBeforeSema: "16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsHeightFldi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10067008368806911480
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                83,
+                84,
+                85
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 61,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsHeightHldiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 63,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 77,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 63,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsHeightHldiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 90,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 29,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsHeightHldiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 32,
+        column: 33,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkShapeSetInsSize",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "FfiOHOSAceFrameworkShapeSetInsSize",
+      exportId: "FfiOHOSAceFrameworkShapeSetInsSize",
+      mangledBeforeSema: "16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsSizeFldidi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 4222923358435111403
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                87,
+                88,
+                89,
+                90,
+                91
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 59,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsSizeHldidiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 75,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsSizeHldidiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 93,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsSizeHldidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 95,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 110,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 31,
+        column: 95,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsSizeHldidiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 32,
+        column: 26,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape34FfiOHOSAceFrameworkShapeSetInsSizeHldidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 120,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkShapeSetInsOffset",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "FfiOHOSAceFrameworkShapeSetInsOffset",
+      exportId: "FfiOHOSAceFrameworkShapeSetInsOffset",
+      mangledBeforeSema: "16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsOffsetFldidi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 574597234930882068
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                93,
+                94,
+                95,
+                96,
+                97
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 61,
+        ignore: false
+      },
+      identifier: "shapeId",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsOffsetHldidiE7shapeIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 63,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 73,
+        ignore: false
+      },
+      identifier: "x",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 63,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsOffsetHldidiE1xE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 75,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 87,
+        ignore: false
+      },
+      identifier: "xUnit",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsOffsetHldidiE5xUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 89,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 99,
+        ignore: false
+      },
+      identifier: "y",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 89,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsOffsetHldidiE1yE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 101,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 113,
+        ignore: false
+      },
+      identifier: "yUnit",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 34,
+        column: 101,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN16ohos.arkui.shape36FfiOHOSAceFrameworkShapeSetInsOffsetHldidiE5yUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 48,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 50,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 48,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140445200416,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape6<init>Hl",
+      exportId: "_CN16ohos.arkui.shape9BaseShape6<init>Hl",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC6<init>Fl$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 17338376176995901824
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                99
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 48,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 48,
+        column: 29,
+        ignore: false
+      },
+      identifier: "id",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 48,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape4initHlE2idE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 64,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 69,
+        column: 6,
+        ignore: false
+      },
+      identifier: "fill",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 64,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 42
+            },
+            {
+              name: "stagemodelonly",
+              expr: 43
+            },
+            {
+              name: "syscap",
+              expr: 44
+            }
+          ]
+        }
+      ],
+      type: 33,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape4fillHCN9ohos.base13ResourceColorE",
+      exportId: "_CN16ohos.arkui.shape9BaseShape4fillHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC4fillF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6484755969232867018
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                101
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 35
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 64,
+        column: 22,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 64,
+        column: 42,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 64,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape4fillHCN9ohos.base13ResourceColorEE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 83,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 89,
+        column: 6,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 83,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 45
+            },
+            {
+              name: "stagemodelonly",
+              expr: 46
+            },
+            {
+              name: "syscap",
+              expr: 47
+            }
+          ]
+        }
+      ],
+      type: 36,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape5widthHCN9ohos.base6LengthE",
+      exportId: "_CN16ohos.arkui.shape9BaseShape5widthHCN9ohos.base6LengthE",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC5widthF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13359213204476292941
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                103
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 35
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 83,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 83,
+        column: 36,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 83,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape5widthHCN9ohos.base6LengthEEY2_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 103,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 109,
+        column: 6,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 103,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 48
+            },
+            {
+              name: "stagemodelonly",
+              expr: 49
+            },
+            {
+              name: "syscap",
+              expr: 50
+            }
+          ]
+        }
+      ],
+      type: 36,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape6heightHCN9ohos.base6LengthE",
+      exportId: "_CN16ohos.arkui.shape9BaseShape6heightHCN9ohos.base6LengthE",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC6heightF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2279734528287827324
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                105
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 35
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 103,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 103,
+        column: 38,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 103,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape6heightHCN9ohos.base6LengthEEY2_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 132,
+        column: 6,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 51
+            },
+            {
+              name: "stagemodelonly",
+              expr: 52
+            },
+            {
+              name: "syscap",
+              expr: 53
+            }
+          ]
+        }
+      ],
+      type: 37,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape4sizeHCN9ohos.base6LengthEY3_",
+      exportId: "_CN16ohos.arkui.shape9BaseShape4sizeHCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC4sizeF6Length!5width6Length!6height$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 580758821286384027
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                107,
+                108
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 35
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 22,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 36,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape4sizeHCN9ohos.base6LengthEY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 53,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 124,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape4sizeHCN9ohos.base6LengthEY3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.shape",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 155,
+        column: 6,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 54
+            },
+            {
+              name: "stagemodelonly",
+              expr: 55
+            },
+            {
+              name: "syscap",
+              expr: 56
+            }
+          ]
+        }
+      ],
+      type: 37,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape6offsetHCN9ohos.base6LengthEY3_",
+      exportId: "_CN16ohos.arkui.shape9BaseShape6offsetHCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "16ohos.arkui.shape9BaseShapeC6offsetF6Length!1x6Length!1y$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 434285422434040645
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                110,
+                111
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 35
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 34,
+        ignore: false
+      },
+      identifier: "x",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape6offsetHCN9ohos.base6LengthEY3_E1xE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.shape",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 46,
+        ignore: false
+      },
+      identifier: "y",
+      identifierPos: {
+        file: 5,
+        pkgId: 0,
+        line: 147,
+        column: 36,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN16ohos.arkui.shape9BaseShape6offsetHCN9ohos.base6LengthEY3_E1yE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 32,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 31,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 32,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 33,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 33,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 37,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 38,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 38,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 39,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 39,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 41,
+        column: 44,
+        ignore: false
+      },
+      type: 19,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 54,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 55,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 55,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 56,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 56,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 75,
+        ignore: false
+      },
+      end: {
+        file: 3,
+        pkgId: 0,
+        line: 58,
+        column: 77,
+        ignore: false
+      },
+      type: 19,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 34,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 34,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 35,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 35,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 36,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 36,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 40,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 41,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 41,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 42,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 42,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 59,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 59,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 60,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 60,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 61,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 61,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 72,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 72,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 73,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 73,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 74,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 74,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 85,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 85,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 86,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 86,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 4,
+        pkgId: 0,
+        line: 87,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 4,
+        pkgId: 0,
+        line: 87,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 38,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 38,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 39,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 39,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 40,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 60,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 60,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 61,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 61,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 62,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 62,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 79,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 79,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 80,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 80,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 81,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 81,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 99,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 99,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 100,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 100,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 101,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 101,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 120,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 120,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 121,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 121,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 122,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 122,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 143,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 143,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 144,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 144,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 5,
+        pkgId: 0,
+        line: 145,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 5,
+        pkgId: 0,
+        line: 145,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

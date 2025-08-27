@@ -6,10 +6,10 @@
     patch_num: 0
   },
   fullPkgName: "kit.PerformanceAnalysisKit",
-  pkgDepInfo: "{\"package\":\"kit.PerformanceAnalysisKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.hi_tracemeter\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":35}}]},{\"package\":\"ohos.hiappevent\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":32}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":27}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.PerformanceAnalysisKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.hi_trace_meter\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":36}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":27}}]},{\"package\":\"ohos.hiviewdfx.hi_app_event\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":44}}]}]}",
   imports: [
-    "ohos.hi_tracemeter",
-    "ohos.hiappevent",
+    "ohos.hi_trace_meter",
+    "ohos.hiviewdfx.hi_app_event",
     "ohos.hilog"
   ],
   allFiles: [
@@ -30,12 +30,12 @@
             file: 1,
             pkgId: 0,
             line: 18,
-            column: 35,
+            column: 36,
             ignore: false
           },
           prefixPaths: [
             "ohos",
-            "hi_tracemeter"
+            "hi_trace_meter"
           ],
           identifier: "*",
           asIdentifier: "",
@@ -53,12 +53,13 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 32,
+            column: 44,
             ignore: false
           },
           prefixPaths: [
             "ohos",
-            "hiappevent"
+            "hiviewdfx",
+            "hi_app_event"
           ],
           identifier: "*",
           asIdentifier: "",

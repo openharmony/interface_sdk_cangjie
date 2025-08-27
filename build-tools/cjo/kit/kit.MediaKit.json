@@ -6,9 +6,9 @@
     patch_num: 0
   },
   fullPkgName: "kit.MediaKit",
-  pkgDepInfo: "{\"package\":\"kit.MediaKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.multimedia_media\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":38}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.MediaKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.multimedia.media\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":38}}]}]}",
   imports: [
-    "ohos.multimedia_media"
+    "ohos.multimedia.media"
   ],
   allFiles: [
     "kit.MediaKit/index.cj"
@@ -33,7 +33,8 @@
           },
           prefixPaths: [
             "ohos",
-            "multimedia_media"
+            "multimedia",
+            "media"
           ],
           identifier: "*",
           asIdentifier: "",
