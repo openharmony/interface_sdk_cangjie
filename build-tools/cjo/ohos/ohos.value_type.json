@@ -1,0 +1,6420 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.value_type",
+  pkgDepInfo: "{\"package\":\"ohos.value_type\",\"isMacro\":false,\"accessLevel\":\"protected\",\"dependencies\":[{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"parameters.cj\",\"begin\":{\"line\":19,\"column\":33},\"end\":{\"line\":19,\"column\":50}},{\"file\":\"parameters.cj\",\"begin\":{\"line\":19,\"column\":52},\"end\":{\"line\":19,\"column\":71}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"parameters.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":27}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"value_type.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"parameters.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":30}}]}]}",
+  imports: [
+    "std.core",
+    "std.collection"
+  ],
+  allFiles: [
+    "ohos.value_type/parameters.cj",
+    "ohos.value_type/value_type.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "safeMalloc",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 33,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 50,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "BusinessException",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 52,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 71,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "ERR_PARAMETER_ERROR",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 30,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "HashMap",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int8"
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 12
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 14
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 18
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        10
+      ]
+    },
+    {
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        5
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        18
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 31
+        },
+        upperBounds: [
+          19
+        ]
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5CTypeE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 32
+        }
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        4
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        21,
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 20
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        24
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 20
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+        5,
+        6
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNac7HashMapIG_G0_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        21,
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 45
+        },
+        upperBounds: [
+          19
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 9
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        30
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 48
+        },
+        upperBounds: [
+          19
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 32
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        8
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32,
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        35
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        36
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 56
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 38
+      }
+    },
+    {
+      kind: "Tuple",
+      typeArgs: [
+        1,
+        9,
+        11
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        40
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        42
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        45
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        48
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        40
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        50
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        11
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        52
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        45
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        54
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        42
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 25,
+        ignore: false
+      },
+      identifier: "INT_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type8INT_TYPEE",
+      mangledBeforeSema: "15ohos.value_type8INT_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 5179418551586155885
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 25,
+        ignore: false
+      },
+      identifier: "F64_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type8F64_TYPEE",
+      mangledBeforeSema: "15ohos.value_type8F64_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 16633838651858947541
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 2
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 28,
+        ignore: false
+      },
+      identifier: "STRING_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type11STRING_TYPEE",
+      mangledBeforeSema: "15ohos.value_type11STRING_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 7782437978527353727
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 3
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 26,
+        ignore: false
+      },
+      identifier: "BOOL_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type9BOOL_TYPEE",
+      mangledBeforeSema: "15ohos.value_type9BOOL_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 12987560365385108817
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 4
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 24,
+        ignore: false
+      },
+      identifier: "FD_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type7FD_TYPEE",
+      mangledBeforeSema: "15ohos.value_type7FD_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 15385144873871128738
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 5
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 31,
+        ignore: false
+      },
+      identifier: "ARRSTRING_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type14ARRSTRING_TYPEE",
+      mangledBeforeSema: "15ohos.value_type14ARRSTRING_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 17679350134410037532
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 6
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 30,
+        ignore: false
+      },
+      identifier: "ARRAYI32_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type13ARRAYI32_TYPEE",
+      mangledBeforeSema: "15ohos.value_type13ARRAYI32_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 13449000416317628246
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 7
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 30,
+        ignore: false
+      },
+      identifier: "ARRAYI64_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type13ARRAYI64_TYPEE",
+      mangledBeforeSema: "15ohos.value_type13ARRAYI64_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 11399599429845902036
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 8
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 31,
+        ignore: false
+      },
+      identifier: "ARRAYBOOL_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type14ARRAYBOOL_TYPEE",
+      mangledBeforeSema: "15ohos.value_type14ARRAYBOOL_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 17267605107513979569
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 9
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 30,
+        ignore: false
+      },
+      identifier: "ARRAYF64_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type13ARRAYF64_TYPEE",
+      mangledBeforeSema: "15ohos.value_type13ARRAYF64_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 2934384549588875002
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 10
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 30,
+        ignore: false
+      },
+      identifier: "ARRAYFD_TYPE",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type12ARRAYFD_TYPEE",
+      mangledBeforeSema: "15ohos.value_type12ARRAYFD_TYPEV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 12820464909098194885,
+        bodyHash: 15100923020273609677
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 11
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Parameters",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 34,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN15ohos.value_type10ParametersE",
+      exportId: "_CN15ohos.value_type10ParametersE",
+      mangledBeforeSema: "15ohos.value_type10ParametersS",
+      hash: {
+        instVar: 15043925661522231982,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          13,
+          16,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140210319392,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN15ohos.value_type10Parameters6<init>HRNY_11CParametersE",
+      exportId: "_CN15ohos.value_type10Parameters6<init>HRNY_11CParametersE",
+      mangledBeforeSema: "15ohos.value_type10ParametersS6<init>F11CParameters$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 1177577807602557756
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                15
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 108,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CParameters",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144686934122303536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN15ohos.value_type11CParametersE",
+      exportId: "_CN15ohos.value_type11CParametersE",
+      mangledBeforeSema: "15ohos.value_type11CParametersS",
+      hash: {
+        instVar: 12265847107450384029,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          22,
+          23,
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ]
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 34,
+        ignore: false
+      },
+      identifier: "c",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN15ohos.value_type10Parameters4initHRNY_11CParametersEE1cE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 34,
+        ignore: false
+      },
+      identifier: "key",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678155242704992,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type10Parameters3keyK_E",
+      mangledBeforeSema: "15ohos.value_type10ParametersS3key$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 39,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678155242704992,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type10Parameters5valueK_E",
+      mangledBeforeSema: "15ohos.value_type10ParametersS5value$$9ValueType",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 129,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ValueType",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 12
+            },
+            {
+              name: "stagemodelonly",
+              expr: 13
+            },
+            {
+              name: "syscap",
+              expr: 14
+            }
+          ]
+        }
+      ],
+      type: 6,
+      mangledName: "_CN15ohos.value_type9ValueTypeE",
+      exportId: "_CN15ohos.value_type9ValueTypeE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU",
+      hash: {
+        instVar: 4694378178172105586,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          60,
+          62,
+          64,
+          66,
+          68,
+          70,
+          72,
+          74,
+          76,
+          78,
+          80
+        ],
+        hasArguments: true,
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 2,
+          pkgId: 0,
+          line: 128,
+          column: 7,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678158463930464,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN15ohos.value_type10Parameters6<init>HRNat6StringENNY_9ValueTypeE",
+      exportId: "_CN15ohos.value_type10Parameters6<init>HRNat6StringENNY_9ValueTypeE",
+      mangledBeforeSema: "15ohos.value_type10ParametersS10ParametersY6String!RL3key9ValueType!RL5value",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                20,
+                21
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 34,
+        ignore: false
+      },
+      identifier: "key",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN15ohos.value_type10Parameters4initHRNat6StringENNY_9ValueTypeEE3keyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 39,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN15ohos.value_type10Parameters4initHRNat6StringENNY_9ValueTypeEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 24,
+        ignore: false
+      },
+      identifier: "valueType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 62,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138062848032,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type11CParameters9valueTypeK_E",
+      mangledBeforeSema: "15ohos.value_type11CParametersS9valueTypeV$$a",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 21,
+        ignore: false
+      },
+      identifier: "key",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138062848032,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type11CParameters3keyK_E",
+      mangledBeforeSema: "15ohos.value_type11CParametersS3keyV$$7CString",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 30,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138062848032,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type11CParameters5valueK_E",
+      mangledBeforeSema: "15ohos.value_type11CParametersS5valueV$$8CPointer<u>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 20,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        144678138062848032,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type11CParameters4sizeK_E",
+      mangledBeforeSema: "15ohos.value_type11CParametersS4sizeV$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 75,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140210331680,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN15ohos.value_type11CParameters6<init>HRNY_10ParametersE",
+      exportId: "_CN15ohos.value_type11CParameters6<init>HRNY_10ParametersE",
+      mangledBeforeSema: "15ohos.value_type11CParametersS6<init>F10Parameters$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 6515550760750473837
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                27
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 23,
+        ignore: false
+      },
+      identifier: "p",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN15ohos.value_type11CParameters4initHRNY_10ParametersEE1pE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 6,
+        ignore: false
+      },
+      identifier: "free",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 77,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138062848032,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN15ohos.value_type11CParameters4freeHv",
+      exportId: "_CN15ohos.value_type11CParameters4freeHv",
+      mangledBeforeSema: "15ohos.value_type11CParametersS4freeF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 2582880178738071743
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toArrString",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138062848032,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN15ohos.value_type11CParameters11toArrStringHv",
+      exportId: "_CN15ohos.value_type11CParameters11toArrStringHv",
+      mangledBeforeSema: "15ohos.value_type11CParametersS11toArrStringF$$5Array<6String>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 7614214522947345836
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          31
+        ],
+        constraints: [
+          {
+            begin: {
+              file: 1,
+              pkgId: 0,
+              line: 103,
+              column: 37,
+              ignore: false
+            },
+            end: {
+              file: 1,
+              pkgId: 0,
+              line: 103,
+              column: 48,
+              ignore: false
+            },
+            type: 18,
+            uppers: [
+              19
+            ]
+          }
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toArr",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138062848160,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type11CParameters5toArrIG_Hv",
+      mangledBeforeSema: "15ohos.value_type11CParametersS5toArr<1T>F$$5Array<1T>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 15842090036009090233,
+        srcUse: 0,
+        bodyHash: 7757703051164374163
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 17,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 103,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CArrParameters",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144686934122303536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN15ohos.value_type14CArrParametersE",
+      exportId: "_CN15ohos.value_type14CArrParametersE",
+      mangledBeforeSema: "15ohos.value_type14CArrParametersS",
+      hash: {
+        instVar: 17601909467659032735,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 10905509230326462567
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          33,
+          34,
+          35,
+          36
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 124,
+        column: 6,
+        ignore: false
+      },
+      identifier: "free",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 117,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        144678138062835744,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN15ohos.value_type14CArrParameters4freeHv",
+      exportId: "_CN15ohos.value_type14CArrParameters4freeHv",
+      mangledBeforeSema: "15ohos.value_type14CArrParametersS4freeF$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 13955438416952118005
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 50,
+        ignore: false
+      },
+      identifier: "head",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678155242704992,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type14CArrParameters4headK_E",
+      mangledBeforeSema: "15ohos.value_type14CArrParametersS4head$$8CPointer<11CParameters>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 34,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678155242704992,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type14CArrParameters4sizeK_E",
+      mangledBeforeSema: "15ohos.value_type14CArrParametersS4size$$l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 115,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678158463930464,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN15ohos.value_type14CArrParameters6<init>HPRNY_11CParametersEl",
+      exportId: "_CN15ohos.value_type14CArrParameters6<init>HPRNY_11CParametersEl",
+      mangledBeforeSema: "15ohos.value_type14CArrParametersS14CArrParametersY8CPointer<11CParameters>!RL4headl!RL4size",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                37,
+                38
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 20
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 50,
+        ignore: false
+      },
+      identifier: "head",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN15ohos.value_type14CArrParameters4initHPRNY_11CParametersElE4headIY4_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 34,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 114,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN15ohos.value_type14CArrParameters4initHPRNY_11CParametersElE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 143,
+        column: 2,
+        ignore: false
+      },
+      identifier: "createCArrParam",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678138033475632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN15ohos.value_type15createCArrParamHCNac7HashMapIRNat6StringENNY_9ValueTypeEE",
+      exportId: "_CN15ohos.value_type15createCArrParamHCNac7HashMapIRNat6StringENNY_9ValueTypeEE",
+      mangledBeforeSema: "15ohos.value_type15createCArrParamF7HashMap<6String9ValueType>$$14CArrParameters",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 16486965655967756983
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                40
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 20
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 77,
+        ignore: false
+      },
+      identifier: "parameters",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 127,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "_CN15ohos.value_type15createCArrParamHCNac7HashMapIRNat6StringENNY_9ValueTypeEEE10parametersIY5_Y8_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 2,
+        ignore: false
+      },
+      identifier: "freeCArrParam",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138033487920,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN15ohos.value_type13freeCArrParamHPRNY_11CParametersEl",
+      exportId: "_CN15ohos.value_type13freeCArrParamHPRNY_11CParametersEl",
+      mangledBeforeSema: "15ohos.value_type13freeCArrParamF8CPointer<11CParameters>l$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 2590501405955431213
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                42,
+                43
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 52,
+        ignore: false
+      },
+      identifier: "cp",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CN15ohos.value_type13freeCArrParamHPRNY_11CParametersElE2cpIY3_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 66,
+        ignore: false
+      },
+      identifier: "index",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 145,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN15ohos.value_type13freeCArrParamHPRNY_11CParametersElE5indexE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          45
+        ],
+        constraints: [
+          {
+            begin: {
+              file: 1,
+              pkgId: 0,
+              line: 151,
+              column: 58,
+              ignore: false
+            },
+            end: {
+              file: 1,
+              pkgId: 0,
+              line: 151,
+              column: 69,
+              ignore: false
+            },
+            type: 27,
+            uppers: [
+              19
+            ]
+          }
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 2,
+        ignore: false
+      },
+      identifier: "createPtr",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138033488048,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type9createPtrIG_HG_",
+      mangledBeforeSema: "15ohos.value_type9createPtr<1T>F1T$$8CPointer<u>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 15842090036009090233,
+        srcUse: 0,
+        bodyHash: 12686455553096798400
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                46
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 24,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 34,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 151,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          48
+        ],
+        constraints: [
+          {
+            begin: {
+              file: 1,
+              pkgId: 0,
+              line: 157,
+              column: 68,
+              ignore: false
+            },
+            end: {
+              file: 1,
+              pkgId: 0,
+              line: 157,
+              column: 79,
+              ignore: false
+            },
+            type: 30,
+            uppers: [
+              19
+            ]
+          }
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 2,
+        ignore: false
+      },
+      identifier: "createArrPtr",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138033488048,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type12createArrPtrIG_HRNat5ArrayIG_E",
+      mangledBeforeSema: "15ohos.value_type12createArrPtr<1T>F5Array<1T>$$8CPointer<u>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 15842090036009090233,
+        srcUse: 0,
+        bodyHash: 14951769432226680573
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                49
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 9
+        }
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 27,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 44,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 2,
+        ignore: false
+      },
+      identifier: "createCpCString",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678138033475632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN15ohos.value_type15createCpCStringHRNat5ArrayIRNat6StringEE",
+      exportId: "_CN15ohos.value_type15createCpCStringHRNat5ArrayIRNat6StringEE",
+      mangledBeforeSema: "15ohos.value_type15createCpCStringF5Array<6String>$$8CPointer<7CString>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 3857200995466348138
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                51
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 32
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 59,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN15ohos.value_type15createCpCStringHRNat5ArrayIRNat6StringEEE5valueIY5_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 2,
+        ignore: false
+      },
+      identifier: "freeCpCString",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138033487920,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CN15ohos.value_type13freeCpCStringHPkl",
+      exportId: "_CN15ohos.value_type13freeCpCStringHPkl",
+      mangledBeforeSema: "15ohos.value_type13freeCpCStringF8CPointer<7CString>l$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3870486863459011141
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53,
+                54
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 48,
+        ignore: false
+      },
+      identifier: "cp",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN15ohos.value_type13freeCpCStringHPklE2cpIkE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 62,
+        ignore: false
+      },
+      identifier: "index",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN15ohos.value_type13freeCpCStringHPklE5indexE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      generic: {
+        typeParameters: [
+          56
+        ],
+        constraints: [
+
+        ]
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 2,
+        ignore: false
+      },
+      identifier: "throwIfEmpty",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293744,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "",
+      exportId: "_CN15ohos.value_type12throwIfEmptyIG_HRNat5ArrayIG_E",
+      mangledBeforeSema: "15ohos.value_type12throwIfEmpty<1T>F5Array<1T>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2344452922860245798,
+        srcUse: 0,
+        bodyHash: 15291683438564758751
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                57
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "GenericParamDecl",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 20,
+        ignore: false
+      },
+      identifier: "T",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        562949953421312,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 22,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 35,
+        ignore: false
+      },
+      identifier: "arr",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 22,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 223,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 37,
+      mangledName: "_CN15ohos.value_type8getValueHNNY_9ValueTypeE",
+      exportId: "_CN15ohos.value_type8getValueHNNY_9ValueTypeE",
+      mangledBeforeSema: "15ohos.value_type8getValueF9ValueType$$T3_a8CPointer<u>l",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 13337417781220522379
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                59
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 38
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 15,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 31,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 191,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN15ohos.value_type8getValueHNNY_9ValueTypeEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 22,
+        ignore: false
+      },
+      identifier: "Int32Value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 15
+            },
+            {
+              name: "stagemodelonly",
+              expr: 16
+            },
+            {
+              name: "syscap",
+              expr: 17
+            }
+          ]
+        }
+      ],
+      type: 39,
+      mangledName: "_CN15ohos.value_type9ValueType10Int32ValueHi",
+      exportId: "_CN15ohos.value_type9ValueType10Int32ValueHi",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU10Int32ValueFi$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                61
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 21,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CN15ohos.value_type9ValueType10Int32ValueHiE2p1E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 26,
+        ignore: false
+      },
+      identifier: "Float64Value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 18
+            },
+            {
+              name: "stagemodelonly",
+              expr: 19
+            },
+            {
+              name: "syscap",
+              expr: 20
+            }
+          ]
+        }
+      ],
+      type: 41,
+      mangledName: "_CN15ohos.value_type9ValueType12Float64ValueHd",
+      exportId: "_CN15ohos.value_type9ValueType12Float64ValueHd",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU12Float64ValueFd$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                63
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 25,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 46,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CN15ohos.value_type9ValueType12Float64ValueHdE2p1E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 24,
+        ignore: false
+      },
+      identifier: "StringValue",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 21
+            },
+            {
+              name: "stagemodelonly",
+              expr: 22
+            },
+            {
+              name: "syscap",
+              expr: 23
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN15ohos.value_type9ValueType11StringValueHRNat6StringE",
+      exportId: "_CN15ohos.value_type9ValueType11StringValueHRNat6StringE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU11StringValueF6String$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                65
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 23,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 55,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN15ohos.value_type9ValueType11StringValueHRNat6StringEE2p1E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 20,
+        ignore: false
+      },
+      identifier: "BoolValue",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 24
+            },
+            {
+              name: "stagemodelonly",
+              expr: 25
+            },
+            {
+              name: "syscap",
+              expr: 26
+            }
+          ]
+        }
+      ],
+      type: 44,
+      mangledName: "_CN15ohos.value_type9ValueType9BoolValueHb",
+      exportId: "_CN15ohos.value_type9ValueType9BoolValueHb",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU9BoolValueFb$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                67
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 15,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 19,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 64,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN15ohos.value_type9ValueType9BoolValueHbE2p1E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 14,
+        ignore: false
+      },
+      identifier: "FD",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 27
+            },
+            {
+              name: "stagemodelonly",
+              expr: 28
+            },
+            {
+              name: "syscap",
+              expr: 29
+            }
+          ]
+        }
+      ],
+      type: 39,
+      mangledName: "_CN15ohos.value_type9ValueType2FDHi",
+      exportId: "_CN15ohos.value_type9ValueType2FDHi",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU2FDFi$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                69
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 8,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 13,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 73,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CN15ohos.value_type9ValueType2FDHiE2p1E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 31,
+        ignore: false
+      },
+      identifier: "ArrayString",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 30
+            },
+            {
+              name: "stagemodelonly",
+              expr: 31
+            },
+            {
+              name: "syscap",
+              expr: 32
+            }
+          ]
+        }
+      ],
+      type: 46,
+      mangledName: "_CN15ohos.value_type9ValueType11ArrayStringHRNat5ArrayIRNat6StringEE",
+      exportId: "_CN15ohos.value_type9ValueType11ArrayStringHRNat5ArrayIRNat6StringEE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU11ArrayStringF5Array<6String>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                71
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 30,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 82,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN15ohos.value_type9ValueType11ArrayStringHRNat5ArrayIRNat6StringEEE2p1IY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 29,
+        ignore: false
+      },
+      identifier: "ArrayInt32",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 33
+            },
+            {
+              name: "stagemodelonly",
+              expr: 34
+            },
+            {
+              name: "syscap",
+              expr: 35
+            }
+          ]
+        }
+      ],
+      type: 47,
+      mangledName: "_CN15ohos.value_type9ValueType10ArrayInt32HRNat5ArrayIiE",
+      exportId: "_CN15ohos.value_type9ValueType10ArrayInt32HRNat5ArrayIiE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU10ArrayInt32F5Array<i>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                73
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 28,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 91,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN15ohos.value_type9ValueType10ArrayInt32HRNat5ArrayIiEE2p1IiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 100,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 100,
+        column: 29,
+        ignore: false
+      },
+      identifier: "ArrayInt64",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 100,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 36
+            },
+            {
+              name: "stagemodelonly",
+              expr: 37
+            },
+            {
+              name: "syscap",
+              expr: 38
+            }
+          ]
+        }
+      ],
+      type: 49,
+      mangledName: "_CN15ohos.value_type9ValueType10ArrayInt64HRNat5ArrayIlE",
+      exportId: "_CN15ohos.value_type9ValueType10ArrayInt64HRNat5ArrayIlE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU10ArrayInt64F5Array<l>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                75
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 100,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 100,
+        column: 28,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 100,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 50,
+      mangledName: "_CN15ohos.value_type9ValueType10ArrayInt64HRNat5ArrayIlEE2p1IlE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 27,
+        ignore: false
+      },
+      identifier: "ArrayBool",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 39
+            },
+            {
+              name: "stagemodelonly",
+              expr: 40
+            },
+            {
+              name: "syscap",
+              expr: 41
+            }
+          ]
+        }
+      ],
+      type: 51,
+      mangledName: "_CN15ohos.value_type9ValueType9ArrayBoolHRNat5ArrayIbE",
+      exportId: "_CN15ohos.value_type9ValueType9ArrayBoolHRNat5ArrayIbE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU9ArrayBoolF5Array<b>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                77
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 15,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 26,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 109,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 52,
+      mangledName: "_CN15ohos.value_type9ValueType9ArrayBoolHRNat5ArrayIbEE2p1IbE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 33,
+        ignore: false
+      },
+      identifier: "ArrayFloat64",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 42
+            },
+            {
+              name: "stagemodelonly",
+              expr: 43
+            },
+            {
+              name: "syscap",
+              expr: 44
+            }
+          ]
+        }
+      ],
+      type: 53,
+      mangledName: "_CN15ohos.value_type9ValueType12ArrayFloat64HRNat5ArrayIdE",
+      exportId: "_CN15ohos.value_type9ValueType12ArrayFloat64HRNat5ArrayIdE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU12ArrayFloat64F5Array<d>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 32,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 118,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 54,
+      mangledName: "_CN15ohos.value_type9ValueType12ArrayFloat64HRNat5ArrayIdEE2p1IdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.value_type",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 26,
+        ignore: false
+      },
+      identifier: "ArrayFD",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        4429186080,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 45
+            },
+            {
+              name: "stagemodelonly",
+              expr: 46
+            },
+            {
+              name: "syscap",
+              expr: 47
+            }
+          ]
+        }
+      ],
+      type: 47,
+      mangledName: "_CN15ohos.value_type9ValueType7ArrayFDHRNat5ArrayIiE",
+      exportId: "_CN15ohos.value_type9ValueType7ArrayFDHRNat5ArrayIiE",
+      mangledBeforeSema: "15ohos.value_type9ValueTypeU7ArrayFDF5Array<i>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4178370849353376641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.value_type",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 25,
+        ignore: false
+      },
+      identifier: "p1",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 127,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        0,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN15ohos.value_type9ValueType7ArrayFDHRNat5ArrayIiEE2p1IiE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 25,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 25,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "1"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 28,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "2"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 26,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "3"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 23,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 24,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "4"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 31,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "5"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 30,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "6"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 30,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "7"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 30,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 31,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "8"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 30,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "9"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 30,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "10"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 24,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 56,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 33,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 34,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 35,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 42,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 43,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 44,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 51,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 51,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 52,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 52,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 60,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 60,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 61,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 61,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 62,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 62,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 69,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 69,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 70,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 70,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 71,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 78,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 78,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 79,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 79,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 80,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 80,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 87,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 87,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 88,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 88,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 89,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 89,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 96,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 96,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 97,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 97,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 98,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 98,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 105,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 106,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 106,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 107,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 107,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 114,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 114,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 115,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 116,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 123,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 123,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 124,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 124,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 125,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 125,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Notification.CommonEvent",
+        constKind: "String"
+      }
+    }
+  ],
+  access: "Protected",
+  moduleName: ""
+}

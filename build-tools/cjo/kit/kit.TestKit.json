@@ -6,10 +6,10 @@
     patch_num: 0
   },
   fullPkgName: "kit.TestKit",
-  pkgDepInfo: "{\"package\":\"kit.TestKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.ability_delegator_registry\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":48}}]},{\"package\":\"ohos.test_runner\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":33}}]},{\"package\":\"ohos.ui_test\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":29}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.TestKit\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.app.ability.ability_delegator_registry\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":60}}]},{\"package\":\"ohos.application.test_runner\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":45}}]},{\"package\":\"ohos.ui_test\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":29}}]}]}",
   imports: [
-    "ohos.ability_delegator_registry",
-    "ohos.test_runner",
+    "ohos.app.ability.ability_delegator_registry",
+    "ohos.application.test_runner",
     "ohos.ui_test"
   ],
   allFiles: [
@@ -30,11 +30,13 @@
             file: 1,
             pkgId: 0,
             line: 18,
-            column: 48,
+            column: 60,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "app",
+            "ability",
             "ability_delegator_registry"
           ],
           identifier: "*",
@@ -53,11 +55,12 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 33,
+            column: 45,
             ignore: false
           },
           prefixPaths: [
             "ohos",
+            "application",
             "test_runner"
           ],
           identifier: "*",

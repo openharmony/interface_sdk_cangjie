@@ -1,0 +1,3178 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.app.ability.want_constant",
+  pkgDepInfo: "{\"package\":\"ohos.app.ability.want_constant\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"want_constant.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":21}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"want_constant.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":27}}]}]}",
+  imports: [
+    "ohos.app.ability.want_constant",
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.app.ability.want_constant/want_constant.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "deriving"
+          ],
+          identifier: "Derive",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat8ToStringE"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        1
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 17
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        8
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 31,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 107,
+        column: 13,
+        ignore: false
+      },
+      identifier: "Params",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 31,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.want_constant6ParamsE",
+      exportId: "_CN30ohos.app.ability.want_constant6ParamsE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU",
+      hash: {
+        instVar: 14524868310072720716,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 9992312975345912835
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 26,
+          column: 1806,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 46,
+        ignore: false
+      },
+      identifier: "AbilityBackToOtherMissionStack",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params30AbilityBackToOtherMissionStackKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU30AbilityBackToOtherMissionStackV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 46,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 46,
+        column: 38,
+        ignore: false
+      },
+      identifier: "AbilityRecoveryRestart",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 46,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params22AbilityRecoveryRestartKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU22AbilityRecoveryRestartV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
+        column: 31,
+        ignore: false
+      },
+      identifier: "ContentTitleKey",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params15ContentTitleKeyKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU15ContentTitleKeyV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 62,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 62,
+        column: 32,
+        ignore: false
+      },
+      identifier: "ShareAbstractKey",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 62,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params16ShareAbstractKeyKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU16ShareAbstractKeyV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 70,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 70,
+        column: 27,
+        ignore: false
+      },
+      identifier: "ShareUrlKey",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 70,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params11ShareUrlKeyKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU11ShareUrlKeyV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 78,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 78,
+        column: 43,
+        ignore: false
+      },
+      identifier: "SupportContinuePageStackKey",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 78,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params27SupportContinuePageStackKeyKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU27SupportContinuePageStackKeyV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 86,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 86,
+        column: 44,
+        ignore: false
+      },
+      identifier: "SupportContinueSourceExitKey",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 86,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant6Params28SupportContinueSourceExitKeyKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU28SupportContinueSourceExitKeyV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 95,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 106,
+        column: 17,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 95,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        144678413041402912,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 25
+            },
+            {
+              name: "stagemodelonly",
+              expr: 26
+            },
+            {
+              name: "syscap",
+              expr: 27
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "_CN30ohos.app.ability.want_constant6Params8getValueHv",
+      exportId: "_CN30ohos.app.ability.want_constant6Params8getValueHv",
+      mangledBeforeSema: "30ohos.app.ability.want_constant6ParamsU8getValueF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 18219801272621232046
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 108,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 131,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 108,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_6ParamsEU00000003Ph4EfK_E",
+      mangledBeforeSema: "6Params<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          4
+        ],
+        body: [
+          11
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 109,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 130,
+        column: 18,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 109,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_6ParamsE8toStringHv",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_6ParamsE8toStringHv",
+      mangledBeforeSema: "30ohos.app.ability.want_constant7Extend!6Params<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2341210234946790114
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 132,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 148,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 132,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_6ParamsEU00000003Ph4EfK0_E",
+      mangledBeforeSema: "6Params<:9Equatable<6Params>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 9284332390361620296
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          13,
+          15
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 133,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 144,
+        column: 18,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 133,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_6ParamsEeqHY1_",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_6ParamsEeqHY1_",
+      mangledBeforeSema: "30ohos.app.ability.want_constant7Extend!6Params<:9Equatable<6Params>X2==F6Params$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14832406327515038504
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 133,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 133,
+        column: 54,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 133,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_6ParamsE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 145,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 147,
+        column: 18,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 145,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_6ParamsEneHY1_",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_6ParamsEneHY1_",
+      mangledBeforeSema: "30ohos.app.ability.want_constant7Extend!6Params<:9Equatable<6Params>X2!=F6Params$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4279743700311853751
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 145,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 145,
+        column: 54,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 145,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_6ParamsE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 161,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 219,
+        column: 14,
+        ignore: false
+      },
+      identifier: "Flags",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 161,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 28
+            },
+            {
+              name: "stagemodelonly",
+              expr: 29
+            },
+            {
+              name: "syscap",
+              expr: 30
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "_CN30ohos.app.ability.want_constant5FlagsE",
+      exportId: "_CN30ohos.app.ability.want_constant5FlagsE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU",
+      hash: {
+        instVar: 2472068505847781608,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 12735843392118359847
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 152,
+          column: 1412,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 168,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 168,
+        column: 42,
+        ignore: false
+      },
+      identifier: "FlagAuthReadUriPermission",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 168,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 31
+            },
+            {
+              name: "stagemodelonly",
+              expr: 32
+            },
+            {
+              name: "syscap",
+              expr: 33
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant5Flags25FlagAuthReadUriPermissionKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU25FlagAuthReadUriPermissionV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 176,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 176,
+        column: 43,
+        ignore: false
+      },
+      identifier: "FlagAuthWriteUriPermission",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 176,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 34
+            },
+            {
+              name: "stagemodelonly",
+              expr: 35
+            },
+            {
+              name: "syscap",
+              expr: 36
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant5Flags26FlagAuthWriteUriPermissionKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU26FlagAuthWriteUriPermissionV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 184,
+        column: 49,
+        ignore: false
+      },
+      identifier: "FlagAuthPersistableUriPermission",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 37
+            },
+            {
+              name: "stagemodelonly",
+              expr: 38
+            },
+            {
+              name: "syscap",
+              expr: 39
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant5Flags32FlagAuthPersistableUriPermissionKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU32FlagAuthPersistableUriPermissionV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 192,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 192,
+        column: 36,
+        ignore: false
+      },
+      identifier: "FlagInstallOnDemand",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 192,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 40
+            },
+            {
+              name: "stagemodelonly",
+              expr: 41
+            },
+            {
+              name: "syscap",
+              expr: 42
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant5Flags19FlagInstallOnDemandKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU19FlagInstallOnDemandV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 200,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 200,
+        column: 37,
+        ignore: false
+      },
+      identifier: "FlagStartWithoutTips",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 200,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 43
+            },
+            {
+              name: "stagemodelonly",
+              expr: 44
+            },
+            {
+              name: "syscap",
+              expr: 45
+            }
+          ]
+        }
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constant5Flags20FlagStartWithoutTipsKE",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU20FlagStartWithoutTipsV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 7067837701268859895
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 218,
+        column: 18,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678413041402912,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 46
+            },
+            {
+              name: "stagemodelonly",
+              expr: 47
+            },
+            {
+              name: "syscap",
+              expr: 48
+            }
+          ]
+        }
+      ],
+      type: 9,
+      mangledName: "_CN30ohos.app.ability.want_constant5Flags8getValueHv",
+      exportId: "_CN30ohos.app.ability.want_constant5Flags8getValueHv",
+      mangledBeforeSema: "30ohos.app.ability.want_constant5FlagsU8getValueF$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13321136025929137342
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 10
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 220,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 239,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 220,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_5FlagsEU00000003Ph4EfK_E",
+      mangledBeforeSema: "5Flags<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          4
+        ],
+        body: [
+          25
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 221,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 238,
+        column: 18,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 221,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_5FlagsE8toStringHv",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_5FlagsE8toStringHv",
+      mangledBeforeSema: "30ohos.app.ability.want_constant7Extend!5Flags<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2124746966138853965
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 240,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 254,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 240,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_5FlagsEU00000003Ph4EfK0_E",
+      mangledBeforeSema: "5Flags<:9Equatable<5Flags>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 5554279978522986635
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          11
+        ],
+        body: [
+          27,
+          29
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 241,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 250,
+        column: 18,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 241,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_5FlagsEeqHY1_",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_5FlagsEeqHY1_",
+      mangledBeforeSema: "30ohos.app.ability.want_constant7Extend!5Flags<:9Equatable<5Flags>X2==F5Flags$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8202109862223047183
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 241,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 241,
+        column: 53,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 241,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_5FlagsE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.want_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 251,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 253,
+        column: 18,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 251,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_5FlagsEneHY1_",
+      exportId: "_CN30ohos.app.ability.want_constantXNNY_5FlagsEneHY1_",
+      mangledBeforeSema: "30ohos.app.ability.want_constant7Extend!5Flags<:9Equatable<5Flags>X2!=F5Flags$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7110715426304844518
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 7
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.want_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 251,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 251,
+        column: 53,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 251,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN30ohos.app.ability.want_constantXNNY_5FlagsE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 27,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 28,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 28,
+        column: 31,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 29,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 29,
+        column: 57,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 34,
+        column: 15,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 34,
+        column: 17,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 35,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 35,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 36,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 36,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 42,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 42,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 43,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 43,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 44,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 44,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 50,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 50,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 51,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 51,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 52,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 52,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 58,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 58,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 59,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 59,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 60,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 60,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 66,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 66,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 67,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 67,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 68,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 68,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 74,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 74,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 75,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 75,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 82,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 82,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 83,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 83,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 84,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 84,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 91,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 91,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 92,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 92,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 93,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 93,
+        column: 62,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 157,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 157,
+        column: 14,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 158,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 158,
+        column: 32,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 159,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 159,
+        column: 58,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 164,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 164,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 165,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 165,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 166,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 166,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 172,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 172,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 173,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 173,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 174,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 174,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 180,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 180,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 181,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 181,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 182,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 182,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 188,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 188,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 189,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 189,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 190,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 190,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 196,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 196,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 197,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 197,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 198,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 198,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 205,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 205,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 206,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 206,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 207,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 207,
+        column: 63,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityBase",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

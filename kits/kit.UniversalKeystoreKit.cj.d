@@ -14,6 +14,6 @@
  */
 
 package kit.UniversalKeystoreKit
-public import ohos.security_huks.*
+public import ohos.security.huks.*
 
 

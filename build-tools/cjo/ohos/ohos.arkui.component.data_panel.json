@@ -1,0 +1,7848 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.data_panel",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.data_panel\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_data_panel.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_data_panel.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_data_panel.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_data_panel.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]}]}",
+  imports: [
+    "ohos.base",
+    "std.core",
+    "ohos.arkui.component.common"
+  ],
+  allFiles: [
+    "ohos.arkui.component.data_panel/cj_data_panel.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        3
+      ]
+    },
+    {
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 2
+        }
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5,
+        6,
+        5,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 12
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        6,
+        6,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        11,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        6,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 45
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        22,
+        23
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 21
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 51
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        21
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        22
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 58
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 31
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 31
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        11,
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 69
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        26
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        23,
+        38,
+        23,
+        23
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        23
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 38
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        23,
+        38
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        23,
+        38,
+        23
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common18MultiShadowOptionsE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 86
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        47,
+        6,
+        48
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 45
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        6
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common13DataPanelTypeE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        47
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        47,
+        6
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 48
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 52
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 86
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        38
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 52
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        22
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 52
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        23
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 52
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        37
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 52
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common8ViewBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 55,
+        ignore: false
+      },
+      identifier: "VectorNativeLinearGradientHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 23,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293584,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel32VectorNativeLinearGradientHandleE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel32VectorNativeLinearGradientHandleT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 5551473034810251168,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 2
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 2,
+        ignore: false
+      },
+      identifier: "NativeLinearGradient",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN31ohos.arkui.component.data_panel20NativeLinearGradientE",
+      exportId: "_CN31ohos.arkui.component.data_panel20NativeLinearGradientE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel20NativeLinearGradientS",
+      hash: {
+        instVar: 7670372247337852059,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 31,
+        ignore: false
+      },
+      identifier: "firstColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient10firstColorK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel20NativeLinearGradientS10firstColor$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 33,
+        ignore: false
+      },
+      identifier: "firstOffset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient11firstOffsetK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel20NativeLinearGradientS11firstOffset$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 32,
+        ignore: false
+      },
+      identifier: "secondColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient11secondColorK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel20NativeLinearGradientS11secondColor$$j",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 34,
+        ignore: false
+      },
+      identifier: "secondOffset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient12secondOffsetK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel20NativeLinearGradientS12secondOffset$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient6<init>Hjdjd",
+      exportId: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient6<init>Hjdjd",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel20NativeLinearGradientS20NativeLinearGradientYj!L10firstColord!L11firstOffsetj!L11secondColord!L12secondOffset",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                9,
+                10,
+                11
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 31,
+        ignore: false
+      },
+      identifier: "firstColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient4initHjdjdE10firstColorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 33,
+        ignore: false
+      },
+      identifier: "firstOffset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient4initHjdjdE11firstOffsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 32,
+        ignore: false
+      },
+      identifier: "secondColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient4initHjdjdE11secondColorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 34,
+        ignore: false
+      },
+      identifier: "secondOffset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel20NativeLinearGradient4initHjdjdE12secondOffsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 2,
+        ignore: false
+      },
+      identifier: "NativeDataPanelShadow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadowE",
+      exportId: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadowE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel21NativeDataPanelShadowS",
+      hash: {
+        instVar: 12188174027374176746,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 28,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow6radiusK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel21NativeDataPanelShadowS6radius$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 29,
+        ignore: false
+      },
+      identifier: "offsetX",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow7offsetXK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel21NativeDataPanelShadowS7offsetX$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 29,
+        ignore: false
+      },
+      identifier: "offsetY",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow7offsetYK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel21NativeDataPanelShadowS7offsetY$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 53,
+        ignore: false
+      },
+      identifier: "colors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow6colorsK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel21NativeDataPanelShadowS6colors$$32VectorNativeLinearGradientHandle",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow6<init>HdddPu",
+      exportId: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow6<init>HdddPu",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel21NativeDataPanelShadowS21NativeDataPanelShadowYd!L6radiusd!L7offsetXd!L7offsetY32VectorNativeLinearGradientHandle!L6colors",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18,
+                19,
+                20,
+                21
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 28,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow4initHdddPuE6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 29,
+        ignore: false
+      },
+      identifier: "offsetX",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow4initHdddPuE7offsetXE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 29,
+        ignore: false
+      },
+      identifier: "offsetY",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow4initHdddPuE7offsetYE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 53,
+        ignore: false
+      },
+      identifier: "colors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN31ohos.arkui.component.data_panel21NativeDataPanelShadow4initHdddPuE6colorsIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 94,
+        ignore: false
+      },
+      identifier: "FFICJCreateVectorNativeLinearGradient",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FFICJCreateVectorNativeLinearGradient",
+      exportId: "FFICJCreateVectorNativeLinearGradient",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel37FFICJCreateVectorNativeLinearGradientFl$$32VectorNativeLinearGradientHandle",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 15872513787347707347
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                23
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 59,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN31ohos.arkui.component.data_panel37FFICJCreateVectorNativeLinearGradientHlE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 52,
+        ignore: false
+      },
+      identifier: "FFICJVectorNativeLinearGradientSetElement",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FFICJVectorNativeLinearGradientSetElement",
+      exportId: "FFICJVectorNativeLinearGradientSetElement",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel41FFICJVectorNativeLinearGradientSetElementF32VectorNativeLinearGradientHandlel20NativeLinearGradient$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10930310240938439818
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                25,
+                26,
+                27
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 89,
+        ignore: false
+      },
+      identifier: "vec",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN31ohos.arkui.component.data_panel41FFICJVectorNativeLinearGradientSetElementHPulRNY_20NativeLinearGradientEE3vecIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 91,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 103,
+        ignore: false
+      },
+      identifier: "index",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 48,
+        column: 91,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN31ohos.arkui.component.data_panel41FFICJVectorNativeLinearGradientSetElementHPulRNY_20NativeLinearGradientEE5indexE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 45,
+        ignore: false
+      },
+      identifier: "linearGradient",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN31ohos.arkui.component.data_panel41FFICJVectorNativeLinearGradientSetElementHPulRNY_20NativeLinearGradientEE14linearGradientE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 92,
+        ignore: false
+      },
+      identifier: "FFICJVectorNativeLinearGradientDelete",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FFICJVectorNativeLinearGradientDelete",
+      exportId: "FFICJVectorNativeLinearGradientDelete",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel37FFICJVectorNativeLinearGradientDeleteF32VectorNativeLinearGradientHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 152954416589269567
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                29
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 85,
+        ignore: false
+      },
+      identifier: "vec",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN31ohos.arkui.component.data_panel37FFICJVectorNativeLinearGradientDeleteHPuE3vecIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 111,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkDataPanelCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSAceFrameworkDataPanelCreate",
+      exportId: "FfiOHOSAceFrameworkDataPanelCreate",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel34FfiOHOSAceFrameworkDataPanelCreateF19VectorFloat64Handledi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 10110734451692652652
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                31,
+                32,
+                33
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 72,
+        ignore: false
+      },
+      identifier: "values",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN31ohos.arkui.component.data_panel34FfiOHOSAceFrameworkDataPanelCreateHPudiE6valuesIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 74,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 86,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 74,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel34FfiOHOSAceFrameworkDataPanelCreateHPudiE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 88,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 104,
+        ignore: false
+      },
+      identifier: "panelType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 88,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN31ohos.arkui.component.data_panel34FfiOHOSAceFrameworkDataPanelCreateHPudiE9panelTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 71,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkDataPanelSetCloseEffect",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiOHOSAceFrameworkDataPanelSetCloseEffect",
+      exportId: "FfiOHOSAceFrameworkDataPanelSetCloseEffect",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetCloseEffectFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 64,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 55,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetCloseEffectHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 99,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkDataPanelSetValueColors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "FfiOHOSAceFrameworkDataPanelSetValueColors",
+      exportId: "FfiOHOSAceFrameworkDataPanelSetValueColors",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetValueColorsF32VectorNativeLinearGradientHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                37
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 92,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetValueColorsHPuE5valueIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 82,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkDataPanelSetTrackBackgroundColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "FfiOHOSAceFrameworkDataPanelSetTrackBackgroundColor",
+      exportId: "FfiOHOSAceFrameworkDataPanelSetTrackBackgroundColor",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel51FfiOHOSAceFrameworkDataPanelSetTrackBackgroundColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                39
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 75,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 59,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN31ohos.arkui.component.data_panel51FfiOHOSAceFrameworkDataPanelSetTrackBackgroundColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 98,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkDataPanelSetStrokeWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "FfiOHOSAceFrameworkDataPanelSetStrokeWidth",
+      exportId: "FfiOHOSAceFrameworkDataPanelSetStrokeWidth",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetStrokeWidthFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3184107479062548067
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41,
+                42
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 73,
+        ignore: false
+      },
+      identifier: "strokeWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetStrokeWidthHdiE11strokeWidthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 75,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 91,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetStrokeWidthHdiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 88,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkDataPanelSetTrackShadow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "FfiOHOSAceFrameworkDataPanelSetTrackShadow",
+      exportId: "FfiOHOSAceFrameworkDataPanelSetTrackShadow",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetTrackShadowF21NativeDataPanelShadow$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 81,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN31ohos.arkui.component.data_panel42FfiOHOSAceFrameworkDataPanelSetTrackShadowHRNY_21NativeDataPanelShadowEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 2,
+        ignore: false
+      },
+      identifier: "ColorStop",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 76,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 21,
+      mangledName: "_CN31ohos.arkui.component.data_panel9ColorStopE",
+      exportId: "_CN31ohos.arkui.component.data_panel9ColorStopE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9ColorStopC",
+      hash: {
+        instVar: 17326008356424482293,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          25
+        ],
+        body: [
+          46,
+          47,
+          48
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 36,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel9ColorStop5colorK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9ColorStopC5colorV$$13ResourceColor",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 30,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 23,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel9ColorStop6offsetK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9ColorStopC6offsetV$$6Length",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN31ohos.arkui.component.data_panel9ColorStop6<init>HCN9ohos.base13ResourceColorECNY4_6LengthE",
+      exportId: "_CN31ohos.arkui.component.data_panel9ColorStop6<init>HCN9ohos.base13ResourceColorECNY4_6LengthE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9ColorStopC6<init>F13ResourceColor6Length$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15315390043952171641
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                49,
+                50
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 21
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 37,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN31ohos.arkui.component.data_panel9ColorStop4initHCN9ohos.base13ResourceColorECNY4_6LengthEE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 53,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel9ColorStop4initHCN9ohos.base13ResourceColorECNY4_6LengthEE6offsetE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 165,
+        column: 2,
+        ignore: false
+      },
+      identifier: "LinearGradient",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 26,
+      mangledName: "_CN31ohos.arkui.component.data_panel14LinearGradientE",
+      exportId: "_CN31ohos.arkui.component.data_panel14LinearGradientE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel14LinearGradientC",
+      hash: {
+        instVar: 8407010084643524061,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          25
+        ],
+        body: [
+          52,
+          53,
+          55,
+          57
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 47,
+        ignore: false
+      },
+      identifier: "colorStops",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        144678138297716768,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel14LinearGradient10colorStopsK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel14LinearGradientC10colorStopsV$$5Array<9ColorStop>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 17327286262165285715,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 28,
+      mangledName: "_CN31ohos.arkui.component.data_panel14LinearGradient6<init>HRNat5ArrayICNY_9ColorStopEE",
+      exportId: "_CN31ohos.arkui.component.data_panel14LinearGradient6<init>HRNat5ArrayICNY_9ColorStopEE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel14LinearGradientC6<init>F5Array<9ColorStop>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3316846160339434141
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                54
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 45,
+        ignore: false
+      },
+      identifier: "colorStops",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN31ohos.arkui.component.data_panel14LinearGradient4initHRNat5ArrayICNY_9ColorStopEEE10colorStopsIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 155,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 29,
+      mangledName: "_CN31ohos.arkui.component.data_panel14LinearGradient6<init>HCN9ohos.base13ResourceColorE",
+      exportId: "_CN31ohos.arkui.component.data_panel14LinearGradient6<init>HCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel14LinearGradientC6<init>F13ResourceColor$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8283792945495864021
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                56
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 37,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 152,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN31ohos.arkui.component.data_panel14LinearGradient4initHCN9ohos.base13ResourceColorEE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 164,
+        column: 6,
+        ignore: false
+      },
+      identifier: "parseToNative",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 157,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN31ohos.arkui.component.data_panel14LinearGradient13parseToNativeHv",
+      exportId: "_CN31ohos.arkui.component.data_panel14LinearGradient13parseToNativeHv",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel14LinearGradientC13parseToNativeF$$20NativeLinearGradient",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 5571122760287684830
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 167,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 190,
+        column: 2,
+        ignore: false
+      },
+      identifier: "FFIVectorNativeLinearGradient",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 167,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 31,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientE",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC",
+      hash: {
+        instVar: 6533710049035544687,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          25
+        ],
+        body: [
+          59,
+          60,
+          62,
+          64,
+          67,
+          68
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 60,
+        ignore: false
+      },
+      identifier: "vecHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297714720,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient9vecHandleK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC9vecHandleV$$32VectorNativeLinearGradientHandle",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 13785781977040174648,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient6<init>HPu",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient6<init>HPu",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC6<init>F32VectorNativeLinearGradientHandle$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12495365258253619521
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                61
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 31
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 47,
+        ignore: false
+      },
+      identifier: "vec",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient4initHPuE3vecIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient6<init>Hl",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient6<init>Hl",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC6<init>Fl$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12666604178431296000
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                63
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 31
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 10,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 21,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient4initHlE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 6,
+        ignore: false
+      },
+      identifier: "setElement",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient10setElementHlRNY_20NativeLinearGradientE",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient10setElementHlRNY_20NativeLinearGradientE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC10setElementFl20NativeLinearGradient$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 13383705059433833266
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                65,
+                66
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 33,
+        ignore: false
+      },
+      identifier: "index",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient10setElementHlRNY_20NativeLinearGradientEE5indexE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 35,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 62,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 35,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient10setElementHlRNY_20NativeLinearGradientEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 185,
+        column: 6,
+        ignore: false
+      },
+      identifier: "free",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient4freeHv",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient4freeHv",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC4freeF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 17201382632069341806
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 189,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getNativeHandle",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138297729056,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient15getNativeHandleHv",
+      exportId: "_CN31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradient15getNativeHandleHv",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel29FFIVectorNativeLinearGradientC15getNativeHandleF$$32VectorNativeLinearGradientHandle",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 15429491620495866422
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 236,
+        column: 2,
+        ignore: false
+      },
+      identifier: "DataPanelShadowOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 37,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptionsE",
+      exportId: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptionsE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel22DataPanelShadowOptionsC",
+      hash: {
+        instVar: 1371947548682219543,
+        virt: 0,
+        sig: 9629646023945557727,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          44
+        ],
+        body: [
+          70,
+          71
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 45,
+        ignore: false
+      },
+      identifier: "colors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 217,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 25
+            },
+            {
+              name: "stagemodelonly",
+              expr: 26
+            },
+            {
+              name: "syscap",
+              expr: 27
+            }
+          ]
+        }
+      ],
+      type: 38,
+      mangledName: "",
+      exportId: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions6colorsK_E",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel22DataPanelShadowOptionsC6colorsV$$5Array<14LinearGradient>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 235,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 28
+            },
+            {
+              name: "stagemodelonly",
+              expr: 29
+            },
+            {
+              name: "syscap",
+              expr: 30
+            }
+          ]
+        }
+      ],
+      type: 39,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions6<init>HCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_",
+      exportId: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions6<init>HCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel22DataPanelShadowOptionsC6<init>F6Length!6radius=5Array<14LinearGradient>!6colors=6Length!7offsetX=6Length!7offsetY=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 16999933570823653143
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72,
+                74,
+                77,
+                81
+              ],
+              desugars: [
+                73,
+                75,
+                78,
+                82
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 35,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      identifier: "radius.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CPI31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E6radiusHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 77,
+        ignore: false
+      },
+      identifier: "colors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E6colorsIY9_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 75,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 77,
+        ignore: false
+      },
+      identifier: "colors.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 41,
+      mangledName: "_CPI31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E6colorsHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                76
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 38
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E8colors.1HY3_E6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 102,
+        ignore: false
+      },
+      identifier: "offsetX",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E7offsetXE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 98,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 102,
+        ignore: false
+      },
+      identifier: "offsetX.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CPI31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E7offsetXHY3_Y6_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79,
+                80
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E9offsetX.2HY3_Y6_E6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 77,
+        ignore: false
+      },
+      identifier: "colors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E9offsetX.2HY3_Y6_E6colorsIY9_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 104,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 127,
+        ignore: false
+      },
+      identifier: "offsetY",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 104,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E7offsetYE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 123,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 127,
+        ignore: false
+      },
+      identifier: "offsetY.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 43,
+      mangledName: "_CPI31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E7offsetYHY3_Y6_Y3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                83,
+                84,
+                85
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      identifier: "radius",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E9offsetY.3HY3_Y6_Y3_E6radiusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 77,
+        ignore: false
+      },
+      identifier: "colors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E9offsetY.3HY3_Y6_Y3_E6colorsIY9_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 102,
+        ignore: false
+      },
+      identifier: "offsetX",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel22DataPanelShadowOptions4initHCN9ohos.base6LengthERNat5ArrayICNY_14LinearGradientEEY3_Y3_E9offsetY.3HY3_Y6_Y3_E7offsetXE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 387,
+        column: 2,
+        ignore: false
+      },
+      identifier: "DataPanel",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 31
+            },
+            {
+              name: "stagemodelonly",
+              expr: 32
+            },
+            {
+              name: "syscap",
+              expr: 33
+            }
+          ]
+        }
+      ],
+      type: 45,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanelE",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanelE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 1260918797365511318,
+        srcUse: 0,
+        bodyHash: 15810668704741493598
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          57
+        ],
+        body: [
+          87,
+          96,
+          98,
+          100,
+          102,
+          104
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 272,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 34
+            },
+            {
+              name: "stagemodelonly",
+              expr: 35
+            },
+            {
+              name: "syscap",
+              expr: 36
+            }
+          ]
+        }
+      ],
+      type: 46,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel6<init>HRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeE",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanel6<init>HRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC6<init>F5Array<d>!6valuesd!3max=13DataPanelType!9panelType=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13800827946966417258
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                88,
+                89,
+                92
+              ],
+              desugars: [
+                0,
+                90,
+                93
+              ]
+            }
+          ],
+          retType: 45
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 40,
+        ignore: false
+      },
+      identifier: "values",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 47,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE6valuesIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 63,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 37
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 58,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 63,
+        ignore: false
+      },
+      identifier: "max.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 49,
+      mangledName: "_CPI31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE3maxHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                91
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 6
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 40,
+        ignore: false
+      },
+      identifier: "values",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 47,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE5max.1HY3_E6valuesIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 65,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 117,
+        ignore: false
+      },
+      identifier: "panelType",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 65,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE9panelTypeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 93,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 117,
+        ignore: false
+      },
+      identifier: "panelType.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 50,
+      mangledName: "_CPI31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE9panelTypeHY3_d",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                94,
+                95
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 48
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 40,
+        ignore: false
+      },
+      identifier: "values",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 47,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE11panelType.2HY3_dE6valuesIdE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 63,
+        ignore: false
+      },
+      identifier: "max",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel4initHRNat5ArrayIdEdNN27ohos.arkui.component.common13DataPanelTypeEE11panelType.2HY3_dE3maxE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 291,
+        column: 6,
+        ignore: false
+      },
+      identifier: "closeEffect",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 38
+            },
+            {
+              name: "stagemodelonly",
+              expr: 39
+            },
+            {
+              name: "syscap",
+              expr: 40
+            }
+          ]
+        }
+      ],
+      type: 51,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11closeEffectHb",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanel11closeEffectHb",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC11closeEffectFb$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17533515860986464989
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                97
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 52
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 40,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11closeEffectHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 305,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 315,
+        column: 6,
+        ignore: false
+      },
+      identifier: "valueColors",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 305,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 41
+            },
+            {
+              name: "stagemodelonly",
+              expr: 42
+            },
+            {
+              name: "syscap",
+              expr: 43
+            }
+          ]
+        }
+      ],
+      type: 53,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11valueColorsHRNat5ArrayICNY_14LinearGradientEE",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanel11valueColorsHRNat5ArrayICNY_14LinearGradientEE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC11valueColorsF5Array<14LinearGradient>$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15623152883818816430
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                99
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 52
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 305,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 305,
+        column: 57,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 305,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 38,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11valueColorsHRNat5ArrayICNY_14LinearGradientEEE5valueIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 329,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 334,
+        column: 6,
+        ignore: false
+      },
+      identifier: "trackBackgroundColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 329,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 44
+            },
+            {
+              name: "stagemodelonly",
+              expr: 45
+            },
+            {
+              name: "syscap",
+              expr: 46
+            }
+          ]
+        }
+      ],
+      type: 54,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel20trackBackgroundColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanel20trackBackgroundColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC20trackBackgroundColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7773353042473420683
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                101
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 52
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 329,
+        column: 38,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 329,
+        column: 58,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 329,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel20trackBackgroundColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 348,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 354,
+        column: 6,
+        ignore: false
+      },
+      identifier: "strokeWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 348,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 47
+            },
+            {
+              name: "stagemodelonly",
+              expr: 48
+            },
+            {
+              name: "syscap",
+              expr: 49
+            }
+          ]
+        }
+      ],
+      type: 55,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11strokeWidthHCN9ohos.base6LengthE",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanel11strokeWidthHCN9ohos.base6LengthE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC11strokeWidthF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14976748874697011857
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                103
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 52
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 348,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 348,
+        column: 42,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 348,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11strokeWidthHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 368,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 386,
+        column: 6,
+        ignore: false
+      },
+      identifier: "trackShadow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 368,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 50
+            },
+            {
+              name: "stagemodelonly",
+              expr: 51
+            },
+            {
+              name: "syscap",
+              expr: 52
+            }
+          ]
+        }
+      ],
+      type: 56,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11trackShadowHCNY_22DataPanelShadowOptionsE",
+      exportId: "_CN31ohos.arkui.component.data_panel9DataPanel11trackShadowHCNY_22DataPanelShadowOptionsE",
+      mangledBeforeSema: "31ohos.arkui.component.data_panel9DataPanelC11trackShadowF22DataPanelShadowOptions$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6131072616797978256
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                105
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 52
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.data_panel",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 368,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 368,
+        column: 58,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 368,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 37,
+      mangledName: "_CN31ohos.arkui.component.data_panel9DataPanel11trackShadowHCNY_22DataPanelShadowOptionsEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 83,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 83,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 84,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 85,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 106,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 148,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 148,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 149,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 201,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 214,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 228,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 228,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 244,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 244,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 245,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 245,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 246,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 246,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 260,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 260,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 261,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 263,
+        column: 63,
+        ignore: false
+      },
+      type: 6,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "100.0",
+        constKind: "Float"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 282,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 282,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 284,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 301,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 301,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 302,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 302,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 303,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 303,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 325,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 325,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 326,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 326,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 327,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 327,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 344,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 344,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 345,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 345,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 346,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 346,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 364,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 364,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 365,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 365,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 366,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 366,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

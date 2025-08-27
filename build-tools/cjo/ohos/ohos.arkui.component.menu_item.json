@@ -1,0 +1,6323 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.menu_item",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.menu_item\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"menu_item.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"menu_item.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"menu_item.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"menu_item.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"menu_item.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}}]},{\"package\":\"ohos.resource\",\"isStd\":false,\"imports\":[{\"file\":\"menu_item.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":23}}]}]}",
+  imports: [
+    "ohos.base",
+    "std.core",
+    "ohos.arkui.component.common"
+  ],
+  allFiles: [
+    "ohos.arkui.component.menu_item/menu_item.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 23,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "resource"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5,
+        5,
+        5,
+        5,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        11,
+        5,
+        5,
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 33
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 14
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19,
+        19,
+        19,
+        19,
+        20
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 14
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base11ResourceStrE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        16
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19,
+        19,
+        19,
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 20
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 33
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        26,
+        27,
+        19,
+        28
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common10FontWeightE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common9FontStyleE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        26
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 27
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        26,
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 19
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        26,
+        27,
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 28
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        35
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        37
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common8ViewBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 74,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemCreateByBuilder",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkMenuItemCreateByBuilder",
+      exportId: "FfiOHOSAceFrameworkMenuItemCreateByBuilder",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item42FfiOHOSAceFrameworkMenuItemCreateByBuilderFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6690317992589416328
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                2
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 67,
+        ignore: false
+      },
+      identifier: "builder",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN30ohos.arkui.component.menu_item42FfiOHOSAceFrameworkMenuItemCreateByBuilderHlE7builderE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 50,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemCreateByOption",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "FfiOHOSAceFrameworkMenuItemCreateByOption",
+      exportId: "FfiOHOSAceFrameworkMenuItemCreateByOption",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemCreateByOptionF7CString7CString7CString7CStringl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17216909768712457810
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 70,
+        ignore: false
+      },
+      identifier: "startIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemCreateByOptionHkkkklE9startIconE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 72,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 88,
+        ignore: false
+      },
+      identifier: "content",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 72,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemCreateByOptionHkkkklE7contentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 90,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 106,
+        ignore: false
+      },
+      identifier: "endIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 90,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemCreateByOptionHkkkklE7endIconE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 27,
+        ignore: false
+      },
+      identifier: "labelInfo",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemCreateByOptionHkkkklE9labelInfoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 29,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 43,
+        ignore: false
+      },
+      identifier: "builder",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemCreateByOptionHkkkklE7builderE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 66,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemIsSelected",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSAceFrameworkMenuItemIsSelected",
+      exportId: "FfiOHOSAceFrameworkMenuItemIsSelected",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item37FfiOHOSAceFrameworkMenuItemIsSelectedFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                10
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 59,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN30ohos.arkui.component.menu_item37FfiOHOSAceFrameworkMenuItemIsSelectedHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 72,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemSelectIconByBool",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSAceFrameworkMenuItemSelectIconByBool",
+      exportId: "FfiOHOSAceFrameworkMenuItemSelectIconByBool",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item43FfiOHOSAceFrameworkMenuItemSelectIconByBoolFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                12
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 65,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN30ohos.arkui.component.menu_item43FfiOHOSAceFrameworkMenuItemSelectIconByBoolHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 79,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemSelectIconByResource",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkMenuItemSelectIconByResource",
+      exportId: "FfiOHOSAceFrameworkMenuItemSelectIconByResource",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item47FfiOHOSAceFrameworkMenuItemSelectIconByResourceF7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 58,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 72,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 58,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item47FfiOHOSAceFrameworkMenuItemSelectIconByResourceHkE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 28,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemContentFont",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FfiOHOSAceFrameworkMenuItemContentFont",
+      exportId: "FfiOHOSAceFrameworkMenuItemContentFont",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item38FfiOHOSAceFrameworkMenuItemContentFontFdi7CString7CStringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17564258065384221436
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16,
+                17,
+                18,
+                19,
+                20
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 62,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN30ohos.arkui.component.menu_item38FfiOHOSAceFrameworkMenuItemContentFontHdikkiE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 75,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN30ohos.arkui.component.menu_item38FfiOHOSAceFrameworkMenuItemContentFontHdikkiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 77,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 92,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 77,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item38FfiOHOSAceFrameworkMenuItemContentFontHdikkiE6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 94,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 109,
+        ignore: false
+      },
+      identifier: "family",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 94,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item38FfiOHOSAceFrameworkMenuItemContentFontHdikkiE6familyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 21,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN30ohos.arkui.component.menu_item38FfiOHOSAceFrameworkMenuItemContentFontHdikkiE5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 74,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemContentFontColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FfiOHOSAceFrameworkMenuItemContentFontColor",
+      exportId: "FfiOHOSAceFrameworkMenuItemContentFontColor",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item43FfiOHOSAceFrameworkMenuItemContentFontColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 67,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN30ohos.arkui.component.menu_item43FfiOHOSAceFrameworkMenuItemContentFontColorHjE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 128,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemLabelFont",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FfiOHOSAceFrameworkMenuItemLabelFont",
+      exportId: "FfiOHOSAceFrameworkMenuItemLabelFont",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item36FfiOHOSAceFrameworkMenuItemLabelFontFdi7CString7CStringi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 17564258065384221436
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 60,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN30ohos.arkui.component.menu_item36FfiOHOSAceFrameworkMenuItemLabelFontHdikkiE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 73,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN30ohos.arkui.component.menu_item36FfiOHOSAceFrameworkMenuItemLabelFontHdikkiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 75,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 90,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item36FfiOHOSAceFrameworkMenuItemLabelFontHdikkiE6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 92,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 107,
+        ignore: false
+      },
+      identifier: "family",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 92,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN30ohos.arkui.component.menu_item36FfiOHOSAceFrameworkMenuItemLabelFontHdikkiE6familyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 109,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 121,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 109,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN30ohos.arkui.component.menu_item36FfiOHOSAceFrameworkMenuItemLabelFontHdikkiE5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 72,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemLabelFontColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FfiOHOSAceFrameworkMenuItemLabelFontColor",
+      exportId: "FfiOHOSAceFrameworkMenuItemLabelFontColor",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemLabelFontColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 65,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN30ohos.arkui.component.menu_item41FfiOHOSAceFrameworkMenuItemLabelFontColorHjE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 68,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkMenuItemOnChange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkMenuItemOnChange",
+      exportId: "FfiOHOSAceFrameworkMenuItemOnChange",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item35FfiOHOSAceFrameworkMenuItemOnChangeFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5609522965981233593
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                32
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 61,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN30ohos.arkui.component.menu_item35FfiOHOSAceFrameworkMenuItemOnChangeHlE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 222,
+        column: 2,
+        ignore: false
+      },
+      identifier: "MenuItem",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItemE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItemE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 1260918797365511318,
+        srcUse: 0,
+        bodyHash: 2389074373679449010
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          38
+        ],
+        body: [
+          34,
+          37,
+          48,
+          50,
+          52,
+          54,
+          69,
+          71,
+          86,
+          88
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem6<init>HF0uE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem6<init>HF0uE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC6<init>FFu!5child=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11847345846866835905
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                36
+              ]
+            }
+          ],
+          retType: 14
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 42,
+        ignore: false
+      },
+      identifier: "child",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHF0uEE5childE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 38,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 42,
+        ignore: false
+      },
+      identifier: "child.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem4initHF0uEE5childHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 18,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem6<init>HCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem6<init>HCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC6<init>F11ResourceStr!9startIcon11ResourceStr!7content11ResourceStr!7endIcon11ResourceStr!9labelInfo6Option<Fu>!7builder=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 3845612218927816438
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38,
+                39,
+                40,
+                41,
+                42
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                43
+              ]
+            }
+          ],
+          retType: 14
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 40,
+        ignore: false
+      },
+      identifier: "startIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE9startIconE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 63,
+        ignore: false
+      },
+      identifier: "content",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE7contentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 65,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 86,
+        ignore: false
+      },
+      identifier: "endIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 65,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE7endIconE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 88,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 111,
+        ignore: false
+      },
+      identifier: "labelInfo",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 88,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE9labelInfoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 44,
+        ignore: false
+      },
+      identifier: "builder",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE7builderIY9_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 40,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 44,
+        ignore: false
+      },
+      identifier: "builder.4",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE7builderHY3_Y3_Y3_Y3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                44,
+                45,
+                46,
+                47
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 20
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 40,
+        ignore: false
+      },
+      identifier: "startIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE9builder.4HY3_Y3_Y3_Y3_E9startIconE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 63,
+        ignore: false
+      },
+      identifier: "content",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE9builder.4HY3_Y3_Y3_Y3_E7contentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 65,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 86,
+        ignore: false
+      },
+      identifier: "endIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 65,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE9builder.4HY3_Y3_Y3_Y3_E7endIconE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 88,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 111,
+        ignore: false
+      },
+      identifier: "labelInfo",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 88,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem4initHCN9ohos.base11ResourceStrEY3_Y3_Y3_NNat6OptionIF0uEEE9builder.4HY3_Y3_Y3_Y3_E9labelInfoE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 104,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selected",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem8selectedHb",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem8selectedHb",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC8selectedFb$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13382287057973994259
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                49
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 37,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem8selectedHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 116,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selectIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 22,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem10selectIconHb",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem10selectIconHb",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC10selectIconFb$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 8109961626231776699
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                51
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 39,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem10selectIconHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 130,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selectIcon",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem10selectIconHCN9ohos.base11ResourceStrE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem10selectIconHCN9ohos.base11ResourceStrE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC10selectIconF11ResourceStr$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 12813699778368530912
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                53
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 28,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 46,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem10selectIconHCN9ohos.base11ResourceStrEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 6,
+        ignore: false
+      },
+      identifier: "contentFont",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 25,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC11contentFontF6Length!4size=10FontWeight!6weight=11ResourceStr!6family=9FontStyle!5style=$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 595424959203372873
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55,
+                57,
+                60,
+                64
+              ],
+              desugars: [
+                56,
+                58,
+                61,
+                65
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 25,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE4sizeHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 31,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6weightHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                59
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE8weight.1HY3_E4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 48,
+        ignore: false
+      },
+      identifier: "family",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6familyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 22
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 32,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 48,
+        ignore: false
+      },
+      identifier: "family.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6familyHY3_Y6_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                62,
+                63
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 19
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE8family.2HY3_Y6_E4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE8family.2HY3_Y6_E6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 45,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 29,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 45,
+        ignore: false
+      },
+      identifier: "style.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE5styleHY3_Y6_Y9_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                66,
+                67,
+                68
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 138,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE7style.3HY3_Y6_Y9_E4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 139,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE7style.3HY3_Y6_Y9_E6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 48,
+        ignore: false
+      },
+      identifier: "family",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem11contentFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE7style.3HY3_Y6_Y9_E6familyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 6,
+        ignore: false
+      },
+      identifier: "contentFontColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 23
+            },
+            {
+              name: "stagemodelonly",
+              expr: 24
+            },
+            {
+              name: "syscap",
+              expr: 25
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem16contentFontColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem16contentFontColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC16contentFontColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7032199903748775825
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                70
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 54,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 163,
+        column: 34,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem16contentFontColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 195,
+        column: 6,
+        ignore: false
+      },
+      identifier: "labelFont",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 176,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 26
+            },
+            {
+              name: "stagemodelonly",
+              expr: 27
+            },
+            {
+              name: "syscap",
+              expr: 28
+            }
+          ]
+        }
+      ],
+      type: 25,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC9labelFontF6Length!4size=10FontWeight!6weight=11ResourceStr!6family=9FontStyle!5style=$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 237986701959762879
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72,
+                74,
+                77,
+                81
+              ],
+              desugars: [
+                73,
+                75,
+                78,
+                82
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 25,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE4sizeHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 26
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 31,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6weightHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                76
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 27
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE8weight.1HY3_E4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 48,
+        ignore: false
+      },
+      identifier: "family",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6familyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 29
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 32,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 48,
+        ignore: false
+      },
+      identifier: "family.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE6familyHY3_Y6_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79,
+                80
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 19
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE8family.2HY3_Y6_E4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE8family.2HY3_Y6_E6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 45,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE5styleE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 29,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 180,
+        column: 45,
+        ignore: false
+      },
+      identifier: "style.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075456,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CPI30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE5styleHY3_Y6_Y9_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                83,
+                84,
+                85
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 30,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 177,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE7style.3HY3_Y6_Y9_E4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 48,
+        ignore: false
+      },
+      identifier: "weight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 178,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE7style.3HY3_Y6_Y9_E6weightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 48,
+        ignore: false
+      },
+      identifier: "family",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem9labelFontHCN9ohos.base6LengthENN27ohos.arkui.component.common10FontWeightECNY4_11ResourceStrENNY7_9FontStyleEE7style.3HY3_Y6_Y9_E6familyE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 208,
+        column: 6,
+        ignore: false
+      },
+      identifier: "labelFontColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 30
+            },
+            {
+              name: "stagemodelonly",
+              expr: 31
+            },
+            {
+              name: "syscap",
+              expr: 32
+            }
+          ]
+        }
+      ],
+      type: 34,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem14labelFontColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem14labelFontColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC14labelFontColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 12668795334652246358
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                87
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 52,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 32,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 35,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem14labelFontColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 6,
+        ignore: false
+      },
+      identifier: "onChange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 33
+            },
+            {
+              name: "stagemodelonly",
+              expr: 34
+            },
+            {
+              name: "syscap",
+              expr: 35
+            }
+          ]
+        }
+      ],
+      type: 36,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem8onChangeHF0ubE",
+      exportId: "_CN30ohos.arkui.component.menu_item8MenuItem8onChangeHF0ubE",
+      mangledBeforeSema: "30ohos.arkui.component.menu_item8MenuItemC8onChangeFFub$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 2635443194678242537
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                89
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.menu_item",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 50,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 215,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 37,
+      mangledName: "_CN30ohos.arkui.component.menu_item8MenuItem8onChangeHF0ubEE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 57,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 95,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 96,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 107,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 108,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 108,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 119,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 140,
+        column: 48,
+        ignore: false
+      },
+      type: 31,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "HarmonyOS Sans",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 159,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 160,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 160,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 161,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 161,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 172,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 174,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 179,
+        column: 48,
+        ignore: false
+      },
+      type: 31,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "HarmonyOS Sans",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 198,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 199,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 199,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 200,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 212,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

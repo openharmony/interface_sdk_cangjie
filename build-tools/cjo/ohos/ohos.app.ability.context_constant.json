@@ -1,0 +1,3099 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.app.ability.context_constant",
+  pkgDepInfo: "{\"package\":\"ohos.app.ability.context_constant\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"context_constant.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":21}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"context_constant.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":27}}]}]}",
+  imports: [
+    "ohos.app.ability.context_constant",
+    "std.core"
+  ],
+  allFiles: [
+    "ohos.app.ability.context_constant/context_constant.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 27,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "deriving"
+          ],
+          identifier: "Derive",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 21,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 3
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 2
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat8ToStringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 7
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        2
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 19
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        11
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        11
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 31
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        14
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat9EquatableIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 52,
+        ignore: false
+      },
+      identifier: "PROCESS_MODE_UNSPECIFIED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant24PROCESS_MODE_UNSPECIFIEDE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant24PROCESS_MODE_UNSPECIFIEDV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 8889135160226474466
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 1
+      }
+    },
+    {
+      kind: "VarDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 58,
+        ignore: false
+      },
+      identifier: "STARTUP_VISIBILITY_UNSPECIFIED",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138029281328,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant30STARTUP_VISIBILITY_UNSPECIFIEDE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant30STARTUP_VISIBILITY_UNSPECIFIEDV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 12820464909098194885,
+        bodyHash: 5186994745727274322
+      },
+      info_type: "VarInfo",
+      info: {
+        isConst: true,
+        initializer: 2
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 34,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 97,
+        column: 13,
+        ignore: false
+      },
+      identifier: "AreaMode",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 34,
+        column: 23,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 3
+            },
+            {
+              name: "stagemodelonly",
+              expr: 4
+            },
+            {
+              name: "syscap",
+              expr: 5
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.app.ability.context_constant8AreaModeE",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaModeE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU",
+      hash: {
+        instVar: 2409846614445530234,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14306608779765979823
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 29,
+          column: 1310,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 41,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 41,
+        column: 19,
+        ignore: false
+      },
+      identifier: "El1",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 41,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 6
+            },
+            {
+              name: "stagemodelonly",
+              expr: 7
+            },
+            {
+              name: "syscap",
+              expr: 8
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode3El1KE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU3El1V$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9988310334785323625
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 49,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 49,
+        column: 19,
+        ignore: false
+      },
+      identifier: "El2",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 49,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 9
+            },
+            {
+              name: "stagemodelonly",
+              expr: 10
+            },
+            {
+              name: "syscap",
+              expr: 11
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode3El2KE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU3El2V$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9988310334785323625
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 57,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 57,
+        column: 19,
+        ignore: false
+      },
+      identifier: "El3",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 57,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 12
+            },
+            {
+              name: "stagemodelonly",
+              expr: 13
+            },
+            {
+              name: "syscap",
+              expr: 14
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode3El3KE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU3El3V$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9988310334785323625
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 65,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 65,
+        column: 19,
+        ignore: false
+      },
+      identifier: "El4",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 65,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 15
+            },
+            {
+              name: "stagemodelonly",
+              expr: 16
+            },
+            {
+              name: "syscap",
+              expr: 17
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode3El4KE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU3El4V$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9988310334785323625
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 73,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 73,
+        column: 19,
+        ignore: false
+      },
+      identifier: "El5",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 73,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 18
+            },
+            {
+              name: "stagemodelonly",
+              expr: 19
+            },
+            {
+              name: "syscap",
+              expr: 20
+            }
+          ]
+        }
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode3El5KE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU3El5V$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 9988310334785323625
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 85,
+        column: 17,
+        ignore: false
+      },
+      identifier: "parse",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678413041406496,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN33ohos.app.ability.context_constant8AreaMode5parseHi",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode5parseHi",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU5parseFi$$8AreaMode",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 8035971499611947038,
+        bodyHash: 12061785203643398333
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                10
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 2
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 56,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 76,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN33ohos.app.ability.context_constant8AreaMode5parseHiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 87,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 96,
+        column: 17,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 87,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        144678413041405984,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.app.ability.context_constant8AreaMode8getValueHv",
+      exportId: "_CN33ohos.app.ability.context_constant8AreaMode8getValueHv",
+      mangledBeforeSema: "33ohos.app.ability.context_constant8AreaModeU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 5946897798039960096
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 98,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 117,
+        column: 13,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 98,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeEU00000001C1VD2K_E",
+      mangledBeforeSema: "8AreaMode<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          13
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 99,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 116,
+        column: 17,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 99,
+        column: 28,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeE8toStringHv",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeE8toStringHv",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!8AreaMode<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15304841507839504049
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 118,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 132,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 118,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678412907185168,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeEU00000001C1VD2K0_E",
+      mangledBeforeSema: "8AreaMode<:9Equatable<8AreaMode>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 11221462301302517912
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          8
+        ],
+        body: [
+          15,
+          17
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 119,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 128,
+        column: 18,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 119,
+        column: 37,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeEeqHY1_",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeEeqHY1_",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!8AreaMode<:9Equatable<8AreaMode>X2==F8AreaMode$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4925113212853668784
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                16
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 119,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 119,
+        column: 55,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 119,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 129,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 131,
+        column: 18,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 129,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeEneHY1_",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeEneHY1_",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!8AreaMode<:9Equatable<8AreaMode>X2!=F8AreaMode$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 18106057085767315032
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 129,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 129,
+        column: 56,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 129,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_8AreaModeE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 135,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 149,
+        column: 14,
+        ignore: false
+      },
+      identifier: "ProcessMode",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 135,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        144678412907188272,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN33ohos.app.ability.context_constant11ProcessModeE",
+      exportId: "_CN33ohos.app.ability.context_constant11ProcessModeE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant11ProcessModeU",
+      hash: {
+        instVar: 14834356346742746421,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 16485428295812666618
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          20,
+          21,
+          22,
+          23
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 125,
+          column: 212,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 136,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 136,
+        column: 40,
+        ignore: false
+      },
+      identifier: "NewProcessAttachToParent",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 136,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant11ProcessMode24NewProcessAttachToParentKE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant11ProcessModeU24NewProcessAttachToParentV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 137,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 137,
+        column: 49,
+        ignore: false
+      },
+      identifier: "NewProcessAttachToStatusBarItem",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 137,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant11ProcessMode31NewProcessAttachToStatusBarItemKE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant11ProcessModeU31NewProcessAttachToStatusBarItemV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 138,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 138,
+        column: 39,
+        ignore: false
+      },
+      identifier: "AttachToStatusBarItem",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 138,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant11ProcessMode21AttachToStatusBarItemKE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant11ProcessModeU21AttachToStatusBarItemV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 141,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 148,
+        column: 18,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 141,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        144678413041405984,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.app.ability.context_constant11ProcessMode8getValueHv",
+      exportId: "_CN33ohos.app.ability.context_constant11ProcessMode8getValueHv",
+      mangledBeforeSema: "33ohos.app.ability.context_constant11ProcessModeU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 2896178622827205627
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 150,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 165,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 150,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907188240,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeEU00000001C1VD2K_E",
+      mangledBeforeSema: "11ProcessMode<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          25
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 151,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 164,
+        column: 18,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 151,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeE8toStringHv",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeE8toStringHv",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!11ProcessMode<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 7585995908670642715
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 166,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 178,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 166,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907188240,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeEU00000001C1VD2K0_E",
+      mangledBeforeSema: "11ProcessMode<:9Equatable<11ProcessMode>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12126301641777167948
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          12
+        ],
+        body: [
+          27,
+          29
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 167,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 174,
+        column: 18,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 167,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeEeqHY1_",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeEeqHY1_",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!11ProcessMode<:9Equatable<11ProcessMode>X2==F11ProcessMode$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 9508118528194000863
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 167,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 167,
+        column: 59,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 167,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 175,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 177,
+        column: 18,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 175,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeEneHY1_",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeEneHY1_",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!11ProcessMode<:9Equatable<11ProcessMode>X2!=F11ProcessMode$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 14486150203576763612
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 175,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 175,
+        column: 59,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 175,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_11ProcessModeE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "EnumDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 181,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 193,
+        column: 14,
+        ignore: false
+      },
+      identifier: "StartupVisibility",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 181,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        144678412907188272,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN33ohos.app.ability.context_constant17StartupVisibilityE",
+      exportId: "_CN33ohos.app.ability.context_constant17StartupVisibilityE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant17StartupVisibilityU",
+      hash: {
+        instVar: 5141028730091691746,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 16485428295812666618
+      },
+      info_type: "EnumInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          32,
+          33,
+          34
+        ],
+        nonExhaustive: true,
+        ellipsisPos: {
+          file: 1,
+          pkgId: 0,
+          line: 142,
+          column: 147,
+          ignore: false
+        }
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 182,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 182,
+        column: 27,
+        ignore: false
+      },
+      identifier: "StartupHide",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 182,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant17StartupVisibility11StartupHideKE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant17StartupVisibilityU11StartupHideV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 183,
+        column: 18,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 183,
+        column: 29,
+        ignore: false
+      },
+      identifier: "StartupShow",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 183,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constant17StartupVisibility11StartupShowKE",
+      mangledBeforeSema: "33ohos.app.ability.context_constant17StartupVisibilityU11StartupShowV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 186,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 192,
+        column: 18,
+        ignore: false
+      },
+      identifier: "getValue",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 186,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        144678413041405984,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN33ohos.app.ability.context_constant17StartupVisibility8getValueHv",
+      exportId: "_CN33ohos.app.ability.context_constant17StartupVisibility8getValueHv",
+      mangledBeforeSema: "33ohos.app.ability.context_constant17StartupVisibilityU8getValueF$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 4460536558437598728
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 194,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 207,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 194,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907188240,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityEU00000001C1VD2K_E",
+      mangledBeforeSema: "17StartupVisibility<:8ToStringX",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3811360620322126922
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          5
+        ],
+        body: [
+          36
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 195,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 206,
+        column: 18,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 195,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678412974294048,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityE8toStringHv",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityE8toStringHv",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!17StartupVisibility<:8ToStringX8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 9290644840007687444
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "ExtendDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 208,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 219,
+        column: 14,
+        ignore: false
+      },
+      identifier: "",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 208,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678412907188240,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityEU00000001C1VD2K0_E",
+      mangledBeforeSema: "17StartupVisibility<:9Equatable<17StartupVisibility>X",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 12833073134599813473
+      },
+      info_type: "ExtendInfo",
+      info: {
+        inheritedTypes: [
+          15
+        ],
+        body: [
+          38,
+          40
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 215,
+        column: 18,
+        ignore: false
+      },
+      identifier: "==",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityEeqHY1_",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityEeqHY1_",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!17StartupVisibility<:9Equatable<17StartupVisibility>X2==F17StartupVisibility$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5541251559948736687
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                39
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        },
+        op: "Equal"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 65,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 209,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityE2==HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.app.ability.context_constant",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 216,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 218,
+        column: 18,
+        ignore: false
+      },
+      identifier: "!=",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 216,
+        column: 38,
+        ignore: false
+      },
+      attributes: [
+        144678412975342624,
+        16
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityEneHY1_",
+      exportId: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityEneHY1_",
+      mangledBeforeSema: "33ohos.app.ability.context_constant7Extend!17StartupVisibility<:9Equatable<17StartupVisibility>X2!=F17StartupVisibility$$b",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 1528557333381089894
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                41
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 10
+        },
+        op: "NotEqual"
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.app.ability.context_constant",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 216,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 216,
+        column: 65,
+        ignore: false
+      },
+      identifier: "other",
+      identifierPos: {
+        file: 0,
+        pkgId: 1,
+        line: 216,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        563224831328288,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN33ohos.app.ability.context_constantXNNY_17StartupVisibilityE2!=HY1_E5otherE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 21,
+        column: 52,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 57,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 22,
+        column: 58,
+        ignore: false
+      },
+      type: 1,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "0"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 30,
+        column: 11,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 31,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 31,
+        column: 31,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 32,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 32,
+        column: 65,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 37,
+        column: 15,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 37,
+        column: 17,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 38,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 39,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 39,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 45,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 45,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 46,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 46,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 47,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 53,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 53,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 54,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 55,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 55,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 61,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 61,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 62,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 62,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 63,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 63,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 69,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 69,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 70,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 70,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 1,
+        line: 71,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 1,
+        line: 71,
+        column: 70,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Ability.AbilityRuntime.Core",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

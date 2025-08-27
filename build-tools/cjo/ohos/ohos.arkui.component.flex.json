@@ -1,0 +1,5141 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.flex",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.flex\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_flex.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_flex.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_flex.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_flex.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]}]}",
+  imports: [
+    "ohos.arkui.component.common",
+    "ohos.base"
+  ],
+  allFiles: [
+    "ohos.arkui.component.flex/cj_flex.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 1
+        }
+      }
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 1
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 13
+        }
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        2,
+        2,
+        2,
+        2,
+        5,
+        2,
+        5,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5,
+        2,
+        5,
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        4
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8,
+        isC: true
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 49
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        16,
+        17,
+        18,
+        17,
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 13
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common13FlexDirectionE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common8FlexWrapE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common9FlexAlignE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common9ItemAlignE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        16,
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 18
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        16,
+        17,
+        18
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 17
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15,
+        16,
+        17,
+        18,
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 19
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 28
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 49
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        27,
+        27
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 28
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN27ohos.arkui.component.common13ContainerBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CJFlexParams",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 24,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParamsE",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParamsE",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS",
+      hash: {
+        instVar: 1897287923353000873,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 29,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParams9directionK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS9direction$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 24,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParams4wrapK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS4wrap$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 34,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParams14justifyContentK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS14justifyContent$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 30,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParams10alignItemsK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS10alignItems$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 32,
+        ignore: false
+      },
+      identifier: "alignContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParams12alignContentK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS12alignContent$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 25,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParams6<init>Hiiiii",
+      exportId: "_CN25ohos.arkui.component.flex12CJFlexParams6<init>Hiiiii",
+      mangledBeforeSema: "25ohos.arkui.component.flex12CJFlexParamsS12CJFlexParamsYi!L9directioni!L4wrapi!L14justifyContenti!L10alignItemsi!L12alignContent",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 1
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 29,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParams4initHiiiiiE9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 24,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParams4initHiiiiiE4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 34,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 28,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParams4initHiiiiiE14justifyContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 30,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParams4initHiiiiiE10alignItemsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 32,
+        ignore: false
+      },
+      identifier: "alignContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 30,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex12CJFlexParams4initHiiiiiE12alignContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "StructDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CJFlexOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 8,
+        ignore: false
+      },
+      attributes: [
+        144686934122315824,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptionsE",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptionsE",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS",
+      hash: {
+        instVar: 6347642027784540477,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 10474287441897005386
+      },
+      info_type: "StructInfo",
+      info: {
+        inheritedTypes: [
+
+        ],
+        body: [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 29,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions9directionK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS9direction$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 24,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions4wrapK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS4wrap$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 34,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions14justifyContentK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS14justifyContent$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 30,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions10alignItemsK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS10alignItems$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 32,
+        ignore: false
+      },
+      identifier: "alignContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions12alignContentK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS12alignContent$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 31,
+        ignore: false
+      },
+      identifier: "mainSpace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions9mainSpaceK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS9mainSpace$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 33,
+        ignore: false
+      },
+      identifier: "mainSpaceUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions13mainSpaceUnitK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS13mainSpaceUnit$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 32,
+        ignore: false
+      },
+      identifier: "crossSpace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions10crossSpaceK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS10crossSpace$$d",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 34,
+        ignore: false
+      },
+      identifier: "crossSpaceUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678155242717280,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions14crossSpaceUnitK_E",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS14crossSpaceUnit$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 46,
+        column: 9,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 36,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158463942752,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions6<init>Hiiiiididi",
+      exportId: "_CN25ohos.arkui.component.flex13CJFlexOptions6<init>Hiiiiididi",
+      mangledBeforeSema: "25ohos.arkui.component.flex13CJFlexOptionsS13CJFlexOptionsYi!L9directioni!L4wrapi!L14justifyContenti!L10alignItemsi!L12alignContentd!L9mainSpacei!L13mainSpaceUnitd!L10crossSpacei!L14crossSpaceUnit",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 29,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 24,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 38,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 34,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE14justifyContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 30,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 40,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE10alignItemsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 32,
+        ignore: false
+      },
+      identifier: "alignContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE12alignContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 31,
+        ignore: false
+      },
+      identifier: "mainSpace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 42,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE9mainSpaceE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 33,
+        ignore: false
+      },
+      identifier: "mainSpaceUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE13mainSpaceUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 32,
+        ignore: false
+      },
+      identifier: "crossSpace",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 44,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE10crossSpaceE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 34,
+        ignore: false
+      },
+      identifier: "crossSpaceUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex13CJFlexOptions4initHiiiiididiE14crossSpaceUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 47,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkFlexCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 50,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "FfiOHOSAceFrameworkFlexCreate",
+      exportId: "FfiOHOSAceFrameworkFlexCreate",
+      mangledBeforeSema: "25ohos.arkui.component.flex29FfiOHOSAceFrameworkFlexCreateF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 77,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkFlexCreateWithParams",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "FfiOHOSAceFrameworkFlexCreateWithParams",
+      exportId: "FfiOHOSAceFrameworkFlexCreateWithParams",
+      mangledBeforeSema: "25ohos.arkui.component.flex39FfiOHOSAceFrameworkFlexCreateWithParamsF12CJFlexParams$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9979860090936764746
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                35
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 70,
+        ignore: false
+      },
+      identifier: "params",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN25ohos.arkui.component.flex39FfiOHOSAceFrameworkFlexCreateWithParamsHRNY_12CJFlexParamsEE6paramsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 80,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkFlexSetFlexWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSAceFrameworkFlexSetFlexWidth",
+      exportId: "FfiOHOSAceFrameworkFlexSetFlexWidth",
+      mangledBeforeSema: "25ohos.arkui.component.flex35FfiOHOSAceFrameworkFlexSetFlexWidthFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6307625873895004370
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                37,
+                38
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 60,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.flex35FfiOHOSAceFrameworkFlexSetFlexWidthHdiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 62,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 73,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 62,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex35FfiOHOSAceFrameworkFlexSetFlexWidthHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 82,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkFlexSetFlexHeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "FfiOHOSAceFrameworkFlexSetFlexHeight",
+      exportId: "FfiOHOSAceFrameworkFlexSetFlexHeight",
+      mangledBeforeSema: "25ohos.arkui.component.flex36FfiOHOSAceFrameworkFlexSetFlexHeightFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 16935192263862214915
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                40,
+                41
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 47,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 62,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 47,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.flex36FfiOHOSAceFrameworkFlexSetFlexHeightHdiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 75,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 56,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex36FfiOHOSAceFrameworkFlexSetFlexHeightHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 120,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkFlexSetFlexSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkFlexSetFlexSize",
+      exportId: "FfiOHOSAceFrameworkFlexSetFlexSize",
+      mangledBeforeSema: "25ohos.arkui.component.flex34FfiOHOSAceFrameworkFlexSetFlexSizeFdidi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11888240612358911924
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                43,
+                44,
+                45,
+                46
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 45,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 59,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 45,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.flex34FfiOHOSAceFrameworkFlexSetFlexSizeHdidiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 77,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex34FfiOHOSAceFrameworkFlexSetFlexSizeHdidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 79,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 94,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 79,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN25ohos.arkui.component.flex34FfiOHOSAceFrameworkFlexSetFlexSizeHdidiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 96,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 113,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 58,
+        column: 96,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN25ohos.arkui.component.flex34FfiOHOSAceFrameworkFlexSetFlexSizeHdidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 78,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkFlexCreateByOptions",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FfiOHOSAceFrameworkFlexCreateByOptions",
+      exportId: "FfiOHOSAceFrameworkFlexCreateByOptions",
+      mangledBeforeSema: "25ohos.arkui.component.flex38FfiOHOSAceFrameworkFlexCreateByOptionsF13CJFlexOptions$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11720157453919770723
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                48
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 8
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 71,
+        ignore: false
+      },
+      identifier: "options",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 60,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "_CN25ohos.arkui.component.flex38FfiOHOSAceFrameworkFlexCreateByOptionsHRNY_13CJFlexOptionsEE7optionsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 2,
+        ignore: false
+      },
+      identifier: "Flex",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 73,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 13,
+      mangledName: "_CN25ohos.arkui.component.flex4FlexE",
+      exportId: "_CN25ohos.arkui.component.flex4FlexE",
+      mangledBeforeSema: "25ohos.arkui.component.flex4FlexC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 6438789364046432450,
+        srcUse: 0,
+        bodyHash: 9307324937386905232
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          30
+        ],
+        body: [
+          50,
+          78,
+          80,
+          82
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 105,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex6<init>HNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uE",
+      exportId: "_CN25ohos.arkui.component.flex4Flex6<init>HNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uE",
+      mangledBeforeSema: "25ohos.arkui.component.flex4FlexC6<init>F13FlexDirection!9direction=8FlexWrap!4wrap=9FlexAlign!14justifyContent=9ItemAlign!10alignItems=9FlexAlign!12alignContent=Fu!5child=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6551259349656886813
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                51,
+                53,
+                56,
+                60,
+                65,
+                71
+              ],
+              desugars: [
+                52,
+                54,
+                57,
+                61,
+                66,
+                72
+              ]
+            }
+          ],
+          retType: 13
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 45,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "_CPI25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE9directionHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 97,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 82,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 97,
+        ignore: false
+      },
+      identifier: "wrap.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "_CPI25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE4wrapHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 16
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE6wrap.1HY3_E9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 53,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE14justifyContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 38,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 53,
+        ignore: false
+      },
+      identifier: "justifyContent.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CPI25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE14justifyContentHY3_Y6_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                58,
+                59
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE16justifyContent.2HY3_Y6_E9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 97,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE16justifyContent.2HY3_Y6_E4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 95,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 55,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE10alignItemsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 80,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 95,
+        ignore: false
+      },
+      identifier: "alignItems.3",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CPI25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE10alignItemsHY3_Y6_Y8_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                62,
+                63,
+                64
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 18
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE12alignItems.3HY3_Y6_Y8_E9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 97,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE12alignItems.3HY3_Y6_Y8_E4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 53,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE12alignItems.3HY3_Y6_Y8_E14justifyContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 51,
+        ignore: false
+      },
+      identifier: "alignContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE12alignContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 36,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 51,
+        ignore: false
+      },
+      identifier: "alignContent.4",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "_CPI25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE12alignContentHY3_Y6_Y8_YA_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                67,
+                68,
+                69,
+                70
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 17
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE14alignContent.4HY3_Y6_Y8_YA_E9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 97,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE14alignContent.4HY3_Y6_Y8_YA_E4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 53,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE14alignContent.4HY3_Y6_Y8_YA_E14justifyContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 95,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 55,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE14alignContent.4HY3_Y6_Y8_YA_E10alignItemsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 78,
+        ignore: false
+      },
+      identifier: "child",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE5childE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 74,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 78,
+        ignore: false
+      },
+      identifier: "child.5",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CPI25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE5childHY3_Y6_Y8_YA_Y8_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                73,
+                74,
+                75,
+                76,
+                77
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 19
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 62,
+        ignore: false
+      },
+      identifier: "direction",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE7child.5HY3_Y6_Y8_YA_Y8_E9directionE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 97,
+        ignore: false
+      },
+      identifier: "wrap",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE7child.5HY3_Y6_Y8_YA_Y8_E4wrapE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 53,
+        ignore: false
+      },
+      identifier: "justifyContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE7child.5HY3_Y6_Y8_YA_Y8_E14justifyContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 95,
+        ignore: false
+      },
+      identifier: "alignItems",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 91,
+        column: 55,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE7child.5HY3_Y6_Y8_YA_Y8_E10alignItemsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 51,
+        ignore: false
+      },
+      identifier: "alignContent",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 92,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex4initHNN27ohos.arkui.component.common13FlexDirectionENNY4_8FlexWrapENNY4_9FlexAlignENNY4_9ItemAlignEY8_F0uEE7child.5HY3_Y6_Y8_YA_Y8_E12alignContentE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 118,
+        column: 6,
+        ignore: false
+      },
+      identifier: "widthInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 26,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex10widthInnerHCN9ohos.base6LengthE",
+      exportId: "_CN25ohos.arkui.component.flex4Flex10widthInnerHCN9ohos.base6LengthE",
+      mangledBeforeSema: "25ohos.arkui.component.flex4FlexC10widthInnerF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 11561353682939200233
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 53,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 112,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex10widthInnerHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 126,
+        column: 6,
+        ignore: false
+      },
+      identifier: "heightInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex11heightInnerHCN9ohos.base6LengthE",
+      exportId: "_CN25ohos.arkui.component.flex4Flex11heightInnerHCN9ohos.base6LengthE",
+      mangledBeforeSema: "25ohos.arkui.component.flex4FlexC11heightInnerF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 11583288972500427832
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 54,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 120,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex11heightInnerHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.flex",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 6,
+        ignore: false
+      },
+      identifier: "sizeInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex9sizeInnerHCN9ohos.base6LengthEY3_",
+      exportId: "_CN25ohos.arkui.component.flex4Flex9sizeInnerHCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "25ohos.arkui.component.flex4FlexC9sizeInnerF6Length6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 18425996500425698670
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                83,
+                84
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 28
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 52,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex9sizeInnerHCN9ohos.base6LengthEY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.flex",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 68,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 128,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN25ohos.arkui.component.flex4Flex9sizeInnerHCN9ohos.base6LengthEY3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 69,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 71,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 86,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 108,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 108,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}

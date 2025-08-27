@@ -1,0 +1,6051 @@
+{
+  version: "1.0.0",
+  cjoVersion: {
+    major_num: 0,
+    minor_num: 1,
+    patch_num: 0
+  },
+  fullPkgName: "ohos.arkui.component.checkbox_group",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.checkbox_group\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.native_struct\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":44}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"cj_checkbox_group.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":32}}]}]}",
+  imports: [
+    "ohos.arkui.component.native_struct",
+    "ohos.ffi",
+    "ohos.arkui.component.common",
+    "std.core",
+    "ohos.base"
+  ],
+  allFiles: [
+    "ohos.arkui.component.checkbox_group/cj_checkbox_group.cj"
+  ],
+  allFileImports: [
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 44,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "native_struct"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 19,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 18,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 32,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "collection"
+          ],
+          identifier: "ArrayList",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    }
+  ],
+  allTypes: [
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "CString"
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Bool"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "UInt32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        9,
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Float64"
+    },
+    {
+      kind: "Int32"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        9,
+        10,
+        9,
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN34ohos.arkui.component.native_struct6CJEdgeE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        15
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Int64"
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        3
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        19
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN34ohos.arkui.component.native_struct16CJResponseRegionE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        7,
+        9,
+        10,
+        9,
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3,
+        isC: true
+      }
+    },
+    {
+      kind: "Type",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 39
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        24
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 40
+        }
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 41
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        10,
+        27,
+        17
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "CPointer",
+      typeArgs: [
+        17
+      ]
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 3
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        28
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 25
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN8ohos.ffi12BaseCallBackE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common12SelectStatusE"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        34
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        32,
+        33
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 24
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CNat6ObjectE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        29
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 24
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 56
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        34
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 38
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 34
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 56
+        },
+        isThisTy: true
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        44
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        46
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 4,
+          decl: "_CN9ohos.base6LengthE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        46,
+        46
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        46,
+        46,
+        46,
+        46
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        50
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common9RectangleE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        52
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Struct",
+      typeArgs: [
+        50
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CNat5ArrayIG_E"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        23
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 42
+      }
+    },
+    {
+      kind: "Class",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common8ViewBaseE"
+        }
+      }
+    }
+  ],
+  allDecls: [
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 70,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupCreate",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupCreate",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupCreate",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group38FfiOHOSAceFrameworkCheckBoxGroupCreateF7CString$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 13264136798947848939
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                2
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 63,
+        ignore: false
+      },
+      identifier: "group",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 27,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group38FfiOHOSAceFrameworkCheckBoxGroupCreateHkE5groupE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 69,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSelectAll",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 4,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSelectAll",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSelectAll",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group41FfiOHOSAceFrameworkCheckBoxGroupSelectAllFb$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 12535044877413869286
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                4
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 62,
+        ignore: false
+      },
+      identifier: "flag",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 29,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group41FfiOHOSAceFrameworkCheckBoxGroupSelectAllHbE4flagE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 79,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetSelectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetSelectedColor",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetSelectedColor",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group48FfiOHOSAceFrameworkCheckBoxGroupSetSelectedColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 3509254035188702284
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                6
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 59,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 72,
+        ignore: false
+      },
+      identifier: "color",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 31,
+        column: 59,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group48FfiOHOSAceFrameworkCheckBoxGroupSetSelectedColorHjE5colorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 85,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetWidth",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetWidth",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group40FfiOHOSAceFrameworkCheckBoxGroupSetWidthFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                8,
+                9
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 51,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 65,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 51,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group40FfiOHOSAceFrameworkCheckBoxGroupSetWidthHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 67,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 78,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 33,
+        column: 67,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group40FfiOHOSAceFrameworkCheckBoxGroupSetWidthHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 86,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetHeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetHeight",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetHeight",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group41FfiOHOSAceFrameworkCheckBoxGroupSetHeightFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                11,
+                12
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 52,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 66,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 52,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group41FfiOHOSAceFrameworkCheckBoxGroupSetHeightHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 68,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 79,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 35,
+        column: 68,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group41FfiOHOSAceFrameworkCheckBoxGroupSetHeightHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 125,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 11,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetSize",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetSize",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetSizeFdidi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 11888240612358911924
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14,
+                15,
+                16,
+                17
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 64,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetSizeHdidiE5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 66,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 82,
+        ignore: false
+      },
+      identifier: "widthUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 66,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetSizeHdidiE9widthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 84,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 99,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 84,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetSizeHdidiE6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 101,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 118,
+        ignore: false
+      },
+      identifier: "heightUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 37,
+        column: 101,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetSizeHdidiE10heightUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 87,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetPadding",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetPadding",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetPadding",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group42FfiOHOSAceFrameworkCheckBoxGroupSetPaddingFdi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 6384948310118847415
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                19,
+                20
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 53,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 67,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 53,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group42FfiOHOSAceFrameworkCheckBoxGroupSetPaddingHdiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 69,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 80,
+        ignore: false
+      },
+      identifier: "unit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 39,
+        column: 69,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group42FfiOHOSAceFrameworkCheckBoxGroupSetPaddingHdiE4unitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 75,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetPaddings",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetPaddings",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetPaddings",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group43FfiOHOSAceFrameworkCheckBoxGroupSetPaddingsF6CJEdge$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9979860090936764746
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                22
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 68,
+        ignore: false
+      },
+      identifier: "params",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 41,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group43FfiOHOSAceFrameworkCheckBoxGroupSetPaddingsHRN34ohos.arkui.component.native_struct6CJEdgeEE6paramsE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 76,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetOnChange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetOnChange",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetOnChange",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group43FfiOHOSAceFrameworkCheckBoxGroupSetOnChangeFl$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 5609522965981233593
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                24
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 69,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 15,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group43FfiOHOSAceFrameworkCheckBoxGroupSetOnChangeHlE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 90,
+        ignore: false
+      },
+      identifier: "FfiCheckBoxGroupSetResponseRegionArray",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "FfiCheckBoxGroupSetResponseRegionArray",
+      exportId: "FfiCheckBoxGroupSetResponseRegionArray",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group38FfiCheckBoxGroupSetResponseRegionArrayF27VectorNativeRectangleHandle$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 9324851368556560369
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                26
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 83,
+        ignore: false
+      },
+      identifier: "array",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group38FfiCheckBoxGroupSetResponseRegionArrayHPuE5arrayIuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 74,
+        ignore: false
+      },
+      identifier: "FfiCheckBoxGroupSetResponseRegion",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 18,
+      mangledName: "FfiCheckBoxGroupSetResponseRegion",
+      exportId: "FfiCheckBoxGroupSetResponseRegion",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group33FfiCheckBoxGroupSetResponseRegionF16CJResponseRegion$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                28
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 44,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 67,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 47,
+        column: 44,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 19,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group33FfiCheckBoxGroupSetResponseRegionHRN34ohos.arkui.component.native_struct16CJResponseRegionEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 81,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetUnSelectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetUnSelectedColor",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetUnSelectedColor",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group50FfiOHOSAceFrameworkCheckBoxGroupSetUnSelectedColorFj$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                30
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 61,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 74,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 49,
+        column: 61,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group50FfiOHOSAceFrameworkCheckBoxGroupSetUnSelectedColorHjE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 60,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetMark",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 20,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetMark",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetMark",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetMarkFjdidi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 1425626238148104315
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                32,
+                33,
+                34,
+                35,
+                36
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 50,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 69,
+        ignore: false
+      },
+      identifier: "strokeColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 50,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetMarkHjdidiE11strokeColorE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 71,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 84,
+        ignore: false
+      },
+      identifier: "size",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 71,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetMarkHjdidiE4sizeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 86,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 101,
+        ignore: false
+      },
+      identifier: "sizeUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 51,
+        column: 86,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetMarkHjdidiE8sizeUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 29,
+        ignore: false
+      },
+      identifier: "strokeWidth",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 9,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetMarkHjdidiE11strokeWidthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 53,
+        ignore: false
+      },
+      identifier: "strokeWidthUnit",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group39FfiOHOSAceFrameworkCheckBoxGroupSetMarkHjdidiE15strokeWidthUnitE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 78,
+        ignore: false
+      },
+      identifier: "FfiOHOSAceFrameworkCheckBoxGroupSetCheckboxShape",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 21,
+      mangledName: "FfiOHOSAceFrameworkCheckBoxGroupSetCheckboxShape",
+      exportId: "FfiOHOSAceFrameworkCheckBoxGroupSetCheckboxShape",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group48FfiOHOSAceFrameworkCheckBoxGroupSetCheckboxShapeFi$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 8408041226178326877
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                38
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 59,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 71,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 54,
+        column: 59,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group48FfiOHOSAceFrameworkCheckBoxGroupSetCheckboxShapeHiE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "TypeAliasDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 74,
+        ignore: false
+      },
+      identifier: "OnCheckboxGroupChangeCallback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 65,
+        column: 13,
+        ignore: false
+      },
+      attributes: [
+        144678138029278224,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "",
+      exportId: "_CN35ohos.arkui.component.checkbox_group29OnCheckboxGroupChangeCallbackE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group29OnCheckboxGroupChangeCallbackT",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 17587563040133961136,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "AliasInfo",
+      info: {
+        aliasedTy: 23
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 142,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CheckboxGroupResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 101,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 1
+            },
+            {
+              name: "stagemodelonly",
+              expr: 2
+            },
+            {
+              name: "syscap",
+              expr: 3
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResultE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResultE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group19CheckboxGroupResultC",
+      hash: {
+        instVar: 3823084030891867891,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          36
+        ],
+        body: [
+          49,
+          50,
+          51
+        ]
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 88,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CallbackFFiCheckboxGroupResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 67,
+        column: 7,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 25,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResultE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResultE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResultC",
+      hash: {
+        instVar: 9008277213952264312,
+        virt: 0,
+        sig: 16018826774441235410,
+        srcUse: 0,
+        bodyHash: 619423348080260213
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          31
+        ],
+        body: [
+          42,
+          46,
+          47
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 87,
+        column: 6,
+        ignore: false
+      },
+      identifier: "invoke",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        144678138297716768,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 26,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6invokeHiPPuPu",
+      exportId: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6invokeHiPPuPu",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResultC6invokeFi8CPointer<8CPointer<u>>8CPointer<u>$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 11122865541434628980
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                43,
+                44,
+                45
+              ],
+              desugars: [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 38,
+        ignore: false
+      },
+      identifier: "argc",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6invokeHiPPuPuE4argcE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 70,
+        ignore: false
+      },
+      identifier: "argv",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 27,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6invokeHiPPuPuE4argvIPuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 72,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 89,
+        ignore: false
+      },
+      identifier: "_",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 72,
+        column: 72,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 17,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6invokeHiPPuPuE1_IuE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 81,
+        ignore: false
+      },
+      identifier: "closure",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        144678155477598304,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "",
+      exportId: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult7closureK_E",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResultC7closure$$Fu22FFiCheckboxGroupResult",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "VarInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 70,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678158698823776,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6<init>HF0uRN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultEE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult6<init>HF0uRN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultEE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResultC30CallbackFFiCheckboxGroupResultYFu22FFiCheckboxGroupResult!L7closure",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                48
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 25
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 36,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 81,
+        ignore: false
+      },
+      identifier: "closure",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 68,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562967133290592,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 28,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group30CallbackFFiCheckboxGroupResult4initHF0uRN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultEEE7closureE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isMemberParam: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 36,
+        ignore: false
+      },
+      identifier: "status",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 113,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 32,
+      mangledName: "",
+      exportId: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResult6statusK_E",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group19CheckboxGroupResultC6statusV$$12SelectStatus",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 35,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 125,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 33,
+      mangledName: "",
+      exportId: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResult4nameK_E",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group19CheckboxGroupResultC4nameV$$5Array<6String>",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 141,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 135,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 10
+            },
+            {
+              name: "stagemodelonly",
+              expr: 11
+            },
+            {
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 35,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResult6<init>HNN27ohos.arkui.component.common12SelectStatusERNat5ArrayIRNat6StringEE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResult6<init>HNN27ohos.arkui.component.common12SelectStatusERNat5ArrayIRNat6StringEE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group19CheckboxGroupResultC6<init>F12SelectStatus5Array<6String>$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17964634930887705478
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                52,
+                53
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 29,
+        ignore: false
+      },
+      identifier: "status",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 136,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResult4initHNN27ohos.arkui.component.common12SelectStatusERNat5ArrayIRNat6StringEEE6statusE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 28,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 137,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group19CheckboxGroupResult4initHNN27ohos.arkui.component.common12SelectStatusERNat5ArrayIRNat6StringEEE4nameIY9_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 161,
+        column: 2,
+        ignore: false
+      },
+      identifier: "parseCheckboxGroupResult",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 37,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group24parseCheckboxGroupResultHRN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group24parseCheckboxGroupResultHRN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group24parseCheckboxGroupResultF22FFiCheckboxGroupResult$$19CheckboxGroupResult",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 17023186900630170776
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                55
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 24
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 60,
+        ignore: false
+      },
+      identifier: "event",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 144,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group24parseCheckboxGroupResultHRN34ohos.arkui.component.native_struct22FFiCheckboxGroupResultEE5eventE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "ClassDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 347,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CheckboxGroup",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 173,
+        column: 14,
+        ignore: false
+      },
+      attributes: [
+        144678412907185200,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 13
+            },
+            {
+              name: "stagemodelonly",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 38,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroupE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroupE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 1260918797365511318,
+        srcUse: 0,
+        bodyHash: 16086571434518196282
+      },
+      info_type: "ClassInfo",
+      info: {
+        inheritedTypes: [
+          54
+        ],
+        body: [
+          57,
+          60,
+          62,
+          64,
+          66,
+          68,
+          71,
+          73,
+          78,
+          80,
+          82
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 192,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 12,
+        ignore: false
+      },
+      attributes: [
+        144678140445197344,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 16
+            },
+            {
+              name: "stagemodelonly",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 39,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup6<init>HRNat6StringE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup6<init>HRNat6StringE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC6<init>F6String!5group=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 4377431984879220021
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                58
+              ],
+              desugars: [
+                59
+              ]
+            }
+          ],
+          retType: 38
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 36,
+        ignore: false
+      },
+      identifier: "group",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 34,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup4initHRNat6StringEE5groupE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true,
+        defaultVal: 19
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 34,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 36,
+        ignore: false
+      },
+      identifier: "group.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 40,
+      mangledName: "_CPI35ohos.arkui.component.checkbox_group13CheckboxGroup4initHRNat6StringEE5groupHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 34
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 211,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selectAll",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 20
+            },
+            {
+              name: "stagemodelonly",
+              expr: 21
+            },
+            {
+              name: "syscap",
+              expr: 22
+            }
+          ]
+        }
+      ],
+      type: 41,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9selectAllHb",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9selectAllHb",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC9selectAllFb$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17692048076111817963
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                61
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 27,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 38,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 206,
+        column: 27,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 5,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9selectAllHbE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 230,
+        column: 6,
+        ignore: false
+      },
+      identifier: "selectedColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 23
+            },
+            {
+              name: "stagemodelonly",
+              expr: 24
+            },
+            {
+              name: "syscap",
+              expr: 25
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup13selectedColorHCN9ohos.base13ResourceColorE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup13selectedColorHCN9ohos.base13ResourceColorE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC13selectedColorF13ResourceColor$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 17896004165026822685
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                63
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 31,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 51,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 225,
+        column: 31,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 44,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup13selectedColorHCN9ohos.base13ResourceColorEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 238,
+        column: 6,
+        ignore: false
+      },
+      identifier: "widthInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup10widthInnerHCN9ohos.base6LengthE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup10widthInnerHCN9ohos.base6LengthE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC10widthInnerF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 9303700595724564185
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                65
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 53,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 232,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup10widthInnerHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 246,
+        column: 6,
+        ignore: false
+      },
+      identifier: "heightInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup11heightInnerHCN9ohos.base6LengthE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup11heightInnerHCN9ohos.base6LengthE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC11heightInnerF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 9721286968516449594
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                67
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 54,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 240,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup11heightInnerHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 256,
+        column: 6,
+        ignore: false
+      },
+      identifier: "sizeInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 47,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9sizeInnerHCN9ohos.base6LengthEY3_",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9sizeInnerHCN9ohos.base6LengthEY3_",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC9sizeInnerF6Length6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 13607283180193569792
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                69,
+                70
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 39,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 52,
+        ignore: false
+      },
+      identifier: "width",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 39,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9sizeInnerHCN9ohos.base6LengthEY3_E5widthE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 54,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 68,
+        ignore: false
+      },
+      identifier: "height",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 54,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup9sizeInnerHCN9ohos.base6LengthEY3_E6heightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 264,
+        column: 6,
+        ignore: false
+      },
+      identifier: "paddingInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 45,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC12paddingInnerF6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 12958341722667707304
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                72
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 55,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 286,
+        column: 6,
+        ignore: false
+      },
+      identifier: "paddingInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 48,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC12paddingInnerF6Length6Length6Length6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 1036610425795595576
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                74,
+                75,
+                76,
+                77
+              ],
+              desugars: [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 42,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 53,
+        ignore: false
+      },
+      identifier: "top",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 42,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E3topE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 55,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 68,
+        ignore: false
+      },
+      identifier: "right",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 55,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E5rightE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 70,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 84,
+        ignore: false
+      },
+      identifier: "bottom",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 70,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E6bottomE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 86,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 98,
+        ignore: false
+      },
+      identifier: "left",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 266,
+        column: 86,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 46,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E4leftE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 288,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 305,
+        column: 6,
+        ignore: false
+      },
+      identifier: "responseRegionInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 288,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 49,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup19responseRegionInnerHCN27ohos.arkui.component.common9RectangleE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup19responseRegionInnerHCN27ohos.arkui.component.common9RectangleE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC19responseRegionInnerF9Rectangle$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 11211004804897475810
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                79
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 288,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 288,
+        column: 64,
+        ignore: false
+      },
+      identifier: "rect",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 288,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 50,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup19responseRegionInnerHCN27ohos.arkui.component.common9RectangleEE4rectE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 307,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 320,
+        column: 6,
+        ignore: false
+      },
+      identifier: "responseRegionInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 307,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 51,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup19responseRegionInnerHRNat5ArrayICN27ohos.arkui.component.common9RectangleEE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup19responseRegionInnerHRNat5ArrayICN27ohos.arkui.component.common9RectangleEE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC19responseRegionInnerF5Array<9Rectangle>$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 2127363931461633664
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                81
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 307,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 307,
+        column: 72,
+        ignore: false
+      },
+      identifier: "array",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 307,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 52,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup19responseRegionInnerHRNat5ArrayICN27ohos.arkui.component.common9RectangleEEE5arrayIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 335,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 346,
+        column: 6,
+        ignore: false
+      },
+      identifier: "onChange",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 335,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 26
+            },
+            {
+              name: "stagemodelonly",
+              expr: 27
+            },
+            {
+              name: "syscap",
+              expr: 28
+            }
+          ]
+        }
+      ],
+      type: 53,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup8onChangeHF0uCNY_19CheckboxGroupResultEE",
+      exportId: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup8onChangeHF0uCNY_19CheckboxGroupResultEE",
+      mangledBeforeSema: "35ohos.arkui.component.checkbox_group13CheckboxGroupC8onChangeF29OnCheckboxGroupChangeCallback$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 13938340585429060178
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                83
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 42
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox_group",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 335,
+        column: 26,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 335,
+        column: 65,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 335,
+        column: 26,
+        ignore: false
+      },
+      attributes: [
+        562984313159712,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "_CN35ohos.arkui.component.checkbox_group13CheckboxGroup8onChangeHF0uCNY_19CheckboxGroupResultEEE8callbackE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    }
+  ],
+  allExprs: [
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 98,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 99,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 110,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 111,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 121,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 122,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 123,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 131,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 132,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 133,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 169,
+        column: 7,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 170,
+        column: 25,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 171,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 171,
+        column: 48,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 182,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 182,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 183,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 184,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 184,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 34,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 36,
+        ignore: false
+      },
+      type: 34,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 202,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 203,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 204,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 221,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 222,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 222,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 223,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 223,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 331,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 331,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 332,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 332,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 333,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 333,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    }
+  ],
+  moduleName: ""
+}
