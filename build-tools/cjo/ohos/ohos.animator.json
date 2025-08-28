@@ -6,7 +6,7 @@
     patch_num: 0
   },
   fullPkgName: "ohos.animator",
-  pkgDepInfo: "{\"package\":\"ohos.animator\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":30}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":49}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":27}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.animator\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":37}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":49}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"cj_animator.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":27}}]}]}",
   imports: [
     "std.core",
     "ohos.animator",
@@ -75,29 +75,6 @@
             file: 1,
             pkgId: 0,
             line: 20,
-            column: 30,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "arkui",
-            "component"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 21,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 21,
             column: 28,
             ignore: false
           },
@@ -112,14 +89,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 22,
+            line: 21,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 22,
+            line: 21,
             column: 49,
             ignore: false
           },
@@ -134,14 +111,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 23,
+            line: 22,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 23,
+            line: 22,
             column: 27,
             ignore: false
           },
@@ -150,6 +127,30 @@
             "deriving"
           ],
           identifier: "Derive",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 37,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "*",
           asIdentifier: ""
         },
         {
@@ -3250,14 +3251,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 75,
+        line: 65,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 89,
+        line: 69,
         column: 2,
         ignore: false
       },
@@ -3265,33 +3266,16 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 75,
-        column: 14,
+        line: 65,
+        column: 17,
         ignore: false
       },
       attributes: [
-        144678412907185200,
+        144678138029281328,
         0
       ],
       annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 1
-            },
-            {
-              name: "stagemodelonly",
-              expr: 2
-            },
-            {
-              name: "syscap",
-              expr: 3
-            }
-          ]
-        }
+
       ],
       type: 12,
       mangledName: "_CN13ohos.animator8AnimatorE",
@@ -3300,9 +3284,9 @@
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 6646258127340718752
+        bodyHash: 17171475880299131985
       },
       info_type: "ClassInfo",
       info: {
@@ -3325,14 +3309,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 86,
+        line: 66,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 88,
+        line: 68,
         column: 6,
         ignore: false
       },
@@ -3340,33 +3324,16 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 86,
-        column: 24,
+        line: 66,
+        column: 27,
         ignore: false
       },
       attributes: [
-        144678138297714208,
+        144678138297717280,
         0
       ],
       annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 4
-            },
-            {
-              name: "stagemodelonly",
-              expr: 5
-            },
-            {
-              name: "syscap",
-              expr: 6
-            }
-          ]
-        }
+
       ],
       type: 13,
       mangledName: "_CN13ohos.animator8Animator6createHCNY_15AnimatorOptionsE",
@@ -3375,9 +3342,9 @@
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 2687969717096398320,
         srcUse: 8035971499611947038,
-        bodyHash: 14927171028785565645
+        bodyHash: 10638359573388461359
       },
       info_type: "FuncInfo",
       info: {
@@ -3407,14 +3374,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 184,
+        line: 186,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 258,
+        line: 341,
         column: 2,
         ignore: false
       },
@@ -3422,7 +3389,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 184,
+        line: 186,
         column: 14,
         ignore: false
       },
@@ -3437,15 +3404,15 @@
           args: [
             {
               name: "",
-              expr: 37
+              expr: 31
             },
             {
               name: "stagemodelonly",
-              expr: 38
+              expr: 32
             },
             {
               name: "syscap",
-              expr: 39
+              expr: 33
             }
           ]
         }
@@ -3490,14 +3457,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 265,
+        line: 353,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 514,
+        line: 655,
         column: 2,
         ignore: false
       },
@@ -3505,7 +3472,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 265,
+        line: 353,
         column: 14,
         ignore: false
       },
@@ -3520,15 +3487,15 @@
           args: [
             {
               name: "",
-              expr: 67
+              expr: 61
             },
             {
               name: "stagemodelonly",
-              expr: 68
+              expr: 62
             },
             {
               name: "syscap",
-              expr: 69
+              expr: 63
             }
           ]
         }
@@ -3577,23 +3544,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 86,
-        column: 31,
+        line: 66,
+        column: 34,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 86,
-        column: 55,
+        line: 66,
+        column: 58,
         ignore: false
       },
       identifier: "options",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 86,
-        column: 31,
+        line: 66,
+        column: 34,
         ignore: false
       },
       attributes: [
@@ -3628,15 +3595,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 75,
-        column: 14,
+        line: 65,
+        column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 75,
-        column: 22,
+        line: 65,
+        column: 25,
         ignore: false
       },
       identifier: "init",
@@ -3693,14 +3660,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 96,
+        line: 81,
         column: 11,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 132,
+        line: 119,
         column: 13,
         ignore: false
       },
@@ -3708,7 +3675,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 96,
+        line: 81,
         column: 23,
         ignore: false
       },
@@ -3723,15 +3690,15 @@
           args: [
             {
               name: "",
-              expr: 7
+              expr: 1
             },
             {
               name: "stagemodelonly",
-              expr: 8
+              expr: 2
             },
             {
               name: "syscap",
-              expr: 9
+              expr: 3
             }
           ]
         }
@@ -3763,8 +3730,8 @@
         ellipsisPos: {
           file: 1,
           pkgId: 0,
-          line: 91,
-          column: 947,
+          line: 76,
+          column: 975,
           ignore: false
         }
       }
@@ -3775,14 +3742,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 102,
+        line: 88,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 102,
+        line: 88,
         column: 20,
         ignore: false
       },
@@ -3790,7 +3757,135 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 102,
+        line: 88,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 4
+            },
+            {
+              name: "stagemodelonly",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
+            }
+          ]
+        }
+      ],
+      type: 18,
+      mangledName: "",
+      exportId: "_CN13ohos.animator12AnimatorFill4NoneKE",
+      mangledBeforeSema: "13ohos.animator12AnimatorFillU4NoneV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 17523381249315607982
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.animator",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 95,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 95,
+        column: 24,
+        ignore: false
+      },
+      identifier: "Forwards",
+      identifierPos: {
+        file: 0,
+        pkgId: 2,
+        line: 95,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 7
+            },
+            {
+              name: "stagemodelonly",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
+      ],
+      type: 18,
+      mangledName: "",
+      exportId: "_CN13ohos.animator12AnimatorFill8ForwardsKE",
+      mangledBeforeSema: "13ohos.animator12AnimatorFillU8ForwardsV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 17523381249315607982
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.animator",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 101,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 101,
+        column: 25,
+        ignore: false
+      },
+      identifier: "Backwards",
+      identifierPos: {
+        file: 0,
+        pkgId: 2,
+        line: 101,
         column: 16,
         ignore: false
       },
@@ -3820,8 +3915,8 @@
       ],
       type: 18,
       mangledName: "",
-      exportId: "_CN13ohos.animator12AnimatorFill4NoneKE",
-      mangledBeforeSema: "13ohos.animator12AnimatorFillU4NoneV$$",
+      exportId: "_CN13ohos.animator12AnimatorFill9BackwardsKE",
+      mangledBeforeSema: "13ohos.animator12AnimatorFillU9BackwardsV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -3839,22 +3934,22 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 108,
+        line: 107,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 108,
-        column: 24,
+        line: 107,
+        column: 20,
         ignore: false
       },
-      identifier: "Forwards",
+      identifier: "Both",
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 108,
+        line: 107,
         column: 16,
         ignore: false
       },
@@ -3884,134 +3979,6 @@
       ],
       type: 18,
       mangledName: "",
-      exportId: "_CN13ohos.animator12AnimatorFill8ForwardsKE",
-      mangledBeforeSema: "13ohos.animator12AnimatorFillU8ForwardsV$$",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 520285295869893810,
-        srcUse: 1273861709373161920,
-        bodyHash: 17523381249315607982
-      },
-      info_type: "VarInfo",
-      info: {
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.animator",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 114,
-        column: 16,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 114,
-        column: 25,
-        ignore: false
-      },
-      identifier: "Backwards",
-      identifierPos: {
-        file: 0,
-        pkgId: 2,
-        line: 114,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        279307093024,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 16
-            },
-            {
-              name: "stagemodelonly",
-              expr: 17
-            },
-            {
-              name: "syscap",
-              expr: 18
-            }
-          ]
-        }
-      ],
-      type: 18,
-      mangledName: "",
-      exportId: "_CN13ohos.animator12AnimatorFill9BackwardsKE",
-      mangledBeforeSema: "13ohos.animator12AnimatorFillU9BackwardsV$$",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 520285295869893810,
-        srcUse: 1273861709373161920,
-        bodyHash: 17523381249315607982
-      },
-      info_type: "VarInfo",
-      info: {
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.animator",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 120,
-        column: 16,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 120,
-        column: 20,
-        ignore: false
-      },
-      identifier: "Both",
-      identifierPos: {
-        file: 0,
-        pkgId: 2,
-        line: 120,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        279307093024,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 19
-            },
-            {
-              name: "stagemodelonly",
-              expr: 20
-            },
-            {
-              name: "syscap",
-              expr: 21
-            }
-          ]
-        }
-      ],
-      type: 18,
-      mangledName: "",
       exportId: "_CN13ohos.animator12AnimatorFill4BothKE",
       mangledBeforeSema: "13ohos.animator12AnimatorFillU4BothV$$",
       hash: {
@@ -4035,14 +4002,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 123,
+        line: 110,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 131,
+        line: 118,
         column: 17,
         ignore: false
       },
@@ -4050,7 +4017,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 123,
+        line: 110,
         column: 21,
         ignore: false
       },
@@ -4070,7 +4037,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 7509261812568003963
+        bodyHash: 7899465537432775002
       },
       info_type: "FuncInfo",
       info: {
@@ -4100,14 +4067,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 133,
+        line: 120,
         column: 12,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 146,
+        line: 133,
         column: 13,
         ignore: false
       },
@@ -4115,7 +4082,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 133,
+        line: 120,
         column: 12,
         ignore: false
       },
@@ -4158,14 +4125,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 134,
+        line: 121,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 142,
+        line: 129,
         column: 17,
         ignore: false
       },
@@ -4173,7 +4140,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 134,
+        line: 121,
         column: 37,
         ignore: false
       },
@@ -4193,7 +4160,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 14245177985523666713
+        bodyHash: 15492163471490793031
       },
       info_type: "FuncInfo",
       info: {
@@ -4219,14 +4186,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 134,
+        line: 121,
         column: 40,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 134,
+        line: 121,
         column: 59,
         ignore: false
       },
@@ -4234,7 +4201,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 134,
+        line: 121,
         column: 40,
         ignore: false
       },
@@ -4270,14 +4237,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 143,
+        line: 130,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 145,
+        line: 132,
         column: 17,
         ignore: false
       },
@@ -4285,7 +4252,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 143,
+        line: 130,
         column: 37,
         ignore: false
       },
@@ -4305,7 +4272,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 7361818621569175975
+        bodyHash: 1310568973303131760
       },
       info_type: "FuncInfo",
       info: {
@@ -4331,14 +4298,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 143,
+        line: 130,
         column: 40,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 143,
+        line: 130,
         column: 59,
         ignore: false
       },
@@ -4346,7 +4313,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 143,
+        line: 130,
         column: 40,
         ignore: false
       },
@@ -4383,14 +4350,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 154,
+        line: 147,
         column: 12,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 190,
+        line: 183,
         column: 14,
         ignore: false
       },
@@ -4398,7 +4365,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 154,
+        line: 147,
         column: 24,
         ignore: false
       },
@@ -4413,15 +4380,15 @@
           args: [
             {
               name: "",
-              expr: 22
+              expr: 16
             },
             {
               name: "stagemodelonly",
-              expr: 23
+              expr: 17
             },
             {
               name: "syscap",
-              expr: 24
+              expr: 18
             }
           ]
         }
@@ -4453,7 +4420,7 @@
         ellipsisPos: {
           file: 1,
           pkgId: 0,
-          line: 135,
+          line: 132,
           column: 996,
           ignore: false
         }
@@ -4465,14 +4432,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 160,
+        line: 153,
         column: 17,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 160,
+        line: 153,
         column: 23,
         ignore: false
       },
@@ -4480,7 +4447,135 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 160,
+        line: 153,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 19
+            },
+            {
+              name: "stagemodelonly",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "",
+      exportId: "_CN13ohos.animator17AnimatorDirection6NormalKE",
+      mangledBeforeSema: "13ohos.animator17AnimatorDirectionU6NormalV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 17523381249315607982
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.animator",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 159,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 159,
+        column: 24,
+        ignore: false
+      },
+      identifier: "Reverse",
+      identifierPos: {
+        file: 0,
+        pkgId: 2,
+        line: 159,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        279307093024,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 22
+            },
+            {
+              name: "stagemodelonly",
+              expr: 23
+            },
+            {
+              name: "syscap",
+              expr: 24
+            }
+          ]
+        }
+      ],
+      type: 24,
+      mangledName: "",
+      exportId: "_CN13ohos.animator17AnimatorDirection7ReverseKE",
+      mangledBeforeSema: "13ohos.animator17AnimatorDirectionU7ReverseV$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 1273861709373161920,
+        bodyHash: 17523381249315607982
+      },
+      info_type: "VarInfo",
+      info: {
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.animator",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 165,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 165,
+        column: 26,
+        ignore: false
+      },
+      identifier: "Alternate",
+      identifierPos: {
+        file: 0,
+        pkgId: 2,
+        line: 165,
         column: 17,
         ignore: false
       },
@@ -4510,8 +4605,8 @@
       ],
       type: 24,
       mangledName: "",
-      exportId: "_CN13ohos.animator17AnimatorDirection6NormalKE",
-      mangledBeforeSema: "13ohos.animator17AnimatorDirectionU6NormalV$$",
+      exportId: "_CN13ohos.animator17AnimatorDirection9AlternateKE",
+      mangledBeforeSema: "13ohos.animator17AnimatorDirectionU9AlternateV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -4529,22 +4624,22 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 166,
+        line: 171,
         column: 17,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 166,
-        column: 24,
+        line: 171,
+        column: 33,
         ignore: false
       },
-      identifier: "Reverse",
+      identifier: "AlternateReverse",
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 166,
+        line: 171,
         column: 17,
         ignore: false
       },
@@ -4574,134 +4669,6 @@
       ],
       type: 24,
       mangledName: "",
-      exportId: "_CN13ohos.animator17AnimatorDirection7ReverseKE",
-      mangledBeforeSema: "13ohos.animator17AnimatorDirectionU7ReverseV$$",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 520285295869893810,
-        srcUse: 1273861709373161920,
-        bodyHash: 17523381249315607982
-      },
-      info_type: "VarInfo",
-      info: {
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.animator",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 172,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 172,
-        column: 26,
-        ignore: false
-      },
-      identifier: "Alternate",
-      identifierPos: {
-        file: 0,
-        pkgId: 2,
-        line: 172,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        279307093024,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 31
-            },
-            {
-              name: "stagemodelonly",
-              expr: 32
-            },
-            {
-              name: "syscap",
-              expr: 33
-            }
-          ]
-        }
-      ],
-      type: 24,
-      mangledName: "",
-      exportId: "_CN13ohos.animator17AnimatorDirection9AlternateKE",
-      mangledBeforeSema: "13ohos.animator17AnimatorDirectionU9AlternateV$$",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 520285295869893810,
-        srcUse: 1273861709373161920,
-        bodyHash: 17523381249315607982
-      },
-      info_type: "VarInfo",
-      info: {
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.animator",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 178,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 178,
-        column: 33,
-        ignore: false
-      },
-      identifier: "AlternateReverse",
-      identifierPos: {
-        file: 0,
-        pkgId: 2,
-        line: 178,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        279307093024,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 34
-            },
-            {
-              name: "stagemodelonly",
-              expr: 35
-            },
-            {
-              name: "syscap",
-              expr: 36
-            }
-          ]
-        }
-      ],
-      type: 24,
-      mangledName: "",
       exportId: "_CN13ohos.animator17AnimatorDirection16AlternateReverseKE",
       mangledBeforeSema: "13ohos.animator17AnimatorDirectionU16AlternateReverseV$$",
       hash: {
@@ -4725,14 +4692,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 181,
+        line: 174,
         column: 17,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 189,
+        line: 182,
         column: 18,
         ignore: false
       },
@@ -4740,7 +4707,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 181,
+        line: 174,
         column: 22,
         ignore: false
       },
@@ -4760,7 +4727,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 6244113737264286376
+        bodyHash: 14559696090366394802
       },
       info_type: "FuncInfo",
       info: {
@@ -4790,14 +4757,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 191,
+        line: 184,
         column: 13,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 204,
+        line: 197,
         column: 14,
         ignore: false
       },
@@ -4805,7 +4772,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 191,
+        line: 184,
         column: 13,
         ignore: false
       },
@@ -4848,14 +4815,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 192,
+        line: 185,
         column: 17,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 200,
+        line: 193,
         column: 18,
         ignore: false
       },
@@ -4863,7 +4830,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 192,
+        line: 185,
         column: 38,
         ignore: false
       },
@@ -4883,7 +4850,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16009427419201764060
+        bodyHash: 18358121753036555086
       },
       info_type: "FuncInfo",
       info: {
@@ -4909,14 +4876,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 192,
+        line: 185,
         column: 41,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 192,
+        line: 185,
         column: 65,
         ignore: false
       },
@@ -4924,7 +4891,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 192,
+        line: 185,
         column: 41,
         ignore: false
       },
@@ -4960,14 +4927,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 201,
+        line: 194,
         column: 17,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 203,
+        line: 196,
         column: 18,
         ignore: false
       },
@@ -4975,7 +4942,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 201,
+        line: 194,
         column: 38,
         ignore: false
       },
@@ -4995,7 +4962,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 4128730845573439324
+        bodyHash: 13147829633243672600
       },
       info_type: "FuncInfo",
       info: {
@@ -5021,14 +4988,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 201,
+        line: 194,
         column: 41,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 201,
+        line: 194,
         column: 65,
         ignore: false
       },
@@ -5036,7 +5003,7 @@
       identifierPos: {
         file: 0,
         pkgId: 2,
-        line: 201,
+        line: 194,
         column: 41,
         ignore: false
       },
@@ -5068,14 +5035,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 190,
+        line: 198,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 190,
+        line: 198,
         column: 31,
         ignore: false
       },
@@ -5083,7 +5050,137 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 190,
+        line: 198,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 34
+            },
+            {
+              name: "stagemodelonly",
+              expr: 35
+            },
+            {
+              name: "syscap",
+              expr: 36
+            }
+          ]
+        }
+      ],
+      type: 5,
+      mangledName: "",
+      exportId: "_CN13ohos.animator15AnimatorOptions8durationK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC8durationV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.animator",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 227,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 227,
+        column: 30,
+        ignore: false
+      },
+      identifier: "easing",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 227,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 37
+            },
+            {
+              name: "stagemodelonly",
+              expr: 38
+            },
+            {
+              name: "syscap",
+              expr: 39
+            }
+          ]
+        }
+      ],
+      type: 20,
+      mangledName: "",
+      exportId: "_CN13ohos.animator15AnimatorOptions6easingK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC6easingV$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 11893097501693740523
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.animator",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
+        column: 28,
+        ignore: false
+      },
+      identifier: "delay",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 239,
         column: 16,
         ignore: false
       },
@@ -5113,8 +5210,8 @@
       ],
       type: 5,
       mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions8durationK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC8durationV$$i",
+      exportId: "_CN13ohos.animator15AnimatorOptions5delayK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC5delayV$$i",
       hash: {
         instVar: 0,
         virt: 0,
@@ -5133,22 +5230,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 196,
+        line: 250,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 196,
-        column: 30,
+        line: 250,
+        column: 34,
         ignore: false
       },
-      identifier: "easing",
+      identifier: "fill",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 196,
+        line: 250,
         column: 16,
         ignore: false
       },
@@ -5176,10 +5273,10 @@
           ]
         }
       ],
-      type: 20,
+      type: 18,
       mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions6easingK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC6easingV$$6String",
+      exportId: "_CN13ohos.animator15AnimatorOptions4fillK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC4fillV$$12AnimatorFill",
       hash: {
         instVar: 0,
         virt: 0,
@@ -5198,22 +5295,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 202,
+        line: 261,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 202,
-        column: 28,
+        line: 261,
+        column: 44,
         ignore: false
       },
-      identifier: "delay",
+      identifier: "direction",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 202,
+        line: 261,
         column: 16,
         ignore: false
       },
@@ -5241,10 +5338,10 @@
           ]
         }
       ],
-      type: 5,
+      type: 24,
       mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions5delayK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC5delayV$$i",
+      exportId: "_CN13ohos.animator15AnimatorOptions9directionK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC9directionV$$17AnimatorDirection",
       hash: {
         instVar: 0,
         virt: 0,
@@ -5263,22 +5360,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 208,
+        line: 273,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 208,
-        column: 34,
+        line: 273,
+        column: 33,
         ignore: false
       },
-      identifier: "fill",
+      identifier: "iterations",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 208,
+        line: 273,
         column: 16,
         ignore: false
       },
@@ -5306,10 +5403,10 @@
           ]
         }
       ],
-      type: 18,
+      type: 5,
       mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions4fillK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC4fillV$$12AnimatorFill",
+      exportId: "_CN13ohos.animator15AnimatorOptions10iterationsK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC10iterationsV$$i",
       hash: {
         instVar: 0,
         virt: 0,
@@ -5328,22 +5425,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 214,
+        line: 285,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 214,
-        column: 44,
+        line: 285,
+        column: 30,
         ignore: false
       },
-      identifier: "direction",
+      identifier: "begin",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 214,
+        line: 285,
         column: 16,
         ignore: false
       },
@@ -5371,10 +5468,10 @@
           ]
         }
       ],
-      type: 24,
+      type: 10,
       mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions9directionK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC9directionV$$17AnimatorDirection",
+      exportId: "_CN13ohos.animator15AnimatorOptions5beginK_E",
+      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC5beginV$$d",
       hash: {
         instVar: 0,
         virt: 0,
@@ -5393,22 +5490,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 297,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 220,
-        column: 33,
+        line: 297,
+        column: 28,
         ignore: false
       },
-      identifier: "iterations",
+      identifier: "end",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 297,
         column: 16,
         ignore: false
       },
@@ -5432,136 +5529,6 @@
             {
               name: "syscap",
               expr: 57
-            }
-          ]
-        }
-      ],
-      type: 5,
-      mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions10iterationsK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC10iterationsV$$i",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
-      },
-      info_type: "VarInfo",
-      info: {
-        isVar: true
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.animator",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 226,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 226,
-        column: 30,
-        ignore: false
-      },
-      identifier: "begin",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 226,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 58
-            },
-            {
-              name: "stagemodelonly",
-              expr: 59
-            },
-            {
-              name: "syscap",
-              expr: 60
-            }
-          ]
-        }
-      ],
-      type: 10,
-      mangledName: "",
-      exportId: "_CN13ohos.animator15AnimatorOptions5beginK_E",
-      mangledBeforeSema: "13ohos.animator15AnimatorOptionsC5beginV$$d",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
-      },
-      info_type: "VarInfo",
-      info: {
-        isVar: true
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.animator",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 232,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 232,
-        column: 28,
-        ignore: false
-      },
-      identifier: "end",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 232,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 61
-            },
-            {
-              name: "stagemodelonly",
-              expr: 62
-            },
-            {
-              name: "syscap",
-              expr: 63
             }
           ]
         }
@@ -5592,14 +5559,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 322,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 257,
+        line: 340,
         column: 6,
         ignore: false
       },
@@ -5607,7 +5574,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 322,
         column: 12,
         ignore: false
       },
@@ -5622,15 +5589,15 @@
           args: [
             {
               name: "",
-              expr: 64
+              expr: 58
             },
             {
               name: "stagemodelonly",
-              expr: 65
+              expr: 59
             },
             {
               name: "syscap",
-              expr: 66
+              expr: 60
             }
           ]
         }
@@ -5644,7 +5611,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 9482491775098041015
+        bodyHash: 7337917500983454341
       },
       info_type: "FuncInfo",
       info: {
@@ -5683,14 +5650,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 323,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 323,
         column: 25,
         ignore: false
       },
@@ -5698,7 +5665,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 323,
         column: 9,
         ignore: false
       },
@@ -5731,14 +5698,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 241,
+        line: 324,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 241,
+        line: 324,
         column: 24,
         ignore: false
       },
@@ -5746,7 +5713,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 241,
+        line: 324,
         column: 9,
         ignore: false
       },
@@ -5779,14 +5746,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 242,
+        line: 325,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 242,
+        line: 325,
         column: 22,
         ignore: false
       },
@@ -5794,7 +5761,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 242,
+        line: 325,
         column: 9,
         ignore: false
       },
@@ -5827,14 +5794,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 243,
+        line: 326,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 243,
+        line: 326,
         column: 28,
         ignore: false
       },
@@ -5842,7 +5809,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 243,
+        line: 326,
         column: 9,
         ignore: false
       },
@@ -5875,14 +5842,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 244,
+        line: 327,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 244,
+        line: 327,
         column: 38,
         ignore: false
       },
@@ -5890,7 +5857,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 244,
+        line: 327,
         column: 9,
         ignore: false
       },
@@ -5923,14 +5890,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 245,
+        line: 328,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 245,
+        line: 328,
         column: 27,
         ignore: false
       },
@@ -5938,7 +5905,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 245,
+        line: 328,
         column: 9,
         ignore: false
       },
@@ -5971,14 +5938,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 246,
+        line: 329,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 246,
+        line: 329,
         column: 24,
         ignore: false
       },
@@ -5986,7 +5953,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 246,
+        line: 329,
         column: 9,
         ignore: false
       },
@@ -6019,14 +5986,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 247,
+        line: 330,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 247,
+        line: 330,
         column: 22,
         ignore: false
       },
@@ -6034,7 +6001,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 247,
+        line: 330,
         column: 9,
         ignore: false
       },
@@ -6067,14 +6034,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 266,
+        line: 354,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 266,
+        line: 354,
         column: 45,
         ignore: false
       },
@@ -6082,7 +6049,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 266,
+        line: 354,
         column: 9,
         ignore: false
       },
@@ -6102,7 +6069,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 17327286262165285715,
-        bodyHash: 7359419147440812092
+        bodyHash: 4882986076851000415
       },
       info_type: "VarInfo",
       info: {
@@ -6115,14 +6082,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 267,
+        line: 355,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 267,
+        line: 355,
         column: 37,
         ignore: false
       },
@@ -6130,7 +6097,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 267,
+        line: 355,
         column: 9,
         ignore: false
       },
@@ -6150,7 +6117,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 17327286262165285715,
-        bodyHash: 13438270958486105324
+        bodyHash: 8403650633147953635
       },
       info_type: "VarInfo",
       info: {
@@ -6163,14 +6130,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 268,
+        line: 356,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 268,
+        line: 356,
         column: 37,
         ignore: false
       },
@@ -6178,7 +6145,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 268,
+        line: 356,
         column: 9,
         ignore: false
       },
@@ -6198,7 +6165,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 17327286262165285715,
-        bodyHash: 3411594281014930171
+        bodyHash: 13073208244086283440
       },
       info_type: "VarInfo",
       info: {
@@ -6211,14 +6178,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 269,
+        line: 357,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 269,
+        line: 357,
         column: 37,
         ignore: false
       },
@@ -6226,7 +6193,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 269,
+        line: 357,
         column: 9,
         ignore: false
       },
@@ -6246,7 +6213,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 17327286262165285715,
-        bodyHash: 7029816469751152387
+        bodyHash: 5857475712135589011
       },
       info_type: "VarInfo",
       info: {
@@ -6263,14 +6230,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 276,
+        line: 364,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 296,
+        line: 384,
         column: 6,
         ignore: false
       },
@@ -6278,7 +6245,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 276,
+        line: 364,
         column: 5,
         ignore: false
       },
@@ -6293,15 +6260,15 @@
           args: [
             {
               name: "",
-              expr: 70
+              expr: 64
             },
             {
               name: "stagemodelonly",
-              expr: 71
+              expr: 65
             },
             {
               name: "syscap",
-              expr: 72
+              expr: 66
             }
           ]
         }
@@ -6315,7 +6282,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 112527948425910489
+        bodyHash: 5042545124703166832
       },
       info_type: "FuncInfo",
       info: {
@@ -6340,14 +6307,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 276,
+        line: 364,
         column: 10,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 276,
+        line: 364,
         column: 34,
         ignore: false
       },
@@ -6355,7 +6322,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 276,
+        line: 364,
         column: 10,
         ignore: false
       },
@@ -6391,14 +6358,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 298,
+        line: 386,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 300,
+        line: 388,
         column: 6,
         ignore: false
       },
@@ -6406,7 +6373,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 298,
+        line: 386,
         column: 5,
         ignore: false
       },
@@ -6426,7 +6393,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 4318743645373588565
+        bodyHash: 6286631143880750405
       },
       info_type: "FuncInfo",
       info: {
@@ -6451,14 +6418,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 307,
+        line: 400,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 321,
+        line: 414,
         column: 6,
         ignore: false
       },
@@ -6466,7 +6433,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 307,
+        line: 400,
         column: 21,
         ignore: false
       },
@@ -6481,15 +6448,15 @@
           args: [
             {
               name: "",
-              expr: 73
+              expr: 67
             },
             {
               name: "stagemodelonly",
-              expr: 74
+              expr: 68
             },
             {
               name: "syscap",
-              expr: 75
+              expr: 69
             }
           ]
         }
@@ -6526,14 +6493,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 311,
+        line: 404,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 320,
+        line: 413,
         column: 10,
         ignore: false
       },
@@ -6541,7 +6508,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 311,
+        line: 404,
         column: 9,
         ignore: false
       },
@@ -6561,7 +6528,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 11704370176704775315
+        bodyHash: 7724285874292340923
       },
       info_type: "FuncInfo",
       info: {
@@ -6586,14 +6553,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 311,
+        line: 404,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 311,
+        line: 404,
         column: 21,
         ignore: false
       },
@@ -6601,7 +6568,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 311,
+        line: 404,
         column: 13,
         ignore: false
       },
@@ -6637,14 +6604,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 308,
+        line: 401,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 310,
+        line: 403,
         column: 10,
         ignore: false
       },
@@ -6652,7 +6619,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 308,
+        line: 401,
         column: 9,
         ignore: false
       },
@@ -6672,7 +6639,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 12421947414755725179
+        bodyHash: 7263827504836192337
       },
       info_type: "FuncInfo",
       info: {
@@ -6697,14 +6664,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 328,
+        line: 426,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 342,
+        line: 440,
         column: 6,
         ignore: false
       },
@@ -6712,7 +6679,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 328,
+        line: 426,
         column: 21,
         ignore: false
       },
@@ -6727,15 +6694,15 @@
           args: [
             {
               name: "",
-              expr: 76
+              expr: 70
             },
             {
               name: "stagemodelonly",
-              expr: 77
+              expr: 71
             },
             {
               name: "syscap",
-              expr: 78
+              expr: 72
             }
           ]
         }
@@ -6772,14 +6739,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 332,
+        line: 430,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 341,
+        line: 439,
         column: 10,
         ignore: false
       },
@@ -6787,7 +6754,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 332,
+        line: 430,
         column: 9,
         ignore: false
       },
@@ -6807,7 +6774,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 17458501346162090861
+        bodyHash: 7004488680658566308
       },
       info_type: "FuncInfo",
       info: {
@@ -6832,14 +6799,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 332,
+        line: 430,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 332,
+        line: 430,
         column: 21,
         ignore: false
       },
@@ -6847,7 +6814,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 332,
+        line: 430,
         column: 13,
         ignore: false
       },
@@ -6883,14 +6850,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 329,
+        line: 427,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 331,
+        line: 429,
         column: 10,
         ignore: false
       },
@@ -6898,7 +6865,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 329,
+        line: 427,
         column: 9,
         ignore: false
       },
@@ -6918,7 +6885,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 11337519544917850664
+        bodyHash: 6129048795255388610
       },
       info_type: "FuncInfo",
       info: {
@@ -6943,14 +6910,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 349,
+        line: 452,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 363,
+        line: 466,
         column: 6,
         ignore: false
       },
@@ -6958,7 +6925,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 349,
+        line: 452,
         column: 21,
         ignore: false
       },
@@ -6973,15 +6940,15 @@
           args: [
             {
               name: "",
-              expr: 79
+              expr: 73
             },
             {
               name: "stagemodelonly",
-              expr: 80
+              expr: 74
             },
             {
               name: "syscap",
-              expr: 81
+              expr: 75
             }
           ]
         }
@@ -7018,14 +6985,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 353,
+        line: 456,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 362,
+        line: 465,
         column: 10,
         ignore: false
       },
@@ -7033,7 +7000,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 353,
+        line: 456,
         column: 9,
         ignore: false
       },
@@ -7053,7 +7020,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 2411989213245163422
+        bodyHash: 4262069057849912588
       },
       info_type: "FuncInfo",
       info: {
@@ -7078,14 +7045,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 353,
+        line: 456,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 353,
+        line: 456,
         column: 21,
         ignore: false
       },
@@ -7093,7 +7060,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 353,
+        line: 456,
         column: 13,
         ignore: false
       },
@@ -7129,14 +7096,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 350,
+        line: 453,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 352,
+        line: 455,
         column: 10,
         ignore: false
       },
@@ -7144,7 +7111,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 350,
+        line: 453,
         column: 9,
         ignore: false
       },
@@ -7164,7 +7131,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 13622324944873623123
+        bodyHash: 4059161692312809607
       },
       info_type: "FuncInfo",
       info: {
@@ -7189,14 +7156,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 370,
+        line: 478,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 384,
+        line: 492,
         column: 6,
         ignore: false
       },
@@ -7204,7 +7171,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 370,
+        line: 478,
         column: 21,
         ignore: false
       },
@@ -7219,15 +7186,15 @@
           args: [
             {
               name: "",
-              expr: 82
+              expr: 76
             },
             {
               name: "stagemodelonly",
-              expr: 83
+              expr: 77
             },
             {
               name: "syscap",
-              expr: 84
+              expr: 78
             }
           ]
         }
@@ -7264,14 +7231,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 374,
+        line: 482,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 383,
+        line: 491,
         column: 10,
         ignore: false
       },
@@ -7279,7 +7246,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 374,
+        line: 482,
         column: 9,
         ignore: false
       },
@@ -7299,7 +7266,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 15251340135611105030
+        bodyHash: 5587002537556986756
       },
       info_type: "FuncInfo",
       info: {
@@ -7324,14 +7291,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 374,
+        line: 482,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 374,
+        line: 482,
         column: 21,
         ignore: false
       },
@@ -7339,7 +7306,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 374,
+        line: 482,
         column: 13,
         ignore: false
       },
@@ -7375,14 +7342,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 371,
+        line: 479,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 373,
+        line: 481,
         column: 10,
         ignore: false
       },
@@ -7390,7 +7357,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 371,
+        line: 479,
         column: 9,
         ignore: false
       },
@@ -7410,7 +7377,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 11540239782170613269
+        bodyHash: 6403599979792073160
       },
       info_type: "FuncInfo",
       info: {
@@ -7439,14 +7406,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 391,
+        line: 505,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 410,
+        line: 524,
         column: 6,
         ignore: false
       },
@@ -7454,7 +7421,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 391,
+        line: 505,
         column: 17,
         ignore: false
       },
@@ -7469,15 +7436,15 @@
           args: [
             {
               name: "",
-              expr: 85
+              expr: 79
             },
             {
               name: "stagemodelonly",
-              expr: 86
+              expr: 80
             },
             {
               name: "syscap",
-              expr: 87
+              expr: 81
             }
           ]
         }
@@ -7491,7 +7458,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 1080945259316223847
+        bodyHash: 5957884164366489592
       },
       info_type: "FuncInfo",
       info: {
@@ -7516,14 +7483,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 391,
+        line: 505,
         column: 23,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 391,
+        line: 505,
         column: 47,
         ignore: false
       },
@@ -7531,7 +7498,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 391,
+        line: 505,
         column: 23,
         ignore: false
       },
@@ -7567,14 +7534,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 417,
+        line: 531,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 424,
+        line: 538,
         column: 6,
         ignore: false
       },
@@ -7582,7 +7549,169 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 417,
+        line: 531,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 82
+            },
+            {
+              name: "stagemodelonly",
+              expr: 83
+            },
+            {
+              name: "syscap",
+              expr: 84
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "_CN13ohos.animator14AnimatorResult4playHv",
+      exportId: "_CN13ohos.animator14AnimatorResult4playHv",
+      mangledBeforeSema: "13ohos.animator14AnimatorResultC4playF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 15521516821920136840
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.animator",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 550,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 557,
+        column: 6,
+        ignore: false
+      },
+      identifier: "finish",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 550,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "",
+              expr: 85
+            },
+            {
+              name: "stagemodelonly",
+              expr: 86
+            },
+            {
+              name: "syscap",
+              expr: 87
+            }
+          ]
+        }
+      ],
+      type: 30,
+      mangledName: "_CN13ohos.animator14AnimatorResult6finishHv",
+      exportId: "_CN13ohos.animator14AnimatorResult6finishHv",
+      mangledBeforeSema: "13ohos.animator14AnimatorResultC6finishF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 12051242431998703953
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.animator",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 569,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 576,
+        column: 6,
+        ignore: false
+      },
+      identifier: "pause",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 569,
         column: 17,
         ignore: false
       },
@@ -7611,15 +7740,15 @@
         }
       ],
       type: 30,
-      mangledName: "_CN13ohos.animator14AnimatorResult4playHv",
-      exportId: "_CN13ohos.animator14AnimatorResult4playHv",
-      mangledBeforeSema: "13ohos.animator14AnimatorResultC4playF$$u",
+      mangledName: "_CN13ohos.animator14AnimatorResult5pauseHv",
+      exportId: "_CN13ohos.animator14AnimatorResult5pauseHv",
+      mangledBeforeSema: "13ohos.animator14AnimatorResultC5pauseF$$u",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 1527666982526946262
+        bodyHash: 6052235707848770410
       },
       info_type: "FuncInfo",
       info: {
@@ -7648,22 +7777,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 431,
+        line: 588,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 438,
+        line: 595,
         column: 6,
         ignore: false
       },
-      identifier: "finish",
+      identifier: "cancel",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 431,
+        line: 588,
         column: 17,
         ignore: false
       },
@@ -7692,15 +7821,15 @@
         }
       ],
       type: 30,
-      mangledName: "_CN13ohos.animator14AnimatorResult6finishHv",
-      exportId: "_CN13ohos.animator14AnimatorResult6finishHv",
-      mangledBeforeSema: "13ohos.animator14AnimatorResultC6finishF$$u",
+      mangledName: "_CN13ohos.animator14AnimatorResult6cancelHv",
+      exportId: "_CN13ohos.animator14AnimatorResult6cancelHv",
+      mangledBeforeSema: "13ohos.animator14AnimatorResultC6cancelF$$u",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 13090641089835436250
+        bodyHash: 14414627335996807498
       },
       info_type: "FuncInfo",
       info: {
@@ -7729,22 +7858,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 445,
+        line: 608,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 452,
+        line: 615,
         column: 6,
         ignore: false
       },
-      identifier: "pause",
+      identifier: "reverse",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 445,
+        line: 608,
         column: 17,
         ignore: false
       },
@@ -7773,168 +7902,6 @@
         }
       ],
       type: 30,
-      mangledName: "_CN13ohos.animator14AnimatorResult5pauseHv",
-      exportId: "_CN13ohos.animator14AnimatorResult5pauseHv",
-      mangledBeforeSema: "13ohos.animator14AnimatorResultC5pauseF$$u",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 0,
-        bodyHash: 12588834711964867235
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-
-              ],
-              desugars: [
-
-              ]
-            }
-          ],
-          retType: 29
-        }
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.animator",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 459,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 466,
-        column: 6,
-        ignore: false
-      },
-      identifier: "cancel",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 459,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 97
-            },
-            {
-              name: "stagemodelonly",
-              expr: 98
-            },
-            {
-              name: "syscap",
-              expr: 99
-            }
-          ]
-        }
-      ],
-      type: 30,
-      mangledName: "_CN13ohos.animator14AnimatorResult6cancelHv",
-      exportId: "_CN13ohos.animator14AnimatorResult6cancelHv",
-      mangledBeforeSema: "13ohos.animator14AnimatorResultC6cancelF$$u",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 0,
-        bodyHash: 5093524627322789209
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-
-              ],
-              desugars: [
-
-              ]
-            }
-          ],
-          retType: 29
-        }
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.animator",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 473,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 480,
-        column: 6,
-        ignore: false
-      },
-      identifier: "reverse",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 473,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 100
-            },
-            {
-              name: "stagemodelonly",
-              expr: 101
-            },
-            {
-              name: "syscap",
-              expr: 102
-            }
-          ]
-        }
-      ],
-      type: 30,
       mangledName: "_CN13ohos.animator14AnimatorResult7reverseHv",
       exportId: "_CN13ohos.animator14AnimatorResult7reverseHv",
       mangledBeforeSema: "13ohos.animator14AnimatorResultC7reverseF$$u",
@@ -7943,7 +7910,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 18177968995503283322
+        bodyHash: 15248998304779997070
       },
       info_type: "FuncInfo",
       info: {
@@ -7972,14 +7939,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 482,
+        line: 617,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 497,
+        line: 632,
         column: 6,
         ignore: false
       },
@@ -7987,7 +7954,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 482,
+        line: 617,
         column: 10,
         ignore: false
       },
@@ -8007,7 +7974,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 16052716992072359274
+        bodyHash: 4995021405668692730
       },
       info_type: "FuncInfo",
       info: {
@@ -8032,14 +7999,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 482,
+        line: 617,
         column: 38,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 482,
+        line: 617,
         column: 76,
         ignore: false
       },
@@ -8047,7 +8014,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 482,
+        line: 617,
         column: 38,
         ignore: false
       },
@@ -8083,14 +8050,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 504,
+        line: 645,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 513,
+        line: 654,
         column: 6,
         ignore: false
       },
@@ -8098,7 +8065,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 504,
+        line: 645,
         column: 17,
         ignore: false
       },
@@ -8113,15 +8080,15 @@
           args: [
             {
               name: "",
-              expr: 103
+              expr: 97
             },
             {
               name: "stagemodelonly",
-              expr: 104
+              expr: 98
             },
             {
               name: "syscap",
-              expr: 105
+              expr: 99
             }
           ]
         }
@@ -8135,7 +8102,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 11470142482798592154
+        bodyHash: 15312161770712737950
       },
       info_type: "FuncInfo",
       info: {
@@ -8160,14 +8127,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 504,
+        line: 645,
         column: 43,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 504,
+        line: 645,
         column: 76,
         ignore: false
       },
@@ -8175,7 +8142,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 504,
+        line: 645,
         column: 43,
         ignore: false
       },
@@ -8206,146 +8173,16 @@
     {
       kind: "LitConstExpr",
       begin: {
-        file: 1,
-        pkgId: 0,
-        line: 71,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 71,
-        column: 7,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 72,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 72,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 73,
-        column: 13,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 73,
-        column: 48,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 82,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 82,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 83,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 83,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 84,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 84,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
         file: 0,
         pkgId: 2,
-        line: 92,
+        line: 77,
         column: 11,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 92,
+        line: 77,
         column: 13,
         ignore: false
       },
@@ -8359,14 +8196,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 93,
+        line: 78,
         column: 27,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 93,
+        line: 78,
         column: 31,
         ignore: false
       },
@@ -8381,14 +8218,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 94,
+        line: 79,
         column: 19,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 94,
+        line: 79,
         column: 54,
         ignore: false
       },
@@ -8403,14 +8240,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 98,
+        line: 84,
         column: 15,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 98,
+        line: 84,
         column: 17,
         ignore: false
       },
@@ -8424,15 +8261,15 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 99,
-        column: 31,
+        line: 85,
+        column: 32,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 99,
-        column: 35,
+        line: 85,
+        column: 36,
         ignore: false
       },
       info_type: "LitConstInfo",
@@ -8446,14 +8283,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 100,
+        line: 86,
         column: 24,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 100,
+        line: 86,
         column: 59,
         ignore: false
       },
@@ -8461,6 +8298,157 @@
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
         constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 91,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 91,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 92,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 92,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 93,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 93,
+        column: 59,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 97,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 97,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 98,
+        column: 32,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 98,
+        column: 36,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 99,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 99,
+        column: 59,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 103,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 103,
+        column: 18,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
       }
     },
     {
@@ -8469,19 +8457,20 @@
         file: 0,
         pkgId: 2,
         line: 104,
-        column: 16,
+        column: 32,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
         line: 104,
-        column: 18,
+        column: 36,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "true",
+        constKind: "Bool"
       }
     },
     {
@@ -8490,35 +8479,13 @@
         file: 0,
         pkgId: 2,
         line: 105,
-        column: 32,
+        column: 24,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
         line: 105,
-        column: 36,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 106,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 106,
         column: 59,
         ignore: false
       },
@@ -8533,144 +8500,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 110,
-        column: 16,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 110,
-        column: 18,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 111,
-        column: 32,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 111,
-        column: 36,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 112,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 112,
-        column: 59,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 116,
-        column: 16,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 116,
-        column: 18,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 117,
-        column: 32,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 117,
-        column: 36,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 118,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 118,
-        column: 59,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 150,
+        line: 143,
         column: 12,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 150,
+        line: 143,
         column: 14,
         ignore: false
       },
@@ -8684,14 +8521,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 151,
+        line: 144,
         column: 28,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 151,
+        line: 144,
         column: 32,
         ignore: false
       },
@@ -8706,14 +8543,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 152,
+        line: 145,
         column: 20,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 152,
+        line: 145,
         column: 55,
         ignore: false
       },
@@ -8728,14 +8565,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 156,
+        line: 149,
         column: 16,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 156,
+        line: 149,
         column: 18,
         ignore: false
       },
@@ -8749,14 +8586,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 157,
+        line: 150,
         column: 32,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 157,
+        line: 150,
         column: 36,
         ignore: false
       },
@@ -8771,14 +8608,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 158,
+        line: 151,
         column: 25,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 158,
+        line: 151,
         column: 60,
         ignore: false
       },
@@ -8786,6 +8623,92 @@
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
         constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 155,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 155,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 156,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 156,
+        column: 37,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 157,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 157,
+        column: 60,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 0,
+        pkgId: 2,
+        line: 161,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 0,
+        pkgId: 2,
+        line: 161,
+        column: 19,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
       }
     },
     {
@@ -8794,34 +8717,13 @@
         file: 0,
         pkgId: 2,
         line: 162,
-        column: 17,
+        column: 33,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
         line: 162,
-        column: 19,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 163,
-        column: 33,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 163,
         column: 37,
         ignore: false
       },
@@ -8836,14 +8738,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 164,
+        line: 163,
         column: 25,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 164,
+        line: 163,
         column: 60,
         ignore: false
       },
@@ -8858,14 +8760,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 168,
+        line: 167,
         column: 17,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 168,
+        line: 167,
         column: 19,
         ignore: false
       },
@@ -8879,14 +8781,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 169,
+        line: 168,
         column: 33,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 169,
+        line: 168,
         column: 37,
         ignore: false
       },
@@ -8901,79 +8803,14 @@
       begin: {
         file: 0,
         pkgId: 2,
-        line: 170,
+        line: 169,
         column: 25,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 2,
-        line: 170,
-        column: 60,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 174,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 174,
-        column: 19,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 175,
-        column: 33,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 175,
-        column: 37,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 2,
-        line: 176,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 2,
-        line: 176,
+        line: 169,
         column: 60,
         ignore: false
       },
@@ -8988,14 +8825,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 180,
+        line: 182,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 180,
+        line: 182,
         column: 7,
         ignore: false
       },
@@ -9009,14 +8846,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 181,
+        line: 183,
         column: 21,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 181,
+        line: 183,
         column: 25,
         ignore: false
       },
@@ -9031,14 +8868,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 182,
+        line: 184,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 182,
+        line: 184,
         column: 48,
         ignore: false
       },
@@ -9053,144 +8890,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 186,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 186,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 187,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 187,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 188,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 188,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 192,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 192,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 193,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 193,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
         line: 194,
-        column: 17,
+        column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 194,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 198,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 198,
         column: 11,
         ignore: false
       },
@@ -9204,14 +8911,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 199,
+        line: 195,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 199,
+        line: 195,
         column: 29,
         ignore: false
       },
@@ -9226,14 +8933,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 200,
+        line: 196,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 200,
+        line: 196,
         column: 52,
         ignore: false
       },
@@ -9241,222 +8948,6 @@
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
         constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 204,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 204,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 205,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 205,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 206,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 206,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 210,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 210,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 211,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 211,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 212,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 212,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 217,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 217,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 218,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 218,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 222,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 222,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
       }
     },
     {
@@ -9465,57 +8956,13 @@
         file: 1,
         pkgId: 0,
         line: 223,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 223,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 224,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 224,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 228,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 228,
+        line: 223,
         column: 11,
         ignore: false
       },
@@ -9529,14 +8976,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 229,
+        line: 224,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 229,
+        line: 224,
         column: 29,
         ignore: false
       },
@@ -9551,14 +8998,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 230,
+        line: 225,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 230,
+        line: 225,
         column: 52,
         ignore: false
       },
@@ -9638,14 +9085,404 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 261,
+        line: 246,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 246,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 247,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 247,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 248,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 257,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 257,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 258,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 259,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 270,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 270,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 281,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 281,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 282,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 282,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 293,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 293,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 294,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 294,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 295,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 295,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 318,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 318,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 319,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 319,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 320,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 320,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 349,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 261,
+        line: 349,
         column: 7,
         ignore: false
       },
@@ -9659,14 +9496,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 262,
+        line: 350,
         column: 21,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 262,
+        line: 350,
         column: 25,
         ignore: false
       },
@@ -9681,14 +9518,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 263,
+        line: 351,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 263,
+        line: 351,
         column: 48,
         ignore: false
       },
@@ -9703,14 +9540,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 272,
+        line: 360,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 272,
+        line: 360,
         column: 11,
         ignore: false
       },
@@ -9724,14 +9561,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 273,
+        line: 361,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 273,
+        line: 361,
         column: 29,
         ignore: false
       },
@@ -9746,14 +9583,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 274,
+        line: 362,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 274,
+        line: 362,
         column: 52,
         ignore: false
       },
@@ -9768,14 +9605,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 303,
+        line: 396,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 303,
+        line: 396,
         column: 11,
         ignore: false
       },
@@ -9789,14 +9626,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 304,
+        line: 397,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 304,
+        line: 397,
         column: 29,
         ignore: false
       },
@@ -9811,14 +9648,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 305,
+        line: 398,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 305,
+        line: 398,
         column: 52,
         ignore: false
       },
@@ -9833,14 +9670,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 324,
+        line: 422,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 324,
+        line: 422,
         column: 11,
         ignore: false
       },
@@ -9854,14 +9691,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 325,
+        line: 423,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 325,
+        line: 423,
         column: 29,
         ignore: false
       },
@@ -9876,14 +9713,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 326,
+        line: 424,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 326,
+        line: 424,
         column: 52,
         ignore: false
       },
@@ -9898,14 +9735,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 345,
+        line: 448,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 345,
+        line: 448,
         column: 11,
         ignore: false
       },
@@ -9919,14 +9756,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 346,
+        line: 449,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 346,
+        line: 449,
         column: 29,
         ignore: false
       },
@@ -9941,14 +9778,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 347,
+        line: 450,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 347,
+        line: 450,
         column: 52,
         ignore: false
       },
@@ -9963,14 +9800,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 366,
+        line: 474,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 366,
+        line: 474,
         column: 11,
         ignore: false
       },
@@ -9984,14 +9821,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 367,
+        line: 475,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 367,
+        line: 475,
         column: 29,
         ignore: false
       },
@@ -10006,14 +9843,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 368,
+        line: 476,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 368,
+        line: 476,
         column: 52,
         ignore: false
       },
@@ -10021,417 +9858,6 @@
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
         constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 387,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 387,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 388,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 388,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 389,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 389,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 413,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 413,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 414,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 414,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 415,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 415,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 427,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 427,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 428,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 428,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 429,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 429,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 441,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 441,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 442,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 442,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 443,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 443,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 455,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 455,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 456,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 456,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 457,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 457,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 469,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 469,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 470,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 470,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 471,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 471,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 500,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 500,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
       }
     },
     {
@@ -10440,13 +9866,34 @@
         file: 1,
         pkgId: 0,
         line: 501,
-        column: 25,
+        column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 501,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 502,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 502,
         column: 29,
         ignore: false
       },
@@ -10461,14 +9908,404 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 502,
+        line: 503,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 502,
+        line: 503,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 527,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 527,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 528,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 528,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 529,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 529,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 546,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 546,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 547,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 547,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 548,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 548,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 565,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 565,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 566,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 566,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 567,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 567,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 584,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 584,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 585,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 585,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 586,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 586,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 604,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 604,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 605,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 605,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 606,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 606,
+        column: 52,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 641,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 641,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 642,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 642,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 643,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 643,
         column: 52,
         ignore: false
       },

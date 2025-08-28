@@ -28,10 +28,6 @@ public import ohos.arkui.component.*
 public import ohos.arkui.state_management.*
 // font
 public import ohos.font.*
-// measure
-public import ohos.measure.*
-// prompt_action
-public import ohos.prompt_action.*
 // router
 public import ohos.router.*
 // animator
