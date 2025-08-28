@@ -6,7 +6,7 @@
     patch_num: 0
   },
   fullPkgName: "ohos.data.preferences",
-  pkgDepInfo: "{\"package\":\"ohos.data.preferences\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.app.ability.ui_ability\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":53}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":20,\"column\":55},\"end\":{\"line\":20,\"column\":70}}]},{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":34},\"end\":{\"line\":19,\"column\":53}},{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":55},\"end\":{\"line\":19,\"column\":73}},{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":75},\"end\":{\"line\":19,\"column\":95}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":25,\"column\":34},\"end\":{\"line\":25,\"column\":51}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":25,\"column\":53},\"end\":{\"line\":25,\"column\":72}}]},{\"package\":\"ohos.callback_invoke\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":24,\"column\":31},\"end\":{\"line\":24,\"column\":48}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":24,\"column\":50},\"end\":{\"line\":24,\"column\":64}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"preferences_ffi.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"options.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":21}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"options.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":24}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":24}},{\"file\":\"preferences_ffi.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":24}}]},{\"package\":\"std.sync\",\"isStd\":true,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.data.preferences\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.app.ability.ui_ability\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":53}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":20,\"column\":55},\"end\":{\"line\":20,\"column\":70}}]},{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":34},\"end\":{\"line\":19,\"column\":51}},{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":53},\"end\":{\"line\":19,\"column\":72}},{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":74},\"end\":{\"line\":19,\"column\":92}},{\"file\":\"options.cj\",\"begin\":{\"line\":19,\"column\":94},\"end\":{\"line\":19,\"column\":114}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":25,\"column\":34},\"end\":{\"line\":25,\"column\":51}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":25,\"column\":53},\"end\":{\"line\":25,\"column\":72}}]},{\"package\":\"ohos.callback_invoke\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":24,\"column\":31},\"end\":{\"line\":24,\"column\":48}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":24,\"column\":50},\"end\":{\"line\":24,\"column\":64}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}},{\"file\":\"preferences_ffi.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.hilog\",\"isStd\":false,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":20}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"options.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":21}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":21}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"options.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":24}},{\"file\":\"preferences.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":24}},{\"file\":\"preferences_ffi.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":24}}]},{\"package\":\"std.sync\",\"isStd\":true,\"imports\":[{\"file\":\"preferences.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":18}}]}]}",
   imports: [
     "std.core",
     "std.collection",
@@ -58,7 +58,29 @@
             file: 1,
             pkgId: 0,
             line: 19,
+            column: 51,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "BusinessException",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
             column: 53,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 19,
+            column: 72,
             ignore: false
           },
           prefixPaths: [
@@ -73,14 +95,14 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 55,
+            column: 74,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 73,
+            column: 92,
             ignore: false
           },
           prefixPaths: [
@@ -95,14 +117,14 @@
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 75,
+            column: 94,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
             line: 19,
-            column: 95,
+            column: 114,
             ignore: false
           },
           prefixPaths: [
@@ -696,6 +718,29 @@
       ],
       info_type: "FuncTyInfo",
       info: {
+        retType: 12
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2,
+        10
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 23
+      }
+    },
+    {
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        2
+      ],
+      info_type: "FuncTyInfo",
+      info: {
         retType: 10
       }
     },
@@ -718,7 +763,7 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 36
+          index: 41
         }
       }
     },
@@ -731,7 +776,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 23
+        retType: 26
       }
     },
     {
@@ -789,17 +834,15 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 50
+          index: 55
         }
       }
     },
     {
       kind: "CPointer",
       typeArgs: [
-        31
+        23
       ]
-    },
-    {
     },
     {
       kind: "Enum",
@@ -810,7 +853,7 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 51
+          index: 56
         }
       }
     },
@@ -833,14 +876,14 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 55
+          index: 60
         }
       }
     },
     {
       kind: "Class",
       typeArgs: [
-        36
+        38
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -853,7 +896,7 @@
     {
       kind: "Tuple",
       typeArgs: [
-        37,
+        39,
         6
       ]
     },
@@ -886,13 +929,13 @@
     {
       kind: "Func",
       typeArgs: [
-        30,
+        33,
         10,
         10
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 36
       }
     },
     {
@@ -902,18 +945,18 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        42,
+        44,
         10
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 36
       }
     },
     {
@@ -932,34 +975,34 @@
     {
       kind: "Func",
       typeArgs: [
-        42,
-        23
+        44,
+        26
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 36
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        42,
+        44,
         10
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        42,
-        23
+        44,
+        26
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
@@ -981,7 +1024,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
@@ -991,7 +1034,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 49
+        retType: 51
       }
     },
     {
@@ -1015,7 +1058,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
@@ -1031,12 +1074,12 @@
     {
       kind: "Func",
       typeArgs: [
-        32,
-        53
+        34,
+        55
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
@@ -1055,18 +1098,18 @@
     {
       kind: "Func",
       typeArgs: [
-        32,
-        55
+        34,
+        57
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
       kind: "Enum",
       typeArgs: [
-        53
+        55
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -1078,22 +1121,22 @@
     {
       kind: "Func",
       typeArgs: [
-        32
+        34
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 55
+        retType: 57
       }
     },
     {
       kind: "Func",
       typeArgs: [
         10,
-        53
+        55
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31
+        retType: 23
       }
     },
     {
@@ -1112,10 +1155,10 @@
     {
       kind: "Func",
       typeArgs: [
-        30,
-        60,
-        60,
-        61
+        33,
+        62,
+        62,
+        63
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -1135,9 +1178,9 @@
     {
       kind: "Func",
       typeArgs: [
-        30,
-        60,
-        60
+        33,
+        62,
+        62
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -1149,7 +1192,7 @@
       kind: "Func",
       typeArgs: [
         6,
-        60
+        62
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -1161,7 +1204,7 @@
       kind: "Func",
       typeArgs: [
         6,
-        60
+        62
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -1173,7 +1216,7 @@
       kind: "Func",
       typeArgs: [
         6,
-        60,
+        62,
         6
       ],
       info_type: "FuncTyInfo",
@@ -1186,12 +1229,12 @@
       kind: "Func",
       typeArgs: [
         6,
-        60,
-        67
+        62,
+        69
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 67,
+        retType: 69,
         isC: true
       }
     },
@@ -1204,7 +1247,7 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 138
+          index: 143
         }
       }
     },
@@ -1212,8 +1255,8 @@
       kind: "Func",
       typeArgs: [
         6,
-        60,
-        67
+        62,
+        69
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -1228,7 +1271,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 70,
+        retType: 72,
         isC: true
       }
     },
@@ -1241,7 +1284,7 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 147
+          index: 152
         }
       }
     },
@@ -1252,14 +1295,14 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 31,
+        retType: 23,
         isC: true
       }
     },
     {
       kind: "CPointer",
       typeArgs: [
-        73
+        75
       ]
     },
     {
@@ -1311,13 +1354,13 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 67
+        retType: 69
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        67
+        69
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -1337,35 +1380,35 @@
     {
       kind: "CPointer",
       typeArgs: [
-        60
+        62
       ]
     },
     {
       kind: "CPointer",
       typeArgs: [
-        67
+        69
       ]
     },
     {
       kind: "Func",
       typeArgs: [
-        80,
-        81,
+        82,
+        83,
         6
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 70
+        retType: 72
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        70
+        72
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 49
+        retType: 51
       }
     }
   ],
@@ -1813,7 +1856,7 @@
       exportId: "_CN21ohos.data.preferences11StorageTypeE",
       mangledBeforeSema: "21ohos.data.preferences11StorageTypeU",
       hash: {
-        instVar: 9452243540298484552,
+        instVar: 6399074230481827788,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
@@ -1852,10 +1895,10 @@
         file: 1,
         pkgId: 0,
         line: 42,
-        column: 19,
+        column: 8,
         ignore: false
       },
-      identifier: "StorageTypeXml",
+      identifier: "Xml",
       identifierPos: {
         file: 1,
         pkgId: 0,
@@ -1889,8 +1932,8 @@
       ],
       type: 3,
       mangledName: "",
-      exportId: "_CN21ohos.data.preferences11StorageType14StorageTypeXmlKE",
-      mangledBeforeSema: "21ohos.data.preferences11StorageTypeU14StorageTypeXmlV$$",
+      exportId: "_CN21ohos.data.preferences11StorageType3XmlKE",
+      mangledBeforeSema: "21ohos.data.preferences11StorageTypeU3XmlV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -1916,10 +1959,10 @@
         file: 1,
         pkgId: 0,
         line: 54,
-        column: 20,
+        column: 9,
         ignore: false
       },
-      identifier: "StorageTypeGskv",
+      identifier: "Gskv",
       identifierPos: {
         file: 1,
         pkgId: 0,
@@ -1953,8 +1996,8 @@
       ],
       type: 3,
       mangledName: "",
-      exportId: "_CN21ohos.data.preferences11StorageType15StorageTypeGskvKE",
-      mangledBeforeSema: "21ohos.data.preferences11StorageTypeU15StorageTypeGskvV$$",
+      exportId: "_CN21ohos.data.preferences11StorageType4GskvKE",
+      mangledBeforeSema: "21ohos.data.preferences11StorageTypeU4GskvV$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -3162,11 +3205,11 @@
       end: {
         file: 1,
         pkgId: 0,
-        line: 218,
+        line: 222,
         column: 2,
         ignore: false
       },
-      identifier: "getNativeErrorMsg",
+      identifier: "isInErrCodeMap",
       identifierPos: {
         file: 1,
         pkgId: 0,
@@ -3182,15 +3225,15 @@
 
       ],
       type: 21,
-      mangledName: "_CN21ohos.data.preferences17getNativeErrorMsgHi",
-      exportId: "_CN21ohos.data.preferences17getNativeErrorMsgHi",
-      mangledBeforeSema: "21ohos.data.preferences17getNativeErrorMsgFi$$6String",
+      mangledName: "_CN21ohos.data.preferences14isInErrCodeMapHi",
+      exportId: "_CN21ohos.data.preferences14isInErrCodeMapHi",
+      mangledBeforeSema: "21ohos.data.preferences14isInErrCodeMapFi$$b",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 11444330792604484885
+        bodyHash: 4299940374214082252
       },
       info_type: "FuncInfo",
       info: {
@@ -3199,6 +3242,279 @@
             {
               params: [
                 31
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 12
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.data.preferences",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 32,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 213,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.data.preferences14isInErrCodeMapHiE4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.data.preferences",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 229,
+        column: 2,
+        ignore: false
+      },
+      identifier: "checkCodeAndThrow",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 22,
+      mangledName: "_CN21ohos.data.preferences17checkCodeAndThrowHiRNat6StringE",
+      exportId: "_CN21ohos.data.preferences17checkCodeAndThrowHiRNat6StringE",
+      mangledBeforeSema: "21ohos.data.preferences17checkCodeAndThrowFi6String$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 3619686473102146595
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                33,
+                34
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 23
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.data.preferences",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 38,
+        ignore: false
+      },
+      identifier: "errCode",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 2,
+      mangledName: "_CN21ohos.data.preferences17checkCodeAndThrowHiRNat6StringEE7errCodeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.data.preferences",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 56,
+        ignore: false
+      },
+      identifier: "funcName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 224,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 10,
+      mangledName: "_CN21ohos.data.preferences17checkCodeAndThrowHiRNat6StringEE8funcNameE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.data.preferences",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 236,
+        column: 2,
+        ignore: false
+      },
+      identifier: "getNativeErrorMsg",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 231,
+        column: 6,
+        ignore: false
+      },
+      attributes: [
+        144678138029293616,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 24,
+      mangledName: "_CN21ohos.data.preferences17getNativeErrorMsgHi",
+      exportId: "_CN21ohos.data.preferences17getNativeErrorMsgHi",
+      mangledBeforeSema: "21ohos.data.preferences17getNativeErrorMsgFi$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 2340239440880649590
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                36
               ],
               desugars: [
                 0
@@ -3215,14 +3531,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 213,
+        line: 231,
         column: 24,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 213,
+        line: 231,
         column: 35,
         ignore: false
       },
@@ -3230,7 +3546,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 213,
+        line: 231,
         column: 24,
         ignore: false
       },
@@ -3267,14 +3583,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 238,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 229,
+        line: 247,
         column: 2,
         ignore: false
       },
@@ -3282,7 +3598,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 238,
         column: 6,
         ignore: false
       },
@@ -3293,7 +3609,7 @@
       annotations: [
 
       ],
-      type: 21,
+      type: 24,
       mangledName: "_CN21ohos.data.preferences13getCJErrorMsgHi",
       exportId: "_CN21ohos.data.preferences13getCJErrorMsgHi",
       mangledBeforeSema: "21ohos.data.preferences13getCJErrorMsgFi$$6String",
@@ -3302,7 +3618,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 6667342712695716089
+        bodyHash: 1146646950020810118
       },
       info_type: "FuncInfo",
       info: {
@@ -3310,7 +3626,7 @@
           paramLists: [
             {
               params: [
-                33
+                38
               ],
               desugars: [
                 0
@@ -3327,14 +3643,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 238,
         column: 20,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 238,
         column: 31,
         ignore: false
       },
@@ -3342,7 +3658,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 220,
+        line: 238,
         column: 20,
         ignore: false
       },
@@ -3379,14 +3695,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 249,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 254,
         column: 2,
         ignore: false
       },
@@ -3394,7 +3710,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 249,
         column: 6,
         ignore: false
       },
@@ -3405,7 +3721,7 @@
       annotations: [
 
       ],
-      type: 22,
+      type: 25,
       mangledName: "_CN21ohos.data.preferences14getCJErrorCodeHi",
       exportId: "_CN21ohos.data.preferences14getCJErrorCodeHi",
       mangledBeforeSema: "21ohos.data.preferences14getCJErrorCodeFi$$i",
@@ -3414,7 +3730,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 309118797612007890
+        bodyHash: 8238906606251453838
       },
       info_type: "FuncInfo",
       info: {
@@ -3422,7 +3738,7 @@
           paramLists: [
             {
               params: [
-                35
+                40
               ],
               desugars: [
                 0
@@ -3439,14 +3755,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 249,
         column: 21,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 249,
         column: 32,
         ignore: false
       },
@@ -3454,7 +3770,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 249,
         column: 21,
         ignore: false
       },
@@ -3491,14 +3807,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 248,
+        line: 266,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 299,
+        line: 317,
         column: 2,
         ignore: false
       },
@@ -3506,7 +3822,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 248,
+        line: 266,
         column: 14,
         ignore: false
       },
@@ -3534,7 +3850,7 @@
           ]
         }
       ],
-      type: 23,
+      type: 26,
       mangledName: "_CN21ohos.data.preferences7OptionsE",
       exportId: "_CN21ohos.data.preferences7OptionsE",
       mangledBeforeSema: "21ohos.data.preferences7OptionsC",
@@ -3548,13 +3864,13 @@
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          27
+          30
         ],
         body: [
-          37,
-          38,
-          39,
-          40
+          42,
+          43,
+          44,
+          45
         ]
       }
     },
@@ -3564,14 +3880,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 259,
+        line: 277,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 259,
+        line: 277,
         column: 28,
         ignore: false
       },
@@ -3579,7 +3895,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 259,
+        line: 277,
         column: 16,
         ignore: false
       },
@@ -3629,14 +3945,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 289,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 289,
         column: 35,
         ignore: false
       },
@@ -3644,7 +3960,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 289,
         column: 16,
         ignore: false
       },
@@ -3694,14 +4010,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 283,
+        line: 301,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 283,
+        line: 301,
         column: 40,
         ignore: false
       },
@@ -3709,7 +4025,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 283,
+        line: 301,
         column: 16,
         ignore: false
       },
@@ -3763,14 +4079,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 298,
+        line: 316,
         column: 6,
         ignore: false
       },
@@ -3778,7 +4094,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 12,
         ignore: false
       },
@@ -3806,7 +4122,7 @@
           ]
         }
       ],
-      type: 24,
+      type: 27,
       mangledName: "_CN21ohos.data.preferences7Options6<init>HRNat6StringEY3_NNY_11StorageTypeE",
       exportId: "_CN21ohos.data.preferences7Options6<init>HRNat6StringEY3_NNY_11StorageTypeE",
       mangledBeforeSema: "21ohos.data.preferences7OptionsC6<init>F6String6String!11dataGroupId=11StorageType!11storageType=$$",
@@ -3815,7 +4131,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 12183979924196210932
+        bodyHash: 15871881143683382660
       },
       info_type: "FuncInfo",
       info: {
@@ -3823,18 +4139,18 @@
           paramLists: [
             {
               params: [
-                41,
-                42,
-                45
+                46,
+                47,
+                50
               ],
               desugars: [
                 0,
-                43,
-                46
+                48,
+                51
               ]
             }
           ],
-          retType: 23
+          retType: 26
         }
       }
     },
@@ -3844,14 +4160,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 29,
         ignore: false
       },
@@ -3859,7 +4175,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 17,
         ignore: false
       },
@@ -3891,14 +4207,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 31,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 66,
         ignore: false
       },
@@ -3906,7 +4222,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 31,
         ignore: false
       },
@@ -3943,14 +4259,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 54,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 66,
         ignore: false
       },
@@ -3969,7 +4285,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 28,
       mangledName: "_CPI21ohos.data.preferences7Options4initHRNat6StringEY3_NNY_11StorageTypeEE11dataGroupIdHY3_",
       exportId: "",
       mangledBeforeSema: "",
@@ -3986,7 +4302,7 @@
           paramLists: [
             {
               params: [
-                44
+                49
               ],
               desugars: [
                 0
@@ -4003,14 +4319,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 29,
         ignore: false
       },
@@ -4018,7 +4334,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 17,
         ignore: false
       },
@@ -4050,22 +4366,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 294,
+        line: 312,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 294,
-        column: 63,
+        line: 312,
+        column: 52,
         ignore: false
       },
       identifier: "storageType",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 294,
+        line: 312,
         column: 9,
         ignore: false
       },
@@ -4102,15 +4418,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 294,
+        line: 312,
         column: 37,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 294,
-        column: 63,
+        line: 312,
+        column: 52,
         ignore: false
       },
       identifier: "storageType.2",
@@ -4128,7 +4444,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 29,
       mangledName: "_CPI21ohos.data.preferences7Options4initHRNat6StringEY3_NNY_11StorageTypeEE11storageTypeHY3_Y3_",
       exportId: "",
       mangledBeforeSema: "",
@@ -4145,8 +4461,8 @@
           paramLists: [
             {
               params: [
-                47,
-                48
+                52,
+                53
               ],
               desugars: [
                 0,
@@ -4164,14 +4480,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 29,
         ignore: false
       },
@@ -4179,7 +4495,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 17,
         ignore: false
       },
@@ -4211,14 +4527,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 31,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 66,
         ignore: false
       },
@@ -4226,7 +4542,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 293,
+        line: 311,
         column: 31,
         ignore: false
       },
@@ -4285,7 +4601,7 @@
       annotations: [
 
       ],
-      type: 28,
+      type: 31,
       mangledName: "_CN21ohos.data.preferences15PREFERENCES_LOGE",
       exportId: "_CN21ohos.data.preferences15PREFERENCES_LOGE",
       mangledBeforeSema: "21ohos.data.preferences15PREFERENCES_LOGV$$",
@@ -4333,7 +4649,7 @@
       annotations: [
 
       ],
-      type: 29,
+      type: 32,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences12StageContextE",
       mangledBeforeSema: "21ohos.data.preferences12StageContextT",
@@ -4346,7 +4662,7 @@
       },
       info_type: "AliasInfo",
       info: {
-        aliasedTy: 30
+        aliasedTy: 33
       }
     },
     {
@@ -4403,7 +4719,7 @@
           ]
         }
       ],
-      type: 32,
+      type: 34,
       mangledName: "_CN21ohos.data.preferences16PreferencesEventE",
       exportId: "_CN21ohos.data.preferences16PreferencesEventE",
       mangledBeforeSema: "21ohos.data.preferences16PreferencesEventU",
@@ -4420,9 +4736,9 @@
 
         ],
         body: [
-          52,
-          53,
-          54
+          57,
+          58,
+          59
         ],
         nonExhaustive: true,
         ellipsisPos: {
@@ -4483,7 +4799,7 @@
           ]
         }
       ],
-      type: 32,
+      type: 34,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences16PreferencesEvent17PreferencesChangeKE",
       mangledBeforeSema: "21ohos.data.preferences16PreferencesEventU17PreferencesChangeV$$",
@@ -4547,7 +4863,7 @@
           ]
         }
       ],
-      type: 32,
+      type: 34,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences16PreferencesEvent29PreferencesMultiProcessChangeKE",
       mangledBeforeSema: "21ohos.data.preferences16PreferencesEventU29PreferencesMultiProcessChangeV$$",
@@ -4598,7 +4914,7 @@
       annotations: [
 
       ],
-      type: 33,
+      type: 35,
       mangledName: "_CN21ohos.data.preferences16PreferencesEvent8getValueHv",
       exportId: "_CN21ohos.data.preferences16PreferencesEvent8getValueHv",
       mangledBeforeSema: "21ohos.data.preferences16PreferencesEventU8getValueF$$6String",
@@ -4644,7 +4960,7 @@
       end: {
         file: 2,
         pkgId: 0,
-        line: 600,
+        line: 603,
         column: 2,
         ignore: false
       },
@@ -4680,7 +4996,7 @@
           ]
         }
       ],
-      type: 34,
+      type: 36,
       mangledName: "_CN21ohos.data.preferences11PreferencesE",
       exportId: "_CN21ohos.data.preferences11PreferencesE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC",
@@ -4694,30 +5010,30 @@
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          58
+          60
         ],
         body: [
-          56,
-          57,
-          58,
+          61,
           62,
           63,
-          66,
-          69,
-          72,
-          75,
-          78,
-          81,
-          82,
+          67,
+          68,
+          71,
+          74,
+          77,
+          80,
           83,
           86,
-          89,
-          90,
-          92,
+          87,
+          88,
+          91,
           94,
+          95,
           97,
+          99,
           102,
-          105
+          107,
+          110
         ]
       }
     },
@@ -4753,7 +5069,7 @@
       annotations: [
 
       ],
-      type: 35,
+      type: 37,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences11Preferences12callbackListK_E",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC12callbackListV$$",
@@ -4800,7 +5116,7 @@
       annotations: [
 
       ],
-      type: 38,
+      type: 40,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences11Preferences10onOffMutexK_E",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC10onOffMutexV$$",
@@ -4832,7 +5148,7 @@
       end: {
         file: 2,
         pkgId: 0,
-        line: 103,
+        line: 104,
         column: 6,
         ignore: false
       },
@@ -4851,7 +5167,7 @@
       annotations: [
 
       ],
-      type: 39,
+      type: 41,
       mangledName: "_CN21ohos.data.preferences11Preferences6<init>HPuRNat6StringEY4_",
       exportId: "_CN21ohos.data.preferences11Preferences6<init>HPuRNat6StringEY4_",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC6<init>F12StageContext6String6String$$",
@@ -4860,7 +5176,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 7346517936224434736
+        bodyHash: 7237402743618395593
       },
       info_type: "FuncInfo",
       info: {
@@ -4868,9 +5184,9 @@
           paramLists: [
             {
               params: [
-                59,
-                60,
-                61
+                64,
+                65,
+                66
               ],
               desugars: [
                 0,
@@ -4879,7 +5195,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 36
         }
       }
     },
@@ -4915,7 +5231,7 @@
       annotations: [
 
       ],
-      type: 30,
+      type: 33,
       mangledName: "_CN21ohos.data.preferences11Preferences4initHPuRNat6StringEY4_E7contextIuE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5034,14 +5350,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 105,
+        line: 106,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 107,
+        line: 108,
         column: 6,
         ignore: false
       },
@@ -5049,7 +5365,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 105,
+        line: 106,
         column: 5,
         ignore: false
       },
@@ -5060,7 +5376,7 @@
       annotations: [
 
       ],
-      type: 40,
+      type: 42,
       mangledName: "_CN21ohos.data.preferences11Preferences5~initHv",
       exportId: "_CN21ohos.data.preferences11Preferences5~initHv",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC5~initF$$",
@@ -5069,7 +5385,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 2247516731934054946
+        bodyHash: 11942669636620762216
       },
       info_type: "FuncInfo",
       info: {
@@ -5084,7 +5400,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -5098,14 +5414,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 133,
+        line: 134,
         column: 6,
         ignore: false
       },
@@ -5113,7 +5429,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 24,
         ignore: false
       },
@@ -5141,7 +5457,7 @@
           ]
         }
       ],
-      type: 41,
+      type: 43,
       mangledName: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringE",
       exportId: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC14getPreferencesF16UIAbilityContext6String$$11Preferences",
@@ -5150,7 +5466,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 16075915537826149008
+        bodyHash: 1090269132264263706
       },
       info_type: "FuncInfo",
       info: {
@@ -5158,8 +5474,8 @@
           paramLists: [
             {
               params: [
-                64,
-                65
+                69,
+                70
               ],
               desugars: [
                 0,
@@ -5167,7 +5483,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 36
         }
       }
     },
@@ -5177,14 +5493,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 39,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 64,
         ignore: false
       },
@@ -5192,7 +5508,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 39,
         ignore: false
       },
@@ -5203,7 +5519,7 @@
       annotations: [
 
       ],
-      type: 42,
+      type: 44,
       mangledName: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringEE7contextE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5224,14 +5540,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 66,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 78,
         ignore: false
       },
@@ -5239,7 +5555,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 127,
+        line: 128,
         column: 66,
         ignore: false
       },
@@ -5275,14 +5591,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 159,
+        line: 160,
         column: 6,
         ignore: false
       },
@@ -5290,7 +5606,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 24,
         ignore: false
       },
@@ -5318,7 +5634,7 @@
           ]
         }
       ],
-      type: 43,
+      type: 45,
       mangledName: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsE",
       exportId: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC14getPreferencesF16UIAbilityContext7Options$$11Preferences",
@@ -5327,7 +5643,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 15942944591521622349
+        bodyHash: 13286976533407903653
       },
       info_type: "FuncInfo",
       info: {
@@ -5335,8 +5651,8 @@
           paramLists: [
             {
               params: [
-                67,
-                68
+                72,
+                73
               ],
               desugars: [
                 0,
@@ -5344,7 +5660,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 36
         }
       }
     },
@@ -5354,14 +5670,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 39,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 64,
         ignore: false
       },
@@ -5369,7 +5685,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 39,
         ignore: false
       },
@@ -5380,7 +5696,7 @@
       annotations: [
 
       ],
-      type: 42,
+      type: 44,
       mangledName: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsEE7contextE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5401,14 +5717,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 66,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 82,
         ignore: false
       },
@@ -5416,7 +5732,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 153,
+        line: 154,
         column: 66,
         ignore: false
       },
@@ -5427,7 +5743,7 @@
       annotations: [
 
       ],
-      type: 23,
+      type: 26,
       mangledName: "_CN21ohos.data.preferences11Preferences14getPreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsEE7optionsE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5452,14 +5768,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 180,
+        line: 181,
         column: 6,
         ignore: false
       },
@@ -5467,7 +5783,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 24,
         ignore: false
       },
@@ -5495,7 +5811,7 @@
           ]
         }
       ],
-      type: 44,
+      type: 46,
       mangledName: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringE",
       exportId: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC17deletePreferencesF16UIAbilityContext6String$$u",
@@ -5504,7 +5820,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 16757066768746442129
+        bodyHash: 10014551723385321364
       },
       info_type: "FuncInfo",
       info: {
@@ -5512,8 +5828,8 @@
           paramLists: [
             {
               params: [
-                70,
-                71
+                75,
+                76
               ],
               desugars: [
                 0,
@@ -5521,7 +5837,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -5531,14 +5847,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 42,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 67,
         ignore: false
       },
@@ -5546,7 +5862,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 42,
         ignore: false
       },
@@ -5557,7 +5873,7 @@
       annotations: [
 
       ],
-      type: 42,
+      type: 44,
       mangledName: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringEE7contextE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5578,14 +5894,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 69,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 81,
         ignore: false
       },
@@ -5593,7 +5909,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 179,
         column: 69,
         ignore: false
       },
@@ -5629,14 +5945,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 224,
+        line: 226,
         column: 6,
         ignore: false
       },
@@ -5644,7 +5960,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 24,
         ignore: false
       },
@@ -5672,7 +5988,7 @@
           ]
         }
       ],
-      type: 45,
+      type: 47,
       mangledName: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsE",
       exportId: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC17deletePreferencesF16UIAbilityContext7Options$$u",
@@ -5681,7 +5997,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 7694716016216471047
+        bodyHash: 17326667325463551694
       },
       info_type: "FuncInfo",
       info: {
@@ -5689,8 +6005,8 @@
           paramLists: [
             {
               params: [
-                73,
-                74
+                78,
+                79
               ],
               desugars: [
                 0,
@@ -5698,7 +6014,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -5708,14 +6024,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 42,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 67,
         ignore: false
       },
@@ -5723,7 +6039,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 42,
         ignore: false
       },
@@ -5734,7 +6050,7 @@
       annotations: [
 
       ],
-      type: 42,
+      type: 44,
       mangledName: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsEE7contextE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5755,14 +6071,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 69,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 85,
         ignore: false
       },
@@ -5770,7 +6086,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 203,
+        line: 204,
         column: 69,
         ignore: false
       },
@@ -5781,7 +6097,7 @@
       annotations: [
 
       ],
-      type: 23,
+      type: 26,
       mangledName: "_CN21ohos.data.preferences11Preferences17deletePreferencesHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsEE7optionsE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5806,14 +6122,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 248,
+        line: 250,
         column: 6,
         ignore: false
       },
@@ -5821,7 +6137,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 24,
         ignore: false
       },
@@ -5849,7 +6165,7 @@
           ]
         }
       ],
-      type: 44,
+      type: 46,
       mangledName: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringE",
       exportId: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC26removePreferencesFromCacheF16UIAbilityContext6String$$u",
@@ -5858,7 +6174,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 4785938727000640334
+        bodyHash: 5915634754653792808
       },
       info_type: "FuncInfo",
       info: {
@@ -5866,8 +6182,8 @@
           paramLists: [
             {
               params: [
-                76,
-                77
+                81,
+                82
               ],
               desugars: [
                 0,
@@ -5875,7 +6191,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -5885,14 +6201,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 51,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 76,
         ignore: false
       },
@@ -5900,7 +6216,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 51,
         ignore: false
       },
@@ -5911,7 +6227,7 @@
       annotations: [
 
       ],
-      type: 42,
+      type: 44,
       mangledName: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextERNat6StringEE7contextE",
       exportId: "",
       mangledBeforeSema: "",
@@ -5932,14 +6248,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 78,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 90,
         ignore: false
       },
@@ -5947,7 +6263,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 246,
+        line: 248,
         column: 78,
         ignore: false
       },
@@ -5983,14 +6299,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 296,
+        line: 299,
         column: 6,
         ignore: false
       },
@@ -5998,7 +6314,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 24,
         ignore: false
       },
@@ -6026,7 +6342,7 @@
           ]
         }
       ],
-      type: 45,
+      type: 47,
       mangledName: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsE",
       exportId: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC26removePreferencesFromCacheF16UIAbilityContext7Options$$u",
@@ -6035,7 +6351,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 13477708206539307369
+        bodyHash: 10502970432822769774
       },
       info_type: "FuncInfo",
       info: {
@@ -6043,8 +6359,8 @@
           paramLists: [
             {
               params: [
-                79,
-                80
+                84,
+                85
               ],
               desugars: [
                 0,
@@ -6052,7 +6368,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -6062,14 +6378,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 51,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 76,
         ignore: false
       },
@@ -6077,7 +6393,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 51,
         ignore: false
       },
@@ -6088,7 +6404,7 @@
       annotations: [
 
       ],
-      type: 42,
+      type: 44,
       mangledName: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsEE7contextE",
       exportId: "",
       mangledBeforeSema: "",
@@ -6109,14 +6425,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 78,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 94,
         ignore: false
       },
@@ -6124,7 +6440,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 275,
+        line: 277,
         column: 78,
         ignore: false
       },
@@ -6135,7 +6451,7 @@
       annotations: [
 
       ],
-      type: 23,
+      type: 26,
       mangledName: "_CN21ohos.data.preferences11Preferences26removePreferencesFromCacheHCN27ohos.app.ability.ui_ability16UIAbilityContextECNY_7OptionsEE7optionsE",
       exportId: "",
       mangledBeforeSema: "",
@@ -6160,14 +6476,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 310,
+        line: 313,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 312,
+        line: 315,
         column: 6,
         ignore: false
       },
@@ -6175,7 +6491,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 310,
+        line: 313,
         column: 17,
         ignore: false
       },
@@ -6203,7 +6519,7 @@
           ]
         }
       ],
-      type: 40,
+      type: 42,
       mangledName: "_CN21ohos.data.preferences11Preferences5flushHv",
       exportId: "_CN21ohos.data.preferences11Preferences5flushHv",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC5flushF$$u",
@@ -6212,7 +6528,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 3599246373489211016
+        bodyHash: 17882460234617599814
       },
       info_type: "FuncInfo",
       info: {
@@ -6227,7 +6543,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -6241,14 +6557,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 327,
+        line: 330,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 329,
+        line: 332,
         column: 6,
         ignore: false
       },
@@ -6256,7 +6572,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 327,
+        line: 330,
         column: 17,
         ignore: false
       },
@@ -6284,7 +6600,7 @@
           ]
         }
       ],
-      type: 40,
+      type: 42,
       mangledName: "_CN21ohos.data.preferences11Preferences5clearHv",
       exportId: "_CN21ohos.data.preferences11Preferences5clearHv",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC5clearF$$u",
@@ -6293,7 +6609,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 12599793978309650769
+        bodyHash: 7424770235164978874
       },
       info_type: "FuncInfo",
       info: {
@@ -6308,7 +6624,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -6322,14 +6638,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 362,
+        line: 365,
         column: 6,
         ignore: false
       },
@@ -6337,7 +6653,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 17,
         ignore: false
       },
@@ -6365,7 +6681,7 @@
           ]
         }
       ],
-      type: 46,
+      type: 48,
       mangledName: "_CN21ohos.data.preferences11Preferences3getHRNat6StringENNY_9ValueTypeE",
       exportId: "_CN21ohos.data.preferences11Preferences3getHRNat6StringENNY_9ValueTypeE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC3getF6String9ValueType$$9ValueType",
@@ -6374,7 +6690,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 1563760581031985719
+        bodyHash: 16720381560490366118
       },
       info_type: "FuncInfo",
       info: {
@@ -6382,8 +6698,8 @@
           paramLists: [
             {
               params: [
-                84,
-                85
+                89,
+                90
               ],
               desugars: [
                 0,
@@ -6401,14 +6717,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 21,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 32,
         ignore: false
       },
@@ -6416,7 +6732,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 21,
         ignore: false
       },
@@ -6448,14 +6764,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 34,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 53,
         ignore: false
       },
@@ -6463,7 +6779,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 350,
+        line: 353,
         column: 34,
         ignore: false
       },
@@ -6499,14 +6815,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 395,
+        line: 398,
         column: 6,
         ignore: false
       },
@@ -6514,7 +6830,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 17,
         ignore: false
       },
@@ -6542,7 +6858,7 @@
           ]
         }
       ],
-      type: 47,
+      type: 49,
       mangledName: "_CN21ohos.data.preferences11Preferences3putHRNat6StringENNY_9ValueTypeE",
       exportId: "_CN21ohos.data.preferences11Preferences3putHRNat6StringENNY_9ValueTypeE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC3putF6String9ValueType$$u",
@@ -6551,7 +6867,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 4359451077361856409
+        bodyHash: 9453291948702251328
       },
       info_type: "FuncInfo",
       info: {
@@ -6559,8 +6875,8 @@
           paramLists: [
             {
               params: [
-                87,
-                88
+                92,
+                93
               ],
               desugars: [
                 0,
@@ -6568,7 +6884,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -6578,14 +6894,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 21,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 32,
         ignore: false
       },
@@ -6593,7 +6909,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 21,
         ignore: false
       },
@@ -6625,14 +6941,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 34,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 50,
         ignore: false
       },
@@ -6640,7 +6956,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 380,
+        line: 383,
         column: 34,
         ignore: false
       },
@@ -6676,14 +6992,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 410,
+        line: 413,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 417,
+        line: 420,
         column: 6,
         ignore: false
       },
@@ -6691,7 +7007,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 410,
+        line: 413,
         column: 17,
         ignore: false
       },
@@ -6719,7 +7035,7 @@
           ]
         }
       ],
-      type: 48,
+      type: 50,
       mangledName: "_CN21ohos.data.preferences11Preferences6getAllHv",
       exportId: "_CN21ohos.data.preferences11Preferences6getAllHv",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC6getAllF$$7HashMap<6String9ValueType>",
@@ -6728,7 +7044,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 12576801367522637282
+        bodyHash: 18008601042068022458
       },
       info_type: "FuncInfo",
       info: {
@@ -6743,7 +7059,7 @@
               ]
             }
           ],
-          retType: 49
+          retType: 51
         }
       }
     },
@@ -6757,14 +7073,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 434,
+        line: 437,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 447,
+        line: 450,
         column: 6,
         ignore: false
       },
@@ -6772,7 +7088,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 434,
+        line: 437,
         column: 17,
         ignore: false
       },
@@ -6800,7 +7116,7 @@
           ]
         }
       ],
-      type: 50,
+      type: 52,
       mangledName: "_CN21ohos.data.preferences11Preferences6deleteHRNat6StringE",
       exportId: "_CN21ohos.data.preferences11Preferences6deleteHRNat6StringE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC6deleteF6String$$u",
@@ -6809,7 +7125,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 18230217236045916092
+        bodyHash: 4626405866468271556
       },
       info_type: "FuncInfo",
       info: {
@@ -6817,14 +7133,14 @@
           paramLists: [
             {
               params: [
-                91
+                96
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -6834,14 +7150,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 434,
+        line: 437,
         column: 24,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 434,
+        line: 437,
         column: 35,
         ignore: false
       },
@@ -6849,7 +7165,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 434,
+        line: 437,
         column: 24,
         ignore: false
       },
@@ -6885,14 +7201,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 465,
+        line: 468,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 473,
+        line: 476,
         column: 6,
         ignore: false
       },
@@ -6900,7 +7216,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 465,
+        line: 468,
         column: 17,
         ignore: false
       },
@@ -6928,7 +7244,7 @@
           ]
         }
       ],
-      type: 51,
+      type: 53,
       mangledName: "_CN21ohos.data.preferences11Preferences3hasHRNat6StringE",
       exportId: "_CN21ohos.data.preferences11Preferences3hasHRNat6StringE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC3hasF6String$$b",
@@ -6937,7 +7253,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 8931397430683250822
+        bodyHash: 7342494609606759552
       },
       info_type: "FuncInfo",
       info: {
@@ -6945,7 +7261,7 @@
           paramLists: [
             {
               params: [
-                93
+                98
               ],
               desugars: [
                 0
@@ -6962,14 +7278,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 465,
+        line: 468,
         column: 21,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 465,
+        line: 468,
         column: 32,
         ignore: false
       },
@@ -6977,7 +7293,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 465,
+        line: 468,
         column: 21,
         ignore: false
       },
@@ -7013,14 +7329,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 525,
+        line: 528,
         column: 6,
         ignore: false
       },
@@ -7028,7 +7344,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 17,
         ignore: false
       },
@@ -7056,7 +7372,7 @@
           ]
         }
       ],
-      type: 52,
+      type: 54,
       mangledName: "_CN21ohos.data.preferences11Preferences2onHNNY_16PreferencesEventECN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEE",
       exportId: "_CN21ohos.data.preferences11Preferences2onHNNY_16PreferencesEventECN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC2onF16PreferencesEvent17Callback1Argument<6String>$$u",
@@ -7065,7 +7381,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16372704512563280131
+        bodyHash: 6681657227054603871
       },
       info_type: "FuncInfo",
       info: {
@@ -7073,8 +7389,8 @@
           paramLists: [
             {
               params: [
-                95,
-                96
+                100,
+                101
               ],
               desugars: [
                 0,
@@ -7082,7 +7398,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -7092,14 +7408,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 20,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 43,
         ignore: false
       },
@@ -7107,7 +7423,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 20,
         ignore: false
       },
@@ -7118,7 +7434,7 @@
       annotations: [
 
       ],
-      type: 32,
+      type: 34,
       mangledName: "_CN21ohos.data.preferences11Preferences2onHNNY_16PreferencesEventECN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEE5eventE",
       exportId: "",
       mangledBeforeSema: "",
@@ -7139,14 +7455,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 45,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 80,
         ignore: false
       },
@@ -7154,7 +7470,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 499,
+        line: 502,
         column: 45,
         ignore: false
       },
@@ -7165,7 +7481,7 @@
       annotations: [
 
       ],
-      type: 53,
+      type: 55,
       mangledName: "_CN21ohos.data.preferences11Preferences2onHNNY_16PreferencesEventECN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEE8callbackIY8_E",
       exportId: "",
       mangledBeforeSema: "",
@@ -7190,14 +7506,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 550,
+        line: 553,
         column: 6,
         ignore: false
       },
@@ -7205,7 +7521,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 17,
         ignore: false
       },
@@ -7233,7 +7549,7 @@
           ]
         }
       ],
-      type: 54,
+      type: 56,
       mangledName: "_CN21ohos.data.preferences11Preferences3offHNNY_16PreferencesEventENNat6OptionICN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEE",
       exportId: "_CN21ohos.data.preferences11Preferences3offHNNY_16PreferencesEventENNat6OptionICN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC3offF16PreferencesEventO1_17Callback1Argument<6String>!8callback=$$u",
@@ -7242,7 +7558,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 13784091164986303265
+        bodyHash: 14294015144876190820
       },
       info_type: "FuncInfo",
       info: {
@@ -7250,16 +7566,16 @@
           paramLists: [
             {
               params: [
-                98,
-                99
+                103,
+                104
               ],
               desugars: [
                 0,
-                100
+                105
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -7269,14 +7585,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 21,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 44,
         ignore: false
       },
@@ -7284,7 +7600,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 21,
         ignore: false
       },
@@ -7295,7 +7611,7 @@
       annotations: [
 
       ],
-      type: 32,
+      type: 34,
       mangledName: "_CN21ohos.data.preferences11Preferences3offHNNY_16PreferencesEventENNat6OptionICN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEEE5eventE",
       exportId: "",
       mangledBeforeSema: "",
@@ -7316,14 +7632,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 46,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 90,
         ignore: false
       },
@@ -7331,7 +7647,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 46,
         ignore: false
       },
@@ -7342,7 +7658,7 @@
       annotations: [
 
       ],
-      type: 55,
+      type: 57,
       mangledName: "_CN21ohos.data.preferences11Preferences3offHNNY_16PreferencesEventENNat6OptionICN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEEE8callbackIY8_E",
       exportId: "",
       mangledBeforeSema: "",
@@ -7368,14 +7684,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 86,
         ignore: true
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 90,
         ignore: false
       },
@@ -7394,7 +7710,7 @@
       annotations: [
 
       ],
-      type: 56,
+      type: 58,
       mangledName: "_CPI21ohos.data.preferences11Preferences3offHNNY_16PreferencesEventENNat6OptionICN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEEE8callbackHY3_",
       exportId: "",
       mangledBeforeSema: "",
@@ -7411,14 +7727,14 @@
           paramLists: [
             {
               params: [
-                101
+                106
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 55
+          retType: 57
         }
       }
     },
@@ -7428,14 +7744,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 21,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 44,
         ignore: false
       },
@@ -7443,7 +7759,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 544,
+        line: 547,
         column: 21,
         ignore: false
       },
@@ -7454,7 +7770,7 @@
       annotations: [
 
       ],
-      type: 32,
+      type: 34,
       mangledName: "_CN21ohos.data.preferences11Preferences3offHNNY_16PreferencesEventENNat6OptionICN20ohos.callback_invoke17Callback1ArgumentIRNat6StringEEEE10callback.1HY3_E5eventE",
       exportId: "",
       mangledBeforeSema: "",
@@ -7479,14 +7795,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 580,
+        line: 583,
         column: 6,
         ignore: false
       },
@@ -7494,7 +7810,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 10,
         ignore: false
       },
@@ -7505,7 +7821,7 @@
       annotations: [
 
       ],
-      type: 57,
+      type: 59,
       mangledName: "_CN21ohos.data.preferences11Preferences7offImplHRNat6StringECN20ohos.callback_invoke17Callback1ArgumentIY3_E",
       exportId: "_CN21ohos.data.preferences11Preferences7offImplHRNat6StringECN20ohos.callback_invoke17Callback1ArgumentIY3_E",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC7offImplF6String17Callback1Argument<6String>$$u",
@@ -7514,7 +7830,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 11246746571938257997
+        bodyHash: 8062845215798932186
       },
       info_type: "FuncInfo",
       info: {
@@ -7522,8 +7838,8 @@
           paramLists: [
             {
               params: [
-                103,
-                104
+                108,
+                109
               ],
               desugars: [
                 0,
@@ -7531,7 +7847,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -7541,14 +7857,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 18,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 28,
         ignore: false
       },
@@ -7556,7 +7872,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 18,
         ignore: false
       },
@@ -7588,14 +7904,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 30,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 65,
         ignore: false
       },
@@ -7603,7 +7919,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 552,
+        line: 555,
         column: 30,
         ignore: false
       },
@@ -7614,7 +7930,7 @@
       annotations: [
 
       ],
-      type: 53,
+      type: 55,
       mangledName: "_CN21ohos.data.preferences11Preferences7offImplHRNat6StringECN20ohos.callback_invoke17Callback1ArgumentIY3_EE8callbackIY3_E",
       exportId: "",
       mangledBeforeSema: "",
@@ -7639,14 +7955,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 582,
+        line: 585,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 599,
+        line: 602,
         column: 6,
         ignore: false
       },
@@ -7654,7 +7970,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 582,
+        line: 585,
         column: 10,
         ignore: false
       },
@@ -7665,7 +7981,7 @@
       annotations: [
 
       ],
-      type: 50,
+      type: 52,
       mangledName: "_CN21ohos.data.preferences11Preferences7offImplHRNat6StringE",
       exportId: "_CN21ohos.data.preferences11Preferences7offImplHRNat6StringE",
       mangledBeforeSema: "21ohos.data.preferences11PreferencesC7offImplF6String$$u",
@@ -7674,7 +7990,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 16899896634327313171
+        bodyHash: 12802194698671465173
       },
       info_type: "FuncInfo",
       info: {
@@ -7682,14 +7998,14 @@
           paramLists: [
             {
               params: [
-                106
+                111
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -7699,14 +8015,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 582,
+        line: 585,
         column: 18,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 582,
+        line: 585,
         column: 28,
         ignore: false
       },
@@ -7714,7 +8030,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 582,
+        line: 585,
         column: 18,
         ignore: false
       },
@@ -7777,7 +8093,7 @@
       annotations: [
 
       ],
-      type: 59,
+      type: 61,
       mangledName: "FfiOHOSPreferencesGetPreferences",
       exportId: "FfiOHOSPreferencesGetPreferences",
       mangledBeforeSema: "21ohos.data.preferences32FfiOHOSPreferencesGetPreferencesF12StageContext7CString7CString8CPointer<i>$$l",
@@ -7794,10 +8110,10 @@
           paramLists: [
             {
               params: [
-                108,
-                109,
-                110,
-                111
+                113,
+                114,
+                115,
+                116
               ],
               desugars: [
                 0,
@@ -7843,7 +8159,7 @@
       annotations: [
 
       ],
-      type: 30,
+      type: 33,
       mangledName: "_CN21ohos.data.preferences32FfiOHOSPreferencesGetPreferencesHPukkPiE7contextIuE",
       exportId: "",
       mangledBeforeSema: "",
@@ -7890,7 +8206,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences32FfiOHOSPreferencesGetPreferencesHPukkPiE4nameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -7937,7 +8253,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences32FfiOHOSPreferencesGetPreferencesHPukkPiE11dataGroupIdE",
       exportId: "",
       mangledBeforeSema: "",
@@ -7984,7 +8300,7 @@
       annotations: [
 
       ],
-      type: 61,
+      type: 63,
       mangledName: "_CN21ohos.data.preferences32FfiOHOSPreferencesGetPreferencesHPukkPiE7errCodeIiE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8036,7 +8352,7 @@
       annotations: [
 
       ],
-      type: 62,
+      type: 64,
       mangledName: "FfiOHOSPreferencesDeletePreferences",
       exportId: "FfiOHOSPreferencesDeletePreferences",
       mangledBeforeSema: "21ohos.data.preferences35FfiOHOSPreferencesDeletePreferencesF12StageContext7CString7CString$$i",
@@ -8053,9 +8369,9 @@
           paramLists: [
             {
               params: [
-                113,
-                114,
-                115
+                118,
+                119,
+                120
               ],
               desugars: [
                 0,
@@ -8100,7 +8416,7 @@
       annotations: [
 
       ],
-      type: 30,
+      type: 33,
       mangledName: "_CN21ohos.data.preferences35FfiOHOSPreferencesDeletePreferencesHPukkE7contextIuE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8147,7 +8463,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences35FfiOHOSPreferencesDeletePreferencesHPukkE4nameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8194,7 +8510,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences35FfiOHOSPreferencesDeletePreferencesHPukkE11dataGroupIdE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8246,7 +8562,7 @@
       annotations: [
 
       ],
-      type: 62,
+      type: 64,
       mangledName: "FfiOHOSPreferencesRemovePreferencesFromCache",
       exportId: "FfiOHOSPreferencesRemovePreferencesFromCache",
       mangledBeforeSema: "21ohos.data.preferences44FfiOHOSPreferencesRemovePreferencesFromCacheF12StageContext7CString7CString$$i",
@@ -8263,9 +8579,9 @@
           paramLists: [
             {
               params: [
-                117,
-                118,
-                119
+                122,
+                123,
+                124
               ],
               desugars: [
                 0,
@@ -8310,7 +8626,7 @@
       annotations: [
 
       ],
-      type: 30,
+      type: 33,
       mangledName: "_CN21ohos.data.preferences44FfiOHOSPreferencesRemovePreferencesFromCacheHPukkE7contextIuE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8357,7 +8673,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences44FfiOHOSPreferencesRemovePreferencesFromCacheHPukkE4nameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8404,7 +8720,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences44FfiOHOSPreferencesRemovePreferencesFromCacheHPukkE11dataGroupIdE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8456,7 +8772,7 @@
       annotations: [
 
       ],
-      type: 63,
+      type: 65,
       mangledName: "FfiOHOSPreferencesDelete",
       exportId: "FfiOHOSPreferencesDelete",
       mangledBeforeSema: "21ohos.data.preferences24FfiOHOSPreferencesDeleteFl7CString$$i",
@@ -8473,8 +8789,8 @@
           paramLists: [
             {
               params: [
-                121,
-                122
+                126,
+                127
               ],
               desugars: [
                 0,
@@ -8565,7 +8881,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences24FfiOHOSPreferencesDeleteHlkE3keyE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8617,7 +8933,7 @@
       annotations: [
 
       ],
-      type: 64,
+      type: 66,
       mangledName: "FfiOHOSPreferencesHas",
       exportId: "FfiOHOSPreferencesHas",
       mangledBeforeSema: "21ohos.data.preferences21FfiOHOSPreferencesHasFl7CString$$b",
@@ -8634,8 +8950,8 @@
           paramLists: [
             {
               params: [
-                124,
-                125
+                129,
+                130
               ],
               desugars: [
                 0,
@@ -8726,7 +9042,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences21FfiOHOSPreferencesHasHlkE3keyE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8778,7 +9094,7 @@
       annotations: [
 
       ],
-      type: 65,
+      type: 67,
       mangledName: "FfiOHOSPreferencesOn",
       exportId: "FfiOHOSPreferencesOn",
       mangledBeforeSema: "21ohos.data.preferences20FfiOHOSPreferencesOnFl7CStringl$$i",
@@ -8795,9 +9111,9 @@
           paramLists: [
             {
               params: [
-                127,
-                128,
-                129
+                132,
+                133,
+                134
               ],
               desugars: [
                 0,
@@ -8889,7 +9205,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences20FfiOHOSPreferencesOnHlklE4modeE",
       exportId: "",
       mangledBeforeSema: "",
@@ -8988,7 +9304,7 @@
       annotations: [
 
       ],
-      type: 65,
+      type: 67,
       mangledName: "FfiOHOSPreferencesOff",
       exportId: "FfiOHOSPreferencesOff",
       mangledBeforeSema: "21ohos.data.preferences21FfiOHOSPreferencesOffFl7CStringl$$i",
@@ -9005,9 +9321,9 @@
           paramLists: [
             {
               params: [
-                131,
-                132,
-                133
+                136,
+                137,
+                138
               ],
               desugars: [
                 0,
@@ -9099,7 +9415,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences21FfiOHOSPreferencesOffHlklE4modeE",
       exportId: "",
       mangledBeforeSema: "",
@@ -9198,7 +9514,7 @@
       annotations: [
 
       ],
-      type: 63,
+      type: 65,
       mangledName: "FfiOHOSPreferencesOffAll",
       exportId: "FfiOHOSPreferencesOffAll",
       mangledBeforeSema: "21ohos.data.preferences24FfiOHOSPreferencesOffAllFl7CString$$i",
@@ -9215,8 +9531,8 @@
           paramLists: [
             {
               params: [
-                135,
-                136
+                140,
+                141
               ],
               desugars: [
                 0,
@@ -9307,7 +9623,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences24FfiOHOSPreferencesOffAllHlkE4modeE",
       exportId: "",
       mangledBeforeSema: "",
@@ -9359,7 +9675,7 @@
       annotations: [
 
       ],
-      type: 66,
+      type: 68,
       mangledName: "FfiOHOSPreferencesGet",
       exportId: "FfiOHOSPreferencesGet",
       mangledBeforeSema: "21ohos.data.preferences21FfiOHOSPreferencesGetFl7CString21CPreferencesValueType$$21CPreferencesValueType",
@@ -9376,9 +9692,9 @@
           paramLists: [
             {
               params: [
-                139,
-                140,
-                141
+                144,
+                145,
+                146
               ],
               desugars: [
                 0,
@@ -9387,7 +9703,7 @@
               ]
             }
           ],
-          retType: 67
+          retType: 69
         }
       }
     },
@@ -9428,7 +9744,7 @@
       annotations: [
 
       ],
-      type: 67,
+      type: 69,
       mangledName: "_CN21ohos.data.preferences21CPreferencesValueTypeE",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueTypeE",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS",
@@ -9445,18 +9761,18 @@
 
         ],
         body: [
-          153,
-          154,
-          155,
-          156,
-          157,
           158,
           159,
           160,
           161,
+          162,
           163,
+          164,
           165,
-          166
+          166,
+          168,
+          170,
+          171
         ]
       }
     },
@@ -9539,7 +9855,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences21FfiOHOSPreferencesGetHlkRNY_21CPreferencesValueTypeEE3keyE",
       exportId: "",
       mangledBeforeSema: "",
@@ -9586,7 +9902,7 @@
       annotations: [
 
       ],
-      type: 67,
+      type: 69,
       mangledName: "_CN21ohos.data.preferences21FfiOHOSPreferencesGetHlkRNY_21CPreferencesValueTypeEE8defValueE",
       exportId: "",
       mangledBeforeSema: "",
@@ -9638,7 +9954,7 @@
       annotations: [
 
       ],
-      type: 68,
+      type: 70,
       mangledName: "FfiOHOSPreferencesPut",
       exportId: "FfiOHOSPreferencesPut",
       mangledBeforeSema: "21ohos.data.preferences21FfiOHOSPreferencesPutFl7CString21CPreferencesValueType$$i",
@@ -9655,9 +9971,9 @@
           paramLists: [
             {
               params: [
-                143,
-                144,
-                145
+                148,
+                149,
+                150
               ],
               desugars: [
                 0,
@@ -9749,7 +10065,7 @@
       annotations: [
 
       ],
-      type: 60,
+      type: 62,
       mangledName: "_CN21ohos.data.preferences21FfiOHOSPreferencesPutHlkRNY_21CPreferencesValueTypeEE3keyE",
       exportId: "",
       mangledBeforeSema: "",
@@ -9796,7 +10112,7 @@
       annotations: [
 
       ],
-      type: 67,
+      type: 69,
       mangledName: "_CN21ohos.data.preferences21FfiOHOSPreferencesPutHlkRNY_21CPreferencesValueTypeEE5valueE",
       exportId: "",
       mangledBeforeSema: "",
@@ -9848,7 +10164,7 @@
       annotations: [
 
       ],
-      type: 69,
+      type: 71,
       mangledName: "FfiOHOSPreferencesGetAll",
       exportId: "FfiOHOSPreferencesGetAll",
       mangledBeforeSema: "21ohos.data.preferences24FfiOHOSPreferencesGetAllFl$$22CPreferencesValueTypes",
@@ -9865,14 +10181,14 @@
           paramLists: [
             {
               params: [
-                148
+                153
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 70
+          retType: 72
         }
       }
     },
@@ -9913,7 +10229,7 @@
       annotations: [
 
       ],
-      type: 70,
+      type: 72,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypesE",
       exportId: "_CN21ohos.data.preferences22CPreferencesValueTypesE",
       mangledBeforeSema: "21ohos.data.preferences22CPreferencesValueTypesS",
@@ -9930,12 +10246,12 @@
 
         ],
         body: [
-          167,
-          168,
-          169,
-          170,
+          172,
+          173,
           174,
-          176
+          175,
+          179,
+          181
         ]
       }
     },
@@ -10023,7 +10339,7 @@
       annotations: [
 
       ],
-      type: 71,
+      type: 73,
       mangledName: "FfiOHOSPreferencesFlush",
       exportId: "FfiOHOSPreferencesFlush",
       mangledBeforeSema: "21ohos.data.preferences23FfiOHOSPreferencesFlushFl$$u",
@@ -10040,14 +10356,14 @@
           paramLists: [
             {
               params: [
-                150
+                155
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -10135,7 +10451,7 @@
       annotations: [
 
       ],
-      type: 71,
+      type: 73,
       mangledName: "FfiOHOSPreferencesClear",
       exportId: "FfiOHOSPreferencesClear",
       mangledBeforeSema: "21ohos.data.preferences23FfiOHOSPreferencesClearFl$$u",
@@ -10152,14 +10468,14 @@
           paramLists: [
             {
               params: [
-                152
+                157
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -10338,7 +10654,7 @@
       annotations: [
 
       ],
-      type: 72,
+      type: 74,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType6stringK_E",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS6stringV$$8CPointer<h>",
@@ -10434,7 +10750,7 @@
       annotations: [
 
       ],
-      type: 74,
+      type: 76,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType9boolArrayK_E",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS9boolArrayV$$8CArrBool",
@@ -10482,7 +10798,7 @@
       annotations: [
 
       ],
-      type: 75,
+      type: 77,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType11doubleArrayK_E",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS11doubleArrayV$$10CArrDouble",
@@ -10530,7 +10846,7 @@
       annotations: [
 
       ],
-      type: 76,
+      type: 78,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType11stringArrayK_E",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS11stringArrayV$$10CArrString",
@@ -10578,7 +10894,7 @@
       annotations: [
 
       ],
-      type: 73,
+      type: 75,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType3tagK_E",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS3tagV$$h",
@@ -10630,7 +10946,7 @@
       annotations: [
 
       ],
-      type: 77,
+      type: 79,
       mangledName: "_CN21ohos.data.preferences21CPreferencesValueType6<init>HNNY_9ValueTypeE",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType6<init>HNNY_9ValueTypeE",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS6<init>F9ValueType$$",
@@ -10647,14 +10963,14 @@
           paramLists: [
             {
               params: [
-                162
+                167
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 67
+          retType: 69
         }
       }
     },
@@ -10741,7 +11057,7 @@
       annotations: [
 
       ],
-      type: 78,
+      type: 80,
       mangledName: "_CN21ohos.data.preferences21CPreferencesValueType5parseHRNY_Y0_E",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType5parseHRNY_Y0_E",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS5parseF21CPreferencesValueType$$9ValueType",
@@ -10758,7 +11074,7 @@
           paramLists: [
             {
               params: [
-                164
+                169
               ],
               desugars: [
                 0
@@ -10801,7 +11117,7 @@
       annotations: [
 
       ],
-      type: 67,
+      type: 69,
       mangledName: "_CN21ohos.data.preferences21CPreferencesValueType5parseHRNY_Y0_EE21cPreferencesValueTypeE",
       exportId: "",
       mangledBeforeSema: "",
@@ -10852,7 +11168,7 @@
       annotations: [
 
       ],
-      type: 79,
+      type: 81,
       mangledName: "_CN21ohos.data.preferences21CPreferencesValueType11toValueTypeHv",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType11toValueTypeHv",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS11toValueTypeF$$9ValueType",
@@ -10916,7 +11232,7 @@
       annotations: [
 
       ],
-      type: 40,
+      type: 42,
       mangledName: "_CN21ohos.data.preferences21CPreferencesValueType4freeHv",
       exportId: "_CN21ohos.data.preferences21CPreferencesValueType4freeHv",
       mangledBeforeSema: "21ohos.data.preferences21CPreferencesValueTypeS4freeF$$",
@@ -10940,7 +11256,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     },
@@ -10976,7 +11292,7 @@
       annotations: [
 
       ],
-      type: 80,
+      type: 82,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences22CPreferencesValueTypes3keyK_E",
       mangledBeforeSema: "21ohos.data.preferences22CPreferencesValueTypesS3keyV$$8CPointer<7CString>",
@@ -11023,7 +11339,7 @@
       annotations: [
 
       ],
-      type: 81,
+      type: 83,
       mangledName: "",
       exportId: "_CN21ohos.data.preferences22CPreferencesValueTypes5valueK_E",
       mangledBeforeSema: "21ohos.data.preferences22CPreferencesValueTypesS5valueV$$8CPointer<21CPreferencesValueType>",
@@ -11121,7 +11437,7 @@
       annotations: [
 
       ],
-      type: 82,
+      type: 84,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypes6<init>HPkPRNY_21CPreferencesValueTypeEl",
       exportId: "_CN21ohos.data.preferences22CPreferencesValueTypes6<init>HPkPRNY_21CPreferencesValueTypeEl",
       mangledBeforeSema: "21ohos.data.preferences22CPreferencesValueTypesS6<init>F8CPointer<7CString>8CPointer<21CPreferencesValueType>l$$",
@@ -11138,9 +11454,9 @@
           paramLists: [
             {
               params: [
-                171,
-                172,
-                173
+                176,
+                177,
+                178
               ],
               desugars: [
                 0,
@@ -11149,7 +11465,7 @@
               ]
             }
           ],
-          retType: 70
+          retType: 72
         }
       }
     },
@@ -11185,7 +11501,7 @@
       annotations: [
 
       ],
-      type: 80,
+      type: 82,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypes4initHPkPRNY_21CPreferencesValueTypeElE3keyIkE",
       exportId: "",
       mangledBeforeSema: "",
@@ -11232,7 +11548,7 @@
       annotations: [
 
       ],
-      type: 81,
+      type: 83,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypes4initHPkPRNY_21CPreferencesValueTypeElE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
@@ -11330,7 +11646,7 @@
       annotations: [
 
       ],
-      type: 83,
+      type: 85,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypes5parseHRNY_Y0_E",
       exportId: "_CN21ohos.data.preferences22CPreferencesValueTypes5parseHRNY_Y0_E",
       mangledBeforeSema: "21ohos.data.preferences22CPreferencesValueTypesS5parseF22CPreferencesValueTypes$$7HashMap<6String9ValueType>",
@@ -11347,14 +11663,14 @@
           paramLists: [
             {
               params: [
-                175
+                180
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 49
+          retType: 51
         }
       }
     },
@@ -11390,7 +11706,7 @@
       annotations: [
 
       ],
-      type: 70,
+      type: 72,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypes5parseHRNY_Y0_EE22cPreferencesValueTypesE",
       exportId: "",
       mangledBeforeSema: "",
@@ -11441,7 +11757,7 @@
       annotations: [
 
       ],
-      type: 40,
+      type: 42,
       mangledName: "_CN21ohos.data.preferences22CPreferencesValueTypes4freeHv",
       exportId: "_CN21ohos.data.preferences22CPreferencesValueTypes4freeHv",
       mangledBeforeSema: "21ohos.data.preferences22CPreferencesValueTypesS4freeF$$",
@@ -11465,7 +11781,7 @@
               ]
             }
           ],
-          retType: 31
+          retType: 23
         }
       }
     }
@@ -12571,14 +12887,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 244,
+        line: 262,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 244,
+        line: 262,
         column: 7,
         ignore: false
       },
@@ -12592,14 +12908,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 245,
+        line: 263,
         column: 21,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 245,
+        line: 263,
         column: 25,
         ignore: false
       },
@@ -12614,14 +12930,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 246,
+        line: 264,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 246,
+        line: 264,
         column: 71,
         ignore: false
       },
@@ -12636,14 +12952,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 255,
+        line: 273,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 255,
+        line: 273,
         column: 11,
         ignore: false
       },
@@ -12657,14 +12973,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 256,
+        line: 274,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 256,
+        line: 274,
         column: 29,
         ignore: false
       },
@@ -12679,14 +12995,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 257,
+        line: 275,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 257,
+        line: 275,
         column: 75,
         ignore: false
       },
@@ -12701,14 +13017,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 267,
+        line: 285,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 267,
+        line: 285,
         column: 11,
         ignore: false
       },
@@ -12722,14 +13038,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 268,
+        line: 286,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 268,
+        line: 286,
         column: 29,
         ignore: false
       },
@@ -12744,14 +13060,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 269,
+        line: 287,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 269,
+        line: 287,
         column: 75,
         ignore: false
       },
@@ -12766,14 +13082,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 279,
+        line: 297,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 279,
+        line: 297,
         column: 11,
         ignore: false
       },
@@ -12787,14 +13103,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 280,
+        line: 298,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 280,
+        line: 298,
         column: 29,
         ignore: false
       },
@@ -12809,14 +13125,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 281,
+        line: 299,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 281,
+        line: 299,
         column: 75,
         ignore: false
       },
@@ -12831,14 +13147,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 289,
+        line: 307,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 289,
+        line: 307,
         column: 11,
         ignore: false
       },
@@ -12852,14 +13168,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 290,
+        line: 308,
         column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 290,
+        line: 308,
         column: 29,
         ignore: false
       },
@@ -12874,14 +13190,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 291,
+        line: 309,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 291,
+        line: 309,
         column: 75,
         ignore: false
       },
@@ -13156,42 +13472,20 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 123,
+        line: 124,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 123,
+        line: 124,
         column: 11,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
         strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 2,
-        pkgId: 0,
-        line: 124,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 2,
-        pkgId: 0,
-        line: 124,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
       }
     },
     {
@@ -13200,20 +13494,20 @@
         file: 2,
         pkgId: 0,
         line: 125,
-        column: 17,
+        column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 125,
-        column: 75,
+        column: 29,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
-        constKind: "String"
+        strValue: "true",
+        constKind: "Bool"
       }
     },
     {
@@ -13221,20 +13515,21 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 149,
-        column: 9,
+        line: 126,
+        column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 149,
-        column: 11,
+        line: 126,
+        column: 75,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
+        constKind: "String"
       }
     },
     {
@@ -13243,20 +13538,19 @@
         file: 2,
         pkgId: 0,
         line: 150,
-        column: 25,
+        column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 150,
-        column: 29,
+        column: 11,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "21"
       }
     },
     {
@@ -13265,20 +13559,20 @@
         file: 2,
         pkgId: 0,
         line: 151,
-        column: 17,
+        column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 151,
-        column: 75,
+        column: 29,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
-        constKind: "String"
+        strValue: "true",
+        constKind: "Bool"
       }
     },
     {
@@ -13286,20 +13580,21 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 174,
-        column: 9,
+        line: 152,
+        column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 174,
-        column: 11,
+        line: 152,
+        column: 75,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
+        constKind: "String"
       }
     },
     {
@@ -13308,20 +13603,19 @@
         file: 2,
         pkgId: 0,
         line: 175,
-        column: 25,
+        column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 175,
-        column: 29,
+        column: 11,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "21"
       }
     },
     {
@@ -13330,20 +13624,20 @@
         file: 2,
         pkgId: 0,
         line: 176,
-        column: 17,
+        column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 176,
-        column: 75,
+        column: 29,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
-        constKind: "String"
+        strValue: "true",
+        constKind: "Bool"
       }
     },
     {
@@ -13351,20 +13645,21 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 199,
-        column: 9,
+        line: 177,
+        column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 199,
-        column: 11,
+        line: 177,
+        column: 75,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
+        constKind: "String"
       }
     },
     {
@@ -13373,20 +13668,19 @@
         file: 2,
         pkgId: 0,
         line: 200,
-        column: 25,
+        column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 200,
-        column: 29,
+        column: 11,
         ignore: false
       },
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "21"
       }
     },
     {
@@ -13395,56 +13689,13 @@
         file: 2,
         pkgId: 0,
         line: 201,
-        column: 17,
+        column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 201,
-        column: 75,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 2,
-        pkgId: 0,
-        line: 242,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 2,
-        pkgId: 0,
-        line: 242,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 2,
-        pkgId: 0,
-        line: 243,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 2,
-        pkgId: 0,
-        line: 243,
         column: 29,
         ignore: false
       },
@@ -13452,6 +13703,28 @@
       info: {
         strValue: "true",
         constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 202,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 202,
+        column: 75,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
+        constKind: "String"
       }
     },
     {
@@ -13460,35 +13733,13 @@
         file: 2,
         pkgId: 0,
         line: 244,
-        column: 17,
+        column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 244,
-        column: 75,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 2,
-        pkgId: 0,
-        line: 271,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 2,
-        pkgId: 0,
-        line: 271,
         column: 11,
         ignore: false
       },
@@ -13502,14 +13753,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 272,
+        line: 245,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 272,
+        line: 245,
         column: 29,
         ignore: false
       },
@@ -13517,6 +13768,28 @@
       info: {
         strValue: "true",
         constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 246,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 246,
+        column: 75,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
+        constKind: "String"
       }
     },
     {
@@ -13525,35 +13798,13 @@
         file: 2,
         pkgId: 0,
         line: 273,
-        column: 17,
+        column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
         line: 273,
-        column: 75,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 2,
-        pkgId: 0,
-        line: 306,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 2,
-        pkgId: 0,
-        line: 306,
         column: 11,
         ignore: false
       },
@@ -13567,14 +13818,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 307,
+        line: 274,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 307,
+        line: 274,
         column: 29,
         ignore: false
       },
@@ -13589,14 +13840,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 308,
+        line: 275,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 308,
+        line: 275,
         column: 75,
         ignore: false
       },
@@ -13611,14 +13862,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 323,
+        line: 309,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 323,
+        line: 309,
         column: 11,
         ignore: false
       },
@@ -13632,14 +13883,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 324,
+        line: 310,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 324,
+        line: 310,
         column: 29,
         ignore: false
       },
@@ -13654,14 +13905,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 325,
+        line: 311,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 325,
+        line: 311,
         column: 75,
         ignore: false
       },
@@ -13676,14 +13927,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 346,
+        line: 326,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 346,
+        line: 326,
         column: 11,
         ignore: false
       },
@@ -13697,14 +13948,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 347,
+        line: 327,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 347,
+        line: 327,
         column: 29,
         ignore: false
       },
@@ -13719,14 +13970,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 348,
+        line: 328,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 348,
+        line: 328,
         column: 75,
         ignore: false
       },
@@ -13741,14 +13992,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 376,
+        line: 349,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 376,
+        line: 349,
         column: 11,
         ignore: false
       },
@@ -13762,14 +14013,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 377,
+        line: 350,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 377,
+        line: 350,
         column: 29,
         ignore: false
       },
@@ -13784,14 +14035,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 378,
+        line: 351,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 378,
+        line: 351,
         column: 75,
         ignore: false
       },
@@ -13806,14 +14057,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 406,
+        line: 379,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 406,
+        line: 379,
         column: 11,
         ignore: false
       },
@@ -13827,14 +14078,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 407,
+        line: 380,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 407,
+        line: 380,
         column: 29,
         ignore: false
       },
@@ -13849,14 +14100,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 408,
+        line: 381,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 408,
+        line: 381,
         column: 75,
         ignore: false
       },
@@ -13871,14 +14122,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 430,
+        line: 409,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 430,
+        line: 409,
         column: 11,
         ignore: false
       },
@@ -13892,14 +14143,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 431,
+        line: 410,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 431,
+        line: 410,
         column: 29,
         ignore: false
       },
@@ -13914,14 +14165,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 432,
+        line: 411,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 432,
+        line: 411,
         column: 75,
         ignore: false
       },
@@ -13936,14 +14187,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 461,
+        line: 433,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 461,
+        line: 433,
         column: 11,
         ignore: false
       },
@@ -13957,14 +14208,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 462,
+        line: 434,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 462,
+        line: 434,
         column: 29,
         ignore: false
       },
@@ -13979,14 +14230,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 463,
+        line: 435,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 463,
+        line: 435,
         column: 75,
         ignore: false
       },
@@ -14001,14 +14252,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 495,
+        line: 464,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 495,
+        line: 464,
         column: 11,
         ignore: false
       },
@@ -14022,14 +14273,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 496,
+        line: 465,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 496,
+        line: 465,
         column: 29,
         ignore: false
       },
@@ -14044,14 +14295,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 497,
+        line: 466,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 497,
+        line: 466,
         column: 75,
         ignore: false
       },
@@ -14066,14 +14317,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 540,
+        line: 498,
         column: 9,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 540,
+        line: 498,
         column: 11,
         ignore: false
       },
@@ -14087,14 +14338,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 541,
+        line: 499,
         column: 25,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 541,
+        line: 499,
         column: 29,
         ignore: false
       },
@@ -14109,14 +14360,79 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 542,
+        line: 500,
         column: 17,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 542,
+        line: 500,
+        column: 75,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.DistributedDataManager.Preferences.Core",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 543,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 543,
+        column: 11,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "21"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 544,
+        column: 25,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 544,
+        column: 29,
+        ignore: false
+      },
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "true",
+        constKind: "Bool"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 545,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 545,
         column: 75,
         ignore: false
       },
