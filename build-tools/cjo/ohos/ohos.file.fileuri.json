@@ -250,16 +250,6 @@
       }
     },
     {
-      kind: "Func",
-      typeArgs: [
-        8
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 8
-      }
-    },
-    {
       kind: "Class",
       typeArgs: [
 
@@ -270,6 +260,16 @@
           pkgId: 1,
           decl: "_CN8ohos.uri3UriE"
         }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        8
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
       }
     }
   ],
@@ -852,7 +852,7 @@
       end: {
         file: 1,
         pkgId: 0,
-        line: 170,
+        line: 144,
         column: 2,
         ignore: false
       },
@@ -897,20 +897,19 @@
         virt: 0,
         sig: 12795822531091757485,
         srcUse: 0,
-        bodyHash: 2713474228624126545
+        bodyHash: 10251316806890812664
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          13
+          12
         ],
         body: [
           12,
           14,
           15,
           17,
-          19,
-          20
+          19
         ]
       }
     },
@@ -1128,11 +1127,11 @@
         file: 1,
         pkgId: 0,
         line: 92,
-        column: 17,
+        column: 26,
         ignore: false
       },
       attributes: [
-        144115188344292384,
+        144115188344325152,
         0
       ],
       annotations: [
@@ -1164,7 +1163,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 7331204170280875521,
-        bodyHash: 14234629659794837558
+        bodyHash: 3633122652602452959
       },
       info_type: "PropInfo",
       info: {
@@ -1206,7 +1205,7 @@
         ignore: false
       },
       attributes: [
-        144678138297713696,
+        144678138297746464,
         0
       ],
       annotations: [
@@ -1457,6 +1456,7 @@
     },
     {
       kind: "FuncDecl",
+      isTopLevel: true,
       fullPkgName: "ohos.file.fileuri",
       genericDecl: {
         pkgId: -1,
@@ -1465,27 +1465,27 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 156,
-        column: 5,
+        line: 157,
+        column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 169,
-        column: 6,
+        line: 170,
+        column: 2,
         ignore: false
       },
       identifier: "getUriFromPath",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 156,
-        column: 24,
+        line: 157,
+        column: 13,
         ignore: false
       },
       attributes: [
-        144678138297714208,
+        144678412907185200,
         0
       ],
       annotations: [
@@ -1508,16 +1508,16 @@
           ]
         }
       ],
-      type: 12,
-      mangledName: "_CN17ohos.file.fileuri7FileUri14getUriFromPathHRNat6StringE",
-      exportId: "_CN17ohos.file.fileuri7FileUri14getUriFromPathHRNat6StringE",
-      mangledBeforeSema: "17ohos.file.fileuri7FileUriC14getUriFromPathF6String$$6String",
+      type: 13,
+      mangledName: "_CN17ohos.file.fileuri14getUriFromPathHRNat6StringE",
+      exportId: "_CN17ohos.file.fileuri14getUriFromPathHRNat6StringE",
+      mangledBeforeSema: "17ohos.file.fileuri14getUriFromPathF6String$$6String",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
-        srcUse: 8035971499611947038,
-        bodyHash: 10168285880993968730
+        srcUse: 0,
+        bodyHash: 14108982599660327036
       },
       info_type: "FuncInfo",
       info: {
@@ -1542,23 +1542,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 156,
-        column: 39,
+        line: 157,
+        column: 28,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 156,
-        column: 51,
+        line: 157,
+        column: 40,
         ignore: false
       },
       identifier: "path",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 156,
-        column: 39,
+        line: 157,
+        column: 28,
         ignore: false
       },
       attributes: [
@@ -1569,7 +1569,7 @@
 
       ],
       type: 8,
-      mangledName: "_CN17ohos.file.fileuri7FileUri14getUriFromPathHRNat6StringEE4pathE",
+      mangledName: "_CN17ohos.file.fileuri14getUriFromPathHRNat6StringEE4pathE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1915,15 +1915,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 152,
-        column: 9,
+        line: 153,
+        column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 152,
-        column: 11,
+        line: 153,
+        column: 7,
         ignore: false
       },
       info_type: "LitConstInfo",
@@ -1936,15 +1936,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 153,
-        column: 25,
+        line: 154,
+        column: 21,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 153,
-        column: 29,
+        line: 154,
+        column: 25,
         ignore: false
       },
       info_type: "LitConstInfo",
@@ -1958,15 +1958,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 154,
-        column: 17,
+        line: 155,
+        column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 154,
-        column: 65,
+        line: 155,
+        column: 61,
         ignore: false
       },
       info_type: "LitConstInfo",
