@@ -6,7 +6,7 @@
     patch_num: 0
   },
   fullPkgName: "kit.ArkUI",
-  pkgDepInfo: "{\"package\":\"kit.ArkUI\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.animator\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":45,\"column\":1},\"end\":{\"line\":45,\"column\":30}}]},{\"package\":\"ohos.arkui.component\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":29,\"column\":1},\"end\":{\"line\":29,\"column\":37}}]},{\"package\":\"ohos.arkui.component_snapshot\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":51,\"column\":1},\"end\":{\"line\":51,\"column\":46}}]},{\"package\":\"ohos.arkui.state_management\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":30,\"column\":1},\"end\":{\"line\":30,\"column\":44}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":28,\"column\":1},\"end\":{\"line\":28,\"column\":26}}]},{\"package\":\"ohos.curves\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":48,\"column\":1},\"end\":{\"line\":48,\"column\":28}}]},{\"package\":\"ohos.display\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":29}},{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":47}},{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":61}}]},{\"package\":\"ohos.font\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":33,\"column\":1},\"end\":{\"line\":33,\"column\":26}}]},{\"package\":\"ohos.measure\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":36,\"column\":1},\"end\":{\"line\":36,\"column\":29}}]},{\"package\":\"ohos.prompt_action\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":39,\"column\":1},\"end\":{\"line\":39,\"column\":35}}]},{\"package\":\"ohos.router\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":42,\"column\":1},\"end\":{\"line\":42,\"column\":28}}]},{\"package\":\"ohos.window\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}},{\"file\":\"index.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":45}},{\"file\":\"index.cj\",\"begin\":{\"line\":25,\"column\":1},\"end\":{\"line\":25,\"column\":59}}]}]}",
+  pkgDepInfo: "{\"package\":\"kit.ArkUI\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.animator\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":39,\"column\":1},\"end\":{\"line\":39,\"column\":30}}]},{\"package\":\"ohos.arkui.component\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":29,\"column\":1},\"end\":{\"line\":29,\"column\":37}}]},{\"package\":\"ohos.arkui.component_snapshot\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":45,\"column\":1},\"end\":{\"line\":45,\"column\":46}}]},{\"package\":\"ohos.arkui.state_management\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":30,\"column\":1},\"end\":{\"line\":30,\"column\":44}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":28,\"column\":1},\"end\":{\"line\":28,\"column\":26}}]},{\"package\":\"ohos.curves\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":42,\"column\":1},\"end\":{\"line\":42,\"column\":28}}]},{\"package\":\"ohos.display\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":29}},{\"file\":\"index.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":47}},{\"file\":\"index.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":61}}]},{\"package\":\"ohos.font\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":33,\"column\":1},\"end\":{\"line\":33,\"column\":26}}]},{\"package\":\"ohos.router\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":36,\"column\":1},\"end\":{\"line\":36,\"column\":28}}]},{\"package\":\"ohos.window\",\"isStd\":false,\"imports\":[{\"file\":\"index.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}},{\"file\":\"index.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":45}},{\"file\":\"index.cj\",\"begin\":{\"line\":25,\"column\":1},\"end\":{\"line\":25,\"column\":59}}]}]}",
   imports: [
     "ohos.display",
     "ohos.window",
@@ -14,8 +14,6 @@
     "ohos.arkui.component",
     "ohos.arkui.state_management",
     "ohos.font",
-    "ohos.measure",
-    "ohos.prompt_action",
     "ohos.router",
     "ohos.animator",
     "ohos.curves",
@@ -271,52 +269,6 @@
             file: 1,
             pkgId: 0,
             line: 36,
-            column: 29,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "measure"
-          ],
-          identifier: "*",
-          asIdentifier: "",
-          reExport: "Public"
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 39,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 39,
-            column: 35,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "prompt_action"
-          ],
-          identifier: "*",
-          asIdentifier: "",
-          reExport: "Public"
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 42,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 42,
             column: 28,
             ignore: false
           },
@@ -332,14 +284,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 45,
+            line: 39,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 45,
+            line: 39,
             column: 30,
             ignore: false
           },
@@ -355,14 +307,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 48,
+            line: 42,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 48,
+            line: 42,
             column: 28,
             ignore: false
           },
@@ -378,14 +330,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 51,
+            line: 45,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 51,
+            line: 45,
             column: 46,
             ignore: false
           },
