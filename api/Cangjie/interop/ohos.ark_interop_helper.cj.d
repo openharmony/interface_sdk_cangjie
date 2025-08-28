@@ -16,10 +16,10 @@
 package ohos.ark_interop_helper
 import std.sync.{SyncCounter, AtomicBool}
 import std.collection.concurrent.ConcurrentHashMap
-import ohos.base.BusinessException
+import ohos.business_exception.BusinessException
 import ohos.ark_interop.*
 
-import ohos.base.{BusinessException, Main}
+import ohos.base.Main
 import ohos.hilog.Hilog
 import std.sync.Mutex
 import std.convert.*
@@ -38,8 +38,7 @@ import std.time.DateTime
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public func isStageMode(env: napi_env, context: napi_value): Bool
 
@@ -49,8 +48,7 @@ public func isStageMode(env: napi_env, context: napi_value): Bool
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public func arkTsValuetoNapiValue(env: napi_env, ark_value: JSValue): napi_value
 
@@ -60,8 +58,7 @@ public func arkTsValuetoNapiValue(env: napi_env, ark_value: JSValue): napi_value
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public func mapToJSValue<T>(
     context: JSContext,
@@ -75,8 +72,7 @@ public func mapToJSValue<T>(
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public func mapFromJSValue<T>(
     context: JSContext,
