@@ -16,6 +16,14 @@ Cangjie API Public Repository, which includes Cangjie API interface declarations
 
 ```
 
+## Constraints
+
+Currently, the Cangjie interface only supports standard devices.
+
+## Code Contribution
+
+Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).
+
 ## Related Repositories
 
-[cangjie_ark_interop](https://gitcode.com/Cangjie/cangjie-api/tree/dev)
+[cangjie_ark_interop](https://gitcode.com/openharmony-sig/interface_sdk_cangjie)
