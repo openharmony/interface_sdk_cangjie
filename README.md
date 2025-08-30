@@ -2,7 +2,15 @@
 
 ## Introduction
 
-Cangjie API Public Repository, which includes Cangjie API interface declarations, SDK construction, etc.
+The Cangjie API Public Repository is used to store and manage the public API declarations of each Cangjie subsystem. It also provides corresponding SDK building tools to support the construction of Cangjie API in the OpenHarmony SDK.
+
+Currently, the Cangjie API only supports standard devices.
+
+## System Architecture
+
+**Figure 1** System architecture of interface_sdk_cangjie
+
+![](figures/interface_sdk_cangjie_architecture.png)
 
 ## Directory
 
@@ -16,14 +24,10 @@ Cangjie API Public Repository, which includes Cangjie API interface declarations
 
 ```
 
-## Constraints
-
-Currently, the Cangjie interface only supports standard devices.
-
 ## Code Contribution
 
 Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).
 
 ## Related Repositories
 
-[cangjie_ark_interop](https://gitcode.com/openharmony-sig/interface_sdk_cangjie)
+[cangjie_ark_interop](https://gitcode.com/openharmony/interface_sdk_cangjie)
