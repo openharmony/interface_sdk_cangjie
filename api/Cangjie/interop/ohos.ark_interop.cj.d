@@ -17,6 +17,7 @@ package ohos.ark_interop
 internal import ohos.labels.*
 
 internal import std.math.numeric.*
+import ohos.business_exception.*
 import std.collection.*
 import std.convert.*
 import std.sync.*
@@ -31,7 +32,6 @@ public type JSBufferFinalizer = (CPointer<Byte>) -> Unit
 */
 @!APILevel[
     21,
-    syscap: "SystemCapability.ArkCompiler.Cangjie",
     stagemodelonly: true
 ]
 public class JSArrayBuffer <: JSHeapObject {
@@ -40,7 +40,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public prop byteLength: Int32
@@ -50,7 +49,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func readBytes(): Array<Byte>
@@ -60,7 +58,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toUInt8Array(): Array<UInt8>
@@ -70,7 +67,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toInt8Array(): Array<Int8>
@@ -82,7 +78,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toUInt16Array(): Array<UInt16>
@@ -94,7 +89,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toInt16Array(): Array<Int16>
@@ -106,7 +100,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toInt32Array(): Array<Int32>
@@ -118,7 +111,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toUInt32Array(): Array<UInt32>
@@ -130,7 +122,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toFloat32Array(): Array<Float32>
@@ -142,7 +133,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toUInt64Array(): Array<UInt64>
@@ -154,7 +144,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toInt64Array(): Array<Int64>
@@ -166,7 +155,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toFloat64Array(): Array<Float64>
@@ -176,7 +164,6 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        syscap: "SystemCapability.ArkCompiler.Cangjie",
         stagemodelonly: true
     ]
     public func toArrayBufferJSValue(): JSValue
@@ -186,8 +173,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUInt8ArrayJSValue(): JSValue
     
@@ -196,8 +182,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUInt8ClampedArrayJSValue(): JSValue
     
@@ -206,8 +191,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toInt8ArrayJSValue(): JSValue
     
@@ -216,8 +200,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUInt16ArrayJSValue(): JSValue
     
@@ -226,8 +209,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toInt16ArrayJSValue(): JSValue
     
@@ -236,8 +218,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUInt32ArrayJSValue(): JSValue
     
@@ -246,8 +227,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toInt32ArrayJSValue(): JSValue
     
@@ -256,8 +236,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUInt64ArrayJSValue(): JSValue
     
@@ -266,8 +245,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toInt64ArrayJSValue(): JSValue
     
@@ -276,8 +254,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toFloat32ArrayJSValue(): JSValue
     
@@ -286,8 +263,7 @@ public class JSArrayBuffer <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toFloat64ArrayJSValue(): JSValue
 }
@@ -299,8 +275,7 @@ public class JSArrayBuffer <: JSHeapObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSBigInt <: JSHeapObject {
     /**
@@ -308,8 +283,7 @@ public class JSBigInt <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toBigInt(): BigInt
 }
@@ -323,8 +297,7 @@ public type OverrideMethod = (JSContext, JSCallInfo, JSFunction) -> JSValue
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSClass <: JSHeapObject {
     /**
@@ -334,8 +307,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop prototype: JSObject
     
@@ -344,8 +316,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func new(): JSValue
     
@@ -354,8 +325,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func new(arg: JSValue): JSValue
     
@@ -364,8 +334,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func new(args: Array<JSValue>): JSValue
     
@@ -374,8 +343,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func addProperty(key: JSKeyable, value: JSValue): Unit
     
@@ -384,8 +352,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func addAccessor(key: JSKeyable, getter!: ?JSFunction = None, setter!: ?JSFunction = None): Unit
     
@@ -394,8 +361,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func addAccessor(key: JSKeyable, getter!: ?JSLambda = None, setter!: ?JSLambda = None): Unit
     
@@ -404,8 +370,7 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func addMethod(key: JSKeyable, method: JSFunction): Unit
     
@@ -414,188 +379,9 @@ public class JSClass <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func addMethod(key: JSKeyable, method: JSLambda): Unit
-}
-
-
-/**
-* Interop exception base class.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public abstract class JSInteropException <: Exception {
-}
-
-
-/**
-* Thread mismatch Exception when executing ArkTS interface.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public class JSThreadMisMatch <: JSInteropException {
-    /**
-    * Init JSThreadMisMatch exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(bindTid: UInt64, curTid: UInt64, message!: String = "js thread mismatch")
-}
-
-
-/**
-* ArkTS operation type and actual type mismatch exception.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public class JSTypeMisMatch <: JSInteropException {
-    /**
-    * Init JSTypeMisMatch exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(acquireType: String, givenType: JSType, message!: String = "js type mismatch")
-    
-    /**
-    * Init JSTypeMisMatch exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(acquireType: JSType, givenType: JSType, message!: String = "js type mismatch")
-}
-
-
-/**
-* ArkTS array acesss out of bounds exception.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public class JSArrayRangeMisMatch <: JSInteropException {
-    /**
-    * Init JSArrayRangeMisMatch exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(min: Int64, max: Int64, given: Int64, message!: String = "js array range mismatch")
-}
-
-
-/**
-* ArkTS object use after free Exception.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public class JSObjUseAfterFree <: JSInteropException {
-    /**
-    * Init JSObjUseAfterFree exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(message!: String = "use after free")
-}
-
-
-/**
-* Excetion in ArkTS code.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public class JSCodeError <: JSInteropException {
-    /**
-    * Exception error code.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public let code: ?Int32
-    
-    /**
-    * Exception message.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public let jsError: String
-    
-    /**
-    * Exception stack.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public let jsStack: Array<String>
-    
-    /**
-    * Init JSCodeError exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(jsMessage: String, jsStack: Array<String>)
-}
-
-
-/**
-* Interop C interface exception.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
-]
-public class JSInteropNativeError <: JSInteropException {
-    /**
-    * Init JSInteropNativeError exception.
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
-    ]
-    public init(message: String)
 }
 
 
@@ -605,8 +391,7 @@ public class JSInteropNativeError <: JSInteropException {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public open class SharedObject {
     /**
@@ -614,8 +399,7 @@ public open class SharedObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init()
     
@@ -624,8 +408,7 @@ public open class SharedObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop nativeId: Int64
 }
@@ -636,8 +419,7 @@ public open class SharedObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSExternal <: JSHeapObject {
     /**
@@ -645,8 +427,7 @@ public class JSExternal <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getData(): SharedObject
     
@@ -655,8 +436,7 @@ public class JSExternal <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func cast<T>(): Option<T> where T <: SharedObject
 }
@@ -669,8 +449,7 @@ public class JSExternal <: JSHeapObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public struct JSCallInfo {
     /**
@@ -678,8 +457,7 @@ public struct JSCallInfo {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop count: Int64
     
@@ -688,20 +466,18 @@ public struct JSCallInfo {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop thisArg: JSValue
     
     /**
     * Get argument at index.
     * 
-    * @throws { JSArrayRangeMisMatch } - Index is less than 0.
+    * @throws { BusinessException } 34300001 - Index is less than 0.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64): JSValue
 }
@@ -714,8 +490,7 @@ public type JSLambda = (JSContext, JSCallInfo) -> JSValue
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSFunction <: JSHeapObject {
     /**
@@ -723,8 +498,7 @@ public class JSFunction <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func call(thisArg!: JSValue = context.undefined().toJSValue()): JSValue
     
@@ -733,8 +507,7 @@ public class JSFunction <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func call(arg: JSValue, thisArg!: JSValue = context.undefined().toJSValue()): JSValue
     
@@ -743,8 +516,7 @@ public class JSFunction <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func call(args: Array<JSValue>, thisArg!: JSValue = context.undefined().toJSValue()): JSValue
 }
@@ -758,8 +530,7 @@ public class JSFunction <: JSHeapObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 abstract sealed class JSHeapObject {
     /**
@@ -767,8 +538,7 @@ abstract sealed class JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(): JSValue
 }
@@ -779,8 +549,7 @@ abstract sealed class JSHeapObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & ToString {
     /**
@@ -788,8 +557,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init(str: String)
     
@@ -798,8 +566,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func ==(str: JSStringEx): Bool
     
@@ -808,8 +575,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func !=(str: JSStringEx): Bool
     
@@ -818,8 +584,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toString(): String
     
@@ -828,20 +593,18 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
     /**
     * Init JSStringEx from JSValue.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSString.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSString.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(context: JSContext, input: JSValue): JSStringEx
     
@@ -850,8 +613,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -862,8 +624,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropType<T> {
     /**
@@ -871,8 +632,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init(arr: Array<T>)
     
@@ -881,8 +641,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func clone(): JSArrayEx<T>
     
@@ -891,8 +650,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func concat(other: JSArrayEx<T>): JSArrayEx<T>
     
@@ -901,8 +659,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop size: Int64
     
@@ -911,8 +668,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func get(index: Int64): Option<T>
     
@@ -923,8 +679,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func set(index: Int64, element: T): Unit
     
@@ -933,8 +688,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isEmpty(): Bool
     
@@ -945,8 +699,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64): T
     
@@ -957,8 +710,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64, value!: T)
     
@@ -967,8 +719,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toArray(): Array<T>
     
@@ -977,20 +728,18 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
     /**
     * Init JSArrayEx<T> from JSValue.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSArray.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSArray.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(context: JSContext, input: JSValue): JSArrayEx<T>
     
@@ -999,8 +748,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1011,8 +759,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JSKeyable & Hashable & Equatable<K> &
     JSInteropType<K>, V <: JSInteropType<V> {
@@ -1021,8 +768,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init(map: HashMap<K, V>)
     
@@ -1031,8 +777,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init()
     
@@ -1041,8 +786,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func get(key: K): Option<V>
     
@@ -1051,8 +795,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func clear(): Unit
     
@@ -1061,8 +804,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func clone(): JSHashMapEx<K, V>
     
@@ -1071,8 +813,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func containsAll(keys: Collection<K>): Bool
     
@@ -1081,8 +822,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isEmpty(): Bool
     
@@ -1091,8 +831,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func set(key: K, value: V): Unit
     
@@ -1101,8 +840,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func setAll(elements: Collection<(K, V)>): Unit
     
@@ -1111,8 +849,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func setIfAbsent(key: K, value: V): Bool
     
@@ -1121,8 +858,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func delete(key: K): Bool
     
@@ -1131,8 +867,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func deleteAll(keys: Collection<K>): Unit
     
@@ -1143,8 +878,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func deleteIf(predicate: (K, V) -> Bool): Unit
     
@@ -1153,8 +887,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func keys(): EquatableCollection<K>
     
@@ -1163,8 +896,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func values(): Collection<V>
     
@@ -1173,8 +905,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop size: Int64
     
@@ -1183,8 +914,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func has(key: K): Bool
     
@@ -1193,8 +923,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toHashMap(): HashMap<K, V>
     
@@ -1205,8 +934,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](key: K): V
     
@@ -1215,8 +943,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](key: K, value!: V): Unit
     
@@ -1225,8 +952,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(c: JSContext): JSValue
     
@@ -1235,8 +961,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(context: JSContext, input: JSValue): JSHashMapEx<K, V>
     
@@ -1245,8 +970,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1254,8 +978,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
 
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 sealed interface JSInteropByte {
 }
@@ -1266,8 +989,7 @@ sealed interface JSInteropByte {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Byte <: JSInteropByte {
 }
@@ -1278,8 +1000,7 @@ extend Byte <: JSInteropByte {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public interface JSInteropType<T> {
     /**
@@ -1287,8 +1008,7 @@ public interface JSInteropType<T> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     static func fromJSValue(context: JSContext, input: JSValue): T
     
@@ -1297,8 +1017,7 @@ public interface JSInteropType<T> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     func toJSValue(context: JSContext): JSValue
     
@@ -1307,8 +1026,7 @@ public interface JSInteropType<T> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     static func toArkTsType(): String
 }
@@ -1319,19 +1037,17 @@ public interface JSInteropType<T> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Int8 <: JSInteropType<Int8> {
     /**
     * Convert JSValue to Int8.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int8
     
@@ -1340,8 +1056,7 @@ extend Int8 <: JSInteropType<Int8> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1350,8 +1065,7 @@ extend Int8 <: JSInteropType<Int8> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1362,19 +1076,17 @@ extend Int8 <: JSInteropType<Int8> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Int16 <: JSInteropType<Int16> {
     /**
     * Convert JSValue to Int16.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int16
     
@@ -1383,8 +1095,7 @@ extend Int16 <: JSInteropType<Int16> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1393,8 +1104,7 @@ extend Int16 <: JSInteropType<Int16> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1405,19 +1115,17 @@ extend Int16 <: JSInteropType<Int16> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Int32 <: JSInteropType<Int32> {
     /**
     * Convert JSValue to Int32.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int32
     
@@ -1426,8 +1134,7 @@ extend Int32 <: JSInteropType<Int32> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1436,8 +1143,7 @@ extend Int32 <: JSInteropType<Int32> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1448,19 +1154,17 @@ extend Int32 <: JSInteropType<Int32> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Int64 <: JSInteropType<Int64> {
     /**
     * Convert JSValue to Int64.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int64
     
@@ -1469,8 +1173,7 @@ extend Int64 <: JSInteropType<Int64> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1479,8 +1182,7 @@ extend Int64 <: JSInteropType<Int64> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1491,19 +1193,17 @@ extend Int64 <: JSInteropType<Int64> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend UInt8 <: JSInteropType<UInt8> {
     /**
     * Convert JSValue to UInt8.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt8
     
@@ -1512,8 +1212,7 @@ extend UInt8 <: JSInteropType<UInt8> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1522,8 +1221,7 @@ extend UInt8 <: JSInteropType<UInt8> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1534,19 +1232,17 @@ extend UInt8 <: JSInteropType<UInt8> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend UInt16 <: JSInteropType<UInt16> {
     /**
     * Convert JSValue to UInt16.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt16
     
@@ -1555,8 +1251,7 @@ extend UInt16 <: JSInteropType<UInt16> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1565,8 +1260,7 @@ extend UInt16 <: JSInteropType<UInt16> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1577,19 +1271,17 @@ extend UInt16 <: JSInteropType<UInt16> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend UInt32 <: JSInteropType<UInt32> {
     /**
     * Convert JSValue to UInt32.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): UInt32
@@ -1599,8 +1291,7 @@ extend UInt32 <: JSInteropType<UInt32> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue
@@ -1610,8 +1301,7 @@ extend UInt32 <: JSInteropType<UInt32> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1622,19 +1312,17 @@ extend UInt32 <: JSInteropType<UInt32> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend UInt64 <: JSInteropType<UInt64> {
     /**
     * Convert JSValue to UInt64.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt64
     
@@ -1643,8 +1331,7 @@ extend UInt64 <: JSInteropType<UInt64> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1653,8 +1340,7 @@ extend UInt64 <: JSInteropType<UInt64> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1665,19 +1351,17 @@ extend UInt64 <: JSInteropType<UInt64> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Float16 <: JSInteropType<Float16> {
     /**
     * Convert JSValue to Float16.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float16
     
@@ -1686,8 +1370,7 @@ extend Float16 <: JSInteropType<Float16> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1696,8 +1379,7 @@ extend Float16 <: JSInteropType<Float16> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1708,19 +1390,17 @@ extend Float16 <: JSInteropType<Float16> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Float32 <: JSInteropType<Float32> {
     /**
     * Convert JSValue to Float32.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float32
     
@@ -1729,8 +1409,7 @@ extend Float32 <: JSInteropType<Float32> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1739,8 +1418,7 @@ extend Float32 <: JSInteropType<Float32> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1751,19 +1429,17 @@ extend Float32 <: JSInteropType<Float32> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Float64 <: JSInteropType<Float64> & JSKeyable {
     /**
     * Convert JSValue to Float64.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float64
     
@@ -1772,8 +1448,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1782,8 +1457,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1794,19 +1468,17 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Bool <: JSInteropType<Bool> {
     /**
     * Convert JSValue to Bool.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Bool.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Bool.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Bool
     
@@ -1815,8 +1487,7 @@ extend Bool <: JSInteropType<Bool> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1825,8 +1496,7 @@ extend Bool <: JSInteropType<Bool> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1837,19 +1507,17 @@ extend Bool <: JSInteropType<Bool> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend String <: JSInteropType<String> {
     /**
     * Convert JSValue to String.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to String.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to String.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): String
     
@@ -1858,8 +1526,7 @@ extend String <: JSInteropType<String> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1870,19 +1537,17 @@ extend String <: JSInteropType<String> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend JSString <: JSInteropType<JSString> {
     /**
     * Convert JSValue to JSString.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSString.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSString.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): JSString
     
@@ -1891,8 +1556,7 @@ extend JSString <: JSInteropType<JSString> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1903,8 +1567,7 @@ extend JSString <: JSInteropType<JSString> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend Unit <: JSInteropType<Unit> {
     /**
@@ -1912,8 +1575,7 @@ extend Unit <: JSInteropType<Unit> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, _: JSValue): Unit
     
@@ -1922,8 +1584,7 @@ extend Unit <: JSInteropType<Unit> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1932,8 +1593,7 @@ extend Unit <: JSInteropType<Unit> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1944,8 +1604,7 @@ extend Unit <: JSInteropType<Unit> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     /**
@@ -1953,8 +1612,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(context: JSContext, input: JSValue): Option<T>
     
@@ -1963,8 +1621,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -1973,8 +1630,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -1985,8 +1641,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     /**
@@ -1996,8 +1651,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Array<T>
     
@@ -2008,8 +1662,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -2018,8 +1671,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
@@ -2036,8 +1688,7 @@ public type FuncRegister = (JSContext) -> JSFunction
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSModule {
     /**
@@ -2045,8 +1696,7 @@ public class JSModule {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func registerModule(register: ModuleRegister): Unit
     
@@ -2055,8 +1705,7 @@ public class JSModule {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func registerClass(name: String, register: ClassRegister): Unit
     
@@ -2065,8 +1714,7 @@ public class JSModule {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func registerFunc(name: String, register: FuncRegister): Unit
     
@@ -2075,8 +1723,7 @@ public class JSModule {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func registerFunc(name: String, lambda: JSLambda): Unit
 }
@@ -2090,8 +1737,7 @@ type JSPromiseCap = CPointer<JSPromisePrivate>
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSPromise <: JSHeapObject {
     /**
@@ -2099,8 +1745,7 @@ public class JSPromise <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func then(onFulfilled: JSFunction, onRejected!: ?JSFunction = None): Unit
     
@@ -2109,8 +1754,7 @@ public class JSPromise <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func catchError(callback: JSFunction): Unit
 }
@@ -2122,43 +1766,39 @@ public class JSPromise <: JSHeapObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSPromiseCapability {
     /**
     * Notify promise of noraml completion and commits the return value.
     *
-    * @throws { JSObjUseAfterFree } - JSPromiseCapability has been fulfilled or rejected.
+    * @throws { BusinessException } 34300003 - JSPromiseCapability has been fulfilled or rejected.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func resolve(value: JSValue): Unit
     
     /**
     * Submit an exception to promise.
     *
-    * @throws { JSObjUseAfterFree } - JSPromiseCapability has been fulfilled or rejected.
+    * @throws { BusinessException } 34300003 - JSPromiseCapability has been fulfilled or rejected.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func reject(value: JSValue): Unit
     
     /**
     * Convert JSPromiseCapability to JSValue.
     * 
-    * @throws { JSObjUseAfterFree } - JSPromiseCapability has been fulfilled or rejected.
+    * @throws { BusinessException } 34300003 - JSPromiseCapability has been fulfilled or rejected.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(): JSValue
 }
@@ -2169,8 +1809,7 @@ public class JSPromiseCapability {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public struct JSNull {
     /**
@@ -2178,8 +1817,7 @@ public struct JSNull {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(): JSValue
 }
@@ -2190,8 +1828,7 @@ public struct JSNull {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public struct JSUndefined {
     /**
@@ -2199,8 +1836,7 @@ public struct JSUndefined {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(): JSValue
 }
@@ -2211,8 +1847,7 @@ public struct JSUndefined {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public struct JSBoolean {
     /**
@@ -2220,8 +1855,7 @@ public struct JSBoolean {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(): JSValue
     
@@ -2230,8 +1864,7 @@ public struct JSBoolean {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toBool(): Bool
 }
@@ -2242,8 +1875,7 @@ public struct JSBoolean {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public struct JSNumber {
     /**
@@ -2251,20 +1883,18 @@ public struct JSNumber {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(): JSValue
     
     /**
     * Convert JSNumber to Cangjie Float64.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toFloat64(): Float64
 }
@@ -2275,8 +1905,7 @@ public struct JSNumber {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public struct JSValue {
     /**
@@ -2284,8 +1913,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func typeof(): JSType
     
@@ -2294,8 +1922,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func strictEqual(target: JSValue): Bool
     
@@ -2304,8 +1931,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isNull(): Bool
     
@@ -2314,8 +1940,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isUndefined(): Bool
     
@@ -2324,8 +1949,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isBoolean(): Bool
     
@@ -2334,8 +1958,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isNumber(): Bool
     
@@ -2344,8 +1967,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isString(): Bool
     
@@ -2354,8 +1976,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isFunction(): Bool
     
@@ -2364,8 +1985,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isObject(): Bool
     
@@ -2374,8 +1994,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isArray(): Bool
     
@@ -2384,8 +2003,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isPromise(): Bool
     
@@ -2394,8 +2012,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isClass(): Bool
     
@@ -2404,8 +2021,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isExternal(): Bool
     
@@ -2414,8 +2030,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isSymbol(): Bool
     
@@ -2424,92 +2039,84 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isArrayBuffer(): Bool
     
     /**
     * Convert JSValue to JSNull. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSNull.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSNull.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asNull(): JSNull
     
     /**
     * Convert JSValue to JSUndefined. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSUndefined.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSUndefined.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asUndefined(): JSUndefined
     
     /**
     * Convert JSValue to JSBoolean. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSBoolean.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSBoolean.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asBoolean(): JSBoolean
     
     /**
     * Convert JSValue to JSNumber. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSNumber.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSNumber.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asNumber(): JSNumber
     
     /**
     * Convert JSValue to Bool. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Bool.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Bool.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toBoolean(): Bool
     
     /**
     * Convert JSValue to Float64. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to Float64.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to Float64.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toNumber(): Float64
     
     /**
     * Convert JSValue to String. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to String.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to String.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toString(): String
     
@@ -2518,116 +2125,106 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUtf16String(): Utf16String
     
     /**
     * Convert JSValue to JSString. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSString.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSString.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asString(): JSString
     
     /**
     * Convert JSValue to JSObject. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSObject.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSObject.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asObject(): JSObject
     
     /**
     * Convert JSValue to JSFunction. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSFunction.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSFunction.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asFunction(): JSFunction
     
     /**
     * Conert JSValue to JSArray. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSArray.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSArray.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asArray(): JSArray
     
     /**
     * Convert JSValue to JSClass. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSClass.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSClass.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asClass(): JSClass
     
     /**
     * Convert JSValue to JSExternal. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSExternal.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSExternal.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asExternal(): JSExternal
     
     /**
     * Convert JSValue to JSPromise. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSPromise.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSPromise.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asPromise(): JSPromise
     
     /**
     * Convert JSValue to JSSymbol. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSSymbol.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSSymbol.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asSymbol(): JSSymbol
     
     /**
     * Convert JSValue to JSArrayBuffer. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSArrayBuffer.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSArrayBuffer.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asArrayBuffer(): JSArrayBuffer
     
@@ -2636,82 +2233,75 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isBigInt(): Bool
     
     /**
     * Convert JSValue to JSBigInt. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to JSBigInt.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to JSBigInt.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func asBigInt(): JSBigInt
     
     /**
     * Convert JSValue to BigInt. If the failure occurs, Exception will be throwed.
     *
-    * @throws { JSTypeMisMatch } - JSValue cannot be converted to BigInt.
+    * @throws { BusinessException } 34300005 - JSValue cannot be converted to BigInt.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toBigInt(): BigInt
     
     /**
     * Get the element at index.
     *
-    * @throws { JSArrayRangeMisMatch } - The index is out of range.
-    * @throws { JSTypeMisMatch } - JSValue is not an array.
+    * @throws { BusinessException } 34300001 - The index is out of range.
+    * @throws { BusinessException } 34300005 - JSValue is not an array.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getElement(index: Int64): JSValue
     
     /**
     * Set the element at index.
     *
-    * @throws { JSArrayRangeMisMatch } - The index is less than 0.
-    * @throws { JSTypeMisMatch } - JSValue is not an array.
+    * @throws { BusinessException } 34300001 - The index is less than 0.
+    * @throws { BusinessException } 34300005 - JSValue is not an array.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func setElement(index: Int64, value: JSValue): Unit
     
     /**
     * Get the property corresponding to the key.
     *
-    * @throws { JSTypeMisMatch } - JSValue is not JSObject.
+    * @throws { BusinessException } 34300005 - JSValue is not JSObject.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getProperty(key: JSKeyable): JSValue
     
     /**
     * Set the property corresponding to the key.
     *
-    * @throws { JSTypeMisMatch } - JSValue is not JSObject.
+    * @throws { BusinessException } 34300005 - JSValue is not JSObject.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func setProperty(key: JSKeyable, setValue: JSValue): Unit
     
@@ -2720,20 +2310,18 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func setProperty(_: JSContext, key: JSKeyable, setValue: JSValue): Unit
     
     /**
     * Bind JSValue to an ArkTs external object.
     *
-    * @throws { JSTypeMisMatch } - JSValue is not JSObject or external is not JSExternal.
+    * @throws { BusinessException } 34300005 - JSValue is not JSObject or external is not JSExternal.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func bindObject(external: JSValue): Unit
     
@@ -2742,8 +2330,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func bindObject(data: SharedObject): Unit
     
@@ -2752,8 +2339,7 @@ public struct JSValue {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getBindingObject(): ?SharedObject
 }
@@ -2765,8 +2351,7 @@ public struct JSValue {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSRuntime {
     /**
@@ -2776,8 +2361,7 @@ public class JSRuntime {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init()
     
@@ -2786,8 +2370,7 @@ public class JSRuntime {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop mainContext: JSContext
     
@@ -2796,8 +2379,7 @@ public class JSRuntime {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getNapiEnv(): CPointer<Unit>
 }
@@ -2808,8 +2390,7 @@ public class JSRuntime {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSSymbol <: JSHeapObject & JSKeyable {
     /**
@@ -2817,8 +2398,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(_: JSContext): JSValue
     
@@ -2827,8 +2407,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop description: String
     
@@ -2837,8 +2416,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toString(): String
 }
@@ -2849,8 +2427,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 @C
 public struct JSType {
@@ -2859,8 +2436,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let UNDEFINED: JSType = JSType(0)
     
@@ -2869,8 +2445,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let NULL: JSType = JSType(1)
     
@@ -2879,8 +2454,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let NUMBER: JSType = JSType(2)
     
@@ -2889,8 +2463,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let BOOLEAN: JSType = JSType(3)
     
@@ -2899,8 +2472,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let BIGINT: JSType = JSType(4)
     
@@ -2909,8 +2481,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let STRING: JSType = JSType(5)
     
@@ -2919,8 +2490,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let SYMBOL: JSType = JSType(6)
     
@@ -2929,8 +2499,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let OBJECT: JSType = JSType(7)
     
@@ -2939,8 +2508,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let FUNCTION: JSType = JSType(8)
     
@@ -2949,8 +2517,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let EXTERNAL: JSType = JSType(9)
     
@@ -2959,8 +2526,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func ==(target: JSType): Bool
     
@@ -2969,8 +2535,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func !=(target: JSType): Bool
     
@@ -2979,8 +2544,7 @@ public struct JSType {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toString(): String
 }
@@ -2992,8 +2556,7 @@ public struct JSType {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSArray <: JSHeapObject {
     /**
@@ -3001,44 +2564,40 @@ public class JSArray <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop size: Int64
     
     /**
     * Get the element at index.
     *
-    * @throws { JSArrayRangeMisMatch } - The index is out of range.
+    * @throws { BusinessException } 34300001 - The index is out of range.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64): JSValue
     
     /**
     * Set the element at index.
     *
-    * @throws { JSArrayRangeMisMatch } - The index is less than 0.
+    * @throws { BusinessException } 34300001 - The index is less than 0.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64, value!: JSValue): Unit
     
     /**
     * Set the element at index.
     *
-    * @throws { JSArrayRangeMisMatch } - The index is less than 0.
+    * @throws { BusinessException } 34300001 - The index is less than 0.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64, value!: JSHeapObject): Unit
 }
@@ -3059,8 +2618,7 @@ public type napi_value = CPointer<Unit>
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSContext {
     /**
@@ -3068,8 +2626,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isInBindThread(): Bool
     
@@ -3078,8 +2635,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop global: JSObject
     
@@ -3088,8 +2644,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop env: JSEnv
     
@@ -3098,8 +2653,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getNapiEnv(): napi_env
     
@@ -3108,8 +2662,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func undefined(): JSUndefined
     
@@ -3118,8 +2671,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func null(): JSNull
     
@@ -3128,8 +2680,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func boolean(value: Bool): JSBoolean
     
@@ -3138,8 +2689,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func number(value: Float64): JSNumber
     
@@ -3148,8 +2698,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func number(value: Int32): JSNumber
     
@@ -3158,8 +2707,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func string(value: String): JSString
     
@@ -3168,8 +2716,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func string(value: Utf16String): JSString
     
@@ -3178,8 +2725,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func object(): JSObject
     
@@ -3188,8 +2734,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func function(lambda: JSLambda): JSFunction
     
@@ -3198,8 +2743,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func array(arr: Array<JSValue>): JSArray
     
@@ -3208,8 +2752,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func clazz(ctor: JSLambda, superClass!: ?JSClass = None): JSClass
     
@@ -3218,8 +2761,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func external(data: SharedObject): JSExternal
     
@@ -3228,20 +2770,18 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func promiseCapability(): JSPromiseCapability
     
     /**
     * Create an ArkTS ArrayBuffer.
     *
-    * @throws {JSArrayRangeMisMatch} - Length is thess than 0.
+    * @throws {BusinessException} 34300001 - Length is thess than 0.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(length: Int32): JSArrayBuffer
     
@@ -3250,8 +2790,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Byte>): JSArrayBuffer
     
@@ -3260,8 +2799,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Int8>): JSArrayBuffer
     
@@ -3270,8 +2808,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Int16>): JSArrayBuffer
     
@@ -3280,8 +2817,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<UInt16>): JSArrayBuffer
     
@@ -3290,8 +2826,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<UInt32>): JSArrayBuffer
     
@@ -3300,8 +2835,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Int32>): JSArrayBuffer
     
@@ -3310,8 +2844,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Float32>): JSArrayBuffer
     
@@ -3320,8 +2853,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Int64>): JSArrayBuffer
     
@@ -3330,8 +2862,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<UInt64>): JSArrayBuffer
     
@@ -3340,20 +2871,18 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func arrayBuffer(data: Array<Float64>): JSArrayBuffer
     
     /**
     * Create an ArkTS ArrayBuffer.
     *
-    * @throws {JSArrayRangeMisMatch} - Length is thess than 0.
+    * @throws {BusinessException} 34300001 - Length is thess than 0.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public unsafe func arrayBuffer(rawData: CPointer<Byte>, length: Int32, finalizer: JSBufferFinalizer): JSArrayBuffer
     
@@ -3362,8 +2891,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func symbol(description!: String = ""): JSSymbol
     
@@ -3372,8 +2900,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func bigint(value: Int64): JSBigInt
     
@@ -3382,8 +2909,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func bigint(value: BigInt): JSBigInt
     
@@ -3392,8 +2918,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func postJSTask(callback: () -> Unit): Unit
     
@@ -3402,8 +2927,7 @@ public class JSContext {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func requireSystemNativeModule(moduleName: String, prefix!: ?String = None): JSValue
 }
@@ -3414,8 +2938,7 @@ public class JSContext {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 abstract sealed class JSObjectBase <: JSHeapObject {
     /**
@@ -3423,8 +2946,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func instanceOf(clazz: JSClass): Bool
     
@@ -3433,8 +2955,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func hasProperty(key: JSKeyable): Bool
     
@@ -3443,8 +2964,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getProperty(key: JSKeyable): JSValue
     
@@ -3453,20 +2973,18 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](key: JSKeyable): JSValue
     
     /**
     * Call method corressponding to the key of the JSObject.
     *
-    * @throws {JSTypeMisMatch} - Object is not JSFunction.
+    * @throws {BusinessException} 34300005 - Object is not JSFunction.
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func callMethod(key: JSKeyable, args: Array<JSValue>): JSValue
     
@@ -3475,8 +2993,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func setProperty(key: JSKeyable, setValue: JSValue): Unit
     
@@ -3485,8 +3002,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](key: JSKeyable, value!: JSValue): Unit
     
@@ -3495,8 +3011,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func defineOwnProperty(key: JSKeyable, setValue: JSValue, isWritable!: Bool = true,
         isEnumerable!: Bool = true, isConfigurable!: Bool = true): Bool
@@ -3506,8 +3021,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func defineOwnAccessor(key: JSKeyable, getter!: ?JSFunction = None, setter!: ?JSFunction = None,
         isEnumerable!: Bool = false, isConfigurable!: Bool = false): Bool
@@ -3517,8 +3031,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func defineOwnAccessor(key: JSKeyable, getter!: ?JSLambda = None, setter!: ?JSLambda = None,
         isEnumerable!: Bool = false, isConfigurable!: Bool = false): Bool
@@ -3528,8 +3041,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func keys(): Array<String>
     
@@ -3538,8 +3050,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func attachCJObject(target: JSExternal): Unit
     
@@ -3548,8 +3059,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func getAttachInfo(): ?JSExternal
 }
@@ -3560,8 +3070,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSObject <: JSObjectBase {
 }
@@ -3572,14 +3081,12 @@ public class JSObject <: JSObjectBase {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public interface ToJSValue {
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     func toJSValue(context: JSContext): JSValue
 }
@@ -3590,8 +3097,7 @@ public interface ToJSValue {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 sealed interface JSKeyable <: ToString & ToJSValue {
 }
@@ -3602,8 +3108,7 @@ sealed interface JSKeyable <: ToString & ToJSValue {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 extend String <: JSKeyable {
     /**
@@ -3611,8 +3116,7 @@ extend String <: JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
 }
@@ -3624,8 +3128,7 @@ extend String <: JSKeyable {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class JSString <: JSHeapObject & ToString & JSKeyable {
     /**
@@ -3633,8 +3136,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(_: JSContext): JSValue
     
@@ -3643,8 +3145,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toString(): String
     
@@ -3653,8 +3154,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toUtf16String(): Utf16String
 }
@@ -3666,8 +3166,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
 */
 @!APILevel[
     21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkCompiler.Cangjie"
+    stagemodelonly: true
 ]
 public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKeyable & JSInteropType<Utf16String> {
     /**
@@ -3675,8 +3174,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static let empty = Utf16String(unsafe { CJUtf16StringCreateEmpty()})
     
@@ -3685,8 +3183,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public init(src: String)
     
@@ -3696,8 +3193,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func dispose(): Unit
     
@@ -3707,8 +3203,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop accessible: Bool
     
@@ -3717,8 +3212,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toString(): String
     
@@ -3727,8 +3221,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func compare(target: Utf16String): Ordering
     
@@ -3737,8 +3230,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func == (target: Utf16String): Bool
     
@@ -3747,8 +3239,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func hashCode(): Int64
     
@@ -3757,8 +3248,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop size: Int64
     
@@ -3767,8 +3257,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public prop totalChars: Int64
     
@@ -3777,8 +3266,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isEmpty(): Bool
     
@@ -3787,8 +3275,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func isCompressed(): Bool
     
@@ -3797,8 +3284,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func != (target: Utf16String): Bool
     
@@ -3807,8 +3293,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func > (target: Utf16String): Bool
     
@@ -3817,8 +3302,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func >= (target: Utf16String): Bool
     
@@ -3827,8 +3311,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func < (target: Utf16String): Bool
     
@@ -3837,8 +3320,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func <= (target: Utf16String): Bool
     
@@ -3849,8 +3331,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](index: Int64): UInt16
     
@@ -3861,8 +3342,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func [](range: Range<Int64>): Utf16String
     
@@ -3871,8 +3351,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func runes(): Iterator<Rune>
     
@@ -3881,8 +3360,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func lines(): Iterator<Utf16String>
     
@@ -3891,8 +3369,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func indexOf(target: Utf16String): ?Int64
     
@@ -3901,8 +3378,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func indexOf(target: Utf16String, fromIndex: Int64): ?Int64
     
@@ -3911,8 +3387,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func lastIndexOf(target: Utf16String): ?Int64
     
@@ -3921,8 +3396,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func lastIndexOf(target: Utf16String, fromIndex: Int64): ?Int64
     
@@ -3931,8 +3405,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func count(src: Utf16String): Int64
     
@@ -3941,8 +3414,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func split(seperator: Utf16String, remoteEmpty!: Bool = false): Array<Utf16String>
     
@@ -3951,8 +3423,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func split(seperator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Array<Utf16String>
     
@@ -3961,8 +3432,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func lazySplit(separator: Utf16String, remoteEmpty!: Bool = false): Iterator<Utf16String>
     
@@ -3971,8 +3441,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func lazySplit(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Iterator<Utf16String>
     
@@ -3981,8 +3450,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     @OverflowWrapping
     public func replace(old: Utf16String, new: Utf16String, count!: Int64 = Int64.Max): Utf16String
@@ -3992,8 +3460,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func contains(target: Utf16String): Bool
     
@@ -4002,8 +3469,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func startsWith(target: Utf16String): Bool
     
@@ -4012,8 +3478,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func endsWith(target: Utf16String): Bool
     
@@ -4022,8 +3487,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public operator func + (right: Utf16String): Utf16String
     
@@ -4032,8 +3496,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue
     
@@ -4042,8 +3505,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, value: JSValue): Utf16String
     
@@ -4052,8 +3514,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     */
     @!APILevel[
         21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkCompiler.Cangjie"
+        stagemodelonly: true
     ]
     public static func toArkTsType(): String
 }
