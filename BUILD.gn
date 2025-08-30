@@ -11,7 +11,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 import("//build/cangjie/cjc_toolchain.gni")
 import("sdk_cangjie.gni")
 
@@ -24,18 +23,15 @@ cj_ohos_sdk_header_copy("sdk_header_ohos_aarch64_api") {
 }
 
 cj_ohos_sdk_header_copy("sdk_header_ohos_aarch64_kit") {
-  source_dir = "kits" 
+  source_dir = "kits"
   extension = "cj.d"
   out_relative_dir = "cangjie_sdk/api/modules/linux_ohos_aarch64_cjnative/kit"
 }
 
-
-
-
 group("sdk_header_ohos_aarch64") {
   deps = [
     ":sdk_header_ohos_aarch64_api",
-    ":sdk_header_ohos_aarch64_kit"
+    ":sdk_header_ohos_aarch64_kit",
   ]
 }
 
@@ -77,7 +73,6 @@ cj_ohos_sdk_macro("sdk_linux_x86_64_macro") {
   module_name = "ohos"
 }
 
-
 if (host_os == "mac") {
   if (host_cpu == "arm64") {
     cj_ohos_sdk_macro("sdk_darwin_aarch64_macro") {
@@ -96,15 +91,15 @@ if (host_os == "mac") {
 
 group("ohos_aarch64_libs") {
   deps = [
-    ":sdk_ohos_aarch64_libs",
     ":sdk_kit_aarch64_libs",
+    ":sdk_ohos_aarch64_libs",
   ]
 }
 
 group("ohos_x86_64_libs") {
   deps = [
-    ":sdk_ohos_x86_64_libs",
     ":sdk_kit_x86_64_libs",
+    ":sdk_ohos_x86_64_libs",
   ]
 }
 
@@ -116,8 +111,8 @@ group("sdk_cangjie_wrapper") {
 
   if (is_mingw) {
     deps += [
+      ":sdk_header_ohos_aarch64",
       ":sdk_windows_x86_64_macro",
-      ":sdk_header_ohos_aarch64"
     ]
   } else if (host_os == "mac") {
     deps += [ ":sdk_header_ohos_aarch64" ]
@@ -127,10 +122,9 @@ group("sdk_cangjie_wrapper") {
       deps += [ ":sdk_darwin_x86_64_macro" ]
     }
   } else if (is_linux) {
-    deps += [":sdk_linux_x86_64_macro"]
+    deps += [ ":sdk_linux_x86_64_macro" ]
   }
 }
-
 
 # api
 # ├── lib
@@ -155,7 +149,7 @@ group("sdk_cangjie_wrapper") {
 
 cj_ohos_sdk_copy("sdk_api") {
   out_relative_dir = "cangjie_sdk/api"
-  deps = [":sdk_cangjie_wrapper"]
+  deps = [ ":sdk_cangjie_wrapper" ]
 }
 
 ohos_copy("sdk_compiler") {
@@ -174,18 +168,15 @@ ohos_copy("sdk_compiler") {
     assert(false && "unsupported platform %{target_cpu}")
   }
 
-  outputs = ["${target_out_dir}/${target_name}"]
+  outputs = [ "${target_out_dir}/${target_name}" ]
   module_source_dir = "${target_out_dir}/${target_name}"
   module_install_name = ""
 }
 
-
 ohos_copy("sdk_compiler_modules") {
   deps = [ ":sdk_compiler" ]
   sources = [ "//interface/sdk_cangjie/api/Cangjie/third_party" ]
-  outputs = ["${target_out_dir}/cangjie_sdk/build-tools/modules/linux_ohos_aarch64_cjnative"]
+  outputs = [ "${target_out_dir}/cangjie_sdk/build-tools/modules/linux_ohos_aarch64_cjnative" ]
   module_source_dir = "${target_out_dir}/cangjie_sdk/build-tools/modules"
   module_install_name = ""
 }
-
-
