@@ -89,11 +89,9 @@ template("cj_ohos_sdk_shared_lib") {
   }
 }
 
-cangjie_api_path = "//arkcompiler/cangjie_ark_interop"
-cangjie_systemapi_api = "${cangjie_api_path}/api"
 cangjie_sdk_macro_libs = [
-  "//foundation/arkui/arkui_cangjie_wrapper/ohos/arkui/state_macro_manage:ohos.arkui.state_macro_manage",
-  "${cangjie_systemapi_api}/ohos/interop:ohos.ark_interop_macro",
+  "arkui_cangjie_wrapper:ohos.arkui.state_macro_manage",
+  "cangjie_ark_interop:ohos.ark_interop_macro",
 ]
 template("cj_ohos_sdk_macro") {
   ohos_copy(target_name) {
@@ -105,9 +103,9 @@ template("cj_ohos_sdk_macro") {
                            ])
 
     sources = []
-    deps = []
+    external_deps = []
     foreach(item, cangjie_sdk_macro_libs) {
-      deps += [
+      external_deps += [
         "${item}(${toolchain})",
         "${item}_cjo(${toolchain})",
       ]
