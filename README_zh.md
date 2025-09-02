@@ -8,7 +8,7 @@
 
 ## 系统架构
 
-**图 1** 元能力仓颉架构图
+**图 1** 仓颉API公共仓架构图
 
 ![](figures/interface_sdk_cangjie_architecture_zh.png)
 
@@ -29,4 +29,4 @@
 
 ## 相关仓
 
-[cangjie_ark_interop](https://gitcode.com/openharmony/interface_sdk_cangjie)
+[interface_sdk_cangjie](https://gitcode.com/openharmony/interface_sdk_cangjie)
