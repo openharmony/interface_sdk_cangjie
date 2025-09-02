@@ -11,6 +11,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import("//build/config/python.gni")
 import("//build/templates/cangjie/cjc_toolchain.gni")
 
 template("cj_ohos_sdk_header_copy") {
@@ -22,8 +23,9 @@ template("cj_ohos_sdk_header_copy") {
                            "exculde_dirs",
                          ])
 
-  action(target_name) {
+  action_with_pydeps(target_name) {
     script = "//interface/sdk_cangjie/build-tools/script/copy_files.py"
+    depfile = "${target_gen_dir}/${target_name}.d"
     inputs = [ source_dir ]
     args = [
       "--input",
@@ -66,12 +68,13 @@ template("cj_ohos_sdk_shared_lib") {
       "//prebuilts/cangjie_sdk/build-tools/flatc/${build_tools_arch}/flatc"
   _fbs_path = "//interface/sdk_cangjie/build-tools/cjo/ModuleFormat.fbs"
 
-  deps = [ "build-tools/lib/mock:ohos.mock(${toolchain})" ]
-  _mock_t_out = get_label_info(deps[0], "target_out_dir")
-  _mock_so_target = "${_mock_t_out}/libohos.mock.so"
+  action_with_pydeps(target_name) {
+    deps = [ "build-tools/lib/mock:ohos.mock(${toolchain})" ]
+    _mock_t_out = get_label_info(deps[0], "target_out_dir")
+    _mock_so_target = "${_mock_t_out}/libohos.mock.so"
 
-  action(target_name) {
     script = "//interface/sdk_cangjie/build-tools/script/process_libs.py"
+    depfile = "${target_gen_dir}/${target_name}.d"
     inputs = [ _input_dir ]
     args = [
       "--input-dir",
