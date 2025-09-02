@@ -30,4 +30,4 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 
 ## Related Repositories
 
-[cangjie_ark_interop](https://gitcode.com/openharmony/interface_sdk_cangjie)
+[interface_sdk_cangjie](https://gitcode.com/openharmony/interface_sdk_cangjie)

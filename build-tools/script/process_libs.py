@@ -20,12 +20,6 @@ import shutil
 import subprocess
 from collect_dir_sources import get_sources
 
-# /Users/p_cangjieci/Documents/ohos/prebuilts/cangjie-compiler/mac-aarch64/tools
-#  ./flatc -t --raw-binary -o ./api ../ModuleFormat.fbs --  ~/Documents/ohos/out/sdk/cangjie_libraries/ohos/ohos.cjo
-#  ./flatc -t --raw-binary -o ./api ../ModuleFormat.fbs --  ~/Documents/ohos/out/sdk/cangjie_libraries/ohos/ohos.request.agent.cjo
-#  ./flatc -t --raw-binary -o ./api ../ModuleFormat.fbs --  ~/Documents/ohos/out/sdk/cangjie_libraries/ohos/ohos.request.agent.cjo
-#  ./flatc -t --raw-binary -o ./kit ../ModuleFormat.fbs --  ~/Documents/ohos/out/sdk/cangjie_libraries/kit/kit.AVSessionKit.cjo
-# ./flatc -t --raw-binary -o ./ohos  ModuleFormat.fbs -- /home/zhoujing/code/op/out/rk3568/cangjie_libraries/ohos.cjo
 def convert_cjo_to_json(flatc, input, output_path, fbs):
     child = subprocess.Popen([flatc, "-t", "--raw-binary", "-o", output_path, fbs, "--", input], stdout=subprocess.PIPE)
     code = child.wait()
@@ -61,6 +55,5 @@ def main(argv):
         stem = os.path.splitext(os.path.basename(json))[0]
         shutil.copy(options.mock, f'{options.output_dir}/lib{stem}.so')
 
-# 从指定的输入路径复制文件到输出路径，并在复制过程中 排除特定的文件夹。
 if __name__ == "__main__":
     exit(main(sys.argv))
