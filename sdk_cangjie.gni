@@ -11,8 +11,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import("//build/templates/cangjie/cjc_toolchain.gni")
 import("//build/config/python.gni")
+import("//build/templates/cangjie/cjc_toolchain.gni")
 
 template("cj_ohos_sdk_header_copy") {
   forward_variables_from(invoker,
