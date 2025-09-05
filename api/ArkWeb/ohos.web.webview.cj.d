@@ -285,7 +285,7 @@ public enum SecurityLevel {
         stagemodelonly: true,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
-    Dangerous |
+    Danger |
     ...
 }
 
