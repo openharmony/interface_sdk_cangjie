@@ -42,7 +42,7 @@ public enum TimeType {
         stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
-    StartUp |
+    Startup |
     /**
     * Indicates the time elapsed since the system was booted, including deep sleep time.
     *

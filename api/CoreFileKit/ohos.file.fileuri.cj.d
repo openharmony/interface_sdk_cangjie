@@ -18,7 +18,43 @@ import ohos.ffi.*
 import ohos.hilog.*
 import ohos.business_exception.*
 import ohos.labels.*
-import ohos.uri.Uri
+
+
+/**
+* URI Represents a Uniform Resource Identifier (URI) reference.
+*
+* @relation class URI
+*/
+@!APILevel[
+    21,
+    stagemodelonly: true,
+    syscap: "SystemCapability.FileManagement.AppFileService"
+]
+public open class Uri <: RemoteDataLite & ToString {
+    /**
+    * Gets/Sets the path portion of the URI.
+    *
+    * @relation path: string
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.FileManagement.AppFileService"
+    ]
+    public open prop path: String
+    
+    /**
+    * Converts this URI into an encoded string.
+    *
+    * @relation toString(): string
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.FileManagement.AppFileService"
+    ]
+    public open func toString(): String
+}
 
 
 /**

@@ -60,7 +60,7 @@ public enum LogLevel {
         stagemodelonly: true,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
-    Warn |
+    Warning |
     /**
     * ERROR Log level define
     *

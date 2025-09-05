@@ -247,7 +247,7 @@ public enum BatteryChargeState {
         stagemodelonly: true,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Enable |
+    Enabled |
     /**
     * The battery is not being charged.
     *
@@ -258,7 +258,7 @@ public enum BatteryChargeState {
         stagemodelonly: true,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Disable |
+    Disabled |
     /**
     * The battery is fully charged.
     *

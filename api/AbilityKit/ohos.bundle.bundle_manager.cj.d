@@ -850,6 +850,192 @@ public class MultiAppMode {
 
 
 /**
+* Used to query the enumeration value of bundleInfo. Multiple values can be passed in the form.
+* Multiple value input, such as GET_BUNDLE_INFO_DEFAULT | GET_BUNDLE_INFO_WITH_APPLICATION.
+*
+* @relation enum BundleFlag
+*/
+@!APILevel[
+    21,
+    stagemodelonly: true,
+    syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+]
+public class BundleFlag {
+    /**
+    * Used to obtain the default bundleInfo. The obtained bundleInfo does not contain information of
+    * signatureInfo, applicationInfo, hapModuleInfo, ability, extensionAbility and permission.
+    *
+    * @relation GET_BUNDLE_INFO_DEFAULT = 0x00000000
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_DEFAULT: Int32 = 0x00000000
+    
+    /**
+    * Used to obtain the bundleInfo containing applicationInfo. The obtained bundleInfo does not
+    * contain the information of signatureInfo, hapModuleInfo, ability, extensionAbility and permission.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_APPLICATION: Int32 = 0x00000001
+    
+    /**
+    * Used to obtain the bundleInfo containing hapModuleInfo. The obtained bundleInfo does not
+    * contain the information of signatureInfo, applicationInfo, ability, extensionAbility and permission.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_HAP_MODULE: Int32 = 0x00000002
+    
+    /**
+    * Used to obtain the bundleInfo containing ability. The obtained bundleInfo does not
+    * contain the information of signatureInfo, applicationInfo, extensionAbility and permission.
+    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE.
+    * such as GET_BUNDLE_INFO_WITH_ABILITY | GET_BUNDLE_INFO_WITH_HAP_MODULE.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_ABILITY: Int32 = 0x00000004
+    
+    /**
+    * Used to obtain the bundleInfo containing extensionAbility. The obtained bundleInfo does not
+    * contain the information of signatureInfo, applicationInfo, ability and permission.
+    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
+    * such as GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY | GET_BUNDLE_INFO_WITH_HAP_MODULE.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY: Int32 = 0x00000008
+    
+    /**
+    * Used to obtain the bundleInfo containing permission. The obtained bundleInfo does not
+    * contain the information of signatureInfo, applicationInfo, hapModuleInfo, extensionAbility and ability.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION: Int32 = 0x00000010
+    
+    /**
+    * Used to obtain the metadata contained in applicationInfo, moduleInfo and abilityInfo.
+    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_APPLICATION,
+    * GET_BUNDLE_INFO_WITH_HAP_MODULE, GET_BUNDLE_INFO_WITH_ABILITY, GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY,
+    * such as GET_BUNDLE_INFO_WITH_APPLICATION | GET_BUNDLE_INFO_WITH_METADATA
+    * or GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_ABILITY | GET_BUNDLE_INFO_WITH_METADATA
+    * or GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY | GET_BUNDLE_INFO_WITH_METADATA.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_METADATA: Int32 = 0x00000020
+    
+    /**
+    * Used to obtain the default bundleInfo containing disabled application and ability.
+    * The obtained bundleInfo does not contain information of signatureInfo, applicationInfo,
+    * hapModuleInfo, ability, extensionAbility and permission.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_DISABLE: Int32 = 0x00000040
+    
+    /**
+    * Used to obtain the bundleInfo containing signatureInfo. The obtained bundleInfo does not
+    * contain the information of applicationInfo, hapModuleInfo, extensionAbility, ability and permission.
+    *
+    * @relation GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_SIGNATURE_INFO: Int32 = 0x00000080
+    
+    /**
+    * Used to obtain the bundleInfo containing menu configuration in hapModuleInfo.
+    * The obtained bundleInfo does not contain the information of applicationInfo, extensionAbility, ability and permission.
+    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
+    * such as GET_BUNDLE_INFO_WITH_MENU | GET_BUNDLE_INFO_WITH_HAP_MODULE
+    *
+    * @relation GET_BUNDLE_INFO_WITH_MENU = 0x00000100
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_MENU: Int32 = 0x00000100
+    
+    /**
+    * Used to obtain the bundleInfo containing router map configuration in hapModuleInfo.
+    * The obtained bundleInfo does not contain the information of applicationInfo, extensionAbility, ability and permission.
+    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
+    * such as GET_BUNDLE_INFO_WITH_ROUTER_MAP | GET_BUNDLE_INFO_WITH_HAP_MODULE
+    *
+    * @relation GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_ROUTER_MAP: Int32 = 0x00000200
+    
+    /**
+    * Used to obtain the skillInfo contained in abilityInfo and extensionInfo.
+    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
+    * GET_BUNDLE_INFO_WITH_ABILITY, GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY,
+    * such as GET_BUNDLE_INFO_WITH_SKILL | GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_ABILITY
+    * or GET_BUNDLE_INFO_WITH_SKILL | GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY
+    *
+    * @relation GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
+    */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
+    ]
+    public static const GET_BUNDLE_INFO_WITH_SKILL: Int32 = 0x00000800
+}
+
+
+/**
 * Obtains configuration information about a bundle
 *
 * @relation export interface BundleInfo
@@ -1290,192 +1476,6 @@ public class BundleManager {
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static func canOpenLink(link: String): Bool
-}
-
-
-/**
-* Used to query the enumeration value of bundleInfo. Multiple values can be passed in the form.
-* Multiple value input, such as GET_BUNDLE_INFO_DEFAULT | GET_BUNDLE_INFO_WITH_APPLICATION.
-*
-* @relation enum BundleFlag
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-]
-public class BundleFlag {
-    /**
-    * Used to obtain the default bundleInfo. The obtained bundleInfo does not contain information of
-    * signatureInfo, applicationInfo, hapModuleInfo, ability, extensionAbility and permission.
-    *
-    * @relation GET_BUNDLE_INFO_DEFAULT = 0x00000000
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_DEFAULT: Int32 = 0x00000000
-    
-    /**
-    * Used to obtain the bundleInfo containing applicationInfo. The obtained bundleInfo does not
-    * contain the information of signatureInfo, hapModuleInfo, ability, extensionAbility and permission.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_APPLICATION: Int32 = 0x00000001
-    
-    /**
-    * Used to obtain the bundleInfo containing hapModuleInfo. The obtained bundleInfo does not
-    * contain the information of signatureInfo, applicationInfo, ability, extensionAbility and permission.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_HAP_MODULE: Int32 = 0x00000002
-    
-    /**
-    * Used to obtain the bundleInfo containing ability. The obtained bundleInfo does not
-    * contain the information of signatureInfo, applicationInfo, extensionAbility and permission.
-    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE.
-    * such as GET_BUNDLE_INFO_WITH_ABILITY | GET_BUNDLE_INFO_WITH_HAP_MODULE.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_ABILITY: Int32 = 0x00000004
-    
-    /**
-    * Used to obtain the bundleInfo containing extensionAbility. The obtained bundleInfo does not
-    * contain the information of signatureInfo, applicationInfo, ability and permission.
-    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
-    * such as GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY | GET_BUNDLE_INFO_WITH_HAP_MODULE.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY: Int32 = 0x00000008
-    
-    /**
-    * Used to obtain the bundleInfo containing permission. The obtained bundleInfo does not
-    * contain the information of signatureInfo, applicationInfo, hapModuleInfo, extensionAbility and ability.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION: Int32 = 0x00000010
-    
-    /**
-    * Used to obtain the metadata contained in applicationInfo, moduleInfo and abilityInfo.
-    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_APPLICATION,
-    * GET_BUNDLE_INFO_WITH_HAP_MODULE, GET_BUNDLE_INFO_WITH_ABILITY, GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY,
-    * such as GET_BUNDLE_INFO_WITH_APPLICATION | GET_BUNDLE_INFO_WITH_METADATA
-    * or GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_ABILITY | GET_BUNDLE_INFO_WITH_METADATA
-    * or GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY | GET_BUNDLE_INFO_WITH_METADATA.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_METADATA: Int32 = 0x00000020
-    
-    /**
-    * Used to obtain the default bundleInfo containing disabled application and ability.
-    * The obtained bundleInfo does not contain information of signatureInfo, applicationInfo,
-    * hapModuleInfo, ability, extensionAbility and permission.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_DISABLE: Int32 = 0x00000040
-    
-    /**
-    * Used to obtain the bundleInfo containing signatureInfo. The obtained bundleInfo does not
-    * contain the information of applicationInfo, hapModuleInfo, extensionAbility, ability and permission.
-    *
-    * @relation GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_SIGNATURE_INFO: Int32 = 0x00000080
-    
-    /**
-    * Used to obtain the bundleInfo containing menu configuration in hapModuleInfo.
-    * The obtained bundleInfo does not contain the information of applicationInfo, extensionAbility, ability and permission.
-    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
-    * such as GET_BUNDLE_INFO_WITH_MENU | GET_BUNDLE_INFO_WITH_HAP_MODULE
-    *
-    * @relation GET_BUNDLE_INFO_WITH_MENU = 0x00000100
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_MENU: Int32 = 0x00000100
-    
-    /**
-    * Used to obtain the bundleInfo containing router map configuration in hapModuleInfo.
-    * The obtained bundleInfo does not contain the information of applicationInfo, extensionAbility, ability and permission.
-    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
-    * such as GET_BUNDLE_INFO_WITH_ROUTER_MAP | GET_BUNDLE_INFO_WITH_HAP_MODULE
-    *
-    * @relation GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_ROUTER_MAP: Int32 = 0x00000200
-    
-    /**
-    * Used to obtain the skillInfo contained in abilityInfo and extensionInfo.
-    * It can't be used alone, it needs to be used with GET_BUNDLE_INFO_WITH_HAP_MODULE,
-    * GET_BUNDLE_INFO_WITH_ABILITY, GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY,
-    * such as GET_BUNDLE_INFO_WITH_SKILL | GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_ABILITY
-    * or GET_BUNDLE_INFO_WITH_SKILL | GET_BUNDLE_INFO_WITH_HAP_MODULE | GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY
-    *
-    * @relation GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.BundleManager.BundleFramework.Core"
-    ]
-    public static const GET_BUNDLE_INFO_WITH_SKILL: Int32 = 0x00000800
 }
 
 
