@@ -6,13 +6,13 @@
     patch_num: 0
   },
   fullPkgName: "ohos.resource",
-  pkgDepInfo: "{\"package\":\"ohos.resource\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"resource.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}},{\"file\":\"resource_common.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.encoding.json\",\"isStd\":false,\"imports\":[{\"file\":\"resource_common.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"resource.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"resource.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}},{\"file\":\"resource_common.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"resource.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":24}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"resource.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":27}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.resource\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"app_resource.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}},{\"file\":\"resource_common.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":19}}]},{\"package\":\"ohos.encoding.json\",\"isStd\":false,\"imports\":[{\"file\":\"resource_common.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"app_resource.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"app_resource.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":21}},{\"file\":\"resource_common.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"app_resource.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":24}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"app_resource.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":27}}]}]}",
   imports: [
     "std.core",
     "ohos.base"
   ],
   allFiles: [
-    "ohos.resource/resource.cj",
+    "ohos.resource/app_resource.cj",
     "ohos.resource/resource_common.cj"
   ],
   allFileImports: [
@@ -1138,7 +1138,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 1029734100343634279
+        bodyHash: 13729108137794733444
       },
       info_type: "FuncInfo",
       info: {
@@ -1914,7 +1914,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 3564878994722939474
+        bodyHash: 6336728350626598624
       },
       info_type: "FuncInfo",
       info: {
@@ -2228,7 +2228,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 13511085314726538020
+        bodyHash: 2851501913083491426
       },
       info_type: "FuncInfo",
       info: {
@@ -2339,7 +2339,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 14387136102582547657
+        bodyHash: 16959459859084288524
       },
       info_type: "FuncInfo",
       info: {
