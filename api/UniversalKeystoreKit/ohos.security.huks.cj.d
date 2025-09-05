@@ -41,7 +41,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_ENCRYPT: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_KEY_PURPOSE_ENCRYPT: UInt32 = 1
     
     /**
     * Used to decrypt the cipher text.
@@ -53,7 +53,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_DECRYPT: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_KEY_PURPOSE_DECRYPT: UInt32 = 2
     
     /**
     * Used for signing.
@@ -65,7 +65,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_SIGN: HuksParamValue = HuksParamValue.Uint32Value(4)
+    public static const HUKS_KEY_PURPOSE_SIGN: UInt32 = 4
     
     /**
     * Used to verify the signature.
@@ -77,7 +77,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_VERIFY: HuksParamValue = HuksParamValue.Uint32Value(8)
+    public static const HUKS_KEY_PURPOSE_VERIFY: UInt32 = 8
     
     /**
     * Used to derive a key.
@@ -89,7 +89,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_DERIVE: HuksParamValue = HuksParamValue.Uint32Value(16)
+    public static const HUKS_KEY_PURPOSE_DERIVE: UInt32 = 16
     
     /**
     * Used for an encrypted export.
@@ -101,7 +101,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_WRAP: HuksParamValue = HuksParamValue.Uint32Value(32)
+    public static const HUKS_KEY_PURPOSE_WRAP: UInt32 = 32
     
     /**
     * Used for an encrypted import.
@@ -113,7 +113,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_UNWRAP: HuksParamValue = HuksParamValue.Uint32Value(64)
+    public static const HUKS_KEY_PURPOSE_UNWRAP: UInt32 = 64
     
     /**
     * Used to generate a message authentication code (MAC).
@@ -125,7 +125,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_MAC: HuksParamValue = HuksParamValue.Uint32Value(128)
+    public static const HUKS_KEY_PURPOSE_MAC: UInt32 = 128
     
     /**
     * Used for key agreement.
@@ -137,7 +137,7 @@ public class HuksKeyPurpose {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_PURPOSE_AGREE: HuksParamValue = HuksParamValue.Uint32Value(256)
+    public static const HUKS_KEY_PURPOSE_AGREE: UInt32 = 256
 }
 
 
@@ -162,7 +162,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_NONE: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_DIGEST_NONE: UInt32 = 0
     
     /**
     * MD5.
@@ -174,7 +174,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_MD5: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_DIGEST_MD5: UInt32 = 1
     
     /**
     * SM3.
@@ -186,7 +186,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_SM3: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_DIGEST_SM3: UInt32 = 2
     
     /**
     * SHA-1.
@@ -198,7 +198,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_SHA1: HuksParamValue = HuksParamValue.Uint32Value(10)
+    public static const HUKS_DIGEST_SHA1: UInt32 = 10
     
     /**
     * SHA-224.
@@ -210,7 +210,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_SHA224: HuksParamValue = HuksParamValue.Uint32Value(11)
+    public static const HUKS_DIGEST_SHA224: UInt32 = 11
     
     /**
     * SHA-256.
@@ -222,7 +222,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_SHA256: HuksParamValue = HuksParamValue.Uint32Value(12)
+    public static const HUKS_DIGEST_SHA256: UInt32 = 12
     
     /**
     * SHA-384.
@@ -234,7 +234,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_SHA384: HuksParamValue = HuksParamValue.Uint32Value(13)
+    public static const HUKS_DIGEST_SHA384: UInt32 = 13
     
     /**
     * SHA-512.
@@ -246,7 +246,7 @@ public class HuksKeyDigest {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DIGEST_SHA512: HuksParamValue = HuksParamValue.Uint32Value(14)
+    public static const HUKS_DIGEST_SHA512: UInt32 = 14
 }
 
 
@@ -271,7 +271,7 @@ public class HuksKeyPadding {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_PADDING_NONE: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_PADDING_NONE: UInt32 = 0
     
     /**
     * Optimal Asymmetric Encryption Padding (OAEP).
@@ -283,7 +283,7 @@ public class HuksKeyPadding {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_PADDING_OAEP: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_PADDING_OAEP: UInt32 = 1
     
     /**
     * Probabilistic Signature Scheme (PSS).
@@ -295,7 +295,7 @@ public class HuksKeyPadding {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_PADDING_PSS: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_PADDING_PSS: UInt32 = 2
     
     /**
     * Public Key Cryptography Standards (PKCS) #1 v1.5.
@@ -307,7 +307,7 @@ public class HuksKeyPadding {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_PADDING_PKCS1_V1_5: HuksParamValue = HuksParamValue.Uint32Value(3)
+    public static const HUKS_PADDING_PKCS1_V1_5: UInt32 = 3
     
     /**
     * PKCS #5.
@@ -319,7 +319,7 @@ public class HuksKeyPadding {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_PADDING_PKCS5: HuksParamValue = HuksParamValue.Uint32Value(4)
+    public static const HUKS_PADDING_PKCS5: UInt32 = 4
     
     /**
     * PKCS #7.
@@ -331,7 +331,7 @@ public class HuksKeyPadding {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_PADDING_PKCS7: HuksParamValue = HuksParamValue.Uint32Value(5)
+    public static const HUKS_PADDING_PKCS7: UInt32 = 5
 }
 
 
@@ -356,7 +356,7 @@ public class HuksCipherMode {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_MODE_ECB: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_MODE_ECB: UInt32 = 1
     
     /**
     * Cipher Block Chaining (CBC) mode.
@@ -368,7 +368,7 @@ public class HuksCipherMode {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_MODE_CBC: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_MODE_CBC: UInt32 = 2
     
     /**
     * Counter (CTR) mode.
@@ -380,7 +380,7 @@ public class HuksCipherMode {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_MODE_CTR: HuksParamValue = HuksParamValue.Uint32Value(3)
+    public static const HUKS_MODE_CTR: UInt32 = 3
     
     /**
     * Output Feedback (OFB) mode.
@@ -392,7 +392,7 @@ public class HuksCipherMode {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_MODE_OFB: HuksParamValue = HuksParamValue.Uint32Value(4)
+    public static const HUKS_MODE_OFB: UInt32 = 4
     
     /**
     * Counter with CBC-MAC (CCM) mode.
@@ -404,7 +404,7 @@ public class HuksCipherMode {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_MODE_CCM: HuksParamValue = HuksParamValue.Uint32Value(31)
+    public static const HUKS_MODE_CCM: UInt32 = 31
     
     /**
     * Galois/Counter (GCM) mode.
@@ -416,7 +416,7 @@ public class HuksCipherMode {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_MODE_GCM: HuksParamValue = HuksParamValue.Uint32Value(32)
+    public static const HUKS_MODE_GCM: UInt32 = 32
 }
 
 
@@ -441,7 +441,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_KEY_SIZE_512: HuksParamValue = HuksParamValue.Uint32Value(512)
+    public static const HUKS_RSA_KEY_SIZE_512: UInt32 = 512
     
     /**
     * RSA key of 768 bits.
@@ -453,7 +453,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_KEY_SIZE_768: HuksParamValue = HuksParamValue.Uint32Value(768)
+    public static const HUKS_RSA_KEY_SIZE_768: UInt32 = 768
     
     /**
     * RSA key of 1024 bits.
@@ -465,7 +465,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_KEY_SIZE_1024: HuksParamValue = HuksParamValue.Uint32Value(1024)
+    public static const HUKS_RSA_KEY_SIZE_1024: UInt32 = 1024
     
     /**
     * RSA key of 2048 bits.
@@ -477,7 +477,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_KEY_SIZE_2048: HuksParamValue = HuksParamValue.Uint32Value(2048)
+    public static const HUKS_RSA_KEY_SIZE_2048: UInt32 = 2048
     
     /**
     * RSA key of 3072 bits.
@@ -489,7 +489,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_KEY_SIZE_3072: HuksParamValue = HuksParamValue.Uint32Value(3072)
+    public static const HUKS_RSA_KEY_SIZE_3072: UInt32 = 3072
     
     /**
     * RSA key of 4096 bits.
@@ -501,7 +501,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_KEY_SIZE_4096: HuksParamValue = HuksParamValue.Uint32Value(4096)
+    public static const HUKS_RSA_KEY_SIZE_4096: UInt32 = 4096
     
     /**
     * Elliptic Curve Cryptography (ECC) key of 224 bits.
@@ -513,7 +513,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ECC_KEY_SIZE_224: HuksParamValue = HuksParamValue.Uint32Value(224)
+    public static const HUKS_ECC_KEY_SIZE_224: UInt32 = 224
     
     /**
     * ECC key of 256 bits.
@@ -525,7 +525,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ECC_KEY_SIZE_256: HuksParamValue = HuksParamValue.Uint32Value(256)
+    public static const HUKS_ECC_KEY_SIZE_256: UInt32 = 256
     
     /**
     * ECC key of 384 bits.
@@ -537,7 +537,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ECC_KEY_SIZE_384: HuksParamValue = HuksParamValue.Uint32Value(384)
+    public static const HUKS_ECC_KEY_SIZE_384: UInt32 = 384
     
     /**
     * ECC key of 521 bits.
@@ -549,7 +549,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ECC_KEY_SIZE_521: HuksParamValue = HuksParamValue.Uint32Value(521)
+    public static const HUKS_ECC_KEY_SIZE_521: UInt32 = 521
     
     /**
     * Advanced Encryption Standard (AES) key of 128 bits.
@@ -561,7 +561,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_AES_KEY_SIZE_128: HuksParamValue = HuksParamValue.Uint32Value(128)
+    public static const HUKS_AES_KEY_SIZE_128: UInt32 = 128
     
     /**
     * AES key of 192 bits.
@@ -573,7 +573,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_AES_KEY_SIZE_192: HuksParamValue = HuksParamValue.Uint32Value(192)
+    public static const HUKS_AES_KEY_SIZE_192: UInt32 = 192
     
     /**
     * AES key of 256 bits.
@@ -585,19 +585,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_AES_KEY_SIZE_256: HuksParamValue = HuksParamValue.Uint32Value(256)
-    
-    /**
-    * AES key of 512 bits.
-    *
-    * @relation HUKS_AES_KEY_SIZE_512 = 512
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    public static const HUKS_AES_KEY_SIZE_512: HuksParamValue = HuksParamValue.Uint32Value(512)
+    public static const HUKS_AES_KEY_SIZE_256: UInt32 = 256
     
     /**
     * Curve25519 key of 256 bits.
@@ -609,7 +597,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_CURVE25519_KEY_SIZE_256: HuksParamValue = HuksParamValue.Uint32Value(256)
+    public static const HUKS_CURVE25519_KEY_SIZE_256: UInt32 = 256
     
     /**
     * Diffie-Hellman (DH) key of 2048 bits.
@@ -621,7 +609,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DH_KEY_SIZE_2048: HuksParamValue = HuksParamValue.Uint32Value(2048)
+    public static const HUKS_DH_KEY_SIZE_2048: UInt32 = 2048
     
     /**
     * DH key of 3072 bits.
@@ -633,7 +621,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DH_KEY_SIZE_3072: HuksParamValue = HuksParamValue.Uint32Value(3072)
+    public static const HUKS_DH_KEY_SIZE_3072: UInt32 = 3072
     
     /**
     * DH key of 4096 bits.
@@ -645,7 +633,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_DH_KEY_SIZE_4096: HuksParamValue = HuksParamValue.Uint32Value(4096)
+    public static const HUKS_DH_KEY_SIZE_4096: UInt32 = 4096
     
     /**
     * ShangMi2 (SM2) key of 256 bits.
@@ -657,7 +645,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_SM2_KEY_SIZE_256: HuksParamValue = HuksParamValue.Uint32Value(256)
+    public static const HUKS_SM2_KEY_SIZE_256: UInt32 = 256
     
     /**
     * ShangMi4 (SM4) key of 128 bits.
@@ -669,7 +657,7 @@ public class HuksKeySize {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_SM4_KEY_SIZE_128: HuksParamValue = HuksParamValue.Uint32Value(128)
+    public static const HUKS_SM4_KEY_SIZE_128: UInt32 = 128
 }
 
 
@@ -694,7 +682,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_RSA: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_ALG_RSA: UInt32 = 1
     
     /**
     * ECC.
@@ -706,7 +694,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_ECC: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_ALG_ECC: UInt32 = 2
     
     /**
     * DSA.
@@ -718,7 +706,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_DSA: HuksParamValue = HuksParamValue.Uint32Value(3)
+    public static const HUKS_ALG_DSA: UInt32 = 3
     
     /**
     * AES.
@@ -730,7 +718,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_AES: HuksParamValue = HuksParamValue.Uint32Value(20)
+    public static const HUKS_ALG_AES: UInt32 = 20
     
     /**
     * HMAC.
@@ -742,7 +730,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_HMAC: HuksParamValue = HuksParamValue.Uint32Value(50)
+    public static const HUKS_ALG_HMAC: UInt32 = 50
     
     /**
     * HKDF.
@@ -754,7 +742,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_HKDF: HuksParamValue = HuksParamValue.Uint32Value(51)
+    public static const HUKS_ALG_HKDF: UInt32 = 51
     
     /**
     * PBKDF2.
@@ -766,7 +754,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_PBKDF2: HuksParamValue = HuksParamValue.Uint32Value(52)
+    public static const HUKS_ALG_PBKDF2: UInt32 = 52
     
     /**
     * ECDH.
@@ -778,7 +766,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_ECDH: HuksParamValue = HuksParamValue.Uint32Value(100)
+    public static const HUKS_ALG_ECDH: UInt32 = 100
     
     /**
     * X25519.
@@ -790,7 +778,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_X25519: HuksParamValue = HuksParamValue.Uint32Value(101)
+    public static const HUKS_ALG_X25519: UInt32 = 101
     
     /**
     * Ed25519.
@@ -802,7 +790,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_ED25519: HuksParamValue = HuksParamValue.Uint32Value(102)
+    public static const HUKS_ALG_ED25519: UInt32 = 102
     
     /**
     * DH.
@@ -814,7 +802,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_DH: HuksParamValue = HuksParamValue.Uint32Value(103)
+    public static const HUKS_ALG_DH: UInt32 = 103
     
     /**
     * SM2.
@@ -826,7 +814,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_SM2: HuksParamValue = HuksParamValue.Uint32Value(150)
+    public static const HUKS_ALG_SM2: UInt32 = 150
     
     /**
     * SM3.
@@ -838,7 +826,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_SM3: HuksParamValue = HuksParamValue.Uint32Value(151)
+    public static const HUKS_ALG_SM3: UInt32 = 151
     
     /**
     * SM4.
@@ -850,7 +838,7 @@ public class HuksKeyAlg {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_ALG_SM4: HuksParamValue = HuksParamValue.Uint32Value(152)
+    public static const HUKS_ALG_SM4: UInt32 = 152
 }
 
 
@@ -875,7 +863,7 @@ public class HuksUnwrapSuite {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING: UInt32 = 1
     
     /**
     * Use ECDH for key agreement and then use AES-256 GCM to encrypt the key.
@@ -887,7 +875,7 @@ public class HuksUnwrapSuite {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING: UInt32 = 2
 }
 
 
@@ -912,7 +900,7 @@ public class HuksAuthStorageLevel {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_AUTH_STORAGE_LEVEL_DE: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_AUTH_STORAGE_LEVEL_DE: UInt32 = 0
     
     /**
     * The key can be accessed only after the first unlock of the device.
@@ -924,7 +912,7 @@ public class HuksAuthStorageLevel {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_AUTH_STORAGE_LEVEL_CE: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_AUTH_STORAGE_LEVEL_CE: UInt32 = 1
     
     /**
     * The key can be accessed only when the device is unlocked.
@@ -936,7 +924,7 @@ public class HuksAuthStorageLevel {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_AUTH_STORAGE_LEVEL_ECE: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_AUTH_STORAGE_LEVEL_ECE: UInt32 = 2
 }
 
 
@@ -961,7 +949,7 @@ public class HuksKeyGenerateType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_GENERATE_TYPE_DEFAULT: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_KEY_GENERATE_TYPE_DEFAULT: UInt32 = 0
     
     /**
     * Derived key.
@@ -973,7 +961,7 @@ public class HuksKeyGenerateType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_GENERATE_TYPE_DERIVE: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_KEY_GENERATE_TYPE_DERIVE: UInt32 = 1
     
     /**
     * Key generated by agreement.
@@ -985,7 +973,7 @@ public class HuksKeyGenerateType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_GENERATE_TYPE_AGREE: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_KEY_GENERATE_TYPE_AGREE: UInt32 = 2
 }
 
 
@@ -1010,7 +998,7 @@ public class HuksKeyFlag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_FLAG_IMPORT_KEY: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_KEY_FLAG_IMPORT_KEY: UInt32 = 1
     
     /**
     * Generate a key by using an API.
@@ -1022,7 +1010,7 @@ public class HuksKeyFlag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_FLAG_GENERATE_KEY: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_KEY_FLAG_GENERATE_KEY: UInt32 = 2
     
     /**
     * Generate a key by using a key agreement API.
@@ -1034,7 +1022,7 @@ public class HuksKeyFlag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_FLAG_AGREE_KEY: HuksParamValue = HuksParamValue.Uint32Value(3)
+    public static const HUKS_KEY_FLAG_AGREE_KEY: UInt32 = 3
     
     /**
     * Derive a key by using an API.
@@ -1046,7 +1034,7 @@ public class HuksKeyFlag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_FLAG_DERIVE_KEY: HuksParamValue = HuksParamValue.Uint32Value(4)
+    public static const HUKS_KEY_FLAG_DERIVE_KEY: UInt32 = 4
 }
 
 
@@ -1071,7 +1059,7 @@ public class HuksKeyStorageType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_STORAGE_ONLY_USED_IN_HUKS: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_STORAGE_ONLY_USED_IN_HUKS: UInt32 = 2
     
     /**
     * The key can be exported. It is mutually exclusive with HUKS_STORAGE_ONLY_USED_IN_HUKS.
@@ -1083,7 +1071,7 @@ public class HuksKeyStorageType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_STORAGE_KEY_EXPORT_ALLOWED: HuksParamValue = HuksParamValue.Uint32Value(3)
+    public static const HUKS_STORAGE_KEY_EXPORT_ALLOWED: UInt32 = 3
 }
 
 
@@ -1109,7 +1097,7 @@ public class HuksImportKeyType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_TYPE_PUBLIC_KEY: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_KEY_TYPE_PUBLIC_KEY: UInt32 = 0
     
     /**
     * Private key.
@@ -1121,7 +1109,7 @@ public class HuksImportKeyType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_TYPE_PRIVATE_KEY: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_KEY_TYPE_PRIVATE_KEY: UInt32 = 1
     
     /**
     * Public and private key pair.
@@ -1133,7 +1121,7 @@ public class HuksImportKeyType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_KEY_TYPE_KEY_PAIR: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_KEY_TYPE_KEY_PAIR: UInt32 = 2
 }
 
 
@@ -1159,7 +1147,7 @@ public class HuksRsaPssSaltLenType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_PSS_SALT_LEN_DIGEST: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_RSA_PSS_SALT_LEN_DIGEST: UInt32 = 0
     
     /**
     * salt_len is set to the maximum length.
@@ -1171,7 +1159,7 @@ public class HuksRsaPssSaltLenType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public static const HUKS_RSA_PSS_SALT_LEN_MAX: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_RSA_PSS_SALT_LEN_MAX: UInt32 = 1
 }
 
 
@@ -1196,7 +1184,7 @@ public class HuksUserAuthType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_USER_AUTH_TYPE_FINGERPRINT: HuksParamValue = HuksParamValue.Uint32Value(1 << 0)
+    public static const HUKS_USER_AUTH_TYPE_FINGERPRINT: UInt32 = 1 << 0
     
     /**
     * Facial authentication.
@@ -1208,7 +1196,7 @@ public class HuksUserAuthType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_USER_AUTH_TYPE_FACE: HuksParamValue = HuksParamValue.Uint32Value(1 << 1)
+    public static const HUKS_USER_AUTH_TYPE_FACE: UInt32 = 1 << 1
     
     /**
     * PIN authentication.
@@ -1220,7 +1208,7 @@ public class HuksUserAuthType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_USER_AUTH_TYPE_PIN: HuksParamValue = HuksParamValue.Uint32Value(1 << 2)
+    public static const HUKS_USER_AUTH_TYPE_PIN: UInt32 = 1 << 2
 }
 
 
@@ -1245,7 +1233,7 @@ public class HuksAuthAccessType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_AUTH_ACCESS_INVALID_CLEAR_PASSWORD: HuksParamValue = HuksParamValue.Uint32Value(1 << 0)
+    public static const HUKS_AUTH_ACCESS_INVALID_CLEAR_PASSWORD: UInt32 = 1 << 0
     
     /**
     * The key becomes invalid after a new biometric feature is added.
@@ -1257,7 +1245,7 @@ public class HuksAuthAccessType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL: HuksParamValue = HuksParamValue.Uint32Value(1 << 1)
+    public static const HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL: UInt32 = 1 << 1
 }
 
 
@@ -1282,7 +1270,7 @@ public class HuksChallengeType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_TYPE_NORMAL: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_CHALLENGE_TYPE_NORMAL: UInt32 = 0
     
     /**
     * Custom challenge, which supports only one authentication for multiple keys.
@@ -1294,7 +1282,7 @@ public class HuksChallengeType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_TYPE_CUSTOM: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_CHALLENGE_TYPE_CUSTOM: UInt32 = 1
     
     /**
     * Challenge is not required.
@@ -1306,7 +1294,7 @@ public class HuksChallengeType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_TYPE_NONE: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_CHALLENGE_TYPE_NONE: UInt32 = 2
 }
 
 
@@ -1331,7 +1319,7 @@ public class HuksChallengePosition {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_POS_0: HuksParamValue = HuksParamValue.Uint32Value(0)
+    public static const HUKS_CHALLENGE_POS_0: UInt32 = 0
     
     /**
     * Bytes 8 to 15.
@@ -1343,7 +1331,7 @@ public class HuksChallengePosition {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_POS_1: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_CHALLENGE_POS_1: UInt32 = 1
     
     /**
     * Bytes 16 to 23.
@@ -1355,7 +1343,7 @@ public class HuksChallengePosition {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_POS_2: HuksParamValue = HuksParamValue.Uint32Value(2)
+    public static const HUKS_CHALLENGE_POS_2: UInt32 = 2
     
     /**
     * Bytes 24 to 31.
@@ -1367,7 +1355,7 @@ public class HuksChallengePosition {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_CHALLENGE_POS_3: HuksParamValue = HuksParamValue.Uint32Value(3)
+    public static const HUKS_CHALLENGE_POS_3: UInt32 = 3
 }
 
 
@@ -1394,44 +1382,7 @@ public class HuksSecureSignType {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    public static const HUKS_SECURE_SIGN_WITH_AUTHINFO: HuksParamValue = HuksParamValue.Uint32Value(1)
-}
-
-
-/**
-* Enumerates the tag transfer modes.
-*
-* @relation export enum HuksSendType
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.Security.Huks.Core"
-]
-public class HuksSendType {
-    /**
-    * The tag is sent asynchronously.
-    *
-    * @relation HUKS_SEND_TYPE_ASYNC = 0
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    public static const HUKS_SEND_TYPE_ASYNC: HuksParamValue = HuksParamValue.Uint32Value(0)
-    
-    /**
-    * The tag is sent synchronously.
-    *
-    * @relation HUKS_SEND_TYPE_SYNC = 1
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    public static const HUKS_SEND_TYPE_SYNC: HuksParamValue = HuksParamValue.Uint32Value(1)
+    public static const HUKS_SECURE_SIGN_WITH_AUTHINFO: UInt32 = 1
 }
 
 
@@ -1530,19 +1481,7 @@ public class HuksTagType {
     stagemodelonly: true,
     syscap: "SystemCapability.Security.Huks.Core"
 ]
-public enum HuksTag {
-    /**		
-    * Invalid TAG.		
-    *		
-    * @relation HUKS_TAG_INVALID = HuksTagType.HUKS_TAG_TYPE_INVALID | 0	
-    
-    */
-    @!APILevel[	
-        21,	
-        stagemodelonly: true,	
-        syscap: "SystemCapability.Security.Huks.Core"	
-    ]
-    HuksTagInvalid |
+public class HuksTag {
     /**
     * Algorithm.
     *
@@ -1553,7 +1492,8 @@ public enum HuksTag {
         stagemodelonly: true,	
         syscap: "SystemCapability.Security.Huks.Core"	
     ]
-    HuksTagAlgorithm |
+    public static const HUKS_TAG_ALGORITHM: UInt32 =  HuksTagType.HUKS_TAG_TYPE_UINT | 1
+    
     /**
     * Purpose of the key.
     *
@@ -1564,7 +1504,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagPurpose |
+    public static const HUKS_TAG_PURPOSE: UInt32 =  HuksTagType.HUKS_TAG_TYPE_UINT | 2
+    
     /**
     * Key size.
     *
@@ -1575,7 +1516,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeySize |
+    public static const HUKS_TAG_KEY_SIZE: UInt32 =  HuksTagType.HUKS_TAG_TYPE_UINT | 3
+    
     /**
     * Digest algorithm.
     *
@@ -1586,7 +1528,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagDigest |
+    public static const HUKS_TAG_DIGEST: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 4
+    
     /**
     * Padding mode.
     *
@@ -1597,7 +1540,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagPadding |
+    public static const HUKS_TAG_PADDING: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 5
+    
     /**
     * Cipher mode.
     *
@@ -1608,7 +1552,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagBlockMode |
+    public static const HUKS_TAG_BLOCK_MODE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 6
+    
     /**
     * Key type.
     *
@@ -1619,7 +1564,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeyType |
+    public static const HUKS_TAG_KEY_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 7
+    
     /**
     * Associated authentication data.
     *
@@ -1630,7 +1576,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagAssociatedData |
+    public static const HUKS_TAG_ASSOCIATED_DATA: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 8
+    
     /**
     * Nonce for key encryption and decryption.
     *
@@ -1641,7 +1588,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagNonce |
+    public static const HUKS_TAG_NONCE: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 9
+    
     /**
     * IV.
     *
@@ -1652,7 +1600,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagIv |
+    public static const HUKS_TAG_IV: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 10
+    
     /**
     * Information generated during key derivation.
     *
@@ -1663,7 +1612,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagInfo |
+    public static const HUKS_TAG_INFO: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 11
+    
     /**
     * Salt value used for key derivation.
     *
@@ -1674,7 +1624,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagSalt |
+    public static const HUKS_TAG_SALT: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 12
+    
     /**
     * Number of iterations for key derivation.
     *
@@ -1685,7 +1636,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagIteration |
+    public static const HUKS_TAG_ITERATION: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 14
+    
     /**
     * Key generation type.
     *
@@ -1696,7 +1648,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeyGenerateType |
+    public static const HUKS_TAG_KEY_GENERATE_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 15
+    
     /**
     * Type of the algorithm used for key agreement.
     *
@@ -1707,7 +1660,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagAgreeAlg |
+    public static const HUKS_TAG_AGREE_ALG: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 19
+    
     /**
     * Public key alias used in key agreement.
     *
@@ -1718,7 +1672,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagAgreePublicKeyIsKeyAlias |
+    public static const HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS: UInt32 = HuksTagType.HUKS_TAG_TYPE_BOOL | 20
+    
     /**
     * Private key alias used in key agreement.
     *
@@ -1729,7 +1684,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagAgreePrivateKeyAlias |
+    public static const HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 21
+    
     /**
     * Public key used in key agreement.
     *
@@ -1740,7 +1696,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagAgreePublicKey |
+    public static const HUKS_TAG_AGREE_PUBLIC_KEY: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 22
+    
     /**
     * Key alias.
     *
@@ -1751,7 +1708,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeyAlias |
+    public static const HUKS_TAG_KEY_ALIAS: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 23
+    
     /**
     * Size of the derived key.
     *
@@ -1762,7 +1720,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagDeriveKeySize |
+    public static const HUKS_TAG_DERIVE_KEY_SIZE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 24
+    
     /**
     * Type of the imported key.
     *
@@ -1773,7 +1732,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagImportKeyType |
+    public static const HUKS_TAG_IMPORT_KEY_TYPE: UInt32 =  HuksTagType.HUKS_TAG_TYPE_UINT | 25
+    
     /**
     * Algorithm suite required for encrypted imports.
     *
@@ -1784,7 +1744,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagUnwrapAlgorithmSuite |
+    public static const HUKS_TAG_UNWRAP_ALGORITHM_SUITE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 26
+    
     /**
     * Storage type of the derived key or agreed key.
     *
@@ -1795,7 +1756,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagDerivedAgreedKeyStorageFlag |
+    public static const HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 29
+    
     /**
     * Type of the rsa_pss_salt_length.
     *
@@ -1806,18 +1768,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagRsaPssSaltLenType |
-    /**
-    * Reserved.
-    *
-    * @relation HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagAllUsers |
+    public static const HUKS_TAG_RSA_PSS_SALT_LEN_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 30
+    
     /**
     * ID of the user to which the key belongs.
     *
@@ -1828,7 +1780,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagUserId |
+    public static const HUKS_TAG_USER_ID: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 302
+    
     /**
     * Reserved.
     *
@@ -1839,7 +1792,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagNoAuthRequired |
+    public static const HUKS_TAG_NO_AUTH_REQUIRED: UInt32 = HuksTagType.HUKS_TAG_TYPE_BOOL | 303
+    
     /**
     * User authentication type. For details, see HuksUserAuthType. This parameter must be set together with
     * HuksAuthAccessType. You can set a maximum of two user authentication types at a time. For example, if
@@ -1854,7 +1808,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagUserAuthType |
+    public static const HUKS_TAG_USER_AUTH_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 304
+    
     /**
     * One-time validity period of the authentication token.
     *
@@ -1865,7 +1820,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagAuthTimeout |
+    public static const HUKS_TAG_AUTH_TIMEOUT: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 305
+    
     /**
     * Authentication token.
     *
@@ -1876,7 +1832,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagAuthToken |
+    public static const HUKS_TAG_AUTH_TOKEN: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 306
+    
     /**
     * Access control type. For details, see HuksAuthAccessType. This parameter must be set together with
     * HuksUserAuthType.
@@ -1888,7 +1845,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagKeyAuthAccessType |
+    public static const HUKS_TAG_KEY_AUTH_ACCESS_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 307
+    
     /**
     * Signature type of the key generated or imported.
     *
@@ -1899,7 +1857,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagKeySecureSignType |
+    public static const HUKS_TAG_KEY_SECURE_SIGN_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 308
+    
     /**
     * Type of the challenge generated for a key. For details, see HuksChallengeType.
     *
@@ -1910,7 +1869,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagChallengeType |
+    public static const HUKS_TAG_CHALLENGE_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 309
+    
     /**
     * Position of the 8-byte valid value in a custom challenge. For details, see HuksChallengePosition.
     *
@@ -1921,7 +1881,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagChallengePos |
+    public static const HUKS_TAG_CHALLENGE_POS: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 310
+    
     /**
     * Key authentication purpose.
     *
@@ -1932,18 +1893,20 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagKeyAuthPurpose |
+    public static const HUKS_TAG_KEY_AUTH_PURPOSE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 311
+    
     /**
     * Key authentication purpose.
     *   
-    * @relation HUKS_TAG_KEY_AUTH_Storage_Level = HuksTagType.HUKS_TAG_TYPE_UINT | 316
+    * @relation HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316
     */
     @!APILevel[
         21,
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagAuthStorageLevel |
+    public static const HUKS_TAG_AUTH_STORAGE_LEVEL: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 316
+    
     /**
     * Challenge value used in the attestation.
     *
@@ -1954,67 +1917,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagAttestationChallenge |
-    /**
-    * Application ID used in the attestation.
-    *
-    * @relation HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagAttestationApplicationId |
-    /**
-    * Security level used in the attestation.
-    *
-    * @relation HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagAttestationIdSecLevelInfo |
-    /**
-    * Version information used in the attestation.
-    *
-    * @relation HUKS_TAG_ATTESTATION_ID_VERSION_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 515
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagAttestationIdVersionInfo |
-    /**
-    * Huks Tag Attestation Base64
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagAttestationBase64 |
-    /**
-    * Huks Tag Attestation Mode
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagAttestationMode |
-    /**
-    * Huks Tag Attestation Application Id Type
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagAttestationApplicationIdType |
+    public static const HUKS_TAG_ATTESTATION_CHALLENGE: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 501
+    
     /*
     * Whether to use the alias passed in during key generation.
     *
@@ -2025,7 +1929,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagIsKeyAlias |
+    public static const HUKS_TAG_IS_KEY_ALIAS: UInt32 = HuksTagType.HUKS_TAG_TYPE_BOOL | 1001
+    
     /*
     * Key storage mode.
     *
@@ -2036,7 +1941,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeyStorageFlag |
+    public static const HUKS_TAG_KEY_STORAGE_FLAG: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 1002
+    
     /*
     * Reserved.
     *
@@ -2047,7 +1953,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagIsAllowedWrap |
+    public static const HUKS_TAG_IS_ALLOWED_WRAP: UInt32 = HuksTagType.HUKS_TAG_TYPE_BOOL | 1003
+    
     /*
     * Reserved.
     *
@@ -2058,7 +1965,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeyWrapType |
+    public static const HUKS_TAG_KEY_WRAP_TYPE: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 1004
+    
     /*
     * Reserved.
     *
@@ -2069,18 +1977,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Extension"
     ]
-    HuksTagKeyAuthId |
-    /*
-    * Reserved.
-    *
-    * @relation HUKS_TAG_KEY_ROLE = HuksTagType.HUKS_TAG_TYPE_UINT | 1006
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagKeyRole |
+    public static const HUKS_TAG_KEY_AUTH_ID: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005
+    
     /*
     * Flag of the key.
     *
@@ -2091,40 +1989,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKeyFlag |
-    /*
-    * Reserved.
-    *
-    * @relation HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagIsAsynchronized |
-    /*
-    * Reserved.
-    *
-    * @relation HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagKeyDomain |
-    /**
-    * Inner-use TAG: 10001 - 10999
-    *
-    * @relation HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagProcessName |
+    public static const HUKS_TAG_KEY_FLAG: UInt32 = HuksTagType.HUKS_TAG_TYPE_UINT | 1007
+    
     /*
     * Reserved.
     *
@@ -2135,18 +2001,8 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagKey |
-    /**
-    * Key version.
-    *
-    * @relation HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Extension"
-    ]
-    HuksTagKeyVersion |
+    public static const HUKS_TAG_KEY: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006
+    
     /*
     * Used to pass in the AEAD in GCM mode.
     *
@@ -2157,94 +2013,7 @@ public enum HuksTag {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    HuksTagAeTag |
-    /**
-    * Reserved field.
-    *
-    * @relation HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagIsKeyHandle |
-    /**
-    * Os version related TAG.
-    *
-    * @relation HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagOsVersion |
-    /**
-    * OS patch level.
-    *
-    * @relation HUKS_TAG_OS_PATCHLEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 10102
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagOsPatchlevel |
-    /*
-    * Used to pass in the AEAD in GCM mode.
-    *
-    * @relation HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagSymmetricKeyData |
-    /*
-    * Reserved.
-    *
-    * @relation HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20002
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagAsymmetricPublicKeyData |
-    /*
-    * Reserved.
-    *
-    * @relation HUKS_TAG_ASYMMETRIC_PRIVATE_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20003
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagAsymmetricPrivateKeyData |
-    /*
-    * Huks Tag Screen State
-    *
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagScreenState |
-    /*
-    * Huks Tag Derive Main Key Mode.
-    * 
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.Security.Huks.Core"
-    ]
-    HuksTagDeriveMainKeyMode |
-    ...
+    public static const HUKS_TAG_AE_TAG: UInt32 = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009
 }
 
 
@@ -2298,36 +2067,6 @@ public func isKeyItemExist(keyAlias: String, options: HuksOptions): Bool
     syscap: "SystemCapability.Security.Huks.Extension"
 ]
 public func getKeyItemProperties(keyAlias: String, _: HuksOptions): Array<HuksParam>
-
-
-/**
-* Obtains the certificate used to attest a key. This API uses an asynchronous callback to return the result.
-*
-* @param { String } keyAlias - keyAlias indicates the key's name.
-* @param { HuksOptions } options - options indicates the properties of the key attestation operation.
-* @return { Array<String> } - the certchain of key.
-* @throws { BusinessException } 201 - check permission failed
-* @throws { BusinessException } 401 - argument is invalid
-* @throws { BusinessException } 801 - api is not supported
-* @throws { BusinessException } 12000001 - algorithm mode is not supported
-* @throws { BusinessException } 12000002 - algorithm param is missing
-* @throws { BusinessException } 12000003 - algorithm param is invalid
-* @throws { BusinessException } 12000004 - operating file failed
-* @throws { BusinessException } 12000005 - IPC communication failed
-* @throws { BusinessException } 12000006 - error occured in crypto engine
-* @throws { BusinessException } 12000011 - queried entity does not exist
-* @throws { BusinessException } 12000012 - external error
-* @throws { BusinessException } 12000014 - memory is insufficient
-* @permission ohos.permission.ATTEST_KEY
-* @relation function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
-*/
-@!APILevel[
-    21,
-    permission: "ohos.permission.ATTEST_KEY",
-    stagemodelonly: true,
-    syscap: "SystemCapability.Security.Huks.Extension"
-]
-public func attestKeyItem(keyAlias: String, options: HuksOptions): Array<String>
 
 
 /**
@@ -2616,7 +2355,7 @@ public class HuksParam {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public var tag: HuksTag
+    public var tag: UInt32
     
     /**
     * Value of the tag.
@@ -2638,7 +2377,7 @@ public class HuksParam {
         stagemodelonly: true,
         syscap: "SystemCapability.Security.Huks.Core"
     ]
-    public init(tag: HuksTag, value: HuksParamValue)
+    public init(tag: UInt32, value: HuksParamValue)
 }
 
 

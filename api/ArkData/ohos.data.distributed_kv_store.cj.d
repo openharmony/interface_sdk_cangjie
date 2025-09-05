@@ -30,7 +30,7 @@ import ohos.business_exception.getUniversalErrorMsg
 * Provides methods related to device-collaboration distributed databases.
 * <p>To create a {@code DeviceKVStore} database, you can use the
 * {@link data.distributed.common.KVManager.getKVStore(Options, String)}
-* method with {@code KVStoreType} set to {@code DEVICE_COLLABORATION} for the input parameter Options.
+* method with {@code KVStoreType} set to {@code DeviceCollaboration} for the input parameter Options.
 * This database manages distributed
 * data by device, and cannot modify data synchronized from remote devices. When an application writes a
 * key-value pair entry
@@ -871,7 +871,7 @@ public class Query <: RemoteDataLite {
 * Provides methods related to single-version distributed databases.
 * <p>To create a {@code SingleKVStore} database,
 * you can use the {@link data.distributed.common.KVManager#getKVStore​(Options, String)} method
-* with {@code KVStoreType} set to {@code SINGLE_VERSION} for the input parameter {@code Options}.
+* with {@code KVStoreType} set to {@code SingleVersion} for the input parameter {@code Options}.
 * This database synchronizes data to other databases in time sequence.
 * The {@code SingleKVStore} database does not support
 * synchronous transactions, or data search using snapshots.

@@ -209,7 +209,7 @@ public class AbilityDelegator <: RemoteDataLite {
         stagemodelonly: true,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    public func startAbility(want: Want): Future<Unit>
+    public func startAbility(want: Want): Unit
     
     /**
     * Execute the given command in the aa tools side.
