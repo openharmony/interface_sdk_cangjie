@@ -2295,9 +2295,8 @@ public enum ApplicationType {
     Email |
     ...
     /**
-    * Default email identifier.
+    * Application type value.
     *
-    * @relation get the corresponding mapping value
     */
     @!APILevel[
         21,

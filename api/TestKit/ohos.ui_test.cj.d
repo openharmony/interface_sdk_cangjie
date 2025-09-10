@@ -1227,7 +1227,7 @@ public class Component {
     /**
     * Get the id attribute value.
     *
-    * @relation getId(): Promise<number>
+    * @relation getId(): Promise<string>
     */
     @!APILevel[
         21,
