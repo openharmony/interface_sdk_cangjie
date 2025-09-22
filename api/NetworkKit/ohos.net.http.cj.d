@@ -622,7 +622,6 @@ public enum HttpDataType {
 
 /**
 * Indicates the type of http data.
-* @relation string | Object | ArrayBuffer
 */
 @!APILevel[
     21,
@@ -632,7 +631,6 @@ public enum HttpDataType {
 public enum HttpData {
     /**
     * The returned type is string.
-    * @relation STRING
     */
     @!APILevel[
         21,
