@@ -32,8 +32,7 @@ import ohos.labels.*
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.Core"
 ]
 public enum DeviceAddressType {
@@ -42,8 +41,7 @@ public enum DeviceAddressType {
     * @relation RANDOM_DEVICE_ADDRESS = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     RandomDeviceAddress |
@@ -52,8 +50,7 @@ public enum DeviceAddressType {
     * @relation REAL_DEVICE_ADDRESS = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     RealDeviceAddress |
@@ -68,8 +65,7 @@ public enum DeviceAddressType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.Core"
 ]
 public enum WifiSecurityType {
@@ -78,8 +74,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_INVALID = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeInvalid |
@@ -88,8 +83,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_OPEN = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeOpen |
@@ -98,8 +92,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_WEP = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeWep |
@@ -108,8 +101,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_PSK = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypePsk |
@@ -118,8 +110,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_SAE = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeSae |
@@ -128,8 +119,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_EAP = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeEap |
@@ -138,8 +128,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_EAP_SUITE_B = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeEapSuiteB |
@@ -148,8 +137,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_OWE = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeOwe |
@@ -158,8 +146,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_WAPI_CERT = 8
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeWapiCert |
@@ -168,8 +155,7 @@ public enum WifiSecurityType {
     * @relation WIFI_SEC_TYPE_WAPI_PSK = 9
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.Core"
     ]
     WifiSecTypeWapiPsk |
@@ -184,8 +170,7 @@ public enum WifiSecurityType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public enum WifiCategory {
@@ -194,8 +179,7 @@ public enum WifiCategory {
     * @relation DEFAULT = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     Default |
@@ -204,8 +188,7 @@ public enum WifiCategory {
     * @relation WIFI6 = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     Wifi6 |
@@ -214,8 +197,7 @@ public enum WifiCategory {
     * @relation WIFI6_PLUS = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     Wifi6Plus |
@@ -230,8 +212,7 @@ public enum WifiCategory {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.P2P"
 ]
 public enum GroupOwnerBand {
@@ -240,8 +221,7 @@ public enum GroupOwnerBand {
     * @relation GO_BAND_AUTO  = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     GoBandAuto |
@@ -250,8 +230,7 @@ public enum GroupOwnerBand {
     * @relation GO_BAND_2GHZ  = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     GoBand2GHz |
@@ -260,8 +239,7 @@ public enum GroupOwnerBand {
     * @relation GO_BAND_5GHZ  = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     GoBand5GHz |
@@ -277,8 +255,7 @@ public enum GroupOwnerBand {
 * @relation function isWifiActive(): boolean
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public func isWifiActive(): Bool
@@ -292,9 +269,8 @@ public func isWifiActive(): Bool
 * @relation function getScanInfoList(): Array<WifiScanInfo>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public func getScanInfoList(): Array<WifiScanInfo>
@@ -309,9 +285,8 @@ public func getScanInfoList(): Array<WifiScanInfo>
 * @relation function p2pConnect(config: WifiP2PConfig): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.P2P"
 ]
 public func p2pConnect(config: WifiP2PConfig): Unit
@@ -326,9 +301,8 @@ public func p2pConnect(config: WifiP2PConfig): Unit
 * @relation function p2pCancelConnect(): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.P2P"
 ]
 public func p2pCancelConnect(): Unit
@@ -343,9 +317,8 @@ public func p2pCancelConnect(): Unit
 * @relation function startDiscoverDevices(): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.P2P"
 ]
 public func startDiscoverDevices(): Unit
@@ -360,9 +333,8 @@ public func startDiscoverDevices(): Unit
 * @relation function stopDiscoverDevices(): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.P2P"
 ]
 public func stopDiscoverDevices(): Unit
@@ -376,9 +348,8 @@ public func stopDiscoverDevices(): Unit
 * @relation function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public func on(eventType: WifiCallbackType, callback: Callback1Argument<Int32>): Unit
@@ -393,9 +364,8 @@ public func on(eventType: WifiCallbackType, callback: Callback1Argument<Int32>):
 * @relation function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.GET_WIFI_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public func off(eventType: WifiCallbackType, callback!: ?CallbackObject = None): Unit
@@ -406,8 +376,7 @@ public func off(eventType: WifiCallbackType, callback!: ?CallbackObject = None):
 */
 @Derive[ToString, Equatable, Hashable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public enum WifiCallbackType {
@@ -415,8 +384,7 @@ public enum WifiCallbackType {
     * Wi-Fi scan status change event type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     WifiScanStateChange |
@@ -430,8 +398,7 @@ public enum WifiCallbackType {
 * @relation interface WifiInfoElem
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public class WifiInfoElem {
@@ -440,8 +407,7 @@ public class WifiInfoElem {
     * @relation eid: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let eid: UInt32
@@ -451,8 +417,7 @@ public class WifiInfoElem {
     * @relation content: Uint8Array
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let content: Array<UInt8>
@@ -464,8 +429,7 @@ public class WifiInfoElem {
 * @relation interface WifiP2PConfig
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.P2P"
 ]
 public class WifiP2PConfig {
@@ -474,8 +438,7 @@ public class WifiP2PConfig {
     * @relation deviceAddress: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public let deviceAddress: String
@@ -486,8 +449,7 @@ public class WifiP2PConfig {
     * @relation netId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public let netId: Int32
@@ -497,8 +459,7 @@ public class WifiP2PConfig {
     * @relation passphrase: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public let passphrase: String
@@ -508,8 +469,7 @@ public class WifiP2PConfig {
     * @relation groupName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public let groupName: String
@@ -519,8 +479,7 @@ public class WifiP2PConfig {
     * @relation goBand: GroupOwnerBand
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public let goBand: GroupOwnerBand
@@ -530,8 +489,7 @@ public class WifiP2PConfig {
     * @relation deviceAddressType?: DeviceAddressType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public let deviceAddressType: DeviceAddressType
@@ -540,8 +498,7 @@ public class WifiP2PConfig {
     * WifiP2PConfig constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.P2P"
     ]
     public init(
@@ -560,8 +517,7 @@ public class WifiP2PConfig {
 * @relation interface WifiScanInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.WiFi.STA"
 ]
 public class WifiScanInfo {
@@ -570,8 +526,7 @@ public class WifiScanInfo {
     * @relation ssid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let ssid: String
@@ -581,8 +536,7 @@ public class WifiScanInfo {
     * @relation bssid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let bssid: String
@@ -592,8 +546,7 @@ public class WifiScanInfo {
     * @relation bssidType: DeviceAddressType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let bssidType: DeviceAddressType
@@ -603,8 +556,7 @@ public class WifiScanInfo {
     * @relation capabilities: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let capabilities: String
@@ -614,8 +566,7 @@ public class WifiScanInfo {
     * @relation securityType: WifiSecurityType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let securityType: WifiSecurityType
@@ -625,8 +576,7 @@ public class WifiScanInfo {
     * @relation rssi: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let rssi: Int32
@@ -636,8 +586,7 @@ public class WifiScanInfo {
     * @relation band: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let band: Int32
@@ -647,8 +596,7 @@ public class WifiScanInfo {
     * @relation frequency: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let frequency: Int32
@@ -658,8 +606,7 @@ public class WifiScanInfo {
     * @relation channelWidth: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let channelWidth: Int32
@@ -669,8 +616,7 @@ public class WifiScanInfo {
     * @relation centerFrequency0: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let centerFrequency0: Int32
@@ -680,8 +626,7 @@ public class WifiScanInfo {
     * @relation centerFrequency1: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let centerFrequency1: Int32
@@ -691,8 +636,7 @@ public class WifiScanInfo {
     * @relation infoElems: Array<WifiInfoElem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let infoElems: Array<WifiInfoElem>
@@ -702,8 +646,7 @@ public class WifiScanInfo {
     * @relation timestamp: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let timestamp: Int64
@@ -713,8 +656,7 @@ public class WifiScanInfo {
     * @relation supportedWifiCategory: WifiCategory
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let supportedWifiCategory: WifiCategory
@@ -724,8 +666,7 @@ public class WifiScanInfo {
     * @relation isHiLinkNetwork: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.WiFi.STA"
     ]
     public let isHiLinkNetwork: Bool

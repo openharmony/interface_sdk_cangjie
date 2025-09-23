@@ -31,8 +31,7 @@ import std.collection.*
 * @relation function createAVImageGenerator(): Promise<AVImageGenerator>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
 ]
 public func createAVImageGenerator(): AVImageGenerator
@@ -45,8 +44,7 @@ public func createAVImageGenerator(): AVImageGenerator
 * @relation interface AVImageGenerator
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
 ]
 public class AVImageGenerator <: RemoteDataLite {
@@ -56,8 +54,7 @@ public class AVImageGenerator <: RemoteDataLite {
     * @relation fdSrc ?: AVFileDescriptor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     public mut prop fdSrc: AVFileDescriptor
@@ -73,8 +70,7 @@ public class AVImageGenerator <: RemoteDataLite {
     * @relation fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     public func fetchFrameByTime(timeUs: Int64, options: AVImageQueryOptions, param: PixelMapParams): PixelMap
@@ -86,8 +82,7 @@ public class AVImageGenerator <: RemoteDataLite {
     * @relation release(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     public func release(): Unit
@@ -101,8 +96,7 @@ public class AVImageGenerator <: RemoteDataLite {
 * @relation interface AVFileDescriptor
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Media.Core"
 ]
 public class AVFileDescriptor {
@@ -113,8 +107,7 @@ public class AVFileDescriptor {
     * @relation fd: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.Core"
     ]
     public var fd: Int32
@@ -126,8 +119,7 @@ public class AVFileDescriptor {
     * @relation offset?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.Core"
     ]
     public var offset: Int64
@@ -139,8 +131,7 @@ public class AVFileDescriptor {
     * @relation length?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.Core"
     ]
     public var length: Int64
@@ -149,8 +140,7 @@ public class AVFileDescriptor {
     * AVFileDescriptor constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.Core"
     ]
     public init(
@@ -167,8 +157,7 @@ public class AVFileDescriptor {
 * @relation interface PixelMapParams
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
 ]
 public class PixelMapParams {
@@ -179,8 +168,7 @@ public class PixelMapParams {
     * @relation width?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     public var width: Int32
@@ -192,8 +180,7 @@ public class PixelMapParams {
     * @relation height?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     public var height: Int32
@@ -202,8 +189,7 @@ public class PixelMapParams {
     * PixelMapParams constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     public init(width!: Int32 = -1, height!: Int32 = -1)
@@ -217,8 +203,7 @@ public class PixelMapParams {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
 ]
 public enum AVImageQueryOptions {
@@ -228,8 +213,7 @@ public enum AVImageQueryOptions {
     * @relation AV_IMAGE_QUERY_NEXT_SYNC = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     AvImageQueryNextSync |
@@ -239,8 +223,7 @@ public enum AVImageQueryOptions {
     * @relation AV_IMAGE_QUERY_PREVIOUS_SYNC = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     AvImageQueryPreviousSync |
@@ -250,8 +233,7 @@ public enum AVImageQueryOptions {
     * @relation AV_IMAGE_QUERY_CLOSEST_SYNC = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     AvImageQueryClosestSync |
@@ -261,8 +243,7 @@ public enum AVImageQueryOptions {
     * @relation AV_IMAGE_QUERY_CLOSEST = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Media.AVImageGenerator"
     ]
     AvImageQueryClosest |

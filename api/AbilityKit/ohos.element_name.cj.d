@@ -26,8 +26,7 @@ import ohos.labels.*
 * @relation export interface ElementName
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class ElementName {
@@ -37,8 +36,7 @@ public class ElementName {
     * @relation deviceId?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var deviceId: String
@@ -49,8 +47,7 @@ public class ElementName {
     * @relation bundleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var bundleName: String
@@ -61,8 +58,7 @@ public class ElementName {
     * @relation abilityName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var abilityName: String
@@ -73,8 +69,7 @@ public class ElementName {
     * @relation moduleName?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var moduleName: String
@@ -83,8 +78,7 @@ public class ElementName {
     * ElementName constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public init(bundleName: String, abilityName: String, deviceId!: String = "", moduleName!: String = "")

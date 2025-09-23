@@ -37,8 +37,7 @@ import std.math.numeric.*
 * @relation function createCipher(transformation: string): Cipher
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public func createCipher(transformation: String): Cipher
@@ -50,8 +49,7 @@ public func createCipher(transformation: String): Cipher
 * @relation interface Cipher
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public class Cipher <: RemoteDataLite {
@@ -62,8 +60,7 @@ public class Cipher <: RemoteDataLite {
     * @relation readonly algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public prop algName: String
@@ -83,8 +80,7 @@ public class Cipher <: RemoteDataLite {
     * @relation initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public func initialize(opMode: CryptoMode, key: Key, params: ?ParamsSpec): Unit
@@ -102,8 +98,7 @@ public class Cipher <: RemoteDataLite {
     * @relation updateSync(data: DataBlob): DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public func update(data: DataBlob): DataBlob
@@ -122,8 +117,7 @@ public class Cipher <: RemoteDataLite {
     * @relation doFinalSync(data: DataBlob | null): DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public func doFinal(data: ?DataBlob): DataBlob
@@ -136,8 +130,7 @@ public class Cipher <: RemoteDataLite {
 * @relation interface DataBlob
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework"
 ]
 public class DataBlob {
@@ -147,8 +140,7 @@ public class DataBlob {
     * @relation data: Uint8Array
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     public var data: Array<UInt8>
@@ -158,8 +150,7 @@ public class DataBlob {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     public init(data: Array<UInt8>)
@@ -173,8 +164,7 @@ public class DataBlob {
 * @relation interface IvParamsSpec extends ParamsSpec
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public class IvParamsSpec <: ParamsSpec {
@@ -188,8 +178,7 @@ public class IvParamsSpec <: ParamsSpec {
     * @relation iv: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var iv: DataBlob
@@ -199,8 +188,7 @@ public class IvParamsSpec <: ParamsSpec {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public init(algName: String, iv: DataBlob)
@@ -213,8 +201,7 @@ public class IvParamsSpec <: ParamsSpec {
 * @relation interface GcmParamsSpec extends ParamsSpec
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public class GcmParamsSpec <: ParamsSpec {
@@ -224,8 +211,7 @@ public class GcmParamsSpec <: ParamsSpec {
     * @relation aad: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var aad: DataBlob
@@ -236,8 +222,7 @@ public class GcmParamsSpec <: ParamsSpec {
     * @relation iv: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var iv: DataBlob
@@ -248,8 +233,7 @@ public class GcmParamsSpec <: ParamsSpec {
     * @relation authTag: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var authTag: DataBlob
@@ -259,8 +243,7 @@ public class GcmParamsSpec <: ParamsSpec {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public init(algName: String, iv: DataBlob, aad: DataBlob, authTag: DataBlob)
@@ -273,8 +256,7 @@ public class GcmParamsSpec <: ParamsSpec {
 * @relation interface CcmParamsSpec extends ParamsSpec
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public class CcmParamsSpec <: ParamsSpec {
@@ -284,8 +266,7 @@ public class CcmParamsSpec <: ParamsSpec {
     * @relation authTag: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var authTag: DataBlob
@@ -296,8 +277,7 @@ public class CcmParamsSpec <: ParamsSpec {
     * @relation aad: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var aad: DataBlob
@@ -308,8 +288,7 @@ public class CcmParamsSpec <: ParamsSpec {
     * @relation iv: DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var iv: DataBlob
@@ -319,8 +298,7 @@ public class CcmParamsSpec <: ParamsSpec {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public init(algName: String, iv: DataBlob, aad: DataBlob, authTag: DataBlob)
@@ -333,8 +311,7 @@ public class CcmParamsSpec <: ParamsSpec {
 * @relation enum Result
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework"
 ]
 public enum Result <: ToString {
@@ -344,8 +321,7 @@ public enum Result <: ToString {
     * @relation INVALID_PARAMS = 401
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     InvalidParams |
@@ -355,8 +331,7 @@ public enum Result <: ToString {
     * @relation NOT_SUPPORT = 801
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     NotSupport |
@@ -366,8 +341,7 @@ public enum Result <: ToString {
     * @relation ERR_OUT_OF_MEMORY = 17620001
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     ErrOutOfMemory |
@@ -377,8 +351,7 @@ public enum Result <: ToString {
     * @relation ERR_RUNTIME_ERROR = 17620002
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     ErrRuntimeError |
@@ -388,8 +361,7 @@ public enum Result <: ToString {
     * @relation ERR_CRYPTO_OPERATION = 17630001
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     ErrCryptoOperation |
@@ -399,8 +371,7 @@ public enum Result <: ToString {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     public func getValue(): Int32
@@ -411,8 +382,7 @@ public enum Result <: ToString {
     * @throws IllegalArgumentException - The type is not supported.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework"
     ]
     public func toString(): String
@@ -426,8 +396,7 @@ public enum Result <: ToString {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public enum CryptoMode {
@@ -437,8 +406,7 @@ public enum CryptoMode {
     * @relation ENCRYPT_MODE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     EncryptMode |
@@ -448,8 +416,7 @@ public enum CryptoMode {
     * @relation DECRYPT_MODE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     DecryptMode |
@@ -465,8 +432,7 @@ public enum CryptoMode {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public enum CipherSpecItem {
@@ -476,8 +442,7 @@ public enum CipherSpecItem {
     * @relation OAEP_MD_NAME_STR = 100
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     OaepMdNameStr |
@@ -487,8 +452,7 @@ public enum CipherSpecItem {
     * @relation OAEP_MGF_NAME_STR = 101
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     OaepMgfNameStr |
@@ -498,8 +462,7 @@ public enum CipherSpecItem {
     * @relation OAEP_MGF1_MD_STR = 102
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     OaepMgf1MdStr |
@@ -509,8 +472,7 @@ public enum CipherSpecItem {
     * @relation OAEP_MGF1_PSRC_UINT8ARR = 103
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     OaepMgf1PsrcUint8Arr |
@@ -526,8 +488,7 @@ public enum CipherSpecItem {
 * @relation interface Key
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Key"
 ]
 public interface Key {
@@ -537,8 +498,7 @@ public interface Key {
     * @relation readonly format: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key"
     ]
     prop format: String
@@ -549,8 +509,7 @@ public interface Key {
     * @relation readonly algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key"
     ]
     prop algName: String
@@ -567,8 +526,7 @@ public interface Key {
     * @relation getEncoded(): DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key"
     ]
     func getEncoded(): DataBlob
@@ -582,8 +540,7 @@ public interface Key {
 * @relation interface ParamsSpec
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Cipher"
 ]
 public open class ParamsSpec {
@@ -593,8 +550,7 @@ public open class ParamsSpec {
     * @relation algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Cipher"
     ]
     public var algName: String
@@ -610,8 +566,7 @@ public open class ParamsSpec {
 * @relation function createMac(algName: string): Mac
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Mac"
 ]
 public func createMac(algName: String): Mac
@@ -624,8 +579,7 @@ public func createMac(algName: String): Mac
 * @relation interface Mac
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Mac"
 ]
 public class Mac <: RemoteDataLite {
@@ -635,8 +589,7 @@ public class Mac <: RemoteDataLite {
     * @relation readonly algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Mac"
     ]
     public prop algName: String
@@ -653,8 +606,7 @@ public class Mac <: RemoteDataLite {
     * @relation initSync(key: SymKey): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Mac"
     ]
     public func initialize(key: SymKey): Unit
@@ -669,8 +621,7 @@ public class Mac <: RemoteDataLite {
     * @relation updateSync(input: DataBlob): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Mac"
     ]
     public func update(input: DataBlob): Unit
@@ -686,8 +637,7 @@ public class Mac <: RemoteDataLite {
     * @relation doFinalSync(): DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Mac"
     ]
     public func doFinal(): DataBlob
@@ -699,8 +649,7 @@ public class Mac <: RemoteDataLite {
     * @relation getMacLength(): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Mac"
     ]
     public func getMacLength(): UInt32
@@ -718,8 +667,7 @@ public class Mac <: RemoteDataLite {
 * @relation function createMd(algName: string): Md
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.MessageDigest"
 ]
 public func createMd(algName: String): Md
@@ -732,8 +680,7 @@ public func createMd(algName: String): Md
 * @relation interface Md
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.MessageDigest"
 ]
 public class Md <: RemoteDataLite {
@@ -743,8 +690,7 @@ public class Md <: RemoteDataLite {
     * @relation readonly algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.MessageDigest"
     ]
     public prop algName: String
@@ -760,8 +706,7 @@ public class Md <: RemoteDataLite {
     * @relation updateSync(input: DataBlob): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.MessageDigest"
     ]
     public func update(input: DataBlob): Unit
@@ -777,8 +722,7 @@ public class Md <: RemoteDataLite {
     * @relation digestSync(): DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.MessageDigest"
     ]
     public func digest(): DataBlob
@@ -791,8 +735,7 @@ public class Md <: RemoteDataLite {
     * @relation getMdLength(): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.MessageDigest"
     ]
     public func getMdLength(): UInt32
@@ -807,8 +750,7 @@ public class Md <: RemoteDataLite {
 * @relation function createRandom(): Random
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Rand"
 ]
 public func createRandom(): Random
@@ -820,8 +762,7 @@ public func createRandom(): Random
 * @relation interface Random
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Rand"
 ]
 public class Random <: RemoteDataLite {
@@ -831,8 +772,7 @@ public class Random <: RemoteDataLite {
     * @relation readonly algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Rand"
     ]
     public prop algName: String
@@ -849,8 +789,7 @@ public class Random <: RemoteDataLite {
     * @relation generateRandomSync(len: number): DataBlob
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Rand"
     ]
     public func generateRandom(len: Int32): DataBlob
@@ -863,8 +802,7 @@ public class Random <: RemoteDataLite {
     * @relation setSeed(seed: DataBlob): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Rand"
     ]
     public func setSeed(seed: DataBlob): Unit
@@ -878,8 +816,7 @@ public class Random <: RemoteDataLite {
 * @relation interface SymKey extends Key
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
 ]
 public class SymKey <: RemoteDataLite & Key {
@@ -888,8 +825,7 @@ public class SymKey <: RemoteDataLite & Key {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public prop algName: String
@@ -899,8 +835,7 @@ public class SymKey <: RemoteDataLite & Key {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public prop format: String
@@ -917,8 +852,7 @@ public class SymKey <: RemoteDataLite & Key {
     * @throws { BusinessException } 17630001 - crypto operation error.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public func getEncoded(): DataBlob
@@ -930,8 +864,7 @@ public class SymKey <: RemoteDataLite & Key {
     * @relation clearMem(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public func clearMem(): Unit
@@ -949,8 +882,7 @@ public class SymKey <: RemoteDataLite & Key {
 * @relation function createSymKeyGenerator(algName: string): SymKeyGenerator
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
 ]
 public func createSymKeyGenerator(algName: String): SymKeyGenerator
@@ -962,8 +894,7 @@ public func createSymKeyGenerator(algName: String): SymKeyGenerator
 * @relation interface SymKeyGenerator
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
 ]
 public class SymKeyGenerator <: RemoteDataLite {
@@ -973,8 +904,7 @@ public class SymKeyGenerator <: RemoteDataLite {
     * @relation readonly algName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public prop algName: String
@@ -987,8 +917,7 @@ public class SymKeyGenerator <: RemoteDataLite {
     * @relation generateSymKeySync(): SymKey
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public func generateSymKey(): SymKey
@@ -1004,8 +933,7 @@ public class SymKeyGenerator <: RemoteDataLite {
     * @relation convertKeySync(key: DataBlob): SymKey
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Security.CryptoFramework.Key.SymKey"
     ]
     public func convertKey(key: DataBlob): SymKey

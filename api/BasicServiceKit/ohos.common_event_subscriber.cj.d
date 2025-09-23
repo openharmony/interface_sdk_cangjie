@@ -24,8 +24,7 @@ import ohos.ffi.{RetDataI32, RetDataCString, RetDataBool, RetDataI64}
 * @relation export interface CommonEventSubscriber
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public class CommonEventSubscriber <: RemoteDataLite {

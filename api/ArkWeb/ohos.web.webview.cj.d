@@ -38,8 +38,7 @@ import std.collection.*
 * @relation interface BackForwardList
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public class BackForwardList <: RemoteDataLite {
@@ -49,8 +48,7 @@ public class BackForwardList <: RemoteDataLite {
     * @relation currentIndex: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public prop currentIndex: Int32
@@ -61,8 +59,7 @@ public class BackForwardList <: RemoteDataLite {
     * @relation size: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public prop size: Int32
@@ -76,8 +73,7 @@ public class BackForwardList <: RemoteDataLite {
     * @relation getItemAtIndex(index: number): HistoryItem
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getItemAtIndex(index: Int32): HistoryItem
@@ -90,8 +86,7 @@ public class BackForwardList <: RemoteDataLite {
 * @relation class WebCookieManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public class WebCookieManager {
@@ -107,8 +102,7 @@ public class WebCookieManager {
     * @relation static fetchCookieSync(url: string, incognito?: boolean): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func fetchCookie(url: String, incognito!: Bool = false): String
@@ -126,8 +120,7 @@ public class WebCookieManager {
     * @relation static configCookieSync(url: string, value: string, incognito?: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func configCookie(url: String, value: String, incognito!: Bool = false): Unit
@@ -140,8 +133,7 @@ public class WebCookieManager {
     * @relation static putAcceptCookieEnabled(accept: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func putAcceptCookieEnabled(accept: Bool): Unit
@@ -153,8 +145,7 @@ public class WebCookieManager {
     * @relation static isCookieAllowed(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func isCookieAllowed(): Bool
@@ -167,8 +158,7 @@ public class WebCookieManager {
     * @relation static putAcceptThirdPartyCookieEnabled(accept: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func putAcceptThirdPartyCookieEnabled(accept: Bool): Unit
@@ -180,8 +170,7 @@ public class WebCookieManager {
     * @relation static isThirdPartyCookieAllowed(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func isThirdPartyCookieAllowed(): Bool
@@ -195,8 +184,7 @@ public class WebCookieManager {
     * @relation static existCookie(incognito?: boolean): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func existCookie(incognito!: Bool = false): Bool
@@ -209,8 +197,7 @@ public class WebCookieManager {
     * @relation static clearAllCookiesSync(incognito?: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func clearAllCookies(incognito!: Bool = false): Unit
@@ -221,8 +208,7 @@ public class WebCookieManager {
     * @relation static clearSessionCookieSync(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func clearSessionCookie(): Unit
@@ -236,8 +222,7 @@ public class WebCookieManager {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public enum SecurityLevel {
@@ -247,8 +232,7 @@ public enum SecurityLevel {
     * @relation NONE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     NoneLevel |
@@ -258,8 +242,7 @@ public enum SecurityLevel {
     * @relation SECURE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     Secure |
@@ -270,8 +253,7 @@ public enum SecurityLevel {
     * @relation WARNING = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     Warning |
@@ -281,8 +263,7 @@ public enum SecurityLevel {
     * @relation DANGEROUS = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     Danger |
@@ -298,8 +279,7 @@ public enum SecurityLevel {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public enum WebHitTestType {
@@ -309,8 +289,7 @@ public enum WebHitTestType {
     * @relation EditText = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     EditText |
@@ -320,8 +299,7 @@ public enum WebHitTestType {
     * @relation Email = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     Email |
@@ -331,8 +309,7 @@ public enum WebHitTestType {
     * @relation Unknown = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     Unknown |
@@ -347,8 +324,7 @@ public enum WebHitTestType {
 * @relation interface WebHeader
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public class WebHeader {
@@ -358,8 +334,7 @@ public class WebHeader {
     * @relation headerKey: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var headerKey: String
@@ -370,8 +345,7 @@ public class WebHeader {
     * @relation headerValue: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var headerValue: String
@@ -380,8 +354,7 @@ public class WebHeader {
     * WebHeader constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public init(headerKey: String, headerValue: String)
@@ -394,8 +367,7 @@ public class WebHeader {
 * @relation interface HitTestValue
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public class HitTestValue {
@@ -405,8 +377,7 @@ public class HitTestValue {
     * @relation type: WebHitTestType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var hitTestType: WebHitTestType
@@ -418,8 +389,7 @@ public class HitTestValue {
     * @relation extra: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var extra: String
@@ -432,8 +402,7 @@ public class HitTestValue {
 * @relation interface HistoryItem
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public class HistoryItem {
@@ -443,8 +412,7 @@ public class HistoryItem {
     * @relation icon: image.PixelMap
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public let icon: ?PixelMap
@@ -455,8 +423,7 @@ public class HistoryItem {
     * @relation historyUrl: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var historyUrl: String
@@ -467,8 +434,7 @@ public class HistoryItem {
     * @relation historyRawUrl: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var historyRawUrl: String
@@ -479,8 +445,7 @@ public class HistoryItem {
     * @relation title: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public var title: String
@@ -497,8 +462,7 @@ public class HistoryItem {
 * @relation class WebviewController
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Web.Webview.Core"
 ]
 public class WebviewController <: RemoteDataLite {
@@ -509,8 +473,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation constructor(webTag?: string)
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public init(webTag!: ?String = None)
@@ -522,8 +485,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation static setWebDebuggingAccess(webDebuggingAccess: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public static func setWebDebuggingAccess(webDebuggingAccess: Bool): Unit
@@ -540,8 +502,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func loadUrl<T>(url: T, headers!: Array<WebHeader> = Array<WebHeader>()): Unit where T <: ResourceStr
@@ -554,8 +515,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation refresh(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func refresh(): Unit
@@ -569,8 +529,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getUserAgent(): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getUserAgent(): String
@@ -584,8 +543,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation accessBackward(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func accessBackward(): Bool
@@ -600,8 +558,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation setCustomUserAgent(userAgent: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func setCustomUserAgent(userAgent: String): Unit
@@ -615,8 +572,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getCustomUserAgent(): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getCustomUserAgent(): String
@@ -632,8 +588,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation runJavaScript(script: string, callback: AsyncCallback<string>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func runJavaScript(script: String, callback: AsyncCallback<String>): Unit
@@ -654,8 +609,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation registerJavaScriptProxy(object: object, name: string, methodList: Array<string>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func registerJavaScriptProxy(funcs: Array<(String) -> String>, name: String, methodList: Array<String>): Unit
@@ -669,8 +623,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getUrl(): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getUrl(): String
@@ -684,8 +637,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getOriginalUrl(): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getOriginalUrl(): String
@@ -701,8 +653,7 @@ public class WebviewController <: RemoteDataLite {
     * relation pageUp(top: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func pageUp(top: Bool): Unit
@@ -718,8 +669,7 @@ public class WebviewController <: RemoteDataLite {
     * relation pageDown(bottom: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func pageDown(bottom: Bool): Unit
@@ -736,8 +686,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation scrollTo(x: number, y: number, duration?: number): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func scrollTo(x: Float32, y: Float32, duration!: ?Int32 = None): Unit
@@ -753,8 +702,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation scrollBy(deltaX: number, deltaY: number, duration?: number): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func scrollBy(deltaX: Float32, deltaY: Float32, duration!: ?Int32 = None): Unit
@@ -767,8 +715,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation forward(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func forward(): Unit
@@ -781,8 +728,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation backward(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func backward(): Unit
@@ -796,8 +742,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation backOrForward(step: number): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func backOrForward(step: Int32): Unit
@@ -811,8 +756,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getPageHeight(): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getPageHeight(): Int32
@@ -826,8 +770,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getTitle(): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getTitle(): String
@@ -843,8 +786,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation zoom(factor: number): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func zoom(factor: Float32): Unit
@@ -858,8 +800,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation zoomIn(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func zoomIn(): Unit
@@ -873,8 +814,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation zoomOut(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func zoomOut(): Unit
@@ -888,8 +828,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getHitTestValue(): HitTestValue
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getHitTestValue(): HitTestValue
@@ -902,8 +841,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation clearHistory(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func clearHistory(): Unit
@@ -918,8 +856,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation accessStep(step: number): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func accessStep(step: Int32): Bool
@@ -933,8 +870,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getHitTest(): WebHitTestType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getHitTest(): WebHitTestType
@@ -957,8 +893,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func storeWebArchive(baseName: String, autoName: Bool, callback: AsyncCallback<String>): Unit
@@ -973,8 +908,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation enableSafeBrowsing(enable: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func enableSafeBrowsing(enable: Bool): Unit
@@ -988,8 +922,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation isSafeBrowsingEnabled(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func isSafeBrowsingEnabled(): Bool
@@ -1003,8 +936,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getSecurityLevel(): SecurityLevel
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getSecurityLevel(): SecurityLevel
@@ -1018,8 +950,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation isIncognitoMode(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func isIncognitoMode(): Bool
@@ -1035,8 +966,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation removeCache(clearRom: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func removeCache(clearRom: Bool): Unit
@@ -1050,8 +980,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation getBackForwardEntries(): BackForwardList
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func getBackForwardEntries(): BackForwardList
@@ -1064,8 +993,7 @@ public class WebviewController <: RemoteDataLite {
     * @relation stop(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Web.Webview.Core"
     ]
     public func stop(): Unit
