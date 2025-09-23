@@ -50,8 +50,7 @@ import ohos.multimedia.image.*
 * @relation declare class Ability
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
 ]
 abstract sealed class Ability <: FFIData {
@@ -59,8 +58,7 @@ abstract sealed class Ability <: FFIData {
     * register Ability
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public static func registerCreator(name: String, creator: () -> Ability): Unit
@@ -73,8 +71,7 @@ abstract sealed class Ability <: FFIData {
 * @relation declare class AbilityStageContext extends Context
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class AbilityStageContext <: Context {
@@ -84,8 +81,7 @@ public class AbilityStageContext <: Context {
     * @relation currentHapModuleInfo: HapModuleInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var currentHapModuleInfo: HapModuleInfo
@@ -99,8 +95,7 @@ public class AbilityStageContext <: Context {
 * @relation declare class ApplicationContext extends Context
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class ApplicationContext <: Context {
@@ -114,8 +109,7 @@ public class ApplicationContext <: Context {
 * @relation declare class Context extends BaseContext
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public open class Context <: BaseContext {
@@ -125,8 +119,7 @@ public open class Context <: BaseContext {
     * @relation resourceManager: resmgr.ResourceManager
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public prop resourceManager: ResourceManager
@@ -137,8 +130,7 @@ public open class Context <: BaseContext {
     * @relation applicationInfo: ApplicationInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public prop applicationInfo: ApplicationInfo
@@ -149,8 +141,7 @@ public open class Context <: BaseContext {
     * @relation filesDir: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public prop filesDir: String
@@ -161,8 +152,7 @@ public open class Context <: BaseContext {
     * @relation area: contextConstant.AreaMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop area: AreaMode
@@ -179,8 +169,7 @@ extend Context <: SystemObjectInteropTypeToJS {
     * @throws { IllegalArgumentException } - The type is not supported.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func toJSValue(context: JSContext): JSValue
@@ -190,8 +179,7 @@ extend Context <: SystemObjectInteropTypeToJS {
 * create cangjie object from arkts object
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public func createUIAbilityContextFromJSValue(context: JSContext, input: JSValue): UIAbilityContext
@@ -201,8 +189,7 @@ public func createUIAbilityContextFromJSValue(context: JSContext, input: JSValue
 * create cangjie object from arkts object
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public func createAbilityStageContextFromJSValue(context: JSContext, input: JSValue): AbilityStageContext
@@ -212,8 +199,7 @@ public func createAbilityStageContextFromJSValue(context: JSContext, input: JSVa
 * create cangjie object from arkts object
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public func createApplicationContextFromJSValue(context: JSContext, input: JSValue): ApplicationContext
@@ -223,8 +209,7 @@ public func createApplicationContextFromJSValue(context: JSContext, input: JSVal
 * create cangjie object from arkts object
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public func createContextFromJSValue(context: JSContext, input: JSValue): Context
@@ -234,8 +219,7 @@ public func createContextFromJSValue(context: JSContext, input: JSValue): Contex
 * interface for cangjie object to arkts object 
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public interface SystemObjectInteropTypeToJS {
@@ -243,8 +227,7 @@ public interface SystemObjectInteropTypeToJS {
     * convert cangjie object ot arkts object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     func toJSValue(context: JSContext): JSValue
@@ -262,8 +245,7 @@ public interface SystemObjectInteropTypeToJS {
 * @relation declare class UIAbility extends Ability
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
 ]
 public open class UIAbility <: Ability {
@@ -273,8 +255,7 @@ public open class UIAbility <: Ability {
     * @relation launchWant: Want
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public mut prop launchWant: Want
@@ -285,8 +266,7 @@ public open class UIAbility <: Ability {
     * @relation lastRequestWant: Want
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public mut prop lastRequestWant: Want
@@ -297,8 +277,7 @@ public open class UIAbility <: Ability {
     * @relation context: UIAbilityContext
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public mut prop context: UIAbilityContext
@@ -311,8 +290,7 @@ public open class UIAbility <: Ability {
     * @relation onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onCreate(want: Want, launchParam: LaunchParam): Unit
@@ -328,8 +306,7 @@ public open class UIAbility <: Ability {
     * @relation onDestroy(): void | Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onDestroy(): Unit
@@ -340,8 +317,7 @@ public open class UIAbility <: Ability {
     * @relation onWindowStageCreate(windowStage: window.WindowStage): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onWindowStageCreate(windowStage: WindowStage): Unit
@@ -352,8 +328,7 @@ public open class UIAbility <: Ability {
     * @relation onWindowStageDestroy(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onWindowStageDestroy(): Unit
@@ -368,8 +343,7 @@ public open class UIAbility <: Ability {
     * @relation onForeground(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onForeground(): Unit
@@ -382,8 +356,7 @@ public open class UIAbility <: Ability {
     * @relation onBackground(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onBackground(): Unit
@@ -401,8 +374,7 @@ public open class UIAbility <: Ability {
     * @relation onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.AbilityCore"
     ]
     public open func onNewWant(want: Want, launchParam: LaunchParam): Unit
@@ -419,8 +391,7 @@ public open class UIAbility <: Ability {
 * @relation declare class UIAbilityContext extends Context
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public open class UIAbilityContext <: Context {
@@ -465,8 +436,7 @@ public open class UIAbilityContext <: Context {
     * @relation startAbility(want: Want, options?: StartOptions): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func startAbility(want: Want, options!: ?StartOptions = None): Unit
@@ -480,8 +450,7 @@ public open class UIAbilityContext <: Context {
     * @relation terminateSelf(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func terminateSelf(): Unit
@@ -496,8 +465,7 @@ public open class UIAbilityContext <: Context {
     * @relation terminateSelfWithResult(parameter: AbilityResult): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func terminateSelfWithResult(parameter: AbilityResult): Unit
@@ -509,8 +477,7 @@ public open class UIAbilityContext <: Context {
     * @relation isTerminating(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func isTerminating(): Bool
@@ -553,8 +520,7 @@ public open class UIAbilityContext <: Context {
     * @relation startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): Unit
@@ -595,8 +561,7 @@ public open class UIAbilityContext <: Context {
     * @relation startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): Unit
@@ -629,8 +594,7 @@ public open class UIAbilityContext <: Context {
     * @relation requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResult>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func requestDialogService(want: Want, result: AsyncCallback<RequestResult>): Unit

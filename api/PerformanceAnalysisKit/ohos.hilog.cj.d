@@ -23,8 +23,7 @@ import ohos.labels.APILevel
 * @relation enum LogLevel
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.HiviewDFX.HiLog"
 ]
 public enum LogLevel {
@@ -34,8 +33,7 @@ public enum LogLevel {
     * @relation DEBUG = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     Debug |
@@ -45,8 +43,7 @@ public enum LogLevel {
     * @relation INFO = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     Info |
@@ -56,8 +53,7 @@ public enum LogLevel {
     * @relation WARN = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     Warning |
@@ -67,8 +63,7 @@ public enum LogLevel {
     * @relation ERROR = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     Error |
@@ -78,8 +73,7 @@ public enum LogLevel {
     * @relation FATAL = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     Fatal |
@@ -93,8 +87,7 @@ public enum LogLevel {
 * @relation declare namespace hilog
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.HiviewDFX.HiLog"
 ]
 public class Hilog {
@@ -104,8 +97,7 @@ public class Hilog {
     * @relation function isLoggable(domain: number, tag: string, level: LogLevel): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     public static func isLoggable(domain: UInt32, tag: String, level: LogLevel): Bool
@@ -116,8 +108,7 @@ public class Hilog {
     * @relation function debug(domain: number, tag: string, format: string, ...args: (Object | undefined | null)[]): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     public static func debug(domain: UInt32, tag: String, format: String, args: Array<String>): Unit
@@ -128,8 +119,7 @@ public class Hilog {
     * @relation function info(domain: number, tag: string, format: string, ...args: (Object | undefined | null)[]): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     public static func info(domain: UInt32, tag: String, format: String, args: Array<String>): Unit
@@ -140,8 +130,7 @@ public class Hilog {
     * @relation function warn(domain: number, tag: string, format: string, ...args: (Object | undefined | null)[]): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     public static func warn(domain: UInt32, tag: String, format: String, args: Array<String>): Unit
@@ -152,8 +141,7 @@ public class Hilog {
     * @relation function error(domain: number, tag: string, format: string, ...args: (Object | undefined | null)[]): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     public static func error(domain: UInt32, tag: String, format: String, args: Array<String>): Unit
@@ -164,8 +152,7 @@ public class Hilog {
     * @relation function fatal(domain: number, tag: string, format: string, ...args: (Object | undefined | null)[]): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiLog"
     ]
     public static func fatal(domain: UInt32, tag: String, format: String, args: Array<String>): Unit

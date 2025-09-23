@@ -30,8 +30,7 @@ import ohos.callback_invoke.*
 * @relation export interface NetSpecifier
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetSpecifier {
@@ -41,8 +40,7 @@ public class NetSpecifier {
     * @relation netCapabilities: NetCapabilities
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var netCapabilities: NetCapabilities
@@ -53,8 +51,7 @@ public class NetSpecifier {
     * @relation bearerPrivateIdentifier?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var bearerPrivateIdentifier: String
@@ -63,8 +60,7 @@ public class NetSpecifier {
     * NetSpecifier constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public init(netCapabilities: NetCapabilities, bearerPrivateIdentifier!: String = "")
@@ -77,8 +73,7 @@ public class NetSpecifier {
 * @relation export interface NetCapabilityInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetCapabilityInfo {
@@ -88,8 +83,7 @@ public class NetCapabilityInfo {
     * @relation netHandle: NetHandle
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var netHandle: NetHandle
@@ -100,8 +94,7 @@ public class NetCapabilityInfo {
     * @relation netCap: NetCapabilities
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var netCap: NetCapabilities
@@ -114,8 +107,7 @@ public class NetCapabilityInfo {
 * @relation export interface NetCapabilities
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetCapabilities {
@@ -125,8 +117,7 @@ public class NetCapabilities {
     * @relation bearerTypes: Array<NetBearType>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var bearerTypes: Array<NetBearType>
@@ -137,8 +128,7 @@ public class NetCapabilities {
     * @relation linkUpBandwidthKbps?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var linkUpBandwidthKbps: UInt32
@@ -149,8 +139,7 @@ public class NetCapabilities {
     * @relation linkDownBandwidthKbps?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var linkDownBandwidthKbps: UInt32
@@ -161,8 +150,7 @@ public class NetCapabilities {
     * @relation networkCap?: Array<NetCap>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var networkCap: Array<NetCap>
@@ -171,8 +159,7 @@ public class NetCapabilities {
     * NetCapabilities constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public init(bearerTypes: Array<NetBearType>, linkUpBandwidthKbps!: UInt32 = 0, linkDownBandwidthKbps!: UInt32 = 0,
@@ -186,8 +173,7 @@ public class NetCapabilities {
 * @relation export interface ConnectionProperties
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class ConnectionProperties {
@@ -197,8 +183,7 @@ public class ConnectionProperties {
     * @relation interfaceName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var interfaceName: String
@@ -209,8 +194,7 @@ public class ConnectionProperties {
     * @relation domains: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var domains: String
@@ -221,8 +205,7 @@ public class ConnectionProperties {
     * @relation linkAddresses: Array<LinkAddress>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var linkAddresses: Array<LinkAddress>
@@ -233,8 +216,7 @@ public class ConnectionProperties {
     * @relation dnses: Array<NetAddress>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var dnses: Array<NetAddress>
@@ -245,8 +227,7 @@ public class ConnectionProperties {
     * @relation routes: Array<RouteInfo>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var routes: Array<RouteInfo>
@@ -257,8 +238,7 @@ public class ConnectionProperties {
     * @relation mtu: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var mtu: UInt32
@@ -271,8 +251,7 @@ public class ConnectionProperties {
 * @relation export interface RouteInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class RouteInfo {
@@ -282,8 +261,7 @@ public class RouteInfo {
     * @relation interfaceName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var interfaceName: String
@@ -294,8 +272,7 @@ public class RouteInfo {
     * @relation destination: LinkAddress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var destination: LinkAddress
@@ -306,8 +283,7 @@ public class RouteInfo {
     * @relation gateway: NetAddress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var gateway: NetAddress
@@ -318,8 +294,7 @@ public class RouteInfo {
     * @relation hasGateway: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var hasGateway: Bool
@@ -330,8 +305,7 @@ public class RouteInfo {
     * @relation isDefaultRoute: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var isDefaultRoute: Bool
@@ -344,8 +318,7 @@ public class RouteInfo {
 * @relation export interface LinkAddress
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class LinkAddress {
@@ -355,8 +328,7 @@ public class LinkAddress {
     * @relation address: NetAddress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var address: NetAddress
@@ -367,8 +339,7 @@ public class LinkAddress {
     * @relation prefixLength: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var prefixLength: Int32
@@ -381,8 +352,7 @@ public class LinkAddress {
 * @relation export interface NetAddress
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetAddress {
@@ -392,8 +362,7 @@ public class NetAddress {
     * @relation address: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var address: String
@@ -404,8 +373,7 @@ public class NetAddress {
     * @relation family?: number 
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var family: UInt32
@@ -416,8 +384,7 @@ public class NetAddress {
     * @relation port?: number 
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var port: UInt32
@@ -426,8 +393,7 @@ public class NetAddress {
     * NetAddress constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public init(address: String, family!: UInt32 = 1, port!: UInt32 = 0)
@@ -440,8 +406,7 @@ public class NetAddress {
 * @relation export interface HttpProxy 
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class HttpProxy {
@@ -450,8 +415,7 @@ public class HttpProxy {
     * @relation host: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var host: String
@@ -461,8 +425,7 @@ public class HttpProxy {
     * @relation port: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var port: UInt32
@@ -472,8 +435,7 @@ public class HttpProxy {
     * @relation exclusionList: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var exclusionList: Array<String>
@@ -483,8 +445,7 @@ public class HttpProxy {
     * @relation username?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var username: String
@@ -494,8 +455,7 @@ public class HttpProxy {
     * @relation password?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var password: String
@@ -504,8 +464,7 @@ public class HttpProxy {
     * HttpProxy constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public init(host: String,  port: UInt32, exclusionList: Array<String>,
@@ -519,8 +478,7 @@ public class HttpProxy {
 * @relation export enum NetCap
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public enum NetCap {
@@ -530,8 +488,7 @@ public enum NetCap {
     * @relation NET_CAPABILITY_MMS = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetCapabilityMms |
@@ -541,8 +498,7 @@ public enum NetCap {
     * @relation NET_CAPABILITY_NOT_METERED = 11
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetCapabilityNotMetered |
@@ -552,8 +508,7 @@ public enum NetCap {
     * @relation NET_CAPABILITY_INTERNET = 12
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetCapabilityInternet |
@@ -563,8 +518,7 @@ public enum NetCap {
     * @relation NET_CAPABILITY_NOT_VPN = 15
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetCapabilityNotVpn |
@@ -574,8 +528,7 @@ public enum NetCap {
     * @relation NET_CAPABILITY_VALIDATED = 16
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetCapabilityValidated |
@@ -589,8 +542,7 @@ public enum NetCap {
 * @relation export enum NetBearType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public enum NetBearType {
@@ -600,8 +552,7 @@ public enum NetBearType {
     * @relation BEARER_CELLULAR = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     BearerCellular |
@@ -611,8 +562,7 @@ public enum NetBearType {
     * @relation BEARER_WIFI = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     BearerWifi |
@@ -622,8 +572,7 @@ public enum NetBearType {
     * @relation BEARER_ETHERNET = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     BearerEthernet |
@@ -636,8 +585,7 @@ public enum NetBearType {
 */
 @Derive[Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public enum NetConnectionEvent {
@@ -645,8 +593,7 @@ public enum NetConnectionEvent {
     * netAvailable
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetAvailable |
@@ -654,8 +601,7 @@ public enum NetConnectionEvent {
     * netBlockStatusChange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetBlockStatusChange |
@@ -663,8 +609,7 @@ public enum NetConnectionEvent {
     * netCapabilitiesChange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetCapabilitiesChange |
@@ -672,8 +617,7 @@ public enum NetConnectionEvent {
     * netConnectionPropertiesChange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetConnectionPropertiesChange |
@@ -681,8 +625,7 @@ public enum NetConnectionEvent {
     * netLost
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetLost |
@@ -690,8 +633,7 @@ public enum NetConnectionEvent {
     * netUnavailable
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     NetUnavailable |
@@ -709,8 +651,7 @@ public enum NetConnectionEvent {
 * @relation createNetConnection(netSpecifier?: NetSpecifier, timeout?: number): NetConnection
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func createNetConnection(netSpecifier!: ?NetSpecifier = None, timeout!: UInt32 = 0): NetConnection
@@ -728,9 +669,8 @@ public func createNetConnection(netSpecifier!: ?NetSpecifier = None, timeout!: U
 * @relation getDefaultNet(): Promise<NetHandle>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getDefaultNet(): NetHandle
@@ -750,8 +690,7 @@ public func getDefaultNet(): NetHandle
 * @relation getDefaultHttpProxy(): Promise<HttpProxy>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getDefaultHttpProxy(): HttpProxy
@@ -766,8 +705,7 @@ public func getDefaultHttpProxy(): HttpProxy
 * @relation function getAppNetSync(): NetHandle
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getAppNet(): NetHandle
@@ -788,9 +726,8 @@ public func getAppNet(): NetHandle
 * @relation setAppNet(netHandle: NetHandle): Promise<void>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.INTERNET",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func setAppNet(netHandle: NetHandle): Unit
@@ -808,9 +745,8 @@ public func setAppNet(netHandle: NetHandle): Unit
 * @relation getAllNets(): Promise<Array<NetHandle>>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getAllNets(): Array<NetHandle>
@@ -830,9 +766,8 @@ public func getAllNets(): Array<NetHandle>
 * @relation getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getConnectionProperties(netHandle: NetHandle): ConnectionProperties
@@ -852,9 +787,8 @@ public func getConnectionProperties(netHandle: NetHandle): ConnectionProperties
 * @relation getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getNetCapabilities(netHandle: NetHandle): NetCapabilities
@@ -871,9 +805,8 @@ public func getNetCapabilities(netHandle: NetHandle): NetCapabilities
 * @relation isDefaultNetMetered(): Promise<boolean>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func isDefaultNetMetered(): Bool
@@ -890,9 +823,8 @@ public func isDefaultNetMetered(): Bool
 * @relation hasDefaultNet(): Promise<boolean>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func hasDefaultNet(): Bool
@@ -911,9 +843,8 @@ public func hasDefaultNet(): Bool
 * @relation reportNetConnected(netHandle: NetHandle): Promise<void>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func reportNetConnected(netHandle: NetHandle): Unit
@@ -932,9 +863,8 @@ public func reportNetConnected(netHandle: NetHandle): Unit
 * @relation reportNetDisconnected(netHandle: NetHandle): Promise<void>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func reportNetDisconnected(netHandle: NetHandle): Unit
@@ -953,9 +883,8 @@ public func reportNetDisconnected(netHandle: NetHandle): Unit
 * @relation getAddressesByName(host: string): Promise<Array<NetAddress>>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.INTERNET",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public func getAddressesByName(host: String): Array<NetAddress>
@@ -967,8 +896,7 @@ public func getAddressesByName(host: String): Array<NetAddress>
 * @relation export interface NetConnection
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetConnection <: RemoteDataLite {
@@ -985,9 +913,8 @@ public class NetConnection <: RemoteDataLite {
     * @relation register(callback: AsyncCallback<void>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.GET_NETWORK_INFO",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func register(): Unit
@@ -1001,8 +928,7 @@ public class NetConnection <: RemoteDataLite {
     * @relation unregister(callback: AsyncCallback<void>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func unregister(): Unit
@@ -1014,8 +940,7 @@ public class NetConnection <: RemoteDataLite {
     * @relation on(type: 'netAvailable', callback: Callback<NetHandle>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func on(event: NetConnectionEvent, callback: Callback1Argument<NetHandle>): Unit
@@ -1026,8 +951,7 @@ public class NetConnection <: RemoteDataLite {
     * @relation on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func on(event: NetConnectionEvent, callback: Callback1Argument<NetBlockStatusInfo>): Unit
@@ -1038,8 +962,7 @@ public class NetConnection <: RemoteDataLite {
     * @relation on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func on(event: NetConnectionEvent, callback: Callback1Argument<NetCapabilityInfo>): Unit
@@ -1050,8 +973,7 @@ public class NetConnection <: RemoteDataLite {
     * @relation on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func on(event: NetConnectionEvent, callback: Callback1Argument<NetConnectionPropertyInfo>): Unit
@@ -1062,8 +984,7 @@ public class NetConnection <: RemoteDataLite {
     * @relation on(type: 'netUnavailable', callback: Callback<void>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func on(event: NetConnectionEvent, callback: Callback0Argument): Unit
@@ -1076,8 +997,7 @@ public class NetConnection <: RemoteDataLite {
 * @relation export interface NetHandle
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetHandle {
@@ -1087,8 +1007,7 @@ public class NetHandle {
     * @relation netId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var netId: Int32
@@ -1106,9 +1025,8 @@ public class NetHandle {
     * @relation getAddressesByName(host: string): Promise<Array<NetAddress>>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func getAddressesByName(host: String): Array<NetAddress>
@@ -1126,9 +1044,8 @@ public class NetHandle {
     * @relation getAddressByName(host: string): Promise<NetAddress>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public func getAddressByName(host: String): NetAddress
@@ -1140,8 +1057,7 @@ public class NetHandle {
 * @relation export interface NetConnectionPropertyInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetConnectionPropertyInfo {
@@ -1150,8 +1066,7 @@ public class NetConnectionPropertyInfo {
     * @relation netHandle: NetHandle
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var netHandle: NetHandle
@@ -1161,8 +1076,7 @@ public class NetConnectionPropertyInfo {
     * @relation connectionProperties: ConnectionProperties
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var connectionProperties: ConnectionProperties
@@ -1174,8 +1088,7 @@ public class NetConnectionPropertyInfo {
 * @relation export interface NetBlockStatusInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetManager.Core"
 ]
 public class NetBlockStatusInfo {
@@ -1184,8 +1097,7 @@ public class NetBlockStatusInfo {
     * @relation netHandle: NetHandle
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var netHandle: NetHandle
@@ -1195,8 +1107,7 @@ public class NetBlockStatusInfo {
     * @relation blocked: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetManager.Core"
     ]
     public var blocked: Bool

@@ -36,8 +36,7 @@ import std.deriving.Derive
 * @relation interface AbsAlum
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public open class AbsAlbum <: RemoteDataLite {
@@ -47,8 +46,7 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation readonly albumType: AlbumType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop albumType: AlbumType
@@ -59,8 +57,7 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation readonly albumSubtype: AlbumSubtype
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop albumSubtype: AlbumSubtype
@@ -71,8 +68,7 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation albumName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public mut prop albumName: String
@@ -83,8 +79,7 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation readonly albumUri: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop albumUri: String
@@ -95,8 +90,7 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation readonly count: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop count: Int32
@@ -107,8 +101,7 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation readonly coverUri: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop coverUri: String
@@ -124,9 +117,8 @@ public open class AbsAlbum <: RemoteDataLite {
     * @relation getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.READ_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAssets(options: FetchOptions): PhotoAssetResult
@@ -139,8 +131,7 @@ public open class AbsAlbum <: RemoteDataLite {
 * @relation interface Album extends AbsAlbum
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class Album <: AbsAlbum {
@@ -150,8 +141,7 @@ public class Album <: AbsAlbum {
     * @relation readonly imageCount: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop imageCount: Int32
@@ -162,8 +152,7 @@ public class Album <: AbsAlbum {
     * @relation readonly videoCount: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop videoCount: Int32
@@ -179,9 +168,8 @@ public class Album <: AbsAlbum {
     * @relation commitModify(): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func commitModify(): Unit
@@ -194,8 +182,7 @@ public class Album <: AbsAlbum {
 * @relation interface FetchResult<T>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public open class FetchResult <: RemoteDataLite {
@@ -207,8 +194,7 @@ public open class FetchResult <: RemoteDataLite {
     * @relation close(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func close(): Unit
@@ -223,8 +209,7 @@ public open class FetchResult <: RemoteDataLite {
     * @relation getCount(): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getCount(): Int32
@@ -238,8 +223,7 @@ public open class FetchResult <: RemoteDataLite {
     * @relation isAfterLast(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func isAfterLast(): Bool
@@ -252,8 +236,7 @@ public open class FetchResult <: RemoteDataLite {
 * @relation interface FetchResult<T>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class AlbumResult <: FetchResult {
@@ -265,8 +248,7 @@ public class AlbumResult <: FetchResult {
     * @relation getFirstObject(): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getFirstObject(): Album
@@ -281,8 +263,7 @@ public class AlbumResult <: FetchResult {
     * @relation getNextObject(): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getNextObject(): Album
@@ -295,8 +276,7 @@ public class AlbumResult <: FetchResult {
     * @relation getLastObject(): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getLastObject(): Album
@@ -309,8 +289,7 @@ public class AlbumResult <: FetchResult {
     * @relation getObjectByPosition(index: number): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getObjectByPosition(index: Int32): Album
@@ -323,8 +302,7 @@ public class AlbumResult <: FetchResult {
     * @relation getAllObjects(): Promise<Array<T>>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAllObjects(): Array<Album>
@@ -337,8 +315,7 @@ public class AlbumResult <: FetchResult {
 * @relation interface FetchResult<T>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class PhotoAssetResult <: FetchResult {
@@ -350,8 +327,7 @@ public class PhotoAssetResult <: FetchResult {
     * @relation getFirstObject(): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getFirstObject(): PhotoAsset
@@ -366,8 +342,7 @@ public class PhotoAssetResult <: FetchResult {
     * @relation getNextObject(): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getNextObject(): PhotoAsset
@@ -380,8 +355,7 @@ public class PhotoAssetResult <: FetchResult {
     * @relation getLastObject(): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getLastObject(): PhotoAsset
@@ -394,8 +368,7 @@ public class PhotoAssetResult <: FetchResult {
     * @relation getObjectByPosition(index: number): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getObjectByPosition(index: Int32): PhotoAsset
@@ -408,8 +381,7 @@ public class PhotoAssetResult <: FetchResult {
     * @relation getAllObjects(): Promise<Array<T>>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAllObjects(): Array<PhotoAsset>
@@ -422,14 +394,12 @@ public class PhotoAssetResult <: FetchResult {
 * @relation class MediaAlbumChangeRequest implements MediaChangeRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     /**
@@ -451,8 +421,7 @@ public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation getAlbum(): Album
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAlbum(): Album
@@ -466,8 +435,7 @@ public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation setAlbumName(name: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func setAlbumName(name: String): Unit
@@ -482,8 +450,7 @@ public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation addAssets(assets: Array<PhotoAsset>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func addAssets(assets: Array<PhotoAsset>): Unit
@@ -498,8 +465,7 @@ public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation removeAssets(assets: Array<PhotoAsset>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func removeAssets(assets: Array<PhotoAsset>): Unit
@@ -512,8 +478,7 @@ public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
 * @relation interface MediaChangeRequest {}
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public interface MediaChangeRequest {
@@ -526,8 +491,7 @@ public interface MediaChangeRequest {
 * @relation class MediaAssetChangeRequest implements MediaChangeRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
@@ -540,8 +504,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation constructor(asset: PhotoAsset)
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(asset: PhotoAsset)
@@ -556,8 +519,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public static func createImageAssetRequest(context: UIAbilityContext, fileUri: String): MediaAssetChangeRequest
@@ -572,8 +534,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public static func createVideoAssetRequest(context: UIAbilityContext, fileUri: String): MediaAssetChangeRequest
@@ -587,8 +548,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: CreateOptions): MediaAssetChangeRequest
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public static func createAssetRequest(context: UIAbilityContext, photoType: PhotoType, extension: String,
@@ -604,9 +564,8 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public static func deleteAssets(context: UIAbilityContext, assets: Array<PhotoAsset>): Unit
@@ -622,9 +581,8 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation static deleteAssets(context: Context, uriList: Array<string>): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public static func deleteAssets(context: UIAbilityContext, assets: Array<String>): Unit
@@ -638,8 +596,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation getAsset(): PhotoAsset
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAsset(): PhotoAsset
@@ -653,8 +610,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation setTitle(title: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func setTitle(title: String): Unit
@@ -670,9 +626,8 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation getWriteCacheHandler(): Promise<number>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getWriteCacheHandler(): Int32
@@ -688,8 +643,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation addResource(type: ResourceType, fileUri: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func addResource(resourceType: ResourceType, fileUri: String): Unit
@@ -704,8 +658,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation addResource(type: ResourceType, data: ArrayBuffer): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func addResource(resourceType: ResourceType, data: Array<Byte>): Unit
@@ -718,8 +671,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation saveCameraPhoto(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func saveCameraPhoto(): Unit
@@ -732,8 +684,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
     * @relation discardCameraPhoto(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func discardCameraPhoto(): Unit
@@ -747,8 +698,7 @@ public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
 * @relation function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public func getPhotoAccessHelper(context: UIAbilityContext): PhotoAccessHelper
@@ -760,8 +710,7 @@ public func getPhotoAccessHelper(context: UIAbilityContext): PhotoAccessHelper
 * @relation interface PhotoAccessHelper
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class PhotoAccessHelper <: RemoteDataLite {
@@ -775,8 +724,7 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation release(): Promise<void>;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func release(): Unit
@@ -790,9 +738,8 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>;
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.READ_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAssets(options: FetchOptions): PhotoAssetResult
@@ -805,9 +752,8 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation getBurstAssets(burstKey: string, options: FetchOptions): Promise<FetchResult<PhotoAsset>>;
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.READ_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getBurstAssets(burstKey: String, options: FetchOptions): PhotoAssetResult
@@ -824,9 +770,8 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>;
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.READ_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getAlbums(albumType: AlbumType, subtype: AlbumSubtype,
@@ -842,8 +787,7 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData>): void;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func registerChange(uri: String, forChildUris: Bool, callback: Callback1Argument<ChangeData>): Unit
@@ -859,8 +803,7 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation unRegisterChange(uri: string, callback?: Callback<ChangeData>): void;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func unRegisterChange(uri: String, callback!: ?Callback1Argument<ChangeData> = None): Unit
@@ -874,8 +817,7 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func showAssetsCreationDialog(srcFileUris: Array<String>, photoCreationConfigs: Array<PhotoCreationConfig>,
@@ -891,9 +833,8 @@ public class PhotoAccessHelper <: RemoteDataLite {
     * @relation applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>;
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func applyChanges(mediaChangeRequest: MediaChangeRequest): Unit
@@ -907,8 +848,7 @@ public class PhotoAccessHelper <: RemoteDataLite {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum AlbumSubtype {
@@ -918,8 +858,7 @@ public enum AlbumSubtype {
     * @relation USER_GENERIC = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     UserGeneric |
@@ -929,8 +868,7 @@ public enum AlbumSubtype {
     * @relation FAVORITE = 1025
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Favorite |
@@ -940,8 +878,7 @@ public enum AlbumSubtype {
     * @relation VIDEO
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Video |
@@ -951,8 +888,7 @@ public enum AlbumSubtype {
     * @relation IMAGE = 1031
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Image |
@@ -962,8 +898,7 @@ public enum AlbumSubtype {
     * @relation ANY = 2147483647
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     AnyAlbum |
@@ -979,8 +914,7 @@ public enum AlbumSubtype {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum AlbumType {
@@ -990,8 +924,7 @@ public enum AlbumType {
     * @relation USER = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     User |
@@ -1001,8 +934,7 @@ public enum AlbumType {
     * @relation SYSTEM = 1024
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     System |
@@ -1017,8 +949,7 @@ public enum AlbumType {
 * @relation interface FetchOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class FetchOptions {
@@ -1028,8 +959,7 @@ public class FetchOptions {
     * @relation fetchColumns: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var fetchColumns: Array<String>
@@ -1040,8 +970,7 @@ public class FetchOptions {
     * @relation predicates: dataSharePredicates.DataSharePredicates;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var predicates: DataSharePredicates
@@ -1050,8 +979,7 @@ public class FetchOptions {
     * Create fetchOptions instance.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(fetchColumns: Array<String>, predicates: DataSharePredicates)
@@ -1065,8 +993,7 @@ public class FetchOptions {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoSubtype {
@@ -1076,8 +1003,7 @@ public enum PhotoSubtype {
     * @relation DEFAULT = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Default |
@@ -1087,8 +1013,7 @@ public enum PhotoSubtype {
     * @relation MOVING_PHOTO = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     MovingPhoto |
@@ -1098,8 +1023,7 @@ public enum PhotoSubtype {
     * @relation BURST = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Burst |
@@ -1115,8 +1039,7 @@ public enum PhotoSubtype {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum DeliveryMode {
@@ -1126,8 +1049,7 @@ public enum DeliveryMode {
     * @relation FAST_MODE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     FastMode |
@@ -1137,8 +1059,7 @@ public enum DeliveryMode {
     * @relation HIGH_QUALITY_MODE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     HighQualityMode |
@@ -1148,8 +1069,7 @@ public enum DeliveryMode {
     * @relation BALANCE_MODE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     BalanceMode |
@@ -1165,8 +1085,7 @@ public enum DeliveryMode {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoViewMIMETypes {
@@ -1176,8 +1095,7 @@ public enum PhotoViewMIMETypes {
     * @relation IMAGE_TYPE = 'image/\*'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     ImageType |
@@ -1187,8 +1105,7 @@ public enum PhotoViewMIMETypes {
     * @relation VIDEO_TYPE = 'video/\*'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     VideoType |
@@ -1198,8 +1115,7 @@ public enum PhotoViewMIMETypes {
     * @relation IMAGE_VIDEO_TYPE = '*\/\*',
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     ImageVideoType |
@@ -1209,8 +1125,7 @@ public enum PhotoViewMIMETypes {
     * @relation MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     MovingPhotoImageType |
@@ -1226,8 +1141,7 @@ public enum PhotoViewMIMETypes {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum RecommendationType {
@@ -1237,8 +1151,7 @@ public enum RecommendationType {
     * @relation QR_OR_BAR_CODE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     QrOrBarCode |
@@ -1248,8 +1161,7 @@ public enum RecommendationType {
     * @relation QR_CODE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     QrCode |
@@ -1259,8 +1171,7 @@ public enum RecommendationType {
     * @relation BAR_CODE = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     BarCode |
@@ -1270,8 +1181,7 @@ public enum RecommendationType {
     * @relation ID_CARD = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     IdCard |
@@ -1281,8 +1191,7 @@ public enum RecommendationType {
     * @relation PROFILE_PICTURE = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     ProfilePicture |
@@ -1292,8 +1201,7 @@ public enum RecommendationType {
     * @relation PASSPORT = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     PassPort |
@@ -1303,8 +1211,7 @@ public enum RecommendationType {
     * @relation BANK_CARD = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     BankCard |
@@ -1314,8 +1221,7 @@ public enum RecommendationType {
     * @relation DRIVER_LICENSE = 8
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DriverLicense |
@@ -1325,8 +1231,7 @@ public enum RecommendationType {
     * @relation DRIVING_LICENSE = 9
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DrivingLicense |
@@ -1336,8 +1241,7 @@ public enum RecommendationType {
     * @relation FEATURED_SINGLE_PORTRAIT = 10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     FeaturedSinglePortrait |
@@ -1353,8 +1257,7 @@ public enum RecommendationType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum DynamicRangeType {
@@ -1364,8 +1267,7 @@ public enum DynamicRangeType {
     * @relation SDR = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Sdr |
@@ -1375,8 +1277,7 @@ public enum DynamicRangeType {
     * @relation HDR = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Hdr |
@@ -1392,8 +1293,7 @@ public enum DynamicRangeType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum ResourceType {
@@ -1403,8 +1303,7 @@ public enum ResourceType {
     * @relation IMAGE_RESOURCE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     ImageResource |
@@ -1414,8 +1313,7 @@ public enum ResourceType {
     * @relation VIDEO_RESOURCE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     VideoResource |
@@ -1430,8 +1328,7 @@ public enum ResourceType {
 * @relation interface PhotoCreationConfig
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class PhotoCreationConfig {
@@ -1441,8 +1338,7 @@ public class PhotoCreationConfig {
     * @relation fileNameExtension: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var fileNameExtension: String
@@ -1453,8 +1349,7 @@ public class PhotoCreationConfig {
     * @relation photoType: PhotoType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var photoType: PhotoType
@@ -1465,8 +1360,7 @@ public class PhotoCreationConfig {
     * @relation title?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var title: String
@@ -1477,8 +1371,7 @@ public class PhotoCreationConfig {
     * @relation subtype?: PhotoSubtype
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var subtype: PhotoSubtype
@@ -1487,8 +1380,7 @@ public class PhotoCreationConfig {
     * Create PhotoCreationConfig instance
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(fileNameExtension: String, photoType: PhotoType, title!: String = "", subtype!: PhotoSubtype = Default)
@@ -1502,8 +1394,7 @@ public class PhotoCreationConfig {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum NotifyType {
@@ -1513,8 +1404,7 @@ public enum NotifyType {
     * @relation NOTIFY_ADD
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     NotifyAdd |
@@ -1524,8 +1414,7 @@ public enum NotifyType {
     * @relation NOTIFY_UPDATE
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     NotifyUpdate |
@@ -1535,8 +1424,7 @@ public enum NotifyType {
     * @relation NOTIFY_REMOVE
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     NotifyRemove |
@@ -1546,8 +1434,7 @@ public enum NotifyType {
     * @relation NOTIFY_ALBUM_ADD_ASSET
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     NotifyAlbumAddAsset |
@@ -1557,8 +1444,7 @@ public enum NotifyType {
     * @relation NOTIFY_ALBUM_REMOVE_ASSET
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     NotifyAlbumRemoveAsset |
@@ -1573,8 +1459,7 @@ public enum NotifyType {
 * @relation interface ChangeData
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class ChangeData {
@@ -1584,8 +1469,7 @@ public class ChangeData {
     * @relation type: NotifyType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var notifyType: NotifyType
@@ -1596,8 +1480,7 @@ public class ChangeData {
     * @relation uris: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var uris: Array<String>
@@ -1608,8 +1491,7 @@ public class ChangeData {
     * @relation extraUris: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var extraUris: Array<String>
@@ -1622,8 +1504,7 @@ public class ChangeData {
 * @relation interface CreateOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class CreateOptions {
@@ -1633,8 +1514,7 @@ public class CreateOptions {
     * @relation title?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var title: String = ""
@@ -1645,8 +1525,7 @@ public class CreateOptions {
     * @relation subtype?: PhotoSubtype
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var subtype: PhotoSubtype
@@ -1655,8 +1534,7 @@ public class CreateOptions {
     * Create CreateOptions instance
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(title!: String = "", subtype!: PhotoSubtype = Default)
@@ -1669,8 +1547,7 @@ public class CreateOptions {
 * @relation interface RequestOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class RequestOptions {
@@ -1680,8 +1557,7 @@ public class RequestOptions {
     * @relation deliveryMode: DeliveryMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var deliveryMode: DeliveryMode
@@ -1695,8 +1571,7 @@ public class RequestOptions {
 */
 @Derive[Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoKeys <: ToString {
@@ -1706,8 +1581,7 @@ public enum PhotoKeys <: ToString {
     * @relation URI = 'uri'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Uri |
@@ -1717,8 +1591,7 @@ public enum PhotoKeys <: ToString {
     * @relation PHOTO_TYPE = 'media_type'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     PhotoType |
@@ -1728,8 +1601,7 @@ public enum PhotoKeys <: ToString {
     * @relation DISPLAY_NAME = 'display_name'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DisplayName |
@@ -1739,8 +1611,7 @@ public enum PhotoKeys <: ToString {
     * @relation SIZE = 'size'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Size |
@@ -1750,8 +1621,7 @@ public enum PhotoKeys <: ToString {
     * @relation DATE_ADDED = 'date_added'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DateAdded |
@@ -1761,8 +1631,7 @@ public enum PhotoKeys <: ToString {
     * @relation DATE_MODIFIED = 'date_modified'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DateModified |
@@ -1772,8 +1641,7 @@ public enum PhotoKeys <: ToString {
     * @relation DURATION = 'duration'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Duration |
@@ -1783,8 +1651,7 @@ public enum PhotoKeys <: ToString {
     * @relation WIDTH = 'width'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Width |
@@ -1794,8 +1661,7 @@ public enum PhotoKeys <: ToString {
     * @relation HEIGHT = 'height'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Height |
@@ -1805,8 +1671,7 @@ public enum PhotoKeys <: ToString {
     * @relation DATE_TAKEN = 'date_taken'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DateTaken |
@@ -1816,8 +1681,7 @@ public enum PhotoKeys <: ToString {
     * @relation ORIENTATION = 'orientation'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Orientation |
@@ -1827,8 +1691,7 @@ public enum PhotoKeys <: ToString {
     * @relation FAVORITE = 'is_favorite'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Favorite |
@@ -1838,8 +1701,7 @@ public enum PhotoKeys <: ToString {
     * @relation TITLE = 'title'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Title |
@@ -1849,8 +1711,7 @@ public enum PhotoKeys <: ToString {
     * @relation DATE_ADDED_MS = 'date_added_ms',
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DateAddedMs |
@@ -1860,8 +1721,7 @@ public enum PhotoKeys <: ToString {
     * @relation DATE_MODIFIED_MS = 'date_modified_ms'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DateModifiedMs |
@@ -1871,8 +1731,7 @@ public enum PhotoKeys <: ToString {
     * @relation PHOTO_SUBTYPE = 'subtype'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     PhotoSubtype |
@@ -1882,8 +1741,7 @@ public enum PhotoKeys <: ToString {
     * @relation DYNAMIC_RANGE_TYPE = 'dynamic_range_type'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DynamicRangeType |
@@ -1893,8 +1751,7 @@ public enum PhotoKeys <: ToString {
     * @relation COVER_POSITION = 'cover_position'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     CoverPosition |
@@ -1904,8 +1761,7 @@ public enum PhotoKeys <: ToString {
     * @relation BURST_KEY = 'burst_key'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     BurstKey |
@@ -1915,8 +1771,7 @@ public enum PhotoKeys <: ToString {
     * @relation LCD_SIZE = 'lcd_size'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     LcdSize |
@@ -1926,8 +1781,7 @@ public enum PhotoKeys <: ToString {
     * @relation THM_SIZE = 'thm_size'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     ThmSize |
@@ -1936,8 +1790,7 @@ public enum PhotoKeys <: ToString {
     * Obtaining the string value of enum
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func toString(): String
@@ -1952,8 +1805,7 @@ public enum PhotoKeys <: ToString {
 */
 @Derive[Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum DefaultChangeUri <: ToString {
@@ -1963,8 +1815,7 @@ public enum DefaultChangeUri <: ToString {
     * @relation DEFAULT_PHOTO_URI = 'file://media/Photo'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DefaultPhotoUri |
@@ -1974,8 +1825,7 @@ public enum DefaultChangeUri <: ToString {
     * @relation DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     DefaultAlbumUri |
@@ -1984,8 +1834,7 @@ public enum DefaultChangeUri <: ToString {
     * Obtaining the string value of enum
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func toString(): String
@@ -2000,8 +1849,7 @@ public enum DefaultChangeUri <: ToString {
 */
 @Derive[Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum AlbumKeys <: ToString {
@@ -2011,8 +1859,7 @@ public enum AlbumKeys <: ToString {
     * @relation URI = 'uri'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Uri |
@@ -2022,8 +1869,7 @@ public enum AlbumKeys <: ToString {
     * @relation ALBUM_NAME = 'album_name',
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     AlbumName |
@@ -2032,8 +1878,7 @@ public enum AlbumKeys <: ToString {
     * Obtaining the string value of enum
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func toString(): String
@@ -2048,8 +1893,7 @@ public enum AlbumKeys <: ToString {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoType {
@@ -2059,8 +1903,7 @@ public enum PhotoType {
     * @relation IMAGE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Image |
@@ -2070,8 +1913,7 @@ public enum PhotoType {
     * @relation VIDEO = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Video |
@@ -2086,8 +1928,7 @@ public enum PhotoType {
 * @relation type MemberType = number | string | boolean
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum MemberType {
@@ -2097,8 +1938,7 @@ public enum MemberType {
     * @relation type MemberType = number | string | boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     Int64Value(Int64) |
@@ -2108,8 +1948,7 @@ public enum MemberType {
     * @relation type MemberType = number | string | boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     StringValue(String) |
@@ -2119,8 +1958,7 @@ public enum MemberType {
     * @relation type MemberType = number | string | boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     BoolValue(Bool) |
@@ -2134,8 +1972,7 @@ public enum MemberType {
 * @relation interface PhotoAsset
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class PhotoAsset <: RemoteDataLite {
@@ -2145,8 +1982,7 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation readonly uri: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop uri: String
@@ -2157,8 +1993,7 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation readonly photoType: PhotoType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop photoType: PhotoType
@@ -2169,8 +2004,7 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation readonly displayName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop displayName: String
@@ -2185,8 +2019,7 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation get(member: string): MemberType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func get(member: String): MemberType
@@ -2201,8 +2034,7 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation set(member: string, value: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func set(member: String, value: String): Unit
@@ -2219,9 +2051,8 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation commitModify(): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func commitModify(): Unit
@@ -2237,9 +2068,8 @@ public class PhotoAsset <: RemoteDataLite {
     * @relation getThumbnail(size?: image.Size): Promise<image.PixelMap>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func getThumbnail(size!: ?Size = Size(256, 256)): PixelMap

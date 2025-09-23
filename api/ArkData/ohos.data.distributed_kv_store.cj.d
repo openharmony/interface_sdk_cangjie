@@ -39,8 +39,7 @@ import ohos.business_exception.getUniversalErrorMsg
 * @relation interface DeviceKVStore extends SingleKVStore
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
 ]
 public class DeviceKVStore <: SingleKVStore {
@@ -56,8 +55,7 @@ public class DeviceKVStore <: SingleKVStore {
     * @relation get(key: string): Promise<boolean | string | number | Uint8Array>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func get(key: String): ValueType
@@ -72,8 +70,7 @@ public class DeviceKVStore <: SingleKVStore {
     * @relation getEntries(keyPrefix: string): Promise<Entry[]>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getEntries(keyPrefix: String): Array<Entry>
@@ -88,8 +85,7 @@ public class DeviceKVStore <: SingleKVStore {
     * @relation getEntries(query: Query): Promise<Entry[]>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getEntries(query: Query): Array<Entry>
@@ -110,8 +106,7 @@ public class DeviceKVStore <: SingleKVStore {
     * @relation getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getResultSet(keyPrefix: String): KVStoreResultSet
@@ -127,8 +122,7 @@ public class DeviceKVStore <: SingleKVStore {
     * @relation getResultSet(query: Query): Promise<KVStoreResultSet>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getResultSet(query: Query): KVStoreResultSet
@@ -143,8 +137,7 @@ public class DeviceKVStore <: SingleKVStore {
     * @relation getResultSize(query: Query): Promise<number>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getResultSize(query: Query): Int32
@@ -158,8 +151,7 @@ public class DeviceKVStore <: SingleKVStore {
 * @relation declare namespace distributedKVStore
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
 ]
 public class DistributedKVStore {
@@ -172,8 +164,7 @@ public class DistributedKVStore {
     * @relation function createKVManager(config: KVManagerConfig): KVManager;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static func createKVManager(config: KVManagerConfig): KVManager
@@ -187,8 +178,7 @@ public class DistributedKVStore {
 * @relation interface KVManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class KVManager <: RemoteDataLite {
@@ -204,8 +194,7 @@ public class KVManager <: RemoteDataLite {
     * @relation getKVStore<T>(storeId: string, options: Options): Promise<T>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getKVStore<T>(storeId: String, options: Options): T where T <: SingleKVStore
@@ -223,8 +212,7 @@ public class KVManager <: RemoteDataLite {
     * @relation closeKVStore(appId: string, storeId: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func closeKVStore(appId: String, storeId: String): Unit
@@ -241,8 +229,7 @@ public class KVManager <: RemoteDataLite {
     * @relation deleteKVStore(appId: string, storeId: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func deleteKVStore(appId: String, storeId: String): Unit
@@ -256,8 +243,7 @@ public class KVManager <: RemoteDataLite {
     * @relation getAllKVStoreId(appId: string): Promise<string[]>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getAllKVStoreId(appId: String): Array<String>
@@ -269,8 +255,7 @@ public class KVManager <: RemoteDataLite {
 * @relation interface Constants
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class Constants {
@@ -279,8 +264,7 @@ public class Constants {
     * @relation readonly MAX_KEY_LENGTH: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static let MAX_KEY_LENGTH: Int32 = 1024
@@ -290,8 +274,7 @@ public class Constants {
     * @relation readonly MAX_VALUE_LENGTH: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static let MAX_VALUE_LENGTH: Int32 = 4194303
@@ -301,8 +284,7 @@ public class Constants {
     * @relation readonly MAX_KEY_LENGTH_DEVICE: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static let MAX_KEY_LENGTH_DEVICE: Int32 = 896
@@ -312,8 +294,7 @@ public class Constants {
     * @relation readonly MAX_STORE_ID_LENGTH: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static let MAX_STORE_ID_LENGTH: Int32 = 128
@@ -323,8 +304,7 @@ public class Constants {
     * @relation readonly MAX_QUERY_LENGTH: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static let MAX_QUERY_LENGTH: Int32 = 512000
@@ -334,8 +314,7 @@ public class Constants {
     * @relation readonly MAX_BATCH_SIZE: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public static let MAX_BATCH_SIZE: Int32 = 128
@@ -348,8 +327,7 @@ public class Constants {
 * @relation enum ValueType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public enum ValueType {
@@ -359,8 +337,7 @@ public enum ValueType {
     * @relation STRING,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     StringValue(String) |
@@ -370,8 +347,7 @@ public enum ValueType {
     * @relation INTEGER,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     Integer(Int32) |
@@ -381,8 +357,7 @@ public enum ValueType {
     * @relation FLOAT,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     Float(Float32) |
@@ -392,8 +367,7 @@ public enum ValueType {
     * @relation BYTE_ARRAY,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     ByteArray(Array<Byte>) |
@@ -403,8 +377,7 @@ public enum ValueType {
     * @relation BOOLEAN,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     Boolean(Bool) |
@@ -414,8 +387,7 @@ public enum ValueType {
     * @relation DOUBLE
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     Double(Float64) |
@@ -430,8 +402,7 @@ public enum ValueType {
 * @relation interface KVManagerConfig
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class KVManagerConfig {
@@ -441,8 +412,7 @@ public class KVManagerConfig {
     * @relation context: BaseContext
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var context: BaseContext
@@ -453,8 +423,7 @@ public class KVManagerConfig {
     * @relation bundleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var bundleName: String
@@ -464,8 +433,7 @@ public class KVManagerConfig {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public init(context: BaseContext, bundleName: String)
@@ -478,8 +446,7 @@ public class KVManagerConfig {
 * @relation enum SecurityLevel
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public enum SecurityLevel {
@@ -490,8 +457,7 @@ public enum SecurityLevel {
     * @relation S1,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     S1 |
@@ -502,8 +468,7 @@ public enum SecurityLevel {
     * @relation S2,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     S2 |
@@ -514,8 +479,7 @@ public enum SecurityLevel {
     * @relation S3,
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     S3 |
@@ -526,8 +490,7 @@ public enum SecurityLevel {
     * @relation S4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     S4 |
@@ -544,8 +507,7 @@ public enum SecurityLevel {
 * @relation class FieldNode
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
 ]
 public class FieldNode {
@@ -555,8 +517,7 @@ public class FieldNode {
     * @relation nullable: boolean;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var nullable: Bool
@@ -567,8 +528,7 @@ public class FieldNode {
     * @relation default: string;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var default: String
@@ -579,8 +539,7 @@ public class FieldNode {
     * @relation type: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var nodeType: Int32
@@ -590,8 +549,7 @@ public class FieldNode {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public init(name: String, nullable: Bool, default: String, nodeType: Int32)
@@ -605,8 +563,7 @@ public class FieldNode {
 * @relation class Schema
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
 ]
 public class Schema {
@@ -616,8 +573,7 @@ public class Schema {
     * @relation root: FieldNode;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var root: FieldNode
@@ -628,8 +584,7 @@ public class Schema {
     * @relation indexes: Array<string>;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var indexes: Array<String>
@@ -640,8 +595,7 @@ public class Schema {
     * @relation mode: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var mode: Int32
@@ -652,8 +606,7 @@ public class Schema {
     * @relation skip: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var skip: Int32
@@ -663,8 +616,7 @@ public class Schema {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public init(root: FieldNode, indexes: Array<String>, mode: Int32, skip: Int32)
@@ -677,8 +629,7 @@ public class Schema {
 * @relation interface Options
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class Options {
@@ -687,8 +638,7 @@ public class Options {
     * @relation createIfMissing?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var createIfMissing: Bool
@@ -698,8 +648,7 @@ public class Options {
     * @relation encrypt?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var encrypt: Bool
@@ -709,8 +658,7 @@ public class Options {
     * @relation backup?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var backup: Bool
@@ -720,8 +668,7 @@ public class Options {
     * @relation autoSync?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         permission: "ohos.permission.DISTRIBUTED_DATASYNC",
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
@@ -732,8 +679,7 @@ public class Options {
     * @relation securityLevel: SecurityLevel
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var securityLevel: SecurityLevel
@@ -743,8 +689,7 @@ public class Options {
     * @relation schema?: Schema
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore"
     ]
     public var schema: ?Schema
@@ -754,8 +699,7 @@ public class Options {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public init(securityLevel: SecurityLevel, createIfMissing!: Bool = true, encrypt!: Bool = false,
@@ -769,8 +713,7 @@ public class Options {
 * @relation interface Entry
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class Entry {
@@ -780,8 +723,7 @@ public class Entry {
     * @relation key: string;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var key: String
@@ -792,8 +734,7 @@ public class Entry {
     * @relation value: Value;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public var value: ValueType
@@ -803,8 +744,7 @@ public class Entry {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public init(key: String, value: ValueType)
@@ -820,8 +760,7 @@ public class Entry {
 * @relation interface KVStoreResultSet
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class KVStoreResultSet <: RemoteDataLite {
@@ -831,8 +770,7 @@ public class KVStoreResultSet <: RemoteDataLite {
     * @relation getCount(): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public func getCount(): Int32
@@ -848,8 +786,7 @@ public class KVStoreResultSet <: RemoteDataLite {
 * @relation class Query
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public class Query <: RemoteDataLite {
@@ -859,8 +796,7 @@ public class Query <: RemoteDataLite {
     * @relation constructor()
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public init()
@@ -879,8 +815,7 @@ public class Query <: RemoteDataLite {
 * @relation interface SingleKVStore
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
 ]
 public open class SingleKVStore <: RemoteDataLite {
@@ -898,8 +833,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func put(key: String, value: ValueType): Unit
@@ -914,8 +848,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation putBatch(entries: Entry[]): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func putBatch(entries: Array<Entry>): Unit
@@ -932,8 +865,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation delete(key: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func delete(key: String): Unit
@@ -950,8 +882,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation deleteBatch(keys: string[]): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func deleteBatch(keys: Array<String>): Unit
@@ -968,8 +899,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation get(key: string): Promise<boolean | string | number | Uint8Array>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func get(key: String): ValueType
@@ -983,8 +913,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation backup(file:string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func backup(file: String): Unit
@@ -998,8 +927,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation restore(file:string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func restore(file: String): Unit
@@ -1012,8 +940,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation startTransaction(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func startTransaction(): Unit
@@ -1025,8 +952,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation commit(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func commit(): Unit
@@ -1038,8 +964,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation rollback(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func rollback(): Unit
@@ -1052,8 +977,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation enableSync(enabled: boolean): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func enableSync(enabled: Bool): Unit
@@ -1067,8 +991,7 @@ public open class SingleKVStore <: RemoteDataLite {
     * @relation setSyncParam(defaultAllowedDelayMs: number): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.KVStore.Core"
     ]
     public open func setSyncParam(defaultAllowedDelayMs: UInt32): Unit

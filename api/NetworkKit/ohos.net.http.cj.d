@@ -31,8 +31,7 @@ import ohos.net.connection.CHttpProxy
 * @relation createHttp(): HttpRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public func createHttp(): HttpRequest
@@ -45,8 +44,7 @@ public func createHttp(): HttpRequest
 * @relation createHttpResponseCache(cacheSize?: number): HttpResponseCache
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public func createHttpResponseCache(cacheSize!: UInt32 = MAX_CACHE_SIZE): HttpResponseCache
@@ -58,8 +56,7 @@ public func createHttpResponseCache(cacheSize!: UInt32 = MAX_CACHE_SIZE): HttpRe
 * @relation export interface HttpRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpRequest {
@@ -103,9 +100,8 @@ public class HttpRequest {
     * @relation request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func request(url: String, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): Unit
@@ -150,9 +146,8 @@ public class HttpRequest {
     * @relation request(url: string, callback: AsyncCallback<HttpResponse>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func request(url: String, callback: AsyncCallback<HttpResponse>): Unit
@@ -162,8 +157,7 @@ public class HttpRequest {
     * @relation destroy(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func destroy(): Unit
@@ -207,9 +201,8 @@ public class HttpRequest {
     * @relation requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func requestInStream(url: String, options: HttpRequestOptions, callback: AsyncCallback<UInt32>): Unit
@@ -253,9 +246,8 @@ public class HttpRequest {
     * @relation requestInStream(url: string, callback: AsyncCallback<number>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func requestInStream(url: String, callback: AsyncCallback<UInt32>): Unit
@@ -267,8 +259,7 @@ public class HttpRequest {
     * @relation on(type: "headersReceive", callback: Callback<Object>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<HashMap<String, String>>): Unit
@@ -280,8 +271,7 @@ public class HttpRequest {
     * @relation once(type: "headersReceive", callback: Callback<Object>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func once(event: HttpRequestEvent, callback: Callback1Argument<HashMap<String, String>>): Unit
@@ -293,8 +283,7 @@ public class HttpRequest {
     * @relation on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<Array<Byte>>): Unit
@@ -306,8 +295,7 @@ public class HttpRequest {
     * @relation on(type: "dataEnd", callback: Callback<void>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func on(event: HttpRequestEvent, callback: Callback0Argument): Unit
@@ -319,8 +307,7 @@ public class HttpRequest {
     * @relation on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<DataReceiveProgressInfo>): Unit
@@ -332,8 +319,7 @@ public class HttpRequest {
     * @relation on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<DataSendProgressInfo>): Unit
@@ -344,8 +330,7 @@ public class HttpRequest {
     * @relation off(type: "headersReceive", callback?: Callback<Object>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func off(event: HttpRequestEvent, callback!: ?CallbackObject = None): Unit
@@ -357,8 +342,7 @@ public class HttpRequest {
 * @relation export interface HttpResponseCache
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpResponseCache {
@@ -368,8 +352,7 @@ public class HttpResponseCache {
     * @relation flush(callback: AsyncCallback<void>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func flush(): Unit
@@ -380,8 +363,7 @@ public class HttpResponseCache {
     * @relation delete(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func delete(): Unit
@@ -393,8 +375,7 @@ public class HttpResponseCache {
 */
 @Derive[Equatable, Hashable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpRequestEvent {
@@ -402,8 +383,7 @@ public enum HttpRequestEvent {
     * headersReceive
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     HeadersReceive |
@@ -411,8 +391,7 @@ public enum HttpRequestEvent {
     * dataReceive
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     DataReceive |
@@ -420,8 +399,7 @@ public enum HttpRequestEvent {
     * dataEnd
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     DataEnd |
@@ -429,8 +407,7 @@ public enum HttpRequestEvent {
     * dataReceiveProgress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     DataReceiveProgress |
@@ -438,8 +415,7 @@ public enum HttpRequestEvent {
     * dataSendProgress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     DataSendProgress |
@@ -453,8 +429,7 @@ public enum HttpRequestEvent {
 * @relation export enum RequestMethod
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum RequestMethod {
@@ -463,8 +438,7 @@ public enum RequestMethod {
     * @relation OPTIONS = "OPTIONS"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Options |
@@ -473,8 +447,7 @@ public enum RequestMethod {
     * @relation GET = "GET"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Get |
@@ -483,8 +456,7 @@ public enum RequestMethod {
     * @relation HEAD = "HEAD"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Head |
@@ -493,8 +465,7 @@ public enum RequestMethod {
     * @relation POST = "POST"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Post |
@@ -503,8 +474,7 @@ public enum RequestMethod {
     * @relation PUT = "PUT"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Put |
@@ -513,8 +483,7 @@ public enum RequestMethod {
     * @relation DELETE = "DELETE"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Delete |
@@ -523,8 +492,7 @@ public enum RequestMethod {
     * @relation TRACE = "TRACE"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Trace |
@@ -533,8 +501,7 @@ public enum RequestMethod {
     * @relation CONNECT = "CONNECT"
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Connect |
@@ -547,8 +514,7 @@ public enum RequestMethod {
 * @relation export enum HttpProtocol
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpProtocol {
@@ -557,8 +523,7 @@ public enum HttpProtocol {
     * @relation HTTP1_1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Http1_1 |
@@ -567,8 +532,7 @@ public enum HttpProtocol {
     * @relation HTTP2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Http2 |
@@ -577,8 +541,7 @@ public enum HttpProtocol {
     * @relation HTTP3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Http3 |
@@ -591,8 +554,7 @@ public enum HttpProtocol {
 * @relation export enum HttpDataType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpDataType {
@@ -601,8 +563,7 @@ public enum HttpDataType {
     * @relation STRING
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     StringValue |
@@ -611,8 +572,7 @@ public enum HttpDataType {
     * @relation ARRAY_BUFFER
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     ArrayBuffer |
@@ -624,8 +584,7 @@ public enum HttpDataType {
 * Indicates the type of http data.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpData {
@@ -633,14 +592,12 @@ public enum HttpData {
     * The returned type is string.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     StringData(String) |
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     ArrayData(Array<Byte>) |
@@ -652,26 +609,22 @@ public enum HttpData {
 * Enum for proxy using
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum UsingProxy {
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     NotUse |
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     UseDefault |
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     UseSpecified(HttpProxy) |
@@ -684,8 +637,7 @@ public enum UsingProxy {
 * @relation export enum CertType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum CertType {
@@ -694,8 +646,7 @@ public enum CertType {
     * @relation PEM
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Pem |
@@ -704,8 +655,7 @@ public enum CertType {
     * @relation DER
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     Der |
@@ -714,8 +664,7 @@ public enum CertType {
     * @relation P12
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     P12 |
@@ -728,8 +677,7 @@ public enum CertType {
 * @relation export interface HttpRequestOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpRequestOptions {
@@ -738,8 +686,7 @@ public class HttpRequestOptions {
     * @relation method?: RequestMethod
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var method: RequestMethod
@@ -750,8 +697,7 @@ public class HttpRequestOptions {
     * @relation extraData?: string | Object | ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var extraData: HttpData
@@ -761,8 +707,7 @@ public class HttpRequestOptions {
     * @relation expectDataType?: HttpDataType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var expectDataType: ?HttpDataType
@@ -772,8 +717,7 @@ public class HttpRequestOptions {
     * @relation usingCache?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var usingCache: Bool
@@ -783,8 +727,7 @@ public class HttpRequestOptions {
     * @relation priority?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var priority: UInt32
@@ -794,8 +737,7 @@ public class HttpRequestOptions {
     * @relation header?: Object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var header: HashMap<String, String>
@@ -805,8 +747,7 @@ public class HttpRequestOptions {
     * @relation readTimeout?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var readTimeout: UInt32
@@ -816,8 +757,7 @@ public class HttpRequestOptions {
     * @relation connectTimeout?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var connectTimeout: UInt32
@@ -827,8 +767,7 @@ public class HttpRequestOptions {
     * @relation usingProtocol?: HttpProtocol
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var usingProtocol: ?HttpProtocol
@@ -839,8 +778,7 @@ public class HttpRequestOptions {
     * @relation usingProxy?: boolean | HttpProxy
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var usingProxy: UsingProxy
@@ -850,8 +788,7 @@ public class HttpRequestOptions {
     * @relation caPath?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var caPath: String
@@ -863,8 +800,7 @@ public class HttpRequestOptions {
     * @relation resumeFrom?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var resumeFrom: Int64
@@ -876,8 +812,7 @@ public class HttpRequestOptions {
     * @relation resumeTo?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var resumeTo: Int64
@@ -887,8 +822,7 @@ public class HttpRequestOptions {
     * @relation clientCert?: ClientCert
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var clientCert: ClientCert
@@ -900,8 +834,7 @@ public class HttpRequestOptions {
     * @relation dnsOverHttps?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var dnsOverHttps: String
@@ -913,8 +846,7 @@ public class HttpRequestOptions {
     * @relation dnsServers?: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var dnsServers: Array<String>
@@ -925,8 +857,7 @@ public class HttpRequestOptions {
     * @relation maxLimit?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var maxLimit: UInt32
@@ -938,8 +869,7 @@ public class HttpRequestOptions {
     * @relation multiFormDataList?: Array<MultiFormData>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var multiFormDataList: Array<MultiFormData>
@@ -948,8 +878,7 @@ public class HttpRequestOptions {
     * init the HttpRequestOptions
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public init(method!: RequestMethod = RequestMethod.Get, extraData!: HttpData = HttpData.StringData(""),
@@ -968,8 +897,7 @@ public class HttpRequestOptions {
 * @relation export interface HttpResponse 
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpResponse {
@@ -978,8 +906,7 @@ public class HttpResponse {
     * @relation result: string | Object | ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var result: HttpData
@@ -991,8 +918,7 @@ public class HttpResponse {
     * @relation resultType: HttpDataType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var resultType: HttpDataType
@@ -1002,8 +928,7 @@ public class HttpResponse {
     * @relation responseCode: ResponseCode | number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var responseCode: UInt32
@@ -1013,8 +938,7 @@ public class HttpResponse {
     * @relation header: Object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var header: HashMap<String, String>
@@ -1024,8 +948,7 @@ public class HttpResponse {
     * @relation cookies: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var cookies: String
@@ -1035,8 +958,7 @@ public class HttpResponse {
     * @relation performanceTiming: PerformanceTiming
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var performanceTiming: PerformanceTiming
@@ -1048,8 +970,7 @@ public class HttpResponse {
 * @relation export interface PerformanceTiming
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class PerformanceTiming {
@@ -1058,8 +979,7 @@ public class PerformanceTiming {
     * @relation dnsTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var dnsTiming: Float64
@@ -1069,8 +989,7 @@ public class PerformanceTiming {
     * @relation tcpTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var tcpTiming: Float64
@@ -1080,8 +999,7 @@ public class PerformanceTiming {
     * @relation tlsTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var tlsTiming: Float64
@@ -1091,8 +1009,7 @@ public class PerformanceTiming {
     * @relation firstSendTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var firstSendTiming: Float64
@@ -1102,8 +1019,7 @@ public class PerformanceTiming {
     * @relation firstReceiveTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var firstReceiveTiming: Float64
@@ -1113,8 +1029,7 @@ public class PerformanceTiming {
     * @relation totalFinishTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalFinishTiming: Float64
@@ -1124,8 +1039,7 @@ public class PerformanceTiming {
     * @relation redirectTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var redirectTiming: Float64
@@ -1135,8 +1049,7 @@ public class PerformanceTiming {
     * @relation responseHeaderTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var responseHeaderTiming: Float64
@@ -1146,8 +1059,7 @@ public class PerformanceTiming {
     * @relation responseBodyTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var responseBodyTiming: Float64
@@ -1157,8 +1069,7 @@ public class PerformanceTiming {
     * @relation totalTiming: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalTiming: Float64
@@ -1170,8 +1081,7 @@ public class PerformanceTiming {
 * @relation export interface DataReceiveProgressInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class DataReceiveProgressInfo {
@@ -1180,8 +1090,7 @@ public class DataReceiveProgressInfo {
     * @relation receiveSize: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var receiveSize: Int64
@@ -1191,8 +1100,7 @@ public class DataReceiveProgressInfo {
     * @relation totalSize: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalSize: Int64
@@ -1204,8 +1112,7 @@ public class DataReceiveProgressInfo {
 * @relation export interface DataSendProgressInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class DataSendProgressInfo {
@@ -1214,8 +1121,7 @@ public class DataSendProgressInfo {
     * @relation sendSize: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var sendSize: Int64
@@ -1225,8 +1131,7 @@ public class DataSendProgressInfo {
     * @relation totalSize: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalSize: Int64
@@ -1239,8 +1144,7 @@ public class DataSendProgressInfo {
 * @relation export interface ClientCert
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class ClientCert {
@@ -1249,8 +1153,7 @@ public class ClientCert {
     * @relation certPath: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var certPath: String
@@ -1260,8 +1163,7 @@ public class ClientCert {
     * @relation keyPath: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var keyPath: String
@@ -1271,8 +1173,7 @@ public class ClientCert {
     * @relation certType?: CertType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var certType: CertType
@@ -1282,8 +1183,7 @@ public class ClientCert {
     * @relation keyPassword?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var keyPassword: String
@@ -1292,8 +1192,7 @@ public class ClientCert {
     * init the ClientCert
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public init(certPath: String, keyPath: String, certType!: CertType = CertType.Pem, keyPassword!: String = "")
@@ -1305,8 +1204,7 @@ public class ClientCert {
 * @relation export interface MultiFormData
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class MultiFormData {
@@ -1315,8 +1213,7 @@ public class MultiFormData {
     * @relation name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var name: String
@@ -1326,8 +1223,7 @@ public class MultiFormData {
     * @relation contentType: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var contentType: String
@@ -1337,8 +1233,7 @@ public class MultiFormData {
     * @relation remoteFileName?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var remoteFileName: String
@@ -1348,8 +1243,7 @@ public class MultiFormData {
     * @relation data?: string | Object | ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var data: HttpData
@@ -1362,8 +1256,7 @@ public class MultiFormData {
     * @relation filePath?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var filePath: String
@@ -1372,8 +1265,7 @@ public class MultiFormData {
     * init the MultiFormData
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public init(name: String, contentType: String,  remoteFileName!: String = "",

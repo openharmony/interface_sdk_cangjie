@@ -26,8 +26,7 @@ import std.deriving.Derive
 * @relation declare namespace batteryInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public class BatteryInfo {
@@ -37,8 +36,7 @@ public class BatteryInfo {
     * @relation const batterySOC: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batterySOC: Int32
@@ -49,8 +47,7 @@ public class BatteryInfo {
     * @relation const chargingStatus: BatteryChargeState
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop chargingStatus: BatteryChargeState
@@ -61,8 +58,7 @@ public class BatteryInfo {
     * @relation const healthStatus: BatteryHealthState
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop healthStatus: BatteryHealthState
@@ -73,8 +69,7 @@ public class BatteryInfo {
     * @relation const pluggedType: BatteryPluggedType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop pluggedType: BatteryPluggedType
@@ -85,8 +80,7 @@ public class BatteryInfo {
     * @relation const voltage: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop voltage: Int32
@@ -97,8 +91,7 @@ public class BatteryInfo {
     * @relation const nowCurrent: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop nowCurrent: Int32
@@ -109,8 +102,7 @@ public class BatteryInfo {
     * @relation const technology: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop technology: String
@@ -121,8 +113,7 @@ public class BatteryInfo {
     * @relation const batteryTemperature: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batteryTemperature: Int32
@@ -133,8 +124,7 @@ public class BatteryInfo {
     * @relation const isBatteryPresent: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop isBatteryPresent: Bool
@@ -145,8 +135,7 @@ public class BatteryInfo {
     * @relation const batteryCapacityLevel: BatteryCapacityLevel
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batteryCapacityLevel: BatteryCapacityLevel
@@ -160,8 +149,7 @@ public class BatteryInfo {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryPluggedType {
@@ -171,8 +159,7 @@ public enum BatteryPluggedType {
     * @relation NONE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownType |
@@ -182,8 +169,7 @@ public enum BatteryPluggedType {
     * @relation AC = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Ac |
@@ -193,8 +179,7 @@ public enum BatteryPluggedType {
     * @relation USB = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Usb |
@@ -204,8 +189,7 @@ public enum BatteryPluggedType {
     * @relation WIRELESS = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Wireless |
@@ -221,8 +205,7 @@ public enum BatteryPluggedType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryChargeState {
@@ -232,8 +215,7 @@ public enum BatteryChargeState {
     * @relation NONE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownChargeState |
@@ -243,8 +225,7 @@ public enum BatteryChargeState {
     * @relation ENABLE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Enabled |
@@ -254,8 +235,7 @@ public enum BatteryChargeState {
     * @relation DISABLE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Disabled |
@@ -265,8 +245,7 @@ public enum BatteryChargeState {
     * @relation FULL = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Full |
@@ -282,8 +261,7 @@ public enum BatteryChargeState {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryHealthState {
@@ -293,8 +271,7 @@ public enum BatteryHealthState {
     * @relation UNKNOWN = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownHealthState |
@@ -304,8 +281,7 @@ public enum BatteryHealthState {
     * @relation GOOD = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Good |
@@ -315,8 +291,7 @@ public enum BatteryHealthState {
     * @relation OVERHEAT = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Overheat |
@@ -326,8 +301,7 @@ public enum BatteryHealthState {
     * @relation OVERVOLTAGE = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Overvoltage |
@@ -337,8 +311,7 @@ public enum BatteryHealthState {
     * @relation COLD = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Cold |
@@ -348,8 +321,7 @@ public enum BatteryHealthState {
     * @relation DEAD = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Dead |
@@ -365,8 +337,7 @@ public enum BatteryHealthState {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryCapacityLevel {
@@ -376,8 +347,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_FULL = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelFull |
@@ -387,8 +357,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_HIGH = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelHigh |
@@ -398,8 +367,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_NORMAL = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelNormal |
@@ -409,8 +377,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_LOW = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelLow |
@@ -420,8 +387,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_WARNING = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelWarning |
@@ -431,8 +397,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_CRITICAL = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelCritical |
@@ -442,8 +407,7 @@ public enum BatteryCapacityLevel {
     * @relation LEVEL_SHUTDOWN = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelShutdown |

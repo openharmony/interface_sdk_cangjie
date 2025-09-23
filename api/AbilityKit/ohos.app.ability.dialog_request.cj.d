@@ -25,8 +25,7 @@ import ohos.hilog.*
 * @relation export enum ResultCode
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public enum ResultCode {
@@ -36,8 +35,7 @@ public enum ResultCode {
     * @relation RESULT_OK = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     ResultOk |
@@ -47,8 +45,7 @@ public enum ResultCode {
     * @relation RESULT_CANCEL = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     ResultCancel |
@@ -62,8 +59,7 @@ public enum ResultCode {
 * @relation export interface RequestResult
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class RequestResult {
@@ -73,8 +69,7 @@ public class RequestResult {
     * @relation result: ResultCode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var result: ResultCode
@@ -85,8 +80,7 @@ public class RequestResult {
     * @relation want?: Want
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var want: Want

@@ -32,8 +32,7 @@ import std.deriving.Derive
 * @relation declare namespace call
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Telephony.CallManager"
 ]
 public class Call {
@@ -47,8 +46,7 @@ public class Call {
     * @relation function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public static func formatPhoneNumberToE164(phoneNumber: String, countryCode: String): String
@@ -63,8 +61,7 @@ public class Call {
     * @relation function makeCall(phoneNumber: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Applications.Contacts"
     ]
     public static func makeCall(phoneNumber: String): Unit
@@ -79,8 +76,7 @@ public class Call {
     * @relation function makeCall(context: Context, phoneNumber: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Applications.Contacts"
     ]
     public static func makeCall(context: UIAbilityContext, phoneNumber: String): Unit
@@ -95,8 +91,7 @@ public class Call {
     * @relation function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public static func isEmergencyPhoneNumber(phoneNumber: String, options!: EmergencyNumberOptions = EmergencyNumberOptions(slotId: 0)): Bool
@@ -107,8 +102,7 @@ public class Call {
     * @relation function hasCallSync(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public static func hasCall(): Bool
@@ -119,8 +113,7 @@ public class Call {
     * @relation function getCallStateSync(): CallState
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public static func getCallState(): CallState
@@ -131,8 +124,7 @@ public class Call {
     * @relation function hasVoiceCapability(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public static func hasVoiceCapability(): Bool
@@ -150,8 +142,7 @@ public class Call {
     * @relation function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public static func formatPhoneNumber(
@@ -167,8 +158,7 @@ public class Call {
 * @relation export interface EmergencyNumberOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Telephony.CallManager"
 ]
 public class EmergencyNumberOptions {
@@ -179,8 +169,7 @@ public class EmergencyNumberOptions {
     * @relation slotId?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public var slotId: Int32
@@ -189,8 +178,7 @@ public class EmergencyNumberOptions {
     * EmergencyNumberOptions constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public init(slotId!: Int32 = 0)
@@ -204,8 +192,7 @@ public class EmergencyNumberOptions {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Telephony.CallManager"
 ]
 public enum CallState {
@@ -215,8 +202,7 @@ public enum CallState {
     * @relation CALL_STATE_UNKNOWN = -1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     CallStateUnknown |
@@ -226,8 +212,7 @@ public enum CallState {
     * @relation CALL_STATE_IDLE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     CallStateIdle |
@@ -237,8 +222,7 @@ public enum CallState {
     * @relation CALL_STATE_RINGING = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     CallStateRinging |
@@ -249,8 +233,7 @@ public enum CallState {
     * @relation CALL_STATE_OFFHOOK = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     CallStateOffhook |
@@ -260,8 +243,7 @@ public enum CallState {
     * @relation CALL_STATE_ANSWERED = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     CallStateAnswered |
@@ -276,8 +258,7 @@ public enum CallState {
 * @relation export interface NumberFormatOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Telephony.CallManager"
 ]
 public class NumberFormatOptions {
@@ -287,8 +268,7 @@ public class NumberFormatOptions {
     * @relation countryCode?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public var countryCode: String
@@ -297,8 +277,7 @@ public class NumberFormatOptions {
     * NumberFormatOptions constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Telephony.CallManager"
     ]
     public init(countryCode!: String = "CN")

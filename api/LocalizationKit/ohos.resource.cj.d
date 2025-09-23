@@ -29,8 +29,7 @@ import ohos.labels.APILevel
 * @relation export interface Resource
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public class AppResource <: Length & ResourceColor & ResourceStr {
@@ -40,8 +39,7 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
     * @relation bundleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let bundleName: String
@@ -52,8 +50,7 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
     * @relation moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let moduleName: String
@@ -64,8 +61,7 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
     * @relation id: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let id: UInt32
@@ -76,8 +72,7 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
     * @relation params?: any[]
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let params: ?Array<Any>
@@ -88,8 +83,7 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
     * @relation type?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let resType: ?Int32
@@ -98,8 +92,7 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
     * AppResource constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public init(

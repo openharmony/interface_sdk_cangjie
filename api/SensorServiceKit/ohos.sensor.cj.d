@@ -34,8 +34,7 @@ import std.sync.Mutex
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public enum SensorId {
@@ -45,9 +44,8 @@ public enum SensorId {
     * @relation ACCELEROMETER = 1
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCELEROMETER",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Accelerometer |
@@ -57,9 +55,8 @@ public enum SensorId {
     * @relation GYROSCOPE = 2
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.GYROSCOPE",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Gyroscope |
@@ -69,8 +66,7 @@ public enum SensorId {
     * @relation AMBIENT_LIGHT = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AmbientLight |
@@ -80,8 +76,7 @@ public enum SensorId {
     * @relation MAGNETIC_FIELD = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     MagneticField |
@@ -91,8 +86,7 @@ public enum SensorId {
     * @relation BAROMETER = 8
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Barometer |
@@ -102,8 +96,7 @@ public enum SensorId {
     * @relation HALL = 10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Hall |
@@ -113,8 +106,7 @@ public enum SensorId {
     * @relation PROXIMITY = 12
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Proximity |
@@ -124,8 +116,7 @@ public enum SensorId {
     * @relation HUMIDITY = 13
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Humidity |
@@ -135,8 +126,7 @@ public enum SensorId {
     * @relation ORIENTATION = 256
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Orientation |
@@ -146,8 +136,7 @@ public enum SensorId {
     * @relation GRAVITY = 257
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Gravity |
@@ -157,9 +146,8 @@ public enum SensorId {
     * @relation LINEAR_ACCELEROMETER = 258
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCELEROMETER",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     LinearAccelerometer |
@@ -169,8 +157,7 @@ public enum SensorId {
     * @relation ROTATION_VECTOR = 259
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     RotationVector |
@@ -180,8 +167,7 @@ public enum SensorId {
     * @relation AMBIENT_TEMPERATURE = 260
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AmbientTemperature |
@@ -191,8 +177,7 @@ public enum SensorId {
     * @relation MAGNETIC_FIELD_UNCALIBRATED = 261
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     MagneticFieldUncalibrated |
@@ -202,9 +187,8 @@ public enum SensorId {
     * @relation GYROSCOPE_UNCALIBRATED = 263
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.GYROSCOPE",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     GyroscopeUncalibrated |
@@ -214,8 +198,7 @@ public enum SensorId {
     * @relation SIGNIFICANT_MOTION = 264
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     SignificantMotion |
@@ -225,9 +208,8 @@ public enum SensorId {
     * @relation PEDOMETER_DETECTION = 265
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACTIVITY_MOTION",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     PedometerDetection |
@@ -237,9 +219,8 @@ public enum SensorId {
     * @relation PEDOMETER = 266
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACTIVITY_MOTION",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     Pedometer |
@@ -249,9 +230,8 @@ public enum SensorId {
     * @relation HEART_RATE = 278
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.READ_HEALTH_DATA",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     HeartRate |
@@ -261,8 +241,7 @@ public enum SensorId {
     * @relation WEAR_DETECTION = 280
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     WearDetection |
@@ -272,9 +251,8 @@ public enum SensorId {
     * @relation ACCELEROMETER_UNCALIBRATED = 281
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCELEROMETER",
-        stagemodelonly: true,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AccelerometerUncalibrated |
@@ -283,8 +261,7 @@ public enum SensorId {
     * get the corresponding mapping value.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public func getValue(): Int32
@@ -299,8 +276,7 @@ public enum SensorId {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public enum SensorAccuracy {
@@ -310,8 +286,7 @@ public enum SensorAccuracy {
     * @relation ACCURACY_UNRELIABLE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AccuracyUnreliable |
@@ -321,8 +296,7 @@ public enum SensorAccuracy {
     * @relation ACCURACY_LOW = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AccuracyLow |
@@ -332,8 +306,7 @@ public enum SensorAccuracy {
     * @relation ACCURACY_MEDIUM = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AccuracyMedium |
@@ -343,8 +316,7 @@ public enum SensorAccuracy {
     * @relation ACCURACY_HIGH = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     AccuracyHigh |
@@ -358,8 +330,7 @@ public enum SensorAccuracy {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public enum IntervalOption {
@@ -367,8 +338,7 @@ public enum IntervalOption {
     * SensorNumber option.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     SensorNumber(Int64) |
@@ -376,8 +346,7 @@ public enum IntervalOption {
     * GameMode option.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     GameMode |
@@ -385,8 +354,7 @@ public enum IntervalOption {
     * UIMode option.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     UIMode |
@@ -394,8 +362,7 @@ public enum IntervalOption {
     * NormalMode option.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     NormalMode |
@@ -410,8 +377,7 @@ public enum IntervalOption {
 * @relation interface SensorInfoParam.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class SensorInfoParam {
@@ -422,8 +388,7 @@ public class SensorInfoParam {
     * @relation deviceId?: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var deviceId: Int32
@@ -434,8 +399,7 @@ public class SensorInfoParam {
     * @relation sensorIndex?: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var sensorIndex: Int32
@@ -444,8 +408,7 @@ public class SensorInfoParam {
     * Options constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public init(deviceId!: Int32 = -1, sensorIndex!: Int32 = 0)
@@ -458,8 +421,7 @@ public class SensorInfoParam {
 * @relation interface AccelerometerResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class AccelerometerResponse <: Response {
@@ -469,8 +431,7 @@ public class AccelerometerResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -481,8 +442,7 @@ public class AccelerometerResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -493,8 +453,7 @@ public class AccelerometerResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -507,8 +466,7 @@ public class AccelerometerResponse <: Response {
 * @relation interface Options
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class Options {
@@ -518,8 +476,7 @@ public class Options {
     * @relation interval?: number | SensorFrequency;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var interval: IntervalOption
@@ -530,8 +487,7 @@ public class Options {
     * @relation sensorInfoParam?: SensorInfoParam;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var sensorInfoParam: ?SensorInfoParam
@@ -540,8 +496,7 @@ public class Options {
     * Options constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public init(interval!: IntervalOption = NormalMode, sensorInfoParam!: ?SensorInfoParam = None)
@@ -554,8 +509,7 @@ public class Options {
 * @relation interface Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public open class Response {
@@ -565,8 +519,7 @@ public open class Response {
     * @relation timestamp: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var timestamp: Int64
@@ -577,8 +530,7 @@ public open class Response {
     * @relation accuracy: SensorAccuracy
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var accuracy: SensorAccuracy
@@ -591,8 +543,7 @@ public open class Response {
 * @relation interface AccelerometerUncalibratedResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class AccelerometerUncalibratedResponse <: Response {
@@ -602,8 +553,7 @@ public class AccelerometerUncalibratedResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -614,8 +564,7 @@ public class AccelerometerUncalibratedResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -626,8 +575,7 @@ public class AccelerometerUncalibratedResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -638,8 +586,7 @@ public class AccelerometerUncalibratedResponse <: Response {
     * @relation biasX: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasX: Float32
@@ -650,8 +597,7 @@ public class AccelerometerUncalibratedResponse <: Response {
     * @relation biasY: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasY: Float32
@@ -662,8 +608,7 @@ public class AccelerometerUncalibratedResponse <: Response {
     * @relation biasZ: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasZ: Float32
@@ -676,8 +621,7 @@ public class AccelerometerUncalibratedResponse <: Response {
 * @relation interface LightResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class LightResponse <: Response {
@@ -687,8 +631,7 @@ public class LightResponse <: Response {
     * @relation intensity: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var intensity: Float32
@@ -699,8 +642,7 @@ public class LightResponse <: Response {
     * @relation colorTemperature?: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var colorTemperature: ?Float32
@@ -711,8 +653,7 @@ public class LightResponse <: Response {
     * @relation infraredLuminance?: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var infraredLuminance: ?Float32
@@ -725,8 +666,7 @@ public class LightResponse <: Response {
 * @relation interface AmbientTemperatureResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class AmbientTemperatureResponse <: Response {
@@ -736,8 +676,7 @@ public class AmbientTemperatureResponse <: Response {
     * @relation temperature: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var temperature: Float32
@@ -750,8 +689,7 @@ public class AmbientTemperatureResponse <: Response {
 * @relation interface BarometerResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class BarometerResponse <: Response {
@@ -761,8 +699,7 @@ public class BarometerResponse <: Response {
     * @relation pressure: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var pressure: Float32
@@ -775,8 +712,7 @@ public class BarometerResponse <: Response {
 * @relation interface GravityResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class GravityResponse <: Response {
@@ -786,8 +722,7 @@ public class GravityResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -798,8 +733,7 @@ public class GravityResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -810,8 +744,7 @@ public class GravityResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -824,8 +757,7 @@ public class GravityResponse <: Response {
 * @relation interface GyroscopeResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class GyroscopeResponse <: Response {
@@ -835,8 +767,7 @@ public class GyroscopeResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -847,8 +778,7 @@ public class GyroscopeResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -859,8 +789,7 @@ public class GyroscopeResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -873,8 +802,7 @@ public class GyroscopeResponse <: Response {
 * @relation interface GyroscopeUncalibratedResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class GyroscopeUncalibratedResponse <: Response {
@@ -884,8 +812,7 @@ public class GyroscopeUncalibratedResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -896,8 +823,7 @@ public class GyroscopeUncalibratedResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -908,8 +834,7 @@ public class GyroscopeUncalibratedResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -920,8 +845,7 @@ public class GyroscopeUncalibratedResponse <: Response {
     * @relation biasX: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasX: Float32
@@ -932,8 +856,7 @@ public class GyroscopeUncalibratedResponse <: Response {
     * @relation biasY: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasY: Float32
@@ -944,8 +867,7 @@ public class GyroscopeUncalibratedResponse <: Response {
     * @relation biasZ: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasZ: Float32
@@ -958,8 +880,7 @@ public class GyroscopeUncalibratedResponse <: Response {
 * @relation interface HallResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class HallResponse <: Response {
@@ -969,8 +890,7 @@ public class HallResponse <: Response {
     * @relation status: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var status: Float32
@@ -983,8 +903,7 @@ public class HallResponse <: Response {
 * @relation interface HeartRateResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class HeartRateResponse <: Response {
@@ -994,8 +913,7 @@ public class HeartRateResponse <: Response {
     * @relation heartRate: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var heartRate: Float32
@@ -1008,8 +926,7 @@ public class HeartRateResponse <: Response {
 * @relation interface HumidityResponse extends Response
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class HumidityResponse <: Response {
@@ -1019,8 +936,7 @@ public class HumidityResponse <: Response {
     * @relation humidity: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var humidity: Float32
@@ -1033,8 +949,7 @@ public class HumidityResponse <: Response {
 * @relation interface LinearAccelerometerResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class LinearAccelerometerResponse <: Response {
@@ -1044,8 +959,7 @@ public class LinearAccelerometerResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -1056,8 +970,7 @@ public class LinearAccelerometerResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -1068,8 +981,7 @@ public class LinearAccelerometerResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -1082,8 +994,7 @@ public class LinearAccelerometerResponse <: Response {
 * @relation interface MagneticFieldResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class MagneticFieldResponse <: Response {
@@ -1093,8 +1004,7 @@ public class MagneticFieldResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -1105,8 +1015,7 @@ public class MagneticFieldResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -1117,8 +1026,7 @@ public class MagneticFieldResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -1131,8 +1039,7 @@ public class MagneticFieldResponse <: Response {
 * @relation interface MagneticFieldUncalibratedResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class MagneticFieldUncalibratedResponse <: Response {
@@ -1142,8 +1049,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -1154,8 +1060,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -1166,8 +1071,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -1178,8 +1082,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
     * @relation biasX: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasX: Float32
@@ -1190,8 +1093,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
     * @relation biasY: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasY: Float32
@@ -1202,8 +1104,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
     * @relation biasZ: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var biasZ: Float32
@@ -1216,8 +1117,7 @@ public class MagneticFieldUncalibratedResponse <: Response {
 * @relation interface OrientationResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class OrientationResponse <: Response {
@@ -1227,8 +1127,7 @@ public class OrientationResponse <: Response {
     * @relation alpha: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var alpha: Float32
@@ -1239,8 +1138,7 @@ public class OrientationResponse <: Response {
     * @relation beta: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var beta: Float32
@@ -1251,8 +1149,7 @@ public class OrientationResponse <: Response {
     * @relation gamma: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var gamma: Float32
@@ -1265,8 +1162,7 @@ public class OrientationResponse <: Response {
 * @relation interface PedometerResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class PedometerResponse <: Response {
@@ -1276,8 +1172,7 @@ public class PedometerResponse <: Response {
     * relation steps: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var steps: Float32
@@ -1290,8 +1185,7 @@ public class PedometerResponse <: Response {
 * @relation interface PedometerDetectionResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class PedometerDetectionResponse <: Response {
@@ -1302,8 +1196,7 @@ public class PedometerDetectionResponse <: Response {
     * @relation scalar: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var scalar: Float32
@@ -1316,8 +1209,7 @@ public class PedometerDetectionResponse <: Response {
 * @relation interface ProximityResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class ProximityResponse <: Response {
@@ -1327,8 +1219,7 @@ public class ProximityResponse <: Response {
     * relation distance: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var distance: Float32
@@ -1341,8 +1232,7 @@ public class ProximityResponse <: Response {
 * @relation interface RotationVectorResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class RotationVectorResponse <: Response {
@@ -1352,8 +1242,7 @@ public class RotationVectorResponse <: Response {
     * @relation x: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var x: Float32
@@ -1364,8 +1253,7 @@ public class RotationVectorResponse <: Response {
     * @relation y: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var y: Float32
@@ -1376,8 +1264,7 @@ public class RotationVectorResponse <: Response {
     * @relation z: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var z: Float32
@@ -1388,8 +1275,7 @@ public class RotationVectorResponse <: Response {
     * @relation w: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var w: Float32
@@ -1402,8 +1288,7 @@ public class RotationVectorResponse <: Response {
 * @relation interface SignificantMotionResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class SignificantMotionResponse <: Response {
@@ -1413,8 +1298,7 @@ public class SignificantMotionResponse <: Response {
     * @relation scalar: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var scalar: Float32
@@ -1427,8 +1311,7 @@ public class SignificantMotionResponse <: Response {
 * @relation interface WearDetectionResponse extends Response.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class WearDetectionResponse <: Response {
@@ -1438,8 +1321,7 @@ public class WearDetectionResponse <: Response {
     * @relation value: number;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var value: Float32
@@ -1452,8 +1334,7 @@ public class WearDetectionResponse <: Response {
 * @relation interface Sensor
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public class Sensor {
@@ -1463,8 +1344,7 @@ public class Sensor {
     * @relation sensorName:string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var sensorName: String
@@ -1475,8 +1355,7 @@ public class Sensor {
     * @relation vendorName:string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var vendorName: String
@@ -1487,8 +1366,7 @@ public class Sensor {
     * @relation firmwareVersion:string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var firmwareVersion: String
@@ -1499,8 +1377,7 @@ public class Sensor {
     * @relation hardwareVersion:string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var hardwareVersion: String
@@ -1511,8 +1388,7 @@ public class Sensor {
     * @relation sensorId:number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var sensorId: Int32
@@ -1523,8 +1399,7 @@ public class Sensor {
     * @relation maxRange:number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var maxRange: Float32
@@ -1535,8 +1410,7 @@ public class Sensor {
     * @relation minSamplePeriod:number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var minSamplePeriod: Int64
@@ -1547,8 +1421,7 @@ public class Sensor {
     * @relation maxSamplePeriod:number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var maxSamplePeriod: Int64
@@ -1559,8 +1432,7 @@ public class Sensor {
     * @relation precision:number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var precision: Float32
@@ -1571,8 +1443,7 @@ public class Sensor {
     * @relation power:number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Sensors.Sensor"
     ]
     public var power: Float32
@@ -1605,8 +1476,7 @@ public class Sensor {
 * @relation on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>, options?: Options): void;
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public func on<T>(sensorType: SensorId, callback: Callback1Argument<T>, option!: ?Options = None): Unit where T <: Response
@@ -1638,8 +1508,7 @@ public func on<T>(sensorType: SensorId, callback: Callback1Argument<T>, option!:
 * @relation once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void;
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public func once<T>(sensorType: SensorId, callback: Callback1Argument<T>): Unit where T <: Response
@@ -1671,8 +1540,7 @@ public func once<T>(sensorType: SensorId, callback: Callback1Argument<T>): Unit 
 * @relation off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void;
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public func off(sensorType: SensorId, callback!: ?CallbackObject = None): Unit
@@ -1686,8 +1554,7 @@ public func off(sensorType: SensorId, callback!: ?CallbackObject = None): Unit
 * @relation function getSensorListSync(): Array<Sensor>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public func getSensorList(): Array<Sensor>
@@ -1702,8 +1569,7 @@ public func getSensorList(): Array<Sensor>
 * @relation function getSingleSensorSync(type: SensorId): Sensor
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Sensors.Sensor"
 ]
 public func getSingleSensor(sensorType: SensorId): Sensor
