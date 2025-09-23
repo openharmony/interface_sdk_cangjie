@@ -35,8 +35,7 @@ import std.collection.*
 * @relation export default class Want
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public class Want {
@@ -47,8 +46,7 @@ public class Want {
     * @relation deviceId?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var deviceId: String
@@ -59,8 +57,7 @@ public class Want {
     * @relation bundleName?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var bundleName: String
@@ -73,8 +70,7 @@ public class Want {
     * @relation abilityName?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var abilityName: String
@@ -87,8 +83,7 @@ public class Want {
     * @relation moduleName?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var moduleName: String
@@ -101,8 +96,7 @@ public class Want {
     * @relation flags?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var flags: UInt32
@@ -116,8 +110,7 @@ public class Want {
     * @relation uri?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var uri: String
@@ -130,8 +123,7 @@ public class Want {
     * @relation action?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var action: String
@@ -143,8 +135,7 @@ public class Want {
     * @relation entities?: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var entities: Array<String>
@@ -155,8 +146,7 @@ public class Want {
     * @relation type?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var wantType: String
@@ -222,8 +212,7 @@ public class Want {
     * @relation parameters?: Record<string, Object>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var parameters: HashMap<String, WantValueType>
@@ -232,8 +221,7 @@ public class Want {
     * Want constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public init(
@@ -256,8 +244,7 @@ public class Want {
 * Want value type.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public enum WantValueType {
@@ -265,8 +252,7 @@ public enum WantValueType {
     * Int64 value type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     Int64Value(Int64) |
@@ -274,8 +260,7 @@ public enum WantValueType {
     * Float64 value type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     Float64Value(Float64) |
@@ -283,8 +268,7 @@ public enum WantValueType {
     * String value type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     StringValue(String) |
@@ -292,8 +276,7 @@ public enum WantValueType {
     * Bool value type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     BoolValue(Bool) |
@@ -301,8 +284,7 @@ public enum WantValueType {
     * Array value type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     ArrayValue(Array<WantValueType>) |
@@ -310,8 +292,7 @@ public enum WantValueType {
     * HashMap value type.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     HashMapValue(HashMap<String, WantValueType>) |

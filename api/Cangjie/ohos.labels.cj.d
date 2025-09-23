@@ -52,17 +52,26 @@ extend String <: PermissionValue {
     public operator const func |(rhs: PermissionValue): PermissionValue
 }
 
+public interface LevelValue {
+}
+
+extend Int64 <: LevelValue {
+}
+
+extend String <: LevelValue {
+}
+
 @Annotation
 public class APILevel {
     // since
-    public let level: UInt8
+    public let since: LevelValue
     
     public let atomicservice: Bool
     
     public let crossplatform: Bool
     
     // deprecated: 0 means the Api is not deprecated
-    public let deprecated: UInt8
+    public let deprecated: LevelValue
     
     public let form: Bool
     
@@ -72,8 +81,14 @@ public class APILevel {
     
     public let syscap: String
     
-    public const init(level_val: UInt8, atomicservice!: Bool = false, crossplatform!: Bool = false,
-        deprecated!: UInt8 = 0, form!: Bool = false, permission!: ?PermissionValue = None, stagemodelonly!: Bool = true,
-        syscap!: String = "")
+    public let throwexception: Bool
+    
+    public let workerthread: Bool
+    
+    public let systemapi: Bool
+    
+    public const init(since: LevelValue, atomicservice!: Bool = false, crossplatform!: Bool = false,
+        deprecated!: LevelValue = 0, form!: Bool = false, permission!: ?PermissionValue = None, stagemodelonly!: Bool = true,
+        syscap!: String = "", throwexception!: Bool = false, workerthread!: Bool = false, systemapi!: Bool = false)
 }
 

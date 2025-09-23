@@ -40,8 +40,7 @@ import std.collection.HashMap
 * @relation function createGattServer(): GattServer
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func createGattServer(): GattServer
@@ -56,8 +55,7 @@ public func createGattServer(): GattServer
 * @relation function createGattClientDevice(deviceId: string): GattClientDevice
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func createGattClientDevice(deviceId: String): GattClientDevice
@@ -77,9 +75,8 @@ public func createGattClientDevice(deviceId: String): GattClientDevice
 * @relation function startBLEScan(filters: Array<ScanFilter>, options?: ScanOptions): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func startBLEScan(filters: Array<ScanFilter>, options!: ?ScanOptions = None): Unit
@@ -96,9 +93,8 @@ public func startBLEScan(filters: Array<ScanFilter>, options!: ?ScanOptions = No
 * @relation function stopBLEScan(): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func stopBLEScan(): Unit
@@ -117,9 +113,8 @@ public func stopBLEScan(): Unit
 * @relation function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse!: ?AdvertiseData = None): Unit
@@ -136,9 +131,8 @@ public func startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, 
 * @relation function stopAdvertising(): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func stopAdvertising(): Unit
@@ -156,9 +150,8 @@ public func stopAdvertising(): Unit
 * @relation function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func startAdvertising(advertisingParams: AdvertisingParams): UInt32
@@ -177,9 +170,8 @@ public func startAdvertising(advertisingParams: AdvertisingParams): UInt32
 * @relation function stopAdvertising(advertisingId: number): Promise<void>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func stopAdvertising(advertisingId: UInt32): Unit
@@ -192,9 +184,8 @@ public func stopAdvertising(advertisingId: UInt32): Unit
 * @relation function on(type: 'advertisingStateChange', callback: Callback<AdvertisingStateChangeInfo>): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func on(eventType: BluetoothBleCallbackType, callback: Callback1Argument<AdvertisingStateChangeInfo>): Unit
@@ -207,9 +198,8 @@ public func on(eventType: BluetoothBleCallbackType, callback: Callback1Argument<
 * @relation function on(type: 'BLEDeviceFind', callback: Callback<Array<ScanResult>>): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func on(eventType: BluetoothBleCallbackType, callback: Callback1Argument<Array<ScanResult>>): Unit
@@ -222,9 +212,8 @@ public func on(eventType: BluetoothBleCallbackType, callback: Callback1Argument<
 * @relation function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func off(eventType: BluetoothBleCallbackType, callback!: ?CallbackObject = None): Unit
@@ -236,8 +225,7 @@ public func off(eventType: BluetoothBleCallbackType, callback!: ?CallbackObject 
 * @relation interface GattClientDevice
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattClientDevice <: RemoteDataLite {
@@ -252,9 +240,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation connect(): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func connect(): Unit
@@ -270,9 +257,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation disconnect(): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func disconnect(): Unit
@@ -289,9 +275,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation close(): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func close(): Unit
@@ -307,9 +292,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation getDeviceName(): Promise<string>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func getDeviceName(): String
@@ -325,9 +309,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation getServices(): Promise<Array<GattService>>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func getServices(callback: AsyncCallback<Array<GattService>>): Unit
@@ -344,9 +327,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func readCharacteristicValue(
@@ -372,9 +354,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): Unit
@@ -391,9 +372,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType,
@@ -411,9 +391,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<Unit>): Unit
@@ -428,9 +407,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation getRssiValue(): Promise<number>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func getRssiValue(callback: AsyncCallback<Int32>): Unit
@@ -446,9 +424,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation setBLEMtuSize(mtu: number): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func setBLEMtuSize(mtu: Int32): Unit
@@ -464,9 +441,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: boolean): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: Bool, callback: AsyncCallback<Unit>): Unit
@@ -482,9 +458,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boolean): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: Bool, callback: AsyncCallback<Unit>): Unit
@@ -498,9 +473,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattClientDeviceCallbackType, callback: Callback1Argument<BLECharacteristic>): Unit
@@ -512,9 +486,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectionChangeState>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(
@@ -529,9 +502,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation on(type: 'BLEMtuChange', callback: Callback<number>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattClientDeviceCallbackType, callback: Callback1Argument<Int32>): Unit
@@ -544,9 +516,8 @@ public class GattClientDevice <: RemoteDataLite {
     * @relation off(type: 'BLEMtuChange', callback?: Callback<number>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: BluetoothBleGattClientDeviceCallbackType, callback!: ?CallbackObject = None): Unit
@@ -559,8 +530,7 @@ public class GattClientDevice <: RemoteDataLite {
 * @relation interface GattServer
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattServer <: RemoteDataLite {
@@ -577,9 +547,8 @@ public class GattServer <: RemoteDataLite {
     * @relation addService(service: GattService): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func addService(service: GattService): Unit
@@ -597,9 +566,8 @@ public class GattServer <: RemoteDataLite {
     * @relation removeService(serviceUuid: string): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func removeService(serviceUuid: String): Unit
@@ -615,9 +583,8 @@ public class GattServer <: RemoteDataLite {
     * @relation close(): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func close(): Unit
@@ -636,9 +603,8 @@ public class GattServer <: RemoteDataLite {
     * @relation notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func notifyCharacteristicChanged(deviceId: String, notifyCharacteristic: NotifyCharacteristic): Unit
@@ -655,9 +621,8 @@ public class GattServer <: RemoteDataLite {
     * @relation sendResponse(serverResponse: ServerResponse): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func sendResponse(serverResponse: ServerResponse): Unit
@@ -671,9 +636,8 @@ public class GattServer <: RemoteDataLite {
     * @relation on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<CharacteristicReadRequest>): Unit
@@ -687,9 +651,8 @@ public class GattServer <: RemoteDataLite {
     * @relation on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<CharacteristicWriteRequest>): Unit
@@ -703,9 +666,8 @@ public class GattServer <: RemoteDataLite {
     * @relation on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<DescriptorReadRequest>): Unit
@@ -719,9 +681,8 @@ public class GattServer <: RemoteDataLite {
     * @relation on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<DescriptorWriteRequest>): Unit
@@ -735,9 +696,8 @@ public class GattServer <: RemoteDataLite {
     * @relation on(type: 'connectionStateChange', callback: Callback<BLEConnectionChangeState>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<BLEConnectionChangeState>): Unit
@@ -749,9 +709,8 @@ public class GattServer <: RemoteDataLite {
     * @relation on(type: 'BLEMtuChange', callback: Callback<number>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<Int32>): Unit
@@ -767,9 +726,8 @@ public class GattServer <: RemoteDataLite {
     * @relation off(type: 'BLEMtuChange', callback?: Callback<number>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: BluetoothBleGattServerCallbackType, callback!: ?CallbackObject = None): Unit
@@ -782,8 +740,7 @@ public class GattServer <: RemoteDataLite {
 * @relation interface GattService
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattService {
@@ -793,8 +750,7 @@ public class GattService {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -805,8 +761,7 @@ public class GattService {
     * @relation isPrimary: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var isPrimary: Bool
@@ -817,8 +772,7 @@ public class GattService {
     * @relation characteristics: Array<BLECharacteristic>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristics: Array<BLECharacteristic>
@@ -829,8 +783,7 @@ public class GattService {
     * @relation includeServices?: Array<GattService>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var includeServices: Array<GattService>
@@ -839,8 +792,7 @@ public class GattService {
     * GattService constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -858,8 +810,7 @@ public class GattService {
 * @relation interface BLECharacteristic
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class BLECharacteristic {
@@ -869,8 +820,7 @@ public class BLECharacteristic {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -881,8 +831,7 @@ public class BLECharacteristic {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -893,8 +842,7 @@ public class BLECharacteristic {
     * @relation characteristicValue: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicValue: Array<Byte>
@@ -905,8 +853,7 @@ public class BLECharacteristic {
     * @relation descriptors: Array<BLEDescriptor>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptors: Array<BLEDescriptor>
@@ -917,8 +864,7 @@ public class BLECharacteristic {
     * @relation properties?: GattProperties
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var properties: GattProperties
@@ -927,8 +873,7 @@ public class BLECharacteristic {
     * BLECharacteristic constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -949,8 +894,7 @@ public class BLECharacteristic {
 * @relation interface BLEDescriptor
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class BLEDescriptor {
@@ -960,8 +904,7 @@ public class BLEDescriptor {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -972,8 +915,7 @@ public class BLEDescriptor {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -984,8 +926,7 @@ public class BLEDescriptor {
     * @relation descriptorUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptorUuid: String
@@ -996,8 +937,7 @@ public class BLEDescriptor {
     * @relation descriptorValue: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptorValue: Array<Byte>
@@ -1006,8 +946,7 @@ public class BLEDescriptor {
     * BLEDescriptor constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -1027,8 +966,7 @@ public class BLEDescriptor {
 * @relation interface GattProperties
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattProperties {
@@ -1038,8 +976,7 @@ public class GattProperties {
     * @relation write?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var write: Bool
@@ -1050,8 +987,7 @@ public class GattProperties {
     * @relation writeNoResponse?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeNoResponse: Bool
@@ -1062,8 +998,7 @@ public class GattProperties {
     * @relation read?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var read: Bool
@@ -1074,8 +1009,7 @@ public class GattProperties {
     * @relation notify?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var notify: Bool
@@ -1086,8 +1020,7 @@ public class GattProperties {
     * @relation indicate?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var indicate: Bool
@@ -1096,8 +1029,7 @@ public class GattProperties {
     * GattProperties constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -1119,8 +1051,7 @@ public class GattProperties {
 * @relation interface NotifyCharacteristic
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class NotifyCharacteristic {
@@ -1130,8 +1061,7 @@ public class NotifyCharacteristic {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -1142,8 +1072,7 @@ public class NotifyCharacteristic {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -1154,8 +1083,7 @@ public class NotifyCharacteristic {
     * @relation characteristicValue: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicValue: Array<Byte>
@@ -1167,8 +1095,7 @@ public class NotifyCharacteristic {
     * @relation confirm: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var confirm: Bool
@@ -1177,8 +1104,7 @@ public class NotifyCharacteristic {
     * NotifyCharacteristic constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -1196,8 +1122,7 @@ public class NotifyCharacteristic {
 * @relation interface ServerResponse
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ServerResponse {
@@ -1207,8 +1132,7 @@ public class ServerResponse {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -1219,8 +1143,7 @@ public class ServerResponse {
     * @relation transId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
@@ -1231,8 +1154,7 @@ public class ServerResponse {
     * @relation status: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var status: Int32
@@ -1243,8 +1165,7 @@ public class ServerResponse {
     * @relation offset: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
@@ -1255,8 +1176,7 @@ public class ServerResponse {
     * @relation value: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var value: Array<Byte>
@@ -1265,8 +1185,7 @@ public class ServerResponse {
     * ServerResponse constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -1286,8 +1205,7 @@ public class ServerResponse {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum GattWriteType {
@@ -1297,8 +1215,7 @@ public enum GattWriteType {
     * @relation WRITE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Write |
@@ -1308,8 +1225,7 @@ public enum GattWriteType {
     * @relation WRITE_NO_RESPONSE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     WriteNoResponse |
@@ -1324,8 +1240,7 @@ public enum GattWriteType {
 * @relation interface CharacteristicReadRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class CharacteristicReadRequest {
@@ -1335,8 +1250,7 @@ public class CharacteristicReadRequest {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -1347,8 +1261,7 @@ public class CharacteristicReadRequest {
     * @relation transId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
@@ -1359,8 +1272,7 @@ public class CharacteristicReadRequest {
     * @relation offset: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
@@ -1371,8 +1283,7 @@ public class CharacteristicReadRequest {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -1383,8 +1294,7 @@ public class CharacteristicReadRequest {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -1397,8 +1307,7 @@ public class CharacteristicReadRequest {
 * @relation interface CharacteristicWriteRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class CharacteristicWriteRequest {
@@ -1408,8 +1317,7 @@ public class CharacteristicWriteRequest {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -1420,8 +1328,7 @@ public class CharacteristicWriteRequest {
     * @relation transId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
@@ -1432,8 +1339,7 @@ public class CharacteristicWriteRequest {
     * @relation offset: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
@@ -1444,8 +1350,7 @@ public class CharacteristicWriteRequest {
     * @relation isPrepared: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var isPrepared: Bool
@@ -1456,8 +1361,7 @@ public class CharacteristicWriteRequest {
     * @relation needRsp: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var needRsp: Bool
@@ -1468,8 +1372,7 @@ public class CharacteristicWriteRequest {
     * @relation value: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var value: Array<Byte>
@@ -1480,8 +1383,7 @@ public class CharacteristicWriteRequest {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -1492,8 +1394,7 @@ public class CharacteristicWriteRequest {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -1506,8 +1407,7 @@ public class CharacteristicWriteRequest {
 * @relation interface DescriptorReadRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class DescriptorReadRequest {
@@ -1517,8 +1417,7 @@ public class DescriptorReadRequest {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -1529,8 +1428,7 @@ public class DescriptorReadRequest {
     * @relation transId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
@@ -1541,8 +1439,7 @@ public class DescriptorReadRequest {
     * @relation offset: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
@@ -1553,8 +1450,7 @@ public class DescriptorReadRequest {
     * @relation descriptorUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptorUuid: String
@@ -1565,8 +1461,7 @@ public class DescriptorReadRequest {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -1577,8 +1472,7 @@ public class DescriptorReadRequest {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -1591,8 +1485,7 @@ public class DescriptorReadRequest {
 * @relation interface DescriptorWriteRequest
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class DescriptorWriteRequest {
@@ -1602,8 +1495,7 @@ public class DescriptorWriteRequest {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -1614,8 +1506,7 @@ public class DescriptorWriteRequest {
     * @relation transId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
@@ -1626,8 +1517,7 @@ public class DescriptorWriteRequest {
     * @relation offset: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
@@ -1638,8 +1528,7 @@ public class DescriptorWriteRequest {
     * @relation isPrepared: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var isPrepared: Bool
@@ -1650,8 +1539,7 @@ public class DescriptorWriteRequest {
     * @relation needRsp: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var needRsp: Bool
@@ -1662,8 +1550,7 @@ public class DescriptorWriteRequest {
     * @relation value: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var value: Array<Byte>
@@ -1674,8 +1561,7 @@ public class DescriptorWriteRequest {
     * @relation descriptorUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptorUuid: String
@@ -1686,8 +1572,7 @@ public class DescriptorWriteRequest {
     * @relation characteristicUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicUuid: String
@@ -1698,8 +1583,7 @@ public class DescriptorWriteRequest {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -1712,8 +1596,7 @@ public class DescriptorWriteRequest {
 * @relation interface BLEConnectionChangeState
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class BLEConnectionChangeState {
@@ -1723,8 +1606,7 @@ public class BLEConnectionChangeState {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -1735,8 +1617,7 @@ public class BLEConnectionChangeState {
     * @relation state: ProfileConnectionState
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var state: ProfileConnectionState
@@ -1748,9 +1629,8 @@ public class BLEConnectionChangeState {
 */
 @Derive[ToString, Hashable, Equatable]
 @!APILevel[
-    21,
+    22,
     permission: "ohos.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum BluetoothBleGattServerCallbackType {
@@ -1758,9 +1638,8 @@ public enum BluetoothBleGattServerCallbackType {
     * Characteristic Read
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     CharacteristicRead |
@@ -1768,9 +1647,8 @@ public enum BluetoothBleGattServerCallbackType {
     * Characteristic Write
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     CharacteristicWrite |
@@ -1778,9 +1656,8 @@ public enum BluetoothBleGattServerCallbackType {
     * Descriptor Read
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     DescriptorRead |
@@ -1788,9 +1665,8 @@ public enum BluetoothBleGattServerCallbackType {
     * Descriptor Write
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     DescriptorWrite |
@@ -1798,9 +1674,8 @@ public enum BluetoothBleGattServerCallbackType {
     * Connection State Change
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     ConnectionStateChange |
@@ -1808,9 +1683,8 @@ public enum BluetoothBleGattServerCallbackType {
     * Ble Mtu Change
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     ServerBleMtuChange |
@@ -1824,9 +1698,8 @@ public enum BluetoothBleGattServerCallbackType {
 */
 @Derive[ToString, Hashable, Equatable]
 @!APILevel[
-    21,
+    22,
     permission: "ohos.ACCESS_BLUETOOTH",
-    stagemodelonly: true,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum BluetoothBleGattClientDeviceCallbackType {
@@ -1834,9 +1707,8 @@ public enum BluetoothBleGattClientDeviceCallbackType {
     * Ble Characteristic Change
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     BleCharacteristicChange |
@@ -1844,9 +1716,8 @@ public enum BluetoothBleGattClientDeviceCallbackType {
     * BleConnection State Change
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     BleConnectionStateChange |
@@ -1854,9 +1725,8 @@ public enum BluetoothBleGattClientDeviceCallbackType {
     * Ble Mtu Change
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     ClientBleMtuChange |
@@ -1872,8 +1742,7 @@ public enum BluetoothBleGattClientDeviceCallbackType {
 */
 @Derive[Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattPermissions {
@@ -1883,8 +1752,7 @@ public class GattPermissions {
     * @relation read?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var read: Bool
@@ -1895,8 +1763,7 @@ public class GattPermissions {
     * @relation readEncrypted?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var readEncrypted: Bool
@@ -1907,8 +1774,7 @@ public class GattPermissions {
     * @relation readEncryptedMitm?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var readEncryptedMitm: Bool
@@ -1919,8 +1785,7 @@ public class GattPermissions {
     * @relation write?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var write: Bool
@@ -1931,8 +1796,7 @@ public class GattPermissions {
     * @relation writeEncrypted?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeEncrypted: Bool
@@ -1943,8 +1807,7 @@ public class GattPermissions {
     * @relation writeEncryptedMitm?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeEncryptedMitm: Bool
@@ -1955,8 +1818,7 @@ public class GattPermissions {
     * @relation writeSigned?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeSigned: Bool
@@ -1967,8 +1829,7 @@ public class GattPermissions {
     * @relation writeSignedMitm?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeSignedMitm: Bool
@@ -1977,8 +1838,7 @@ public class GattPermissions {
     * GattPermissions constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init (
@@ -2001,8 +1861,7 @@ public class GattPermissions {
 * @relation interface ScanFilter
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ScanFilter {
@@ -2012,8 +1871,7 @@ public class ScanFilter {
     * @relation deviceId?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -2024,8 +1882,7 @@ public class ScanFilter {
     * @relation name?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var name: String
@@ -2036,8 +1893,7 @@ public class ScanFilter {
     * @relation serviceUuid?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -2048,8 +1904,7 @@ public class ScanFilter {
     * @relation serviceUuidMask?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuidMask: String
@@ -2060,8 +1915,7 @@ public class ScanFilter {
     * @relation serviceSolicitationUuid?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceSolicitationUuid: String
@@ -2072,8 +1926,7 @@ public class ScanFilter {
     * @relation serviceSolicitationUuidMask?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceSolicitationUuidMask: String
@@ -2084,8 +1937,7 @@ public class ScanFilter {
     * @relation serviceData?: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceData: Array<Byte>
@@ -2096,8 +1948,7 @@ public class ScanFilter {
     * @relation serviceDataMask?: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceDataMask: Array<Byte>
@@ -2108,8 +1959,7 @@ public class ScanFilter {
     * @relation manufactureId?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureId: UInt16
@@ -2120,8 +1970,7 @@ public class ScanFilter {
     * @relation manufactureData?: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureData: Array<Byte>
@@ -2132,8 +1981,7 @@ public class ScanFilter {
     * @relation manufactureDataMask?: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureDataMask: Array<Byte>
@@ -2142,8 +1990,7 @@ public class ScanFilter {
     * ScanFilter constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2168,8 +2015,7 @@ public class ScanFilter {
 * @relation interface ScanOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ScanOptions {
@@ -2179,8 +2025,7 @@ public class ScanOptions {
     * @relation interval?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var interval: Int32
@@ -2191,8 +2036,7 @@ public class ScanOptions {
     * @relation dutyMode?: ScanDuty
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var dutyMode: ScanDuty
@@ -2203,8 +2047,7 @@ public class ScanOptions {
     * @relation matchMode?: MatchMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var matchMode: MatchMode
@@ -2215,8 +2058,7 @@ public class ScanOptions {
     * @relation phyType?: PhyType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var phyType: PhyType
@@ -2225,8 +2067,7 @@ public class ScanOptions {
     * ScanOptions constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2245,8 +2086,7 @@ public class ScanOptions {
 * @relation interface AdvertiseSetting
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertiseSetting {
@@ -2258,8 +2098,7 @@ public class AdvertiseSetting {
     * @relation interval?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var interval: UInt16
@@ -2272,8 +2111,7 @@ public class AdvertiseSetting {
     * @relation txPower?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var txPower: Int8
@@ -2284,8 +2122,7 @@ public class AdvertiseSetting {
     * @relation connectable?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var connectable: Bool
@@ -2294,8 +2131,7 @@ public class AdvertiseSetting {
     * AdvertiseSetting constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(interval!: UInt16 = BLE_ADV_DEFAULT_INTERVAL, txPower!: Int8 = BLE_ADV_TX_POWER_MEDIUM_VALUE, connectable!: Bool = true)
@@ -2308,8 +2144,7 @@ public class AdvertiseSetting {
 * @relation interface AdvertiseData
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertiseData {
@@ -2319,8 +2154,7 @@ public class AdvertiseData {
     * @relation serviceUuids: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuids: Array<String>
@@ -2331,8 +2165,7 @@ public class AdvertiseData {
     * @relation manufactureData: Array<ManufactureData>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureData: Array<ManufactureData>
@@ -2343,8 +2176,7 @@ public class AdvertiseData {
     * @relation serviceData: Array<ServiceData>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceData: Array<ServiceData>
@@ -2355,8 +2187,7 @@ public class AdvertiseData {
     * @relation includeDeviceName?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var includeDeviceName: Bool
@@ -2365,8 +2196,7 @@ public class AdvertiseData {
     * AdvertiseData constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2385,8 +2215,7 @@ public class AdvertiseData {
 * @relation interface ManufactureData
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ManufactureData {
@@ -2396,8 +2225,7 @@ public class ManufactureData {
     * @relation manufactureId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureId: UInt16
@@ -2408,8 +2236,7 @@ public class ManufactureData {
     * @relation manufactureValue: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureValue: Array<Byte>
@@ -2418,8 +2245,7 @@ public class ManufactureData {
     * ManufactureData constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2435,8 +2261,7 @@ public class ManufactureData {
 * @relation interface ServiceData
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ServiceData {
@@ -2446,8 +2271,7 @@ public class ServiceData {
     * @relation serviceUuid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceUuid: String
@@ -2458,8 +2282,7 @@ public class ServiceData {
     * @relation serviceValue: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceValue: Array<Byte>
@@ -2468,8 +2291,7 @@ public class ServiceData {
     * ServiceData constructor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2485,8 +2307,7 @@ public class ServiceData {
 * @relation interface AdvertisingParams
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertisingParams {
@@ -2496,8 +2317,7 @@ public class AdvertisingParams {
     * @relation advertisingSettings: AdvertiseSetting
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingSettings: AdvertiseSetting
@@ -2508,8 +2328,7 @@ public class AdvertisingParams {
     * @relation advertisingData: AdvertiseData
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingData: AdvertiseData
@@ -2520,8 +2339,7 @@ public class AdvertisingParams {
     * @relation advertisingResponse?: AdvertiseData
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingResponse: AdvertiseData
@@ -2534,8 +2352,7 @@ public class AdvertisingParams {
     * @relation duration?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var duration: UInt16
@@ -2544,8 +2361,7 @@ public class AdvertisingParams {
     * AdvertisingParams constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2563,8 +2379,7 @@ public class AdvertisingParams {
 * @relation interface AdvertisingStateChangeInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertisingStateChangeInfo {
@@ -2574,8 +2389,7 @@ public class AdvertisingStateChangeInfo {
     * @relation advertisingId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingId: Int32
@@ -2586,8 +2400,7 @@ public class AdvertisingStateChangeInfo {
     * @relation state: AdvertisingState
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var state: AdvertisingState
@@ -2600,8 +2413,7 @@ public class AdvertisingStateChangeInfo {
 * @relation interface ScanResult
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ScanResult {
@@ -2611,8 +2423,7 @@ public class ScanResult {
     * @relation deviceId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
@@ -2623,8 +2434,7 @@ public class ScanResult {
     * @relation rssi: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var rssi: Int32
@@ -2635,8 +2445,7 @@ public class ScanResult {
     * @relation data: ArrayBuffer
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var data: Array<Byte>
@@ -2647,8 +2456,7 @@ public class ScanResult {
     * @relation deviceName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceName: String
@@ -2659,8 +2467,7 @@ public class ScanResult {
     * @relation connectable: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var connectable: Bool
@@ -2674,8 +2481,7 @@ public class ScanResult {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum ScanDuty {
@@ -2685,8 +2491,7 @@ public enum ScanDuty {
     * @relation SCAN_MODE_LOW_POWER = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     ScanModeLowPower |
@@ -2696,8 +2501,7 @@ public enum ScanDuty {
     * @relation SCAN_MODE_BALANCED = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     ScanModeBalanced |
@@ -2707,8 +2511,7 @@ public enum ScanDuty {
     * @relation SCAN_MODE_LOW_LATENCY = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     ScanModeLowLatency |
@@ -2724,8 +2527,7 @@ public enum ScanDuty {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum MatchMode {
@@ -2735,8 +2537,7 @@ public enum MatchMode {
     * @relation MATCH_MODE_AGGRESSIVE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     MatchModeAggressive |
@@ -2746,8 +2547,7 @@ public enum MatchMode {
     * @relation MATCH_MODE_STICKY = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     MatchModeSticky |
@@ -2763,8 +2563,7 @@ public enum MatchMode {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum AdvertisingState {
@@ -2774,8 +2573,7 @@ public enum AdvertisingState {
     * @relation STARTED = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Started |
@@ -2785,8 +2583,7 @@ public enum AdvertisingState {
     * @relation ENABLED = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Enabled |
@@ -2796,8 +2593,7 @@ public enum AdvertisingState {
     * @relation DISABLED = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Disabled |
@@ -2807,8 +2603,7 @@ public enum AdvertisingState {
     * @relation STOPPED = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Stopped |
@@ -2824,8 +2619,7 @@ public enum AdvertisingState {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum PhyType {
@@ -2835,8 +2629,7 @@ public enum PhyType {
     * @relation PHY_LE_1M = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     PhyLe1M |
@@ -2846,8 +2639,7 @@ public enum PhyType {
     * @relation PHY_LE_ALL_SUPPORTED = 255
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     PhyLeAllSupported |
@@ -2861,8 +2653,7 @@ public enum PhyType {
 */
 @Derive[ToString, Hashable, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum BluetoothBleCallbackType {
@@ -2870,8 +2661,7 @@ public enum BluetoothBleCallbackType {
     * Advertising State Change
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     AdvertisingStateChange |
@@ -2879,8 +2669,7 @@ public enum BluetoothBleCallbackType {
     * Ble Device Find
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     BleDeviceFind |
@@ -2896,8 +2685,7 @@ public enum BluetoothBleCallbackType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum ScanReportMode {
@@ -2907,8 +2695,7 @@ public enum ScanReportMode {
     * @relation NORMAL = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Normal |
@@ -2919,8 +2706,7 @@ public enum ScanReportMode {
     * @relation BATCH = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     Batch |
@@ -2931,8 +2717,7 @@ public enum ScanReportMode {
     * @relation FENCE_SENSITIVITY_LOW = 10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     FenceSensitivityLow |
@@ -2943,8 +2728,7 @@ public enum ScanReportMode {
     * @relation FENCE_SENSITIVITY_HIGH = 11
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     FenceSensitivityHigh |

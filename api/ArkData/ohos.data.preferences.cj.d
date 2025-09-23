@@ -30,8 +30,7 @@ import ohos.business_exception.{ BusinessException, ERR_PARAMETER_ERROR}
 * @relation enum StorageType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public enum StorageType {
@@ -40,8 +39,7 @@ public enum StorageType {
     * @relation XML = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     Xml |
@@ -50,8 +48,7 @@ public enum StorageType {
     * @relation GSKV
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     Gskv |
@@ -63,8 +60,7 @@ public enum StorageType {
 * Enumeration implements a collection of basic data types.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public enum ValueType {
@@ -72,8 +68,7 @@ public enum ValueType {
     * Type for Int64.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     Integer(Int64) |
@@ -81,8 +76,7 @@ public enum ValueType {
     * Type for Float64.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     Double(Float64) |
@@ -90,8 +84,7 @@ public enum ValueType {
     * Type for String.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     StringData(String) |
@@ -99,8 +92,7 @@ public enum ValueType {
     * Type for Bool.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     BoolData(Bool) |
@@ -108,8 +100,7 @@ public enum ValueType {
     * Type for Array<Bool>.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     BoolArray(Array<Bool>) |
@@ -117,8 +108,7 @@ public enum ValueType {
     * Type for Float64.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     DoubleArray(Array<Float64>) |
@@ -126,8 +116,7 @@ public enum ValueType {
     * Type for Array<String>.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     StringArray(Array<String>) |
@@ -141,8 +130,7 @@ public enum ValueType {
 * @relation const MAX_KEY_LENGTH: number
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public const MAX_KEY_LENGTH: UInt32 = 1024
@@ -154,8 +142,7 @@ public const MAX_KEY_LENGTH: UInt32 = 1024
 * @relation const MAX_VALUE_LENGTH: number
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public const MAX_VALUE_LENGTH: UInt32 = 16 * 1024 * 1024
@@ -167,8 +154,7 @@ public const MAX_VALUE_LENGTH: UInt32 = 16 * 1024 * 1024
 * @relation interface Options
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public class Options {
@@ -178,8 +164,7 @@ public class Options {
     * @relation name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public var name: String
@@ -190,8 +175,7 @@ public class Options {
     * @relation dataGroupId?: string | null | undefined
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public var dataGroupId: String
@@ -202,8 +186,7 @@ public class Options {
     * @relation storageType?: StorageType | null | undefined;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public var storageType: StorageType
@@ -212,8 +195,7 @@ public class Options {
     * Options constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public init(name: String, dataGroupId!: String = String.empty,
@@ -226,8 +208,7 @@ public class Options {
 * Preferences change type.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public enum PreferencesEvent {
@@ -235,8 +216,7 @@ public enum PreferencesEvent {
     * change
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     PreferencesChange |
@@ -244,8 +224,7 @@ public enum PreferencesEvent {
     * multiProcessChange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     PreferencesMultiProcessChange |
@@ -259,8 +238,7 @@ public enum PreferencesEvent {
 * @relation interface Preferences
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public class Preferences <: RemoteDataLite {
@@ -278,8 +256,7 @@ public class Preferences <: RemoteDataLite {
     * @relation function getPreferences(context: Context, name: string, callback: AsyncCallback<Preferences>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public static func getPreferences(context: UIAbilityContext, name: String): Preferences
@@ -298,8 +275,7 @@ public class Preferences <: RemoteDataLite {
     * @relation function getPreferences(context: Context, options: Options, callback: AsyncCallback<Preferences>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public static func getPreferences(context: UIAbilityContext, options: Options): Preferences
@@ -317,8 +293,7 @@ public class Preferences <: RemoteDataLite {
     * @relation function deletePreferences(context: Context, name: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public static func deletePreferences(context: UIAbilityContext, name: String): Unit
@@ -340,8 +315,7 @@ public class Preferences <: RemoteDataLite {
     * @relation function deletePreferences(context: Context, options: Options): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public static func deletePreferences(context: UIAbilityContext, options: Options): Unit
@@ -362,8 +336,7 @@ public class Preferences <: RemoteDataLite {
     * @relation function removePreferencesFromCacheSync(context: Context, name: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public static func removePreferencesFromCache(context: UIAbilityContext, name: String): Unit
@@ -389,8 +362,7 @@ public class Preferences <: RemoteDataLite {
     * @relation function removePreferencesFromCacheSync(context: Context, options: Options): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public static func removePreferencesFromCache(context: UIAbilityContext, options: Options): Unit
@@ -403,8 +375,7 @@ public class Preferences <: RemoteDataLite {
     * @relation flush(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func flush(): Unit
@@ -418,8 +389,7 @@ public class Preferences <: RemoteDataLite {
     * @relation clear(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func clear(): Unit
@@ -439,8 +409,7 @@ public class Preferences <: RemoteDataLite {
     * @relation get(key: string, defValue: ValueType): Promise<ValueType>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func get(key: String, defValue: ValueType): ValueType
@@ -457,8 +426,7 @@ public class Preferences <: RemoteDataLite {
     * @relation put(key: string, value: ValueType): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func put(key: String, value: ValueType): Unit
@@ -472,8 +440,7 @@ public class Preferences <: RemoteDataLite {
     * @relation getAllSync(): Object;
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func getAll(): HashMap<String, ValueType>
@@ -489,8 +456,7 @@ public class Preferences <: RemoteDataLite {
     * @relation delete(key: string): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func delete(key: String): Unit
@@ -507,8 +473,7 @@ public class Preferences <: RemoteDataLite {
     * @relation has(key: string): Promise<boolean>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func has(key: String): Bool
@@ -526,8 +491,7 @@ public class Preferences <: RemoteDataLite {
     * @relation on(type: 'multiProcessChange', callback: Callback<string>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func on(event :PreferencesEvent, callback: Callback1Argument<String>): Unit
@@ -545,8 +509,7 @@ public class Preferences <: RemoteDataLite {
     * @relation off(type: 'multiProcessChange', callback?: Callback<string>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
     public func off(event :PreferencesEvent, callback!: ?Callback1Argument<String> = None): Unit

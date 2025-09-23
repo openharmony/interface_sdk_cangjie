@@ -32,8 +32,7 @@ import ohos.business_exception.BusinessException
 */
 @Derive[ToString, Hashable, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum EventCallbackType {
@@ -41,8 +40,7 @@ public enum EventCallbackType {
     * Progress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Progress |
@@ -50,8 +48,7 @@ public enum EventCallbackType {
     * Completed
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Completed |
@@ -59,8 +56,7 @@ public enum EventCallbackType {
     * Failed
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Failed |
@@ -68,8 +64,7 @@ public enum EventCallbackType {
     * Pause
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Pause |
@@ -77,8 +72,7 @@ public enum EventCallbackType {
     * Resume
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Resume |
@@ -86,8 +80,7 @@ public enum EventCallbackType {
     * Remove
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Remove |
@@ -95,8 +88,7 @@ public enum EventCallbackType {
     * Response
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Response |
@@ -112,8 +104,7 @@ public enum EventCallbackType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum Action {
@@ -123,8 +114,7 @@ public enum Action {
     * @relation DOWNLOAD = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Download |
@@ -134,8 +124,7 @@ public enum Action {
     * @relation UPLOAD = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Upload |
@@ -151,8 +140,7 @@ public enum Action {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum Mode {
@@ -162,8 +150,7 @@ public enum Mode {
     * @relation BACKGROUND = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Background |
@@ -173,8 +160,7 @@ public enum Mode {
     * @relation FOREGROUND = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Foreground |
@@ -190,8 +176,7 @@ public enum Mode {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum Network {
@@ -201,8 +186,7 @@ public enum Network {
     * @relation ANY = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     AnyType |
@@ -212,8 +196,7 @@ public enum Network {
     * @relation WIFI = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Wifi |
@@ -223,8 +206,7 @@ public enum Network {
     * @relation CELLULAR = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Cellular |
@@ -239,8 +221,7 @@ public enum Network {
 * @relation enum BroadcastEvent
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum BroadcastEvent <: ToString {
@@ -250,8 +231,7 @@ public enum BroadcastEvent <: ToString {
     * @relation COMPLETE = 'ohos.request.event.COMPLETE'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Complete |
@@ -260,8 +240,7 @@ public enum BroadcastEvent <: ToString {
     * Gets the corresponding mapping value.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func toString(): String
@@ -274,8 +253,7 @@ public enum BroadcastEvent <: ToString {
 * @relation interface FileSpec
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class FileSpec {
@@ -291,8 +269,7 @@ public class FileSpec {
     * @relation path: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var path: String
@@ -304,8 +281,7 @@ public class FileSpec {
     * @relation mimeType?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var mimeType: ?String
@@ -316,8 +292,7 @@ public class FileSpec {
     * @relation filename?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var filename: ?String
@@ -328,8 +303,7 @@ public class FileSpec {
     * @relation extras?: object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var extras: HashMap<String, String>
@@ -338,8 +312,7 @@ public class FileSpec {
     * FileSpec constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(
@@ -355,8 +328,7 @@ public class FileSpec {
 * FormItem value
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum FormItemValue {
@@ -364,8 +336,7 @@ public enum FormItemValue {
     * String type FormItem value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     StringItem(String) |
@@ -373,8 +344,7 @@ public enum FormItemValue {
     * FileSpec type FormItem value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     FileItem(FileSpec) |
@@ -382,8 +352,7 @@ public enum FormItemValue {
     * Array<FileSpec> type FormItem value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     FileItemArray(Array<FileSpec>) |
@@ -397,8 +366,7 @@ public enum FormItemValue {
 * @relation interface FormItem
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class FormItem {
@@ -408,8 +376,7 @@ public class FormItem {
     * @relation name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var name: String
@@ -420,8 +387,7 @@ public class FormItem {
     * @relation value: string | FileSpec | Array<FileSpec>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var value: FormItemValue
@@ -430,8 +396,7 @@ public class FormItem {
     * FormItem constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(name: String, value: FormItemValue)
@@ -442,8 +407,7 @@ public class FormItem {
 * Config data
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum ConfigData {
@@ -451,8 +415,7 @@ public enum ConfigData {
     * String type Config data
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     StringValue(String) |
@@ -460,8 +423,7 @@ public enum ConfigData {
     * Array<FormItem> type Config data
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     FormItems(Array<FormItem>) |
@@ -478,8 +440,7 @@ public enum ConfigData {
 * @relation interface Config
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Config {
@@ -491,8 +452,7 @@ public class Config {
     * @relation action: Action
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var action: Action
@@ -505,8 +465,7 @@ public class Config {
     * @relation url: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var url: String
@@ -519,8 +478,7 @@ public class Config {
     * @relation title?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var title: ?String
@@ -533,8 +491,7 @@ public class Config {
     * @relation description?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var description: String
@@ -549,8 +506,7 @@ public class Config {
     * @relation mode?: Mode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var mode: Mode
@@ -565,8 +521,7 @@ public class Config {
     * @relation overwrite?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var overwrite: Bool
@@ -580,8 +535,7 @@ public class Config {
     * @relation method?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var method: ?String
@@ -594,8 +548,7 @@ public class Config {
     * @relation headers?: object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var headers: HashMap<String, String>
@@ -609,8 +562,7 @@ public class Config {
     * @relation data?: string | Array<FormItem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var data: ?ConfigData
@@ -626,8 +578,7 @@ public class Config {
     * @relation saveas?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var saveas: String
@@ -639,8 +590,7 @@ public class Config {
     * @relation network?: Network
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var network: Network
@@ -652,8 +602,7 @@ public class Config {
     * @relation metered?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var metered: Bool
@@ -665,8 +614,7 @@ public class Config {
     * @relation roaming?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var roaming: Bool
@@ -678,8 +626,7 @@ public class Config {
     * @relation retry?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var retry: Bool
@@ -691,8 +638,7 @@ public class Config {
     * @relation redirect?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var redirect: Bool
@@ -705,8 +651,7 @@ public class Config {
     * @relation index?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var index: UInt32
@@ -721,8 +666,7 @@ public class Config {
     * @relation begins?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var begins: Int64
@@ -737,8 +681,7 @@ public class Config {
     * @relation ends?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var ends: Int64
@@ -751,8 +694,7 @@ public class Config {
     * @relation gauge?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var gauge: Bool
@@ -765,8 +707,7 @@ public class Config {
     * @relation precise?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var precise: Bool
@@ -783,8 +724,7 @@ public class Config {
     * @relation token?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var token: ?String
@@ -798,8 +738,7 @@ public class Config {
     * @relation priority?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var priority: UInt32
@@ -811,8 +750,7 @@ public class Config {
     * @relation extras?: object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var extras: HashMap<String, String>
@@ -821,8 +759,7 @@ public class Config {
     * Config constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(action: Action, url: String, title!: ?String = None, description!: String = "",
@@ -842,8 +779,7 @@ public class Config {
 */
 @Derive[ToString]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum State {
@@ -853,8 +789,7 @@ public enum State {
     * @relation INITIALIZED = 0x00
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Initialized |
@@ -864,8 +799,7 @@ public enum State {
     * @relation WAITING = 0x10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Waiting |
@@ -875,8 +809,7 @@ public enum State {
     * @relation RUNNING = 0x20
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Running |
@@ -886,8 +819,7 @@ public enum State {
     * @relation RETRYING = 0x21
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Retrying |
@@ -897,8 +829,7 @@ public enum State {
     * @relation PAUSED = 0x30
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Paused |
@@ -908,8 +839,7 @@ public enum State {
     * @relation STOPPED = 0x31
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Stopped |
@@ -919,8 +849,7 @@ public enum State {
     * @relation COMPLETED = 0x40
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Completed |
@@ -930,8 +859,7 @@ public enum State {
     * @relation FAILED = 0x41
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Failed |
@@ -941,8 +869,7 @@ public enum State {
     * @relation REMOVED = 0x50
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Removed |
@@ -965,8 +892,7 @@ public enum State {
 * @relation interface Progress
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Progress {
@@ -976,8 +902,7 @@ public class Progress {
     * @relation readonly state: State
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let state: State
@@ -988,8 +913,7 @@ public class Progress {
     * @relation readonly index: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let index: UInt32
@@ -1000,8 +924,7 @@ public class Progress {
     * @relation readonly processed: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let processed: Int64
@@ -1012,8 +935,7 @@ public class Progress {
     * @relation readonly sizes: Array<number>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let sizes: Array<Int64>
@@ -1028,8 +950,7 @@ public class Progress {
     * @relation readonly extras?: object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let extras: HashMap<String, String>
@@ -1043,8 +964,7 @@ public class Progress {
 * @relation interface HttpResponse
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class HttpResponse {
@@ -1054,8 +974,7 @@ public class HttpResponse {
     * @relation readonly version: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let version: String
@@ -1066,8 +985,7 @@ public class HttpResponse {
     * @relation readonly statusCode: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let statusCode: Int32
@@ -1078,8 +996,7 @@ public class HttpResponse {
     * @relation readonly reason: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let reason: String
@@ -1090,8 +1007,7 @@ public class HttpResponse {
     * @relation readonly headers: Map<string, Array<string>>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let headers: HashMap<String, Array<String>>
@@ -1105,8 +1021,7 @@ public class HttpResponse {
 */
 @Derive[ToString]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum Faults {
@@ -1116,8 +1031,7 @@ public enum Faults {
     * @relation OTHERS = 0xFF
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Others |
@@ -1127,8 +1041,7 @@ public enum Faults {
     * @relation DISCONNECTED = 0x00
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Disconnected |
@@ -1138,8 +1051,7 @@ public enum Faults {
     * @relation TIMEOUT = 0x10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Timeout |
@@ -1149,8 +1061,7 @@ public enum Faults {
     * @relation PROTOCOL = 0x20
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Protocol |
@@ -1160,8 +1071,7 @@ public enum Faults {
     * @relation FSIO = 0x40
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     Fsio |
@@ -1178,8 +1088,7 @@ public enum Faults {
 * @relation interface Filter
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Filter {
@@ -1190,8 +1099,7 @@ public class Filter {
     * @relation before?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var before: ?Int64
@@ -1203,8 +1111,7 @@ public class Filter {
     * @relation after?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var after: ?Int64
@@ -1216,8 +1123,7 @@ public class Filter {
     * @relation state?: State
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var state: ?State
@@ -1229,8 +1135,7 @@ public class Filter {
     * @relation action?: Action
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var action: ?Action
@@ -1242,8 +1147,7 @@ public class Filter {
     * @relation mode?: Mode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var mode: ?Mode
@@ -1252,8 +1156,7 @@ public class Filter {
     * Filter constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(before!: ?Int64 = None, after!: ?Int64 = None, state!: ?State = None,
@@ -1269,8 +1172,7 @@ public class Filter {
 * @relation interface TaskInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class TaskInfo {
@@ -1280,8 +1182,7 @@ public class TaskInfo {
     * @relation readonly saveas?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let saveas: String
@@ -1293,8 +1194,7 @@ public class TaskInfo {
     * @relation readonly url?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let url: String
@@ -1306,8 +1206,7 @@ public class TaskInfo {
     * @relation readonly data?: string | Array<FormItem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let data: ConfigData
@@ -1318,8 +1217,7 @@ public class TaskInfo {
     * @relation readonly tid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let tid: String
@@ -1330,8 +1228,7 @@ public class TaskInfo {
     * @relation readonly title: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let title: String
@@ -1342,8 +1239,7 @@ public class TaskInfo {
     * @relation readonly description: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let description: String
@@ -1354,8 +1250,7 @@ public class TaskInfo {
     * @relation readonly action: Action
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let action: Action
@@ -1367,8 +1262,7 @@ public class TaskInfo {
     * @relation readonly mode: Mode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let mode: Mode
@@ -1382,8 +1276,7 @@ public class TaskInfo {
     * @relation readonly priority: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let priority: UInt32
@@ -1394,8 +1287,7 @@ public class TaskInfo {
     * @relation readonly mimeType: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let mimeType: String
@@ -1406,8 +1298,7 @@ public class TaskInfo {
     * @relation readonly progress: Progress
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let progress: Progress
@@ -1418,8 +1309,7 @@ public class TaskInfo {
     * @relation readonly gauge: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let gauge: Bool
@@ -1431,8 +1321,7 @@ public class TaskInfo {
     * @relation readonly ctime: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let ctime: UInt64
@@ -1444,8 +1333,7 @@ public class TaskInfo {
     * @relation readonly mtime: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let mtime: UInt64
@@ -1457,8 +1345,7 @@ public class TaskInfo {
     * @relation readonly retry: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let retry: Bool
@@ -1469,8 +1356,7 @@ public class TaskInfo {
     * @relation readonly tries: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let tries: UInt32
@@ -1481,8 +1367,7 @@ public class TaskInfo {
     * @relation readonly faults: Faults
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let faults: Faults
@@ -1493,8 +1378,7 @@ public class TaskInfo {
     * @relation readonly reason: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let reason: String
@@ -1506,8 +1390,7 @@ public class TaskInfo {
     * @relation readonly extras?: object
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let extras: HashMap<String, String>
@@ -1525,8 +1408,7 @@ public class TaskInfo {
 * @relation interface Task
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Task {
@@ -1537,8 +1419,7 @@ public class Task {
     * @relation readonly tid: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let tid: String
@@ -1549,8 +1430,7 @@ public class Task {
     * @relation config: Config
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var config: Config
@@ -1559,8 +1439,7 @@ public class Task {
     * Task constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(tid: String, config: Config)
@@ -1575,8 +1454,7 @@ public class Task {
     * @relation on(event: 'response', callback: Callback<HttpResponse>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func on(event: EventCallbackType, callback: Callback1Argument<HttpResponse>): Unit
@@ -1596,8 +1474,7 @@ public class Task {
     * @relation on(event: 'remove', callback: (progress: Progress) => void): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func on(event: EventCallbackType, callback: Callback1Argument<Progress>): Unit
@@ -1616,8 +1493,7 @@ public class Task {
     * @relation off(event: 'remove', callback?: (progress: Progress) => void): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func off(event: EventCallbackType, callback!: ?CallbackObject = None): Unit
@@ -1633,9 +1509,8 @@ public class Task {
     * @relation start(): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func start(): Unit
@@ -1649,8 +1524,7 @@ public class Task {
     * @relation pause(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func pause(): Unit
@@ -1665,9 +1539,8 @@ public class Task {
     * @relation resume(): Promise<void>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.INTERNET",
-        stagemodelonly: true,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func resume(): Unit
@@ -1680,8 +1553,7 @@ public class Task {
     * @relation stop(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func stop(): Unit
@@ -1712,9 +1584,8 @@ public class Task {
 * @relation function create(context: BaseContext, config: Config): Promise<Task>
 */
 @!APILevel[
-    21,
+    22,
     permission: "ohos.permission.INTERNET",
-    stagemodelonly: true,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public func create(context: UIAbilityContext, config: Config): Task
@@ -1732,8 +1603,7 @@ public func create(context: UIAbilityContext, config: Config): Task
 * @relation function remove(id: string): Promise<void>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public func remove(id: String): Unit
@@ -1755,8 +1625,7 @@ public func remove(id: String): Unit
 * @relation function getTask(context: BaseContext, id: string, token?: string): Promise<Task>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public func getTask(context: UIAbilityContext, id: String, token!: ?String = None): Task
@@ -1775,8 +1644,7 @@ public func getTask(context: UIAbilityContext, id: String, token!: ?String = Non
 * @relation function show(id: string): Promise<TaskInfo>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public func show(id: String): TaskInfo
@@ -1796,8 +1664,7 @@ public func show(id: String): TaskInfo
 * @relation function touch(id: string, token: string): Promise<TaskInfo>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public func touch(id: String, token: String): TaskInfo
@@ -1816,8 +1683,7 @@ public func touch(id: String, token: String): TaskInfo
 * @relation function search(filter?: Filter): Promise<Array<string>>
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public func search(filter!: Filter = Filter()): Array<String>

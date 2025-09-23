@@ -37,8 +37,7 @@ import std.sync.*
 * @relation function getCameraManager(context: Context): CameraManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public func getCameraManager(context: UIAbilityContext): CameraManager
@@ -50,8 +49,7 @@ public func getCameraManager(context: UIAbilityContext): CameraManager
 * @relation interface Point
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class Point {
@@ -61,8 +59,7 @@ public class Point {
     * @relation x: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var x: Float64
@@ -73,8 +70,7 @@ public class Point {
     * @relation y: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var y: Float64
@@ -83,8 +79,7 @@ public class Point {
     * Point constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public init(x: Float64, y: Float64)
@@ -98,8 +93,7 @@ public class Point {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum ExposureMode {
@@ -109,8 +103,7 @@ public enum ExposureMode {
     * @relation EXPOSURE_MODE_LOCKED = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     ExposureModeLocked |
@@ -120,8 +113,7 @@ public enum ExposureMode {
     * @relation EXPOSURE_MODE_AUTO = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     ExposureModeAuto |
@@ -131,8 +123,7 @@ public enum ExposureMode {
     * @relation EXPOSURE_MODE_CONTINUOUS_AUTO = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     ExposureModeContinuousAuto |
@@ -147,8 +138,7 @@ public enum ExposureMode {
 * @relation interface AutoExposureQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface AutoExposureQuery {
@@ -161,8 +151,7 @@ public interface AutoExposureQuery {
     * @relation isExposureModeSupported(aeMode: ExposureMode): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func isExposureModeSupported(aeMode: ExposureMode): Bool
@@ -175,8 +164,7 @@ public interface AutoExposureQuery {
     * @relation getExposureBiasRange(): Array<double>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getExposureBiasRange(): Array<Float64>
@@ -189,8 +177,7 @@ public interface AutoExposureQuery {
 * @relation interface AutoExposure extends AutoExposureQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface AutoExposure <: AutoExposureQuery {
@@ -202,8 +189,7 @@ public interface AutoExposure <: AutoExposureQuery {
     * @relation getExposureMode(): ExposureMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getExposureMode(): ExposureMode
@@ -217,8 +203,7 @@ public interface AutoExposure <: AutoExposureQuery {
     * @relation setExposureMode(aeMode: ExposureMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setExposureMode(aeMode: ExposureMode): Unit
@@ -231,8 +216,7 @@ public interface AutoExposure <: AutoExposureQuery {
     * @relation getMeteringPoint(): Point
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getMeteringPoint(): Point
@@ -245,8 +229,7 @@ public interface AutoExposure <: AutoExposureQuery {
     * @relation setMeteringPoint(point: Point): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setMeteringPoint(point: Point): Unit
@@ -260,8 +243,7 @@ public interface AutoExposure <: AutoExposureQuery {
     * @relation setExposureBias(exposureBias: double): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setExposureBias(exposureBias: Float64): Unit
@@ -274,8 +256,7 @@ public interface AutoExposure <: AutoExposureQuery {
     * @relation getExposureValue(): double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getExposureValue(): Float64
@@ -288,8 +269,7 @@ public interface AutoExposure <: AutoExposureQuery {
 * @relation interface ColorManagementQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface ColorManagementQuery {
@@ -301,8 +281,7 @@ public interface ColorManagementQuery {
     * @relation getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getSupportedColorSpaces(): Array<ColorSpace>
@@ -315,8 +294,7 @@ public interface ColorManagementQuery {
 * @relation interface ColorManagement extends ColorManagementQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface ColorManagement <: ColorManagementQuery {
@@ -331,8 +309,7 @@ public interface ColorManagement <: ColorManagementQuery {
     * @relation setColorSpace(colorSpace: colorSpaceManager.ColorSpace): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setColorSpace(colorSpace: ColorSpace): Unit
@@ -345,8 +322,7 @@ public interface ColorManagement <: ColorManagementQuery {
     * @relation getActiveColorSpace(): colorSpaceManager.ColorSpace
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getActiveColorSpace(): ColorSpace
@@ -360,8 +336,7 @@ public interface ColorManagement <: ColorManagementQuery {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum FlashMode {
@@ -371,8 +346,7 @@ public enum FlashMode {
     * @relation FLASH_MODE_CLOSE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FlashModeClose |
@@ -382,8 +356,7 @@ public enum FlashMode {
     * @relation FLASH_MODE_OPEN = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FlashModeOpen |
@@ -393,8 +366,7 @@ public enum FlashMode {
     * @relation FLASH_MODE_AUTO = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FlashModeAuto |
@@ -404,8 +376,7 @@ public enum FlashMode {
     * @relation FLASH_MODE_ALWAYS_OPEN = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FlashModeAlwaysOpen |
@@ -420,8 +391,7 @@ public enum FlashMode {
 * @relation interface FlashQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface FlashQuery {
@@ -433,8 +403,7 @@ public interface FlashQuery {
     * @relation hasFlash(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func hasFlash(): Bool
@@ -448,8 +417,7 @@ public interface FlashQuery {
     * @relation isFlashModeSupported(flashMode: FlashMode): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func isFlashModeSupported(flashMode: FlashMode): Bool
@@ -462,8 +430,7 @@ public interface FlashQuery {
 * @relation interface Flash extends FlashQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface Flash <: FlashQuery {
@@ -475,8 +442,7 @@ public interface Flash <: FlashQuery {
     * @relation setFlashMode(flashMode: FlashMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setFlashMode(flashMode: FlashMode): Unit
@@ -489,8 +455,7 @@ public interface Flash <: FlashQuery {
     * @relation getFlashMode(): FlashMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getFlashMode(): FlashMode
@@ -504,8 +469,7 @@ public interface Flash <: FlashQuery {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum FocusState {
@@ -515,8 +479,7 @@ public enum FocusState {
     * @relation FOCUS_STATE_SCAN = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusStateScan |
@@ -526,8 +489,7 @@ public enum FocusState {
     * @relation FOCUS_STATE_FOCUSED = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusStateFocused |
@@ -537,8 +499,7 @@ public enum FocusState {
     * @relation FOCUS_STATE_UNFOCUSED = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusStateUnfocused |
@@ -554,8 +515,7 @@ public enum FocusState {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum FocusMode {
@@ -565,8 +525,7 @@ public enum FocusMode {
     * @relation FOCUS_MODE_MANUAL = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusModeManual |
@@ -576,8 +535,7 @@ public enum FocusMode {
     * @relation FOCUS_MODE_CONTINUOUS_AUTO = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusModeContinuousAuto |
@@ -587,8 +545,7 @@ public enum FocusMode {
     * @relation FOCUS_MODE_AUTO = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusModeAuto |
@@ -598,8 +555,7 @@ public enum FocusMode {
     * @relation FOCUS_MODE_LOCKED = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusModeLocked |
@@ -614,8 +570,7 @@ public enum FocusMode {
 * @relation interface FocusQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface FocusQuery {
@@ -628,8 +583,7 @@ public interface FocusQuery {
     * @relation isFocusModeSupported(afMode: FocusMode): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func isFocusModeSupported(afMode: FocusMode): Bool
@@ -642,8 +596,7 @@ public interface FocusQuery {
 * @relation interface Focus extends FocusQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface Focus <: FocusQuery {
@@ -655,8 +608,7 @@ public interface Focus <: FocusQuery {
     * @relation setFocusMode(afMode: FocusMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setFocusMode(afMode: FocusMode): Unit
@@ -669,8 +621,7 @@ public interface Focus <: FocusQuery {
     * @relation getFocusMode(): FocusMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getFocusMode(): FocusMode
@@ -683,8 +634,7 @@ public interface Focus <: FocusQuery {
     * @relation setFocusPoint(point: Point): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setFocusPoint(point: Point): Unit
@@ -698,8 +648,7 @@ public interface Focus <: FocusQuery {
     * @relation getFocusPoint(): Point
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getFocusPoint(): Point
@@ -712,8 +661,7 @@ public interface Focus <: FocusQuery {
     * @relation getFocalLength(): double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getFocalLength(): Float64
@@ -727,8 +675,7 @@ public interface Focus <: FocusQuery {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum VideoStabilizationMode {
@@ -738,8 +685,7 @@ public enum VideoStabilizationMode {
     * @relation OFF = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Off |
@@ -749,8 +695,7 @@ public enum VideoStabilizationMode {
     * @relation LOW = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Low |
@@ -760,8 +705,7 @@ public enum VideoStabilizationMode {
     * @relation MIDDLE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Middle |
@@ -771,8 +715,7 @@ public enum VideoStabilizationMode {
     * @relation HIGH = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     High |
@@ -782,8 +725,7 @@ public enum VideoStabilizationMode {
     * @relation AUTO = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Auto |
@@ -798,8 +740,7 @@ public enum VideoStabilizationMode {
 * @relation interface StabilizationQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface StabilizationQuery {
@@ -812,8 +753,7 @@ public interface StabilizationQuery {
     * @relation isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): Bool
@@ -826,8 +766,7 @@ public interface StabilizationQuery {
 * @relation interface Stabilization extends StabilizationQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface Stabilization <: StabilizationQuery {
@@ -839,8 +778,7 @@ public interface Stabilization <: StabilizationQuery {
     * @relation getActiveVideoStabilizationMode(): VideoStabilizationMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getActiveVideoStabilizationMode(): VideoStabilizationMode
@@ -853,8 +791,7 @@ public interface Stabilization <: StabilizationQuery {
     * @relation setVideoStabilizationMode(mode: VideoStabilizationMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setVideoStabilizationMode(mode: VideoStabilizationMode): Unit
@@ -867,8 +804,7 @@ public interface Stabilization <: StabilizationQuery {
 * @relation interface SmoothZoomInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class SmoothZoomInfo {
@@ -878,8 +814,7 @@ public class SmoothZoomInfo {
     * @relation duration: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var duration: Int32
@@ -893,8 +828,7 @@ public class SmoothZoomInfo {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum SmoothZoomMode {
@@ -904,8 +838,7 @@ public enum SmoothZoomMode {
     * @relation NORMAL = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Normal |
@@ -920,8 +853,7 @@ public enum SmoothZoomMode {
 * @relation interface ZoomQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface ZoomQuery {
@@ -933,8 +865,7 @@ public interface ZoomQuery {
     * @relation getZoomRatioRange(): Array<double>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getZoomRatioRange(): Array<Float64>
@@ -947,8 +878,7 @@ public interface ZoomQuery {
 * @relation interface Zoom extends ZoomQuery
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface Zoom <: ZoomQuery {
@@ -960,8 +890,7 @@ public interface Zoom <: ZoomQuery {
     * @relation setZoomRatio(zoomRatio: double): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setZoomRatio(zoomRatio: Float64): Unit
@@ -975,8 +904,7 @@ public interface Zoom <: ZoomQuery {
     * @relation getZoomRatio(): double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func getZoomRatio(): Float64
@@ -989,8 +917,7 @@ public interface Zoom <: ZoomQuery {
     * @relation setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setSmoothZoom(targetRatio: Float64, mode: SmoothZoomMode): Unit
@@ -1002,8 +929,7 @@ public interface Zoom <: ZoomQuery {
     * @relation setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func setSmoothZoom(targetRatio: Float64): Unit
@@ -1016,8 +942,7 @@ public interface Zoom <: ZoomQuery {
 * @relation interface Rect
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class Rect {
@@ -1027,8 +952,7 @@ public class Rect {
     * @relation topLeftX: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var topLeftX: Float64
@@ -1039,8 +963,7 @@ public class Rect {
     * @relation topLeftY: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var topLeftY: Float64
@@ -1051,8 +974,7 @@ public class Rect {
     * @relation width: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var width: Float64
@@ -1063,8 +985,7 @@ public class Rect {
     * @relation height: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var height: Float64
@@ -1078,8 +999,7 @@ public class Rect {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum TorchMode {
@@ -1089,8 +1009,7 @@ public enum TorchMode {
     * @relation OFF = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Off |
@@ -1100,8 +1019,7 @@ public enum TorchMode {
     * @relation ON = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     On |
@@ -1111,8 +1029,7 @@ public enum TorchMode {
     * @relation AUTO = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Auto |
@@ -1128,8 +1045,7 @@ public enum TorchMode {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum ImageRotation {
@@ -1139,8 +1055,7 @@ public enum ImageRotation {
     * @relation ROTATION_0 = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Rotation0 |
@@ -1150,8 +1065,7 @@ public enum ImageRotation {
     * @relation ROTATION_90 = 90
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Rotation90 |
@@ -1161,8 +1075,7 @@ public enum ImageRotation {
     * @relation ROTATION_180 = 180
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Rotation180 |
@@ -1172,8 +1085,7 @@ public enum ImageRotation {
     * @relation ROTATION_270 = 270
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Rotation270 |
@@ -1189,8 +1101,7 @@ public enum ImageRotation {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum CameraStatus {
@@ -1200,8 +1111,7 @@ public enum CameraStatus {
     * @relation CAMERA_STATUS_APPEAR = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraStatusAppear |
@@ -1211,8 +1121,7 @@ public enum CameraStatus {
     * @relation CAMERA_STATUS_DISAPPEAR = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraStatusDisappear |
@@ -1222,8 +1131,7 @@ public enum CameraStatus {
     * @relation CAMERA_STATUS_AVAILABLE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraStatusAvailable |
@@ -1233,8 +1141,7 @@ public enum CameraStatus {
     * @relation CAMERA_STATUS_UNAVAILABLE = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraStatusUnavailable |
@@ -1249,8 +1156,7 @@ public enum CameraStatus {
 * @relation interface TorchStatusInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class TorchStatusInfo {
@@ -1260,8 +1166,7 @@ public class TorchStatusInfo {
     * @relation readonly isTorchAvailable: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let isTorchAvailable: Bool
@@ -1272,8 +1177,7 @@ public class TorchStatusInfo {
     * @relation readonly isTorchActive: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let isTorchActive: Bool
@@ -1284,8 +1188,7 @@ public class TorchStatusInfo {
     * @relation readonly torchLevel: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let torchLevel: Float64
@@ -1298,8 +1201,7 @@ public class TorchStatusInfo {
 * @relation interface FrameRateRange
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class FrameRateRange {
@@ -1309,8 +1211,7 @@ public class FrameRateRange {
     * @relation readonly min: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let min: Int32
@@ -1321,8 +1222,7 @@ public class FrameRateRange {
     * @relation readonly max: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let max: Int32
@@ -1335,8 +1235,7 @@ public class FrameRateRange {
 * @relation interface Size
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class Size {
@@ -1346,8 +1245,7 @@ public class Size {
     * @relation width: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var width: UInt32
@@ -1358,8 +1256,7 @@ public class Size {
     * @relation height: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var height: UInt32
@@ -1372,8 +1269,7 @@ public class Size {
 * @relation interface Profile
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public open class Profile {
@@ -1383,8 +1279,7 @@ public open class Profile {
     * @relation readonly format: CameraFormat
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let format: CameraFormat
@@ -1395,8 +1290,7 @@ public open class Profile {
     * @relation readonly size: Size
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let size: Size
@@ -1409,8 +1303,7 @@ public open class Profile {
 * @relation interface VideoProfile extends Profile
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class VideoProfile <: Profile {
@@ -1420,8 +1313,7 @@ public class VideoProfile <: Profile {
     * @relation readonly frameRateRange: FrameRateRange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let frameRateRange: FrameRateRange
@@ -1435,8 +1327,7 @@ public class VideoProfile <: Profile {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum MetadataObjectType {
@@ -1446,8 +1337,7 @@ public enum MetadataObjectType {
     * @relation FACE_DETECTION = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FaceDetection |
@@ -1462,8 +1352,7 @@ public enum MetadataObjectType {
 * @relation interface CameraOutputCapability
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CameraOutputCapability {
@@ -1473,8 +1362,7 @@ public class CameraOutputCapability {
     * @relation readonly previewProfiles: Array<Profile>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let previewProfiles: Array<Profile>
@@ -1485,8 +1373,7 @@ public class CameraOutputCapability {
     * @relation readonly photoProfiles: Array<Profile>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let photoProfiles: Array<Profile>
@@ -1497,8 +1384,7 @@ public class CameraOutputCapability {
     * @relation readonly videoProfiles: Array<VideoProfile>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let videoProfiles: Array<VideoProfile>
@@ -1509,8 +1395,7 @@ public class CameraOutputCapability {
     * @relation readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let supportedMetadataObjectTypes: Array<MetadataObjectType>
@@ -1524,8 +1409,7 @@ public class CameraOutputCapability {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum FoldStatus {
@@ -1535,8 +1419,7 @@ public enum FoldStatus {
     * @relation NON_FOLDABLE = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     NonFoldable |
@@ -1546,8 +1429,7 @@ public enum FoldStatus {
     * @relation EXPANDED = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Expanded |
@@ -1557,8 +1439,7 @@ public enum FoldStatus {
     * @relation FOLDED = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Folded |
@@ -1573,8 +1454,7 @@ public enum FoldStatus {
 * @relation interface FoldStatusInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class FoldStatusInfo {
@@ -1584,8 +1464,7 @@ public class FoldStatusInfo {
     * @relation readonly supportedCameras: Array<CameraDevice>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let supportedCameras: Array<CameraDevice>
@@ -1596,8 +1475,7 @@ public class FoldStatusInfo {
     * @relation readonly foldStatus: FoldStatus
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let foldStatus: FoldStatus
@@ -1611,8 +1489,7 @@ public class FoldStatusInfo {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum ConnectionType {
@@ -1622,8 +1499,7 @@ public enum ConnectionType {
     * @relation CAMERA_CONNECTION_BUILT_IN = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraConnectionBuiltIn |
@@ -1633,8 +1509,7 @@ public enum ConnectionType {
     * @relation CAMERA_CONNECTION_USB_PLUGIN = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraConnectionUsbPlugin |
@@ -1644,8 +1519,7 @@ public enum ConnectionType {
     * @relation CAMERA_CONNECTION_REMOTE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraConnectionRemote |
@@ -1661,8 +1535,7 @@ public enum ConnectionType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum CameraFormat {
@@ -1672,8 +1545,7 @@ public enum CameraFormat {
     * @relation CAMERA_FORMAT_YCBCR_P010 = 2001
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraFormatYcbcrP010 |
@@ -1683,8 +1555,7 @@ public enum CameraFormat {
     * @relation CAMERA_FORMAT_YCRCB_P010 = 2002
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraFormatYcrcbP010 |
@@ -1694,8 +1565,7 @@ public enum CameraFormat {
     * @relation CAMERA_FORMAT_HEIC = 2003
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraFormatHeic |
@@ -1705,8 +1575,7 @@ public enum CameraFormat {
     * @relation CAMERA_FORMAT_JPEG = 2000
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraFormatJpeg |
@@ -1716,8 +1585,7 @@ public enum CameraFormat {
     * @relation CAMERA_FORMAT_YUV_420_SP = 1003
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraFormatYuv420Sp |
@@ -1727,8 +1595,7 @@ public enum CameraFormat {
     * @relation CAMERA_FORMAT_RGBA_8888 = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraFormatRgba8888 |
@@ -1743,8 +1610,7 @@ public enum CameraFormat {
 * @relation interface CameraDevice
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CameraDevice {
@@ -1754,8 +1620,7 @@ public class CameraDevice {
     * @relation readonly cameraId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let cameraId: String
@@ -1766,8 +1631,7 @@ public class CameraDevice {
     * @relation readonly cameraPosition: CameraPosition
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let cameraPosition: CameraPosition
@@ -1778,8 +1642,7 @@ public class CameraDevice {
     * @relation readonly cameraType: CameraType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let cameraType: CameraType
@@ -1790,8 +1653,7 @@ public class CameraDevice {
     * @relation readonly connectionType: ConnectionType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let connectionType: ConnectionType
@@ -1802,8 +1664,7 @@ public class CameraDevice {
     * @relation readonly cameraOrientation: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public let cameraOrientation: UInt32
@@ -1816,8 +1677,7 @@ public class CameraDevice {
 * @relation interface CameraStatusInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CameraStatusInfo {
@@ -1827,8 +1687,7 @@ public class CameraStatusInfo {
     * @relation camera: CameraDevice
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var camera: CameraDevice
@@ -1839,8 +1698,7 @@ public class CameraStatusInfo {
     * @relation status: CameraStatus
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var status: CameraStatus
@@ -1852,8 +1710,7 @@ public class CameraStatusInfo {
 */
 @Derive[Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum CameraEvents {
@@ -1861,8 +1718,7 @@ public enum CameraEvents {
     * camera error event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraError |
@@ -1870,8 +1726,7 @@ public enum CameraEvents {
     * camera status event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraStatus |
@@ -1879,8 +1734,7 @@ public enum CameraEvents {
     * fold status change event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FoldStatusChange |
@@ -1888,8 +1742,7 @@ public enum CameraEvents {
     * torch status change event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     TorchStatusChange |
@@ -1897,8 +1750,7 @@ public enum CameraEvents {
     * frame start event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FrameStart |
@@ -1906,8 +1758,7 @@ public enum CameraEvents {
     * frame end event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FrameEnd |
@@ -1915,8 +1766,7 @@ public enum CameraEvents {
     * capture start withInfo event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CaptureStartWithInfo |
@@ -1924,8 +1774,7 @@ public enum CameraEvents {
     * frame shutter event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FrameShutter |
@@ -1933,8 +1782,7 @@ public enum CameraEvents {
     * capture end event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CaptureEnd |
@@ -1942,8 +1790,7 @@ public enum CameraEvents {
     * frame shutter end event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FrameShutterEnd |
@@ -1951,8 +1798,7 @@ public enum CameraEvents {
     * capture ready event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CaptureReady |
@@ -1960,8 +1806,7 @@ public enum CameraEvents {
     * estimated capture duration event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     EstimatedCaptureDuration |
@@ -1969,8 +1814,7 @@ public enum CameraEvents {
     * metadata objects available event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     MetadataObjectsAvailable |
@@ -1978,8 +1822,7 @@ public enum CameraEvents {
     * focus state change event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     FocusStateChange |
@@ -1987,8 +1830,7 @@ public enum CameraEvents {
     * smooth zoom info available event.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     SmoothZoomInfoAvailable |
@@ -2004,8 +1846,7 @@ public enum CameraEvents {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum CameraPosition {
@@ -2015,8 +1856,7 @@ public enum CameraPosition {
     * @relation CAMERA_POSITION_UNSPECIFIED = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraPositionUnspecified |
@@ -2026,8 +1866,7 @@ public enum CameraPosition {
     * @relation CAMERA_POSITION_BACK = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraPositionBack |
@@ -2037,8 +1876,7 @@ public enum CameraPosition {
     * @relation CAMERA_POSITION_FRONT = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraPositionFront |
@@ -2054,8 +1892,7 @@ public enum CameraPosition {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum CameraType {
@@ -2065,8 +1902,7 @@ public enum CameraType {
     * @relation CAMERA_TYPE_DEFAULT = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraTypeDefault |
@@ -2076,8 +1912,7 @@ public enum CameraType {
     * @relation CAMERA_TYPE_WIDE_ANGLE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraTypeWideAngle |
@@ -2087,8 +1922,7 @@ public enum CameraType {
     * @relation CAMERA_TYPE_ULTRA_WIDE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraTypeUltraWide |
@@ -2098,8 +1932,7 @@ public enum CameraType {
     * @relation CAMERA_TYPE_TELEPHOTO = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraTypeTelephoto |
@@ -2109,8 +1942,7 @@ public enum CameraType {
     * @relation CAMERA_TYPE_TRUE_DEPTH = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     CameraTypeTrueDepth |
@@ -2126,8 +1958,7 @@ public enum CameraType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum SceneMode {
@@ -2137,8 +1968,7 @@ public enum SceneMode {
     * @relation NORMAL_PHOTO = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     NormalPhoto |
@@ -2148,8 +1978,7 @@ public enum SceneMode {
     * @relation NORMAL_VIDEO = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     NormalVideo |
@@ -2159,8 +1988,7 @@ public enum SceneMode {
     * @relation SECURE_PHOTO = 12
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     SecurePhoto |
@@ -2176,8 +2004,7 @@ public enum SceneMode {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum QualityLevel {
@@ -2187,8 +2014,7 @@ public enum QualityLevel {
     * @relation QUALITY_LEVEL_HIGH = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     QualityLevelHigh |
@@ -2198,8 +2024,7 @@ public enum QualityLevel {
     * @relation QUALITY_LEVEL_MEDIUM = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     QualityLevelMedium |
@@ -2209,8 +2034,7 @@ public enum QualityLevel {
     * @relation QUALITY_LEVEL_LOW = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     QualityLevelLow |
@@ -2225,8 +2049,7 @@ public enum QualityLevel {
 * @relation interface Location
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class Location {
@@ -2236,8 +2059,7 @@ public class Location {
     * @relation latitude: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var latitude: Float64
@@ -2248,8 +2070,7 @@ public class Location {
     * @relation longitude: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var longitude: Float64
@@ -2260,8 +2081,7 @@ public class Location {
     * @relation altitude: double
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var altitude: Float64
@@ -2270,8 +2090,7 @@ public class Location {
     * Location constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public init(latitude: Float64, longitude: Float64, altitude: Float64)
@@ -2284,8 +2103,7 @@ public class Location {
 * @relation interface PhotoCaptureSetting
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class PhotoCaptureSetting {
@@ -2295,8 +2113,7 @@ public class PhotoCaptureSetting {
     * @relation quality?: QualityLevel
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var quality: QualityLevel
@@ -2307,8 +2124,7 @@ public class PhotoCaptureSetting {
     * @relation rotation?: ImageRotation
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var rotation: ImageRotation
@@ -2319,8 +2135,7 @@ public class PhotoCaptureSetting {
     * @relation location?: Location
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var location: ?Location
@@ -2333,8 +2148,7 @@ public class PhotoCaptureSetting {
     * @relation mirror?: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var mirror: Bool
@@ -2343,8 +2157,7 @@ public class PhotoCaptureSetting {
     * PhotoCaptureSetting constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public init(
@@ -2363,8 +2176,7 @@ public class PhotoCaptureSetting {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum VideoCodecType {
@@ -2374,8 +2186,7 @@ public enum VideoCodecType {
     * @relation AVC = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Avc |
@@ -2385,8 +2196,7 @@ public enum VideoCodecType {
     * @relation HEVC = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Hevc |
@@ -2401,8 +2211,7 @@ public enum VideoCodecType {
 * @relation interface CaptureStartInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CaptureStartInfo {
@@ -2412,8 +2221,7 @@ public class CaptureStartInfo {
     * @relation captureId: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var captureId: Int32
@@ -2424,8 +2232,7 @@ public class CaptureStartInfo {
     * @relation time: long
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var time: Int64
@@ -2438,8 +2245,7 @@ public class CaptureStartInfo {
 * @relation interface FrameShutterInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class FrameShutterInfo {
@@ -2449,8 +2255,7 @@ public class FrameShutterInfo {
     * @relation captureId: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var captureId: Int32
@@ -2461,8 +2266,7 @@ public class FrameShutterInfo {
     * @relation timestamp: long
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var timestamp: Int64
@@ -2475,8 +2279,7 @@ public class FrameShutterInfo {
 * @relation interface CaptureEndInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CaptureEndInfo {
@@ -2486,8 +2289,7 @@ public class CaptureEndInfo {
     * @relation captureId: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var captureId: Int32
@@ -2498,8 +2300,7 @@ public class CaptureEndInfo {
     * @relation frameCount: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var frameCount: Int32
@@ -2512,8 +2313,7 @@ public class CaptureEndInfo {
 * @relation interface FrameShutterEndInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class FrameShutterEndInfo {
@@ -2523,8 +2323,7 @@ public class FrameShutterEndInfo {
     * @relation captureId: int
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public var captureId: Int32
@@ -2539,8 +2338,7 @@ public class FrameShutterEndInfo {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum PreconfigType {
@@ -2550,8 +2348,7 @@ public enum PreconfigType {
     * @relation PRECONFIG_720P = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Preconfig720p |
@@ -2561,8 +2358,7 @@ public enum PreconfigType {
     * @relation PRECONFIG_1080P = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Preconfig1080p |
@@ -2572,8 +2368,7 @@ public enum PreconfigType {
     * @relation PRECONFIG_4K = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     Preconfig4k |
@@ -2583,8 +2378,7 @@ public enum PreconfigType {
     * @relation PRECONFIG_HIGH_QUALITY = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     PreconfigHighQuality |
@@ -2600,8 +2394,7 @@ public enum PreconfigType {
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public enum PreconfigRatio {
@@ -2611,8 +2404,7 @@ public enum PreconfigRatio {
     * @relation PRECONFIG_RATIO_1_1 = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     PreconfigRatio_1_1 |
@@ -2622,8 +2414,7 @@ public enum PreconfigRatio {
     * @relation PRECONFIG_RATIO_4_3 = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     PreconfigRatio_4_3 |
@@ -2633,8 +2424,7 @@ public enum PreconfigRatio {
     * @relation PRECONFIG_RATIO_16_9 = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     PreconfigRatio_16_9 |
@@ -2649,8 +2439,7 @@ public enum PreconfigRatio {
 * @relation interface CameraInput
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CameraInput <: RemoteDataLite {
@@ -2664,8 +2453,7 @@ public class CameraInput <: RemoteDataLite {
     * @relation open(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func open(): Unit
@@ -2682,8 +2470,7 @@ public class CameraInput <: RemoteDataLite {
     * @relation open(isSecureEnabled: boolean): Promise<bigint>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func open(isSecureEnabled: Bool): UInt64
@@ -2695,8 +2482,7 @@ public class CameraInput <: RemoteDataLite {
     * @relation close(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func close(): Unit
@@ -2716,8 +2502,7 @@ public class CameraInput <: RemoteDataLite {
     * @relation on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, camera: CameraDevice, callback: Callback0Argument): Unit
@@ -2733,8 +2518,7 @@ public class CameraInput <: RemoteDataLite {
     * @relation off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, camera: CameraDevice, callback: Callback0Argument): Unit
@@ -2749,8 +2533,7 @@ public class CameraInput <: RemoteDataLite {
     * @relation off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, camera: CameraDevice): Unit
@@ -2763,8 +2546,7 @@ public class CameraInput <: RemoteDataLite {
 * @relation interface CameraManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class CameraManager <: RemoteDataLite {
@@ -2775,8 +2557,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation isCameraMuted(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func isCameraMuted(): Bool
@@ -2788,8 +2569,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation isTorchModeSupported(mode: TorchMode): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func isTorchModeSupported(mode: TorchMode): Bool
@@ -2801,8 +2581,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation isTorchSupported(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func isTorchSupported(): Bool
@@ -2814,8 +2593,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation getTorchMode(): TorchMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getTorchMode(): TorchMode
@@ -2829,8 +2607,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation setTorchMode(mode: TorchMode): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func setTorchMode(mode: TorchMode): Unit
@@ -2842,8 +2619,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation getSupportedCameras(): Array<CameraDevice>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getSupportedCameras(): Array<CameraDevice>
@@ -2856,8 +2632,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
@@ -2871,8 +2646,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
@@ -2894,9 +2668,8 @@ public class CameraManager <: RemoteDataLite {
     * @relation createCameraInput(camera: CameraDevice): CameraInput
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.CAMERA",
-        stagemodelonly: true,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createCameraInput(camera: CameraDevice): CameraInput
@@ -2919,9 +2692,8 @@ public class CameraManager <: RemoteDataLite {
     * @relation createCameraInput(position: CameraPosition, type: CameraType): CameraInput
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.CAMERA",
-        stagemodelonly: true,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createCameraInput(position: CameraPosition, cameraType: CameraType): CameraInput
@@ -2938,8 +2710,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createPreviewOutput(profile: Profile, surfaceId: String): PreviewOutput
@@ -2956,8 +2727,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation createPreviewOutput(surfaceId: string): PreviewOutput
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createPreviewOutput(surfaceId: String): PreviewOutput
@@ -2976,8 +2746,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation createPhotoOutput(profile?: Profile): PhotoOutput
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createPhotoOutput(profile!: ?Profile = None): PhotoOutput
@@ -2993,8 +2762,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createVideoOutput(profile: VideoProfile, surfaceId: String): VideoOutput
@@ -3011,8 +2779,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation createVideoOutput(surfaceId: string): VideoOutput
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createVideoOutput(surfaceId: String): VideoOutput
@@ -3031,8 +2798,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation createSession<T extends Session>(mode: SceneMode): T
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func createSession(mode: SceneMode): Session
@@ -3051,8 +2817,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<CameraStatusInfo>): Unit
@@ -3070,8 +2835,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<FoldStatusInfo>): Unit
@@ -3090,8 +2854,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<TorchStatusInfo>): Unit
@@ -3106,8 +2869,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<CameraStatusInfo>): Unit
@@ -3122,8 +2884,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<FoldStatusInfo>): Unit
@@ -3138,8 +2899,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<TorchStatusInfo>): Unit
@@ -3155,8 +2915,7 @@ public class CameraManager <: RemoteDataLite {
     * @relation off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents): Unit
@@ -3169,8 +2928,7 @@ public class CameraManager <: RemoteDataLite {
 * @relation interface CameraOutput
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface CameraOutput {
@@ -3181,8 +2939,7 @@ public interface CameraOutput {
     * @relation release(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func release(): Unit
@@ -3195,8 +2952,7 @@ public interface CameraOutput {
 * @relation interface Session
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public interface Session {
@@ -3208,8 +2964,7 @@ public interface Session {
     * @relation beginConfig(): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func beginConfig(): Unit
@@ -3222,8 +2977,7 @@ public interface Session {
     * @relation commitConfig(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func commitConfig(): Unit
@@ -3237,8 +2991,7 @@ public interface Session {
     * @relation canAddInput(cameraInput: CameraInput): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func canAddInput(cameraInput: CameraInput): Bool
@@ -3254,8 +3007,7 @@ public interface Session {
     * @relation addInput(cameraInput: CameraInput): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func addInput(cameraInput: CameraInput): Unit
@@ -3271,8 +3023,7 @@ public interface Session {
     * @relation removeInput(cameraInput: CameraInput): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func removeInput(cameraInput: CameraInput): Unit
@@ -3286,8 +3037,7 @@ public interface Session {
     * @relation canAddOutput(cameraOutput: CameraOutput): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func canAddOutput(cameraOutput: CameraOutput): Bool
@@ -3303,8 +3053,7 @@ public interface Session {
     * @relation addOutput(cameraOutput: CameraOutput): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func addOutput(cameraOutput: CameraOutput): Unit
@@ -3320,8 +3069,7 @@ public interface Session {
     * @relation removeOutput(cameraOutput: CameraOutput): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func removeOutput(cameraOutput: CameraOutput): Unit
@@ -3335,8 +3083,7 @@ public interface Session {
     * @relation start(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func start(): Unit
@@ -3348,8 +3095,7 @@ public interface Session {
     * @relation stop(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func stop(): Unit
@@ -3361,8 +3107,7 @@ public interface Session {
     * @relation release(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     func release(): Unit
@@ -3375,8 +3120,7 @@ public interface Session {
 * @relation interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement, AutoDeviceSwitch, Macro
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & Focus & Zoom & ColorManagement {
@@ -3392,8 +3136,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func canPreconfig(preconfigType: PreconfigType, preconfigRatio!: PreconfigRatio = PreconfigRatio_4_3): Bool
@@ -3409,8 +3152,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func preconfig(
@@ -3430,8 +3172,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation on(type: 'error', callback: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -3444,8 +3185,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -3462,8 +3202,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<FocusState>): Unit
@@ -3476,8 +3215,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<FocusState>): Unit
@@ -3494,8 +3232,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<SmoothZoomInfo>): Unit
@@ -3508,8 +3245,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<SmoothZoomInfo>): Unit
@@ -3524,8 +3260,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents): Unit
@@ -3538,8 +3273,7 @@ public class PhotoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
 * @relation interface VideoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization, ColorManagement, AutoDeviceSwitch, Macro
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & Focus & Zoom & Stabilization & ColorManagement {
@@ -3555,8 +3289,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func canPreconfig(preconfigType: PreconfigType, preconfigRatio!: PreconfigRatio = PreconfigRatio_16_9): Bool
@@ -3572,8 +3305,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func preconfig(
@@ -3595,8 +3327,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation on(type: 'error', callback: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -3611,8 +3342,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -3631,8 +3361,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<FocusState>): Unit
@@ -3647,8 +3376,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<FocusState>): Unit
@@ -3667,8 +3395,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<SmoothZoomInfo>): Unit
@@ -3683,8 +3410,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<SmoothZoomInfo>): Unit
@@ -3700,8 +3426,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
     * @relation off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents): Unit
@@ -3714,8 +3439,7 @@ public class VideoSession <: RemoteDataLite & Session & Flash & AutoExposure & F
 * @relation interface PhotoOutput extends CameraOutput
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class PhotoOutput <: RemoteDataLite & CameraOutput {
@@ -3725,8 +3449,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @throws { BusinessException } 7400201 - Camera service fatal error.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func release(): Unit
@@ -3739,8 +3462,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation capture(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func capture(): Unit
@@ -3755,8 +3477,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation capture(setting: PhotoCaptureSetting): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func capture(setting: PhotoCaptureSetting): Unit
@@ -3769,8 +3490,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation isMovingPhotoSupported(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func isMovingPhotoSupported(): Bool
@@ -3786,9 +3506,8 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation enableMovingPhoto(enabled: boolean): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.permission.MICROPHONE",
-        stagemodelonly: true,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func enableMovingPhoto(enabled: Bool): Unit
@@ -3801,8 +3520,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation isMirrorSupported(): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func isMirrorSupported(): Bool
@@ -3819,8 +3537,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation enableMirror(enabled: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func enableMirror(enabled: Bool): Unit
@@ -3832,8 +3549,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
@@ -3846,8 +3562,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func setMovingPhotoVideoCodecType(codecType: VideoCodecType): Unit
@@ -3860,8 +3575,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation getActiveProfile(): Profile
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getActiveProfile(): Profile
@@ -3876,8 +3590,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation getPhotoRotation(deviceDegree: int): ImageRotation
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getPhotoRotation(deviceDegree: Int32): ImageRotation
@@ -3896,8 +3609,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<CaptureStartInfo>): Unit
@@ -3912,8 +3624,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'frameShutter', callback: AsyncCallback<FrameShutterInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<FrameShutterInfo>): Unit
@@ -3932,8 +3643,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<CaptureEndInfo>): Unit
@@ -3952,8 +3662,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<FrameShutterEndInfo>): Unit
@@ -3973,8 +3682,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'error', callback: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -3993,8 +3701,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback1Argument<Float64>): Unit
@@ -4009,8 +3716,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'captureStartWithInfo', callback?: AsyncCallback<CaptureStartInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<CaptureStartInfo>): Unit
@@ -4025,8 +3731,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'frameShutter', callback?: AsyncCallback<FrameShutterInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<FrameShutterInfo>): Unit
@@ -4041,8 +3746,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'captureEnd', callback?: AsyncCallback<CaptureEndInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<CaptureEndInfo>): Unit
@@ -4057,8 +3761,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'frameShutterEnd', callback?: AsyncCallback<FrameShutterEndInfo>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<FrameShutterEndInfo>): Unit
@@ -4074,8 +3777,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -4090,8 +3792,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'estimatedCaptureDuration', callback?: AsyncCallback<double>): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback1Argument<Float64>): Unit
@@ -4111,8 +3812,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents): Unit
@@ -4125,8 +3825,7 @@ public class PhotoOutput <: RemoteDataLite & CameraOutput {
 * @relation interface PreviewOutput extends CameraOutput
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class PreviewOutput <: RemoteDataLite & CameraOutput {
@@ -4136,8 +3835,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @throws { BusinessException } 7400201 - Camera service fatal error.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func release(): Unit
@@ -4150,8 +3848,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation getSupportedFrameRates(): Array<FrameRateRange>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getSupportedFrameRates(): Array<FrameRateRange>
@@ -4166,8 +3863,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation setFrameRate(minFps: int, maxFps: int): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func setFrameRate(minFps: Int32, maxFps: Int32): Unit
@@ -4180,8 +3876,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation getActiveFrameRate(): FrameRateRange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getActiveFrameRate(): FrameRateRange
@@ -4194,8 +3889,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation getActiveProfile(): Profile
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getActiveProfile(): Profile
@@ -4210,8 +3904,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation getPreviewRotation(displayRotation: int): ImageRotation
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getPreviewRotation(displayRotation: Int32): ImageRotation
@@ -4226,8 +3919,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked!: Bool = false): Unit
@@ -4246,8 +3938,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'error', callback: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -4266,8 +3957,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -4283,8 +3973,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents): Unit
@@ -4297,8 +3986,7 @@ public class PreviewOutput <: RemoteDataLite & CameraOutput {
 * @relation interface VideoOutput extends CameraOutput
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Multimedia.Camera.Core"
 ]
 public class VideoOutput <: RemoteDataLite & CameraOutput {
@@ -4308,8 +3996,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @throws { BusinessException } 7400201 - Camera service fatal error.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func release(): Unit
@@ -4322,8 +4009,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation start(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func start(): Unit
@@ -4335,8 +4021,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation stop(): Promise<void>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func stop(): Unit
@@ -4349,8 +4034,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation getSupportedFrameRates(): Array<FrameRateRange>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getSupportedFrameRates(): Array<FrameRateRange>
@@ -4365,8 +4049,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation setFrameRate(minFps: int, maxFps: int): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func setFrameRate(minFps: Int32, maxFps: Int32): Unit
@@ -4379,8 +4062,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation getActiveFrameRate(): FrameRateRange
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getActiveFrameRate(): FrameRateRange
@@ -4393,8 +4075,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation getActiveProfile(): VideoProfile
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getActiveProfile(): VideoProfile
@@ -4409,8 +4090,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation getVideoRotation(deviceDegree: int): ImageRotation
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func getVideoRotation(deviceDegree: Int32): ImageRotation
@@ -4430,8 +4110,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation on(type: 'error', callback: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func on(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -4450,8 +4129,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents, callback: Callback0Argument): Unit
@@ -4467,8 +4145,7 @@ public class VideoOutput <: RemoteDataLite & CameraOutput {
     * @relation off(type: 'error', callback?: ErrorCallback): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Multimedia.Camera.Core"
     ]
     public func off(eventType: CameraEvents): Unit

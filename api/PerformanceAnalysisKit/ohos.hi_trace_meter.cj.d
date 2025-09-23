@@ -26,8 +26,7 @@ import ohos.labels.*
 * @relation declare namespace hiTraceMeter
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.HiviewDFX.HiTrace"
 ]
 public class HiTraceMeter {
@@ -42,8 +41,7 @@ public class HiTraceMeter {
     * @relation function startTrace(name: string, taskId: number): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiTrace"
     ]
     public static func startTrace(name: String, taskId: Int32): Unit
@@ -57,8 +55,7 @@ public class HiTraceMeter {
     * @relation function finishTrace(name: string, taskId: number): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.HiviewDFX.HiTrace"
     ]
     public static func finishTrace(name: String, taskId: Int32): Unit

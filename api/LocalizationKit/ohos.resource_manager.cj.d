@@ -36,8 +36,7 @@ import ohos.ffi.{RetDataI64, RetDataCArrUI8, RetDataCArrString, RetDataCString}
 * @relation export interface ResourceManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public class ResourceManager <: RemoteDataLite {
@@ -52,8 +51,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getRawFdSync(path: string): RawFileDescriptor
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getRawFd(path: String): RawFileDescriptor
@@ -68,8 +66,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation closeRawFdSync(path: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func closeRawFd(path: String): Unit
@@ -85,8 +82,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getRawFileContentSync(path: string): Uint8Array
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getRawFileContent(path: String): Array<UInt8>
@@ -102,8 +98,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getRawFileListSync(path: string): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getRawFileList(path: String): Array<String>
@@ -121,8 +116,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getColorByNameSync(resName: string) : number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getColorByName(resName: String): UInt32
@@ -140,8 +134,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getColorSync(resource: Resource) : number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getColor(resource: AppResource): UInt32
@@ -159,8 +152,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getColorSync(resId: number) : number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getColor(resId: UInt32): UInt32
@@ -178,8 +170,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getBoolean(resId: number): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getBoolean(resId: UInt32): Bool
@@ -197,8 +188,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getBoolean(resource: Resource): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getBoolean(resource: AppResource): Bool
@@ -216,8 +206,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getBooleanByName(resName: string): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getBooleanByName(resName: String): Bool
@@ -235,8 +224,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getNumber(resId: number): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getNumber(resId: UInt32): NumberValueType
@@ -254,8 +242,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getNumber(resource: Resource): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getNumber(resource: AppResource): NumberValueType
@@ -273,8 +260,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getNumberByName(resName: string): number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getNumberByName(resName: String): NumberValueType
@@ -293,8 +279,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getMediaByNameSync(resName: string, density?: number): Uint8Array
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getMediaByName(resName: String, density!: ?ScreenDensity = None): Array<UInt8>
@@ -313,8 +298,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getMediaContentSync(resId: number, density?: number): Uint8Array
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getMediaContent(resId: UInt32, density!: ?ScreenDensity = None): Array<UInt8>
@@ -333,8 +317,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getMediaContentSync(resource: Resource, density?: number): Uint8Array
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getMediaContent(resource: AppResource, density!: ?ScreenDensity = None): Array<UInt8>
@@ -354,8 +337,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getMediaContentBase64Sync(resId: number, density?: number): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getMediaContentBase64(resId: UInt32, density!: ?ScreenDensity = None): String
@@ -375,8 +357,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getMediaContentBase64Sync(resource: Resource, density?: number): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getMediaContentBase64(resource: AppResource, density!: ?ScreenDensity = None): String
@@ -396,8 +377,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getMediaBase64ByNameSync(resName: string, density?: number): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getMediaBase64ByName(resName: String, density!: ?ScreenDensity = None): String
@@ -419,8 +399,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getPluralStringValueSync(resId: number, num: number): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getPluralStringValue(resId: UInt32, num: Int64): String
@@ -442,8 +421,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getPluralStringValueSync(resource: Resource, num: number): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getPluralStringValue(resource: AppResource, num: Int64): String
@@ -465,8 +443,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getPluralStringByNameSync(resName: string, num: number): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getPluralStringByName(resName: String, num: Int64): String
@@ -484,8 +461,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getStringArrayValueSync(resId: number): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getStringArrayValue(resId: UInt32): Array<String>
@@ -503,8 +479,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getStringArrayValueSync(resource: Resource): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getStringArrayValue(resource: AppResource): Array<String>
@@ -522,8 +497,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getStringArrayByNameSync(resName: string): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getStringArrayByName(resName: String): Array<String>
@@ -543,8 +517,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getStringSync(resId: number, ...args: Array<string | number>): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getString(resId: UInt32, args: Array<ArgsValueType>): String
@@ -564,8 +537,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getStringSync(resource: Resource, ...args: Array<string | number>): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getString(resource: AppResource, args: Array<ArgsValueType>): String
@@ -585,8 +557,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getStringByNameSync(resName: string, ...args: Array<string | number>): string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getStringByName(resName: String, args: Array<ArgsValueType>): String
@@ -599,8 +570,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getConfigurationSync(): Configuration
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getConfiguration(): Configuration
@@ -613,8 +583,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getDeviceCapabilitySync(): DeviceCapability
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getDeviceCapability(): DeviceCapability
@@ -628,8 +597,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation addResource(path: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func addResource(path: String): Unit
@@ -643,8 +611,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation removeResource(path: string): void
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func removeResource(path: String): Unit
@@ -660,8 +627,7 @@ public class ResourceManager <: RemoteDataLite {
     * @relation getLocales(includeSystem?: boolean): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public func getLocales(includeSystem!: Bool = false): Array<String>
@@ -675,8 +641,7 @@ public class ResourceManager <: RemoteDataLite {
 * @relation export class Configuration
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public class Configuration {
@@ -686,8 +651,7 @@ public class Configuration {
     * @relation direction: Direction
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var direction: Direction
@@ -698,8 +662,7 @@ public class Configuration {
     * @relation locale: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var locale: String
@@ -710,8 +673,7 @@ public class Configuration {
     * @relation deviceType: DeviceType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var deviceType: DeviceType
@@ -722,8 +684,7 @@ public class Configuration {
     * @relation screenDensity: ScreenDensity
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var screenDensity: ScreenDensity
@@ -734,8 +695,7 @@ public class Configuration {
     * @relation colorMode: ColorMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var colorMode: ColorMode
@@ -746,8 +706,7 @@ public class Configuration {
     * @relation mcc: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var mcc: UInt32
@@ -758,8 +717,7 @@ public class Configuration {
     * @relation mnc: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public var mnc: UInt32
@@ -772,8 +730,7 @@ public class Configuration {
 * @relation export class DeviceCapability
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public class DeviceCapability {
@@ -783,8 +740,7 @@ public class DeviceCapability {
     * @relation screenDensity: ScreenDensity
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let screenDensity: ScreenDensity
@@ -795,8 +751,7 @@ public class DeviceCapability {
     * @relation deviceType: DeviceType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public let deviceType: DeviceType
@@ -809,8 +764,7 @@ public class DeviceCapability {
 * @relation export enum ColorMode
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public enum ColorMode {
@@ -820,8 +774,7 @@ public enum ColorMode {
     * @relation DARK = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     Dark |
@@ -831,8 +784,7 @@ public enum ColorMode {
     * @relation LIGHT = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     Light |
@@ -846,8 +798,7 @@ public enum ColorMode {
 * export enum ScreenDensity
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public enum ScreenDensity {
@@ -857,8 +808,7 @@ public enum ScreenDensity {
     * @relation SCREEN_SDPI = 120
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     ScreenSdpi |
@@ -868,8 +818,7 @@ public enum ScreenDensity {
     * @relation SCREEN_MDPI = 160
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     ScreenMdpi |
@@ -879,8 +828,7 @@ public enum ScreenDensity {
     * @relation SCREEN_LDPI = 240
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     ScreenLdpi |
@@ -890,8 +838,7 @@ public enum ScreenDensity {
     * @relation SCREEN_XLDPI = 320
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     ScreenXldpi |
@@ -901,8 +848,7 @@ public enum ScreenDensity {
     * @relation SCREEN_XXLDPI = 480
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     ScreenXxldpi |
@@ -912,8 +858,7 @@ public enum ScreenDensity {
     * @relation SCREEN_XXXLDPI = 640
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     ScreenXxxldpi |
@@ -927,8 +872,7 @@ public enum ScreenDensity {
 * @relation export enum DeviceType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public enum DeviceType {
@@ -938,8 +882,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_PHONE = 0x00
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceTypePhone |
@@ -949,8 +892,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_TABLET = 0x01
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceTypeTablet |
@@ -960,8 +902,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_CAR = 0x02
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceTypeCar |
@@ -971,8 +912,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_PC = 0x03
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceTypePc |
@@ -982,8 +922,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_TV = 0x04
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceTypeTv |
@@ -993,8 +932,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_WEARABLE = 0x06
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceTypeWearable |
@@ -1004,8 +942,7 @@ public enum DeviceType {
     * @relation DEVICE_TYPE_2IN1 = 0x07
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DeviceType2In1 |
@@ -1019,8 +956,7 @@ public enum DeviceType {
 * @relation export enum Direction
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public enum Direction {
@@ -1030,8 +966,7 @@ public enum Direction {
     * @relation DIRECTION_VERTICAL = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DirectionVertical |
@@ -1041,8 +976,7 @@ public enum Direction {
     * @relation DIRECTION_HORIZONTAL = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     DirectionHorizontal |
@@ -1054,8 +988,7 @@ public enum Direction {
 * for some API returns two type : Int32 Float32
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public enum NumberValueType {
@@ -1063,8 +996,7 @@ public enum NumberValueType {
     * Represents Int32.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     Int32Value(Int32) |
@@ -1072,8 +1004,7 @@ public enum NumberValueType {
     * Represents Float32.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     Float32Value(Float32) |
@@ -1085,8 +1016,7 @@ public enum NumberValueType {
 * For the formatting parameter using.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public enum ArgsValueType {
@@ -1094,8 +1024,7 @@ public enum ArgsValueType {
     * Formats %d.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     Int32Value(Int32) |
@@ -1103,8 +1032,7 @@ public enum ArgsValueType {
     * Formats %f.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     Float32Value(Float32) |
@@ -1112,8 +1040,7 @@ public enum ArgsValueType {
     * Formats %s.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     StringValue(String) |

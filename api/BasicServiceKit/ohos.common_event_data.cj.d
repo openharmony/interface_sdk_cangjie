@@ -25,8 +25,7 @@ import ohos.value_type.{ValueType, CArrParameters, Parameters}
 * @relation export interface CommonEventData
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public class CommonEventData {
@@ -36,8 +35,7 @@ public class CommonEventData {
     * @relation event: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var event: String
@@ -48,8 +46,7 @@ public class CommonEventData {
     * @relation bundleName?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var bundleName: String
@@ -61,8 +58,7 @@ public class CommonEventData {
     * @relation code?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var code: Int32
@@ -74,8 +70,7 @@ public class CommonEventData {
     * @relation data?: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var data: String
@@ -87,8 +82,7 @@ public class CommonEventData {
     * @relation parameters?: { [key: string]: any }
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var parameters: HashMap<String, ValueType>
