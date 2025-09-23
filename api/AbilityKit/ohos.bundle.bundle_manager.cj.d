@@ -34,8 +34,7 @@ import ohos.business_exception.{BusinessException, getUniversalErrorMsg, ERR_PAR
 * @relation export interface AbilityInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class AbilityInfo {
@@ -45,8 +44,7 @@ public class AbilityInfo {
     * @relation readonly bundleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let bundleName: String
@@ -57,8 +55,7 @@ public class AbilityInfo {
     * @relation readonly moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let moduleName: String
@@ -69,8 +66,7 @@ public class AbilityInfo {
     * @relation readonly name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let name: String
@@ -81,8 +77,7 @@ public class AbilityInfo {
     * @relation readonly label: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let label: String
@@ -93,8 +88,7 @@ public class AbilityInfo {
     * @relation readonly labelId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let labelId: Int32
@@ -105,8 +99,7 @@ public class AbilityInfo {
     * @relation readonly description: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let description: String
@@ -117,8 +110,7 @@ public class AbilityInfo {
     * @relation readonly descriptionId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let descriptionId: Int32
@@ -129,8 +121,7 @@ public class AbilityInfo {
     * @relation readonly icon: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let icon: String
@@ -141,8 +132,7 @@ public class AbilityInfo {
     * @relation readonly iconId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let iconId: Int32
@@ -153,8 +143,7 @@ public class AbilityInfo {
     * @relation readonly process: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let process: String
@@ -165,8 +154,7 @@ public class AbilityInfo {
     * @relation readonly exported: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let exported: Bool
@@ -177,8 +165,7 @@ public class AbilityInfo {
     * @relation readonly orientation: bundleManager.DisplayOrientation
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let orientation: DisplayOrientation
@@ -189,8 +176,7 @@ public class AbilityInfo {
     * @relation readonly launchType: bundleManager.LaunchType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let launchType: LaunchType
@@ -201,8 +187,7 @@ public class AbilityInfo {
     * @relation readonly permissions: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let permissions: Array<String>
@@ -213,8 +198,7 @@ public class AbilityInfo {
     * @relation readonly deviceTypes: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let deviceTypes: Array<String>
@@ -225,8 +209,7 @@ public class AbilityInfo {
     * @relation readonly applicationInfo: ApplicationInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let applicationInfo: ApplicationInfo
@@ -237,8 +220,7 @@ public class AbilityInfo {
     * @relation readonly metadata: Array<Metadata>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let metadata: Array<Metadata>
@@ -249,8 +231,7 @@ public class AbilityInfo {
     * @relation readonly enabled: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let enabled: Bool
@@ -261,8 +242,7 @@ public class AbilityInfo {
     * @relation readonly supportWindowModes: Array<bundleManager.SupportWindowMode>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let supportWindowModes: Array<SupportWindowMode>
@@ -273,8 +253,7 @@ public class AbilityInfo {
     * @relation readonly windowSize: WindowSize
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let windowSize: WindowSize
@@ -285,8 +264,7 @@ public class AbilityInfo {
     * @relation readonly excludeFromDock: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let excludeFromDock: Bool
@@ -297,8 +275,7 @@ public class AbilityInfo {
     * @relation readonly skills: Array<Skill>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let skills: Array<Skill>
@@ -309,8 +286,7 @@ public class AbilityInfo {
     * @relation readonly appIndex: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appIndex: Int32
@@ -323,8 +299,7 @@ public class AbilityInfo {
 * @relation export interface WindowSize
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class WindowSize {
@@ -334,8 +309,7 @@ public class WindowSize {
     * @relation readonly maxWindowRatio: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let maxWindowRatio: Float64
@@ -346,8 +320,7 @@ public class WindowSize {
     * @relation readonly minWindowRatio: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let minWindowRatio: Float64
@@ -358,8 +331,7 @@ public class WindowSize {
     * @relation readonly maxWindowWidth: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let maxWindowWidth: UInt32
@@ -370,8 +342,7 @@ public class WindowSize {
     * @relation readonly minWindowWidth: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let minWindowWidth: UInt32
@@ -382,8 +353,7 @@ public class WindowSize {
     * @relation readonly maxWindowHeight: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let maxWindowHeight: UInt32
@@ -394,8 +364,7 @@ public class WindowSize {
     * @relation readonly minWindowHeight: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let minWindowHeight: UInt32
@@ -408,8 +377,7 @@ public class WindowSize {
 * @relation export interface ApplicationInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class ApplicationInfo {
@@ -419,8 +387,7 @@ public class ApplicationInfo {
     * @relation readonly name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let name: String
@@ -431,8 +398,7 @@ public class ApplicationInfo {
     * @relation readonly description: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let description: String
@@ -443,8 +409,7 @@ public class ApplicationInfo {
     * @relation readonly descriptionId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let descriptionId: Int32
@@ -455,8 +420,7 @@ public class ApplicationInfo {
     * @relation readonly enabled: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let enabled: Bool
@@ -467,8 +431,7 @@ public class ApplicationInfo {
     * @relation readonly label: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let label: String
@@ -479,8 +442,7 @@ public class ApplicationInfo {
     * @relation readonly labelId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let labelId: Int32
@@ -491,8 +453,7 @@ public class ApplicationInfo {
     * @relation readonly icon: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let icon: String
@@ -503,8 +464,7 @@ public class ApplicationInfo {
     * @relation readonly iconId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let iconId: Int32
@@ -515,8 +475,7 @@ public class ApplicationInfo {
     * @relation readonly process: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let process: String
@@ -527,8 +486,7 @@ public class ApplicationInfo {
     * @relation readonly permissions: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let permissions: Array<String>
@@ -539,8 +497,7 @@ public class ApplicationInfo {
     * @relation readonly codePath: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let codePath: String
@@ -551,8 +508,7 @@ public class ApplicationInfo {
     * @relation readonly metadataArray: Array<ModuleMetadata>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let metadataArray: Array<ModuleMetadata>
@@ -563,8 +519,7 @@ public class ApplicationInfo {
     * @relation readonly removable: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let removable: Bool
@@ -575,8 +530,7 @@ public class ApplicationInfo {
     * @relation readonly accessTokenId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let accessTokenId: UInt32
@@ -587,8 +541,7 @@ public class ApplicationInfo {
     * @relation readonly uid: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let uid: Int32
@@ -599,8 +552,7 @@ public class ApplicationInfo {
     * @relation readonly iconResource: Resource
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let iconResource: AppResource
@@ -611,8 +563,7 @@ public class ApplicationInfo {
     * @relation readonly labelResource: Resource
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let labelResource: AppResource
@@ -623,8 +574,7 @@ public class ApplicationInfo {
     * @relation readonly descriptionResource: Resource
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let descriptionResource: AppResource
@@ -635,8 +585,7 @@ public class ApplicationInfo {
     * @relation readonly appDistributionType: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appDistributionType: String
@@ -647,8 +596,7 @@ public class ApplicationInfo {
     * @relation readonly appProvisionType: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appProvisionType: String
@@ -659,8 +607,7 @@ public class ApplicationInfo {
     * @relation readonly systemApp: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let systemApp: Bool
@@ -671,8 +618,7 @@ public class ApplicationInfo {
     * @relation readonly bundleType: bundleManager.BundleType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let bundleType: BundleType
@@ -683,8 +629,7 @@ public class ApplicationInfo {
     * @relation readonly debug: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let debug: Bool
@@ -695,8 +640,7 @@ public class ApplicationInfo {
     * @relation readonly dataUnclearable: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let dataUnclearable: Bool
@@ -707,8 +651,7 @@ public class ApplicationInfo {
     * @relation readonly cloudFileSyncEnabled: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let cloudFileSyncEnabled: Bool
@@ -719,8 +662,7 @@ public class ApplicationInfo {
     * @relation readonly nativeLibraryPath: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let nativeLibraryPath: String
@@ -731,8 +673,7 @@ public class ApplicationInfo {
     * @relation readonly multiAppMode: MultiAppMode
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let multiAppMode: MultiAppMode
@@ -743,8 +684,7 @@ public class ApplicationInfo {
     * @relation readonly appIndex: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appIndex: Int32
@@ -755,8 +695,7 @@ public class ApplicationInfo {
     * @relation readonly installSource: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let installSource: String
@@ -767,8 +706,7 @@ public class ApplicationInfo {
     * @relation readonly releaseType: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let releaseType: String
@@ -781,8 +719,7 @@ public class ApplicationInfo {
 * @relation export interface ModuleMetadata
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class ModuleMetadata {
@@ -792,8 +729,7 @@ public class ModuleMetadata {
     * @relation readonly moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let moduleName: String
@@ -804,8 +740,7 @@ public class ModuleMetadata {
     * @relation readonly metadata: Array<Metadata>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let metadata: Array<Metadata>
@@ -818,8 +753,7 @@ public class ModuleMetadata {
 * @relation export interface MultiAppMode
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class MultiAppMode {
@@ -829,8 +763,7 @@ public class MultiAppMode {
     * @relation readonly multiAppModeType: bundleManager.MultiAppModeType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let multiAppModeType: MultiAppModeType
@@ -841,8 +774,7 @@ public class MultiAppMode {
     * @relation readonly maxCount: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let maxCount: Int32
@@ -856,8 +788,7 @@ public class MultiAppMode {
 * @relation enum BundleFlag
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class BundleFlag {
@@ -868,8 +799,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_DEFAULT = 0x00000000
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_DEFAULT: Int32 = 0x00000000
@@ -881,8 +811,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_APPLICATION: Int32 = 0x00000001
@@ -894,8 +823,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_HAP_MODULE: Int32 = 0x00000002
@@ -909,8 +837,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_ABILITY: Int32 = 0x00000004
@@ -924,8 +851,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY: Int32 = 0x00000008
@@ -937,8 +863,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION: Int32 = 0x00000010
@@ -954,8 +879,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_METADATA: Int32 = 0x00000020
@@ -968,8 +892,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_DISABLE: Int32 = 0x00000040
@@ -981,8 +904,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_SIGNATURE_INFO: Int32 = 0x00000080
@@ -996,8 +918,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_MENU = 0x00000100
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_MENU: Int32 = 0x00000100
@@ -1011,8 +932,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_ROUTER_MAP: Int32 = 0x00000200
@@ -1027,8 +947,7 @@ public class BundleFlag {
     * @relation GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static const GET_BUNDLE_INFO_WITH_SKILL: Int32 = 0x00000800
@@ -1041,8 +960,7 @@ public class BundleFlag {
 * @relation export interface BundleInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class BundleInfo {
@@ -1052,8 +970,7 @@ public class BundleInfo {
     * @relation readonly name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let name: String
@@ -1064,8 +981,7 @@ public class BundleInfo {
     * @relation readonly vendor: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let vendor: String
@@ -1076,8 +992,7 @@ public class BundleInfo {
     * @relation readonly versionCode: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let versionCode: UInt32
@@ -1088,8 +1003,7 @@ public class BundleInfo {
     * @relation readonly versionName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let versionName: String
@@ -1100,8 +1014,7 @@ public class BundleInfo {
     * @relation readonly minCompatibleVersionCode: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let minCompatibleVersionCode: UInt32
@@ -1112,8 +1025,7 @@ public class BundleInfo {
     * @relation readonly targetVersion: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let targetVersion: UInt32
@@ -1124,8 +1036,7 @@ public class BundleInfo {
     * @relation readonly appInfo: ApplicationInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appInfo: ApplicationInfo
@@ -1136,8 +1047,7 @@ public class BundleInfo {
     * @relation readonly hapModulesInfo: Array<HapModuleInfo>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let hapModulesInfo: Array<HapModuleInfo>
@@ -1148,8 +1058,7 @@ public class BundleInfo {
     * @relation readonly reqPermissionDetails: Array<ReqPermissionDetail>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let reqPermissionDetails: Array<ReqPermissionDetail>
@@ -1160,8 +1069,7 @@ public class BundleInfo {
     * @relation readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let permissionGrantStates: Array<PermissionGrantState>
@@ -1172,8 +1080,7 @@ public class BundleInfo {
     * @relation readonly signatureInfo: SignatureInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let signatureInfo: SignatureInfo
@@ -1184,8 +1091,7 @@ public class BundleInfo {
     * @relation readonly installTime: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let installTime: Int64
@@ -1196,8 +1102,7 @@ public class BundleInfo {
     * @relation readonly updateTime: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let updateTime: Int64
@@ -1208,8 +1113,7 @@ public class BundleInfo {
     * @relation readonly routerMap: Array<RouterItem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let routerMap: Array<RouterItem>
@@ -1220,8 +1124,7 @@ public class BundleInfo {
     * @relation readonly appIndex: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appIndex: Int32
@@ -1234,8 +1137,7 @@ public class BundleInfo {
 * @relation export interface ReqPermissionDetail
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class ReqPermissionDetail {
@@ -1245,8 +1147,7 @@ public class ReqPermissionDetail {
     * @relation name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var name: String
@@ -1257,8 +1158,7 @@ public class ReqPermissionDetail {
     * @relation moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var moduleName: String
@@ -1269,8 +1169,7 @@ public class ReqPermissionDetail {
     * @relation reason: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var reason: String
@@ -1281,8 +1180,7 @@ public class ReqPermissionDetail {
     * @relation reasonId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var reasonId: Int32
@@ -1293,8 +1191,7 @@ public class ReqPermissionDetail {
     * @relation usedScene: UsedScene
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var usedScene: UsedScene
@@ -1307,8 +1204,7 @@ public class ReqPermissionDetail {
 * @relation export interface UsedScene
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class UsedScene {
@@ -1318,8 +1214,7 @@ public class UsedScene {
     * @relation abilities: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var abilities: Array<String>
@@ -1330,8 +1225,7 @@ public class UsedScene {
     * @relation when: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var when: String
@@ -1344,8 +1238,7 @@ public class UsedScene {
 * @relation export interface SignatureInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class SignatureInfo {
@@ -1356,8 +1249,7 @@ public class SignatureInfo {
     * @relation readonly appId: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appId: String
@@ -1367,8 +1259,7 @@ public class SignatureInfo {
     * @relation readonly fingerprint: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let fingerprint: String
@@ -1381,8 +1272,7 @@ public class SignatureInfo {
     * @relation readonly appIdentifier: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appIdentifier: String
@@ -1395,8 +1285,7 @@ public class SignatureInfo {
 * @relation declare namespace bundleManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class BundleManager {
@@ -1409,8 +1298,7 @@ public class BundleManager {
     * @relation function getBundleInfoForSelfSync(bundleFlags: number): BundleInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static func getBundleInfoForSelf(bundleFlags: Int32): BundleInfo
@@ -1431,8 +1319,7 @@ public class BundleManager {
     * @relation function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityName: string, metadataName?: string): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static func getProfileByExtensionAbility(moduleName: String, extensionAbilityName: String,
@@ -1454,8 +1341,7 @@ public class BundleManager {
     * @relation function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static func getProfileByAbility(moduleName: String, abilityName: String, metadataName!: String = ""): Array<String>
@@ -1471,8 +1357,7 @@ public class BundleManager {
     * @relation function canOpenLink(link: string): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public static func canOpenLink(link: String): Bool
@@ -1485,8 +1370,7 @@ public class BundleManager {
 * @relation export enum BundleType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum BundleType {
@@ -1496,8 +1380,7 @@ public enum BundleType {
     * @relation APP = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     App |
@@ -1507,8 +1390,7 @@ public enum BundleType {
     * @relation ATOMIC_SERVICE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AtomicService |
@@ -1522,8 +1404,7 @@ public enum BundleType {
 * @relation export enum PermissionGrantState
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum PermissionGrantState {
@@ -1533,8 +1414,7 @@ public enum PermissionGrantState {
     * @relation PERMISSION_DENIED = -1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     PermissionDenied |
@@ -1544,8 +1424,7 @@ public enum PermissionGrantState {
     * @relation PERMISSION_GRANTED = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     PermissionGranted |
@@ -1559,8 +1438,7 @@ public enum PermissionGrantState {
 * @relation export enum DisplayOrientation
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum DisplayOrientation {
@@ -1570,8 +1448,7 @@ public enum DisplayOrientation {
     * @relation UNSPECIFIED = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Unspecified |
@@ -1581,8 +1458,7 @@ public enum DisplayOrientation {
     * @relation LANDSCAPE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Landscape |
@@ -1592,8 +1468,7 @@ public enum DisplayOrientation {
     * @relation PORTRAIT = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Portrait |
@@ -1603,8 +1478,7 @@ public enum DisplayOrientation {
     * @relation FOLLOW_RECENT = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     FollowRecent |
@@ -1614,8 +1488,7 @@ public enum DisplayOrientation {
     * @relation LANDSCAPE_INVERTED = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     LandscapeInverted |
@@ -1625,8 +1498,7 @@ public enum DisplayOrientation {
     * @relation PORTRAIT_INVERTED = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     PortraitInverted |
@@ -1636,8 +1508,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotation |
@@ -1647,8 +1518,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION_LANDSCAPE = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotationLandscape |
@@ -1658,8 +1528,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION_PORTRAIT = 8
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotationPortrait |
@@ -1669,8 +1538,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION_RESTRICTED = 9
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotationRestricted |
@@ -1680,8 +1548,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotationLandscapeRestricted |
@@ -1691,8 +1558,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION_PORTRAIT_RESTRICTED = 11
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotationPortraitRestricted |
@@ -1702,8 +1568,7 @@ public enum DisplayOrientation {
     * @relation LOCKED = 12
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Locked |
@@ -1713,8 +1578,7 @@ public enum DisplayOrientation {
     * @relation AUTO_ROTATION_UNSPECIFIED = 13
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AutoRotationUnspecified |
@@ -1724,8 +1588,7 @@ public enum DisplayOrientation {
     * @relation FOLLOW_DESKTOP = 14
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     FollowDesktop |
@@ -1739,8 +1602,7 @@ public enum DisplayOrientation {
 * @relation export enum SupportWindowMode
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum SupportWindowMode {
@@ -1750,8 +1612,7 @@ public enum SupportWindowMode {
     * @relation FULL_SCREEN = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     FullScreen |
@@ -1761,8 +1622,7 @@ public enum SupportWindowMode {
     * @relation SPLIT = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Split |
@@ -1772,8 +1632,7 @@ public enum SupportWindowMode {
     * @relation FLOATING = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Floating |
@@ -1787,8 +1646,7 @@ public enum SupportWindowMode {
 * @relation export enum LaunchType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum LaunchType {
@@ -1798,8 +1656,7 @@ public enum LaunchType {
     * @relation SINGLETON = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Singleton |
@@ -1809,8 +1666,7 @@ public enum LaunchType {
     * @relation MULTITON = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Multiton |
@@ -1820,8 +1676,7 @@ public enum LaunchType {
     * @relation SPECIFIED = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Specified |
@@ -1835,8 +1690,7 @@ public enum LaunchType {
 * @relation export enum ExtensionAbilityType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum ExtensionAbilityType {
@@ -1846,8 +1700,7 @@ public enum ExtensionAbilityType {
     * @relation FORM = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Form |
@@ -1857,8 +1710,7 @@ public enum ExtensionAbilityType {
     * @relation WORK_SCHEDULER = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     WorkScheduler |
@@ -1868,8 +1720,7 @@ public enum ExtensionAbilityType {
     * @relation INPUT_METHOD = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     InputMethod |
@@ -1879,8 +1730,7 @@ public enum ExtensionAbilityType {
     * @relation SERVICE = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Service |
@@ -1890,8 +1740,7 @@ public enum ExtensionAbilityType {
     * @relation ACCESSIBILITY = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Accessibility |
@@ -1901,8 +1750,7 @@ public enum ExtensionAbilityType {
     * @relation DATA_SHARE = 5
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     DataShare |
@@ -1912,8 +1760,7 @@ public enum ExtensionAbilityType {
     * @relation FILE_SHARE = 6
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     FileShare |
@@ -1923,8 +1770,7 @@ public enum ExtensionAbilityType {
     * @relation STATIC_SUBSCRIBER = 7
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     StaticSubscriber |
@@ -1934,8 +1780,7 @@ public enum ExtensionAbilityType {
     * @relation WALLPAPER = 8
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Wallpaper |
@@ -1945,8 +1790,7 @@ public enum ExtensionAbilityType {
     * @relation BACKUP = 9
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Backup |
@@ -1956,8 +1800,7 @@ public enum ExtensionAbilityType {
     * @relation WINDOW = 10
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Window |
@@ -1967,8 +1810,7 @@ public enum ExtensionAbilityType {
     * @relation ENTERPRISE_ADMIN = 11
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     EnterpriseAdmin |
@@ -1978,8 +1820,7 @@ public enum ExtensionAbilityType {
     * @relation THUMBNAIL = 13
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Thumbnail |
@@ -1989,8 +1830,7 @@ public enum ExtensionAbilityType {
     * @relation PREVIEW = 14
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Preview |
@@ -2000,8 +1840,7 @@ public enum ExtensionAbilityType {
     * @relation PRINT = 15
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Print |
@@ -2011,8 +1850,7 @@ public enum ExtensionAbilityType {
     * @relation SHARE = 16
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Share |
@@ -2022,8 +1860,7 @@ public enum ExtensionAbilityType {
     * @relation PUSH = 17
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Push |
@@ -2033,8 +1870,7 @@ public enum ExtensionAbilityType {
     * @relation DRIVER = 18
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Driver |
@@ -2044,8 +1880,7 @@ public enum ExtensionAbilityType {
     * @relation ACTION = 19
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Action |
@@ -2055,8 +1890,7 @@ public enum ExtensionAbilityType {
     * @relation ADS_SERVICE = 20
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AdsService |
@@ -2066,8 +1900,7 @@ public enum ExtensionAbilityType {
     * @relation EMBEDDED_UI = 21
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     EmbeddedUi |
@@ -2077,8 +1910,7 @@ public enum ExtensionAbilityType {
     * @relation INSIGHT_INTENT_UI = 22
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     InsightIntentUi |
@@ -2088,8 +1920,7 @@ public enum ExtensionAbilityType {
     * @relation UNSPECIFIED = 255
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Unspecified |
@@ -2103,8 +1934,7 @@ public enum ExtensionAbilityType {
 * @relation export enum ModuleType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum ModuleType {
@@ -2114,8 +1944,7 @@ public enum ModuleType {
     * @relation ENTRY = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Entry |
@@ -2125,8 +1954,7 @@ public enum ModuleType {
     * @relation FEATURE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Feature |
@@ -2136,8 +1964,7 @@ public enum ModuleType {
     * @relation SHARED = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Shared |
@@ -2151,8 +1978,7 @@ public enum ModuleType {
 * @relation export enum MultiAppModeType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public enum MultiAppModeType {
@@ -2162,8 +1988,7 @@ public enum MultiAppModeType {
     * @relation UNSPECIFIED = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     Unspecified |
@@ -2173,8 +1998,7 @@ public enum MultiAppModeType {
     * @relation MULTI_INSTANCE = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     MultiInstance |
@@ -2184,8 +2008,7 @@ public enum MultiAppModeType {
     * @relation APP_CLONE = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     AppClone |
@@ -2199,8 +2022,7 @@ public enum MultiAppModeType {
 * @relation export enum ApplicationType
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
 ]
 public enum ApplicationType {
@@ -2210,8 +2032,7 @@ public enum ApplicationType {
     * @relation BROWSER = 'Web Browser'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Browser |
@@ -2221,20 +2042,17 @@ public enum ApplicationType {
     * @relation IMAGE = 'Image Gallery'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Image |
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Audio |
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Video |
@@ -2244,8 +2062,7 @@ public enum ApplicationType {
     * @relation PDF = 'PDF Viewer'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Pdf |
@@ -2255,8 +2072,7 @@ public enum ApplicationType {
     * @relation WORD = 'Word Viewer'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Word |
@@ -2266,8 +2082,7 @@ public enum ApplicationType {
     * @relation EXCEL = 'Excel Viewer'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Excel |
@@ -2277,8 +2092,7 @@ public enum ApplicationType {
     * @relation PPT = 'PPT Viewer'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Ppt |
@@ -2288,8 +2102,7 @@ public enum ApplicationType {
     * @relation EMAIL = 'Email'
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     Email |
@@ -2299,8 +2112,7 @@ public enum ApplicationType {
     *
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     public func getValue(): String
@@ -2313,8 +2125,7 @@ public enum ApplicationType {
 * @relation declare namespace defaultAppManager
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
 ]
 public class DefaultAppManager {
@@ -2327,8 +2138,7 @@ public class DefaultAppManager {
     * @relation function isDefaultApplicationSync(type: string): boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp"
     ]
     public static func isDefaultApplication(appType: String): Bool
@@ -2341,8 +2151,7 @@ public class DefaultAppManager {
 * @relation export interface ExtensionAbilityInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class ExtensionAbilityInfo {
@@ -2352,8 +2161,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly bundleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let bundleName: String
@@ -2364,8 +2172,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let moduleName: String
@@ -2376,8 +2183,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let name: String
@@ -2388,8 +2194,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly labelId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let labelId: Int32
@@ -2400,8 +2205,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly descriptionId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let descriptionId: Int32
@@ -2412,8 +2216,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly iconId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let iconId: Int32
@@ -2424,8 +2227,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly exported: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let exported: Bool
@@ -2436,8 +2238,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly extensionAbilityType: bundleManager.ExtensionAbilityType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let extensionAbilityType: ExtensionAbilityType
@@ -2448,8 +2249,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly permissions: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let permissions: Array<String>
@@ -2460,8 +2260,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly applicationInfo: ApplicationInfo
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let applicationInfo: ApplicationInfo
@@ -2472,8 +2271,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly metadata: Array<Metadata>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let metadata: Array<Metadata>
@@ -2484,8 +2282,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly enabled: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let enabled: Bool
@@ -2496,8 +2293,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly readPermission: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let readPermission: String
@@ -2508,8 +2304,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly writePermission: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let writePermission: String
@@ -2520,8 +2315,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly extensionAbilityTypeName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let extensionAbilityTypeName: String
@@ -2532,8 +2326,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly skills: Array<Skill>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let skills: Array<Skill>
@@ -2544,8 +2337,7 @@ public class ExtensionAbilityInfo {
     * @relation readonly appIndex: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let appIndex: Int32
@@ -2558,8 +2350,7 @@ public class ExtensionAbilityInfo {
 * @relation export interface HapModuleInfo
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class HapModuleInfo {
@@ -2569,8 +2360,7 @@ public class HapModuleInfo {
     * @relation readonly name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let name: String
@@ -2581,8 +2371,7 @@ public class HapModuleInfo {
     * @relation readonly icon: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let icon: String
@@ -2593,8 +2382,7 @@ public class HapModuleInfo {
     * @relation readonly iconId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let iconId: Int32
@@ -2605,8 +2393,7 @@ public class HapModuleInfo {
     * @relation readonly label: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let label: String
@@ -2617,8 +2404,7 @@ public class HapModuleInfo {
     * @relation readonly labelId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let labelId: Int32
@@ -2629,8 +2415,7 @@ public class HapModuleInfo {
     * @relation readonly description: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let description: String
@@ -2641,8 +2426,7 @@ public class HapModuleInfo {
     * @relation readonly descriptionId: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let descriptionId: Int32
@@ -2653,8 +2437,7 @@ public class HapModuleInfo {
     * @relation readonly mainElementName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let mainElementName: String
@@ -2665,8 +2448,7 @@ public class HapModuleInfo {
     * @relation readonly abilitiesInfo: Array<AbilityInfo>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let abilitiesInfo: Array<AbilityInfo>
@@ -2677,8 +2459,7 @@ public class HapModuleInfo {
     * @relation readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
@@ -2689,8 +2470,7 @@ public class HapModuleInfo {
     * @relation readonly metadata: Array<Metadata>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let metadata: Array<Metadata>
@@ -2701,8 +2481,7 @@ public class HapModuleInfo {
     * @relation readonly deviceTypes: Array<string>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let deviceTypes: Array<String>
@@ -2713,8 +2492,7 @@ public class HapModuleInfo {
     * @relation readonly installationFree: boolean
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let installationFree: Bool
@@ -2725,8 +2503,7 @@ public class HapModuleInfo {
     * @relation readonly hashValue: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let hashValue: String
@@ -2737,8 +2514,7 @@ public class HapModuleInfo {
     * @relation readonly type: bundleManager.ModuleType
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let moduleType: ModuleType
@@ -2749,8 +2525,7 @@ public class HapModuleInfo {
     * @relation readonly preloads: Array<PreloadItem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let preloads: Array<PreloadItem>
@@ -2761,8 +2536,7 @@ public class HapModuleInfo {
     * @relation readonly dependencies: Array<Dependency>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let dependencies: Array<Dependency>
@@ -2773,8 +2547,7 @@ public class HapModuleInfo {
     * @relation readonly fileContextMenuConfig: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let fileContextMenuConfig: String
@@ -2785,8 +2558,7 @@ public class HapModuleInfo {
     * @relation readonly routerMap: Array<RouterItem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let routerMap: Array<RouterItem>
@@ -2797,8 +2569,7 @@ public class HapModuleInfo {
     * @relation readonly codePath: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let codePath: String
@@ -2809,8 +2580,7 @@ public class HapModuleInfo {
     * @relation readonly nativeLibraryPath: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let nativeLibraryPath: String
@@ -2823,8 +2593,7 @@ public class HapModuleInfo {
 * @relation export interface DataItem
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class DataItem {
@@ -2834,8 +2603,7 @@ public class DataItem {
     * @relation readonly key: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let key: String
@@ -2846,8 +2614,7 @@ public class DataItem {
     * @relation readonly value: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let value: String
@@ -2860,8 +2627,7 @@ public class DataItem {
 * @relation export interface Dependency
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class Dependency {
@@ -2871,8 +2637,7 @@ public class Dependency {
     * @relation readonly bundleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let bundleName: String
@@ -2883,8 +2648,7 @@ public class Dependency {
     * @relation readonly moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let moduleName: String
@@ -2895,8 +2659,7 @@ public class Dependency {
     * @relation readonly versionCode: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let versionCode: UInt32
@@ -2909,8 +2672,7 @@ public class Dependency {
 * @relation export interface PreloadItem
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class PreloadItem {
@@ -2920,8 +2682,7 @@ public class PreloadItem {
     * @relation readonly moduleName: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let moduleName: String
@@ -2934,8 +2695,7 @@ public class PreloadItem {
 * @relation export interface RouterItem
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class RouterItem {
@@ -2945,8 +2705,7 @@ public class RouterItem {
     * @relation readonly name: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let name: String
@@ -2957,8 +2716,7 @@ public class RouterItem {
     * @relation readonly pageSourceFile: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let pageSourceFile: String
@@ -2969,8 +2727,7 @@ public class RouterItem {
     * @relation readonly buildFunction: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let buildFunction: String
@@ -2981,8 +2738,7 @@ public class RouterItem {
     * @relation readonly data: Array<DataItem>
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let data: Array<DataItem>
@@ -2993,8 +2749,7 @@ public class RouterItem {
     * @relation readonly customData: string
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let customData: String

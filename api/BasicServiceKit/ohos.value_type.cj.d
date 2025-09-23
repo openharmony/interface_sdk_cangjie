@@ -24,8 +24,7 @@ import ohos.labels.APILevel
 * The value of the parameters in a common event.
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public enum ValueType {
@@ -33,8 +32,7 @@ public enum ValueType {
     * Int32 type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     Int32Value(Int32) |
@@ -42,8 +40,7 @@ public enum ValueType {
     * Float64 type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     Float64Value(Float64) |
@@ -51,8 +48,7 @@ public enum ValueType {
     * String type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     StringValue(String) |
@@ -60,8 +56,7 @@ public enum ValueType {
     * Bool type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     BoolValue(Bool) |
@@ -69,8 +64,7 @@ public enum ValueType {
     * FD type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     Fd(Int32) |
@@ -78,8 +72,7 @@ public enum ValueType {
     * String array type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     ArrayString(Array<String>) |
@@ -87,8 +80,7 @@ public enum ValueType {
     * Int32 array type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     ArrayInt32(Array<Int32>) |
@@ -96,8 +88,7 @@ public enum ValueType {
     * Int64 array type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     ArrayInt64(Array<Int64>) |
@@ -105,8 +96,7 @@ public enum ValueType {
     * Bool array type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     ArrayBool(Array<Bool>) |
@@ -114,8 +104,7 @@ public enum ValueType {
     * Float64 array type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     ArrayFloat64(Array<Float64>) |
@@ -123,8 +112,7 @@ public enum ValueType {
     * FD array type value
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     ArrayFd(Array<Int32>) |

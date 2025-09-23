@@ -28,8 +28,7 @@ import ohos.labels.*
 * @relation export default class StartOptions
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public open class StartOptions {
@@ -41,8 +40,7 @@ public open class StartOptions {
     * @relation windowMode?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var windowMode: ?WindowMode
@@ -53,8 +51,7 @@ public open class StartOptions {
     * @relation displayId?: number
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var displayId: Int32
@@ -63,8 +60,7 @@ public open class StartOptions {
     * StartOptions constructor.
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public init(

@@ -23,11 +23,9 @@ import ohos.labels.APILevel
 */
 @!APILevel[
     21,
-    atomicservice: true,
-    crossplatform: true,
     stagemodelonly: true
 ]
-public open class BusinessException <: Exception {
+public class BusinessException <: Exception {
     /**
     * Defines the basic error code.
     */
@@ -37,49 +35,25 @@ public open class BusinessException <: Exception {
     ]
     public let code: Int32
     
+    /**
+    * Defines the additional information for business
+    *
+    * @relation data?: T
+    */
     @!APILevel[
         21,
-        atomicservice: true,
-        crossplatform: true,
         stagemodelonly: true
     ]
-    public init(code: Int32, msg: String)
+    public func getData<T>(): ?T
     
     /**
     * Translate the exception to String.
     */
     @!APILevel[
         21,
-        atomicservice: true,
-        crossplatform: true,
         stagemodelonly: true
     ]
-    public open func toString(): String
-}
-
-
-/**
-* Defines the error interface.
-*/
-@!APILevel[
-    21,
-    stagemodelonly: true
-]
-public class BusinessError<T> <: BusinessException {
-    /**
-    * Defines the additional information for business
-    */
-    @!APILevel[
-        21,
-        stagemodelonly: true
-    ]
-    public var data: T
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true
-    ]
-    public init (data: T, code: Int32, msg: String)
+    public func toString(): String
 }
 
 

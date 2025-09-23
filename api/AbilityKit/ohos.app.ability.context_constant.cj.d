@@ -25,8 +25,7 @@ import ohos.labels.*
 */
 @Derive[ToString, Equatable]
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public enum AreaMode {
@@ -36,8 +35,7 @@ public enum AreaMode {
     * @relation EL1 = 0
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     El1 |
@@ -47,8 +45,7 @@ public enum AreaMode {
     * @relation EL2 = 1
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     El2 |
@@ -59,8 +56,7 @@ public enum AreaMode {
     * @relation EL3 = 2
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     El3 |
@@ -72,8 +68,7 @@ public enum AreaMode {
     * @relation EL4 = 3
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     El4 |
@@ -85,8 +80,7 @@ public enum AreaMode {
     * @relation EL5 = 4
     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     El5 |

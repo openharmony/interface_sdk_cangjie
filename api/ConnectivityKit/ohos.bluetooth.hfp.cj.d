@@ -31,8 +31,7 @@ import ohos.labels.*
 * @relation createHfpAgProfile(): HandsFreeAudioGatewayProfile
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func createHfpAgProfile(): HandsFreeAudioGatewayProfile
@@ -44,8 +43,7 @@ public func createHfpAgProfile(): HandsFreeAudioGatewayProfile
 * @relation interface HandsFreeAudioGatewayProfile extends BaseProfile
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class HandsFreeAudioGatewayProfile <: BaseProfile {
@@ -63,9 +61,8 @@ public class HandsFreeAudioGatewayProfile <: BaseProfile {
     * @relation getConnectedDevices(): Array<string>
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func getConnectedDevices(): Array<String>
@@ -86,9 +83,8 @@ public class HandsFreeAudioGatewayProfile <: BaseProfile {
     * @relation getConnectionState(deviceId: string): ProfileConnectionState
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func getConnectionState(deviceId: String): ProfileConnectionState
@@ -105,9 +101,8 @@ public class HandsFreeAudioGatewayProfile <: BaseProfile {
     * @relation on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: ProfileCallbackType, callback: Callback1Argument<StateChangeParam>): Unit
@@ -124,9 +119,8 @@ public class HandsFreeAudioGatewayProfile <: BaseProfile {
     *  @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: ProfileCallbackType, callback: CallbackObject): Unit
@@ -142,9 +136,8 @@ public class HandsFreeAudioGatewayProfile <: BaseProfile {
     * @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
     */
     @!APILevel[
-        21,
+        22,
         permission: "ohos.ACCESS_BLUETOOTH",
-        stagemodelonly: true,
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: ProfileCallbackType): Unit
