@@ -126,25 +126,7 @@ group("sdk_cangjie_wrapper") {
   }
 }
 
-# api
-# ├── lib
-# │   └── linux_ohos_aarch64_cjnative
-# │       ├── kit
-# │       │   ├── xxx.cjo
-# │       │   └── xxx.so
-# │       └── ohos
-# │           ├── xxx.cjo
-# │           └── xxx.so
-# ├── macro
-# │   └── ohos
-# │       ├── xxx.dylib/xxx.so/xxx.dll
-# │       └── xxx.cjo
-# └── modules
-#     └── linux_ohos_aarch64_cjnative
-#         ├── kit
-#         │   └── xxx.d
-#         └── ohos
-#             └── xxx.d
+ 
 
 cj_ohos_sdk_copy("sdk_api") {
   out_relative_dir = "cangjie_sdk/api"

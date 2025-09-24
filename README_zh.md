@@ -20,8 +20,6 @@
   - cjo 生成工具：把xxx.cjo.json文件序列化成cjo文件
   - mock API库工具：构建API mock 动态库
 
-## 目录
-
 代码目录结构：
 ```bash
 interface/sdk_cangjie
@@ -39,6 +37,23 @@ interface/sdk_cangjie
 ├── LICENSE
 └── bundle.json
 ```
+
+## 交付视图
+
+**图 2** 仓颉sdk交付视图
+![](figures/interface_sdk_cangjie_delivery_view.png)
+
+如图所示：
+ - Platform: 仓颉sdk目前支持windows/linux/mac-x64/mac-arm64(暂不支持ohos)
+ - api lib包中 目前仅支持ohos 相关的交叉构建包，暂不支持previewer交叉构建包
+   - ohos-aarch64: 交叉构建ohos应用
+   - ohos-x86_64: 交叉构建ohos模拟器应用
+   - previewer交叉构建包（暂不支持）
+ - api moudle包存放头文件以及lto的bitcode文件(随后续lto规划)
+ - api macro包主要存放仓颉宏相关库
+   - ark-interop: cangjie_ark_interop部件的仓颉互操作相关宏接口
+   - arkui state manager: arkui_cangjie_wrapper部件的仓颉状态管理相关宏接口
+ - build-tools：主要存放仓颉构建工具链，包括仓颉编译器、标准库、运行时库、三方库、工具等。
 
 仓颉SDK包目录结构：
 ```bash
