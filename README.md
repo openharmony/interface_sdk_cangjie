@@ -20,11 +20,9 @@ As shown in the architecture:
   - cjo generation tool: Serialize xxx.cjo.json files into cjo files
   - mock API library tool: Build API mock dynamic libraries
 
-## Directory
-
 Code directory structure:
-```
-.
+```bash
+interface/sdk_cangjie
 ├── api
 │   └── xxxKit                   # The specific name of the Kit, such as Cangjie, BasicServiceKit, etc
 │       └── xxx.cj.d             # The specific interface files of each kit, with the storage path subject to the actual file list of the kit
@@ -40,8 +38,25 @@ Code directory structure:
 └── bundle.json
 ```
 
+## Delivery View
+
+**Figure 2** Cangjie SDK delivery view
+![](figures/interface_sdk_cangjie_delivery_view.png)
+
+As shown in the figure:
+ - Platform: Cangjie SDK currently supports windows/linux/mac-x64/mac-arm64 (ohos is not supported yet)
+ - api lib package currently only supports ohos-related cross-compilation packages, previewer cross-compilation packages are not supported yet
+   - ohos-aarch64: Cross-compilation for ohos applications
+   - ohos-x86_64: Cross-compilation for ohos simulator applications
+   - previewer cross-compilation package (not supported yet)
+ - api module package stores header files and lto bitcode files (following subsequent lto planning)
+ - api macro package mainly stores Cangjie macro libraries
+   - ark-interop: Cangjie interoperability related macro interfaces of the cangjie_ark_interop component
+   - arkui state manager: Cangjie state management related macro interfaces of the arkui_cangjie_wrapper component
+ - build-tools: Mainly stores Cangjie build toolchain, including Cangjie compiler, standard library, runtime library, third-party libraries, tools, etc.
+
 Cangjie SDK package directory structure:
-```
+```bash
 cangjie
 ├── api                                     # API library
 │   ├── lib                                 # Cangjie API dynamic libraries and corresponding cjo
