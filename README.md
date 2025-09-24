@@ -14,11 +14,16 @@ Currently, the Cangjie API only supports standard devices.
 
 As shown in the architecture:
 
-- API Declaration: Cangjie API declaration files, mainly including ohos and Cangjie standard libraries.
-- Kit Declaration: Unified external declaration files of Cangjie kits.
+- API Declaration: Cangjie API declaration files, mainly including ohos modules and Cangjie standard library related API declaration files.
+- Kit Declaration: Unified external declaration files of Cangjie kit modules.
 - build-tools: SDK building tools, such as tools for generating cjo, mock API library, etc.
   - cjo generation tool: Serialize xxx.cjo.json files into cjo files
   - mock API library tool: Build API mock dynamic libraries
+
+Dependencies introduction in the architecture diagram:
+
+- cangjie_ark_interop: The macro package in Cangjie SDK depends on the Cangjie-ArkTS interoperability interface for building interoperability macros
+- arkui_cangjie_wrapper: The macro package in Cangjie SDK depends on the ArkUI development framework Cangjie interface for building state management macros
 
 Code directory structure:
 ```bash
@@ -44,15 +49,15 @@ interface/sdk_cangjie
 ![](figures/interface_sdk_cangjie_delivery_view.png)
 
 As shown in the figure:
- - Platform: Cangjie SDK currently supports windows/linux/mac-x64/mac-arm64 (ohos is not supported yet)
+ - platform: Cangjie SDK currently supports windows/linux/mac-x64/mac-arm64 (ohos is not supported yet)
  - api lib package currently only supports ohos-related cross-compilation packages, previewer cross-compilation packages are not supported yet
    - ohos-aarch64: Cross-compilation for ohos applications
    - ohos-x86_64: Cross-compilation for ohos simulator applications
    - previewer cross-compilation package (not supported yet)
  - api module package stores header files and lto bitcode files (following subsequent lto planning)
  - api macro package mainly stores Cangjie macro libraries
-   - ark-interop: Cangjie interoperability related macro interfaces of the cangjie_ark_interop component
-   - arkui state manager: Cangjie state management related macro interfaces of the arkui_cangjie_wrapper component
+   - ark-interop: Cangjie interoperability related macro library of the cangjie_ark_interop component
+   - arkui state manager: Cangjie state management related macro library of the arkui_cangjie_wrapper component
  - build-tools: Mainly stores Cangjie build toolchain, including Cangjie compiler, standard library, runtime library, third-party libraries, tools, etc.
 
 Cangjie SDK package directory structure:
@@ -99,6 +104,10 @@ cangjie
 Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).
 
 ## Related Repositories
+
+[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/)
+
+[arkui_arkui_cangjie_wrapper](https://gitcode.com/openharmony-sig/arkui_arkui_cangjie_wrapper/)
 
 [interface_sdk_c](https://gitcode.com/openharmony/interface_sdk_c/)
 
