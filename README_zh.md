@@ -2,7 +2,7 @@
 
 ## 简介
 
-仓颉API声明文件公共仓，用于存放和管理仓颉各个子系统对外API声明文件，同时提供对应的SDK构建工具，支撑Openharmony SDK中的仓颉API构建。
+仓颉API声明文件公共仓用于存储和管理仓颉各个子系统对外的API声明文件，同时提供对应的SDK构建工具，支撑Openharmony SDK中仓颉API的构建。
 
 当前仓颉接口仅支持standard设备。
 
@@ -14,22 +14,22 @@
 
 如架构图所示：
 
-- **API声明:** 仓颉ohos模块和仓颉标准库相关API声明文件。
-- **Kit声明:** 仓颉各Kit模块对外统一声明文件。
+- **API声明:** 仓颉OHOS模块以及仓颉标准库API对外声明文件。
+- **Kit声明:** 仓颉Kit模块对外声明文件。
 - **build-tools:** SDK构建相关工具集，主要包含以下工具：
-  - **cjo生成工具链:** 主要有三部分组成：
-    - 仓颉接口的文本化描述文件: 包含了仓颉API各模块的接口信息、类型定义、函数声明等元数据，构建SDK时，利用flatc工具以及FlatBuffers Schema 文件描述的数据结构，将仓颉接口文本化描述文件序列化成仓颉API各个模块的cjo文件。
+  - **Cjo生成工具链:** 主要由三部分组成：
+    - 仓颉接口的文本化描述文件: 包含仓颉API各模块的接口信息、类型定义、函数声明等元数据。构建SDK时，利用flatc工具以及flatbuffers schema文件描述的数据结构，将仓颉接口文本化描述文件序列化成仓颉API各个模块的cjo文件。
 
-      有关仓颉cjo以及仓颉CJO和JSON序列化和反序列化构建过程的详细介绍，请参考[仓颉CJO](https://gitcode.com/Cangjie/cangjie_docs/blob/08234c9e52cd55a6f1a2521c65f39745fa6d64a3/docs/dev-guide/source_zh_cn/Appendix/cjo_artifacts.md)和[仓颉CJO序列化和反序列化指导](docs/cangjie_cjo_serialization_and_deserialization_guide.md)。
-    - FlatBuffers Schema文件。
+      有关仓颉cjo以及仓颉cjo和JSON序列化和反序列化构建过程的详细介绍，请参考[仓颉cjo](https://gitcode.com/Cangjie/cangjie_docs/blob/08234c9e52cd55a6f1a2521c65f39745fa6d64a3/docs/dev-guide/source_zh_cn/Appendix/cjo_artifacts.md)和[仓颉cjo序列化和反序列化指导](docs/cangjie_cjo_serialization_and_deserialization_guide.md)。
+    - flatbuffers schema文件。
     - python/gn相关构建脚本。
 
-  - **API mock库生成工具**：包含一个空实现的ohos.mock模块以及相关构建脚本，支撑构建SDK生成仓颉API各个模块的空实现动态库对象。
+  - **API Mock库生成工具**：包含一个空实现的ohos.mock模块以及相关构建脚本，支撑构建SDK生成仓颉API各个模块的空实现动态库对象。
 
 架构图中依赖部件引入说明：
 
-- cangjie_ark_interop: 仓颉SDK中 marco包依赖仓颉-ArkTS互操作接口仓构建互操作宏。
-- arkui_cangjie_wrapper: 仓颉SDK中 macro包依赖ArkUI开发框架仓颉接口仓构建状态管理宏。
+- cangjie_ark_interop: 仓颉SDK中macro包依赖仓颉-ArkTS互操作接口仓构建互操作宏。
+- arkui_cangjie_wrapper: 仓颉SDK中macro包依赖ArkUI开发框架仓颉接口仓构建状态管理宏。
 - flatbuffers: 是一个高内存效率的跨平台序列化库，提供flatc工具，支撑仓颉SDK构建仓颉cjo文件。
 
 代码目录结构：
@@ -53,23 +53,20 @@ interface/sdk_cangjie
 
 ## 交付视图
 
-**图 2** 仓颉API公共仓架构图
-![仓颉API公共仓架构图](figures/interface_sdk_cangjie_delivery_view.png)
+**图 2** 仓颉SDK交付视图
+![仓颉SDK交付视图](figures/interface_sdk_cangjie_delivery_view.png)
 
 **ohos-sdk:**
 
-- Openharmony SDK由js, ets, native, toolchains, previewer以及cangjie这六个部分组成，本仓主要涉及cangjie部分。
+- Openharmony SDK由js、ets、native、toolchains、previewer以及cangjie六个部分组成，本仓主要涉及cangjie部分。
 
 **api:**
 
 - lib包目前仅支持ohos相关的构建工具链，存放仓颉API动态库以及仓颉cjo文件。
   - ohos-aarch64-libs: 用于构建ohos-aarch64应用依赖库。
-  - ohos-x86_64-libs: 用于构建ohos-x86_64应用的依赖库,主要提供给ohos x86_64模拟器使用。
+  - ohos-x86_64-libs: 用于构建ohos-x86_64应用的依赖库，主要提供给ohos x86_64模拟器使用。
 
-- api moudle包存放仓颉API对外声明文件以及lto的bitcode文件。
-  - 仓颉API对外声明文件从本仓api和kit目录拷贝并打包进仓颉SDK中。
-  - lto bitcode产物正在规划中，暂不支持。
-
+- api modules包存放仓颉API对外声明文件。
 - api macro包主要存放仓颉宏相关动态库和cjo文件。
   
   仓颉宏的详细介绍，请参考[仓颉宏介绍](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/User_Manual/source_zh_cn/Macro/macro_introduction.md)
@@ -79,7 +76,7 @@ interface/sdk_cangjie
 
 **build-tools：**
 
-- 主要存放仓颉构建工具链，包括仓颉编译器、标准库、运行时库、工具等，从预下载阶段归档的对应平台的仓颉构建工具链拷贝并打包到仓颉SDK中。
+- 主要存放仓颉构建工具链，包括仓颉编译器、标准库、运行时库、工具等。
   - cangjie-compiler：包括cjc，cjc-frontend等。
   - cangjie-runtime：主要包括仓颉runtime和仓颉标准库动态库以及仓颉标准库API对外声明文件。
   - cangjie-tools: 主要包括cjpm, cjdb, cjfmt等。
@@ -129,7 +126,7 @@ cangjie
 ./build.sh --product-name ohos-sdk --ccache  --build-target out/sdk/gen/build/ohos/sdk:cangjie   
 ```
 
-仓颉SDK详细构建集成构建说明请参考 [仓颉SDK集成构建指导书](docs/cangjie_sdk_build_guide.md)。
+仓颉SDK构建详细说明请参考[仓颉SDK构建说明](docs/cangjie_sdk_build_guide.md)。
 
 ## 约束
 
@@ -137,7 +134,7 @@ cangjie
 
 ## 参与贡献
 
-欢迎广大开发者代码，文档等，具体的贡献流程和方式请参见[参与贡献](https://gitcode.com/openharmony/docs/blob/master/zh-cn/contribute/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE.md)。
+欢迎广大开发者贡献代码、文档等内容，具体的贡献流程和方式请参见[参与贡献](https://gitcode.com/openharmony/docs/blob/master/zh-cn/contribute/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE.md)。
 
 ## 相关仓
 
