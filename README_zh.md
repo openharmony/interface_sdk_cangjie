@@ -2,7 +2,7 @@
 
 ## 简介
 
-仓颉API公共仓，用于存放和管理仓颉各个子系统对外API声明，同时提供对应的SDK构建工具，支撑Openharmony SDK中的仓颉API构建。
+仓颉API声明文件公共仓，用于存放和管理仓颉各个子系统对外API声明文件，同时提供对应的SDK构建工具，支撑Openharmony SDK中的仓颉API构建。
 
 当前仓颉接口仅支持standard设备。
 
@@ -10,20 +10,27 @@
 
 **图 1** 仓颉API公共仓架构图
 
-![](figures/interface_sdk_cangjie_architecture_zh.png)
+![仓颉API公共仓架构图](figures/interface_sdk_cangjie_architecture_zh.png)
 
 如架构图所示：
 
-- API声明：仓颉API声明文件(xxx.cj.d)，主要是ohos模块和仓颉标准库相关API声明文件，以Kit归属分目录存放。
-- Kit声明：仓颉kit模块对外统一声明文件。
-- build-tools：SDK构建相关工具集，比如生成cjo工具，mock API库工具等。
-  - cjo生成工具链：包括仓颉API各个模块的cjo 反序列化文件(xxx.cjo.json)，以及FlatBuffers Schema文件和相关构建脚本；主要用于构建SDK时，通过flatc 工具快速将xxx.cjo.json序列化成仓颉API各个模块的cjo。有关仓颉cjo以及序列化和反序列化构建过程的详细介绍，请参考[仓颉cjo](https://gitcode.com/Cangjie/cangjie_docs/blob/08234c9e52cd55a6f1a2521c65f39745fa6d64a3/docs/dev-guide/source_zh_cn/Appendix/cjo_artifacts.md)以及[仓颉cjo构建](build-tools/cjo/README_zh.md)。
-  - mock API库工具：包含一个空实现的ohos.mock模块以及相关构建脚本，构建SDK时,将ohos.mock动态库作为复制对象，拷贝生成仓颉API各个模块的空实现动态库对象。
+- **API声明:** 仓颉ohos模块和仓颉标准库相关API声明文件。
+- **Kit声明:** 仓颉各Kit模块对外统一声明文件。
+- **build-tools:** SDK构建相关工具集，主要包含以下工具：
+  - **cjo生成工具链:** 主要有三部分组成：
+    - 仓颉接口的文本化描述文件: 包含了仓颉API各模块的接口信息、类型定义、函数声明等元数据，构建SDK时，利用flatc工具以及FlatBuffers Schema 文件描述的数据结构，将仓颉接口文本化描述文件序列化成仓颉API各个模块的cjo文件。
+
+      有关仓颉cjo以及仓颉CJO和JSON序列化和反序列化构建过程的详细介绍，请参考[仓颉CJO](https://gitcode.com/Cangjie/cangjie_docs/blob/08234c9e52cd55a6f1a2521c65f39745fa6d64a3/docs/dev-guide/source_zh_cn/Appendix/cjo_artifacts.md)和[仓颉CJO序列化和反序列化指导](docs/cangjie_cjo_serialization_and_deserialization_guide.md)。
+    - FlatBuffers Schema文件。
+    - python/gn相关构建脚本。
+
+  - **API mock库生成工具**：包含一个空实现的ohos.mock模块以及相关构建脚本，支撑构建SDK生成仓颉API各个模块的空实现动态库对象。
 
 架构图中依赖部件引入说明：
 
 - cangjie_ark_interop: 仓颉SDK中 marco包依赖仓颉-ArkTS互操作接口仓构建互操作宏。
 - arkui_cangjie_wrapper: 仓颉SDK中 macro包依赖ArkUI开发框架仓颉接口仓构建状态管理宏。
+- flatbuffers: 是一个高内存效率的跨平台序列化库，提供flatc工具，支撑仓颉SDK构建仓颉cjo文件。
 
 代码目录结构：
 ```
@@ -39,30 +46,36 @@ interface/sdk_cangjie
 │   │   └── mock                 # mock API库相关脚本                      
 │   └── script                   # 构建SDK相关脚本
 ├── figures                      # README图片
+├── docs
 ├── LICENSE
 └── bundle.json
 ```
 
 ## 交付视图
 
-**图 2** 仓颉sdk交付视图
-![](figures/interface_sdk_cangjie_delivery_view.png)
+**图 2** 仓颉API公共仓架构图
+![仓颉API公共仓架构图](figures/interface_sdk_cangjie_delivery_view.png)
 
-**ohos-sdk:** 
+**ohos-sdk:**
 
-- Openharmony SDK目前由js,ets,native,toolchains, previewer以及cangjie这几个部分组成，本仓主要涉及cangjie部分构建。
+- Openharmony SDK由js, ets, native, toolchains, previewer以及cangjie这六个部分组成，本仓主要涉及cangjie部分。
 
 **api:**
 
- - lib包中 目前仅支持ohos 相关的交叉构建包，存放由mock API工具生成的空实现的仓颉API动态库以及flatc工具序列化生成的仓颉cjo。
-   - ohos-aarch64: 用于交叉构建ohos-aarch64应用。
-   - ohos-x86_64: 用于交叉构建ohos-x86_64应用,主要提供给ohos x86_64模拟器使用。
- - api moudle包存放仓颉API对外声明文件以及lto的bitcode文件。
-   - 仓颉API对外声明文件从本仓api和kit目录拷贝并打包进仓颉SDK中。
-   - lto bitcode产物正在规划中，暂不支持。
- - api macro包主要存放仓颉宏相关库。（仓颉宏的详细介绍，请参考[仓颉宏](https://gitcode.com/Cangjie/cangjie_docs/blob/08234c9e52cd55a6f1a2521c65f39745fa6d64a3/docs/dev-guide/source_zh_cn/Macro/macro_introduction.md)）
-   - ark-interop: cangjie_ark_interop部件的仓颉互操作宏库，由cangjie_ark_interop部件互操作宏库相关gn脚本构建产生。
-   - arkui state manager: arkui_cangjie_wrapper部件的仓颉状态管理宏库，由arkui_cangjie_wrapper部仓颉件状态管理宏库相关gn脚本构建产生。
+- lib包目前仅支持ohos相关的构建工具链，存放仓颉API动态库以及仓颉cjo文件。
+  - ohos-aarch64-libs: 用于构建ohos-aarch64应用依赖库。
+  - ohos-x86_64-libs: 用于构建ohos-x86_64应用的依赖库,主要提供给ohos x86_64模拟器使用。
+
+- api moudle包存放仓颉API对外声明文件以及lto的bitcode文件。
+  - 仓颉API对外声明文件从本仓api和kit目录拷贝并打包进仓颉SDK中。
+  - lto bitcode产物正在规划中，暂不支持。
+
+- api macro包主要存放仓颉宏相关动态库和cjo文件。
+  
+  仓颉宏的详细介绍，请参考[仓颉宏介绍](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/User_Manual/source_zh_cn/Macro/macro_introduction.md)
+
+  - ark-interop: cangjie_ark_interop部件的仓颉互操作宏动态库和cjo文件。
+  - arkui state manager: arkui_cangjie_wrapper部件的仓颉状态管理宏动态库和cjo文件。
 
 **build-tools：**
 
@@ -110,10 +123,17 @@ cangjie
 └── oh-uni-package.json
 ```
 
+## 编译构建
+
+```
+./build.sh --product-name ohos-sdk --ccache  --build-target out/sdk/gen/build/ohos/sdk:cangjie   
+```
+
+仓颉SDK详细构建集成构建说明请参考 [仓颉SDK集成构建指导书](docs/cangjie_sdk_build_guide.md)。
+
 ## 约束
-- ohos-sdk中仓颉包支持windows/linux/mac-x64/mac-arm64平台，暂不支持ohos平台。
-- 暂不支持仓颉API previewer 交叉构建包。
-- 仓颉API模块暂不支持lto功能。
+
+- 当前ohos-sdk中仓颉支持windows/linux/mac-x64/mac-arm64平台交叉编译ohos应用，暂不支持ohos平台上构建应用。
 
 ## 参与贡献
 
