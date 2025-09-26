@@ -10,11 +10,11 @@
 
   1. 仓颉编译器、仓颉工具预构建后，归档到OpenHarmony华为云仓库([cangjie_sdk](https://repo.huaweicloud.com/harmonyos/compiler/cangjie/))。仓颉运行时、仓颉标准库在构建SDK时由源码构建。
   2. 在预下载阶段，通过`bash build/prebuilts_download.sh`从华为云下载对应版本和平台的仓颉编译器、仓颉工具，并解压到`ohos/prebuilts/cangjie_sdk`目录下。
-  3. 构建ohos-sdk仓颉包时，首先会直接从prebuilts/cangjie_sdk拷贝并压缩对应平台的仓颉编译器、仓颉工具到SDK中，其次再利用仓颉编译器从源码构建仓颉运行时和仓颉标准库，将其构建产物打包到SDK中。
+  3. 构建ohos-sdk仓颉包时，首先会直接从prebuilts/cangjie_sdk拷贝并压缩对应平台的仓颉编译器、仓颉工具到SDK中，其次再利用仓颉编译器从源码构建仓颉运行时和仓颉标准库，将其构建产物打包到SDK中（注意：当前仓颉运行时库还是采用预构建方式，构建SDK时采用直接拷贝预下载的运行库二进制）。
 
-- **仓颉编译器预构建指导：** 请参考[仓颉编程语言编译器仓-编译构建](https://gitcode.com/openharmony-sig/third_party_cangjie_compiler#%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA)
+- **仓颉编译器预构建指导：** 请参考[仓颉编程语言编译器仓](https://gitcode.com/openharmony-sig/third_party_cangjie_compiler#%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA)中的编译构建相关章节。
 
-- **仓颉工具预构建指导：** 请参考[仓颉SDK构建指导书-编译工具集](https://gitcode.com/Cangjie/cangjie_build/blob/dev/docs/linux_zh.md#45-%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%9B%86)
+- **仓颉工具预构建指导：** 请参考[仓颉语言命令行工具链仓](https://gitcode.com/openharmony-sig/third_party_cangjie_tools)中的编译构建相关章节。
 
 ## 仓颉运行时库构建指导
 
@@ -31,18 +31,18 @@
   - linux_ohos_x86_64_cjnative
   - linux_ohos_arm_cjnative
 
-目前仓颉SDK对于部署在开发侧的运行时库采用预构建方式，对于部署在端侧的采用源码构建。
+目前仓颉SDK开发侧和部署侧的运行时库都是采用预构建方式，后续会修改成对于部署在开发侧的运行时库采用预构建方式，对于部署在端侧的采用源码构建。
 
-- 部署在**开发侧**的仓颉运行时库预构建指导请参考[仓颉SDK集成构建指导书](https://gitcode.com/Cangjie/cangjie_build/blob/dev/README_zh.md)中的仓颉运行时构建相关指导。
+- 部署在**开发侧**的仓颉运行时库预构建指导请参考[仓颉运行时与仓颉编程语言标准库仓](https://gitcode.com/openharmony-sig/third_party_cangjie_runtime)中的编译构建章节。
   
-- 部署在**端侧**的仓颉运行时库源码构建：
+- (TODO)部署在**端侧**的仓颉运行时库源码构建：
 
 ```bash
 # 仓颉标准库
-./build.sh --product-name ohos-sdk --ccache  --build-target third_party/cangjie_runtime/std/cangjie_std_package
+./build.sh --product-name ohos-sdk --ccache  --build-target third_party/cangjie_runtime/std:cangjie_std_package
 
 # 仓颉运行时
-./build.sh --product-name ohos-sdk --ccache  --build-target third_party/cangjie_runtime/std/cangjie_runtime_package   
+./build.sh --product-name ohos-sdk --ccache  --build-target third_party/cangjie_runtime/std:cangjie_runtime_package   
 ```
 
 ## 仓颉宏库
