@@ -4,22 +4,87 @@
 
 ![仓颉SDK构建示意图](../figures/cangjie_sdk_build.png)
 
-如图所示：
+## 仓颉构建工具链
 
-- 仓颉构建工具链：
+- **构建仓颉构建工具链整体流程：**
 
-   1. cangjie_compiler,cangjie_runtime,cangjie_tools部件预构建后，归档到华为云([cangjie](https://repo.huaweicloud.com/harmonyos/compiler/cangjie/))。
-   2. 开发者在预下载阶段，会从华为云下载对应版本和平台的仓颉构建工具链，并解压到`ohos/prebuilts/cangjie_sdk`目录下。
-   3. 构建ohos-sdk 仓颉包时，直接从prebuilts/cangjie_sdk 拷贝并压缩对应平台的仓颉构建工具链到sdk中。
+  1. 仓颉编译器、仓颉工具预构建后，归档到OpenHarmony华为云仓库([cangjie_sdk](https://repo.huaweicloud.com/harmonyos/compiler/cangjie/))。仓颉运行时、仓颉标准库在构建SDK时由源码构建。
+  2. 在预下载阶段，通过`bash build/prebuilts_download.sh`从华为云下载对应版本和平台的仓颉编译器、仓颉工具，并解压到`ohos/prebuilts/cangjie_sdk`目录下。
+  3. 构建ohos-sdk仓颉包时，首先会直接从prebuilts/cangjie_sdk拷贝并压缩对应平台的仓颉编译器、仓颉工具到SDK中，其次再利用仓颉编译器从源码构建仓颉运行时和仓颉标准库，将其构建产物打包到SDK中。
 
-- 仓颉API声明文件:
+- **仓颉编译器预构建指导：** 请参考[仓颉编程语言编译器仓-编译构建](https://gitcode.com/openharmony-sig/third_party_cangjie_compiler#%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA)
 
-  1. 开发者新增或者修改已有仓颉API对外声明时，需要同步修改interface_sdk_cangjie中api和kit下对应的声明文件。
-  2. SDK构建时会直接拷贝interface_sdk_cangjie仓中api和kit目录下头文件打包到SDK中仓颉对应的目录。
+- **仓颉工具预构建指导：** 请参考[仓颉SDK构建指导书-编译工具集](https://gitcode.com/Cangjie/cangjie_build/blob/dev/docs/linux_zh.md#45-%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%9B%86)
 
-- 仓颉CJO产物：
+## 仓颉运行时库构建指导
 
-  1. 开发者在新增或者修改已有仓颉API对外声明时，需要同步新增或修改interface_sdk_cangjie仓中对应模块的cjo.json文件。
-  2. cjo.json文件为仓颉API 对应模块构建后的CJO产物通过flatc工具反序列化生成，具体操作可以参考[仓颉CJO序列化和反序列化指导](../docs/cangjie_cjo_serialization_and_deserialization_guide.md)。
+仓颉运行时库（包括仓颉标准库）可分为两类：部署在开发侧和部署在端侧的运行时库。
 
-- 仓颉宏库：仓颉宏库由arkui_cangjie_wrapper部件和cangjie_ark_interop部件构建生成，并拷贝到sdk中。
+- 部署在开发侧是指可以运行在Linux/Windows/macOS平台上的运行时库，主要包括：  
+  - windows_x86_64_cjnative
+  - linux_x86_64_cjnative
+  - darwin_x64_cjnative
+  - darwin_aarch64_cjnative
+
+- 部署在端侧是指下沉到OHOS镜像中的运行时库，包括：
+  - linux_ohos_aarch64_cjnative
+  - linux_ohos_x86_64_cjnative
+  - linux_ohos_arm_cjnative
+
+目前仓颉SDK对于部署在开发侧的运行时库采用预构建方式，对于部署在端侧的采用源码构建。
+
+- 部署在**开发侧**的仓颉运行时库预构建指导请参考[仓颉SDK集成构建指导书](https://gitcode.com/Cangjie/cangjie_build/blob/dev/README_zh.md)中的仓颉运行时构建相关指导。
+  
+- 部署在**端侧**的仓颉运行时库源码构建：
+
+```bash
+# 仓颉标准库
+./build.sh --product-name ohos-sdk --ccache  --build-target third_party/cangjie_runtime/std/cangjie_std_package
+
+# 仓颉运行时
+./build.sh --product-name ohos-sdk --ccache  --build-target third_party/cangjie_runtime/std/cangjie_runtime_package   
+```
+
+## 仓颉宏库
+
+仓颉宏库由arkui_cangjie_wrapper部件和cangjie_ark_interop部件构建生成，并拷贝到SDK中。
+
+
+
+```bash
+#  ohos.ark_interop_macro
+./build.sh --product-name ohos-sdk --ccache  --build-target arkcompiler/cangjie_ark_interop/ohos:ohos.ark_interop_macro   
+
+# ohos.arkui.state_macro_manage
+./build.sh --product-name ohos-sdk --ccache  --build-target foundation/arkui/arkui_cangjie_wrapper/ohos/arkui/state_macro_manage:ohos.arkui.state_macro_manage   
+```
+
+## 仓颉API库
+
+仓颉API库目录主要存放不同平台的仓颉API动态库，以及仓颉cjo产物。
+
+- **仓颉API动态库**
+
+    构建SDK时，通过API Mock工具生成空实现的so。
+
+    ```bash
+    ./build.sh --product-name ohos-sdk --ccache  --build-target interface/sdk_cangjie:ohos_aarch64_libs --build-target interface/sdk_cangjie:ohos_x86_64_libs
+    ```
+
+- **仓颉cjo产物**
+
+    1. 开发者在新增或者修改已有仓颉API对外声明时，需要同步新增或修改interface_sdk_cangjie仓中对应模块的cjo.json文件。
+    2. 仓颉接口的文本化描述文件为仓颉API对应模块构建后的cjo产物通过flatc工具反序列化生成，具体操作可以参考[仓颉cjo序列化和反序列化指导](../docs/cangjie_cjo_serialization_and_deserialization_guide.md)。
+
+    ```bash
+    ./build.sh --product-name ohos-sdk --ccache  --build-target interface/sdk_cangjie:ohos_aarch64_libs --build-target interface/sdk_cangjie:ohos_x86_64_libs
+    ```
+
+## 仓颉API对外声明文件
+
+1. 开发者新增或者修改已有仓颉API对外声明时，需要同步修改interface_sdk_cangjie中api和kit下对应的声明文件。
+2. SDK构建时会直接拷贝interface_sdk_cangjie仓中api和kit目录下头文件打包到SDK中仓颉对应的目录。
+
+```bash
+./build.sh --product-name ohos-sdk --ccache  --build-target interface/sdk_cangjie:sdk_header_ohos_aarch64
+```
