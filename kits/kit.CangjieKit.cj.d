@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package CangjieKit
+package kit.CangjieKit
 public import ohos.ark_interop.*
 public import ohos.ark_interop_helper.*
 public import ohos.ark_interop_macro.*
