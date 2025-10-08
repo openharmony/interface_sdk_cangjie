@@ -1,4 +1,4 @@
-# Cangjie API Public Repository
+# Cangjie API Public Repository(beta feature)
 
 ## Introduction
 

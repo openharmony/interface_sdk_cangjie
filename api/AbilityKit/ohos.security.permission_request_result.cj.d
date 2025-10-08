@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+
 package ohos.security.permission_request_result
 import ohos.business_exception.BusinessException
 import ohos.ffi.{ CArrString, CArrI32, CArrBool}

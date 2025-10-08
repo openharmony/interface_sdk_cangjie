@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+
 package ohos.net.http
 import ohos.business_exception.*
 import ohos.callback_invoke.*
