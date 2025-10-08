@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+
 package ohos.telephony.call
 import ohos.app.ability.ui_ability.*
 import ohos.app.ability.want.*
