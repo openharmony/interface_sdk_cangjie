@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+
 package ohos.ability_access_ctrl
 import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
 import ohos.business_exception.{BusinessException, AsyncCallback}

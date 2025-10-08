@@ -13,4 +13,6 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta.
+
 package ohos.mock

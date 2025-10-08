@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+
 package kit.LocalizationKit
 public import ohos.i18n.*
 public import ohos.resource_manager.*
