@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+
 package ohos.common_event_publish_data
 import std.collection.HashMap
 import ohos.labels.APILevel
