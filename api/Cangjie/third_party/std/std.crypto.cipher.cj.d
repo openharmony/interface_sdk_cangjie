@@ -11,24 +11,24 @@
 package std.crypto.cipher
 
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface BlockCipher {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     prop blockSize: Int64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     prop algorithm: String
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func encrypt(input: Array<Byte>): Array<Byte>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func decrypt(input: Array<Byte>): Array<Byte>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func encrypt(input: Array<Byte>, to!: Array<Byte>): Int64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func decrypt(input: Array<Byte>, to!: Array<Byte>): Int64
 }
 

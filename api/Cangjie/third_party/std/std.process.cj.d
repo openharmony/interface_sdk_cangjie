@@ -20,33 +20,33 @@ import std.time.*
 * CurrentProcess provide the base func for current process.
 */
 @Deprecated[message: "Use related global functions in the std.env instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public class CurrentProcess <: Process {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdErr: OutputStream
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdOut: OutputStream
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdIn: InputStream
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop arguments: Array<String>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop homeDirectory: Path
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop tempDirectory: Path
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func getEnv(key: String): Option<String>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func setEnv(k: String, v: String): Unit
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func removeEnv(k: String): Unit
     
     /**
@@ -59,7 +59,7 @@ public class CurrentProcess <: Process {
     *
     * since 0.24.3
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func atExit(callback: () -> Unit): Unit
     
     /**
@@ -68,55 +68,55 @@ public class CurrentProcess <: Process {
     *
     * @param code Register the function to be executed before the Process exits.
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func exit(code: Int64): Nothing
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public open class Process {
     /**
     * return a process instance for current process.The process instance can used to find processInfo and terminate
     * current process. Also the process instance provide stdio, which can be used to read or write message.
     */
     @Deprecated[message: "CurrentProcess has been marked as deprecated, use related global functions in the std.env instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static prop current: CurrentProcess
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop pid: Int64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop name: String
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop command: String
     
     // Process start time
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop startTime: DateTime
     
     // Time spent on system calls executed directly or indirectly by the program
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop systemTime: Duration
     
     // Time spent by the program itself and the subprocesses in the libraries it calls
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop userTime: Duration
     
     @Deprecated
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public open prop arguments: Array<String>
     
     @Deprecated[message: "Use global function `public func getCommandLine(): Array<String>` in std.env instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop commandLine: Array<String>
     
     @Deprecated[message: "Use global function `public func getHomeDirectory(): Path` in std.env instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop workingDirectory: Path
     
     @Deprecated[message: "Use global function `public func getVariables(): Array<(String, String)>` in std.env instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop environment: Map<String, String>
     
     /**
@@ -125,7 +125,7 @@ public open class Process {
     * We can not get stdio for any pid process, so that do not provide the stream attribute to operate stdio.
     */
     @Deprecated[message: "Use global function `public func findProcess(pid: Int64): Process` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func of(pid: Int64): Process
     
     /**
@@ -142,7 +142,7 @@ public open class Process {
     * @return SubProcess - a new subProcess instance.
     */
     @Deprecated[message: "Use global function `public func launch(command: String, arguments: Array<String>, workingDirectory!: ?Path = None, environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit, stdErr!: ProcessRedirect = Inherit): SubProcess` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func start(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
         environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit,
         stdOut!: ProcessRedirect = Inherit, stdErr!: ProcessRedirect = Inherit): SubProcess
@@ -152,7 +152,7 @@ public open class Process {
     * provide a convenient way for user, which want start a subprocess and wait the command exec return code.
     */
     @Deprecated[message: "Use global function `public func execute(command: String, arguments: Array<String>, workingDirectory!: ?Path = None, environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit, stdErr!: ProcessRedirect = Inherit, timeout!: ?Duration = None): Int64` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func run(command: String, arguments: Array<String>, 
             workingDirectory!: ?Path = None, 
             environment!: ?Map<String, String> = None, 
@@ -166,12 +166,12 @@ public open class Process {
     * provide a convenient way for user, which want start a subprocess and wait the command exec output and err result.
     */
     @Deprecated[message: "Use global function `public func executeWithOutput(command: String, arguments: Array<String>, workingDirectory!: ?Path = None, environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Pipe, stdErr!: ProcessRedirect = Pipe): (Int64, Array<Byte>, Array<Byte>)` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func runOutput(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
         environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Pipe,
         stdErr!: ProcessRedirect = Pipe): (Int64, Array<Byte>, Array<Byte>)
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func isAlive(): Bool
     
     /**
@@ -186,7 +186,7 @@ public open class Process {
     * @throws ProcessException - if the pid invaild
     * @return Unit
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func terminate(force!: Bool = false): Unit
 }
 
@@ -197,19 +197,19 @@ public open class Process {
 * FromFile: redirect stdio to a specified file which define by user.
 * Discard: discard the stdio, redirect to system specific "null file".
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public enum ProcessRedirect {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Inherit |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Pipe |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     FromFile(File) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Discard
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func findProcess(pid: Int64): Process
 
 /**
@@ -225,7 +225,7 @@ public func findProcess(pid: Int64): Process
 *
 * @return SubProcess - a new subProcess instance.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func launch(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
     environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit,
     stdErr!: ProcessRedirect = Inherit): SubProcess
@@ -234,7 +234,7 @@ public func launch(command: String, arguments: Array<String>, workingDirectory!:
 * func execute is combine the launch and wait.
 * provide a convenient way for user, which want start a subprocess and wait the command exec return code.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func execute(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
     environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit,
     stdErr!: ProcessRedirect = Inherit, timeout!: ?Duration = None): Int64
@@ -243,7 +243,7 @@ public func execute(command: String, arguments: Array<String>, workingDirectory!
 * func executeWithOutput is combine the start and waitOutput.
 * provide a convenient way for user, which want start a subprocess and wait the command exec output and err result.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func executeWithOutput(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
     environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Pipe,
     stdErr!: ProcessRedirect = Pipe): (Int64, Array<Byte>, Array<Byte>)
@@ -252,9 +252,9 @@ public func executeWithOutput(command: String, arguments: Array<String>, working
 * ProcessException
 *
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public class ProcessException <: IOException {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init(message: String)
 }
 
@@ -262,27 +262,27 @@ public class ProcessException <: IOException {
 * SubProcess
 *
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public class SubProcess <: Process {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdInPipe: OutputStream
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdOutPipe: InputStream
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdErrPipe: InputStream
     
     @Deprecated[message: "Use `public prop stdErrPipe: InputStream` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdErr: InputStream
     
     @Deprecated[message: "Use `public prop stdOutPipe: InputStream` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdOut: InputStream
     
     @Deprecated[message: "Use `public prop stdInPipe: OutputStream` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop stdIn: OutputStream
     
     /**
@@ -292,7 +292,7 @@ public class SubProcess <: Process {
     * @param timeout
     * @return Int64
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func wait(timeout!: ?Duration = None): Int64
     
     /**
@@ -301,7 +301,7 @@ public class SubProcess <: Process {
     *
     * @return (exitCode: Int64, out: Array<Byte>, err: Array<Byte>)
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func waitOutput(): (Int64, Array<Byte>, Array<Byte>)
 }
 
