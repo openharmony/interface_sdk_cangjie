@@ -11,159 +11,159 @@
 package std.math
 
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public enum RoundingMode <: Equatable<RoundingMode> & ToString {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Ceiling |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Down |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Floor |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     HalfEven |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     HalfUp |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Up
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public operator func ==(that: RoundingMode): Bool
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(): String
 }
 
 extend Float64 <: MathExtension<Float64> {
     @Deprecated[message: "Use `public func getPI()` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func GetPI(): Float64
     
     @Deprecated[message: "Use `public func getE()` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func GetE(): Float64
 }
 
 extend Float32 <: MathExtension<Float32> {
     @Deprecated[message: "Use `public func getPI()` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func GetPI(): Float32
     
     @Deprecated[message: "Use `public func getE()` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func GetE(): Float32
 }
 
 extend Float16 <: MathExtension<Float16> {
     @Deprecated[message: "Use `public func getPI()` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func GetPI(): Float16
     
     @Deprecated[message: "Use `public func getE()` instead."]
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func GetE(): Float16
 }
 
 /******************************** extend MaxMinValue<T> *********************************/
 extend Int8 <: MaxMinValue<Int8> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Int8
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Int8
 }
 
 extend Int16 <: MaxMinValue<Int16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Int16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Int16
 }
 
 extend Int32 <: MaxMinValue<Int32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Int32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Int32
 }
 
 extend Int64 <: MaxMinValue<Int64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Int64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Int64
 }
 
 extend IntNative <: MaxMinValue<IntNative> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): IntNative
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): IntNative
 }
 
 extend UInt8 <: MaxMinValue<UInt8> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): UInt8
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): UInt8
 }
 
 extend UInt16 <: MaxMinValue<UInt16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): UInt16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): UInt16
 }
 
 extend UInt32 <: MaxMinValue<UInt32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): UInt32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): UInt32
 }
 
 extend UInt64 <: MaxMinValue<UInt64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): UInt64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): UInt64
 }
 
 extend UIntNative <: MaxMinValue<UIntNative> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): UIntNative
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): UIntNative
 }
 
 extend Float16 <: MaxMinValue<Float16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Float16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Float16
 }
 
 extend Float32 <: MaxMinValue<Float32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Float32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Float32
 }
 
 extend Float64 <: MaxMinValue<Float64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMax(): Float64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMin(): Float64
 }
 
@@ -175,113 +175,113 @@ extend Float64 <: MaxMinValue<Float64> {
 
 /******************************* extend Integer<T> *********************************/
 extend Int8 <: Integer<Int8> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend Int16 <: Integer<Int16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend Int32 <: Integer<Int32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend Int64 <: Integer<Int64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend IntNative <: Integer<IntNative> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend UInt8 <: Integer<UInt8> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend UInt16 <: Integer<UInt16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend UInt32 <: Integer<UInt32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend UInt64 <: Integer<UInt64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 extend UIntNative <: Integer<UIntNative> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func isSigned(): Bool
 }
 
 /******************************** extend FloatingPoint<T> *********************************/
 extend Float16 <: FloatingPoint<Float16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getPI(): Float16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getE(): Float16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getNaN(): Float16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getInf(): Float16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMinDenormal(): Float16
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMinNormal(): Float16
 }
 
 extend Float32 <: FloatingPoint<Float32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getPI(): Float32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getE(): Float32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getNaN(): Float32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getInf(): Float32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMinDenormal(): Float32
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMinNormal(): Float32
 }
 
 extend Float64 <: FloatingPoint<Float64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getPI(): Float64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getE(): Float64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getNaN(): Float64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getInf(): Float64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMinDenormal(): Float64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func getMinNormal(): Float64
 }
 
@@ -300,7 +300,7 @@ extend Float64 <: FloatingPoint<Float64> {
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cbrt(x: Float64): Float64
 
 /**
@@ -318,7 +318,7 @@ public func cbrt(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cbrt(x: Float32): Float32
 
 /**
@@ -336,7 +336,7 @@ public func cbrt(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cbrt(x: Float16): Float16
 
 /**
@@ -359,7 +359,7 @@ public func cbrt(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func logBase(x: Float32, base: Float32): Float32
 
 /**
@@ -382,7 +382,7 @@ public func logBase(x: Float32, base: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func logBase(x: Float64, base: Float64): Float64
 
 /**
@@ -405,7 +405,7 @@ public func logBase(x: Float64, base: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func logBase(x: Float16, base: Float16): Float16
 
 /**
@@ -416,7 +416,7 @@ public func logBase(x: Float16, base: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gamma(x: Float64): Float64
 
 /**
@@ -427,7 +427,7 @@ public func gamma(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gamma(x: Float32): Float32
 
 /**
@@ -438,7 +438,7 @@ public func gamma(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gamma(x: Float16): Float16
 
 /**
@@ -450,7 +450,7 @@ public func gamma(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func erf(x: Float64): Float64
 
 /**
@@ -462,7 +462,7 @@ public func erf(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func erf(x: Float32): Float32
 
 /**
@@ -474,7 +474,7 @@ public func erf(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func erf(x: Float16): Float16
 
 /********************* Trigonometric functions *********************//**
@@ -485,7 +485,7 @@ public func erf(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func tan(x: Float64): Float64
 
 /**
@@ -496,7 +496,7 @@ public func tan(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func tan(x: Float32): Float32
 
 /**
@@ -507,7 +507,7 @@ public func tan(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func tan(x: Float16): Float16
 
 /**
@@ -520,7 +520,7 @@ public func tan(x: Float16): Float16
 *
 * @throws IllegalArgumentException if the argument `x` is larger than 1.0 or less than -1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func asin(x: Float64): Float64
 
 /**
@@ -533,7 +533,7 @@ public func asin(x: Float64): Float64
 *
 * @throws IllegalArgumentException if the argument `x` is larger than 1.0 or less than -1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func asin(x: Float32): Float32
 
 /**
@@ -546,7 +546,7 @@ public func asin(x: Float32): Float32
 *
 * @throws IllegalArgumentException if the argument `x` is larger than 1.0 or less than -1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func asin(x: Float16): Float16
 
 /**
@@ -559,7 +559,7 @@ public func asin(x: Float16): Float16
 *
 * @throws IllegalArgumentException if the argument `x` is larger than 1.0 or less than -1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func acos(x: Float64): Float64
 
 /**
@@ -572,7 +572,7 @@ public func acos(x: Float64): Float64
 *
 * @throws IllegalArgumentException if the argument `x` is larger than 1.0 or less than -1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func acos(x: Float32): Float32
 
 /**
@@ -585,7 +585,7 @@ public func acos(x: Float32): Float32
 *
 * @throws IllegalArgumentException if the argument `x` is larger than 1.0 or less than -1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func acos(x: Float16): Float16
 
 /**
@@ -596,7 +596,7 @@ public func acos(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atan(x: Float64): Float64
 
 /**
@@ -607,7 +607,7 @@ public func atan(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atan(x: Float32): Float32
 
 /**
@@ -618,7 +618,7 @@ public func atan(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atan(x: Float16): Float16
 
 /********************* Hiberbolic functions *********************//**
@@ -629,7 +629,7 @@ public func atan(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sinh(x: Float64): Float64
 
 /**
@@ -640,7 +640,7 @@ public func sinh(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sinh(x: Float32): Float32
 
 /**
@@ -651,7 +651,7 @@ public func sinh(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sinh(x: Float16): Float16
 
 /**
@@ -662,7 +662,7 @@ public func sinh(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cosh(x: Float64): Float64
 
 /**
@@ -673,7 +673,7 @@ public func cosh(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cosh(x: Float32): Float32
 
 /**
@@ -684,7 +684,7 @@ public func cosh(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cosh(x: Float16): Float16
 
 /**
@@ -695,7 +695,7 @@ public func cosh(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func tanh(x: Float64): Float64
 
 /**
@@ -706,7 +706,7 @@ public func tanh(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func tanh(x: Float32): Float32
 
 /**
@@ -717,7 +717,7 @@ public func tanh(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func tanh(x: Float16): Float16
 
 /**
@@ -728,7 +728,7 @@ public func tanh(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func asinh(x: Float64): Float64
 
 /**
@@ -739,7 +739,7 @@ public func asinh(x: Float64): Float64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func asinh(x: Float32): Float32
 
 /**
@@ -750,7 +750,7 @@ public func asinh(x: Float32): Float32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func asinh(x: Float16): Float16
 
 /**
@@ -763,7 +763,7 @@ public func asinh(x: Float16): Float16
 *
 * @throws IllegalArgumentException if the argument `x` is less than 1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func acosh(x: Float64): Float64
 
 /**
@@ -776,7 +776,7 @@ public func acosh(x: Float64): Float64
 *
 * @throws IllegalArgumentException if the argument `x` is less than 1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func acosh(x: Float32): Float32
 
 /**
@@ -789,7 +789,7 @@ public func acosh(x: Float32): Float32
 *
 * @throws IllegalArgumentException if the argument `x` is less than 1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func acosh(x: Float16): Float16
 
 /**
@@ -802,7 +802,7 @@ public func acosh(x: Float16): Float16
 *
 * @throws IllegalArgumentException if the argument `x` is not larger than -1.0 and less than 1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atanh(x: Float64): Float64
 
 /**
@@ -815,7 +815,7 @@ public func atanh(x: Float64): Float64
 *
 * @throws IllegalArgumentException if the argument `x` is not larger than -1.0 and less than 1.0
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atanh(x: Float32): Float32
 
 /**
@@ -828,7 +828,7 @@ public func atanh(x: Float32): Float32
 *
 * @throws IllegalArgumentException if the argument `x` is not in range (-1.0, 1.0)
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atanh(x: Float16): Float16
 
 /**
@@ -839,7 +839,7 @@ public func atanh(x: Float16): Float16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: UInt64): Int64
 
 /**
@@ -850,7 +850,7 @@ public func leadingZeros(x: UInt64): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: UInt32): Int64
 
 /**
@@ -861,7 +861,7 @@ public func leadingZeros(x: UInt32): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: UInt16): Int64
 
 /**
@@ -872,7 +872,7 @@ public func leadingZeros(x: UInt16): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: UInt8): Int64
 
 /**
@@ -884,7 +884,7 @@ public func leadingZeros(x: UInt8): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: Int8): Int64
 
 /**
@@ -896,7 +896,7 @@ public func leadingZeros(x: Int8): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: Int16): Int64
 
 /**
@@ -908,7 +908,7 @@ public func leadingZeros(x: Int16): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: Int32): Int64
 
 /**
@@ -920,7 +920,7 @@ public func leadingZeros(x: Int32): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func leadingZeros(x: Int64): Int64
 
 /**
@@ -931,7 +931,7 @@ public func leadingZeros(x: Int64): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: UInt64): Int64
 
 /**
@@ -942,7 +942,7 @@ public func trailingZeros(x: UInt64): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: UInt32): Int64
 
 /**
@@ -953,7 +953,7 @@ public func trailingZeros(x: UInt32): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: UInt16): Int64
 
 /**
@@ -964,7 +964,7 @@ public func trailingZeros(x: UInt16): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: UInt8): Int64
 
 /**
@@ -976,7 +976,7 @@ public func trailingZeros(x: UInt8): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: Int8): Int64
 
 /**
@@ -988,7 +988,7 @@ public func trailingZeros(x: Int8): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: Int16): Int64
 
 /**
@@ -1000,7 +1000,7 @@ public func trailingZeros(x: Int16): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: Int32): Int64
 
 /**
@@ -1012,7 +1012,7 @@ public func trailingZeros(x: Int32): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trailingZeros(x: Int64): Int64
 
 /**
@@ -1023,7 +1023,7 @@ public func trailingZeros(x: Int64): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: UInt64): Int64
 
 /**
@@ -1034,7 +1034,7 @@ public func countOnes(x: UInt64): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: UInt32): Int64
 
 /**
@@ -1045,7 +1045,7 @@ public func countOnes(x: UInt32): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: UInt16): Int64
 
 /**
@@ -1056,7 +1056,7 @@ public func countOnes(x: UInt16): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: UInt8): Int64
 
 /**
@@ -1068,7 +1068,7 @@ public func countOnes(x: UInt8): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: Int8): Int64
 
 /**
@@ -1080,7 +1080,7 @@ public func countOnes(x: Int8): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: Int16): Int64
 
 /**
@@ -1092,7 +1092,7 @@ public func countOnes(x: Int16): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: Int32): Int64
 
 /**
@@ -1104,39 +1104,39 @@ public func countOnes(x: Int32): Int64
 * @since 0.18.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOnes(x: Int64): Int64
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: Int8): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: Int8): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: Int16): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: Int16): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: Int32): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: Int32): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: Int64): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: Int64): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: UInt8): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: UInt8): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: UInt16): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: UInt16): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: UInt32): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: UInt32): Int8
 
 @Deprecated[message: "Use global funtion `public func countOnes(x: UInt64): Int64` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func countOne(x: UInt64): Int8
 
 /**
@@ -1147,7 +1147,7 @@ public func countOne(x: UInt64): Int8
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func reverse(x: UInt64): UInt64
 
 /**
@@ -1158,7 +1158,7 @@ public func reverse(x: UInt64): UInt64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func reverse(x: UInt32): UInt32
 
 /**
@@ -1169,7 +1169,7 @@ public func reverse(x: UInt32): UInt32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func reverse(x: UInt16): UInt16
 
 /**
@@ -1180,7 +1180,7 @@ public func reverse(x: UInt16): UInt16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func reverse(x: UInt8): UInt8
 
 /**
@@ -1193,7 +1193,7 @@ public func reverse(x: UInt8): UInt8
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func checkedAbs(x: Int8): Option<Int8>
 
 /**
@@ -1206,7 +1206,7 @@ public func checkedAbs(x: Int8): Option<Int8>
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func checkedAbs(x: Int16): Option<Int16>
 
 /**
@@ -1219,7 +1219,7 @@ public func checkedAbs(x: Int16): Option<Int16>
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func checkedAbs(x: Int32): Option<Int32>
 
 /**
@@ -1232,7 +1232,7 @@ public func checkedAbs(x: Int32): Option<Int32>
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func checkedAbs(x: Int64): Option<Int64>
 
 /**
@@ -1253,7 +1253,7 @@ public func checkedAbs(x: Int64): Option<Int64>
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: UInt8, d: Int8): UInt8
 
 /**
@@ -1274,7 +1274,7 @@ public func rotate(num: UInt8, d: Int8): UInt8
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: UInt16, d: Int8): UInt16
 
 /**
@@ -1295,7 +1295,7 @@ public func rotate(num: UInt16, d: Int8): UInt16
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: UInt32, d: Int8): UInt32
 
 /**
@@ -1316,7 +1316,7 @@ public func rotate(num: UInt32, d: Int8): UInt32
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: UInt64, d: Int8): UInt64
 
 /**
@@ -1336,7 +1336,7 @@ public func rotate(num: UInt64, d: Int8): UInt64
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: Int8, d: Int8): Int8
 
 /**
@@ -1356,7 +1356,7 @@ public func rotate(num: Int8, d: Int8): Int8
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: Int16, d: Int8): Int16
 
 /**
@@ -1376,7 +1376,7 @@ public func rotate(num: Int16, d: Int8): Int16
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: Int32, d: Int8): Int32
 
 /**
@@ -1396,7 +1396,7 @@ public func rotate(num: Int32, d: Int8): Int32
 * @since 0.17.4
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func rotate(num: Int64, d: Int8): Int64
 
 /**
@@ -1415,7 +1415,7 @@ public func rotate(num: Int64, d: Int8): Int64
 * or if one argument is the minimum value of Int8 and the other is 0
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: Int8, y: Int8): Int8
 
 /**
@@ -1434,7 +1434,7 @@ public func gcd(x: Int8, y: Int8): Int8
 *
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: Int16, y: Int16): Int16
 
 /**
@@ -1453,7 +1453,7 @@ public func gcd(x: Int16, y: Int16): Int16
 *
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: Int32, y: Int32): Int32
 
 /**
@@ -1472,7 +1472,7 @@ public func gcd(x: Int32, y: Int32): Int32
 *
 */
 @OverflowWrapping
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: Int64, y: Int64): Int64
 
 /**
@@ -1485,7 +1485,7 @@ public func gcd(x: Int64, y: Int64): Int64
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: UInt8, y: UInt8): UInt8
 
 /**
@@ -1498,7 +1498,7 @@ public func gcd(x: UInt8, y: UInt8): UInt8
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: UInt16, y: UInt16): UInt16
 
 /**
@@ -1511,7 +1511,7 @@ public func gcd(x: UInt16, y: UInt16): UInt16
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: UInt32, y: UInt32): UInt32
 
 /**
@@ -1524,7 +1524,7 @@ public func gcd(x: UInt32, y: UInt32): UInt32
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func gcd(x: UInt64, y: UInt64): UInt64
 
 /**
@@ -1540,7 +1540,7 @@ public func gcd(x: UInt64, y: UInt64): UInt64
 * or if one argument is the minimum value of Int8 and the other is 0.
 * @throws IllegalArgumentException if the result is out of the Int8 range.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: Int8, y: Int8): Int8
 
 /**
@@ -1556,7 +1556,7 @@ public func lcm(x: Int8, y: Int8): Int8
 * or if one argument is the minimum value of Int16 and the other is 0.
 * @throws IllegalArgumentException if the result is out of the Int16 range.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: Int16, y: Int16): Int16
 
 /**
@@ -1572,7 +1572,7 @@ public func lcm(x: Int16, y: Int16): Int16
 * or if one argument is the minimum value of Int32 and the other is 0.
 * @throws IllegalArgumentException if the result is out of the Int32 range.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: Int32, y: Int32): Int32
 
 /**
@@ -1588,7 +1588,7 @@ public func lcm(x: Int32, y: Int32): Int32
 * or if one argument is the minimum value of Int64 and the other is 0.
 * @throws IllegalArgumentException if the result is out of the Int64 range.
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: Int64, y: Int64): Int64
 
 /**
@@ -1602,7 +1602,7 @@ public func lcm(x: Int64, y: Int64): Int64
 * @since 0.17.4
 *
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: UInt8, y: UInt8): UInt8
 
 /**
@@ -1616,7 +1616,7 @@ public func lcm(x: UInt8, y: UInt8): UInt8
 *
 * @throws IllegalArgumentException if the result is out of the UInt16 range
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: UInt16, y: UInt16): UInt16
 
 /**
@@ -1630,7 +1630,7 @@ public func lcm(x: UInt16, y: UInt16): UInt16
 *
 * @throws IllegalArgumentException if the result is out of the UInt32 range
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: UInt32, y: UInt32): UInt32
 
 /**
@@ -1644,7 +1644,7 @@ public func lcm(x: UInt32, y: UInt32): UInt32
 *
 * @throws IllegalArgumentException if the result is out of the UInt64 range
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func lcm(x: UInt64, y: UInt64): UInt64
 
 /**
@@ -1664,7 +1664,7 @@ public func lcm(x: UInt64, y: UInt64): UInt64
 *
 * @throws IllegalArgumentException if the argument `min` is larger than `max`, or `min` or `max` is NaN
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func clamp(v: Float16, min: Float16, max: Float16): Float16
 
 /**
@@ -1684,7 +1684,7 @@ public func clamp(v: Float16, min: Float16, max: Float16): Float16
 *
 * @throws IllegalArgumentException if the argument `min` is larger than `max`, or `min` or `max` is NaN
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func clamp(v: Float32, min: Float32, max: Float32): Float32
 
 /**
@@ -1703,7 +1703,7 @@ public func clamp(v: Float32, min: Float32, max: Float32): Float32
 *
 * @throws IllegalArgumentException if the argument `min` is larger than `max`, or `min` or `max` is NaN
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func clamp(v: Float64, min: Float64, max: Float64): Float64
 
 /**
@@ -1720,7 +1720,7 @@ public func clamp(v: Float64, min: Float64, max: Float64): Float64
 *
 * @since 0.25.2
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func round(x: Float64): Float64
 
 /**
@@ -1737,7 +1737,7 @@ public func round(x: Float64): Float64
 *
 * @since 0.25.2
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func round(x: Float32): Float32
 
 /**
@@ -1754,7 +1754,7 @@ public func round(x: Float32): Float32
 *
 * @since 0.25.2
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func round(x: Float16): Float16
 
 /**
@@ -1762,7 +1762,7 @@ public func round(x: Float16): Float16
 *
 * ref: https://pubs.opengroup.org/onlinepubs/9799919799/functions/atan2.html
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atan2(y: Float64, x: Float64): Float64
 
 /**
@@ -1770,7 +1770,7 @@ public func atan2(y: Float64, x: Float64): Float64
 *
 * ref: https://pubs.opengroup.org/onlinepubs/9799919799/functions/atan2.html
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atan2(y: Float32, x: Float32): Float32
 
 /**
@@ -1778,7 +1778,7 @@ public func atan2(y: Float32, x: Float32): Float32
 *
 * ref: https://pubs.opengroup.org/onlinepubs/9799919799/functions/atan2.html
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func atan2(y: Float16, x: Float16): Float16
 
 /**
@@ -1787,7 +1787,7 @@ public func atan2(y: Float16, x: Float16): Float16
 *
 * ref: https://pubs.opengroup.org/onlinepubs/9699919799/functions/fmod.html
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func fmod(x: Float64, y: Float64): Float64
 
 /**
@@ -1796,7 +1796,7 @@ public func fmod(x: Float64, y: Float64): Float64
 *
 * ref: https://pubs.opengroup.org/onlinepubs/9699919799/functions/fmod.html
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func fmod(x: Float32, y: Float32): Float32
 
 /**
@@ -1805,7 +1805,7 @@ public func fmod(x: Float32, y: Float32): Float32
 *
 * ref: https://pubs.opengroup.org/onlinepubs/9699919799/functions/fmod.html
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func fmod(x: Float16, y: Float16): Float16
 
 /********************* utility functions *********************//**
@@ -1822,7 +1822,7 @@ public func fmod(x: Float16, y: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Float64): Float64
 
 /**
@@ -1839,7 +1839,7 @@ public func abs(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Float32): Float32
 
 /**
@@ -1856,7 +1856,7 @@ public func abs(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Float16): Float16
 
 /**
@@ -1874,7 +1874,7 @@ public func abs(x: Float16): Float16
 * @throws OverflowException if the argument `x` is the minimum value of Int64
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Int64): Int64
 
 /**
@@ -1892,7 +1892,7 @@ public func abs(x: Int64): Int64
 * @throws OverflowException if the argument `x` is the minimum value of Int32
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Int32): Int32
 
 /**
@@ -1910,7 +1910,7 @@ public func abs(x: Int32): Int32
 * @throws OverflowException if the argument `x` is the min value of Int16
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Int16): Int16
 
 /**
@@ -1928,7 +1928,7 @@ public func abs(x: Int16): Int16
 * @throws OverflowException if the argument `x` is the minimum value of Int8
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func abs(x: Int8): Int8
 
 /**
@@ -1948,7 +1948,7 @@ public func abs(x: Int8): Int8
 * @throws IllegalArgumentException if the argument `x` is negative
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sqrt(x: Float16): Float16
 
 /**
@@ -1968,7 +1968,7 @@ public func sqrt(x: Float16): Float16
 * @throws IllegalArgumentException if the argument `x` is negative
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sqrt(x: Float32): Float32
 
 /**
@@ -1988,7 +1988,7 @@ public func sqrt(x: Float32): Float32
 * @throws IllegalArgumentException if the argument `x` is negative
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sqrt(x: Float64): Float64
 
 /**
@@ -2005,7 +2005,7 @@ public func sqrt(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func exp(x: Float64): Float64
 
 /**
@@ -2022,7 +2022,7 @@ public func exp(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func exp(x: Float32): Float32
 
 /**
@@ -2039,7 +2039,7 @@ public func exp(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func exp(x: Float16): Float16
 
 /**
@@ -2056,7 +2056,7 @@ public func exp(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func exp2(x: Float64): Float64
 
 /**
@@ -2073,7 +2073,7 @@ public func exp2(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func exp2(x: Float32): Float32
 
 /**
@@ -2090,7 +2090,7 @@ public func exp2(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func exp2(x: Float16): Float16
 
 /**
@@ -2109,7 +2109,7 @@ public func exp2(x: Float16): Float16
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log10(x: Float64): Float64
 
 /**
@@ -2128,7 +2128,7 @@ public func log10(x: Float64): Float64
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log10(x: Float32): Float32
 
 /**
@@ -2147,7 +2147,7 @@ public func log10(x: Float32): Float32
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log10(x: Float16): Float16
 
 /**
@@ -2166,7 +2166,7 @@ public func log10(x: Float16): Float16
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log2(x: Float64): Float64
 
 /**
@@ -2185,7 +2185,7 @@ public func log2(x: Float64): Float64
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log2(x: Float32): Float32
 
 /**
@@ -2204,7 +2204,7 @@ public func log2(x: Float32): Float32
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log2(x: Float16): Float16
 
 /**
@@ -2222,7 +2222,7 @@ public func log2(x: Float16): Float16
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log(x: Float64): Float64
 
 /**
@@ -2240,7 +2240,7 @@ public func log(x: Float64): Float64
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log(x: Float32): Float32
 
 /**
@@ -2258,7 +2258,7 @@ public func log(x: Float32): Float32
 * @throws IllegalArgumentException if the argument `x` is not positive
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func log(x: Float16): Float16
 
 /**
@@ -2272,7 +2272,7 @@ public func log(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func floor(x: Float64): Float64
 
 /**
@@ -2286,7 +2286,7 @@ public func floor(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func floor(x: Float32): Float32
 
 /**
@@ -2300,7 +2300,7 @@ public func floor(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func floor(x: Float16): Float16
 
 /**
@@ -2314,7 +2314,7 @@ public func floor(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func ceil(x: Float64): Float64
 
 /**
@@ -2328,7 +2328,7 @@ public func ceil(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func ceil(x: Float32): Float32
 
 /**
@@ -2342,7 +2342,7 @@ public func ceil(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func ceil(x: Float16): Float16
 
 /**
@@ -2354,7 +2354,7 @@ public func ceil(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trunc(x: Float64): Float64
 
 /**
@@ -2366,7 +2366,7 @@ public func trunc(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trunc(x: Float32): Float32
 
 /**
@@ -2378,7 +2378,7 @@ public func trunc(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func trunc(x: Float16): Float16
 
 /********************* Trigonometric functions *********************//**
@@ -2390,7 +2390,7 @@ public func trunc(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sin(x: Float64): Float64
 
 /**
@@ -2402,7 +2402,7 @@ public func sin(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sin(x: Float32): Float32
 
 /**
@@ -2414,7 +2414,7 @@ public func sin(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func sin(x: Float16): Float16
 
 /**
@@ -2426,7 +2426,7 @@ public func sin(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cos(x: Float64): Float64
 
 /**
@@ -2438,7 +2438,7 @@ public func cos(x: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cos(x: Float32): Float32
 
 /**
@@ -2450,7 +2450,7 @@ public func cos(x: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func cos(x: Float16): Float16
 
 /**
@@ -2462,7 +2462,7 @@ public func cos(x: Float16): Float16
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func pow(base: Float64, exponent: Float64): Float64
 
 /**
@@ -2474,7 +2474,7 @@ public func pow(base: Float64, exponent: Float64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func pow(base: Float32, exponent: Float32): Float32
 
 /**
@@ -2487,7 +2487,7 @@ public func pow(base: Float32, exponent: Float32): Float32
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func pow(base: Float64, exponent: Int64): Float64
 
 /**
@@ -2499,100 +2499,100 @@ public func pow(base: Float64, exponent: Int64): Float64
 * @since 0.17.4
 */
 @Frozen
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func pow(base: Float32, exponent: Int32): Float32
 
 @Deprecated[message: "Use `public interface FloatingPoint<T>` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface MathExtension<T> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func GetPI(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func GetE(): T
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface MaxMinValue<T> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getMax(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getMin(): T
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface Number<T> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func +(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func -(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func *(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func /(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func -(): T
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface Integer<T> <: Number<T> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func isSigned(): Bool
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func %(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func &(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func |(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func ^(rhs: T): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func !(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func >>(n: Int64): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     operator func <<(n: Int64): T
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface FloatingPoint<T> <: Number<T> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getPI(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getE(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getNaN(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getInf(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getMinDenormal(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func getMinNormal(): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func isInf(): Bool
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func isNaN(): Bool
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func isNormal(): Bool
 }
 

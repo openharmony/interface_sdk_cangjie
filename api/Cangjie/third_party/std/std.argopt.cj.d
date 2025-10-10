@@ -22,7 +22,7 @@ import std.collection.*
 * @since 0.17.4
 */
 @Deprecated[message: "Use global function `public func parseArguments(args: Array<String>, specs: Array<ArgumentSpec>): ParsedArguments` instead."]
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public class ArgOpt {
     /**
     * Constructor one parameters.
@@ -34,7 +34,7 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init(shortArgFormat: String)
     
     /**
@@ -48,7 +48,7 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init(longArgList: Array<String>)
     
     /**
@@ -63,7 +63,7 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init(shortArgFormat: String, longArgList: Array<String>)
     
     /**
@@ -99,7 +99,7 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init(args: Array<String>, shortArgFormat: String, longArgList: Array<String>)
     
     /**
@@ -114,7 +114,7 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func getArg(arg: String): Option<String>
     
     /**
@@ -124,7 +124,7 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func getUnparseArgs(): Array<String>
     
     /**
@@ -134,61 +134,61 @@ public class ArgOpt {
     *
     * @since 0.17.4
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func getArgumentsMap(): HashMap<String, String>
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public enum ArgumentMode <: ToString & Equatable<ArgumentMode> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     NoValue |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     RequiredValue |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     OptionalValue
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(): String
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public operator func ==(that: ArgumentMode): Bool
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public enum ArgumentSpec {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Short(Rune, ArgumentMode) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Short(Rune, ArgumentMode, (String) -> Unit) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Long(String, ArgumentMode) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Long(String, ArgumentMode, (String) -> Unit) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Full(String, Rune, ArgumentMode) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     Full(String, Rune, ArgumentMode, (String) -> Unit) |
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     NonOptions((Array<String>) -> Unit)
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public struct ParsedArguments {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop options: ReadOnlyMap<String, String>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop nonOptions: Array<String>
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public class ArgumentParseException <: Exception {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init()
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public init(message: String)
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public func parseArguments(args: Array<String>, specs: Array<ArgumentSpec>): ParsedArguments
 
