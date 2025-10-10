@@ -11,9 +11,9 @@
 package std.convert
 
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface Formattable {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func format(fmt: String): String
 }
 
@@ -29,7 +29,7 @@ extend Int64 <: Formattable {
     * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -46,7 +46,7 @@ extend Int32 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -63,7 +63,7 @@ extend Int16 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -80,7 +80,7 @@ extend Int8 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -98,7 +98,7 @@ extend UInt64 <: Formattable {
     * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -115,7 +115,7 @@ extend UInt32 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -132,7 +132,7 @@ extend UInt16 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -149,7 +149,7 @@ extend UInt8 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -164,7 +164,7 @@ extend Float64 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected float format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -181,7 +181,7 @@ extend Float32 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected float format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -198,7 +198,7 @@ extend Float16 <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected float format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -213,7 +213,7 @@ extend Rune <: Formattable {
     *
     * @throws IllegalArgumentException if the `fmt` does not match the expected char format pattern
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func format(fmt: String): String
 }
 
@@ -222,7 +222,7 @@ extend Rune <: Formattable {
 *
 * @since 0.17.4
 */
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface Parsable<T> {
     /**
     * @Description Provides an abstract function to support specific types of parsing from strings.
@@ -232,7 +232,7 @@ public interface Parsable<T> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func parse(value: String): T
     
     /**
@@ -243,19 +243,19 @@ public interface Parsable<T> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func tryParse(value: String): Option<T>
 }
 
-@!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface RadixConvertible<T> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func parse(value: String, radix!: Int64): T
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     static func tryParse(value: String, radix!: Int64): Option<T>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     func toString(radix!: Int64): String
 }
 
@@ -278,7 +278,7 @@ extend Int8 <: Parsable<Int8> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Int8
     
     /**
@@ -291,20 +291,20 @@ extend Int8 <: Parsable<Int8> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Int8>
 }
 
 extend Int8 <: RadixConvertible<Int8> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): Int8
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<Int8>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -327,7 +327,7 @@ extend UInt8 <: Parsable<UInt8> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): UInt8
     
     /**
@@ -340,20 +340,20 @@ extend UInt8 <: Parsable<UInt8> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<UInt8>
 }
 
 extend UInt8 <: RadixConvertible<UInt8> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): UInt8
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<UInt8>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -376,7 +376,7 @@ extend Int16 <: Parsable<Int16> {
     * @or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Int16
     
     /**
@@ -389,20 +389,20 @@ extend Int16 <: Parsable<Int16> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Int16>
 }
 
 extend Int16 <: RadixConvertible<Int16> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): Int16
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<Int16>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -425,7 +425,7 @@ extend UInt16 <: Parsable<UInt16> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): UInt16
     
     /**
@@ -438,20 +438,20 @@ extend UInt16 <: Parsable<UInt16> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<UInt16>
 }
 
 extend UInt16 <: RadixConvertible<UInt16> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): UInt16
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<UInt16>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -474,7 +474,7 @@ extend Int32 <: Parsable<Int32> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Int32
     
     /**
@@ -487,20 +487,20 @@ extend Int32 <: Parsable<Int32> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Int32>
 }
 
 extend Int32 <: RadixConvertible<Int32> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): Int32
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<Int32>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -523,7 +523,7 @@ extend UInt32 <: Parsable<UInt32> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): UInt32
     
     /**
@@ -536,20 +536,20 @@ extend UInt32 <: Parsable<UInt32> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<UInt32>
 }
 
 extend UInt32 <: RadixConvertible<UInt32> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): UInt32
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<UInt32>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -572,7 +572,7 @@ extend Int64 <: Parsable<Int64> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Int64
     
     /**
@@ -585,21 +585,21 @@ extend Int64 <: Parsable<Int64> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Int64>
 }
 
 extend Int64 <: RadixConvertible<Int64> {
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): Int64
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<Int64>
     
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
@@ -622,7 +622,7 @@ extend UInt64 <: Parsable<UInt64> {
     * or if there is an invalid utf8 code in the string.
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): UInt64
     
     /**
@@ -635,33 +635,33 @@ extend UInt64 <: Parsable<UInt64> {
     * @since 0.31.2
     */
     @OverflowWrapping
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<UInt64>
 }
 
 extend UInt64 <: RadixConvertible<UInt64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(value: String, radix!: Int64): UInt64
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(value: String, radix!: Int64): Option<UInt64>
     
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func toString(radix!: Int64): String
 }
 
 extend Float16 <: FloatParsable<Float16> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func fromFloat64(n: Float64): Float16
 }
 
 extend Float32 <: FloatParsable<Float32> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func fromFloat64(n: Float64): Float32
 }
 
 extend Float64 <: FloatParsable<Float64> {
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func fromFloat64(n: Float64): Float64
 }
 
@@ -682,7 +682,7 @@ extend Float16 <: Parsable<Float16> {
     * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
     */
     @Frozen
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Float16
     
     /**
@@ -693,7 +693,7 @@ extend Float16 <: Parsable<Float16> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Float16>
 }
 
@@ -714,7 +714,7 @@ extend Float32 <: Parsable<Float32> {
     * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
     */
     @Frozen
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Float32
     
     /**
@@ -725,7 +725,7 @@ extend Float32 <: Parsable<Float32> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Float32>
 }
 
@@ -746,7 +746,7 @@ extend Float64 <: Parsable<Float64> {
     * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
     */
     @Frozen
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Float64
     
     /**
@@ -758,7 +758,7 @@ extend Float64 <: Parsable<Float64> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Float64>
 }
 
@@ -779,7 +779,7 @@ extend Rune <: Parsable<Rune> {
     * @throws IllegalArgumentException if the string is empty, or if failing to convert to Rune,
     * or if there is an invalid utf8 code in the string.
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Rune
     
     /**
@@ -791,7 +791,7 @@ extend Rune <: Parsable<Rune> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Rune>
 }
 
@@ -811,7 +811,7 @@ extend Bool <: Parsable<Bool> {
     *
     * @throws IllegalArgumentException if the string is empty, or if failing to convert to Bool,
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func parse(data: String): Bool
     
     /**
@@ -822,7 +822,7 @@ extend Bool <: Parsable<Bool> {
     *
     * @since 0.31.2
     */
-    @!APILevel[21, stagemodeonly : true, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public static func tryParse(data: String): Option<Bool>
 }
 
