@@ -187,13 +187,13 @@ public enum EventValueType <: ToString {
     ]
     ArrString(Array<String>) |
     /**
-    * ArrI32 event.
+    * ArrInt32 event.
     */
     @!APILevel[
         22,
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
-    ArrI32(Array<Int32>) |
+    ArrInt32(Array<Int32>) |
     /**
     * ArrBool event.
     */
@@ -203,13 +203,13 @@ public enum EventValueType <: ToString {
     ]
     ArrBool(Array<Bool>) |
     /**
-    * ArrF64 event.
+    * ArrFloat64 event.
     */
     @!APILevel[
         22,
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
-    ArrF64(Array<Float64>) |
+    ArrFloat64(Array<Float64>) |
     /**
     * Int64Value event.
     */

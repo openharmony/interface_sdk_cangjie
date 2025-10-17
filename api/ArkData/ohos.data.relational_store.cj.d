@@ -412,7 +412,7 @@ public class RdbPredicates <: RemoteDataLite {
         22,
         syscap: "SystemCapability.DistributedDataManager.RelationalStore.Core"
     ]
-    public func `in`(field: String, value: Array<ValueType>): RdbPredicates
+    public func inValues(field: String, value: Array<ValueType>): RdbPredicates
     
     /**
     * Configure RdbPredicates to match the specified field whose data type is ValueType array and values
@@ -426,7 +426,7 @@ public class RdbPredicates <: RemoteDataLite {
         22,
         syscap: "SystemCapability.DistributedDataManager.RelationalStore.Core"
     ]
-    public func notIn(field: String, value: Array<ValueType>): RdbPredicates
+    public func notInValues(field: String, value: Array<ValueType>): RdbPredicates
 }
 
 
