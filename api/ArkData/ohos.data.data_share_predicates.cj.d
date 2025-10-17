@@ -138,7 +138,7 @@ public class DataSharePredicates <: RemoteDataLite {
         22,
         syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
     ]
-    public func `in`(field: String, value: Array<ValueType>): DataSharePredicates
+    public func inValues(field: String, value: Array<ValueType>): DataSharePredicates
 }
 
 
