@@ -38,10 +38,10 @@ sealed abstract class ConfigurationKey <: Equatable<ConfigurationKey> & Hashable
     public override func hashCode(): Int64
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public override operator func ==(that: ConfigurationKey)
+    public override operator func ==(that: ConfigurationKey):Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public override operator func !=(that: ConfigurationKey)
+    public override operator func !=(that: ConfigurationKey):Bool
 }
 
 extend ConfigurationKey {
@@ -378,7 +378,7 @@ public enum Color <: Equatable<Color> {
     public operator func ==(that: Color): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func !=(that: Color)
+    public operator func !=(that: Color):Bool
 }
 
 /**
@@ -561,7 +561,7 @@ public class PrettyText <: PrettyPrinter & PrettyPrintable & ToString {
     * This is static only because generic constructors are not allowed.
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func of<PP>(pp: PP) where PP <: PrettyPrintable
+    public static func of<PP>(pp: PP):PrettyText where PP <: PrettyPrintable
     
     /**
     * @return true if nothing has been put into this object yet, false otherwise

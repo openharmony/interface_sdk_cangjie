@@ -561,14 +561,14 @@ public class LazySeq<T> <: Iterable<T> {
     * If the iterable is already a LazySeq, do not do anything to avoid producing unnesessary wrappers.
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func of(iterable: Iterable<T>)
+    public static func of(iterable: Iterable<T>):LazySeq<T>
     
     /*
     * Construct a sequence from an array.
     * A little bit optimized compared to the generic Iterable version.
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func of(array: Array<T>)
+    public static func of(array: Array<T>):LazySeq<T>
     
     /**
     * Make a sequence of one element `element`
@@ -620,25 +620,25 @@ public class LazySeq<T> <: Iterable<T> {
     * Example: mix({1,2,3,4}, {5,6,7}) -> {1,5,2,6,3,7,4}
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>)
+    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>):LazySeq<T>
     
     /*
     * Mix three sequences.
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>, l3: LazySeq<T>)
+    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>, l3: LazySeq<T>):LazySeq<T>
     
     /*
     * Mix four sequences.
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>, l3: LazySeq<T>, l4: LazySeq<T>)
+    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>, l3: LazySeq<T>, l4: LazySeq<T>):LazySeq<T>
     
     /*
     * Mix five sequences.
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>, l3: LazySeq<T>, l4: LazySeq<T>, l5: LazySeq<T>)
+    public static func mix(l1: LazySeq<T>, l2: LazySeq<T>, l3: LazySeq<T>, l4: LazySeq<T>, l5: LazySeq<T>):LazySeq<T>
     
     /*
     * Apply a function to each element of this sequence, return the sequence of results.
@@ -1451,25 +1451,25 @@ public struct TupleWrapper5<T0, T1, T2, T3, T4> {
 extend<T0, T1> TupleWrapper2<T0, T1> <: ToString
         where T0 <: ToString, T1 <: ToString {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func toString()
+    public func toString():String
 }
 
 extend<T0, T1, T2> TupleWrapper3<T0, T1, T2> <: ToString
         where T0 <: ToString, T1 <: ToString, T2 <: ToString {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func toString()
+    public func toString():String
 }
 
 extend<T0, T1, T2, T3> TupleWrapper4<T0, T1, T2, T3> <: ToString
         where T0 <: ToString, T1 <: ToString, T2 <: ToString, T3 <: ToString {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func toString()
+    public func toString():String
 }
 
 extend<T0, T1, T2, T3, T4> TupleWrapper5<T0, T1, T2, T3, T4> <: ToString
         where T0 <: ToString, T1 <: ToString, T2 <: ToString, T3 <: ToString, T4 <: ToString {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func toString()
+    public func toString():String
 }
 
 /**
@@ -1477,37 +1477,37 @@ extend<T0, T1, T2, T3, T4> TupleWrapper5<T0, T1, T2, T3, T4> <: ToString
 */
 extend<T0, T1> TupleWrapper2<T0, T1> <: Equatable<TupleWrapper2<T0, T1>> where T0 <: Equatable<T0>, T1 <: Equatable<T1> {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func ==(other: TupleWrapper2<T0, T1>)
+    public operator func ==(other: TupleWrapper2<T0, T1>):Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func !=(other: TupleWrapper2<T0, T1>)
+    public operator func !=(other: TupleWrapper2<T0, T1>):Bool
 }
 
 extend<T0, T1, T2> TupleWrapper3<T0, T1, T2> <: Equatable<TupleWrapper3<T0, T1, T2>>
         where T0 <: Equatable<T0>, T1 <: Equatable<T1>, T2 <: Equatable<T2> {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func ==(other: TupleWrapper3<T0, T1, T2>)
+    public operator func ==(other: TupleWrapper3<T0, T1, T2>):Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func !=(other: TupleWrapper3<T0, T1, T2>)
+    public operator func !=(other: TupleWrapper3<T0, T1, T2>):Bool
 }
 
 extend<T0, T1, T2, T3> TupleWrapper4<T0, T1, T2, T3> <: Equatable<TupleWrapper4<T0, T1, T2, T3>>
         where T0 <: Equatable<T0>, T1 <: Equatable<T1>, T2 <: Equatable<T2>, T3 <: Equatable<T3> {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func ==(other: TupleWrapper4<T0, T1, T2, T3>)
+    public operator func ==(other: TupleWrapper4<T0, T1, T2, T3>):Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func !=(other: TupleWrapper4<T0, T1, T2, T3>)
+    public operator func !=(other: TupleWrapper4<T0, T1, T2, T3>):Bool
 }
 
 extend<T0, T1, T2, T3, T4> TupleWrapper5<T0, T1, T2, T3, T4> <: Equatable<TupleWrapper5<T0, T1, T2, T3, T4>>
         where T0 <: Equatable<T0>, T1 <: Equatable<T1>, T2 <: Equatable<T2>, T3 <: Equatable<T3>, T4 <: Equatable<T4> {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func ==(other: TupleWrapper5<T0, T1, T2, T3, T4>)
+    public operator func ==(other: TupleWrapper5<T0, T1, T2, T3, T4>):Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public operator func !=(other: TupleWrapper5<T0, T1, T2, T3, T4>)
+    public operator func !=(other: TupleWrapper5<T0, T1, T2, T3, T4>):Bool
 }
 
 /**
