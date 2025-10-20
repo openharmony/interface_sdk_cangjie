@@ -469,25 +469,25 @@ public interface BenchmarkConfig {
 
 extend Configuration <: BenchmarkConfig {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func batchSize(b: Int64)
+    public func batchSize(b: Int64): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func batchSize(x: Range<Int64>)
+    public func batchSize(x: Range<Int64>): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func warmup(x: Int64)
+    public func warmup(x: Int64): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func warmup(x: Duration)
+    public func warmup(x: Duration): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func minDuration(x: Duration)
+    public func minDuration(x: Duration): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func explicitGC(x: ExplicitGcType)
+    public func explicitGC(x: ExplicitGcType): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func minBatches(x: Int64)
+    public func minBatches(x: Int64): Unit
 }
 
 /**
@@ -496,7 +496,7 @@ extend Configuration <: BenchmarkConfig {
 @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public interface Measurement {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    func setup()
+    func setup(): Unit
     
     /**
     * @return representation of the measurement data that will be used for statistical analisys
@@ -611,7 +611,7 @@ public struct CpuCycles <: Measurement {
     public func measure(): Float64
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func setup()
+    public func setup(): Unit
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public prop conversionTable: MeasurementUnitTable
@@ -632,7 +632,7 @@ public struct Perf <: Measurement {
     public init()
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func setup()
+    public func setup():Unit
     
     @Frozen
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
@@ -856,7 +856,7 @@ extend UInt8 <: Torcable<UInt8> {
     public static func suggestedFrom(random: Random): UInt8
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()
+    public func isZero()：Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt8
@@ -876,7 +876,7 @@ extend UInt16 <: Torcable<UInt16> {
     public static func suggestedFrom(random: Random): UInt16
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()
+    public func isZero()：Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt16
@@ -904,7 +904,7 @@ extend UInt32 <: Torcable<UInt32> {
     public static func suggestedFrom(random: Random): UInt32
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()
+    public func isZero()：Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt32
@@ -932,7 +932,7 @@ extend UInt64 <: Torcable<UInt64> {
     public static func suggestedFrom(random: Random): UInt64
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()
+    public func isZero()：Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt64
@@ -960,7 +960,7 @@ extend Float32 <: Torcable<Float32> {
     public static func suggestedFrom(random: Random): Float32
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()
+    public func isZero()：Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): Float32
@@ -988,7 +988,7 @@ extend Float64 <: Torcable<Float64> {
     public static func suggestedFrom(random: Random): Float64
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()
+    public func isZero()：Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): Float64
