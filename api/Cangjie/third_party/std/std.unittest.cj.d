@@ -730,7 +730,7 @@ public class AssertionCtx {
     *                                 Length of provided array should match with size of paramenter list
     */
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func setArgsAliases(aliases: Array<String>)
+    public func setArgsAliases(aliases: Array<String>): Unit
     
     /**
     * Stores FailCheckResult in local stacktrace
@@ -856,7 +856,7 @@ extend UInt8 <: Torcable<UInt8> {
     public static func suggestedFrom(random: Random): UInt8
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()：Bool
+    public func isZero(): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt8
@@ -876,7 +876,7 @@ extend UInt16 <: Torcable<UInt16> {
     public static func suggestedFrom(random: Random): UInt16
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()：Bool
+    public func isZero(): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt16
@@ -904,7 +904,7 @@ extend UInt32 <: Torcable<UInt32> {
     public static func suggestedFrom(random: Random): UInt32
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()：Bool
+    public func isZero(): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt32
@@ -932,7 +932,7 @@ extend UInt64 <: Torcable<UInt64> {
     public static func suggestedFrom(random: Random): UInt64
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()：Bool
+    public func isZero(): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): UInt64
@@ -960,7 +960,7 @@ extend Float32 <: Torcable<Float32> {
     public static func suggestedFrom(random: Random): Float32
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()：Bool
+    public func isZero(): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): Float32
@@ -988,7 +988,7 @@ extend Float64 <: Torcable<Float64> {
     public static func suggestedFrom(random: Random): Float64
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func isZero()：Bool
+    public func isZero(): Bool
     
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
     public func bitFlip(at: UInt8): Float64
