@@ -279,7 +279,7 @@ public abstract class TypedMatcher<T> <: ArgumentMatcher {
 @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
 public class AnyMatcher <: ArgumentMatcher {
     @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
-    public func matchesAny(_: Any)
+    public func matchesAny(_: Any): Bool
 }
 
 /**
