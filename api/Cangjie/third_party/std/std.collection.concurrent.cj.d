@@ -19,16 +19,16 @@ import std.collection.ArrayList
 * ArrayBlockingQueue is a concurrent queue with a blocking mechanism and supports a user-specified upper bound of capacity.
 * It is backed by an array.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ArrayBlockingQueue<E> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let capacity: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
     @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64, elements: Collection<E>)
     
     /**
@@ -39,7 +39,7 @@ public class ArrayBlockingQueue<E> {
     * So, if elements are added or removed during execution of getting 'size',
     * the 'size' may be inaccurate.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -52,10 +52,10 @@ public class ArrayBlockingQueue<E> {
     * A successful 'enqueue' will await the threads blocked by calling 'dequeue'.
     */
     @Deprecated[message: "Use member function `public func add(element: E): Unit` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func enqueue(element: E): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: E): Unit
     
     /**
@@ -70,10 +70,10 @@ public class ArrayBlockingQueue<E> {
     * - false: if the waiting time exceeds @p timeout.
     */
     @Deprecated[message: "Use member function `public func add(element: E, timeout: Duration): Bool` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func enqueue(element: E, timeout: Duration): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: E, timeout: Duration): Bool
     
     /**
@@ -84,10 +84,10 @@ public class ArrayBlockingQueue<E> {
     * A successful 'dequeue' will await blocked threads calling 'enqueue'.
     */
     @Deprecated[message: "Use member function `public func remove(): E` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dequeue(): E
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(): E
     
     /**
@@ -101,10 +101,10 @@ public class ArrayBlockingQueue<E> {
     * - None: if the waiting time exceeds @p timeout.
     */
     @Deprecated[message: "Use member function `public func remove(timeout: Duration): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dequeue(timeout: Duration): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(timeout: Duration): Option<E>
     
     /**
@@ -116,10 +116,10 @@ public class ArrayBlockingQueue<E> {
     * - None: if the queue is empty, and we fails to get the head of the queue.
     */
     @Deprecated[message: "Use member function `public func peek(): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func head(): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func peek(): Option<E>
     
     /**
@@ -133,11 +133,11 @@ public class ArrayBlockingQueue<E> {
     * - false: if the queue is full.
     */
     @Deprecated[message: "Use member function `public func tryAdd(element: E): Bool` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryEnqueue(element: E): Bool
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryAdd(element: E): Bool
     
     /**
@@ -149,11 +149,11 @@ public class ArrayBlockingQueue<E> {
     * - None: if the queue is empty.
     */
     @Deprecated[message: "Use member function `public func tryRemove(): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryDequeue(): Option<E>
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryRemove(): Option<E>
 }
 
@@ -163,23 +163,23 @@ public type BlockingQueue<E> = LinkedBlockingQueue<E>
 /**
 * BlockingQueue is a concurrent queue with a blocking mechanism and supports a user-specified upper bound of capacity.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class LinkedBlockingQueue<E> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let capacity: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64, elements: Array<E>)
     
     @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64, elements: Collection<E>)
     
     /**
@@ -190,7 +190,7 @@ public class LinkedBlockingQueue<E> {
     * So, if elements are added or removed during execution of getting 'size',
     * the 'size' may be inaccurate.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -203,10 +203,10 @@ public class LinkedBlockingQueue<E> {
     * A successful 'enqueue' will await the threads blocked by calling 'dequeue'.
     */
     @Deprecated[message: "Use member function `public func add(element: E): Unit` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func enqueue(element: E): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: E): Unit
     
     /**
@@ -221,10 +221,10 @@ public class LinkedBlockingQueue<E> {
     * - false: if the waiting time exceeds @p timeout.
     */
     @Deprecated[message: "Use member function `public func add(element: E, timeout: Duration): Bool` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func enqueue(element: E, timeout: Duration): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: E, timeout: Duration): Bool
     
     /**
@@ -238,10 +238,10 @@ public class LinkedBlockingQueue<E> {
     * - e: e is the element at the head of the queue.
     */
     @Deprecated[message: "Use member function `public func remove(): E` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dequeue(): E
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(): E
     
     /**
@@ -255,10 +255,10 @@ public class LinkedBlockingQueue<E> {
     * - None: if the waiting time exceeds @p timeout.
     */
     @Deprecated[message: "Use member function `public func remove(timeout: Duration): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dequeue(timeout: Duration): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(timeout: Duration): Option<E>
     
     /**
@@ -270,10 +270,10 @@ public class LinkedBlockingQueue<E> {
     * - None: if the queue is empty, and we fails to get the head of the queue.
     */
     @Deprecated[message: "Use member function `public func peek(): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func head(): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func peek(): Option<E>
     
     /**
@@ -287,10 +287,10 @@ public class LinkedBlockingQueue<E> {
     * - false: if the queue is full.
     */
     @Deprecated[message: "Use member function `public func tryAdd(element: E): Bool` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryEnqueue(element: E): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryAdd(element: E): Bool
     
     /**
@@ -302,10 +302,10 @@ public class LinkedBlockingQueue<E> {
     * - None: if the queue is empty.
     */
     @Deprecated[message: "Use member function `public func tryRemove(): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryDequeue(): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func tryRemove(): Option<E>
 }
 
@@ -317,7 +317,7 @@ public class LinkedBlockingQueue<E> {
 * And if the number of key-value pairs is greater than the number of buckets in the ConcurrentHashMap,
 * capacity expansion will occur.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)> where K <: Hashable & Equatable<K> {
     /************************ Public Methods *******************************//**
     * Create a ConcurrentHashMap, whose initial capacity is DEFAULT_CAPACITY (=16) and
@@ -326,7 +326,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     *
     * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
@@ -339,7 +339,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     *
     * @throws IllegalArgumentException if capacity is less than zero.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64, concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
@@ -348,7 +348,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * @param elements: an incoming list is initialized;
     * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<(K, V)>, concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
@@ -357,7 +357,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * @param elements: an incoming list is initialized;
     * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> (K, V), concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
@@ -367,7 +367,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * @return: the value corresponding to the return key is encapsulated with option.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func get(key: K): ?V
     
     /**
@@ -377,7 +377,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * @return: returns true if exists; otherwise, false.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(key: K): Bool
     
     /**
@@ -392,11 +392,11 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - Some(v): if @p key associated with v before putting.
     */
     @Deprecated[message: "Use member function `public func add(key: K, value: V): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func put(key: K, value: V): ?V
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(key: K, value: V): ?V
     
     /**
@@ -414,11 +414,11 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - None: if @p key does not exist in the concurrent map.
     */
     @Deprecated[message: "Use member function `public func addIfAbsent(key: K, value: V): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func putIfAbsent(key: K, value: V): ?V
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addIfAbsent(key: K, value: V): ?V
     
     /**
@@ -430,7 +430,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - Some(v): where the pair of @p key and v is the removed element;
     * - None: where @p key does not exist in the concurrent map.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(key: K): ?V
     
     /**
@@ -446,7 +446,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - None: if @p key does not in this concurrent map.
     */
     @Deprecated[message: "Use member function `public func entryView(K, (MapEntryView<K, V>) -> Unit)` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(key: K, predicate: (V) -> Bool): ?V
     
     /**
@@ -462,7 +462,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - None: if @p key is not in the concurrent map.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func replace(key: K, value: V): ?V
     
     /**
@@ -481,7 +481,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - None: if @p key is not in the concurrent map.
     */
     @Deprecated[message: "Use member function `public func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func replace(key: K, eval: (V) -> V): ?V
     
     /**
@@ -499,10 +499,10 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * - None: if @p key does not exist in concurrent map.
     */
     @Deprecated[message: "Use member function `public func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func replace(key: K, predicate: (V) -> Bool, eval: (V) -> V): ?V
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func entryView(key: K, fn: (MapEntryView<K, V>) -> Unit): ?V
     
     /**
@@ -513,7 +513,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     *
     * @throws NoneValueException if @p key does not exist.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](key: K): V
     
     /**
@@ -522,7 +522,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * @param key: transfers the value for judgment.
     * @param value: transfers the value to be set.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](key: K, value!: V): Unit
     
     /**
@@ -530,7 +530,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     *
     * @return: size of key-value.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -538,7 +538,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     *
     * @return: if yes, true is returned. Otherwise, false is returned.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
@@ -547,7 +547,7 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
     * @return: iterator of Concurrent Hashmap.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): ConcurrentHashMapIterator<K, V>
 }
 
@@ -556,9 +556,9 @@ public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)>
 * It is not atomic and does not ensure to iterator a snapshot of the ConcurrentHashMap in concurrency.
 * The best way to iterate the ConcurrentHashMap is in the condition, where there is no other threads executing concurrently.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ConcurrentHashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equatable<K> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(cmap: ConcurrentHashMap<K, V>)
     
     /**
@@ -567,7 +567,7 @@ public class ConcurrentHashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hash
     * - None: if there is no element in the collection.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func next(): Option<(K, V)>
 }
 
@@ -575,7 +575,7 @@ public class ConcurrentHashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hash
 * This interface is a key-value pair that does not guarantee the order of elements.
 * It declares the methods in a concurrent map that need to be atomic.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ConcurrentMap<K, V> {
     /**
     * Returns the value associated with @p key in ConcurrentMap
@@ -586,7 +586,7 @@ public interface ConcurrentMap<K, V> {
     * - Some(v): if @p key associates with v;
     * - None: if @p key does not exist.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func get(key: K): ?V
     
     /**
@@ -598,7 +598,7 @@ public interface ConcurrentMap<K, V> {
     * - true: if exists @p key in ConcurrentMap;
     * - false: if @p key does not exist.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(key: K): Bool
     
     /**
@@ -613,10 +613,10 @@ public interface ConcurrentMap<K, V> {
     * - Some(v): if @p key associated with v before putting.
     */
     @Deprecated[message: "Use member function `func add(key: K, value: V): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func put(key: K, value: V): ?V
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(key: K, value: V): ?V
     
     /**
@@ -634,10 +634,10 @@ public interface ConcurrentMap<K, V> {
     * - None: if @p key does not exist in the concurrent map.
     */
     @Deprecated[message: "Use member function `func addIfAbsent(key: K, value: V): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func putIfAbsent(key: K, value: V): ?V
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func addIfAbsent(key: K, value: V): ?V
     
     /**
@@ -649,7 +649,7 @@ public interface ConcurrentMap<K, V> {
     * - Some(v): where the pair of @p key and v is the removed element;
     * - None: where @p key does not exist in the concurrent map.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(key: K): ?V
     
     /**
@@ -665,7 +665,7 @@ public interface ConcurrentMap<K, V> {
     * - None: if @p key does not in this concurrent map.
     */
     @Deprecated[message: "Use member function `func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(key: K, predicate: (V) -> Bool): ?V
     
     /**
@@ -682,7 +682,7 @@ public interface ConcurrentMap<K, V> {
     * - Some(v): if the pair of @p key and v exists in concurrent map before invoking this method.
     * - None: if @p key is not in the concurrent map.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func replace(key: K, value: V): ?V
     
     /**
@@ -701,7 +701,7 @@ public interface ConcurrentMap<K, V> {
     * - None: if @p key is not in the concurrent map.
     */
     @Deprecated[message: "Use member function `func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func replace(key: K, eval: (V) -> V): ?V
     
     /**
@@ -719,7 +719,7 @@ public interface ConcurrentMap<K, V> {
     * - None: if @p key does not exist in concurrent map.
     */
     @Deprecated[message: "Use member function `func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func replace(key: K, predicate: (V) -> Bool, eval: (V) -> V): ?V
     
     /**
@@ -733,7 +733,7 @@ public interface ConcurrentMap<K, V> {
     * - Some(v): v is the value associated with @p key after processing.
     * - None: the @p key does not exist in map after processing.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func entryView(key: K, fn: (MapEntryView<K, V>) -> Unit): ?V
     
     /**
@@ -744,7 +744,7 @@ public interface ConcurrentMap<K, V> {
     * @return:
     * - the value associated with @p key
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     operator func [](key: K): V
     
     /**
@@ -754,7 +754,7 @@ public interface ConcurrentMap<K, V> {
     * @param key: the key to put.
     * @param value: the value to put.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     operator func [](key: K, value!: V): Unit
 }
 
@@ -764,19 +764,19 @@ public type NonBlockingQueue<E> = ConcurrentLinkedQueue<E>
 /**
 * NonBlockingQueue is an unbounded nonblocking concurrent queue.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ConcurrentLinkedQueue<E> <: Collection<E> {
     /**
     * The default method to initialize the concurrent queue.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
     * Initialize the queue by putting all the element in @p elements into the queue.
     */
     @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<E>)
     
     /**
@@ -787,7 +787,7 @@ public class ConcurrentLinkedQueue<E> <: Collection<E> {
     * So, if elements are added or removed during execution of getting 'size',
     * the 'size' may be inaccurate.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -801,10 +801,10 @@ public class ConcurrentLinkedQueue<E> <: Collection<E> {
     * Note that the NonBlockingQueue 'enqueue' will never return 'false'.
     */
     @Deprecated[message: "Use member function `func addIfAbsent(key: K, value: V): ?V` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func enqueue(element: E): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: E): Bool
     
     /**
@@ -815,10 +815,10 @@ public class ConcurrentLinkedQueue<E> <: Collection<E> {
     * - None: if the queue is empty.
     */
     @Deprecated[message: "Use member function `public func remove(): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dequeue(): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(): Option<E>
     
     /**
@@ -831,20 +831,20 @@ public class ConcurrentLinkedQueue<E> <: Collection<E> {
     * Note: calling 'head()' can still get the head of the queue.
     */
     @Deprecated[message: "Use member function `public func peek(): Option<E>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func head(): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func peek(): Option<E>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<E>
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<E>
 }
 
