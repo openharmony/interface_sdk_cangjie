@@ -11,24 +11,24 @@
 package std.crypto.cipher
 
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface BlockCipher {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop blockSize: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop algorithm: String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func encrypt(input: Array<Byte>): Array<Byte>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func decrypt(input: Array<Byte>): Array<Byte>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func encrypt(input: Array<Byte>, to!: Array<Byte>): Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func decrypt(input: Array<Byte>, to!: Array<Byte>): Int64
 }
 

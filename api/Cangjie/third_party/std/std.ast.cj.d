@@ -16,1575 +16,1575 @@ public import std.collection.ArrayList
 /**
 * Return true if two tokens are considered equal somehow(exclude NL, END and position info).
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func compareTokens(tokens1: Tokens, tokens2: Tokens): Bool
 
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class Decl <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut open prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop annotations: ArrayList<Annotation>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop modifiers: ArrayList<Modifier>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop genericParam: GenericParam
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop genericConstraint: ArrayList<GenericConstraint>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop constraintCommas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func hasAttr(attr: String): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getAttrs(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop isGenericDecl: Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ClassDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBound: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypes: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypeBitAnds: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop body: Body
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class StructDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBound: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypes: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypeBitAnds: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop body: Body
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class InterfaceDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBound: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypes: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypeBitAnds: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop body: Body
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class EnumDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBound: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypes: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypeBitAnds: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop constructors: ArrayList<Constructor>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop decls: ArrayList<Decl>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop ellipsis: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ExtendDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut override prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop extendType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBound: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypes: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop superTypeBitAnds: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop body: Body
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class FuncDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop overloadOp: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop funcParams: ArrayList<FuncParam>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop declType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isConst(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MainDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop funcParams: ArrayList<FuncParam>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop declType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MacroDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop funcParams: ArrayList<FuncParam>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop declType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class PrimaryCtorDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop funcParams: ArrayList<FuncParam>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isConst(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VarDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop pattern: Pattern
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop declType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop assign: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isConst(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class FuncParam <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop not: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop paramType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop assign: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isMemberParam(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class PropDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop declType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop getter: FuncDecl
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop setter: FuncDecl
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TypeAliasDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop assign: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop aliasType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MacroExpandDecl <: Decl {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop fullIdentifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroAttrs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroInputs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroInputDecl: Decl
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MacroExpandParam <: FuncParam {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop fullIdentifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroAttrs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroInputs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroInputDecl: Decl
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
 /**
 * Level of diag report
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum DiagReportLevel {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     ERROR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     WARNING
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func level(): Int32
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func diagReport(level: DiagReportLevel, tokens: Tokens, message: String, hint: String): Unit
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ASTException <: Exception {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(message: String)
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ParseASTException <: Exception {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(message: String)
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class Expr <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Block <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop nodes: ArrayList<Node>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class BinaryExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop leftExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop op: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rightExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class UnaryExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop op: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class IsExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop shiftType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class AsExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop shiftType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ParenExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop parenthesizedExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class LitConstExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop literal: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class RefExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeArguments: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ReturnExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ThrowExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class AssignExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop assign: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop leftExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rightExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class CallExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop callFunc: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop arguments: ArrayList<Argument>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MemberAccess <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop baseExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop dot: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop field: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeArguments: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class IfExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordI: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop condition: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop ifBlock: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordE: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop elseExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class LetPatternExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop pattern: Pattern
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop backArrow: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MatchExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop selector: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop matchCases: ArrayList<MatchCase>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class WhileExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop condition: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class DoWhileExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordD: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordW: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop condition: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class LambdaExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop funcParams: ArrayList<FuncParam>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop doubleArrow: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop nodes: ArrayList<Node>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class SpawnExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop threadContext: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lambdaExpr: LambdaExpr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class SynchronizedExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop structuredMutex: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TrailingClosureExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lambdaExpr: LambdaExpr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TypeConvExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop targetType: PrimitiveType
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ForInExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordF: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop pattern: Pattern
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordI: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordW: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop patternGuard: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class PrimitiveTypeExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(kind: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ArrayLiteral <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop elements: ArrayList<Expr>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TupleLiteral <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop elements: ArrayList<Expr>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class RangeExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop start: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop op: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop end: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop step: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class SubscriptExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop baseExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop indexList: ArrayList<Expr>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class JumpExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(kind: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class IncOrDecExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop op: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TryExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordT: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop resourceSpec: ArrayList<VarDecl>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop tryBlock: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordsC: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop catchPatterns: ArrayList<Pattern>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop catchBlocks: ArrayList<Block>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordF: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop finallyBlock: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class OptionalExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     // we construct a MemberAccess to help parse OptionalExpr because compiler can't parse OptionalExpr directly.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop baseExpr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop quest: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class QuoteToken <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop tokens: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class QuoteExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop exprs: ArrayList<Expr>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class WildcardExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(keyword: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VArrayExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop vArrayType: VArrayType
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop arguments: ArrayList<Argument>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MacroExpandExpr <: Expr {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop at: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroAttrs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rSquare: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop macroInputs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
@@ -1593,7 +1593,7 @@ public class MacroExpandExpr <: Expr {
 * @throws IllegalMemoryException if failed to call cangjieLex(code, true).
 * @throws IllegalArgumentException if failed to call cangjieLex(code, true).
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func cangjieLex(code: String): Tokens
 
 /**
@@ -1602,18 +1602,18 @@ public func cangjieLex(code: String): Tokens
 * @throws IllegalMemoryException if malloc failed.
 * @throws IllegalArgumentException if the call of CJ_AST_Lex returns an invalid token array.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func cangjieLex(code: String, truncated: Bool): Tokens
 
 /**
 * This part is the Macro with context related API:
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MacroContextException <: Exception {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(message: String)
 }
 
@@ -1626,7 +1626,7 @@ public class MacroContextException <: Exception {
 *
 * Throw an error unless the inner macro call is nested in the given outer macro call.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func assertParentContext(parentMacroName: String): Unit
 
 /**
@@ -1636,7 +1636,7 @@ public func assertParentContext(parentMacroName: String): Unit
 *
 * @return Bool. Returns true only if the inner macro call is nested in the given outer macro call.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func insideParentContext(parentMacroName: String): Bool
 
 /**
@@ -1646,24 +1646,24 @@ public func insideParentContext(parentMacroName: String): Bool
 *
 * @param value - the value that send to outer macro.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func setItem(key: String, value: String): Unit
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func setItem(key: String, value: Int64): Unit
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func setItem(key: String, value: Bool): Unit
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func setItem(key: String, value: Tokens): Unit
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MacroMessage {
     /*
     * Check the given 'key' wheather have an item
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func hasItem(key: String): Bool
     
     /**
@@ -1672,7 +1672,7 @@ public class MacroMessage {
     * @return String - return a string value.
     * throw an exception if there is no such key/value pairs.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getString(key: String): String
     
     /**
@@ -1681,7 +1681,7 @@ public class MacroMessage {
     * @return Int64 - return the Int64 value.
     * throw an exception if there is no such key/value pairs.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getInt64(key: String): Int64
     
     /**
@@ -1690,7 +1690,7 @@ public class MacroMessage {
     * @return Bool - return the Bool value.
     * throw an exception if there is no such key/value pairs.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getBool(key: String): Bool
     
     /**
@@ -1699,7 +1699,7 @@ public class MacroMessage {
     * @return Tokens - return the Tokens value.
     * throw an exception if there is no such key/value pairs.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getTokens(key: String): Tokens
 }
 
@@ -1709,95 +1709,95 @@ public class MacroMessage {
 * @return String - return the arraylist of hashmap info.
 * If there are no such messages, this is not an error, it's just an empty list.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func getChildMessages(children: String): ArrayList<MacroMessage>
 
 abstract sealed class Node <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop beginPos: Position
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop endPos: Position
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dump(): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Annotation <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop at: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop arguments: ArrayList<Argument>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop attributes: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop condition: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Modifier <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(keyword: Token)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class GenericParam <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(parameters: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop parameters: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
@@ -1805,30 +1805,30 @@ public class GenericParam <: Node {
 * GenericConstraint is:
 *   where T <: A, K <: B
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class GenericConstraint <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeArgument: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBound: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop upperBounds: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop bitAnds: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
@@ -1837,27 +1837,27 @@ public class GenericConstraint <: Node {
 *   {...}
 * For mutable types, like ClassDecl, StructDecl, InterfaceDecl
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Body <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(decls: ArrayList<Decl>)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop decls: ArrayList<Decl>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
@@ -1866,27 +1866,27 @@ public class Body <: Node {
 *   foo(arg1:value1)
 *   "arg1:value1" is an Argument type
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Argument <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
@@ -1898,66 +1898,66 @@ public class Argument <: Node {
 *       case _ => "not a valid score"
 *   }
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MatchCase <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordC: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop expr: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop patterns: ArrayList<Pattern>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop bitOrs: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordW: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop patternGuard: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop arrow: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop block: Block
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
 /**
 * Program is the Cangjie source File node.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Program <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop packageHeader: PackageHeader
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop importLists: ArrayList<ImportList>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop decls: ArrayList<Decl>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
@@ -1965,1082 +1965,1082 @@ public class Program <: Node {
 * PackageHeader node represents the package of the current file.
 * The PackageHeader starts with the keyword package, followed by the package name.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class PackageHeader <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop accessible: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordM: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordP: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop prefixPaths: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop prefixDots: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop packageIdentifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum ImportKind <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Single |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Alias |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     All |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Multi
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ImportContent <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop importKind: ImportKind
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop prefixPaths: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop prefixDots: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop importAlias: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop items: ArrayList<ImportContent>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rBrace: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isImportAlias(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isImportAll(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isImportMulti(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isImportSingle(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ImportList <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop modifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keywordI: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop content: ImportContent
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isImportMulti(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
 /**
 * Constructor node represents the values related to enum.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
 * enum TimeUnit1 {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
 *   Year | Month | Day | Hour(Float32) // Constructor node
 * }
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Constructor <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop annotations: ArrayList<Annotation>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeArguments: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
 extend<T> ArrayList<T> <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend<T> Array<T> <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseDecl(input: Tokens, astKind!: String = ""): Decl
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseDeclFragment(input: Tokens, startFrom!: Int64 = 0): (Decl, Int64)
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseExpr(input: Tokens): Expr
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseExprFragment(input: Tokens, startFrom!: Int64 = 0): (Expr, Int64)
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseProgram(input: Tokens): Program
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parsePattern(input: Tokens): Pattern
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parsePatternFragment(input: Tokens, startFrom!: Int64 = 0): (Pattern, Int64)
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseType(input: Tokens): TypeNode
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func parseTypeFragment(input: Tokens, startFrom!: Int64 = 0): (TypeNode, Int64)
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class Pattern <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ConstPattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop litConstExpr: LitConstExpr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class WildcardPattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(keyword: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop wildcard: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VarPattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(identifier: Token)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VarOrEnumPattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(identifier: Token)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ExceptTypePattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop pattern: Pattern
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop types: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TypePattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop pattern: Pattern
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop patternType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class EnumPattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop constructor: Expr
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop patterns: ArrayList<Pattern>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TuplePattern <: Pattern {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop patterns: ArrayList<Pattern>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public struct Position <: ToBytes {
     /* Fields */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let fileID: UInt32
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let line: Int32
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let column: Int32
     
     /* Constructors *//** Create an empty position. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /** Create a new position which is formed by fileID, line, column. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(fileID: UInt32, line: Int32, column: Int32)
     
     /* Methods *//** Returns true if and only if this position line and column equal to 0. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /** Returns true if and only if the two positions are identical. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(r: Position): Bool
     
     /** Returns true if and only if the two positions are not identical. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(r: Position): Bool
     
     /** Print the information of this position. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dump(): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toBytes(): Array<UInt8>
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ToBytes {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toBytes(): Array<UInt8>
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public struct Token <: ToBytes {
     /**
     Fields
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let kind: TokenKind
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let value: String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public let pos: Position
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public var delimiterNum: UInt16 = 1
     
     /**
     Constructors
     */// Create an token with default value.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     // Create a new token without value, position from enumerated type token.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(kind: TokenKind)
     
     // Create a new token with empty position from token kind and token value.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(kind: TokenKind, value: String)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addPosition(fileID: UInt32, line: Int32, colum: Int32): Token
     
     // Returns true if and only if the two token's kind id, value, position are identical.// XXX: Bound check.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(r: Token): Bool
     
     // Returns true if and only if the two token's kind id, value, position are not identical.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(r: Token): Bool
     
     // Token + Tokens => Tokens
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func +(r: Tokens): Tokens
     
     // Token + Token => Tokens
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func +(r: Token): Tokens
     
     // Print the information of this token.
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dump(): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toBytes(): Array<UInt8>
 }
 
 /**
 * Note: If Tokens.inc is changed, TokenKind and PATTERNS should change accordingly.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum TokenKind <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     DOT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "."           */
     COMMA |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ","           */
     LPAREN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "("           */
     RPAREN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ")"           */
     LSQUARE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "["           */
     RSQUARE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "]"           */
     LCURL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "{"           */
     RCURL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "}"           */
     EXP |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "**"          */
     MUL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "*"           */
     MOD |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "%"           */
     DIV |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "/"           */
     ADD |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "+"           */
     SUB |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "-"           */
     INCR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "++"          */
     DECR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "--"          */
     AND |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "&&"          */
     OR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "||"          */
     COALESCING |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "??"          */
     PIPELINE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "|>"          */
     COMPOSITION |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "~>"          */
     NOT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "!"           */
     BITAND |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "&"           */
     BITOR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "|"           */
     BITXOR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "^"           */
     BITNOT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "~"           */
     LSHIFT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "<<"          */
     RSHIFT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ">>"          */
     COLON |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ":"           */
     SEMI |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ";"           */
     ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "="           */
     ADD_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "+="          */
     SUB_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "-="          */
     MUL_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "*="          */
     EXP_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "**="         */
     DIV_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "/="          */
     MOD_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "%="          */
     AND_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "&&="         */
     OR_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "||="         */
     BITAND_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "&="          */
     BITOR_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "|="          */
     BITXOR_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "^="          */
     LSHIFT_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "<<="         */
     RSHIFT_ASSIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ">>="         */
     ARROW |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "->"          */
     BACKARROW |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "<-"          */
     DOUBLE_ARROW |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "=>"          */
     RANGEOP |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ".."          */
     CLOSEDRANGEOP |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "..="         */
     ELLIPSIS |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "..."         */
     HASH |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "#"           */
     AT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "@"           */
     QUEST |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "?"           */
     LT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "<"           */
     GT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ">"           */
     LE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "<="          */
     GE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ">="          */
     IS |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "is"          */
     AS |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "as"          */
     NOTEQ |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "!="          */
     EQUAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "=="          */
     WILDCARD |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "_"           */
     INT8 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Int8"        */
     INT16 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Int16"       */
     INT32 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Int32"       */
     INT64 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Int64"       */
     INTNATIVE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "IntNative"   */
     UINT8 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "UInt8"       */
     UINT16 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "UInt16"      */
     UINT32 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "UInt32"      */
     UINT64 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "UInt64"      */
     UINTNATIVE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "UIntNative"  */
     FLOAT16 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Float16"     */
     FLOAT32 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Float32"     */
     FLOAT64 |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Float64"     */
     RUNE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Rune"        */
     BOOLEAN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Bool"        */
     NOTHING |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Nothing"     */
     UNIT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "Unit"        */
     STRUCT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "struct"      */
     ENUM |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "enum"        */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     VARRAY |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "VArray"      */
     THISTYPE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "This"        */
     PACKAGE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "package"     */
     IMPORT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "import"      */
     CLASS |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "class"       */
     INTERFACE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "interface"   */
     FUNC |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "func"        */
     MACRO |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "macro"       */
     QUOTE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "quote"       */
     DOLLAR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "$"           */
     LET |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "let"         */
     VAR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "var"         */
     CONST |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "const"       */
     TYPE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "type"        */
     INIT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "init"        */
     THIS |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "this"        */
     SUPER |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "super"       */
     IF |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "if"          */
     ELSE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "else"        */
     CASE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "case"        */
     TRY |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "try"         */
     CATCH |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "catch"       */
     FINALLY |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "finally"     */
     FOR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "for"         */
     DO |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "do"          */
     WHILE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "while"       */
     THROW |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "throw"       */
     RETURN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "return"      */
     CONTINUE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "continue"    */
     BREAK |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "break"       */
     IN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "in"          */
     NOT_IN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "!in"         */
     MATCH |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "match"       */
     WHERE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "where"       */
     EXTEND |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "extend"      */
     WITH |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "with"        */
     PROP |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "prop"        */
     STATIC |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "static"      */
     PUBLIC |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "public"      */
     PRIVATE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "private"     */
     INTERNAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "internal"     */
     PROTECTED |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "protected"   */
     OVERRIDE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "override"    */
     REDEF |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "redef"       */
     ABSTRACT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "abstract"    */
     SEALED |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "sealed"      */
     OPEN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "open"        */
     FOREIGN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "foreign"     */
     INOUT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "inout"       */
     MUT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "mut"         */
     UNSAFE |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "unsafe"      */
     OPERATOR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "operator"    */
     SPAWN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "spawn"       */
     SYNCHRONIZED |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "synchronized */
     UPPERBOUND |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "<:"          */
     MAIN |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "main"        */
     IDENTIFIER |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "x"           */
     PACKAGE_IDENTIFIER |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "x-y"         */
     INTEGER_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "1"      */
     RUNE_BYTE_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "b'x'"   */
     FLOAT_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "'1.0'"  */
     COMMENT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "/*xx*/" */
     NL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  newline         */
     END |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  end of file     */
     SENTINEL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  ";"             */
     RUNE_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "r'x'"      */
     STRING_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. ""xx""     */
     SINGLE_QUOTED_STRING_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "'xx'"     */
     JSTRING_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "J"xx""     */
     MULTILINE_STRING |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. """"aaa""""   */
     MULTILINE_RAW_STRING |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "#"aaa"#"     */
     BOOL_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "true" or "false"  */
     UNIT_LITERAL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "()"               */
     DOLLAR_IDENTIFIER |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "$x"          */
     ANNOTATION |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  e.g. "@When"       */
     AT_EXCL |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /*  "@!"               */
     ILLEGAL |
     ...
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(right: TokenKind): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(right: TokenKind): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
 /**
 * Conversion function for UInt16 to Enum
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func getTokenKind(no: UInt16): TokenKind
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TokensIterator <: Iterator<Token> {
     /* Constructors */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(tokens: Tokens)
     
     /* Methods *//** Returns the current Option<Token>. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func peek(): Option<Token>
     
     /** Returns true if current token is the kind, otherwise false. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func seeing(kind: TokenKind): Bool
     
     /** Returns next Option<Token>. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func next(): Option<Token>
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class Tokens <: ToString & Iterable<Token> & ToBytes {
     /* Constructors *//** Create an empty tokens. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /** Create a new tokens from token array. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(tokArray: Array<Token>)
     
     /** Create a new tokens from token array. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(tokArrayList: ArrayList<Token>)
     
     /* Methods *//** Returns the size of tokens. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open prop size: Int64
     
     /** Returns the token from the index, if the index is out of bound or its element is null then throws IndexOutOfBoundsException. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func get(index: Int64): Token
     
     /** Returns an iterator over the tokens. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): TokensIterator
     
     /** Returns the concatenation of this Tokens and the argument. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func concat(tokens: Tokens): Tokens
     
     /* Operator functions *//** Returns the token at the specified index. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](index: Int64): Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open operator func [](range: Range<Int64>): Tokens
     
     /** Returns a tokens which is the result of concatenating `ts1` and `ts2`. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func +(r: Tokens): Tokens
     
     /** Returns a tokens which is the result of concatenating `ts1` and `t2`. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func +(r: Token): Tokens
     
     /** Returns current tokens which is the result of concatenating this and `tks`. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func append(tokens: Tokens): Tokens
     
     /** Returns current tokens which is the result of concatenating this and `tk`. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func append(token: Token): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func append(node: Node): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(index: Int64): Tokens
     
     /** Print the information of this tokens. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func dump(): Unit
     
     /** Convert Tokens to String. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toBytes(): Array<UInt8>
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toTokens(): Tokens
 }
 
@@ -3053,343 +3053,343 @@ Basical ToTokens method. List of supporting type in the following.
 + Bool, Rune, String
 */
 extend Token <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Tokens <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Int64 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Int32 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Int16 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Int8 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend UInt64 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend UInt32 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend UInt16 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend UInt8 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Float64 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Float32 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Float16 <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Bool <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend Rune <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
 extend String <: ToTokens {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class TypeNode <: Node {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeParameterName: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop colon: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public open func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class PrimitiveType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class RefType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeArguments: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class QualifiedType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop baseType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop dot: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop identifier: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop typeArguments: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ParenType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop parenthesizedType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TupleType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop types: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ThisType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class PrefixType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop prefixOps: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop baseType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class FuncType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop types: ArrayList<TypeNode>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop commas: Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rParen: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop arrow: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop returnType: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VArrayType <: TypeNode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(inputs: Tokens)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop keyword: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop lAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop elementTy: TypeNode
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop dollar: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop size: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop rAngle: Token
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTokens(): Tokens
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func traverse(v: Visitor): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public abstract class Visitor {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func breakTraverse(): Unit
 }
 

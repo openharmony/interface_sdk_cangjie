@@ -12,58 +12,58 @@ package std.unicode
 import std.collection.*
 
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum CasingOption {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     // Turkish
     TR |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     // Azeri
     AZ |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     // Lithuanian
     LT |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Other
 }
 
 /* Methods for  Unicode. */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface UnicodeRuneExtension {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isLetter(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isNumber(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isLowerCase(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isUpperCase(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isTitleCase(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isWhiteSpace(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toUpperCase(): Rune
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toLowerCase(): Rune
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toTitleCase(): Rune
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toUpperCase(opt: CasingOption): Rune
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toLowerCase(opt: CasingOption): Rune
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toTitleCase(opt: CasingOption): Rune
 }
 
@@ -72,95 +72,95 @@ extend Rune <: UnicodeRuneExtension {
     * Returns true if this Unicode character is Letter.
     * In Unicode, Letter includes Uppercase_Letter, Lowercase_Letter, Titlecase_Letter, Modifier_Letter and Other_Letter.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isLetter(): Bool
     
     /**
     * Returns true if this Unicode character is Number.
     * In Unicode, Number includes Decimal_Number, Letter_Number and Other_Number.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isNumber(): Bool
     
     /** Returns true if this Unicode character is Lowercase. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isLowerCase(): Bool
     
     /** Returns true if this Unicode character is Uppercase. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isUpperCase(): Bool
     
     /** Returns true if this Unicode character is Titlecase. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isTitleCase(): Bool
     
     /** Returns true if this Unicode character is whitespace. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isWhiteSpace(): Bool
     
     /** Returns the uppercase of this Unicode character. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toUpperCase(): Rune
     
     /** Returns the lowercase of this Unicode character. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toLowerCase(): Rune
     
     /** Returns the titlecase of this Unicode character. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTitleCase(): Rune
     
     /** Returns the uppercase of this Unicode character. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toUpperCase(opt: CasingOption): Rune
     
     /** Returns the lowercase of this Unicode character. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toLowerCase(opt: CasingOption): Rune
     
     /** Returns the titlecase of this Unicode character. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTitleCase(opt: CasingOption): Rune
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface UnicodeStringExtension {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func isBlank(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toLower(): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toLower(opt: CasingOption): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toTitle(): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toTitle(opt: CasingOption): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toUpper(): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func toUpper(opt: CasingOption): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func trim(): String
     
     @Deprecated[message: "Use member function `func trimEnd(): String` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func trimRight(): String
     
     @Deprecated[message: "Use member function `func trimStart(): String` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func trimLeft(): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func trimStart(): String
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func trimEnd(): String
 }
 
@@ -168,7 +168,7 @@ extend String <: UnicodeStringExtension {
     /**
     * Returns true if this string is empty or contains only whitespace Unicode, otherwise `false`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isBlank(): Bool
     
     /**
@@ -177,7 +177,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is an invalid utf8 leading code
     *         in array `itemBytes`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toLower(): String
     
     /**
@@ -186,7 +186,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is an invalid utf8 leading code
     *         in array `itemBytes`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toUpper(): String
     
     /**
@@ -195,7 +195,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is an invalid utf8 leading code
     *         in array `itemBytes`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTitle(): String
     
     /**
@@ -204,7 +204,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is an invalid utf8 leading code
     *         in array `itemBytes`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toLower(opt: CasingOption): String
     
     /**
@@ -213,7 +213,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is an invalid utf8 leading code
     *         in array `itemBytes`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toUpper(opt: CasingOption): String
     
     /**
@@ -222,7 +222,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is an invalid utf8 leading code
     *         in array `itemBytes`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toTitle(opt: CasingOption): String
     
     /**
@@ -230,7 +230,7 @@ extend String <: UnicodeStringExtension {
     *         whitespace of this string.
     * @throws IllegalArgumentException if there is no valid utf8 code in array `myData`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func trim(): String
     
     /**
@@ -238,7 +238,7 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is no valid utf8 leading code in array `myData`.
     */
     @Deprecated[message: "Use member function ` public func trimStart(): String` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func trimLeft(): String
     
     /**
@@ -246,21 +246,21 @@ extend String <: UnicodeStringExtension {
     * @throws IllegalArgumentException if there is no valid utf8 code in array `myData`.
     */
     @Deprecated[message: "Use member function ` public func trimEnd(): String` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func trimRight(): String
     
     /**
     * @return a string which is the result of removing the leading whitespace of this string.
     * @throws IllegalArgumentException if there is no valid utf8 leading code in array `myData`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func trimStart(): String
     
     /**
     * @return a string which is the result of removing the trailing whitespace of this string.
     * @throws IllegalArgumentException if there is no valid utf8 code in array `myData`.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func trimEnd(): String
 }
 

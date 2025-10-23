@@ -25,190 +25,124 @@ import std.io.*
 import std.time.*
 import std.math.*
 
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct AddressFamily <: ToString & Equatable<AddressFamily> {
     // UNSPEC
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const UNSPEC: AddressFamily = AddressFamily("UNSPEC", 0)
     
     // UNIX
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const UNIX: AddressFamily = AddressFamily("UNIX", 1)
     
     // INET
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const INET: AddressFamily = AddressFamily("INET", 2)
     
     // INET6
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const INET6: AddressFamily = AddressFamily("INET6", 10)
     
     // NETLINK
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const NETLINK: AddressFamily = AddressFamily("NETLINK", 16)
     
     // name
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public let name: String
     
     // value
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public let value: UInt16
     
     // init
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public const init(name: String, value: UInt16)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: AddressFamily): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: AddressFamily): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 
 sealed abstract class IPAddress <: ToString & Equatable<IPAddress> & Hashable & BigEndianOrder<IPAddress> {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop size: Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop hostName: ?String
     
     // parse a address string into IPAddress
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func parse(s: String): IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func tryParse(s: String): ?IPAddress
     
     // resolve domain
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func resolve(family: AddressFamily, domain: String): Array<IPAddress>
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func resolve(domain: String): Array<IPAddress>
     
     // get addr bytes
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getAddressBytes(): Array<Byte>
     
     // is ipv4 addr
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isIPv4(): Bool
     
     // is ipv6 addr
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isIPv6(): Bool
     
     // either the IPv4 address "0.0.0.0" or the IPv6 address "::".
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func isUnspecified(): Bool
     
     // Requirements for Internet Hosts -- Communication Layers (3.2.1.3 Addressing)// https://www.rfc-editor.org/rfc/rfc1122.html#section-3.2.1.3
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func isLoopback(): Bool
     
     // Host Extensions for IP Multicasting (4. HOST GROUP ADDRESSES)// https://www.rfc-editor.org/rfc/rfc1112.html#section-4
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func isMulticast(): Bool
     
     // RFC 1918 allocates 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16 as// private IPv4 address subnets.
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func isPrivate(): Bool
     
     // Dynamic Configuration of IPv4 Link-Local Addresses// https://www.rfc-editor.org/rfc/rfc3927.html#section-2.1
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func isLinkLocal(): Bool
     
     // Whether the address is a global unicast IPv6 address or a public IPv4 address
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func isGlobalUnicast(): Bool
     
     // Obtains the IP prefix object based on the prefix length.
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func getPrefix(prefixLen: UInt8): IPPrefix
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func writeBigEndian(buffer: Array<Byte>): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func readBigEndian(buffer: Array<Byte>): IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: IPAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: IPAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func hashCode(): Int64
 }
 
@@ -216,459 +150,287 @@ sealed abstract class IPAddress <: ToString & Equatable<IPAddress> & Hashable & 
 
 sealed abstract class IPPrefix <: Equatable<IPPrefix> & Hashable & ToString {
     // IPAddress
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop address: IPAddress
     
     // prefix length
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop prefixLength: UInt8
     
     // Parse the IP address prefix from the character string. If the IP address prefix is invalid, IllegalFormatException is thrown.
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func parse(s: String): IPPrefix
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func tryParse(s: String): ?IPPrefix
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func contains(rhs: IPAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func contains(rhs: IPPrefix): Bool
     
     // Overlap with the Specified IP Network
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func overlaps(rhs: IPPrefix): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func netmask(): IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func hostmask(): IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func broadcast(): IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func network(): IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public open func masked(): IPPrefix
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: IPPrefix): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: IPPrefix): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class IPSocketAddress <: SocketAddress & Equatable<IPSocketAddress> {
     // init with byte array and port
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: Array<Byte>, port: UInt16)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: String, port: UInt16)
     
     // init by IPAddress and port
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: IPAddress, port: UInt16)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop size: Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop family: AddressFamily
     
     /**
     * Parses the socket address in text format, for example, 192.168.0.0:80 or [fc00::1]:8080.
     * If the parsing fails, an exception is thrown.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func parse(s: String): IPSocketAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func tryParse(s: String): ?IPSocketAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop address: IPAddress
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop port: UInt16
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getAddressBytes(): Array<Byte>
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isIPv4(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isIPv6(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: IPSocketAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: IPSocketAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func hashCode(): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 
 // ref https://www.rfc-editor.org/rfc/rfc791.html
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class IPv4Address <: IPAddress & ToString & Equatable<IPv4Address> & LessOrEqual<IPv4Address> {
     // An IPv4 address with the address pointing to localhost: `127.0.0.1`
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let localhost: IPv4Address = IPv4Address(0x7F, 0, 0, 0x01)
     
     // An IPv4 address representing an unspecified address: `0.0.0.0`
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let unspecified: IPv4Address = IPv4Address(0, 0, 0, 0)
     
     // An IPv4 address representing the broadcast address: `255.255.255.255`
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let broadcast: IPv4Address = IPv4Address(0xFF, 0xFF, 0xFF, 0xFF)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bits: UInt32)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(a: Byte, b: Byte, c: Byte, d: Byte)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toBits(): UInt32
     
     // into in_addr
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func writeBigEndian(buffer: Array<Byte>): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func readBigEndian(buffer: Array<Byte>): IPv4Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isBroadcast(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isGlobalUnicast(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isLinkLocal(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isLoopback(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isMulticast(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isPrivate(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isUnspecified(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toIPv6Compatible(): IPv6Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toIPv6Mapped(): IPv6Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getPrefix(prefixLen: UInt8): IPPrefix
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func <=(rhs: IPv4Address): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: IPv4Address): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: IPv4Address): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 
 extend<T> Array<T> where T <: LessOrEqual<T> {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func <=(rhs: Array<T>): Bool
 }
 
 // ref https://www.rfc-editor.org/rfc/rfc4291.html
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class IPv6Address <: IPAddress & ToString & Equatable<IPv6Address> & LessOrEqual<IPv6Address> {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let localhost: IPv6Address = IPv6Address(0u16, 0, 0, 0, 0, 0, 0, 1)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let unspecified: IPv6Address = IPv6Address(0u16, 0, 0, 0, 0, 0, 0, 0)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(octets: Array<Byte>, scopeId!: ?UInt32 = None)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(a: UInt16, b: UInt16, c: UInt16, d: UInt16, e: UInt16, f: UInt16, g: UInt16, h: UInt16,
         scopeId!: ?UInt32 = None)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop scopeId: ?UInt32
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getPrefix(prefixLen: UInt8): IPPrefix
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toIPv4(): ?IPv4Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toIPv4Mapped(): ?IPv4Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func scope(scopeId: ?UInt32): IPv6Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func writeBigEndian(buffer: Array<Byte>): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static func readBigEndian(buffer: Array<Byte>): IPv6Address
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isGlobalUnicast(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isIPv4Mapped(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isLinkLocal(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isLoopback(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isMulticast(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isPrivate(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isTeredo(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isUnspecified(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func <=(rhs: IPv6Address): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: IPv6Address): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: IPv6Address): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 
 
 extend<T> Result<T> <: ToString where T <: ToString {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 
 
 
 sealed abstract class SocketAddress <: ToString & Equatable<SocketAddress> & Hashable {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop size: Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop family: AddressFamily
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getAddressBytes(): Array<Byte>
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: SocketAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: SocketAddress): Bool
 }
 
@@ -697,9 +459,7 @@ sealed abstract class SocketAddress <: ToString & Equatable<SocketAddress> & Has
 * A streaming socket is usually (but not necessarily) connected to a stream of unknown/unpredictable size
 * so the length property inherited from InputStream returns -1 for such sockets.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public interface StreamingSocket <: IOStream & Resource & ToString {
     /**
     * Local address the socket will be or currently is bound at.
@@ -707,9 +467,7 @@ public interface StreamingSocket <: IOStream & Resource & ToString {
     * @throws SocketException is the socket is already closed
     * or no local address is available (local address was not provided during creation and the socket is not connected).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     prop localAddress: SocketAddress
     
     /**
@@ -717,9 +475,7 @@ public interface StreamingSocket <: IOStream & Resource & ToString {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     prop remoteAddress: SocketAddress
     
     /**
@@ -732,9 +488,7 @@ public interface StreamingSocket <: IOStream & Resource & ToString {
     *
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     mut prop readTimeout: ?Duration
     
     /**
@@ -747,9 +501,7 @@ public interface StreamingSocket <: IOStream & Resource & ToString {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     mut prop writeTimeout: ?Duration
 }
 
@@ -765,9 +517,7 @@ public interface StreamingSocket <: IOStream & Resource & ToString {
 * Also, datagram size is always preserved (if possible, see receive/receiveFrom). For example, a peer sends datagrams of 10 and 15 bytes. Then,
 * the remote peer receives bytes in batches of the same size, 10 bytes and 15 bytes.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public interface DatagramSocket <: Resource & ToString {
     /**
     * Local address the socket will be or currently is bound at.
@@ -775,9 +525,7 @@ public interface DatagramSocket <: Resource & ToString {
     * @throws SocketException is the socket is already closed
     * or no local address is available (local address was not provided during creation and the socket is not connected).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     prop localAddress: SocketAddress
     
     /**
@@ -785,9 +533,7 @@ public interface DatagramSocket <: Resource & ToString {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     prop remoteAddress: ?SocketAddress
     
     /**
@@ -799,9 +545,7 @@ public interface DatagramSocket <: Resource & ToString {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     mut prop receiveTimeout: ?Duration
     
     /**
@@ -814,9 +558,7 @@ public interface DatagramSocket <: Resource & ToString {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     mut prop sendTimeout: ?Duration
     
     /**
@@ -832,9 +574,7 @@ public interface DatagramSocket <: Resource & ToString {
     * @throws SocketException if buffer is empty or if it is not possible to read the data.
     * @throws SocketTimeoutException if reading time has expired
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
     
     /**
@@ -844,24 +584,18 @@ public interface DatagramSocket <: Resource & ToString {
     * output buffer space available for some reason. Depending on the underlying
     * implementation, it may also silently discard a datagram in this case.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     func sendTo(address: SocketAddress, payload: Array<Byte>): Unit
 }
 
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public interface ServerSocket <: Resource & ToString {
     /**
     * Local address the server socket will be or currently is bound at.
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     prop localAddress: SocketAddress
     
     /**
@@ -870,9 +604,7 @@ public interface ServerSocket <: Resource & ToString {
     * or when there are connections remaining from the previously bound socket.
     * This function also does listen just after binding creating an incoming connections queue that could be accessed via "accept()" function.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     func bind(): Unit
     
     /**
@@ -885,9 +617,7 @@ public interface ServerSocket <: Resource & ToString {
     * @throws SocketTimeoutException if the specified timeout ellapsed before any connection request were made.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     func accept(timeout!: ?Duration): StreamingSocket
     
     /**
@@ -897,44 +627,28 @@ public interface ServerSocket <: Resource & ToString {
     * so calling accept() does takes a candidate from the queue
     * or wait until we get some request if the queue is empty.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     func accept(): StreamingSocket
 }
 
 /**
 * Transport Layer Protocol Kind
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public enum SocketNet <: ToString & Equatable<SocketNet> {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     TCP |
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     UDP |
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     UNIX
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(that: SocketNet): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(that: SocketNet): Bool
 }
 
@@ -943,36 +657,24 @@ public enum SocketNet <: ToString & Equatable<SocketNet> {
 /**
 * The SocketException class is used to handle exceptions related to socket connection errors.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class SocketException <: IOException {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init()
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(message: String)
 }
 
 /**
 * The SocketTimeoutException class is used to handle exceptions related to socket connection timeout.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class SocketTimeoutException <: Exception {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init()
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(message: String)
 }
 
@@ -981,32 +683,24 @@ public class SocketTimeoutException <: Exception {
 /**
 * TCP KeepAlive Options
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct SocketKeepAliveConfig <: ToString & Equatable<SocketKeepAliveConfig> {
     /**
     * If no data is exchanged within the `idle` period, the probe is performed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public let idle: Duration
     
     /**
     * The interval for sending probe packets is `interval`.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public let interval: Duration
     
     /**
     * Number of probe packets are sent before the connection is considered invalid.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public let count: UInt32
     
     /**
@@ -1016,96 +710,62 @@ public struct SocketKeepAliveConfig <: ToString & Equatable<SocketKeepAliveConfi
     *
     * @throws IllegalArgumentException if the specified idle or interval duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(
         idle!: Duration = Duration.second * 45,
         interval!: Duration = Duration.second * 5,
         count!: UInt32 = 5
     )
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override operator func ==(other: SocketKeepAliveConfig): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override operator func !=(other: SocketKeepAliveConfig): Bool
 }
 
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct SocketOptions {
     @Deprecated[message: "Use `public static const SOCKET: Int32` in `public struct OptionLevel` instead."]
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SOL_SOCKET: Int32 = SOL_SOCKET
     
     @Deprecated[message: "Use `public static const TCP: Int32` in `public struct OptionLevel` instead."]
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const IPPROTO_TCP: Int32 = IPPROTO_TCP
     
     @Deprecated[message: "Use `public static const UDP: Int32` in `public struct OptionLevel` instead."]
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const IPPROTO_UDP: Int32 = IPPROTO_UDP
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_KEEPALIVE: Int32 = SOCK_KEEPALIVE
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP_NODELAY: Int32 = SOCK_TCP_NODELAY
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP_QUICKACK: Int32 = SOCK_TCP_QUICKACK
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_LINGER: Int32 = SOCK_LINGER
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_SNDBUF: Int32 = SOCK_SNDBUF
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_RCVBUF: Int32 = SOCK_RCVBUF
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_REUSEADDR: Int32 = SOCK_REUSEADDR
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_REUSEPORT: Int32 = SOCK_REUSEPORT
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_BINDTODEVICE: Int32 = SOCK_BINDTODEVICE
 }
 
@@ -1122,46 +782,32 @@ public struct SocketOptions {
 * To enable users to access these system calls, the implementation makes sure that calling these wrapped cangjie API
 * will not block underlying system thread.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class RawSocket {
     /* Get local socket address */
     @Deprecated[message: "Use `public prop localAddress: RawAddress` instead."]
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop localAddr: RawAddress
     
     /* Get local socket address */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop localAddress: RawAddress
     
     /* Get remote socket address */
     @Deprecated[message: "Use `public prop remoteAddress: RawAddress` instead."]
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop remoteAddr: RawAddress
     
     /* Get remote socket address */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop remoteAddress: RawAddress
     
     /* Get or set timeout for socket read */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop readTimeout: ?Duration
     
     /* Get or set timeout for socket write */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop writeTimeout: ?Duration
     
     /**
@@ -1173,9 +819,7 @@ public class RawSocket {
     *
     * @throws SocketException if fail to create socket.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(domain: SocketDomain, `type`: SocketType, protocol: ProtocolType)
     
     /**
@@ -1185,9 +829,7 @@ public class RawSocket {
     *
     * @throws SocketException if fail to bind address.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func bind(addr: RawAddress): Unit
     
     /**
@@ -1197,9 +839,7 @@ public class RawSocket {
     *
     * @throws SocketException if fail to listen.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func listen(backlog: Int32): Unit
     
     /**
@@ -1214,9 +854,7 @@ public class RawSocket {
     * @throws SocketTimeoutException if the specified timeout ellapsed before any connection request were made.
     * @throws SocketException when other error occurs.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func accept(timeout!: ?Duration = None): RawSocket
     
     /**
@@ -1230,15 +868,11 @@ public class RawSocket {
     * @throws SocketTimeoutException if the specified timeout ellapsed before acception was made.
     * @throws SocketException when other error occurs.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func connect(addr: RawAddress, timeout!: ?Duration = None): Unit
     
     /* Close the socket */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func close(): Unit
     
     /**
@@ -1251,9 +885,7 @@ public class RawSocket {
     * @throws SocketTimeoutException when timeout.
     * @throws SocketException when other error occurs.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func sendTo(addr: RawAddress, buffer: Array<Byte>, flags: Int32): Unit
     
     /**
@@ -1266,9 +898,7 @@ public class RawSocket {
     * @throws SocketTimeoutException when timeout.
     * @throws SocketException when other error occurs.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func receiveFrom(buffer: Array<Byte>, flags: Int32): (RawAddress, Int64)
     
     /**
@@ -1280,9 +910,7 @@ public class RawSocket {
     * @throws SocketTimeoutException when timeout.
     * @throws SocketException when other error occurs.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func send(buffer: Array<Byte>, flags: Int32): Unit
     
     /**
@@ -1295,9 +923,7 @@ public class RawSocket {
     * @throws SocketTimeoutException when timeout.
     * @throws SocketException when other error occurs.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func receive(buffer: Array<Byte>, flags: Int32): Int64
     
     /**
@@ -1310,9 +936,7 @@ public class RawSocket {
     
     * @throws SocketException if fail to set socket option.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public unsafe func setSocketOption(level: Int32, option: Int32, value: CPointer<Byte>, len: Int32): Unit
     
     /**
@@ -1325,351 +949,221 @@ public class RawSocket {
     *
     * @throws SocketException if fail to get socket option.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public unsafe func getSocketOption(level: Int32, option: Int32, value: CPointer<Byte>, len: CPointer<Int32>): Unit
 }
 
 /**
 * Socket domain values.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct SocketDomain <: Equatable<SocketDomain> & ToString & Hashable {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let IPV4: SocketDomain = SocketDomain(AF_INET)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let IPV6: SocketDomain = SocketDomain(AF_INET6)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let UNIX: SocketDomain = SocketDomain(AF_UNIX)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let NETLINK: SocketDomain = SocketDomain(AF_NETLINK)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let PACKET: SocketDomain = SocketDomain(AF_PACKET)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(domain: Int32)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(r: SocketDomain): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(r: SocketDomain): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func hashCode(): Int64
 }
 
 /**
 * Socket type values.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct SocketType <: Equatable<SocketType> & ToString & Hashable {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let STREAM: SocketType = SocketType(SOCKET_STREAM)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let DATAGRAM: SocketType = SocketType(SOCKET_DGRAM)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let RAW: SocketType = SocketType(SOCKET_RAW)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let SEQPACKET: SocketType = SocketType(SOCKET_SEQPACKET)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(`type`: Int32)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(r: SocketType): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(r: SocketType): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func hashCode(): Int64
 }
 
 /**
 * Socket protocol values.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct ProtocolType <: Equatable<ProtocolType> & ToString & Hashable {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let Unspecified: ProtocolType = ProtocolType(0)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let IPV4: ProtocolType = ProtocolType(IPPROTO_IPV4)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let IPV6: ProtocolType = ProtocolType(IPPROTO_IPV6)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let ICMP: ProtocolType = ProtocolType(IPPROTO_ICMP)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let TCP: ProtocolType = ProtocolType(IPPROTO_TCP)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let UDP: ProtocolType = ProtocolType(IPPROTO_UDP)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static let RAW: ProtocolType = ProtocolType(IPPROTO_RAW)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(protocol: Int32)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(r: ProtocolType): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(r: ProtocolType): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func hashCode(): Int64
 }
 
 /**
 * Socket option level values.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct OptionLevel {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const IP: Int32 = IPPROTO_IP
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP: Int32 = IPPROTO_TCP
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const UDP: Int32 = IPPROTO_UDP
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const ICMP: Int32 = IPPROTO_ICMP
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const RAW: Int32 = IPPROTO_RAW
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SOCKET: Int32 = SOL_SOCKET
 }
 
 /**
 * Socket optoin name values.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct OptionName {
     // IPOption
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const IP_HDRINCL: Int32 = SOCK_IP_HDRINCL
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const IP_TOS: Int32 = SOCK_IP_TOS
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const IP_TTL: Int32 = SOCK_IP_TTL
     
     // TCPOption
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP_KEEPCNT: Int32 = SOCK_TCP_KEEPCNT
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP_KEEPIDLE: Int32 = SOCK_TCP_KEEPIDLE
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP_KEEPINTVL: Int32 = SOCK_TCP_KEEPINTVL
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const TCP_NODELAY: Int32 = SOCK_TCP_NODELAY
     
     // SOCKETOption
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_DEBUG: Int32 = SOCK_DEBUG
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_ACCEPTCONN: Int32 = SOCK_ACCEPTCONN
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_REUSEADDR: Int32 = SOCK_REUSEADDR
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_KEEPALIVE: Int32 = SOCK_KEEPALIVE
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_DONTROUTE: Int32 = SOCK_DONTROUTE
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_BROADCAST: Int32 = SOCK_BROADCAST
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_LINGER: Int32 = SOCK_LINGER
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_OOBINLINE: Int32 = SOCK_OOBINLINE
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_SNDBUF: Int32 = SOCK_SNDBUF
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_RCVBUF: Int32 = SOCK_RCVBUF
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_SNDTIMEO: Int32 = SOCK_SNDTIMEO
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_RCVTIMEO: Int32 = SOCK_RCVTIMEO
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public static const SO_ERROR: Int32 = SOCK_ERROR
 }
 
 /**
 * This class defines the address for RawSocket.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public struct RawAddress {
     /* Get the array of RawAddress */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop addr: Array<Byte>
     
     /**
@@ -1678,9 +1172,7 @@ public struct RawAddress {
     *
     * @param addr The byte sequence corresponding to socket address.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(addr: Array<Byte>)
 }
 
@@ -1694,24 +1186,18 @@ public struct RawAddress {
 *
 * @see StreamingSocket for more details on how do streaming sockets work.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     /**
     * Create an unconnected TCP socket ready to connect to the specified address and port
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: String, port: UInt16)
     
     /**
     * Create an unconnected TCP socket ready to connect to the specified address and port
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: SocketAddress)
     
     /**
@@ -1724,9 +1210,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Use setSocketOptionBool(SocketOptions.SOL_SOCKET, SocketOptions.SO_REUSEADDR, false) to eliminate this option if needed.
     * Also note that local and remote address should always have the same address family: for example, both IPv4.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: SocketAddress, localAddress!: ?SocketAddress)
     
     /**
@@ -1734,9 +1218,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop remoteAddress: SocketAddress
     
     /**
@@ -1745,9 +1227,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * @throws SocketException is the socket is already closed
     * or no local address is available (local address was not provided during creation and the socket is not connected).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop localAddress: SocketAddress
     
     /**
@@ -1759,9 +1239,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop readTimeout: ?Duration
     
     /**
@@ -1774,9 +1252,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop writeTimeout: ?Duration
     
     /**
@@ -1790,9 +1266,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * or reject an attempt to configure it, especially when it's not
     * allowed, unsupported or we specify a wrong name.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop bindToDevice: ?String
     
     /**
@@ -1801,9 +1275,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Changing this option may have delayed effect or may be silently ignored or reinterpreted by the operating system
     * due to some reasons such as system configurations and/or missing support of particular features in the underlying TCP stack implementation.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop keepAlive: ?SocketKeepAliveConfig
     
     /**
@@ -1819,9 +1291,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * on multiple application layers so this Nagel algorithm will simply introduce latency without
     * any benefits. So in this case TCP_NODELAY option is used to disable the debouncing.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop noDelay: Bool
     
     /**
@@ -1841,9 +1311,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * Not supported on windows and macOS
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop quickAcknowledge: Bool
     
     /**
@@ -1859,9 +1327,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop linger: ?Duration
     
     /**
@@ -1876,9 +1342,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop sendBufferSize: Int64
     
     /**
@@ -1893,9 +1357,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop receiveBufferSize: Int64
     
     /**
@@ -1908,9 +1370,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * @throws SocketTimeoutException if the waiting time has expired.
     * @throws SocketException when the connection is broken
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func read(buffer: Array<Byte>): Int64
     
     /**
@@ -1937,9 +1397,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * @throws SocketTimeoutException if the waiting time has expired.
     * @throws SocketException when the socket is closed or the connection is broken
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func write(payload: Array<Byte>): Unit
     
     /**
@@ -1953,9 +1411,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * @throws SocketTimeoutException if the waiting time has expired.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func connect(timeout!: ?Duration = None): Unit
     
     /**
@@ -1969,9 +1425,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * Throws an exception if failed (when getsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -1987,9 +1441,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     *
     * Throws an exception if failed (when setsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -2005,9 +1457,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
@@ -2021,9 +1471,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -2041,9 +1489,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
@@ -2059,9 +1505,7 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
@@ -2072,37 +1516,25 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
     * This function is reentrant.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func close(): Unit
     
     /**
     * Checks whether this socket has been explicitly closed via close()
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isClosed(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override operator func ==(other: TcpSocket): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override operator func !=(other: TcpSocket): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func hashCode(): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
 }
 
@@ -2118,36 +1550,28 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
 *
 * Instances of this type should be explicitly closed even when the bind() hasn't been invoked.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class TcpServerSocket <: ServerSocket {
     /**
     * Local address the socket will be or is currently bound at.
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop localAddress: SocketAddress
     
     /**
     * Creates a TCP server socket that is not yet bound so client can't connects until we do bind()
     * bindAt specifies the local port to bind at or zero to bind at a random free local port
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: UInt16)
     
     /**
     * Creates a TCP server socket that is not yet bound so clients can't connect until we do bind()
     * bindAt specifies the local address to bind at, possibly with zero port to bind at a random free local port
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: SocketAddress)
     
     /**
@@ -2157,9 +1581,7 @@ public class TcpServerSocket <: ServerSocket {
     * Enabled by default
     * Behaviour of this option is system-dependant. Please consult with SO_REUSEADDR/SOCK_REUSEADDR documentation before using.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop reuseAddress: Bool
     
     /**
@@ -2172,9 +1594,7 @@ public class TcpServerSocket <: ServerSocket {
     * This option could be only modified before binding and will fail
     * after a successful bind() invocation.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop reusePort: Bool
     
     /**
@@ -2189,9 +1609,7 @@ public class TcpServerSocket <: ServerSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop sendBufferSize: Int64
     
     /**
@@ -2206,9 +1624,7 @@ public class TcpServerSocket <: ServerSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop receiveBufferSize: Int64
     
     /**
@@ -2216,9 +1632,7 @@ public class TcpServerSocket <: ServerSocket {
     * This option is a hint for the operating system that may decide to ignore the value
     * or reject an attempt to configure it.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop bindToDevice: ?String
     
     /**
@@ -2226,9 +1640,7 @@ public class TcpServerSocket <: ServerSocket {
     * Changing this value is not guaranteed to be actually applied since the operating system may decide to
     * change or bump it, or simply ignore.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop backlogSize: Int64
     
     /**
@@ -2236,9 +1648,7 @@ public class TcpServerSocket <: ServerSocket {
     * or when there are connections remaining from the previously bound socket.
     * This function also does listen just after binding creating an incoming connections queue that could be accessed via "accept()" function.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func bind(): Unit
     
     /**
@@ -2259,9 +1669,7 @@ public class TcpServerSocket <: ServerSocket {
     * @throws SocketTimeoutException when the specified timeout is over
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func accept(timeout!: ?Duration): TcpSocket
     
     /**
@@ -2278,26 +1686,20 @@ public class TcpServerSocket <: ServerSocket {
     * This fact could be used for backpressure control so if a server detects that no requests could be processed for some reason
     * then it may stop doing accept() to keep client in the queue and limit workload.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func accept(): TcpSocket
     
     /**
     * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
     * This function is reentrant.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func close(): Unit
     
     /**
     * Checks whether this socket has been explicitly closed via close()
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func isClosed(): Bool
     
     /**
@@ -2309,9 +1711,7 @@ public class TcpServerSocket <: ServerSocket {
     *
     * Throws an exception if failed (when getsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -2325,9 +1725,7 @@ public class TcpServerSocket <: ServerSocket {
     *
     * Throws an exception if failed (when setsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -2341,9 +1739,7 @@ public class TcpServerSocket <: ServerSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
@@ -2355,9 +1751,7 @@ public class TcpServerSocket <: ServerSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -2373,9 +1767,7 @@ public class TcpServerSocket <: ServerSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
@@ -2389,18 +1781,14 @@ public class TcpServerSocket <: ServerSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
         value: Bool
     ): Unit
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
 }
 
@@ -2419,9 +1807,7 @@ public class TcpServerSocket <: ServerSocket {
 *
 * @see DatagramSocket for more details on how do datagram sockets work.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class UdpSocket <: DatagramSocket {
     /**
     * Creates an unbound UDP socket ready to bind at the specified port
@@ -2437,17 +1823,13 @@ public class UdpSocket <: DatagramSocket {
     * (source address copies to destination address or vice versa), however,
     * do not rely on it in case of a portable app because windows does not support it.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: UInt16)
     
     /**
     * Creates an unbound UDP socket ready to bind at the specified interface/port
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: SocketAddress)
     
     /**
@@ -2455,9 +1837,7 @@ public class UdpSocket <: DatagramSocket {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop remoteAddress: ?SocketAddress
     
     /**
@@ -2465,9 +1845,7 @@ public class UdpSocket <: DatagramSocket {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop localAddress: SocketAddress
     
     /**
@@ -2479,9 +1857,7 @@ public class UdpSocket <: DatagramSocket {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop receiveTimeout: ?Duration
     
     /**
@@ -2494,34 +1870,26 @@ public class UdpSocket <: DatagramSocket {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop sendTimeout: ?Duration
     
     /**
     * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
     * This function is reentrant.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func close(): Unit
     
     /**
     * Checks whether this socket has been explicitly closed via close()
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func isClosed(): Bool
     
     /**
     * Bind UDP socket at local port
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func bind(): Unit
     
     /**
@@ -2538,18 +1906,14 @@ public class UdpSocket <: DatagramSocket {
     * @throws SocketException if the socket is not bound.
     * @throws SocketException if the connection cannot be established.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func connect(remote: SocketAddress): Unit
     
     /**
     * Reverts the effect of connect() function so we can send and receive to/from any address again.
     * This function makes no effect if invoked multiple times or if we invoke disconnect without connect invocation.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func disconnect(): Unit
     
     /**
@@ -2566,9 +1930,7 @@ public class UdpSocket <: DatagramSocket {
     * @throws SocketException if not bound or already closed
     * @throws SocketTimeoutException if reading time has expired.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
     
     /**
@@ -2581,9 +1943,7 @@ public class UdpSocket <: DatagramSocket {
     * @throws SocketException if payload size is larger than allowed by platform.
     * @throws SocketException if connect was preliminary called and abnormal ICMP was received.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func sendTo(recipient: SocketAddress, payload: Array<Byte>): Unit
     
     /**
@@ -2596,9 +1956,7 @@ public class UdpSocket <: DatagramSocket {
     * @throws SocketException if payload size is larger than allowed by platform.
     * @throws SocketException if connect was preliminary called and abnormal ICMP was received.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func send(payload: Array<Byte>): Unit
     
     /**
@@ -2609,9 +1967,7 @@ public class UdpSocket <: DatagramSocket {
     * @throws SocketException if buffer is empty or if it is not possible to read the data.
     * @throws SocketException if not connected, not bound or already closed
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func receive(buffer: Array<Byte>): Int64
     
     /**
@@ -2620,9 +1976,7 @@ public class UdpSocket <: DatagramSocket {
     * Please note that there are limitations on when ports could be reused. Behaviour of this option
     * is system-dependant (e.g. this option is unavailable on Windows).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop reusePort: Bool
     
     /**
@@ -2630,9 +1984,7 @@ public class UdpSocket <: DatagramSocket {
     * This is especially useful when doing multicasting. Behaviour of this option is system-dependant.
     * Please consult with SO_REUSEADDR/SOCK_REUSEADDR documentation before using.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop reuseAddress: Bool
     
     /**
@@ -2647,9 +1999,7 @@ public class UdpSocket <: DatagramSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop sendBufferSize: Int64
     
     /**
@@ -2664,9 +2014,7 @@ public class UdpSocket <: DatagramSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop receiveBufferSize: Int64
     
     /**
@@ -2678,9 +2026,7 @@ public class UdpSocket <: DatagramSocket {
     *
     * Throws an exception if failed (when getsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -2696,9 +2042,7 @@ public class UdpSocket <: DatagramSocket {
     *
     * Throws an exception if failed (when setsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -2714,9 +2058,7 @@ public class UdpSocket <: DatagramSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
@@ -2730,9 +2072,7 @@ public class UdpSocket <: DatagramSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -2750,9 +2090,7 @@ public class UdpSocket <: DatagramSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
@@ -2768,18 +2106,14 @@ public class UdpSocket <: DatagramSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
         value: Bool
     ): Unit
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
 }
 
@@ -2792,27 +2126,21 @@ public class UdpSocket <: DatagramSocket {
 *
 * @see StreamingSocket for more details on how do streaming sockets work.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class UnixSocket <: StreamingSocket {
     /**
     * Create an unconnected Unix domain socket ready to connect to the specified socket path
     *
     * @param path to connect to
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(path: String, localPath!: ?String = None)
     
     /**
     * Create an unconnected Unix domain socket ready to connect to the specified socket path
     * @param address to connect to
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(address: SocketAddress, localAddress!: ?SocketAddress = None)
     
     /**
@@ -2820,9 +2148,7 @@ public class UnixSocket <: StreamingSocket {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop remoteAddress: SocketAddress
     
     /**
@@ -2831,9 +2157,7 @@ public class UnixSocket <: StreamingSocket {
     * @throws SocketException is the socket is already closed
     * or no local address is available (local address was not provided during creation and the socket is not connected).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop localAddress: SocketAddress
     
     /**
@@ -2845,9 +2169,7 @@ public class UnixSocket <: StreamingSocket {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop readTimeout: ?Duration
     
     /**
@@ -2860,9 +2182,7 @@ public class UnixSocket <: StreamingSocket {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop writeTimeout: ?Duration
     
     /**
@@ -2877,9 +2197,7 @@ public class UnixSocket <: StreamingSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop sendBufferSize: Int64
     
     /**
@@ -2894,19 +2212,13 @@ public class UnixSocket <: StreamingSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop receiveBufferSize: Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func read(buffer: Array<Byte>): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func write(buffer: Array<Byte>): Unit
     
     /**
@@ -2920,9 +2232,7 @@ public class UnixSocket <: StreamingSocket {
     * @throws SocketTimeoutException if the waiting time has expired.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func connect(timeout!: ?Duration = None): Unit
     
     /**
@@ -2934,9 +2244,7 @@ public class UnixSocket <: StreamingSocket {
     *
     * Throws an exception if failed (when getsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -2952,9 +2260,7 @@ public class UnixSocket <: StreamingSocket {
     *
     * Throws an exception if failed (when setsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -2970,9 +2276,7 @@ public class UnixSocket <: StreamingSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
@@ -2986,9 +2290,7 @@ public class UnixSocket <: StreamingSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -3006,9 +2308,7 @@ public class UnixSocket <: StreamingSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
@@ -3024,9 +2324,7 @@ public class UnixSocket <: StreamingSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
@@ -3037,22 +2335,16 @@ public class UnixSocket <: StreamingSocket {
     * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
     * This function is reentrant.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func close(): Unit
     
     /**
     * Checks whether this socket has been explicitly closed via close()
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func isClosed(): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
 }
 
@@ -3069,36 +2361,28 @@ public class UnixSocket <: StreamingSocket {
 *
 * Instances of this type should be explicitly closed even when the bind() hasn't been invoked.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class UnixServerSocket <: ServerSocket {
     /**
     * Local address the socket will be or is currently bound at.
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop localAddress: SocketAddress
     
     /**
     * Creates an anbound Unix server streaming socket configured to bind at the specified path
     * @param bindAt path for the unix server socket
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: String)
     
     /**
     * Creates an anbound Unix server streaming socket configured to bind at the specified path
     * @param bindAt path for the unix server socket
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: SocketAddress)
     
     /**
@@ -3113,9 +2397,7 @@ public class UnixServerSocket <: ServerSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop sendBufferSize: Int64
     
     /**
@@ -3130,9 +2412,7 @@ public class UnixServerSocket <: ServerSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop receiveBufferSize: Int64
     
     /**
@@ -3140,9 +2420,7 @@ public class UnixServerSocket <: ServerSocket {
     * Changing this value is not guaranteed to be actually applied since the operating system may decide to
     * change or bump it, or simply ignore.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop backlogSize: Int64
     
     /**
@@ -3153,9 +2431,7 @@ public class UnixServerSocket <: ServerSocket {
     * This operation does atomically create a socket file at the local path.
     * If the path is already existing then bind() fails with SocketException.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func bind(): Unit
     
     /**
@@ -3168,9 +2444,7 @@ public class UnixServerSocket <: ServerSocket {
     * @throws SocketTimeoutException if the spcified timeout allapsed before got pending connection request
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func accept(timeout!: ?Duration): UnixSocket
     
     /**
@@ -3180,26 +2454,20 @@ public class UnixServerSocket <: ServerSocket {
     * so calling accept() does takes a candidate from the queue
     * or wait until we get some request if the queue is empty.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func accept(): UnixSocket
     
     /**
     * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
     * This function is reentrant.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func close(): Unit
     
     /**
     * Checks whether this socket has been explicitly closed via close()
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func isClosed(): Bool
     
     /**
@@ -3213,9 +2481,7 @@ public class UnixServerSocket <: ServerSocket {
     *
     * Throws an exception if failed (when getsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -3231,9 +2497,7 @@ public class UnixServerSocket <: ServerSocket {
     *
     * Throws an exception if failed (when setsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -3249,9 +2513,7 @@ public class UnixServerSocket <: ServerSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
@@ -3265,9 +2527,7 @@ public class UnixServerSocket <: ServerSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -3285,9 +2545,7 @@ public class UnixServerSocket <: ServerSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
@@ -3303,18 +2561,14 @@ public class UnixServerSocket <: ServerSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
         value: Bool
     ): Unit
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
 }
 
@@ -3334,18 +2588,14 @@ public class UnixServerSocket <: ServerSocket {
 *
 * @see DatagramSocket for more details on how do datagram sockets work.
 */
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class UnixDatagramSocket <: DatagramSocket {
     /**
     * Creates an unbound Unix datagram socket ready to bind at the specified path
     *
     * @param bindAt local path (should be a non-existing path that will be created during bind)
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: String)
     
     /**
@@ -3353,9 +2603,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * @param bindAt local path (should be a non-existing path that will be created during bind)
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(bindAt!: SocketAddress)
     
     /**
@@ -3363,9 +2611,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop remoteAddress: ?SocketAddress
     
     /**
@@ -3373,9 +2619,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * @throws SocketException is the socket is already closed.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override prop localAddress: SocketAddress
     
     /**
@@ -3387,9 +2631,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop receiveTimeout: ?Duration
     
     /**
@@ -3402,26 +2644,20 @@ public class UnixDatagramSocket <: DatagramSocket {
     * The default value is None.
     * @throws IllegalArgumentException if the specified timeout duration is negative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override mut prop sendTimeout: ?Duration
     
     /**
     * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
     * This function is reentrant.
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func close(): Unit
     
     /**
     * Checks whether this socket has been explicitly closed via close()
     **/
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func isClosed(): Bool
     
     /**
@@ -3431,9 +2667,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * @throws SocketException if the socket is already bound or path already exists.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func bind(): Unit
     
     /**
@@ -3443,9 +2677,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * This function should be only invoked after bind()
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func connect(remotePath: String): Unit
     
     /**
@@ -3458,9 +2690,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * @throws SocketException if the socket is not bound.
     * @throws SocketException if the connection cannot be established.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func connect(remote: SocketAddress): Unit
     
     /**
@@ -3470,9 +2700,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * @throws SocketException if the socket is not bound.
     * @throws SocketException if the connection cannot be established.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func disconnect(): Unit
     
     /**
@@ -3488,9 +2716,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * @throws SocketException if buffer is empty or if it is not possible to read the data.
     * @throws SocketTimeoutException if reading time has expired.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
     
     /**
@@ -3500,9 +2726,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * output buffer space available for some reason. Depending on the underlying
     * implementation, it may also silently discard a datagram in this case.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func sendTo(recipient: SocketAddress, payload: Array<Byte>): Unit
     
     /**
@@ -3511,9 +2735,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * In other aspects, it works the same as regular `sendTo(recipient,payload).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func send(payload: Array<Byte>): Unit
     
     /**
@@ -3521,9 +2743,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * This only works if the address has been specified via connect() otherwise will fail.
     * In other aspects, it works the same as regular `receiveFrom(buffer).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func receive(buffer: Array<Byte>): Int64
     
     /**
@@ -3538,9 +2758,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop sendBufferSize: Int64
     
     /**
@@ -3555,9 +2773,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * @throws IllegalArgumentException if the specified buffer size is negative or 0.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public mut prop receiveBufferSize: Int64
     
     /**
@@ -3569,9 +2785,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * Throws an exception if failed (when getsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -3587,9 +2801,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     *
     * Throws an exception if failed (when setsockopt returns -1).
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -3605,9 +2817,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
@@ -3621,9 +2831,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -3641,9 +2849,7 @@ public class UnixDatagramSocket <: DatagramSocket {
     * Throws an exception if failed (when getsockopt returns -1) or if the result
     * has size different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
@@ -3659,68 +2865,44 @@ public class UnixDatagramSocket <: DatagramSocket {
     * Throws an exception if failed (when setsockopt returns -1), for example
     * when the option size is different from IntNative.
     */
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
         value: Bool
     ): Unit
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public override func toString(): String
 }
 
-@!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
 public class UnixSocketAddress <: SocketAddress & Equatable<UnixSocketAddress> {
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(path: Array<Byte>)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public init(path: String)
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop size: Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public prop family: AddressFamily
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func ==(rhs: UnixSocketAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public operator func !=(rhs: UnixSocketAddress): Bool
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func getAddressBytes(): Array<Byte>
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func hashCode(): Int64
     
-    @!APILevel[21,
-           syscap : "SystemCapability.Utils.Cangjie",
-           permission : "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
     public func toString(): String
 }
 

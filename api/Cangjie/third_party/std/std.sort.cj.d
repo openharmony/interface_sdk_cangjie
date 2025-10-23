@@ -22,7 +22,7 @@ import std.math.*
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>
 
 /**
@@ -35,7 +35,7 @@ public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = f
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
@@ -47,7 +47,7 @@ public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = fal
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: Array<T>, lessThan!: (T, T) -> Bool, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
@@ -59,7 +59,7 @@ public func sort<T>(data: Array<T>, lessThan!: (T, T) -> Bool, stable!: Bool = f
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T, K>(data: Array<T>, key!: (T) -> K, stable!: Bool = false, descending!: Bool = false): Unit where K <: Comparable<K>
 
 /**
@@ -70,7 +70,7 @@ public func sort<T, K>(data: Array<T>, key!: (T) -> K, stable!: Bool = false, de
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: List<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>
 
 /**
@@ -82,7 +82,7 @@ public func sort<T>(data: List<T>, stable!: Bool = false, descending!: Bool = fa
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: List<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
@@ -94,7 +94,7 @@ public func sort<T>(data: List<T>, by!: (T, T) -> Ordering, stable!: Bool = fals
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: List<T>, lessThan!: (T, T) -> Bool, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
@@ -106,7 +106,7 @@ public func sort<T>(data: List<T>, lessThan!: (T, T) -> Bool, stable!: Bool = fa
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T, K>(data: List<T>, key!: (T) -> K, stable!: Bool = false, descending!: Bool = false): Unit where K <: Comparable<K>
 
 /**
@@ -117,7 +117,7 @@ public func sort<T, K>(data: List<T>, key!: (T) -> K, stable!: Bool = false, des
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>
 
 /**
@@ -129,7 +129,7 @@ public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
@@ -141,7 +141,7 @@ public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool =
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T>(data: ArrayList<T>, lessThan!: (T, T) -> Bool, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
@@ -153,11 +153,11 @@ public func sort<T>(data: ArrayList<T>, lessThan!: (T, T) -> Bool, stable!: Bool
 * @param descending Indicates whether to use descending sorting.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func sort<T, K>(data: ArrayList<T>, key!: (T) -> K, stable!: Bool = false, descending!: Bool = false): Unit where K <: Comparable<K>
 
 @Deprecated[message: "The interface is deprecated, no substitutions."]
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface SortByExtension<T> {
     /**
     * Incoming Sort by Condition.
@@ -166,7 +166,7 @@ public interface SortByExtension<T> {
     *
     * @since 0.27.3
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func sortBy(comparator!: (T, T) -> Ordering): Unit
     
     /**
@@ -177,19 +177,19 @@ public interface SortByExtension<T> {
     *
     * @since 0.27.3
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func sortBy(stable!: Bool, comparator!: (T, T) -> Ordering): Unit
 }
 
 @Deprecated[message: "The interface is deprecated, no substitutions."]
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface SortExtension {
     /**
     * Sort data in ascending order.
     *
     * @since 0.27.3
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func sort(): Unit
     
     /**
@@ -199,7 +199,7 @@ public interface SortExtension {
     *
     * @since 0.27.3
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func sort(stable!: Bool): Unit
     
     /*
@@ -207,7 +207,7 @@ public interface SortExtension {
     *
     * @since 0.27.3
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func sortDescending(): Unit
     
     /*
@@ -217,35 +217,35 @@ public interface SortExtension {
     *
     * @since 0.27.3
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func sortDescending(stable!: Bool): Unit
 }
 
 extend<T> Array<T> <: SortByExtension<T> {
     @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortBy(comparator!: (T, T) -> Ordering): Unit
     
     @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortBy(stable!: Bool, comparator!: (T, T) -> Ordering): Unit
 }
 
 extend<T> Array<T> <: SortExtension where T <: Comparable<T> {
     @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sort(): Unit
     
     @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sort(stable!: Bool): Unit
     
     @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortDescending(): Unit
     
     @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortDescending(stable!: Bool): Unit
 }
 
@@ -258,7 +258,7 @@ extend<T> Array<T> <: SortExtension where T <: Comparable<T> {
 * @since 0.27.3
 */
 @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func stableSort<T>(data: Array<T>): Unit where T <: Comparable<T>
 
 /*
@@ -270,7 +270,7 @@ public func stableSort<T>(data: Array<T>): Unit where T <: Comparable<T>
 * @since 0.27.3
 */
 @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func stableSort<T>(data: Array<T>, comparator: (T, T) -> Ordering): Unit
 
 
@@ -282,7 +282,7 @@ public func stableSort<T>(data: Array<T>, comparator: (T, T) -> Ordering): Unit
 * @since 0.27.3
 */
 @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func unstableSort<T>(data: Array<T>): Unit where T <: Comparable<T>
 
 /**
@@ -294,7 +294,7 @@ public func unstableSort<T>(data: Array<T>): Unit where T <: Comparable<T>
 * @since 0.27.3
 */
 @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func unstableSort<T>(data: Array<T>, comparator: (T, T) -> Ordering): Unit
 
 
