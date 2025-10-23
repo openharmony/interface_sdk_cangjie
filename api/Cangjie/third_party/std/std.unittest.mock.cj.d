@@ -26,26 +26,26 @@ import std.fs.Path
 /**
 * Part of the stub chain. Specifies an action to be performed by the stub.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public sealed abstract class ActionSelector {
     /**
     * Triggering this stub will fail the test.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func fails(): Unit
 }
 
 /**
 * Defines actions available for methods.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MethodActionSelector<TRet> <: ActionSelector {
     /**
     * Stub will throw an exception.
     * @param exception to be thrown.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func throws(exception: Exception): CardinalitySelector<MethodActionSelector<TRet>>
     
     /**
@@ -53,7 +53,7 @@ public class MethodActionSelector<TRet> <: ActionSelector {
     * @param exceptionFactory will be called on each invocation to produce an exception to be thrown.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func throws(exceptionFactory: () -> Exception): CardinalitySelector<MethodActionSelector<TRet>>
     
     /**
@@ -61,7 +61,7 @@ public class MethodActionSelector<TRet> <: ActionSelector {
     * @param value to be returned.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returns(value: TRet): CardinalitySelector<MethodActionSelector<TRet>>
     
     /**
@@ -69,7 +69,7 @@ public class MethodActionSelector<TRet> <: ActionSelector {
     * @param valueFactory will be called on each invocation to produce return value.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returns(valueFactory: () -> TRet): CardinalitySelector<MethodActionSelector<TRet>>
     
     /**
@@ -78,7 +78,7 @@ public class MethodActionSelector<TRet> <: ActionSelector {
     * @param values an array of values to be returned one after another.
     * @return Continuation for that action that will be invoked after all values in the array were returned.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returnsConsecutively(values: Array<TRet>): Continuation<MethodActionSelector<TRet>>
     
     /**
@@ -87,7 +87,7 @@ public class MethodActionSelector<TRet> <: ActionSelector {
     * @param values a list of values to be returned one after another.
     * @return Continuation for that action that will be invoked after all values in the list were returned.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returnsConsecutively(values: ArrayList<TRet>): Continuation<MethodActionSelector<TRet>>
     
     /**
@@ -96,21 +96,21 @@ public class MethodActionSelector<TRet> <: ActionSelector {
     * @return CardinalitySelector for that action.
     * @throws MockFrameworkException if an object being stubbed is not a spy object.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func callsOriginal(): CardinalitySelector<MethodActionSelector<TRet>>
 }
 
 /**
 * Defines actions available for field read operations or property getters.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class GetterActionSelector<TRet> <: ActionSelector {
     /**
     * Stub will throw an exception.
     * @param exception to be thrown.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func throws(exception: Exception): CardinalitySelector<GetterActionSelector<TRet>>
     
     /**
@@ -118,7 +118,7 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @param exceptionFactory will be called on each invocation to produce an exception to be thrown.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func throws(exceptionFactory: () -> Exception): CardinalitySelector<GetterActionSelector<TRet>>
     
     /**
@@ -126,7 +126,7 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @param value to be returned.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returns(value: TRet): CardinalitySelector<GetterActionSelector<TRet>>
     
     /**
@@ -134,7 +134,7 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @param valueFactory will be called on each invocation to produce return value.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returns(valueFactory: () -> TRet): CardinalitySelector<GetterActionSelector<TRet>>
     
     /**
@@ -143,7 +143,7 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @param values an array of values to be returned one after another.
     * @return Continuation for that action that will be invoked after all values in the array were returned.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returnsConsecutively(values: Array<TRet>): Continuation<GetterActionSelector<TRet>>
     
     /**
@@ -152,7 +152,7 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @param values a list of values to be returned one after another.
     * @return Continuation for that action that will be invoked after all values in the list were returned.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returnsConsecutively(values: ArrayList<TRet>): Continuation<GetterActionSelector<TRet>>
     
     /**
@@ -161,7 +161,7 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @return CardinalitySelector for that action.
     * @throws MockFrameworkException if an object being stubbed is not a spy object.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getsOriginal(): CardinalitySelector<GetterActionSelector<TRet>>
     
     /**
@@ -169,21 +169,21 @@ public class GetterActionSelector<TRet> <: ActionSelector {
     * @param field synthetic field object managed by the framework.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func getsField(field: SyntheticField<TRet>): CardinalitySelector<GetterActionSelector<TRet>>
 }
 
 /**
 * Defines actions available for field write operations or property setters.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class SetterActionSelector<TArg> <: ActionSelector {
     /**
     * Stub will throw an exception.
     * @param exception to be thrown.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func throws(exception: Exception): CardinalitySelector<SetterActionSelector<TArg>>
     
     /**
@@ -191,14 +191,14 @@ public class SetterActionSelector<TArg> <: ActionSelector {
     * @param exceptionFactory will be called on each invocation to produce an exception to be thrown.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func throws(exceptionFactory: () -> Exception): CardinalitySelector<SetterActionSelector<TArg>>
     
     /**
     * Stub will do nothing (return () ).
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func doesNothing(): CardinalitySelector<SetterActionSelector<TArg>>
     
     /**
@@ -207,7 +207,7 @@ public class SetterActionSelector<TArg> <: ActionSelector {
     * @return CardinalitySelector for that action.
     * @throws MockFrameworkException if an object being stubbed is not a spy object.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func setsOriginal(): CardinalitySelector<SetterActionSelector<TArg>>
     
     /**
@@ -215,7 +215,7 @@ public class SetterActionSelector<TArg> <: ActionSelector {
     * @param field synthetic field object managed by the framework.
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func setsField(field: SyntheticField<TArg>): CardinalitySelector<SetterActionSelector<TArg>>
 }
 
@@ -224,7 +224,7 @@ extend MethodActionSelector<Unit> {
     * Stub will do nothing (return () ).
     * @return CardinalitySelector for that action.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func returns(): CardinalitySelector<MethodActionSelector<Unit>>
 }
 
@@ -233,52 +233,52 @@ extend MethodActionSelector<Unit> {
 *     instead of an argument inside @On or @Called macro.
 * Instances of this class should be obtained using static methods of Matchers class.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public abstract class ArgumentMatcher {
     /**
     * @param description to be used in error reports.
     * @returns receiver.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func withDescription(description: String): ArgumentMatcher
     
     /**
     * @param name of the parameter that this matcher is for.
     * @returns receiver.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func forParameter(name: String): ArgumentMatcher
     
     /**
     * @param arg value of the argument.
     * @returns whether argument value should be accpeted or not.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func matchesAny(arg: Any): Bool
 }
 
 /**
 * Base interface for typed matchers: matchers that only match values of certain types.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public abstract class TypedMatcher<T> <: ArgumentMatcher {
     /**
     * @param arg value of the argument.
     * @returns whether argument value should be accepted or not.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func matches(arg: T): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public override func matchesAny(arg: Any): Bool
 }
 
 /**
 * Matcher that matches any values.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class AnyMatcher <: ArgumentMatcher {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func matchesAny(_: Any): Bool
 }
 
@@ -286,14 +286,14 @@ public class AnyMatcher <: ArgumentMatcher {
 * Contains definitions for argument matchers that can be used as part of '@On(<stub call>)' stubbing chain.
 * Argument matchers must be defined as static functions on Matchers class.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Matchers {
     /**
     * Matches arguments based on provided predicate.
     * @param predicate used to filter values that are accepted by the predicate.
     * @returns argument matcher that accepts values that satisfy 'predicate(value) == true' condition.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func argThat<T>(predicate: (T) -> Bool): TypedMatcher<T>
     
     /**
@@ -301,7 +301,7 @@ public class Matchers {
     * @param predicate used to filter out values that are rejected.
     * @returns argument matcher that accepts values that satisfy 'predicate(value) == false' condition.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func argThatNot<T>(predicate: (T) -> Bool): TypedMatcher<T>
     
     /**
@@ -313,7 +313,7 @@ public class Matchers {
     * @param predicate used to filter values that are accepted.
     * @returns argument matcher that accepts values that satisfy 'predicate(value) == true' condition.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func argThat<T>(listener: ValueListener<T>, predicate: (T) -> Bool): TypedMatcher<T>
     
     /**
@@ -322,7 +322,7 @@ public class Matchers {
     * @param target that must be matched.
     * @returns argument matcher only allowing references to the given object.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func same<T>(target: T): TypedMatcher<T> where T <: Object
     
     /**
@@ -331,7 +331,7 @@ public class Matchers {
     * @param target that must be matched.
     * @returns argument matcher only allowing values structurally equal to the given value.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func eq<T>(target: T): TypedMatcher<T> where T <: Equatable<T>
     
     /**
@@ -339,7 +339,7 @@ public class Matchers {
     *
     * @returns argument matcher only allowing values of certain type.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func ofType<T>(): TypedMatcher<T>
     
     /**
@@ -347,7 +347,7 @@ public class Matchers {
     *
     * @returns argument matcher allowing any value.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func any(): AnyMatcher
     
     /**
@@ -357,7 +357,7 @@ public class Matchers {
     * @param listener that will be invoked on each value passed in as an argument to the stub.
     * @returns argument matcher allowing any value.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func capture<T>(listener: ValueListener<T>): TypedMatcher<T>
     
     /**
@@ -369,7 +369,7 @@ public class Matchers {
     * @returns argument matcher allowing values matching target.
     * @throws MockFrameworkException if target is neither equatable not a reference type.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func default<T>(target: T): TypedMatcher<T>
 }
 
@@ -378,12 +378,12 @@ public class Matchers {
 * Do not use directly.
 */
 extend<T> TypedMatcher<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func value(): T
 }
 
 extend AnyMatcher {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func value<T>(): T
 }
 
@@ -391,43 +391,43 @@ extend AnyMatcher {
 * Allows listening to arguments passed in to stubs.
 * Can be used together with *argThat* or *capture* argument matchers.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ValueListener<T> {
     /**
     * @returns last value proccesed by the listener if any.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func lastValue(): Option<T>
     
     /**
     * @returns a snapshot of all values processed by the listener so far.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func allValues(): Array<T>
     
     /**
     * @param callback to be invoked whenever new value is provided.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func addCallback(callback: (T) -> Unit): Unit
     
     /**
     * @returns new ValueListener without any callbacks attached to it.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     static func new(): ValueListener<T>
     
     /**
     * @param callback to be attached to the created listener.
     * @returns new ValueListener with the callback already attached.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     static func onEach(callback: (T) -> Unit): ValueListener<T>
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ConfigureMock {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func stubFunction<TRet>(
         stubCall: () -> TRet,
         matchers: Array<ArgumentMatcher>,
@@ -437,7 +437,7 @@ public class ConfigureMock {
         lineNumber: Int64
     ): MethodActionSelector<TRet>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func stubGetter<TRet>(
         stubCall: () -> TRet,
         prefixRefName: Option<String>,
@@ -446,7 +446,7 @@ public class ConfigureMock {
         lineNumber: Int64
     ): GetterActionSelector<TRet>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func stubSetter<TArg>(
         stubCall: () -> Unit,
         _: () -> TArg, // capturing type of property/field
@@ -462,9 +462,9 @@ public class ConfigureMock {
 * Specifies additional default behaviour for mock objects.
 * Explicit stubs always override default behaviour.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum StubMode {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /**
     * Mock object will return default values for common 'simple' types.
     * Use to simplify mock object setup.
@@ -472,7 +472,7 @@ public enum StubMode {
     * Supported types are: Unit, number types, option types, Bool, String, Array, ArrayList, HashSet, HashMap.
     */
     ReturnsDefaults |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     /**
     * Mock object will treat its mutable properties and fields as if they are mutable fields.
     * Similar to using SyntheticField directly but less verbose.
@@ -488,7 +488,7 @@ public enum StubMode {
 * @returns mock object of type T.
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func mock<T>(): T
 
 /**
@@ -499,7 +499,7 @@ public func mock<T>(): T
 * @returns mock object of type T.
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func mock<T>(modes: Array<StubMode>): T
 
 /**
@@ -510,69 +510,69 @@ public func mock<T>(modes: Array<StubMode>): T
 * @returns spy object that spies on passed in instance of type T.
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func spy<T>(objectToSpyOn: T): T
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public abstract class PrettyException <: Exception & PrettyPrintable {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func pprint(to: PrettyPrinter): PrettyPrinter
 }
 
 /**
 * An error in mock framework implementation. User should not expect this exception to be thrown.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MockFrameworkInternalError <: PrettyException {
 }
 
 /**
 * Erroneous or inconsistent use of mock framework API.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MockFrameworkException <: PrettyException {
 }
 
 /**
 * One or more expectation set during mock configuration were violated during test execution.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public open class ExpectationFailedException <: PrettyException {
 }
 
 /**
 * Indicates that a stub was never triggered by the code under test.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class UnnecessaryStubbingException <: PrettyException {
 }
 
 /**
 * No stubs that match this invocation were provided.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class UnstubbedInvocationException <: PrettyException {
 }
 
 /**
 * None of the provided stubs handled the call.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class UnhandledCallException <: PrettyException {
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VerificationFailedException <: PrettyException {
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class SyntheticField<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func create(initialValue!: T): SyntheticField<T>
 }
 
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class MockFramework {
     /**
     * Opens a new session. Sessions form a stacklike structure.
@@ -584,7 +584,7 @@ public class MockFramework {
     * @param name to identify a session for debugging purposes.
     * @param sessionKind indicating what stubs are allowed in this session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func openSession(name: String, sessionKind: MockSessionKind): Unit
     
     /**
@@ -596,7 +596,7 @@ public class MockFramework {
     * @throws MockFrameworkException if any misconfiguration errors were detected.
     * @throws ExpectationFailedException if any of the expectations were not met.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func closeSession(): Unit
 }
 
@@ -610,29 +610,29 @@ public class MockFramework {
 *
 * Expectations can only be verified for stubs created in *Verifiable* sessions.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum MockSessionKind {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Forbidden |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Stateless |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Verifiable
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class NoneMatcher <: ArgumentMatcher {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public override func matchesAny(arg: Any): Bool
 }
 
 extend Matchers {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func none(): NoneMatcher
 }
 
 extend NoneMatcher {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func value<T>(): Option<T>
 }
 
@@ -643,26 +643,26 @@ extend NoneMatcher {
 *     Stubs invoked more times than specified will throw ExpectationFailedException immediately.
 *     For stubs that were not invoked enough times framework will throw ExpectationFailedException after code under test finished executing.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class CardinalitySelector<A> where A <: ActionSelector {
     /**
     * Specifies that the stub can be invoked any number of times.
     * There are no expectations for this stub.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func anyTimes(): Unit
     
     /**
     * Specifies that the stub must be invoked exactly one time.
     * @return continuation representing additional actions to be performed when conditions were satisfied.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func once(): Continuation<A>
     
     /**
     * Specifies that the stub must be invoked at least one time.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func atLeastOnce(): Unit
     
     /**
@@ -670,7 +670,7 @@ public class CardinalitySelector<A> where A <: ActionSelector {
     * @param expectedTimes number of times stub must be invoked.
     * @return continuation representing additional actions to be performed when conditions were satisfied.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func times(expectedTimes: Int64): Continuation<A>
     
     /**
@@ -679,14 +679,14 @@ public class CardinalitySelector<A> where A <: ActionSelector {
     * @param max maximum number of times the stub must be invoked.
     * @return continuation representing additional actions to be performed when conditions were satisfied.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func times(min!: Int64, max!: Int64): Unit
     
     /**
     * Specifies that the stub must be invoked at least certain number of times.
     * @param minTimesExpected minimum number of times the stub must be called.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func atLeastTimes(minTimesExpected: Int64): Unit
 }
 
@@ -697,17 +697,17 @@ public class CardinalitySelector<A> where A <: ActionSelector {
 * MockFrameworkException will be thrown if there are any unfinished stub chains.
 * No guarantees are given on exact point this exception will be thrown.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Continuation<A> where A <: ActionSelector {
     /**
     * @return an ActionSelector for an action to be performed when previous actions in the chain are completed.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func then(): A
 }
 
 extend<T> Option<T> <: UntypedOption {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func value(): ?Any
 }
 
@@ -716,11 +716,11 @@ extend<T> Option<T> <: UntypedOption {
 * Exhaustive - requires every invocation on an object to be listed inside Verify block.
 * Partial - allows to list only some invocations and ignore 'uninteresting' invoactions.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public enum Exhaustiveness {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Exhaustive |
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     Partial
 }
 
@@ -731,14 +731,14 @@ public enum Exhaustiveness {
 * Calling verification functions (*that*, *ordered*, *unordered*) will not change the state of invocation log.
 * To clear the log manually use *clearInvocationLog* function.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Verify {
     /**
     * Verifies that a single *VerifyStatement* is true. Calls not matching this statement will be ignored.
     * @param VerifyStatement to check.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func that(statement: VerifyStatement): Unit
     
     /**
@@ -756,7 +756,7 @@ public class Verify {
     * @param collectStatement callback allowing to collect verification statements for this verification session.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func unordered(
         exhaustive: Exhaustiveness,
         collectStatements: (UnorderedVerifier) -> Unit
@@ -768,7 +768,7 @@ public class Verify {
     * @param collectStatement callback allowing to collect verification statements for this verification session.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func unordered(collectStatements: (UnorderedVerifier) -> Unit): Unit
     
     /**
@@ -778,7 +778,7 @@ public class Verify {
     * @param statements to be verified.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func unordered(statements: Array<VerifyStatement>): Unit
     
     /**
@@ -787,7 +787,7 @@ public class Verify {
     * @param statements to be verified.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func unordered(
         exhaustive: Exhaustiveness,
         statements: Array<VerifyStatement>
@@ -804,7 +804,7 @@ public class Verify {
     * @param collectStatement callback allowing to collect verification statements for this verification session.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func ordered(collectStatements: (OrderedVerifier) -> Unit): Unit
     
     /**
@@ -813,14 +813,14 @@ public class Verify {
     * @param statements to be verified.
     * @throws VerificationFailedException if verification fails.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func ordered(statements: Array<VerifyStatement>): Unit
     
     /**
     * Clears invocation log for the purposes of verification.
     * Expectations set during stub configugation will not be affected by this call.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func clearInvocationLog(): Unit
     
     /**
@@ -833,14 +833,14 @@ public class Verify {
     *     2. *mockObjects* contains references to objects that are not mocks or spies.
     *     3. *mockObjects* contains duplicate references.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func noInteractions(mockObjects: Array<Object>): Unit
 }
 
 /**
 * Collects statements for *unordered* verification.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class UnorderedVerifier {
     /**
     * Adds statement to this verification session.
@@ -848,14 +848,14 @@ public class UnorderedVerifier {
     * @param statement to be added.
     * @returns self.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func checkThat(statement: VerifyStatement): UnorderedVerifier
 }
 
 /**
 * Collects statements for *ordered* verification.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class OrderedVerifier {
     /**
     * Adds statement to this verification session.
@@ -863,7 +863,7 @@ public class OrderedVerifier {
     * @param statement to be added.
     * @returns self.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func checkThat(statement: VerifyStatement): OrderedVerifier
 }
 
@@ -875,14 +875,14 @@ public class OrderedVerifier {
 * If cardinality was not set explicitly default cardinality will be assumed based on verification type.
 * Cardinality cannot be reassigned after a statement was submitted to a verification session.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class VerifyStatement {
     /**
     * Constructs a *VerifyStatement*.
     * Do NOT call this directly. Use @Called macro to constuct *VerifyStatement*s.
     * API stability is not guaranteed for this function.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func fromStub<R>(
         stubCall: () -> R,
         matchers: Array<ArgumentMatcher>,
@@ -898,7 +898,7 @@ public class VerifyStatement {
     * @returns self.
     * @throws MockFrameworkException if cardinality was already set and/or statement was already submitted to a verification session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func once(): VerifyStatement
     
     /**
@@ -907,7 +907,7 @@ public class VerifyStatement {
     * @returns self.
     * @throws MockFrameworkException if cardinality was already set and/or statement was already submitted to a verification session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func atLeastOnce(): VerifyStatement
     
     /**
@@ -917,7 +917,7 @@ public class VerifyStatement {
     * @returns self.
     * @throws MockFrameworkException if cardinality was already set and/or statement was already submitted to a verification session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func times(expectedTimes: Int64): VerifyStatement
     
     /**
@@ -928,7 +928,7 @@ public class VerifyStatement {
     * @returns self.
     * @throws MockFrameworkException if cardinality was already set and/or statement was already submitted to a verification session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func times(min!: Int64, max!: Int64): VerifyStatement
     
     /**
@@ -938,7 +938,7 @@ public class VerifyStatement {
     * @returns self.
     * @throws MockFrameworkException if cardinality was already set and/or statement was already submitted to a verification session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func atLeastTimes(minTimesExpected: Int64): VerifyStatement
     
     /**
@@ -947,7 +947,7 @@ public class VerifyStatement {
     * @returns self.
     * @throws MockFrameworkException if cardinality was already set and/or statement was already submitted to a verification session.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func never(): VerifyStatement
 }
 

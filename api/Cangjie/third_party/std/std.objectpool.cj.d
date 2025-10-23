@@ -13,15 +13,15 @@ import std.collection.concurrent.*
 
 
 @Deprecated
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ObjectPool<T> where T <: Object {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(newFunc: () -> T, resetFunc!: Option<(T) -> T> = None)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func get(): T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func put(item: T): Unit
 }
 

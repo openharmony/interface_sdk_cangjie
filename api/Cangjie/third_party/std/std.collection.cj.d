@@ -12,63 +12,63 @@ package std.collection
 
 import std.math.*
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ArrayDeque<T> <: Deque<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop first: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop last: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop capacity: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addFirst(element: T): Unit
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addLast(element: T): Unit
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeFirst(): ?T
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeLast(): ?T
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reserve(additional: Int64): Unit
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
 }
 
 extend<T> ArrayDeque<T> <: ToString where T <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
@@ -79,11 +79,11 @@ extend<T> ArrayDeque<T> <: ToString where T <: ToString {
 *
 * @since 0.18.2
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ArrayList<T> <: List<T> {
     /* Defines the capacity of the ArrayList. */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop capacity: Int64
     
     /**
@@ -92,7 +92,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -103,7 +103,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
     /**
@@ -117,7 +117,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> T)
     
     /**
@@ -128,7 +128,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<T>)
     
     /**
@@ -138,7 +138,7 @@ public class ArrayList<T> <: List<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func of(elements: Array<T>): ArrayList<T>
     
     /**
@@ -148,7 +148,7 @@ public class ArrayList<T> <: List<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public unsafe func getRawArray(): Array<T>
     
     /**
@@ -157,7 +157,7 @@ public class ArrayList<T> <: List<T> {
     * @throws IndexOutOfBoundsException if "mySize" is out of bound.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
     /**
@@ -169,15 +169,15 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func get(index: Int64): ?T
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop first: ?T
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop last: ?T
     
     /**
@@ -187,7 +187,7 @@ public class ArrayList<T> <: List<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: T): Unit
     
     /**
@@ -197,7 +197,7 @@ public class ArrayList<T> <: List<T> {
     * @throws ConcurrentModificationException if there are some system errors.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(all!: Collection<T>): Unit
     
     /**
@@ -210,7 +210,7 @@ public class ArrayList<T> <: List<T> {
     */
     @Frozen
 @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: T, at!: Int64): Unit
     
     /**
@@ -223,7 +223,7 @@ public class ArrayList<T> <: List<T> {
     */
     @Frozen
 @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(all!: Collection<T>, at!: Int64): Unit
     
     /**
@@ -234,7 +234,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(at!: Int64): T
     
     /**
@@ -248,7 +248,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.31.3
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(range: Range<Int64>): Unit
     
     /**
@@ -259,7 +259,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeIf(predicate: (T) -> Bool): Unit
     
     /**
@@ -269,7 +269,7 @@ public class ArrayList<T> <: List<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     /**
@@ -280,7 +280,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reserve(additional: Int64): Unit
     
     /**
@@ -293,7 +293,7 @@ public class ArrayList<T> <: List<T> {
     */
     @Frozen
 @Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` in std.sort instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortBy(stable!: Bool, comparator!: (T, T) -> Ordering): Unit
     
     /**
@@ -305,7 +305,7 @@ public class ArrayList<T> <: List<T> {
     */
     @Frozen
 @Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` in std.sort instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortBy(comparator!: (T, T) -> Ordering): Unit
     
     /**
@@ -315,7 +315,7 @@ public class ArrayList<T> <: List<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reverse(): Unit
     
     /**
@@ -329,7 +329,7 @@ public class ArrayList<T> <: List<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](range: Range<Int64>): ArrayList<T>
     
     /**
@@ -342,7 +342,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func slice(range: Range<Int64>): ArrayList<T>
     
     /**
@@ -353,7 +353,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clone(): ArrayList<T>
     
     /**
@@ -366,7 +366,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](index: Int64): T
     
     /**
@@ -379,7 +379,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](index: Int64, value!: T): Unit
     
     /**
@@ -390,7 +390,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
     
     /**
@@ -401,7 +401,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
@@ -412,7 +412,7 @@ public class ArrayList<T> <: List<T> {
     * @since 0.18.2
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
 }
 
@@ -424,16 +424,16 @@ public class ArrayList<T> <: List<T> {
 extend<T> ArrayList<T> <: Equatable<ArrayList<T>> where T <: Equatable<T> {
     /** overloaded determination == method. */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(that: ArrayList<T>): Bool
     
     /** overloaded determination != method. */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(that: ArrayList<T>): Bool
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(element: T): Bool
 }
 
@@ -447,12 +447,12 @@ extend<T> ArrayList<T> where T <: Comparable<T> {
     */
     @Frozen
 @Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sort(stable!: Bool): Unit
     
     @Frozen
 @Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sort(): Unit
     
     /**
@@ -464,18 +464,18 @@ extend<T> ArrayList<T> where T <: Comparable<T> {
     */
     @Frozen
 @Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortDescending(stable!: Bool): Unit
     
     @Frozen
 @Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func sortDescending(): Unit
 }
 
 extend<T> ArrayList<T> <: ToString where T <: ToString {
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
@@ -488,52 +488,52 @@ extend<T> ArrayList<T> <: ToString where T <: ToString {
 // Temporary code, deleted when @Deprecated ends
 
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ArrayQueue<T> <: Queue<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func peek(): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: T): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop capacity: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reserve(additional: Int64): Unit
 }
 
 extend<T> ArrayQueue<T> <: ToString where T <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ArrayStack<T> <: Stack<T> {
     /**
     * Constructs an empty stack with the specified capacity.
@@ -541,13 +541,13 @@ public class ArrayStack<T> <: Stack<T> {
     * @param capacity the capacity of the stack
     * @throws IllegalArgumentException if the capacity is negative
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
     /**
     * Constructs an empty stack with the default capacity.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -555,7 +555,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @return the element at the top of the stack, or null if the stack is empty
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func peek(): ?T
     
     /**
@@ -563,7 +563,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @return the element at the top of the stack, or null if the stack is empty
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(): ?T
     
     /**
@@ -571,7 +571,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @param element the element to add
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: T): Unit
     
     /**
@@ -579,7 +579,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @return the capacity of the stack
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop capacity: Int64
     
     /**
@@ -587,7 +587,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @return the size of the stack
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -595,7 +595,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @return true if the stack is empty, and false otherwise
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
@@ -603,13 +603,13 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @param additional the number of additional elements to reserve space for
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reserve(additional: Int64): Unit
     
     /**
     * Clears the stack.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     /**
@@ -617,7 +617,7 @@ public class ArrayStack<T> <: Stack<T> {
     *
     * @return an array containing the elements of the stack in the order of popping the stack
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
     /**
@@ -626,21 +626,21 @@ public class ArrayStack<T> <: Stack<T> {
     * @return an iterator over the elements in the stack
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
 }
 
 extend<T> ArrayStack<T> <: ToString where T <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class ConcurrentModificationException <: Exception {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(message: String)
 }
 
@@ -652,7 +652,7 @@ public class ConcurrentModificationException <: Exception {
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func reduce<T>(operation: (T, T) -> T): (Iterable<T>) -> Option<T>
 
 /**
@@ -663,7 +663,7 @@ public func reduce<T>(operation: (T, T) -> T): (Iterable<T>) -> Option<T>
 * @return (Iterable<T>) -> R An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func fold<T, R>(initial: R, operation: (R, T) -> R): (Iterable<T>) -> R
 
 /**
@@ -673,7 +673,7 @@ public func fold<T, R>(initial: R, operation: (R, T) -> R): (Iterable<T>) -> R
 * @return Bool Whether the Iterable is empty.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func isEmpty<T>(it: Iterable<T>): Bool
 
 /**
@@ -683,7 +683,7 @@ public func isEmpty<T>(it: Iterable<T>): Bool
 * @return Int64 The number of the Iterable.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func count<T>(it: Iterable<T>): Int64
 
 /**
@@ -693,7 +693,7 @@ public func count<T>(it: Iterable<T>): Int64
 * @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func contains<T>(element: T): (Iterable<T>) -> Bool where T <: Equatable<T>
 
 /**
@@ -703,7 +703,7 @@ public func contains<T>(element: T): (Iterable<T>) -> Bool where T <: Equatable<
 * @return Option<T> The maximum value.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func max<T>(it: Iterable<T>): Option<T> where T <: Comparable<T>
 
 /**
@@ -713,7 +713,7 @@ public func max<T>(it: Iterable<T>): Option<T> where T <: Comparable<T>
 * @return Option<T> The minimum value.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func min<T>(it: Iterable<T>): Option<T> where T <: Comparable<T>
 
 /**
@@ -723,7 +723,7 @@ public func min<T>(it: Iterable<T>): Option<T> where T <: Comparable<T>
 * @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func all<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 
 /**
@@ -733,7 +733,7 @@ public func all<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 * @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func any<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 
 /**
@@ -743,7 +743,7 @@ public func any<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 * @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func none<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 
 /**
@@ -753,7 +753,7 @@ public func none<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 * @return Option<T> The first element.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func first<T>(it: Iterable<T>): Option<T>
 
 /**
@@ -763,7 +763,7 @@ public func first<T>(it: Iterable<T>): Option<T>
 * @return Option<T> The last element.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func last<T>(it: Iterable<T>): Option<T>
 
 /**
@@ -773,7 +773,7 @@ public func last<T>(it: Iterable<T>): Option<T>
 * @return (Iterable<T>) -> Option<T> An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func at<T>(n: Int64): (Iterable<T>) -> Option<T>
 
 /**
@@ -783,7 +783,7 @@ public func at<T>(n: Int64): (Iterable<T>) -> Option<T>
 * @return (Iterable<T>) -> Unit An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func forEach<T>(action: (T) -> Unit): (Iterable<T>) -> Unit
 
 /**
@@ -792,7 +792,7 @@ public func forEach<T>(action: (T) -> Unit): (Iterable<T>) -> Unit
 *
 * @since 0.18.4
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     /**
     * Initializes an empty HashMap with a default initial DEFAULT_CAPACITY (16) and a default load factor.
@@ -800,7 +800,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -811,7 +811,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<(K, V)>)
     
     /**
@@ -822,7 +822,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Array<(K, V)>)
     
     /**
@@ -835,7 +835,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
     /**
@@ -849,7 +849,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> (K, V))
     
     /**
@@ -861,7 +861,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func get(key: K): ?V
     
     /**
@@ -877,7 +877,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     */
     @Frozen
 @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(key: K, value: V): Option<V>
     
     /**
@@ -889,7 +889,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.45.1
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func entryView(key: K): MapEntryView<K, V>
     
     /**
@@ -901,7 +901,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(all!: Collection<(K, V)>): Unit
     
     /**
@@ -914,7 +914,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     */
     @Frozen
 @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(key: K): Option<V>
     
     /**
@@ -925,7 +925,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(all!: Collection<K>): Unit
     
     /**
@@ -937,7 +937,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     */
     @Frozen
 @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeIf(predicate: (K, V) -> Bool): Unit
     
     /**
@@ -947,7 +947,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     */
     @Frozen
 @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     /**
@@ -960,7 +960,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reserve(additional: Int64): Unit
     
     /**
@@ -972,7 +972,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop capacity: Int64
     
     /**
@@ -984,7 +984,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(all!: Collection<K>): Bool
     
     /**
@@ -996,7 +996,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(key: K): Bool
     
     /**
@@ -1007,7 +1007,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clone(): HashMap<K, V>
     
     /**
@@ -1018,7 +1018,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func keys(): EquatableCollection<K>
     
     /**
@@ -1029,7 +1029,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func values(): Collection<V>
     
     /**
@@ -1043,7 +1043,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](key: K): V
     
     /**
@@ -1055,7 +1055,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](key: K, value!: V): Unit
     
     /**
@@ -1066,7 +1066,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -1077,7 +1077,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): HashMapIterator<K, V>
     
     /**
@@ -1088,14 +1088,14 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
     * Returns the element in this Map as an Array.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<(K, V)>
 }
 
@@ -1106,7 +1106,7 @@ public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
 */
 extend<K, V> HashMap<K, V> <: ToString where V <: ToString, K <: ToString {
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
@@ -1119,11 +1119,11 @@ extend<K, V> HashMap<K, V> <: ToString where V <: ToString, K <: ToString {
 */
 extend<K, V> HashMap<K, V> <: Equatable<HashMap<K, V>> where V <: Equatable<V> {
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(right: HashMap<K, V>): Bool
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(right: HashMap<K, V>): Bool
 }
 
@@ -1132,7 +1132,7 @@ extend<K, V> HashMap<K, V> <: Equatable<HashMap<K, V>> where V <: Equatable<V> {
 *
 * @since 0.18.4
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class HashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equatable<K> {
     /**
     * Initialize the iterator and transfer the hashmap.
@@ -1142,7 +1142,7 @@ public class HashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equ
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(map: HashMap<K, V>)
     
     /**
@@ -1155,7 +1155,7 @@ public class HashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equ
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func next(): ?(K, V)
     
     /**
@@ -1172,7 +1172,7 @@ public class HashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equ
     * @since 0.24.1
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(): Option<(K, V)>
 }
 
@@ -1188,7 +1188,7 @@ public class HashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equ
 *
 * @since 0.18.4
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     /**
     * Constructs a new, empty set; the backing @p HashSet instance has
@@ -1197,7 +1197,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -1208,7 +1208,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<T>)
     
     /**
@@ -1219,7 +1219,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Array<T>)
     
     /**
@@ -1230,7 +1230,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(capacity: Int64)
     
     /**
@@ -1242,7 +1242,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> T)
     
     /**
@@ -1254,7 +1254,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(element: T): Bool
     
     /**
@@ -1266,7 +1266,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func subsetOf(other: ReadOnlySet<T>): Bool
     
     /**
@@ -1278,7 +1278,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(all!: Collection<T>): Bool
     
     /**
@@ -1290,7 +1290,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: T): Bool
     
     /**
@@ -1301,7 +1301,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(element: T): Bool
     
     /**
@@ -1313,7 +1313,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(all!: Collection<T>): Unit
     
     /**
@@ -1324,7 +1324,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(all!: Collection<T>): Unit
     
     /**
@@ -1335,7 +1335,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeIf(predicate: (T) -> Bool): Unit
     
     /**
@@ -1344,7 +1344,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     /**
@@ -1359,7 +1359,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func retain(all!: Set<T>): Unit
     
     /**
@@ -1370,7 +1370,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clone(): HashSet<T>
     
     /**
@@ -1383,7 +1383,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reserve(additional: Int64): Unit
     
     /**
@@ -1394,7 +1394,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop capacity: Int64
     
     /**
@@ -1405,7 +1405,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
     
     /**
@@ -1416,7 +1416,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -1427,7 +1427,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @since 0.18.4
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
@@ -1436,7 +1436,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * @throws IndexOutOfBoundsException if "mySize" is out of bound.
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
     /**
@@ -1454,7 +1454,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * ```
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func &(other: ReadOnlySet<T>): HashSet<T>
     
     /**
@@ -1472,7 +1472,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * ```
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func |(other: ReadOnlySet<T>): HashSet<T>
     
     /**
@@ -1490,7 +1490,7 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     * ```
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func -(other: ReadOnlySet<T>): HashSet<T>
 }
 
@@ -1502,208 +1502,208 @@ public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
 extend<T> HashSet<T> <: Equatable<HashSet<T>> {
     /** overloaded determination equal function. */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(that: HashSet<T>): Bool
     
     /** overloaded determination unequal function. */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(that: HashSet<T>): Bool
 }
 
 extend<T> HashSet<T> <: ToString where T <: ToString {
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class LinkedListNode<T> {
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public mut prop value: T
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop next: Option<LinkedListNode<T>>
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop prev: Option<LinkedListNode<T>>
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class LinkedList<T> <: Collection<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<T>)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Array<T>)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> T)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop first: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop last: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop firstNode: ?LinkedListNode<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop lastNode: ?LinkedListNode<T>
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addFirst(element: T): LinkedListNode<T>
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addLast(element: T): LinkedListNode<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addBefore(node: LinkedListNode<T>, element: T): LinkedListNode<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func addAfter(node: LinkedListNode<T>, element: T): LinkedListNode<T>
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(node: LinkedListNode<T>): T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeIf(predicate: (T) -> Bool): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func reverse(): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeFirst(): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeLast(): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nodeAt(index: Int64): Option<LinkedListNode<T>>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func splitOff(node: LinkedListNode<T>): LinkedList<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func forward(mark: LinkedListNode<T>): Iterator<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func backward(mark: LinkedListNode<T>): Iterator<T>
 }
 
 extend<T> LinkedList<T> <: ToString where T <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
 extend<T> LinkedList<T> <: Equatable<LinkedList<T>> where T <: Equatable<T> {
     /** overloaded determination == method. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(right: LinkedList<T>): Bool
     
     /** overloaded determination != method. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(right: LinkedList<T>): Bool
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ReadOnlyList<T> <: Collection<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop first: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop last: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func get(index: Int64): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     operator func [](index: Int64): T
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface List<T> <: ReadOnlyList<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(element: T): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(all!: Collection<T>): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(element: T, at!: Int64): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(all!: Collection<T>, at!: Int64): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(at!: Int64): T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(range: Range<Int64>): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeIf(predicate: (T) -> Bool): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func clear(): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     operator func [](index: Int64, value!: T): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface MapEntryView<K, V> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop key: K
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     mut prop value: ?V
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ReadOnlyMap<K, V> <: Collection<(K, V)> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func get(key: K): ?V
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(key: K): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(all!: Collection<K>): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func keys(): EquatableCollection<K>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func values(): Collection<V>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     operator func [](key: K): V
 }
 
@@ -1713,7 +1713,7 @@ public interface ReadOnlyMap<K, V> <: Collection<(K, V)> {
 *
 * @since 0.24.2
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface Map<K, V> <: ReadOnlyMap<K, V> {
     /**
     * Add a new key value to the map. If the key already exists,
@@ -1723,7 +1723,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(key: K, value: V): ?V
     
     /**
@@ -1734,7 +1734,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(all!: Collection<(K, V)>): Unit
     
     /**
@@ -1745,7 +1745,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(key: K): Option<V>
     
     /**
@@ -1755,7 +1755,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(all!: Collection<K>): Unit
     
     /**
@@ -1765,7 +1765,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeIf(predicate: (K, V) -> Bool): Unit
     
     /**
@@ -1773,7 +1773,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func clear(): Unit
     
     /**
@@ -1784,10 +1784,10 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     operator func [](key: K, value!: V): Unit
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func entryView(k: K): MapEntryView<K, V>
     
     /**
@@ -1803,7 +1803,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     * @since 0.59.3
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func addIfAbsent(key: K, value: V): ?V
     
     /**
@@ -1821,7 +1821,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
     * @since 0.59.3
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func replace(key: K, value: V): ?V
 }
 
@@ -1830,7 +1830,7 @@ public interface Map<K, V> <: ReadOnlyMap<K, V> {
 *
 * @since 0.24.2
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface EquatableCollection<T> <: Collection<T> {
     /**
     * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
@@ -1840,7 +1840,7 @@ public interface EquatableCollection<T> <: Collection<T> {
     *
     * @since 0.24.2
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(element: T): Bool
     
     /**
@@ -1851,28 +1851,28 @@ public interface EquatableCollection<T> <: Collection<T> {
     *
     * @since 0.24.2
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(all!: Collection<T>): Bool
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface OrderedMap<K, V> <: Map<K, V> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop first: ?(K, V)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop last: ?(K, V)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeFirst(): ?(K, V)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeLast(): ?(K, V)
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func backward(mark: K, inclusive!: Bool): Iterator<(K, V)>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func forward(mark: K, inclusive!: Bool): Iterator<(K, V)>
 }
 
@@ -1883,7 +1883,7 @@ public interface OrderedMap<K, V> <: Map<K, V> {
 * @return Iterator<Int64*T> An Iterator with index.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func enumerate<T>(it: Iterable<T>): Iterator<(Int64, T)>
 
 /**
@@ -1894,7 +1894,7 @@ public func enumerate<T>(it: Iterable<T>): Iterator<(Int64, T)>
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func filter<T>(predicate: (T) -> Bool): (Iterable<T>) -> Iterator<T>
 
 /**
@@ -1904,7 +1904,7 @@ public func filter<T>(predicate: (T) -> Bool): (Iterable<T>) -> Iterator<T>
 * @return (Iterable<T>) -> Iterator<R> A filterMap function accept an Iterable.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func filterMap<T, R>(transform: (T) -> ?R): (Iterable<T>) -> Iterator<R>
 
 /**
@@ -1915,7 +1915,7 @@ public func filterMap<T, R>(transform: (T) -> ?R): (Iterable<T>) -> Iterator<R>
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func map<T, R>(transform: (T) -> R): (Iterable<T>) -> Iterator<R>
 
 /**
@@ -1925,7 +1925,7 @@ public func map<T, R>(transform: (T) -> R): (Iterable<T>) -> Iterator<R>
 * @return Iterator<R>, an Iterator removing one level of indirection.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func flatten<T, R>(it: Iterable<T>): Iterator<R> where T <: Iterable<R>
 
 /**
@@ -1935,7 +1935,7 @@ public func flatten<T, R>(it: Iterable<T>): Iterator<R> where T <: Iterable<R>
 * @return (Iterable<T>) -> Iterator<R> A map-flatten function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func flatMap<T, R>(transform: (T) -> Iterable<R>): (Iterable<T>) -> Iterator<R>
 
 /**
@@ -1945,7 +1945,7 @@ public func flatMap<T, R>(transform: (T) -> Iterable<R>): (Iterable<T>) -> Itera
 * @return (Iterable<T>) -> Iterator<(T, R)> A zip function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func zip<T, R>(other: Iterable<R>): (Iterable<T>) -> Iterator<(T, R)>
 
 /**
@@ -1956,7 +1956,7 @@ public func zip<T, R>(other: Iterable<R>): (Iterable<T>) -> Iterator<(T, R)>
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func concat<T>(other: Iterable<T>): (Iterable<T>) -> Iterator<T>
 
 /**
@@ -1970,7 +1970,7 @@ public func concat<T>(other: Iterable<T>): (Iterable<T>) -> Iterator<T>
 * @return (Iterable<T>) -> Iterator<T> A skip function accept an Iterable as its input.
 * @throws IllegalArgumentException if skip count is less than 0.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func skip<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 
 /**
@@ -1980,7 +1980,7 @@ public func skip<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 * @return (Iterable<T>) -> Iterator<T> A take function accept an Iterable as its input.
 * @throws IllegalArgumentException if count is less than 0.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func take<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 
 /**
@@ -1990,7 +1990,7 @@ public func take<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 * @return (Iterable<T>) -> Iterator<T> A step function accept an Iterable as its input.
 * @throws IllegalArgumentException if step count is less than 0.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func step<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 
 /**
@@ -2000,7 +2000,7 @@ public func step<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 * @return (Iterable<T>) -> Iterator<T> An iteration function accept an Iterable as its input.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func inspect<T>(action: (T) -> Unit): (Iterable<T>) -> Iterator<T>
 
 /**
@@ -2008,14 +2008,14 @@ public func inspect<T>(action: (T) -> Unit): (Iterable<T>) -> Iterator<T>
 *
 * @param <T> The type of elements in the queue.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface Deque<T> <: Collection<T> {
     /**
     * Get the first element in the queue.
     *
     * @return The first element if the queue is not empty, otherwise null.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop first: ?T
     
     /**
@@ -2023,7 +2023,7 @@ public interface Deque<T> <: Collection<T> {
     *
     * @return The last element if the queue is not empty, otherwise null.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop last: ?T
     
     /**
@@ -2031,7 +2031,7 @@ public interface Deque<T> <: Collection<T> {
     *
     * @param element The element to add.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func addFirst(element: T): Unit
     
     /**
@@ -2039,7 +2039,7 @@ public interface Deque<T> <: Collection<T> {
     *
     * @param element The element to add.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func addLast(element: T): Unit
     
     /**
@@ -2047,7 +2047,7 @@ public interface Deque<T> <: Collection<T> {
     *
     * @return The removed element if the queue was not empty, otherwise null.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeFirst(): ?T
     
     /**
@@ -2055,7 +2055,7 @@ public interface Deque<T> <: Collection<T> {
     *
     * @return The removed element if the queue was not empty, otherwise null.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeLast(): ?T
 }
 
@@ -2063,40 +2063,40 @@ public interface Deque<T> <: Collection<T> {
 * Queue interface that inherits from the Collection interface.
 * @param <T> The type of elements in the queue.
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface Queue<T> <: Collection<T> {
     /**
     * Adds an element to the queue.
     * @param element The element to add.
     * @return No return value.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(element: T): Unit
     
     /**
     * Views the head element of the queue but does not remove it.
     * @return The head element of the queue, or None if the queue is empty.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func peek(): ?T
     
     /**
     * Removes and returns the head element of the queue.
     * @return The removed head element, or None if the queue is empty.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(): ?T
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface ReadOnlySet<T> <: Collection<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(element: T): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func contains(all!: Collection<T>): Bool
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func subsetOf(other: ReadOnlySet<T>): Bool
 }
 
@@ -2106,7 +2106,7 @@ public interface ReadOnlySet<T> <: Collection<T> {
 *
 * @since 0.18.4
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface Set<T> <: ReadOnlySet<T> {
     /**
     * Add element operation. If the element already exists, it will not be added.
@@ -2116,7 +2116,7 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(element: T): Bool
     
     /**
@@ -2127,7 +2127,7 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(all!: Collection<T>): Unit
     
     /**
@@ -2137,7 +2137,7 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(element: T): Bool
     
     /**
@@ -2147,7 +2147,7 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(all!: Collection<T>): Unit
     
     /**
@@ -2157,7 +2157,7 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeIf(predicate: (T) -> Bool): Unit
     
     /**
@@ -2165,7 +2165,7 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func clear(): Unit
     
     /**
@@ -2175,28 +2175,28 @@ public interface Set<T> <: ReadOnlySet<T> {
     *
     * @since 0.18.4
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func retain(all!: Set<T>): Unit
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface OrderedSet<T> <: Set<T> {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop first: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     prop last: ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeFirst(): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func removeLast(): ?T
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func backward(mark: T, inclusive!: Bool): Iterator<T>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func forward(mark: T, inclusive!: Bool): Iterator<T>
 }
 
@@ -2204,20 +2204,20 @@ public interface OrderedSet<T> <: Set<T> {
 * Stack interface, inherits from Collection interface
 * @param <T> Generic parameter
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public interface Stack<T> <: Collection<T> {
     /**
     * Peek at the top element without removing it
     * @return The top element, or None if the stack is empty
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func peek(): ?T
     
     /**
     * Remove and return the top element
     * @return The removed element, or None if the stack is empty
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func remove(): ?T
     
     /**
@@ -2225,7 +2225,7 @@ public interface Stack<T> <: Collection<T> {
     * @param element The element to be pushed
     * @return No return value
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     func add(element: T): Unit
 }
 
@@ -2236,7 +2236,7 @@ public interface Stack<T> <: Collection<T> {
 * @return String A new string containing all elements's string value in original iterator.
 *
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func collectString<T>(delimiter!: String = ""): (Iterable<T>) -> String where T <: ToString
 
 /**
@@ -2247,7 +2247,7 @@ public func collectString<T>(delimiter!: String = ""): (Iterable<T>) -> String w
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func collectArray<T>(it: Iterable<T>): Array<T>
 
 /**
@@ -2258,7 +2258,7 @@ public func collectArray<T>(it: Iterable<T>): Array<T>
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func collectArrayList<T>(it: Iterable<T>): ArrayList<T>
 
 /**
@@ -2269,7 +2269,7 @@ public func collectArrayList<T>(it: Iterable<T>): ArrayList<T>
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func collectHashSet<T>(it: Iterable<T>): HashSet<T> where T <: Hashable & Equatable<T>
 
 /**
@@ -2280,17 +2280,17 @@ public func collectHashSet<T>(it: Iterable<T>): HashSet<T> where T <: Hashable &
 *
 */
 @Frozen
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public func collectHashMap<K, V>(it: Iterable<(K, V)>): HashMap<K, V> where K <: Hashable & Equatable<K>
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     /**
     * Initializes an empty TreeMap.
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -2298,7 +2298,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<(K, V)>)
     
     /**
@@ -2308,7 +2308,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Array<(K, V)>)
     
     /**
@@ -2321,7 +2321,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> (K, V))
     
     /**
@@ -2332,7 +2332,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func get(key: K): ?V
     
     /**
@@ -2343,7 +2343,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(key: K): Bool
     
     /**
@@ -2354,7 +2354,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(all!: Collection<K>): Bool
     
     /**
@@ -2368,7 +2368,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(key: K, value: V): Option<V>
     
     /**
@@ -2379,7 +2379,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(all!: Collection<(K, V)>): Unit
     
     /**
@@ -2390,7 +2390,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(key: K): Option<V>
     
     /**
@@ -2400,7 +2400,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(all!: Collection<K>): Unit
     
     /**
@@ -2410,7 +2410,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeIf(predicate: (K, V) -> Bool): Unit
     
     /**
@@ -2418,7 +2418,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     /**
@@ -2428,7 +2428,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clone(): TreeMap<K, V>
     
     /**
@@ -2441,7 +2441,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](key: K): V
     
     /**
@@ -2452,7 +2452,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func [](key: K, value!: V): Unit
     
     /**
@@ -2462,7 +2462,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func keys(): EquatableCollection<K>
     
     /**
@@ -2472,7 +2472,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func values(): Collection<V>
     
     /**
@@ -2482,7 +2482,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -2492,7 +2492,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
@@ -2503,7 +2503,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     * @since 0.43.1
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<(K, V)>
     
     /**
@@ -2513,7 +2513,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop first: ?(K, V)
     
     /**
@@ -2523,7 +2523,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeFirst(): ?(K, V)
     
     /**
@@ -2533,7 +2533,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop last: ?(K, V)
     
     /**
@@ -2543,7 +2543,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeLast(): ?(K, V)
     
     /**
@@ -2558,7 +2558,7 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func backward(mark: K, inclusive!: Bool = true): Iterator<(K, V)>
     
     /**
@@ -2573,10 +2573,10 @@ public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func forward(mark: K, inclusive!: Bool = true): Iterator<(K, V)>
     
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func entryView(k: K): MapEntryView<K, V>
 }
 
@@ -2586,7 +2586,7 @@ extend<K, V> TreeMap<K, V> <: ToString where V <: ToString, K <: ToString & Comp
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 
@@ -2599,7 +2599,7 @@ extend<K, V> TreeMap<K, V> <: Equatable<TreeMap<K, V>> where V <: Equatable<V> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(right: TreeMap<K, V>): Bool
     
     /**
@@ -2610,11 +2610,11 @@ extend<K, V> TreeMap<K, V> <: Equatable<TreeMap<K, V>> where V <: Equatable<V> {
     *
     * @since 0.43.1
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(right: TreeMap<K, V>): Bool
 }
 
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     /**
     * Returns the size.
@@ -2622,7 +2622,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return size.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop size: Int64
     
     /**
@@ -2631,7 +2631,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return If the first node exists, the element on the first node is returned. Otherwise, None is returned.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop first: ?T
     
     /**
@@ -2640,13 +2640,13 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return If the last node exists, the element on the last node is returned. Otherwise, None is returned.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop last: ?T
     
     /**
     * Constructs a new, empty set.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -2655,7 +2655,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param elements an incoming collection.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(elements: Collection<T>)
     
     /**
@@ -2665,7 +2665,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param initElement an incoming initElement is initialized.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(size: Int64, initElement: (Int64) -> T)
     
     /**
@@ -2674,7 +2674,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param elements input element type array.
     * @return new TreeSet
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public static func of(elements: Array<T>): TreeSet<T>
     
     /**
@@ -2684,7 +2684,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return bool returns true if contained; otherwise, false.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(element: T): Bool
     
     /**
@@ -2694,7 +2694,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return bool returns true if all elements are included, false otherwise.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func contains(all!: Collection<T>): Bool
     
     /**
@@ -2704,7 +2704,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return Bool returns true if element is added; otherwise, false.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(element: T): Bool
     
     /**
@@ -2713,7 +2713,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param all the collection.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func add(all!: Collection<T>): Unit
     
     /**
@@ -2723,7 +2723,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return Bool if the removal is successful, true is returned. If the removal fails or the element does not exist, false is returned.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(element: T): Bool
     
     /**
@@ -2732,7 +2732,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param all the collection.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func remove(all!: Collection<T>): Unit
     
     /**
@@ -2741,13 +2741,13 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param predicate transfer a lambda expression for judgment.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeIf(predicate: (T) -> Bool): Unit
     
     /**
     * Clears all elements.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clear(): Unit
     
     /**
@@ -2756,7 +2756,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return returns a cloned TreeSet.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func clone(): TreeSet<T>
     
     /**
@@ -2765,7 +2765,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return bool if yes, true is returned. Otherwise, false is returned.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func isEmpty(): Bool
     
     /**
@@ -2775,7 +2775,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     *
     */
     @Frozen
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func iterator(): Iterator<T>
     
     /**
@@ -2784,7 +2784,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return If the first node exists, it is deleted and the element it stores is returned. Otherwise, it returns None.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeFirst(): ?T
     
     /**
@@ -2793,7 +2793,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return If the last node exists, it is deleted and the element it stores is returned. Otherwise, it returns None.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func removeLast(): ?T
     
     /**
@@ -2807,7 +2807,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return iterator.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func backward(mark: T, inclusive!: Bool = true): Iterator<T>
     
     /**
@@ -2821,7 +2821,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return iterator.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func forward(mark: T, inclusive!: Bool = true): Iterator<T>
     
     /**
@@ -2834,14 +2834,14 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @param all the other set.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func retain(all!: Set<T>): Unit
     
     /**
     * Returns the element in this TreeSet as an Array.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toArray(): Array<T>
     
     /**
@@ -2851,7 +2851,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * @return bool returns true if it is a subset, false otherwise.
     *
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func subsetOf(other: ReadOnlySet<T>): Bool
     
     /**
@@ -2868,7 +2868,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * let result = set1 & set2 // result is [2, 3]
     * ```
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func &(other: ReadOnlySet<T>): TreeSet<T>
     
     /**
@@ -2885,7 +2885,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * let result = set1 | set2 // result is [1, 2, 3, 4, 5]
     * ```
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func |(other: ReadOnlySet<T>): TreeSet<T>
     
     /**
@@ -2902,7 +2902,7 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     * let result = set1 - set2 // result is [1, 2]
     * ```
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func -(other: ReadOnlySet<T>): TreeSet<T>
 }
 
@@ -2912,16 +2912,16 @@ public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
 */
 extend<T> TreeSet<T> <: Equatable<TreeSet<T>> {
     /** overloaded determination equal function. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func ==(that: TreeSet<T>): Bool
     
     /** overloaded determination unequal function. */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public operator func !=(that: TreeSet<T>): Bool
 }
 
 extend<T> TreeSet<T> <: ToString where T <: ToString {
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func toString(): String
 }
 

@@ -16,7 +16,7 @@ import std.math.*
 * Random class used for random manipulations.
 * @since 0.16.5
 */
-@!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+@!APILevel[since: "22"]
 public class Random {
     /**
     * Create a new Random object.
@@ -25,7 +25,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init()
     
     /**
@@ -35,7 +35,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public init(seed: UInt64)
     
     /**
@@ -43,7 +43,7 @@ public class Random {
     *
     * @param seed a seed of type UInt64.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public prop seed: UInt64
     
     /**
@@ -57,7 +57,7 @@ public class Random {
     * @throws IllegalArgumentException if bits greater than 64.
     */
     @Deprecated["Use member function `public func nextBits(bits: UInt64): UInt64` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func next(bits: UInt64): UInt64
     
     /**
@@ -68,7 +68,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if bits greater than 64 or equal to 0.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextBits(bits: UInt64): UInt64
     
     /**
@@ -78,7 +78,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextBool(): Bool
     
     /**
@@ -89,7 +89,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt8(): UInt8
     
     /**
@@ -100,7 +100,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt16(): UInt16
     
     /**
@@ -111,7 +111,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt32(): UInt32
     
     /**
@@ -121,7 +121,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt64(): UInt64
     
     /**
@@ -132,7 +132,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt8(): Int8
     
     /**
@@ -143,7 +143,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt16(): Int16
     
     /**
@@ -154,7 +154,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt32(): Int32
     
     /**
@@ -165,7 +165,7 @@ public class Random {
     * @since 0.16.5
     */
     @OverflowWrapping
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt64(): Int64
     
     /**
@@ -179,7 +179,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper is equal to zero.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt8(upper: UInt8): UInt8
     
     /**
@@ -193,7 +193,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper is equal to zero.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt16(upper: UInt16): UInt16
     
     /**
@@ -207,7 +207,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper is equal to zero.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt32(upper: UInt32): UInt32
     
     /**
@@ -221,7 +221,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper is equal to zero.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt64(upper: UInt64): UInt64
     
     /**
@@ -235,7 +235,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper <= 0.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt8(upper: Int8): Int8
     
     /**
@@ -249,7 +249,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper <= 0.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt16(upper: Int16): Int16
     
     /**
@@ -263,7 +263,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper <= 0.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt32(upper: Int32): Int32
     
     /**
@@ -277,7 +277,7 @@ public class Random {
     *
     * @throws IllegalArgumentException if upper <= 0.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextInt64(upper: Int64): Int64
     
     /**
@@ -288,19 +288,19 @@ public class Random {
     * @since 0.16.5
     */
     @Deprecated["Use member function `public func nextBytes(arr: Array<Byte>): Unit` instead."]
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextUInt8s(array: Array<UInt8>): Array<UInt8>
     
     /**
     * Fill the byte array with random bytes.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextBytes(bytes: Array<Byte>): Unit
     
     /**
     * Generate a byte array with random bytes.
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextBytes(length: Int32): Array<Byte>
     
     /**
@@ -310,7 +310,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextFloat16(): Float16
     
     /**
@@ -320,7 +320,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextFloat32(): Float32
     
     /**
@@ -330,7 +330,7 @@ public class Random {
     *
     * @since 0.16.5
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextFloat64(): Float64
     
     /**
@@ -342,7 +342,7 @@ public class Random {
     *
     * @since 0.40.2
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextGaussianFloat16(mean!: Float16 = 0.0, sigma!: Float16 = 1.0): Float16
     
     /**
@@ -354,7 +354,7 @@ public class Random {
     *
     * @since 0.40.2
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextGaussianFloat32(mean!: Float32 = 0.0, sigma!: Float32 = 1.0): Float32
     
     /**
@@ -366,7 +366,7 @@ public class Random {
     *
     * @since 0.40.2
     */
-    @!APILevel[21, syscap : "SystemCapability.Utils.Cangjie"]
+    @!APILevel[since: "22"]
     public func nextGaussianFloat64(mean!: Float64 = 0.0, sigma!: Float64 = 1.0): Float64
 }
 
