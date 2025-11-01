@@ -1,150 +1,220 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.relative_container
+
 import ohos.arkui.component.common.*
 import ohos.base.*
 import ohos.ffi.*
 import ohos.labels.APILevel
 
-
+/**
+ * Specifies the BarrierStyle of relative container
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class BarrierStyle {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var id: String
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var direction: BarrierDirection
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var referencedId: Array<String>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(id: String, direction: BarrierDirection, referencedId: Array<String>)
+/**
+ * Specifies the id of barrier
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var id: ?String
+
+/**
+ * Specifies the direction of barrier
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var direction: ?BarrierDirection
+
+/**
+ * Specifies the referencedId of barrier
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var referencedId: ?Array<String>
+
+/**
+ * Defines the constructor of BarrierStyle.
+ *
+ * @param { ?String } id - ID of the barrier.
+ * @param { ?BarrierDirection } direction - Direction of the barrier.
+ * @param { ?Array<String> } referencedId - Referenced IDs of the barrier.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(id: ?String, direction: ?BarrierDirection, referencedId: ?Array<String>)
 }
 
+/**
+ * Specifies the position of guideLine
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class GuideLinePosition {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var start: ?Length = None
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var end: ?Length = None
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Specifies the distance to start of container
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var start: ?Length
+
+/**
+ * Specifies the distance to end of container
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var end: ?Length
+
+/**
+ * Defines the constructor of GuideLinePosition.
+ *
+ * @param { ?Length } [start] - Distance to start of container.
+ * @param { ?Length } [end] - Distance to end of container.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(start!: ?Length = None, end!: ?Length = None)
 }
 
+/**
+ * Specifies the GuideLineStyle of relative container
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class GuideLineStyle {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var id: String
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var direction: Axis
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var position: GuideLinePosition
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(id: String, direction: Axis, position: GuideLinePosition)
-}
-
+/**
+ * Specifies the id of guideLine
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class RelativeContainer <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(child!: () -> Unit = {=>})
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func guideLine(value: Array<GuideLineStyle>): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func barrier(value: Array<BarrierStyle>): This
+    public var id: ?String
+
+/**
+ * Specifies the direction of guideLine
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var direction: ?Axis
+
+/**
+ * Specifies the position of guideLine
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var position: ?GuideLinePosition
+
+/**
+ * Defines the constructor of GuideLineStyle.
+ *
+ * @param { ?String } id - ID of the guide line.
+ * @param { ?Axis } direction - Direction of the guide line.
+ * @param { ?GuideLinePosition } position - Position of the guide line.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(id: ?String, direction: ?Axis, position: ?GuideLinePosition)
 }
 
+/**
+ * Defines RelativeContainer Component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+public class RelativeContainer <: CommonMethodComponent<RelativeContainer> & RelativeContainerAttribute {
+/**
+ * Constructor of relativeContainer
+ *
+ * @param { () -> Unit } [child] - Content of the relative container.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(child!: () -> Unit = {=>})
+
+/**
+ * Specifies guideLines of relativeContainer
+ *
+ * @param { ?Array<GuideLineStyle> } value - Array of guide line styles.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func guideLine(value: ?Array<GuideLineStyle>): This
+
+/**
+ * Specifies barriers of relativeContainer
+ *
+ * @param { ?Array<BarrierStyle> } value - Array of barrier styles.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func barrier(value: ?Array<BarrierStyle>): This
+}
+
+/**
+ * Defines the RelativeContainer attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface RelativeContainerAttribute <: CommonMethod<RelativeContainerAttribute> {
+/**
+ * Specifies guideLines of relativeContainer
+ *
+ * @param { ?Array<GuideLineStyle> } value - Array of guide line styles.
+ * @returns { RelativeContainerAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func guideLine(value: ?Array<GuideLineStyle>): RelativeContainerAttribute
+
+/**
+ * Specifies barriers of relativeContainer
+ *
+ * @param { ?Array<BarrierStyle> } value - Array of barrier styles.
+ * @returns { RelativeContainerAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func barrier(value: ?Array<BarrierStyle>): RelativeContainerAttribute
+}

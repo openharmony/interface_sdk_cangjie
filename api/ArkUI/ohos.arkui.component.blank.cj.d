@@ -1,45 +1,60 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.blank
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.labels.APILevel
 
-
+/**
+ * Defines Blank Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Blank <: ViewBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(min!: Length = 0.vp)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func color(value: ResourceColor): This
+public class Blank <: CommonMethodComponent<Blank> & BlankAttribute {
+/**
+ * Minimum size of the Blank component in the container along the main axis.
+ *
+ * @param { ?Length } [min] - Blank options.
+ * @default 0.vp
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(min!: ?Length = None)
+
+/**
+ * Sets the color to fill the blank.
+ *
+ * @param { ?ResourceColor } value - Fill color for the blank. Default value: Color.Transparent.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func color(value: ?ResourceColor): This
 }
 
+/**
+ * Defines the Blank attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface BlankAttribute <: CommonMethod<BlankAttribute> {
+/**
+ * Sets the color to fill the blank
+ *
+ * @param { ?ResourceColor } value - Fill color for the blank. Default value: Color.Transparent.
+ * @returns { BlankAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func color(value: ?ResourceColor): BlankAttribute
+}

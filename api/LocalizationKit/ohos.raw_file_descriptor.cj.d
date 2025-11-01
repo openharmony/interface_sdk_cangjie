@@ -13,55 +13,44 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.raw_file_descriptor
-import ohos.ffi.*
-import ohos.labels.*
 
+import ohos.labels.APILevel
 
 /**
-* Contains rawFile descriptor information.
-*
-* @relation export interface RawFileDescriptor
-*/
+ * Contains rawFile descriptor information.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public class RawFileDescriptor {
     /**
-    * rawfile descriptor
-    *
-    * @relation fd: number
-    */
+     * rawfile descriptor
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let fd: Int32
-    
+    public var fd: Int32
+
     /**
-    * the offset from where the raw file starts in the HAP
-    *
-    * @relation offset: number
-    */
+     * the offset from where the raw file starts in the HAP
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let offset: Int64
-    
+    public var offset: Int64
+
     /**
-    * the length of the raw file in the HAP
-    *
-    * @relation length: number
-    */
+     * the length of the raw file in the HAP
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let length: Int64
+    public var length: Int64
 }
-
-

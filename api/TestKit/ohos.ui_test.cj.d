@@ -13,214 +13,213 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.ui_test
-import ohos.ffi.*
 
-import ohos.labels.*
-import ohos.business_exception.*
-import ohos.hilog.*
-import std.collection.*
-import std.convert.Parsable
-import ohos.encoding.json.*
-import std.convert.*
-import std.sync.*
-import ohos.app.ability.ability_delegator_registry.*
-import ohos.app.ability.ui_ability.*
-import ohos.callback_invoke.*
-import std.deriving.*
+import ohos.callback_invoke.Callback
+import ohos.labels.APILevel
 
 /**
-* The unified facade of UiTest framework,can be used to find Component,trigger keyEvents,perform
-* coordinates-based UI actions,capture screen and so on.
-*
-* @relation declare class Driver
-*/
+ * The unified facade of UiTest framework,can be used to find Component,trigger keyEvents,perform
+ * coordinates-based UI actions,capture screen and so on.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class Driver {
     /**
-    * Create an Driver object.
-    *
-    * @throws { BusinessException } 17000001 - Initialization failed.
-    * @relation static create(): Driver
-    */
+     * Create an Driver object.
+     *
+     * @returns { Driver } the Driver object.
+     * @throws { BusinessException } 17000001 - Initialization failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public static func create(): Driver
-    
+
     /**
-    * Delay with specified duration.
-    *
-    * @param { Int32 } duration - the delay duration in milliseconds, not less than 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation delayMs(duration: number): Promise<void>
-    */
+     * Delay with specified duration.
+     *
+     * @param { Int32 } duration - the delay duration in milliseconds, not less than 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func delayMs(duration: Int32): Unit
-    
+
     /**
-    * Find the first matched Component on current UI.
-    *
-    * @returns { ?Component } the first matched Component or undefined.
-    * @relation findComponent(on: On): Promise<Component|null>
-    */
+     * Find the first matched Component on current UI.
+     *
+     * @param { On } on - the attribute requirements of the target Component.
+     * @returns { ?Component } the first matched Component.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func findComponent(on: On): ?Component
-    
+
     /**
-    * Find all the matched Components on current UI.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation findComponents(on: On): Promise<Array<Component>|null>
-    */
+     * Find the first matched UiWindow window.
+     *
+     * @param { WindowFilter } filter - the filer condition of the target window.
+     * @returns { ?UiWindow } the first matched UiWindow window.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func findComponents(on: On): ?Array<Component>
-    
-    /**
-    * Find the first matched UiWindow window.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation findWindow(filter: WindowFilter): Promise<UiWindow|null>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func findWindow(filter: WindowFilter): ?UiWindow
-    
+
     /**
-    * Find the first matched Component on current UI during the time given.
-    *
-    * @param { Int32 } time - duration of finding in milliseconds, not less than 0.
-    * @returns { ?Component } the first matched Component or undefined.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation waitForComponent(on: On, time: number): Promise<Component|null>
-    */
+     * Find the first matched Component on current UI during the time given.
+     *
+     * @param { On } on - the attribute requirements of the target Component.
+     * @param { Int32 } time - duration of finding in milliseconds, not less than 0.
+     * @returns { ?Component } the first matched Component.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func waitForComponent(on: On, time: Int32): ?Component
-    
+
     /**
-    * Assert t the matched Components exists on current UI;if not,assertError will be raised.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000003 - Assertion failed.
-    * @relation assertComponentExist(on: On): Promise<void>
-    */
+     * Find all the matched Components on current UI.
+     *
+     * @param { On } on - the attribute requirements of the target Component.
+     * @returns { ?Array<Component> } the matched Components list.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func findComponents(on: On): ?Array<Component>
+
+    /**
+     * Assert that the matched Components exists on current UI;if not,assertError will be raised.
+     *
+     * @param { On } on - the attribute requirements of the target Component.
+     * @throws { BusinessException } 17000003 - Assertion failed.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func assertComponentExist(on: On): Unit
-    
+
     /**
-    * Press the BACK key.
-    *
-    * @relation pressBack(): Promise<void>
-    */
+     * Press the BACK key.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        workerthread: true
     ]
     public func pressBack(): Unit
-    
+
     /**
-    * Press the specified key.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation triggerKey(keyCode: number): Promise<void>
-    */
+     * Press the specified key.
+     *
+     * @param { Int32 } keyCode - the target keyCode.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func triggerKey(keyCode: Int32): Unit
-    
+
     /**
-    * Press two or three key combinations
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
-    */
+     * Press two or three key combinations
+     *
+     * @param { Int32 } key0 - the first keyCode.
+     * @param { Int32 } key1 - the second keyCode.
+     * @param { Int32 } [key2] - the third keyCode,set it default 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func triggerCombineKeys(key0: Int32, key1: Int32, key2!: Int32 = 0): Unit
-    
+
     /**
-    * Click on the specified location on the screen.
-    *
-    * @param { Int32 } x - the x-coordinate, not less than 0.
-    * @param { Int32 } y - the y-coordinate, not less than 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation click(x: number, y: number): Promise<void>
-    */
+     * Click on the specified location on the screen.
+     *
+     * @param { Int32 } x - the x-coordinate, not less than 0.
+     * @param { Int32 } y - the y-coordinate, not less than 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func click(x: Int32, y: Int32): Unit
-    
+
     /**
-    * DoubleClick on the specified location on the screen.
-    *
-    * @param { Int32 } x - the x-coordinate, not less than 0.
-    * @param { Int32 } y - the y-coordinate, not less than 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation doubleClick(x: number, y: number): Promise<void>
-    */
+     * DoubleClick on the specified location on the screen.
+     *
+     * @param { Int32 } x - the x-coordinate, not less than 0.
+     * @param { Int32 } y - the y-coordinate, not less than 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func doubleClick(x: Int32, y: Int32): Unit
-    
+
     /**
-    * LongClick on the specified location on the screen.
-    *
-    * @param { Int32 } x - the x-coordinate, not less than 0.
-    * @param { Int32 } y - the y-coordinate, not less than 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation longClick(x: number, y: number): Promise<void>
-    */
+     * LongClick on the specified location on the screen.
+     *
+     * @param { Int32 } x - the x-coordinate, not less than 0.
+     * @param { Int32 } y - the y-coordinate, not less than 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func longClick(x: Int32, y: Int32): Unit
-    
+
     /**
-    * Swipe on the screen between the specified points.
-    *
-    * @param { Int32 } startx - the x-coordinate of the starting point, not less than 0.
-    * @param { Int32 } starty - the y-coordinate of the starting point, not less than 0.
-    * @param { Int32 } endx - the x-coordinate of the ending point, not less than 0.
-    * @param { Int32 } endy - the y-coordinate of the ending point, not less than 0.
-    * @param { Int32 } speed - the speed of swipe(pixels per second),ranges from 200 to 40000.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation swipe(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
-    */
+     * Swipe on the screen between the specified points.
+     *
+     * @param { Int32 } startx - the x-coordinate of the starting point, not less than 0.
+     * @param { Int32 } starty - the y-coordinate of the starting point, not less than 0.
+     * @param { Int32 } endx - the x-coordinate of the ending point, not less than 0.
+     * @param { Int32 } endy - the y-coordinate of the ending point, not less than 0.
+     * @param { Int32 } [speed] - the speed of swipe(pixels per second),ranges from 200 to 40000. Set it default 600 if out of range.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func swipe(
         startx: Int32,
@@ -229,21 +228,21 @@ public class Driver {
         endy: Int32,
         speed!: Int32 = 600
     ): Unit
-    
+
     /**
-    * Drag on the screen between the specified points.
-    *
-    * @param { Int32 } startx - the x-coordinate of the starting point, not less than 0.
-    * @param { Int32 } starty - the y-coordinate of the starting point, not less than 0.
-    * @param { Int32 } endx - the x-coordinate of the ending point, not less than 0.
-    * @param { Int32 } endy - the y-coordinate of the ending point, not less than 0.
-    * @param { Int32 } [speed] the speed of drag(pixels per second),ranges from 200 to 40000.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation drag(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
-    */
+     * Drag on the screen between the specified points.
+     *
+     * @param { Int32 } startx - the x-coordinate of the starting point, not less than 0.
+     * @param { Int32 } starty - the y-coordinate of the starting point, not less than 0.
+     * @param { Int32 } endx - the x-coordinate of the ending point, not less than 0.
+     * @param { Int32 } endy - the y-coordinate of the ending point, not less than 0.
+     * @param { Int32 } [speed] - the speed of drag(pixels per second),ranges from 200 to 40000. Set it default 600 if out of range.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func drag(
         startx: Int32,
@@ -252,1782 +251,1766 @@ public class Driver {
         endy: Int32,
         speed!: Int32 = 600
     ): Unit
-    
+
     /**
-    * Capture current screen and save as picture which PNG format.
-    *
-    * @param { String } savePath - the path where to store the picture, must be in the application sandbox directory.
-    * @returns { Bool } true if screen-capturing and file-storing are completed successfully,false otherwise.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation screenCap(savePath: string): Promise<boolean>
-    */
+     * Capture current screen and save as picture which PNG format.
+     *
+     * @param { String } savePath - the path where to store the picture, must be in the application sandbox directory.
+     * @returns { Bool } true if screen-capturing and file-storing are completed successfully,false otherwise.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func screenCap(savePath: String): Bool
-    
+
     /**
-    * Set the rotation of the device display.
-    *
-    * @param { DisplayRotation } rotation - the target rotation to set.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation setDisplayRotation(rotation: DisplayRotation): Promise<void>
-    */
+     * Set the rotation of the device display.
+     *
+     * @param { DisplayRotation } rotation - the target rotation to set.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func setDisplayRotation(rotation: DisplayRotation): Unit
-    
+
     /**
-    * Get the rotation of the device display.
-    *
-    * @returns { DisplayRotation } the current display rotation.
-    * @relation getDisplayRotation(): Promise<DisplayRotation>
-    */
+     * Get the rotation of the device display.
+     *
+     * @returns { DisplayRotation } the current display rotation.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        workerthread: true
     ]
     public func getDisplayRotation(): DisplayRotation
-    
+
     /**
-    * Enable/disable the rotation of device display.
-    *
-    * @param { Bool } enabled - enable the rotation or not.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation setDisplayRotationEnabled(enabled: boolean): Promise<void>
-    */
+     * Enable/disable the rotation of device display.
+     *
+     * @param { Bool } enabled - enable the rotation or not.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func setDisplayRotationEnabled(enabled: Bool): Unit
-    
+
     /**
-    * Get the size of the device display.
-    *
-    * @returns { Point } the size of the device display.
-    * @relation getDisplaySize(): Promise<Point>
-    */
+     * Get the size of the device display.
+     *
+     * @returns { Point } the size of the device display.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        workerthread: true
     ]
     public func getDisplaySize(): Point
-    
+
     /**
-    * Get the density of the device display.
-    *
-    * @returns { Point } the density of the device display.
-    * @relation getDisplayDensity(): Promise<Point>
-    */
+     * Get the density of the device display.
+     *
+     * @returns { Point } the density of the device display.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        workerthread: true
     ]
     public func getDisplayDensity(): Point
-    
+
     /**
-    * Wake up the device display.
-    *
-    * @relation wakeUpDisplay(): Promise<void>
-    */
+     * Wake up the device display.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        workerthread: true
     ]
     public func wakeUpDisplay(): Unit
-    
+
     /**
-    * Press the home key.
-    *
-    * @relation pressHome(): Promise<void>
-    */
+     * Press the home key.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        workerthread: true
     ]
     public func pressHome(): Unit
-    
+
     /**
-    * Wait for the UI become idle.
-    *
-    * @param { Int32 } idleTime - the threshold of UI idle time, in millisecond, not less than 0.
-    * @param { Int32 } timeout - the maximum time to wait for idle, in millisecond, not less than 0.
-    * @returns { Bool } true if wait for idle succeed in the timeout, false otherwise.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation waitForIdle(idleTime: number, timeout: number): Promise<boolean>
-    */
+     * Wait for the UI become idle.
+     *
+     * @param { Int32 } idleTime - the threshold of UI idle time, in millisecond, not less than 0.
+     * @param { Int32 } timeout - the maximum time to wait for idle, in millisecond, not less than 0.
+     * @returns { Bool } true if wait for idle succeed in the timeout, false otherwise.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func waitForIdle(idleTime: Int32, timeout: Int32): Bool
-    
+
     /**
-    * Inject multi-pointer action on the device display.
-    *
-    * @param { PointerMatrix } pointers - the two-dimensional array of pointers to inject.
-    * @param { Int32 } [speed] - the speed of swipe(pixels per second),ranges from 200 to 40000. Set it default 600 if out of range or null or undefined.
-    * @returns { Bool } true if the operation finished, false
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boolean>
-    */
+     * Inject fling on the device display.
+     *
+     * @param { Point } from - the coordinate point where the finger touches the screen.
+     * @param { Point } to - the coordinate point where the finger leaves the screen.
+     * @param { Int32 } stepLen - the length of each step, in pixels.
+     * @param { Int32 } speed - the speed of fling(pixels per second),ranges from 200 to 40000. Set it default 600 if out of range.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func injectMultiPointerAction(pointers: PointerMatrix, speed!: Int32 = 600): Bool
-    
-    /**
-    * Inject fling on the device display.
-    *
-    * @param { Point } from - the coordinate point where the finger touches the screen.
-    * @param { Point } to - the coordinate point where the finger leaves the screen.
-    * @param { Int32 } stepLen - the length of each step, in pixels.
-    * @param { Int32 } speed - the speed of fling(pixels per second),ranges from 200 to 40000.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func fling(from: Point, to: Point, stepLen: Int32, speed: Int32): Unit
-    
+
     /**
-    * Inject fling on the device display.
-    *
-    * @param { UiDirection } direction - the direction of this action.
-    * @param { Int32 } speed - the speed of fling (pixels per second), default is 600.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation fling(direction: UiDirection, speed: number): Promise<void>
-    */
+     * Inject multi-pointer action on the device display.
+     *
+     * @param { PointerMatrix } pointers - the two-dimensional array of pointers to inject.
+     * @param { Int32 } [speed] - the speed of swipe(pixels per second),ranges from 200 to 40000. Set it default 600 if
+     * out of range.
+     * @returns { Bool } true if the operation finished, false otherwise.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func injectMultiPointerAction(pointers: PointerMatrix, speed!: Int32 = 600): Bool
+
+    /**
+     * Inject fling on the device display.
+     *
+     * @param { UiDirection } direction - the direction of this action.
+     * @param { Int32 } speed - the speed of fling (pixels per second),default is 600,the value ranges from 200 to 40000,set it 600 if out of range.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func fling(direction: UiDirection, speed: Int32): Unit
-    
+
     /**
-    * Capture the specified area of current screen and save as picture which PNG format.
-    *
-    * @param { String } savePath - the path where to store the picture, must be in the application sandbox directory.
-    * @param { Rect } [rect] - the specified area of current screen, default to full screen.
-    * @returns { Bool } true if screen-capturing and file-storing are completed successfully, false otherwise.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation screenCapture(savePath: string, rect?: Rect): Promise<boolean>
-    */
+     * Click on the specified location on the screen with the specified mouse button, and press the specified key
+     * simultaneously if necessary.
+     *
+     * @param { Point } p - the coordinate of the specified location.
+     * @param { MouseButton } btnId - the button of Mouse.
+     * @param { Int32 } [key1] - the first keyCode,set it default 0.
+     * @param { Int32 } [key2] - the second keyCode,set it default 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func screenCapture(savePath: String, rect!: Rect = Rect(0,0,0,0)): Bool
-    
-    /**
-    * Click on the specified location on the screen with the specified mouse button, and press the specified key simultaneously if necessary.
-    *
-    * @param { Point } p - the coordinate of the specified location.
-    * @param { MouseButton } btnId - the button of Mouse.
-    * @param { Int32 } key1 - the first keyCode,set default is 0.
-    * @param { Int32 } key2 - the second keyCode,set idefault is 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func mouseClick(p: Point, btnId: MouseButton, key1!: Int32 = 0, key2!: Int32 = 0): Unit
-    
+
     /**
-    * Move the mouse cursor to the specified location.
-    *
-    * @param { Point } p - the coordinate of the specified location.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseMoveTo(p: Point): Promise<void>
-    */
+     * Move the mouse cursor to the specified location.
+     *
+     * @param { Point } p - the coordinate of the specified location.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func mouseMoveTo(p: Point): Unit
-    
+
     /**
-    * Create an UIEventObserver object.
-    *
-    * @returns { UIEventObserver } the UIEventObserver object.
-    * @relation createUIEventObserver(): UIEventObserver
-    */
+     * The mouse wheel scrolls the specified cell at the specified position, and press the specified key simultaneously
+     * if necessary.
+     *
+     * @param { Point } p - the coordinate of the specified location.
+     * @param { Bool } down - whether the mouse wheel rolls down.
+     * @param { Int32 } d - the number of cells that the mouse wheel scrolls, each cell will make the target point
+     * shift 120 pixels.
+     * @param { Int32 } [key1] - the first keyCode,set it default 0.
+     * @param { Int32 } [key2] - the second keyCode,set it default 0.
+     * @param { Int32 } [speed] - The Speed of mouse wheel rolls(cells per second),ranges from 1 to 500.Set it default 20 if out of range.
+     */
     @!APILevel[
-        22,
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func mouseScroll(p: Point, down: Bool, d: Int32, key1!: Int32 = 0, key2!: Int32 = 0, speed!: Int32 = 20): Unit
+
+    /**
+     * Capture the specified area of current screen and save as picture which PNG format.
+     *
+     * @param { String } savePath - the path where to store the picture, must be in the application sandbox directory.
+     * @param { Rect } [rect] - the specified area of current screen, default to full screen.Set it default.
+     * @returns { Bool } true if screen-capturing and file-storing are completed successfully, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func screenCapture(savePath: String, rect!: Rect = Rect(0, 0, 0, 0)): Bool
+
+    /**
+     * Create an UIEventObserver object.
+     *
+     * @returns { UIEventObserver } the UIEventObserver object.
+     */
+    @!APILevel[
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public func createUIEventObserver(): UIEventObserver
-    
+
     /**
-    * The mouse wheel scrolls the specified cell at the specified position, and press the specified key simultaneously if necessary.
-    *
-    * @param { Point } p - the coordinate of the specified location.
-    * @param { Bool } down - whether the mouse wheel rolls down.
-    * @param { Int32 } d - the number of cells that the mouse wheel scrolls, each cell will make the target point shift 120 pixels.
-    * @param { Int32 } key1 - the first keyCode, default is 0.
-    * @param { Int32 } key2 - the second keyCode, default is 0.
-    * @param { Int32 } speed - The Speed of mouse wheel rolls(cells per second),ranges from 1 to 500, default is 20.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, speed?: number): Promise<void>
-    */
+     * Double click on the specified location on the screen with the specified mouse button, and press the specified
+     * key simultaneously if necessary.
+     *
+     * @param { Point } p - the coordinate of the specified location.
+     * @param { MouseButton } btnId - the button of Mouse.
+     * @param { Int32 } [key1] - the first keyCode,set it default 0.
+     * @param { Int32 } [key2] - the second keyCode,set it default 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func mouseScroll(p: Point, down: Bool, d: Int32, key1!: Int32 = 0, key2!: Int32 = 0, speed!: Int32 = 20): Unit
-    
-    /**
-    * Double click on the specified location on the screen with the specified mouse button, and press the specified key simultaneously if necessary.
-    *
-    * @param { Point } p - the coordinate of the specified location.
-    * @param { MouseButton } btnId - the button of Mouse.
-    * @param { Int32 } key1 - the first keyCode, default is 0.
-    * @param { Int32 } key2 - the second keyCode, default is 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func mouseDoubleClick(p: Point, btnId: MouseButton, key1!: Int32 = 0, key2!: Int32 = 0): Unit
-    
+
     /**
-    * Long click on the specified location on the screen with the specified mouse button, and press the specified key simultaneously if necessary.
-    *
-    * @param { Point } p - the coordinate of the specified location.
-    * @param { MouseButton } btnId - the button of Mouse.
-    * @param { Int32 } key1 - the first keyCode, default is 0.
-    * @param { Int32 } key2 - the second keyCode, default is 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
-    */
+     * Long click on the specified location on the screen with the specified mouse button, and press the specified key
+     * simultaneously if necessary.
+     *
+     * @param { Point } p - the coordinate of the specified location.
+     * @param { MouseButton } btnId - the button of Mouse.
+     * @param { Int32 } [key1] - the first keyCode,set it default 0.
+     * @param { Int32 } [key2] - the second keyCode,set it default 0.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func mouseLongClick(p: Point, btnId: MouseButton, key1!: Int32 = 0, key2!: Int32 = 0): Unit
-    
+
     /**
-    * Swipe on the screen between the specified points with mouse.
-    *
-    * @param { Point } from - the starting point.
-    * @param { Point } to - the ending point.
-    * @param { Int32 } speed - speed of swipe (pixels per second),the value ranges from 200 to 40000, default is 600.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
-    */
+     * Swipe on the screen between the specified points with mouse.
+     *
+     * @param { Point } from - the starting point.
+     * @param { Point } to - the ending point.
+     * @param { Int32 } [speed] - speed of swipe (pixels per second),the value ranges from 200 to 40000.Set it default 600 if out of range.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func mouseMoveWithTrack(from: Point, to: Point, speed!: Int32 = 600): Unit
-    
+
     /**
-    * Hold down the left mouse button and drag on the screen between the specified points.
-    *
-    * @param { Point } from - the starting point.
-    * @param { Point } to - the ending point.
-    * @param { Int32 } speed - speed of swipe (pixels per second),the value ranges from 200 to 40000, default is 600.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
-    */
+     * Hold down the left mouse button and drag on the screen between the specified points.
+     *
+     * @param { Point } from - the starting point.
+     * @param { Point } to - the ending point.
+     * @param { Int32 } [speed] - speed of drag (pixels per second),the value ranges from 200 to 40000,Set it default 600 if out of range.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func mouseDrag(from: Point, to: Point, speed!: Int32 = 600): Unit
-    
+
     /**
-    * Inject text on the specified location.
-    *
-    * @param { Point } p - the coordinate of the specified location.
-    * @param { String } text - the text to inject.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation inputText(p: Point, text: string): Promise<void>
-    */
+     * Inject text on the specified location.
+     *
+     * @param { Point } p - the coordinate of the specified location.
+     * @param { String } text - the text to inject.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func inputText(p: Point, text: String): Unit
 }
 
-
 /**
-* Represents a two-dimensional array of pointers on the device display, it's used to build a
-* multi-finger trace which can be injected with UiDriver.
-*
-* @relation declare class PointerMatrix
-*/
+ * Represents a two-dimensional array of pointers on the device display, it's used to build a
+ * multi-finger trace which can be injected with UiDriver.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class PointerMatrix {
     /**
-    * Create an PointerMatrix object.
-    *
-    * @param { Int32 } fingers - The number of fingers, ranges from 1 to 10.
-    * @param { Int32 } steps - The number of steps of each finger trace, ranges from 1 to 1000.
-    * @returns { PointerMatrix } the PointerMatrix object.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation static create(fingers: number, steps: number): PointerMatrix
-    */
+     * Create an PointerMatrix object.
+     *
+     * @param { Int32 } fingers - The number of fingers, ranges from 1 to 10.
+     * @param { Int32 } steps - The number of steps of each finger trace, ranges from 1 to 1000.
+     * @returns { PointerMatrix } the PointerMatrix object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public static func create(fingers: Int32, steps: Int32): PointerMatrix
-    
+
     /**
-    * Set the point value of an element in the PointerMatrix.
-    *
-    * @param { Int32 } finger - the index of target finger to set.
-    * @param { Int32 } step - the index of target step to set.
-    * @param { Point } point - the coordinate of target step to set.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation setPoint(finger: number, step: number, point: Point): void
-    */
+     * Set the point value of an element in the PointerMatrix.
+     *
+     * @param { Int32 } finger - the index of target finger to set.
+     * @param { Int32 } step - the index of target step to set.
+     * @param { Point } point - the coordinate of target step to set.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func setPoint(finger: Int32, step: Int32, point: Point): Unit
 }
 
-
 /**
-* Represents a window of the ohos application,user can perform operations or query attributes on it.
-*
-* @relation declare class UiWindow
-*/
+ * Represents a window of the ohos application,user can perform operations or query attributes on it.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class UiWindow {
     /**
-    * Get the bundle name of this UiWindow.
-    *
-    * @returns { String } the bundle name.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getBundleName(): Promise<string>
-    */
+     * Get the bundle name of this UiWindow.
+     *
+     * @returns { String } the bundle name.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getBundleName(): String
-    
+
     /**
-    * Get the bounds rect of this UiWindow.
-    *
-    * @returns { Rect } the bounds rect object.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getBounds(): Promise<Rect>
-    */
+     * Get the bounds rect of this UiWindow.
+     *
+     * @returns { Rect } the bounds rect object.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getBounds(): Rect
-    
+
     /**
-    * Get the title of this UiWindow.
-    *
-    * @returns { String } the title value.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getTitle(): Promise<string>
-    */
+     * Get the title of this UiWindow.
+     *
+     * @returns { String } the title value.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getTitle(): String
-    
+
     /**
-    * Get the window mode of this UiWindow.
-    *
-    * @returns { WindowMode } the WindowMode object
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getWindowMode(): Promise<WindowMode>
-    */
+     * Get the window mode of this UiWindow.
+     *
+     * @returns { WindowMode } the WindowMode object
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getWindowMode(): WindowMode
-    
+
     /**
-    * Get the focused status of this UiWindow.
-    *
-    * @returns { Bool } the focused status
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation isFocused(): Promise<boolean>
-    */
+     * Get the focused status of this UiWindow.
+     *
+     * @returns { Bool } the focused status
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isFocused(): Bool
-    
+
     /**
-    * Set the focused status of this UiWindow.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation focus(): Promise<void>
-    */
+     * Set the focused status of this UiWindow.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func focus(): Unit
-    
+
     /**
-    * Move this UiWindow to the specified points.
-    *
-    * @param { Int32 } x - the x coordinate of destination, not less than 0.
-    * @param { Int32 } y - the y coordinate of destination, not less than 0.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation moveTo(x: number, y: number): Promise<void>
-    */
+     * Move this UiWindow to the specified points.
+     *
+     * @param { Int32 } x - the x coordinate of destination, not less than 0.
+     * @param { Int32 } y - the y coordinate of destination, not less than 0.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func moveTo(x: Int32, y: Int32): Unit
-    
+
     /**
-    * Resize this UiWindow to the specified size for the specified direction.
-    *
-    * @param { Int32 } wide - the expected wide of the window after resizing.
-    * @param { Int32 } height - the expected height of the window after resizing.
-    * @param { ResizeDirection } direction - the expected direction of the window after resizing.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation resize(wide: number, height: number, direction: ResizeDirection): Promise<void>
-    */
+     * Resize this UiWindow to the specified size for the specified direction.
+     *
+     * @param { Int32 } wide - the expected wide of the window after resizing.
+     * @param { Int32 } height - the expected height of the window after resizing.
+     * @param { ResizeDirection } direction - the expected direction of the window after resizing.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func resize(wide: Int32, height: Int32, direction: ResizeDirection): Unit
-    
+
     /**
-    * Change this UiWindow into split screen mode.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation split(): Promise<void>
-    */
+     * Change this UiWindow into split screen mode.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func split(): Unit
-    
+
     /**
-    * Maximize this UiWindow.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation maximize(): Promise<void>
-    */
+     * Maximize this UiWindow.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func maximize(): Unit
-    
+
     /**
-    * Minimize this UiWindow.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation minimize(): Promise<void>
-    */
+     * Minimize this UiWindow.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func minimize(): Unit
-    
+
     /**
-    * Resume this UiWindow.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation resume(): Promise<void>
-    */
+     * Resume this UiWindow.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func resume(): Unit
-    
+
     /**
-    * Close this UiWindow.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @throws { BusinessException } 17000005 - This operation is not supported.
-    * @relation close(): Promise<void>
-    */
+     * Close this UiWindow.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     * @throws { BusinessException } 17000005 - This operation is not supported.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func close(): Unit
-    
+
     /**
-    * Get the active status of this UiWindow.
-    *
-    * @returns { Bool } the active status.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation isActive(): Promise<boolean>
-    */
+     * Get the active status of this UiWindow.
+     *
+     * @returns { Bool } the active status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isActive(): Bool
 }
 
-
 /**
-* Describes the attribute requirements for the target Components.
-*
-* @relation declare class On
-*/
+ * Describes the attribute requirements for the target Components.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class On {
     /**
-    * On constructor
-    *
-    */
+     * On constructor
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public init()
-    
+
     /**
-    * Specifies the text attribute of the target component. Multiple match patterns are supported.
-    *
-    * @param { String } txt - Component text, used to match the target component.
-    * @param { MatchPattern } pattern - Match pattern. The default value is EQUALS.
-    * @returns { On } On object that matches the text attribute of the target component.
-    * @relation text(txt: string, pattern?: MatchPattern): On
-    */
+     * Specifies the text for the target Component.
+     *
+     * @param { String } txt - the text value.
+     * @param { MatchPattern } [pattern] - the match pattern of the text value.Set it default MatchPattern.
+     * @returns { On } On object that matches the text attribute of the target component.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func text(txt: String, pattern!: MatchPattern = MatchPattern.Equals): On
-    
+
     /**
-    * Specifies the id of the target Component.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation id(id: string): On
-    */
+     * Specifies the id of the target Component.
+     *
+     * @param { String } id - the id value.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func id(id: String): On
-    
+
     /**
-    * Specifies the type of the target Component.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation type(tp: string): On
-    */
+     * Specifies the type of the target Component.
+     *
+     * @param { String } tp - the type value.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func onType(tp: String): On
-    
+
     /**
-    * Specifies the description for the target Component.
-    *
-    * @param { MatchPattern } pattern - the MatchPattern of description value. The default value is EQUALS.
-    * @throws { IllegalArgumentException } - if the input parameters are invalid.
-    * @relation description(val: string, pattern?: MatchPattern): On
-    */
+     * Specifies the clickable attribute of the target component.
+     *
+     * @param { Bool } [b] - the clickable status.Set it default true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func description(val: String, pattern!: MatchPattern = MatchPattern.Equals): On
-    
-    /**
-    * Specifies the clickable attribute of the target component.
-    *
-    * @param { Bool } b - Clickable status of the target component. The default value is true.
-    *                     true: clickable; false: not clickable.
-    * @returns { On } On object that matches the clickable attribute of the target component.
-    * @relation clickable(b?: boolean): On
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func clickable(b!: Bool = true): On
-    
+
     /**
-    * Specifies the longClickable status of the target Component.
-    *
-    * @param { Bool } b - the longClickable status. The default value is true.
-    * @returns { On } this {@link On} object.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation longClickable(b?: boolean): On
-    */
+     * Specifies the longClickable status of the target Component.
+     *
+     * @param { Bool } [b] - the longClickable status.Set it default true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func longClickable(b!: Bool = true): On
-    
+
     /**
-    * Specifies the scrollable status of the target Component.
-    *
-    * @param { Bool } b - the scrollable status. The default value is true.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation scrollable(b?: boolean): On
-    */
+     * Specifies the scrollable status of the target Component.
+     *
+     * @param { Bool } [b] - the scrollable status.Set it default true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func scrollable(b!: Bool = true): On
-    
+
     /**
-    * Specifies the enabled status of the target Component.
-    *
-    * @param { Bool } b - the enabled status. The default value is true.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation enabled(b?: boolean): On
-    */
+     * Specifies the enabled status of the target Component.
+     *
+     * @param { Bool } [b] - the enabled status.Set it default true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func enabled(b!: Bool = true): On
-    
+
     /**
-    * Specifies the focused status of the target Component.
-    *
-    * @param { Bool } b - the focused status. The default value is true.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation focused(b?: boolean): On
-    */
+     * Specifies the focused status of the target Component.
+     *
+     * @param { Bool } [b] - the focused status. The default value is true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func focused(b!: Bool = true): On
-    
+
     /**
-    * Specifies the selected status of the target Component.
-    *
-    * @param { Bool } b the - selected status. The default value is true.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation selected(b?: boolean): On
-    */
+     * Specifies the selected status of the target Component.
+     *
+     * @param { Bool } [b] - the selected status. The default value is true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func selected(b!: Bool = true): On
-    
+
     /**
-    * Specifies the checked status of the target Component.
-    *
-    * @param { Bool } b - the checked status. The default value is true.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation checked(b?: boolean): On
-    */
+     * Specifies the checked status of the target Component.
+     *
+     * @param { Bool } [b] - the checked status. The default value is true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func checked(b!: Bool = true): On
-    
+
     /**
-    * Specifies the checkable status of the target Component.
-    *
-    * @param { Bool } b - the checkable status. The default value is true.
-    * @throws { IllegalArgumentException } - Parameter error. 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @relation checkable(b?: boolean): On
-    */
+     * Specifies the checkable status of the target Component.
+     *
+     * @param { Bool } [b] - the checkable status. The default value is true.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func checkable(b!: Bool = true): On
-    
+
     /**
-    * Requires that the target Component which is before another Component that specified by the given On
-    * object,used to locate Component relatively.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation isBefore(on: On): On
-    */
+     * Requires that the target Component which is before another Component that specified by the given On
+     * object,used to locate Component relatively.
+     *
+     * @param { On } on - describes the attribute requirements of Component which the target one is in front of.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func isBefore(on: On): On
-    
+
     /**
-    * Requires that the target Component which is after another Component that specified by the given On
-    * object,used to locate Component relatively.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation isAfter(on: On): On
-    */
+     * Requires that the target Component which is after another Component that specified by the given On
+     * object,used to locate Component relatively.
+     *
+     * @param { On } on - describes the attribute requirements of Component which the target one is in back of.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func isAfter(on: On): On
-    
+
     /**
-    * Requires that the target Component which is inside of another Component that specified by the given On
-    * object,used to locate Component relatively.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation within(on: On): On
-    */
+     * Requires that the target Component which is inside of another Component that specified by the given On
+     * object,used to locate Component relatively.
+     *
+     * @param { On } on - describes the attribute requirements of Component which the target one is inside of.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func within(on: On): On
-    
+
     /**
-    * Specifies the bundleName of the application which the window that the target Component is located belongs.
-    *
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation inWindow(bundleName: string): On
-    */
+     * Specifies the bundleName of the application which the window that the target Component is located belongs.
+     *
+     * @param { String } bundleName - the bundleName of the specified window.
+     * @returns { On } this On object.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func inWindow(bundleName: String): On
+
+    /**
+     * Specifies the description for the target Component.
+     *
+     * @param { String } val - the description value.
+     * @param { MatchPattern } [pattern] - the MatchPattern of description value, set it default MatchPattern.
+     * @returns { On } this On object.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
+    ]
+    public func description(val: String, pattern!: MatchPattern = MatchPattern.Equals): On
 }
 
-
 /**
-* The type of func once.
-*
-*/
-@Derive[ToString, Equatable]
+ * The type of func once.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum OnceType {
     /**
-    * oastShow
-    * 
-    */
+     * The type of toast show.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    ToastShow |
+    ToastShow
+    |
     /**
-    * DialogShow
-    * 
-    */
+     * The type of dialog show.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    DialogShow |
-    ...
+    DialogShow
+    | ...
 }
 
 
+extend OnceType <: ToString {
+
+    /**
+     * Converts the OnceType to its string representation.
+     * @returns A string representation of the OnceType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest"
+    ]
+    public func toString(): String
+}
+
+
+extend OnceType <: Equatable<OnceType> {
+
+    /**
+     * Compares this OnceType with another for equality.
+     * @param other The OnceType to compare with.
+     * @returns True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest"
+    ]
+    public operator func ==(other: OnceType): Bool
+
+    /**
+     * Compares this OnceType with another for inequality.
+     * @param other The OnceType to compare with.
+     * @returns True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest"
+    ]
+    public operator func !=(other: OnceType): Bool
+}
 
 /**
-* Observer to monitor UI events.
-* 
-* @relation declare interface UIEventObserver
-*/
+ * Observer to monitor UI events.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class UIEventObserver {
     /**
-    * Listen for toast show once
-    * 
-    * @param { OnceType } onceType - the type of func once.
-    * @param { Callback<UIElementInfo> } callback - function, returns the monitored UIElementInfo.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @relation once(type: 'toastShow', callback: Callback<UIElementInfo>): void
-    * @relation once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
-    */
+     * Listen for toast show once
+     *
+     * @param { OnceType } onceType - the type of func once.
+     * @param { Callback<UIElementInfo> } callback - function, returns the monitored UIElementInfo.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true
     ]
     public func once(onceType: OnceType, callback: Callback<UIElementInfo>): Unit
 }
 
-
 /**
-* Represents a Component of the ohos application,user can perform operations or query attributes on it.
-*
-* @relation declare class Component 
-*/
+ * Represents a Component of the ohos application,user can perform operations or query attributes on it.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class Component {
     /**
-    * Click this Component.
-    *
-    * @relation click(): Promise<void>
-    */
+     * Click this Component.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func click(): Unit
-    
+
     /**
-    * Double click this Component.
-    *
-    * @returns { Unit }
-    * @relation doubleClick(): Promise<void>
-    */
+     * Double click this Component.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func doubleClick(): Unit
-    
+
     /**
-    * Long click this Component.
-    *
-    * @returns { Unit }
-    * @relation longClick(): Promise<void>
-    */
+     * Long click this Component.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func longClick(): Unit
-    
+
     /**
-    * Get the id attribute value.
-    *
-    * @relation getId(): Promise<string>
-    */
+     * Get the id attribute value.
+     *
+     * @returns { String } the id value.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getId(): String
-    
+
     /**
-    * Get the text attribute value.
-    *
-    * @returns { String } the text value.
-    * @relation getText(): Promise<string>
-    */
+     * Get the text attribute value.
+     *
+     * @returns { String } the text value.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getText(): String
-    
+
     /**
-    * Get the type name.
-    *
-    * @returns { String } the type name.
-    * @relation getType(): Promise<string>
-    */
+     * Get the type name.
+     *
+     * @returns { String } the type name.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getType(): String
-    
+
     /**
-    * Get the bounds rect of this Component.
-    *
-    * @returns { Rect } the bounds rect object.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getBounds(): Promise<Rect>
-    */
+     * Get the clickable status of this Component.
+     *
+     * @returns { Bool } the clickable status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func getBounds(): Rect
-    
-    /**
-    * Get the boundsCenter of this Component.
-    *
-    * @returns { Point } the boundsCenter object.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getBoundsCenter(): Promise<Point>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func getBoundsCenter(): Point
-    
-    /**
-    * Get the clickable status of this Component.
-    *
-    * @returns { Bool } the clickable status.
-    * @relation isClickable(): Promise<boolean>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isClickable(): Bool
-    
+
     /**
-    * Get the clickable status of this Component.
-    *
-    * @returns { Bool } the clickable status.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation isLongClickable(): Promise<boolean>
-    */
+     * Get the clickable status of this Component.
+     *
+     * @returns { Bool } the clickable status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isLongClickable(): Bool
-    
+
     /**
-    * Get the checked status of this Component.
-    *
-    * @returns { Bool } the checked status.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation isChecked(): Promise<boolean>
-    */
+     * Get the scrollable status of this Component.
+     *
+     * @returns { Bool } the scrollable status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func isChecked(): Bool
-    
-    /**
-    * Get the checkable status of this Component.
-    *
-    * @returns { Bool } the checkable status.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation isCheckable(): Promise<boolean>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func isCheckable(): Bool
-    
-    /**
-    * Get the scrollable status of this Component.
-    *
-    * @returns { Bool } the scrollable status.
-    * @relation isScrollable(): Promise<boolean>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isScrollable(): Bool
-    
+
     /**
-    * Get the enabled status of this Component.
-    *
-    * @returns { Bool } the enabled status.
-    * @relation isEnabled(): Promise<boolean>
-    */
+     * Get the enabled status of this Component.
+     *
+     * @returns { Bool } the enabled status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isEnabled(): Bool
-    
+
     /**
-    * Get the focused status of this Component.
-    *
-    * @returns { Bool } the focused status.
-    * @relation isFocused(): Promise<boolean>
-    */
+     * Get the focused status of this Component.
+     *
+     * @returns { Bool } the focused status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isFocused(): Bool
-    
+
     /**
-    * Get the selected status of this Component.
-    *
-    * @returns { Bool } the selected status.
-    * @relation isSelected(): Promise<boolean>
-    */
+     * Get the selected status of this Component.
+     *
+     * @returns { Bool } the selected status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func isSelected(): Bool
-    
+
     /**
-    * Inject text to this Component,applicable to TextInput.
-    *
-    * @param { String } text The text to inject.
-    * @relation inputText(text: string): Promise<void>
-    */
+     * Get the checked status of this Component.
+     *
+     * @returns { Bool } the checked status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func isChecked(): Bool
+
+    /**
+     * Get the checkable status of this Component.
+     *
+     * @returns { Bool } the checkable status.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func isCheckable(): Bool
+
+    /**
+     * Inject text to this Component,applicable to TextInput.
+     *
+     * @param { String } text - the text to inject.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func inputText(text: String): Unit
-    
+
     /**
-    * Clear text of this Component,applicable to TextInput.
-    *
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation clearText(): Promise<void>
-    */
+     * Clear text of this Component,applicable to TextInput.
+     *
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func clearText(): Unit
-    
+
     /**
-    * Scroll on this Componentto find matched Component,applicable to scrollable one.
-    *
-    * @param { On } on - the attribute requirements of the target Component.
-    * @returns { ?Component } the found result,or undefined if not found.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation scrollSearch(on: On): Promise<Component|null>
-    */
+     * Scroll on this Component to the top,applicable to scrollable one.
+     *
+     * @param { Int64 } [speed] - the speed of swipe(pixels per second),ranges from 200 to 40000. Set it default 600 if out of range.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
-    ]
-    public func scrollSearch(on: On): ?Component
-    
-    /**
-    * Scroll on this Component to the top,applicable to scrollable one.
-    *
-    * @param { Int64 } speed - the speed of swipe(pixels per second),ranges from 200 to 40000. The default value is 600.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation scrollToTop(speed?: number): Promise<void>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func scrollToTop(speed!: Int64 = 600): Unit
-    
+
     /**
-    * Scroll on this Component to the bottom,applicable to scrollable one.
-    *
-    * @param { Int64 } speed - the speed of swipe(pixels per second),ranges from 200 to 40000. The default value is 600.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation scrollToBottom(speed?: number): Promise<void>
-    */
+     * Scroll on this Component to the bottom,applicable to scrollable one.
+     *
+     * @param { Int64 } [speed] - the speed of swipe(pixels per second),ranges from 200 to 40000. Set it default 600 if out of range.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func scrollToBottom(speed!: Int64 = 600): Unit
-    
+
     /**
-    * Drag this Component to the bounds rect of target Component.
-    *
-    * @param { Component } target - the target Component.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation dragTo(target: Component): Promise<void>
-    */
+     * Get the bounds rect of this Component.
+     *
+     * @returns { Rect } the bounds rect object.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func getBounds(): Rect
+
+    /**
+     * Scroll on this Component to find matched Component,applicable to scrollable one.
+     *
+     * @param { On } on - the attribute requirements of the target Component.
+     * @returns { ?Component } the found result,or undefined if not found.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func scrollSearch(on: On): ?Component
+
+    /**
+     * Get the boundsCenter of this Component.
+     *
+     * @returns { Point } the boundsCenter object.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func getBoundsCenter(): Point
+
+    /**
+     * Drag this Component to the bounds rect of target Component.
+     *
+     * @param { Component } target - the target Component.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func dragTo(target: Component): Unit
-    
+
     /**
-    * Pinch enlarge this Component to the target scale.
-    *
-    * @param { Float32 } scale - the scale of the pinch enlarge this Component's size, ranges greater than 1.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation pinchOut(scale: number): Promise<void>
-    */
+     * Pinch enlarge this Component to the target scale.
+     *
+     * @param { Float32 } scale - the scale of the pinch enlarge this Component's size, ranges greater than 1.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func pinchOut(scale: Float32): Unit
-    
+
     /**
-    * Pinch shrink this Component to the target scale.
-    *
-    * @param { Float32 } scale - the scale of the pinch shrink this Component's size, ranges from 0 to 1.
-    * @throws { IllegalArgumentException } - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation pinchIn(scale: number): Promise<void>
-    */
+     * Pinch shrink this Component to the target scale.
+     *
+     * @param { Float32 } scale - the scale of the pinch shrink this Component's size, ranges from 0 to 1.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func pinchIn(scale: Float32): Unit
-    
+
     /**
-    * Get the description attribute value.
-    *
-    * @returns { String } the description value.
-    * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
-    * @relation getDescription(): Promise<string>
-    */
+     * Get the description attribute value.
+     *
+     * @returns { String } the description value.
+     * @throws { BusinessException } 17000004 - The window or component is invisible or destroyed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Test.UiTest"
+        since: "22",
+        syscap: "SystemCapability.Test.UiTest",
+        throwexception: true,
+        workerthread: true
     ]
     public func getDescription(): String
 }
 
-
 /**
-* Enumerates the string value match pattern.
-*
-* @relation declare enum MatchPattern
-*/
+ * Enumerates the string value match pattern.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum MatchPattern {
     /**
-    * Equals to a string.
-    * 
-    * @relation EQUALS = 0
-    */
+     * Equals to a string.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Equals |
+    Equals
+    | 
     /**
-    * Contains a substring.
-    * 
-    * @relation CONTAINS = 1
-    */
+     * Contains a substring.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Contains |
+    Contains
+    | 
     /**
-    * StartsWith a substring.
-    * 
-    * @relation STARTS_WITH = 2
-    */
+     * StartsWith a substring.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    StartsWith |
+    StartsWith
+    | 
     /**
-    * EndsWith a substring.
-    * 
-    * @relation ENDS_WITH = 3
-    */
+     * EndsWith a substring.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    EndsWith |
-    ...
+    EndsWith
+    | ...
 }
 
-
 /**
-* Enumerates the rotation of the device display.
-*
-* @relation declare enum DisplayRotation
-*/
+ * Enumerates the rotation of the device display.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum DisplayRotation {
     /**
-    * Device display does not rotate to display vertically.
-    * 
-    * @relation ROTATION_0 = 0
-    */
+     * Device display does not rotate to display vertically.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Rotation0 |
+    Rotation0
+    | 
     /**
-    * Device display rotates 90 degrees clockwise to display horizontally.
-    * 
-    * @relation ROTATION_90 = 1
-    */
+     * Device display rotates 90 degrees clockwise to display horizontally.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Rotation90 |
+    Rotation90
+    | 
     /**
-    * Device display rotates clockwise 180 degrees to display vertically in reverse.
-    * 
-    * @relation ROTATION_180 = 2
-    */
+     * Device display rotates clockwise 180 degrees to display vertically in reverse.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Rotation180 |
+    Rotation180
+    | 
     /**
-    * Device display rotates 270 degrees clockwise to display horizontally in reverse.
-    * 
-    * @relation ROTATION_270 = 3
-    */
+     * Device display rotates 270 degrees clockwise to display horizontally in reverse.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Rotation270 |
-    ...
+    Rotation270
+    | ...
 }
 
-
 /**
-* Enumerates the window mode of the tested window.
-*
-* @relation declare enum WindowMode
-*/
+ * Enumerates the window mode of the tested window.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum WindowMode {
     /**
-    * The test window is a full screen window.
-    * 
-    * @relation FULLSCREEN = 0
-    */
+     * The test window is a full screen window.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Fullscreen |
+    Fullscreen
+    | 
     /**
-    * The test window is the first window in the split screen state.
-    * 
-    * @relation PRIMARY = 1
-    */
+     * The test window is the first window in the split screen state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Primary |
+    Primary
+    | 
     /**
-    * The test window is the second window in the split screen state.
-    * 
-    * @relation SECONDARY = 2
-    */
+     * The test window is the second window in the split screen state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Secondary |
+    Secondary
+    | 
     /**
-    * The test window is a floating window.
-    * 
-    * @relation FLOATING = 3
-    */
+     * The test window is a floating window.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Floating |
-    ...
+    Floating
+    | ...
 }
 
-
 /**
-* Enumerates the resize direction for the window.
-*
-* @relation declare enum ResizeDirection
-*/
+ * Enumerates the resize direction for the window.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum ResizeDirection {
     /**
-    * Left.
-    * 
-    * @relation LEFT = 0
-    */
+     * Left.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Left |
+    Left
+    | 
     /**
-    * Right.
-    * 
-    * @relation RIGHT = 1
-    */
+     * Right.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Right |
+    Right
+    | 
     /**
-    * Up.
-    * 
-    * @relation UP = 2
-    */
+     * Up.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Up |
+    Up
+    | 
     /**
-    * Down.
-    * 
-    * @relation DOWN = 3
-    */
+     * Down.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Down |
+    Down
+    | 
     /**
-    * Upper left.
-    * 
-    * @relation LEFT_UP = 4
-    */
+     * Upper left.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    LeftUp |
+    LeftUp
+    | 
     /**
-    * Lower left.
-    * 
-    * @relation LEFT_DOWN = 5
-    */
+     * Lower left.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    LeftDown |
+    LeftDown
+    | 
     /**
-    * Upper right.
-    * 
-    * @relation RIGHT_UP = 6
-    */
+     * Upper right.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    RightUp |
+    RightUp
+    | 
     /**
-    * Lower right.
-    * 
-    * @relation RIGHT_DOWN = 7
-    */
+     * Lower right.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    RightDown |
-    ...
+    RightDown
+    | ...
 }
 
-
 /**
-* Enumerates the direction for the UI operation .
-*
-* @relation declare enum UiDirection
-*/
+ * Enumerates the direction for the UI operation .
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum UiDirection {
     /**
-    * Left.
-    * 
-    * @relation LEFT = 0
-    */
+     * Left.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Left |
+    Left
+    | 
     /**
-    * Right.
-    * 
-    * @relation RIGHT = 1
-    */
+     * Right.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Right |
+    Right
+    | 
     /**
-    * Up.
-    * 
-    * @relation UP = 2
-    */
+     * Up.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Up |
+    Up
+    | 
     /**
-    * Down.
-    * 
-    * @relation DOWN = 3
-    */
+     * Down.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    Down |
-    ...
+    Down
+    | ...
 }
 
-
 /**
-* Enumerates the id of the button on the mouse.
-*
-* @relation declare enum MouseButton
-*/
+ * Enumerates the id of the button on the mouse.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public enum MouseButton {
     /**
-    * Left button of the mouse.
-    * 
-    * @relation MOUSE_BUTTON_LEFT = 0
-    */
+     * Left button of the mouse.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    MouseButtonLeft |
+    MouseButtonLeft
+    |
     /**
-    * Right button of the mouse.
-    * 
-    * @relation MOUSE_BUTTON_RIGHT = 1
-    */
+     * Right button of the mouse.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    MouseButtonRight |
+    MouseButtonRight
+    |
     /**
-    * Middle button of the mouse.
-    * 
-    * @relation MOUSE_BUTTON_MIDDLE = 2
-    */
+     * Middle button of the mouse.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    MouseButtonMiddle |
-    ...
+    MouseButtonMiddle
+    | ...
 }
 
-
 /**
-* Represents the point on the device screen.
-*
-* @relation declare interface Point
-*/
+ * Represents the point on the device screen.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class Point {
     /**
-    * The x-coordinate of the coordinate point.
-    *
-    * @relation x: number
-    */
+     * The x-coordinate of the coordinate point.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var x: Int32
-    
+
     /**
-    * The y-coordinate of the coordinate point.
-    *
-    * @relation y: number
-    */
+     * The y-coordinate of the coordinate point.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var y: Int32
-    
+
     /**
-    * The displayId to which the coordinate point belongs, default is the displayId of the main scrren.
-    *
-    * @relation displayId?: number
-    */
+     * The displayId to which the coordinate point belongs, default is the displayId of the main scrren.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var displayId: ?Int32
-    
+
     /**
-    * Point constructor.
-    */
+     * Point constructor.
+     *
+     * @param { Int32 } x - The x-coordinate of the coordinate point.
+     * @param { Int32 } y - The y-coordinate of the coordinate point.
+     * @param { ?Int32 } [displayId] - The displayId to which the coordinate point belongs, default is the displayId of the main scrren.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public init(x: Int32, y: Int32, displayId!: ?Int32 = None)
 }
 
-
 /**
-* Represents the information of an UI element, can be a component or window.
-*
-* @relation declare interface UIElementInfo
-*/
+ * Represents the information of an UI element, can be a component or window.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class UIElementInfo {
     /**
     * The bundle name of the host application.
-    *
-    * @relation readonly bundleName: string
     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public let bundleName: String
-    
+
     /**
     * The component type, set it as 'window' if it's a window.
-    *
-    * @relation readonly type: string
     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public let componentType: String
-    
+
     /**
     * The text of component, set it as window's title if it's a window.
-    *
-    * @relation readonly text: string
     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public let text: String
 }
 
-
 /**
-* Represents filer condition to get the window.
-*
-* @relation declare interface WindowFilter
-*/
+ * Represents filer condition to get the window.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class WindowFilter {
     /**
-    * The package name of the application which the window belongs to.
-    * 
-    * @relation bundleName?: string
-    */
+     * The package name of the application which the window belongs to.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var bundleName: ?String
-    
+
     /**
-    * The title of the window.
-    * 
-    * @relation title?: string
-    */
+     * The title of the window.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var title: ?String
-    
+
     /**
-    * The focal state of the window.
-    * 
-    * @relation focused?: boolean
-    */
+     * The focal state of the window.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var focused: ?Bool
-    
+
     /**
-    * The active state of the window.
-    * 
-    * @relation actived?: boolean
-    */
+     * The active state of the window.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var active: ?Bool
-    
+
     /**
-    * Find the window in the specified ID display. By default, it searches all displays.
-    * 
-    * @relation displayId?: number
-    */
+     * Find the window in the specified ID display. By default, it searches all displays.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var displayId: ?Int32
-    
+
     /**
-    * WindowFilter constructor.
-    */
+     * WindowFilter constructor.
+     *
+     * @param { ?String } [bundleName] - The package name of the application which the window belongs to.
+     * @param { ?String } [title] - The title of the window.
+     * @param { ?Bool } [focused] - The focal state of the window.
+     * @param { ?Bool } [active] - The active state of the window.
+     * @param { ?Int32 } [displayId] - The display ID. By default, it searches all displays.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
-    public init(bundleName!: ?String = None, title!: ?String = None, focused!: ?Bool = None, active!: ?Bool = None, displayId!: ?Int32 = None)
+    public init(bundleName!: ?String = None, title!: ?String = None, focused!: ?Bool = None, active!: ?Bool = None,
+        displayId!: ?Int32 = None)
 }
 
-
 /**
-* Represents the rectangle area on the device screen.
-*
-* @relation declare interface Rect
-*/
+ * Represents the rectangle area on the device screen.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Test.UiTest"
 ]
 public class Rect {
     /**
-    * The x-coordinate of the top left corner of the rectangle.
-    * 
-    * @relation left: number
-    */
+     * The x-coordinate of the top left corner of the rectangle.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var left: Int32
-    
+
     /**
-    * The y-coordinate of the top left corner of the rectangle.
-    * 
-    * @relation top: number
-    */
+     * The y-coordinate of the top left corner of the rectangle.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var top: Int32
-    
+
     /**
-    * The x-coordinate at the bottom right corner of the rectangle.
-    * 
-    * @relation right: number
-    */
+     * The x-coordinate at the bottom right corner of the rectangle.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var right: Int32
-    
+
     /**
-    * The y-coordinate at the bottom right corner of the rectangle.
-    * 
-    * @relation bottom: number
-    */
+     * The y-coordinate at the bottom right corner of the rectangle.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var bottom: Int32
-    
+
     /**
-    * The displayId to which the rect belongs, default is the displayId of the main screen.
-    * 
-    * @relation displayId?: number
-    */
+     * The displayId to which the rect belongs, default is the displayId of the main screen.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public var displayId: ?Int32
-    
+
     /**
-    * Rect constructor.
-    */
+     * Rect constructor.
+     *
+     * @param { Int32 } left - The x-coordinate of the top left corner of the rectangle.
+     * @param { Int32 } top - The y-coordinate of the top left corner of the rectangle.
+     * @param { Int32 } right - The x-coordinate at the bottom right corner of the rectangle.
+     * @param { Int32 } bottom - The y-coordinate at the bottom right corner of the rectangle.
+     * @param { ?Int32 } [displayId] - The displayId to which the rect belongs, default is the displayId of the main screen.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Test.UiTest"
     ]
     public init(left: Int32, top: Int32, right: Int32, bottom: Int32, displayId!: ?Int32 = None)
 }
-
-

@@ -13,249 +13,307 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.bluetooth.base_profile
-import ohos.callback_invoke.{ Callback1Argument, CallbackObject}
+
 import ohos.bluetooth.constant.ProfileConnectionState
 import ohos.labels.APILevel
-import std.deriving.Derive
-
 
 /**
-* Enum for cause of disconnect.
-*
-* @relation enum DisconnectCause
-*/
-@Derive[ToString, Equatable]
+ * Enum for cause of disconnect.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum DisconnectCause {
     /**
-    * User disconnect device.
-    *
-    * @relation USER_DISCONNECT = 0
-    */
+     * User disconnect device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    UserDisconnect |
+    UserDisconnect
+    | 
     /**
-    * The connection needs to be initiated from the keyboard side.
-    *
-    * @relation CONNECT_FROM_KEYBOARD = 1
-    */
+     * The connection needs to be initiated from the keyboard side.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ConnectFromKeyboard |
+    ConnectFromKeyboard
+    | 
     /**
-    * The connection needs to be initiated from the mouse side.
-    *
-    * @relation CONNECT_FROM_MOUSE = 2
-    */
+     * The connection needs to be initiated from the mouse side.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ConnectFromMouse |
+    ConnectFromMouse
+    | 
     /**
-    * The connection needs to be initiated from the car side.
-    *
-    * @relation CONNECT_FROM_CAR = 3
-    */
+     * The connection needs to be initiated from the car side.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ConnectFromCar |
+    ConnectFromCar
+    | 
     /**
-    * Too many devices are currently connected.
-    *
-    * @relation TOO_MANY_CONNECTED_DEVICES = 4
-    */
+     * Too many devices are currently connected.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    TooManyConnectedDevices |
+    TooManyConnectedDevices
+    | 
     /**
-    * Connection failed due to an internal error.
-    *
-    * @relation CONNECT_FAIL_INTERNAL = 5
-    */
+     * Connection failed due to an internal error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ConnectFailInternal |
-    ...
+    ConnectFailInternal
+    | ...
 }
 
 
+extend DisconnectCause <: ToString {
+    
+    /**
+     * Converts the DisconnectCause to its string representation.
+     * @returns { String } A string representation of the DisconnectCause.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend DisconnectCause <: Equatable<DisconnectCause> {
+    
+    /**
+     * Compares this DisconnectCause with another for equality.
+     * @param { DisconnectCause } other - The DisconnectCause to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: DisconnectCause): Bool
+    
+    /**
+     * Compares this DisconnectCause with another for inequality.
+     * @param { DisconnectCause } other - The DisconnectCause to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: DisconnectCause): Bool
+}
 
 /**
-* Profile state change parameters.
-*
-* @relation export interface StateChangeParam
-*/
+ * Profile state change parameters.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class StateChangeParam {
     /**
-    * The address of device.
-    *
-    * @relation deviceId: string
-    */
+     * The address of device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * Profile state value.
-    *
-    * @relation state: ProfileConnectionState
-    */
+     * Profile state value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var state: ProfileConnectionState
-    
+
     /**
-    * Cause of disconnect.
-    *
-    * @relation cause: DisconnectCause
-    */
+     * Cause of disconnect.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var cause: DisconnectCause
 }
 
-
 /**
-* Base interface of profile.
-*
-* @relation interface BaseProfile
-*/
+ * Base interface of profile.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public interface BaseProfile {
     /**
-    * Get connection strategy of this profile.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation getConnectedDevices(): Array<string>
-    */
+     * Obtains the connected devices list of profile.
+     *
+     * @returns { Array<String> } Returns the address of connected devices list.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     func getConnectedDevices(): Array<String>
-    
+
     /**
-    * Obtains the profile connection state.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation getConnectionState(deviceId: string): ProfileConnectionState
-    */
+     * Obtains the profile connection state.
+     *
+     * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
+     * @returns { ProfileConnectionState } Returns the connection state.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     func getConnectionState(deviceId: String): ProfileConnectionState
-    
+
     /**
-    * Subscribe the event reported when the profile connection state changes.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @relation on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
-    */
+     * Subscribe the event reported when the profile connection state changes.
+     *
+     * @param { ProfileCallbackType } eventType - The type of event to subscribe.
+     * @param { Callback1Argument<StateChangeParam> } callback - The callback function to be called when the event occurs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     func on(eventType: ProfileCallbackType, callback: Callback1Argument<StateChangeParam>): Unit
-    
+
     /**
-    * Unsubscribe the event reported when the profile connection state changes.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
-    */
+     * Unsubscribe the event reported when the profile connection state changes.
+     *
+     * @param { ProfileCallbackType } eventType - The type of event to unsubscribe.
+     * @param { CallbackObject } callback - The callback function to be removed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     func off(eventType: ProfileCallbackType, callback: CallbackObject): Unit
-    
+
     /**
-    * Unsubscribe the event reported when the profile connection state changes.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
-    */
+     * Unsubscribe the event reported when the profile connection state changes.
+     *
+     * @param { ProfileCallbackType } eventType - The type of event to unsubscribe.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     func off(eventType: ProfileCallbackType): Unit
 }
 
-
 /**
-* Type of the profile connection state changes event to listen for.
-*/
-@Derive[ToString, Hashable, Equatable]
+ * Type of the profile connection state changes event to listen for.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum ProfileCallbackType {
     /**
-    * Connection State Change.
-    */
+     * Connection State Change.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ConnectionStateChange |
-    ...
+    ConnectionStateChange | ...
 }
 
 
+extend ProfileCallbackType <: ToString {
+    
+    /**
+     * Converts the ProfileCallbackType to its string representation.
+     * @returns { String } A string representation of the ProfileCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
 
+
+extend ProfileCallbackType <: Hashable {
+    
+    /**
+     * Returns a hash code value for this ProfileCallbackType.
+     * @returns { Int64 } A hash code value for this ProfileCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func hashCode(): Int64
+}
+
+
+extend ProfileCallbackType <: Equatable<ProfileCallbackType> {
+    
+    /**
+     * Compares this ProfileCallbackType with another for equality.
+     * @param { ProfileCallbackType } other - The ProfileCallbackType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: ProfileCallbackType): Bool
+    
+    /**
+     * Compares this ProfileCallbackType with another for inequality.
+     * @param { ProfileCallbackType } other - The ProfileCallbackType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: ProfileCallbackType): Bool
+}

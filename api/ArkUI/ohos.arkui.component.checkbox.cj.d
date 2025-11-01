@@ -1,21 +1,5 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.checkbox
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.native_struct.*
 import ohos.arkui.component.util.*
@@ -23,48 +7,137 @@ import ohos.base.*
 import ohos.ffi.*
 import ohos.labels.APILevel
 
-
+/**
+ * Defines a Checkbox callback when onChange.
+ *
+ * @param { Bool } value - selected status.
+ */
 public type OnCheckboxChangeCallback = (Bool) -> Unit
 
+/**
+ * Defines Checkbox Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Checkbox <: ViewBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(name!: String = "", group!: String = "", indicatorBuilder!: ?CustomBuilder = None)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func select(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selectedColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onChange(callback: OnCheckboxChangeCallback): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func shape(value: CheckBoxShape): This
+public class Checkbox <: CommonMethodComponent<Checkbox> & CheckboxAttribute {
+/**
+ * Construct the Checkbox component.
+ * Called when the Checkbox component is used.
+ *
+ * @param { ?String } [name] - The initial name of current checkbox.
+ * @param { ?String } [group] - The initial group name of current checkbox.
+ * @param { ?CustomBuilder } [indicatorBuilder] - The builder of current checkbox.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(name!: ?String = None, group!: ?String = None, indicatorBuilder!: ?CustomBuilder = None)
+
+/**
+ * Setting whether checkbox is selected.
+ *
+ * @param { ?Bool } isSelected - Whether the checkbox is selected.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func select(isSelected: ?Bool): This
+
+/**
+ * Set the display color of checkbox.
+ *
+ * @param { ?ResourceColor } value - The color to display.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selectedColor(value: ?ResourceColor): This
+
+/**
+ * Called when the selection status changes.
+ *
+ * @param { ?OnCheckboxChangeCallback } callback - The callback on selected status change.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onChange(callback: ?OnCheckboxChangeCallback): This
+
+/**
+ * Setting the shape of checkbox.
+ *
+ * @param { ?CheckBoxShape } value - The configuration of checkbox shape.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func shape(value: ?CheckBoxShape): This
 }
 
+/**
+ * Defines the Checkbox component attributes.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface CheckboxAttribute <: CommonMethod<CheckboxAttribute> {
+/**
+ * Setting whether checkbox is selected.
+ *
+ * @param { ?Bool } isSelected - Whether the checkbox is selected.
+ * @returns { CheckboxAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func select(isSelected: ?Bool): CheckboxAttribute
+
+/**
+ * Setting the display color of checkbox.
+ *
+ * @param { ?ResourceColor } value - The display color of checkbox.
+ * @returns { CheckboxAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selectedColor(value: ?ResourceColor): CheckboxAttribute
+
+/**
+ * Called when the selection status changes.
+ *
+ * @param { ?OnCheckboxChangeCallback } callback - The callback function triggered when the selected status changes, with the new selected status as parameter.
+ * @returns { CheckboxAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onChange(callback: ?OnCheckboxChangeCallback): CheckboxAttribute
+
+/**
+ * Setting the shape of checkbox.
+ *
+ * @param { ?CheckBoxShape } value - The configuration of checkbox shape.
+ * @returns { CheckboxAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func shape(value: ?CheckBoxShape): CheckboxAttribute
+}

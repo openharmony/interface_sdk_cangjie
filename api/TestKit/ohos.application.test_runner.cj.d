@@ -13,57 +13,36 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.application.test_runner
-import ohos.hilog.*
 
-import std.collection.*
-import ohos.ffi.*
-import ohos.labels.*
-import ohos.ui_test.UITest
+import ohos.labels.APILevel
 
 /**
-* Base class for the test framework.
-* If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
-*
-* @relation interface TestRunner
-*/
+ * Base class for the test framework.
+ * If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public open class TestRunner <: FFIData {
+public open class TestRunner {
     /**
-    * TestRunner register.
-    */
+     * Run all test cases.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
-    ]
-    public static func registerCreator(name: String, creator: () -> TestRunner): Unit
-    
-    /**
-    * Run all test cases.
-    *
-    * @relation onRun(): void
-    */
-    @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public open func onRun(): Unit
-    
+
     /**
-    * Prepare the unit testing environment for running test cases.
-    *
-    * @relation onPrepare(): void
-    */
+     * Prepare the unit testing environment for running test cases.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public open func onPrepare(): Unit
 }
-
-

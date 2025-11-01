@@ -13,89 +13,90 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.common_event_subscribe_info
-import ohos.ffi.*
-import ohos.labels.APILevel
-import ohos.business_exception.BusinessException
 
+import ohos.labels.APILevel
 
 /**
-* The CommonEventSubscribeInfo module provides APIs for providing subscriber information.
-* @relation export interface CommonEventSubscribeInfo
-*/
+ * The CommonEventSubscribeInfo module provides APIs for providing subscriber information.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public class CommonEventSubscribeInfo {
     /**
-    * Common events to subscribe to.
-    * @relation events: Array<string>
-    */
+     * Common events to subscribe to.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var events: Array<String>
-    
+
     /**
-    * Subscriber priority. The value ranges from –100 to +1000. If the value exceeds the upper or lower limit, the upper or lower limit is used.
-    * @relation priority?: number
-    */
+     * Subscriber priority. The value ranges from –100 to +1000. If the value exceeds the upper or lower limit, the
+     * upper or lower limit is used.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var priority: Int32
-    
+
     /**
-    * User ID. If this parameter is not specified, the default value, which is the ID of the current user, will be used.
-    * The value must be an existing user ID in the system. Use getOsAccountLocalId to obtain the system account ID and use it as the user ID of the subscriber.
-    * @relation userId?: number
-    */
+     * User ID. If this parameter is not specified, the default value, which is the ID of the current user, will be
+     * used. The value must be an existing user ID in the system. Use getOsAccountLocalId to obtain the system account
+     * ID and use it as the user ID of the subscriber.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var userId: Int32
-    
+
     /**
-    * Permission of the publisher. The subscriber can receive only the events from the publisher with this permission.
-    * @relation publisherPermission?: string
-    */
+     * Permission of the publisher. The subscriber can receive only the events from the publisher with this permission.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var publisherPermission: String
-    
+
     /**
-    * Device ID. Use @ohos.deviceInfo to obtain the UDID as the device ID of the subscriber. Not supported currently.
-    * @relation publisherDeviceId?: string
-    */
+     * Device ID. Use @ohos.device_info to obtain the UDID as the device ID of the subscriber. Not supported currently.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var publisherDeviceId: String
-    
+
     /**
-    * Bundle name of the publisher to subscribe to.
-    * @relation publisherBundleName?: string
-    */
+     * Bundle name of the publisher to subscribe to.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var publisherBundleName: String
-    
+
     /**
-    * init the CommonEventSubscribeInfo
-    */
+     * CommonEventSubscribeInfo constructor.
+     *
+     * @param { Array<String> } events - Common events to subscribe to.
+     * @param { String } [publisherPermission] - Permission of the publisher.
+     * @param { String } [publisherDeviceId] - Device ID.
+     * @param { Int32 } [userId] - User ID.
+     * @param { Int32 } [priority] - The value ranges from –100 to +1000. If the value exceeds the upper or lower limit,
+     * the upper or lower limit is used.
+     * @param { String } [publisherBundleName] - Bundle name of the publisher to subscribe to.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public init(
@@ -107,5 +108,3 @@ public class CommonEventSubscribeInfo {
         publisherBundleName!: String = ""
     )
 }
-
-

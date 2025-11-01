@@ -1,828 +1,1050 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.convert
 
 
-@!APILevel[since: "22"]
+/**
+ * @description Provides an interface for formatting values into strings with custom format specifiers.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Formattable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Formats the value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the value formatted according to the format string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func format(fmt: String): String
 }
 
+/**
+ * @description Extends Int64 to support formatting with custom format specifiers.
+ */
 extend Int64 <: Formattable {
     /**
-    * Formatting the Int64 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
-    */
+     * @description Formats the Int64 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Int64 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected int format pattern.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Int32 <: Formattable {
-    /**
-    * Formatting the Int32 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Int16 <: Formattable {
-    /**
-    * Formatting the Int16 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Int8 <: Formattable {
-    /**
-    * Formatting the Int8 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected int format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend UInt64 <: Formattable {
-    /**
-    * Formatting the UInt64 Type
-    *
-    * @param fmt formatting string.
-    * @return formatted string
-    *
-    * @throws IllegalArgumentException
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
-    */
-    @OverflowWrapping
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend UInt32 <: Formattable {
-    /**
-    * Formatting the UInt32 Type
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend UInt16 <: Formattable {
-    /**
-    * Formatting the UInt16 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend UInt8 <: Formattable {
-    /**
-    * Formatting the UInt8 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected unit format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Float64 <: Formattable {
-    /**
-    * Formatting the Float64 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected float format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Float32 <: Formattable {
-    /**
-    * Formatting the Float32 Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected float format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Float16 <: Formattable {
-    /**
-    * Formatting the Float16 Type
-    *
-    * @param fmt formatting string.
-    * @return formatted string
-    *
-    * @throws IllegalArgumentException if fmt is not a valid format pattern.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected float format pattern
-    */
-    @!APILevel[since: "22"]
-    public func format(fmt: String): String
-}
-
-extend Rune <: Formattable {
-    /**
-    * Formatting the Rune Type.
-    *
-    * @param fmt formatting string.
-    * @return formatted string.
-    *
-    * @since 0.17.4
-    *
-    * @throws IllegalArgumentException if the `fmt` does not match the expected char format pattern
-    */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func format(fmt: String): String
 }
 
 /**
-* @Description Provide an unified abstraction to support specific types of parsing from strings.
-*
-* @since 0.17.4
-*/
-@!APILevel[since: "22"]
+ * @description Extends Int32 to support formatting with custom format specifiers.
+ */
+extend Int32 <: Formattable {
+    /**
+     * @description Formats the Int32 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Int32 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected int format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends Int16 to support formatting with custom format specifiers.
+ */
+extend Int16 <: Formattable {
+    /**
+     * @description Formats the Int16 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Int16 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected int format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends Int8 to support formatting with custom format specifiers.
+ */
+extend Int8 <: Formattable {
+    /**
+     * @description Formats the Int8 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Int8 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected int format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends UInt64 to support formatting with custom format specifiers.
+ */
+extend UInt64 <: Formattable {
+    /**
+     * @description Formats the UInt64 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the UInt64 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected unit format pattern.
+     */
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends UInt32 to support formatting with custom format specifiers.
+ */
+extend UInt32 <: Formattable {
+    /**
+     * @description Formats the UInt32 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the UInt32 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected unit format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends UInt16 to support formatting with custom format specifiers.
+ */
+extend UInt16 <: Formattable {
+    /**
+     * @description Formats the UInt16 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the UInt16 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected unit format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends UInt8 to support formatting with custom format specifiers.
+ */
+extend UInt8 <: Formattable {
+    /**
+     * @description Formats the UInt8 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the UInt8 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected unit format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends Float64 to support formatting with custom format specifiers.
+ */
+extend Float64 <: Formattable {
+    /**
+     * @description Formats the Float64 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Float64 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected float format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends Float32 to support formatting with custom format specifiers.
+ */
+extend Float32 <: Formattable {
+    /**
+     * @description Formats the Float32 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Float32 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected float format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends Float16 to support formatting with custom format specifiers.
+ */
+extend Float16 <: Formattable {
+    /**
+     * @description Formats the Float16 value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Float16 value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected float format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Extends Rune to support formatting with custom format specifiers.
+ */
+extend Rune <: Formattable {
+    /**
+     * @description Formats the Rune value according to the given format string.
+     * @param fmt The format string specifying how the value should be formatted.
+     * @returns A string representation of the Rune value formatted according to the format string.
+     * @throws IllegalArgumentException if the format string does not match the expected char format pattern.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func format(fmt: String): String
+}
+
+/**
+ * @description Provides an unified abstraction to support specific types of parsing from strings.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Parsable<T> {
     /**
-    * @Description Provides an abstract function to support specific types of parsing from strings.
-    *
-    * @param value of String.
-    * @return Parameters of T.
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Provides an abstract function to support specific types of parsing from strings.
+     * @param value The string to parse.
+     * @returns The parsed value of type T.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     static func parse(value: String): T
     
     /**
-    * @Description Provides an abstract function to support specific types of parsing from strings.
-    *
-    * @param value of String.
-    * @return Parameters of Option<T>.
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Provides an abstract function to support specific types of parsing from strings.
+     * @param value The string to parse.
+     * @returns An Option containing the parsed value of type T, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     static func tryParse(value: String): Option<T>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Provides an interface for converting values to and from strings with radix support.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface RadixConvertible<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Parses a string representation of a number with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed value of type T.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     static func parse(value: String, radix!: Int64): T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Attempts to parse a string representation of a number with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed value of type T, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     static func tryParse(value: String, radix!: Int64): Option<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the value in the specified radix.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toString(radix!: Int64): String
 }
 
-/*
-* @Description The Int8 is extended to provide the functions of parsing a string into Int8 or Option<Int8> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Int8 to support parsing from strings.
+ */
 extend Int8 <: Parsable<Int8> {
     /**
-    * @Description Convert a string of Int8 literals to an Int8 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Int8.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+",
-    * or if failing to convert to Int8, or if the value after conversion is out of the Int8 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of Int8 literals to an Int8 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Int8 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int8, or if the value after conversion is out of the Int8 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Int8
     
     /**
-    * @Description Convert a string of Int8 literals to an Option<Int8> value. If the failure occurs, Option<Int8>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Int8>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of Int8 literals to an Option<Int8> value. If the failure occurs, Option<Int8>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Int8 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Int8>
 }
 
+/**
+ * @description Extends Int8 to support radix conversion.
+ */
 extend Int8 <: RadixConvertible<Int8> {
+    /**
+     * @description Parses a string representation of an Int8 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed Int8 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int8, or if the value after conversion is out of the Int8 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): Int8
     
+    /**
+     * @description Attempts to parse a string representation of an Int8 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed Int8 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<Int8>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Int8 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the Int8 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The UInt8 is extended to provide the functions of parsing a string into UInt8 type or Option<UInt8> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends UInt8 to support parsing from strings.
+ */
 extend UInt8 <: Parsable<UInt8> {
     /**
-    * @Description Convert a string of UInt8 literals to a UInt8 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of UInt8.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-",
-    * or if failing to convert to UInt8, or if the value after conversion is out of the UInt8 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of UInt8 literals to a UInt8 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed UInt8 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt8, or if the value after conversion is out of the UInt8 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): UInt8
     
     /**
-    * @Description Convert a string of UInt8 literals to an Option<UInt8> value. If the failure occurs, Option<UInt8>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<UInt8>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of UInt8 literals to an Option<UInt8> value. If the failure occurs, Option<UInt8>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed UInt8 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<UInt8>
 }
 
+/**
+ * @description Extends UInt8 to support radix conversion.
+ */
 extend UInt8 <: RadixConvertible<UInt8> {
+    /**
+     * @description Parses a string representation of a UInt8 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed UInt8 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt8, or if the value after conversion is out of the UInt8 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): UInt8
     
+    /**
+     * @description Attempts to parse a string representation of a UInt8 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed UInt8 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<UInt8>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the UInt8 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the UInt8 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The Int16 is extended to provide the functions of parsing a character string into Int16 type or Option<Int16> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Int16 to support parsing from strings.
+ */
 extend Int16 <: Parsable<Int16> {
     /**
-    * @Description Convert a string of Int16 literals to an Int16 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Int16.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+",
-    * or if failing to convert to Int16, or if the value after conversion is out of the Int16 range,
-    * @or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of Int16 literals to an Int16 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Int16 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int16, or if the value after conversion is out of the Int16 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Int16
     
     /**
-    * @Description Convert a string of Int16 literals to an Option<Int16> value. If the failure occurs, Option<Int16>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Int16>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of Int16 literals to an Option<Int16> value. If the failure occurs, Option<Int16>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Int16 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Int16>
 }
 
+/**
+ * @description Extends Int16 to support radix conversion.
+ */
 extend Int16 <: RadixConvertible<Int16> {
+    /**
+     * @description Parses a string representation of an Int16 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed Int16 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int16, or if the value after conversion is out of the Int16 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): Int16
     
+    /**
+     * @description Attempts to parse a string representation of an Int16 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed Int16 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<Int16>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Int16 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the Int16 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The UInt16 is extended to provide the functions of parsing character strings to UInt16 type or Option<UInt16> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends UInt16 to support parsing from strings.
+ */
 extend UInt16 <: Parsable<UInt16> {
     /**
-    * @Description Convert a string of UInt16 literals to a UInt16 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of UInt16.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-",
-    * or if failing to convert to UInt16, or if the value after conversion is out of the UInt16 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of UInt16 literals to a UInt16 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed UInt16 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt16, or if the value after conversion is out of the UInt16 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): UInt16
     
     /**
-    * @Description Convert a string of UInt16 literals to an Option<UInt16> value. If the failure occurs, Option<UInt16>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<UInt16>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of UInt16 literals to an Option<UInt16> value. If the failure occurs, Option<UInt16>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed UInt16 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<UInt16>
 }
 
+/**
+ * @description Extends UInt16 to support radix conversion.
+ */
 extend UInt16 <: RadixConvertible<UInt16> {
+    /**
+     * @description Parses a string representation of a UInt16 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed UInt16 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt16, or if the value after conversion is out of the UInt16 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): UInt16
     
+    /**
+     * @description Attempts to parse a string representation of a UInt16 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed UInt16 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<UInt16>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the UInt16 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the UInt16 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The Int32 is extended to provide the function of parsing a character string into Int32 type or Option<Int32> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Int32 to support parsing from strings.
+ */
 extend Int32 <: Parsable<Int32> {
     /**
-    * @Description Convert a string of Int32 literals to an Int32 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Int32.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+",
-    * or if failing to convert to Int32, or if the value after conversion is out of the Int32 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of Int32 literals to an Int32 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Int32 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int32, or if the value after conversion is out of the Int32 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Int32
     
     /**
-    * @Description Convert a string of Int32 literals to an Option<Int32> value. If the failure occurs, Option<Int32>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Int32>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of Int32 literals to an Option<Int32> value. If the failure occurs, Option<Int32>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Int32 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Int32>
 }
 
+/**
+ * @description Extends Int32 to support radix conversion.
+ */
 extend Int32 <: RadixConvertible<Int32> {
+    /**
+     * @description Parses a string representation of an Int32 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed Int32 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int32, or if the value after conversion is out of the Int32 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): Int32
     
+    /**
+     * @description Attempts to parse a string representation of an Int32 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed Int32 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<Int32>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Int32 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the Int32 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The UInt32 is extended to provide the functions of parsing a character string into UInt32 type or Option<UInt32> type.
-*
-* @since 0.17.4.
-*/
+/**
+ * @description Extends UInt32 to support parsing from strings.
+ */
 extend UInt32 <: Parsable<UInt32> {
     /**
-    * @Description Convert a string of UInt32 literals to a UInt32 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of UInt32.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-",
-    * or if failing to convert to UInt32, or if the value after conversion is out of the UInt32 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of UInt32 literals to a UInt32 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed UInt32 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt32, or if the value after conversion is out of the UInt32 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): UInt32
     
     /**
-    * @Description Convert a string of UInt32 literals to an Option<UInt32> value. If the failure occurs, Option<UInt32>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<UInt32>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of UInt32 literals to an Option<UInt32> value. If the failure occurs, Option<UInt32>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed UInt32 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<UInt32>
 }
 
+/**
+ * @description Extends UInt32 to support radix conversion.
+ */
 extend UInt32 <: RadixConvertible<UInt32> {
+    /**
+     * @description Parses a string representation of a UInt32 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed UInt32 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt32, or if the value after conversion is out of the UInt32 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): UInt32
     
+    /**
+     * @description Attempts to parse a string representation of a UInt32 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed UInt32 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<UInt32>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the UInt32 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the UInt32 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The Int64 is extended to provide the functions of parsing a character string to Int64 type or Option<Int64> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Int64 to support parsing from strings.
+ */
 extend Int64 <: Parsable<Int64> {
     /**
-    * @Description Convert a string of Int64 literals to an Int64 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Int64.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+",
-    * or if failing to convert to Int64, or if the value after conversion is out of the Int64 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of Int64 literals to an Int64 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Int64 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int64, or if the value after conversion is out of the Int64 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Int64
     
     /**
-    * @Description Convert a string of Int64 literals to an Option<Int64> value. If the failure occurs, Option<Int64>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Int64>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of Int64 literals to an Option<Int64> value. If the failure occurs, Option<Int64>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Int64 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Int64>
 }
 
+/**
+ * @description Extends Int64 to support radix conversion.
+ */
 extend Int64 <: RadixConvertible<Int64> {
+    /**
+     * @description Parses a string representation of an Int64 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed Int64 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+", or if failing to convert to Int64, or if the value after conversion is out of the Int64 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): Int64
     
+    /**
+     * @description Attempts to parse a string representation of an Int64 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed Int64 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<Int64>
     
+    /**
+     * @description Converts the Int64 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the Int64 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
-/*
-* @Description The UInt64 is extended to provide the functions of parsing character strings to UInt64 type or Option<UInt64> type.
-*
-* @since 0.17.4.
-*/
+/**
+ * @description Extends UInt64 to support parsing from strings.
+ */
 extend UInt64 <: Parsable<UInt64> {
     /**
-    * @Description Convert a string of UInt64 literals to a UInt64 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of UInt64.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-",
-    * or if failing to convert to UInt64, or if the value after conversion is out of the UInt64 range,
-    * or if there is an invalid utf8 code in the string.
-    */
+     * @description Convert a string of UInt64 literals to a UInt64 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed UInt64 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt64, or if the value after conversion is out of the UInt64 range, or if there is an invalid utf8 code in the string.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): UInt64
     
     /**
-    * @Description Convert a string of UInt64 literals to an Option<UInt64> value. If the failure occurs, Option<UInt64>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<UInt64>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
+     * @description Convert a string of UInt64 literals to an Option<UInt64> value. If the failure occurs, Option<UInt64>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed UInt64 value, or None if parsing failed.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<UInt64>
 }
 
+/**
+ * @description Extends UInt64 to support radix conversion.
+ */
 extend UInt64 <: RadixConvertible<UInt64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Parses a string representation of a UInt64 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns The parsed UInt64 value.
+     * @throws IllegalArgumentException if the string is empty, or if the string is starting with "+" or "-", or if failing to convert to UInt64, or if the value after conversion is out of the UInt64 range, or if there is an invalid utf8 code in the string.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(value: String, radix!: Int64): UInt64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Attempts to parse a string representation of a UInt64 with the specified radix.
+     * @param value The string to parse.
+     * @param radix The radix (base) to use for parsing.
+     * @returns An Option containing the parsed UInt64 value, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(value: String, radix!: Int64): Option<UInt64>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the UInt64 value to a string representation with the specified radix.
+     * @param radix The radix (base) to use for conversion.
+     * @returns A string representation of the UInt64 value in the specified radix.
+     * @throws IllegalArgumentException if the radix is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(radix!: Int64): String
 }
 
 extend Float16 <: FloatParsable<Float16> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a Float16 value from a Float64 value.
+     * @param n The Float64 value to convert.
+     * @returns A Float16 value converted from the Float64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromFloat64(n: Float64): Float16
 }
 
+/**
+ * @description Extends Float32 to support conversion from Float64 values.
+ */
 extend Float32 <: FloatParsable<Float32> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a Float32 value from a Float64 value.
+     * @param n The Float64 value to convert.
+     * @returns A Float32 value converted from the Float64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromFloat64(n: Float64): Float32
 }
 
+/**
+ * @description Extends Float64 to support conversion from Float64 values.
+ */
 extend Float64 <: FloatParsable<Float64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a Float64 value from a Float64 value (identity conversion).
+     * @param n The Float64 value to convert.
+     * @returns The same Float64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromFloat64(n: Float64): Float64
 }
 
-/*
-* @Description The Float16 is extended to provide the functions of parsing a character string into Float16 type or Option<Float16> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Float16 to support parsing from strings.
+ */
 extend Float16 <: Parsable<Float16> {
     /**
-    * @Description Convert a string of Float16 literals to a Float16 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Float16.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
-    */
+     * @description Convert a string of Float16 literals to a Float16 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Float16 value.
+     * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Float16
     
     /**
-    * @Description Convert a string of Float16 literals to an Option<Float16> value. If the failure occurs, Option<Float16>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Float16>.
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Float16 literals to an Option<Float16> value. If the failure occurs, Option<Float16>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Float16 value, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Float16>
 }
 
-/*
-* @Description The Float32 is extended to provide the functions of parsing a character string to Float32 type or Option<Float32> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Float32 to support parsing from strings.
+ */
 extend Float32 <: Parsable<Float32> {
     /**
-    * @Description Convert a string of Float32 literals to a Float32 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Float32.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
-    */
+     * @description Convert a string of Float32 literals to a Float32 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Float32 value.
+     * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Float32
     
     /**
-    * @Description Convert a string of Float32 literals to an Option<Float32> value. If the failure occurs, Option<Float32>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Float32>.
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Float32 literals to an Option<Float32> value. If the failure occurs, Option<Float32>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Float32 value, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Float32>
 }
 
-/*
-* @Description The Float64 is extended to provide the functions of parsing a character string to Float64 type or Option<Float64> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Float64 to support parsing from strings.
+ */
 extend Float64 <: Parsable<Float64> {
     /**
-    * @Description Convert a string of Float64 literals to a Float64 value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Float64.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
-    */
+     * @description Convert a string of Float64 literals to a Float64 value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Float64 value.
+     * @throws IllegalArgumentException if the string does not comply with the floating point number syntax.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Float64
     
     /**
-    * @Description Convert a string of Float64 literals to an Option<Float64> value. If the failure occurs, Option<Float64>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Float64>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Float64 literals to an Option<Float64> value. If the failure occurs, Option<Float64>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Float64 value, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Float64>
 }
 
-/*
-* @Description The Rune is extended to provide the functions of parsing a character string into Rune type or Option<Rune> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Rune to support parsing from strings.
+ */
 extend Rune <: Parsable<Rune> {
     /**
-    * @Description Convert a string of Rune literals to a Rune value. If the failure occurs, Exception will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Rune.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if failing to convert to Rune,
-    * or if there is an invalid utf8 code in the string.
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Rune literals to a Rune value. If the failure occurs, Exception will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Rune value.
+     * @throws IllegalArgumentException if the string is empty, or if failing to convert to Rune, or if there is an invalid utf8 code in the string.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Rune
     
     /**
-    * @Description Convert a string of Rune literals to an Option<Rune> value. If the failure occurs, Option<Rune>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Rune>.
-    * @throws IllegalArgumentException if there is an invalid utf8 code in the string
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Rune literals to an Option<Rune> value. If the failure occurs, Option<Rune>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Rune value, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Rune>
 }
 
-/*
-* @Description The Bool is extended to provide the functions of parsing a character string into Bool type or Option<Bool> type.
-*
-* @since 0.17.4
-*/
+/**
+ * @description Extends Bool to support parsing from strings.
+ */
 extend Bool <: Parsable<Bool> {
     /**
-    * @Description Convert a string of Boolean literals to a Boolean value. If the failure occurs, IllegalArgumentException will be throwed.
-    *
-    * @param data of String.
-    * @return Parameters of Bool.
-    *
-    * @since 0.31.2
-    *
-    * @throws IllegalArgumentException if the string is empty, or if failing to convert to Bool,
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Boolean literals to a Boolean value. If the failure occurs, IllegalArgumentException will be throwed.
+     * @param data The string to parse.
+     * @returns The parsed Bool value.
+     * @throws IllegalArgumentException if the string is empty, or if failing to convert to Bool.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(data: String): Bool
     
     /**
-    * @Description Convert a string of Boolean literals to an Option<Bool> value. If the failure occurs, Option<Rune>.None will be returned.
-    *
-    * @param data of String.
-    * @return Parameters of Option<Bool>.
-    *
-    * @since 0.31.2
-    */
-    @!APILevel[since: "22"]
+     * @description Convert a string of Boolean literals to an Option<Bool> value. If the failure occurs, Option<Rune>.None will be returned.
+     * @param data The string to parse.
+     * @returns An Option containing the parsed Bool value, or None if parsing failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(data: String): Option<Bool>
 }
 

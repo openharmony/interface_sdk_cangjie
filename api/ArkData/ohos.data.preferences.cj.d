@@ -13,508 +13,491 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.data.preferences
+
+
+import ohos.app.ability.ui_ability.UIAbilityContext
+import ohos.callback_invoke.Callback1Argument
 import ohos.labels.*
-import ohos.business_exception.{ BusinessException, ERR_PARAMETER_ERROR, ERR_NOT_SUPPOERTED, getUniversalErrorMsg}
 import std.collection.*
 
-import ohos.ffi.*
-import ohos.hilog.*
-import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
-import std.sync.*
-import ohos.callback_invoke.{ Callback1Argument, CallbackObject}
-import ohos.business_exception.{ BusinessException, ERR_PARAMETER_ERROR}
-
 /**
-* the storage type
-* @relation enum StorageType
-*/
+ * Preferences change type.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-]
-public enum StorageType {
-    /**
-    * XML storage type
-    * @relation XML = 0
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    Xml |
-    /**
-    * GSKV storage type
-    * @relation GSKV
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    Gskv |
-    ...
-}
-
-
-/**
-* Enumeration implements a collection of basic data types.
-*/
-@!APILevel[
-    22,
-    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-]
-public enum ValueType {
-    /**
-    * Type for Int64.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    Integer(Int64) |
-    /**
-    * Type for Float64.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    Double(Float64) |
-    /**
-    * Type for String.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    StringData(String) |
-    /**
-    * Type for Bool.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    BoolData(Bool) |
-    /**
-    * Type for Array<Bool>.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    BoolArray(Array<Bool>) |
-    /**
-    * Type for Float64.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    DoubleArray(Array<Float64>) |
-    /**
-    * Type for Array<String>.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    StringArray(Array<String>) |
-    ...
-}
-
-
-/**
-* The Max length of key.
-*
-* @relation const MAX_KEY_LENGTH: number
-*/
-@!APILevel[
-    22,
-    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-]
-public const MAX_KEY_LENGTH: UInt32 = 1024
-
-
-/**
-* The Max length of value.
-*
-* @relation const MAX_VALUE_LENGTH: number
-*/
-@!APILevel[
-    22,
-    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-]
-public const MAX_VALUE_LENGTH: UInt32 = 16 * 1024 * 1024
-
-
-/**
-* Manages preferences file configurations.
-*
-* @relation interface Options
-*/
-@!APILevel[
-    22,
-    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-]
-public class Options {
-    /**
-    * The preferences file name.
-    *
-    * @relation name: string
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public var name: String
-    
-    /**
-    * Application Group Id.
-    *
-    * @relation dataGroupId?: string | null | undefined
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public var dataGroupId: String
-    
-    /**
-    * The preferences storage type.
-    *
-    * @relation storageType?: StorageType | null | undefined;
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public var storageType: StorageType
-    
-    /**
-    * Options constructor.
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public init(name: String, dataGroupId!: String = String.empty,
-        storageType!: StorageType = StorageType.Xml)
-}
-
-
-
-/**
-* Preferences change type.
-*/
-@!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
 public enum PreferencesEvent {
     /**
-    * change
-    */
+     * change
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
-    PreferencesChange |
+    PreferencesChange
+    | 
     /**
-    * multiProcessChange
-    */
+     * multiProcessChange
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
     ]
-    PreferencesMultiProcessChange |
-    ...
+    PreferencesMultiProcessChange
+    | ...
 }
-
 
 /**
-* Provides interfaces to obtain and modify preferences data.
-*
-* @relation interface Preferences
-*/
+ * Provides interfaces to obtain and modify preferences data.
+ * <p>The preferences data is stored in a file, which matches only one {@link Preferences} instance in the memory.
+ * You can use getPreferences to obtain the {@link Preferences} instance matching
+ * the file that stores preferences data, and use movePreferencesFromCache
+ * to remove the {@link Preferences} instance from the memory.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
 ]
-public class Preferences <: RemoteDataLite {
+public class Preferences {
     /**
-    * Obtains a {@link Preferences} instance matching a specified preferences file name.
-    *
-    * @param { UIAbilityContext } context - Indicates the context of application or capability.
-    * @param { String } name - Indicates the preferences file name.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @throws { IllegalArgumentException } - The context is invalid.
-    *
-    * @relation function getPreferences(context: Context, name: string, callback: AsyncCallback<Preferences>): void
-    */
+     * Obtains a {@link Preferences} instance matching a specified preferences file name.
+     * <p>The {@link Preferences} instance loads all data of the preferences file and
+     * resides in the memory. You can use removePreferencesFromCache to remove the instance from the memory.
+     *
+     * @param { UIAbilityContext } context - Indicates the context of application or capability.
+     * @param { String } name - Indicates the preferences file name.
+     * @returns { Preferences } The {@link Preferences} instance matching the specified preferences file name.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func getPreferences(context: UIAbilityContext, name: String): Preferences
-    
+
     /**
-    * Obtains a {@link Preferences} instance matching a specified preferences file name.
-    *
-    * @param { UIAbilityContext } context - Indicates the context of application or capability.
-    * @param { Options } options - Indicates the {@link Options} option of preferences file position.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @throws { IllegalArgumentException } - The context is invalid.
-    *
-    * @relation function getPreferences(context: Context, options: Options, callback: AsyncCallback<Preferences>): void
-    */
+     * Obtains a {@link Preferences} instance matching a specified preferences file name.
+     * <p>The {@link Preferences} instance loads all data of the preferences file and
+     * resides in the memory. You can use removePreferencesFromCache to remove the instance from the memory.
+     *
+     * @param { UIAbilityContext } context - Indicates the context of application or capability.
+     * @param { PreferencesOptions } options - Indicates the {@link PreferencesOptions} option of preferences
+     * file position.
+     * @returns { Preferences } The Preferences instance matching the specified preferences file name.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 15500000 - Inner error.
+     * @throws { BusinessException } 15501001 - The operations is supported in stage mode only.
+     * @throws { BusinessException } 15501002 - Invalid dataGroupId.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public static func getPreferences(context: UIAbilityContext, options: Options): Preferences
-    
+    public static func getPreferences(context: UIAbilityContext, options: PreferencesOptions): Preferences
+
     /**
-    * Deletes a {@link Preferences} instance matching a specified preferences file name.
-    *
-    * @param { UIAbilityContext } context - Indicates the context of application or capability.
-    * @param { String } name - Indicates the preferences file name.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @throws { BusinessException } 15500010 - Failed to delete the user preferences persistence file.
-    * @relation function deletePreferences(context: Context, name: string): Promise<void>
-    */
+     * Deletes a {@link Preferences} instance matching a specified preferences file name
+     * from the cache which is performed by removePreferencesFromCache and deletes the
+     * preferences file.
+     * <p>When deleting the {@link Preferences} instance, you must release all references
+     * of the instance. In addition, do not use the instance to perform data operations. Otherwise, data inconsistency
+     * will occur.
+     *
+     * @param { UIAbilityContext } context - Indicates the context of application or capability.
+     * @param { String } name - Indicates the preferences file name.
+     * @throws { BusinessException } 15500000 - Inner error.
+     * @throws { BusinessException } 15500010 - Failed to delete the user preferences persistence file.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func deletePreferences(context: UIAbilityContext, name: String): Unit
-    
+
     /**
-    * Deletes a {@link Preferences} instance matching a specified preferences file name.
-    *
-    * @param { UIAbilityContext } context - Indicates the context of application or capability.
-    * @param { Options } options - Indicates the {@link Options} option of preferences file position.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 15500010 - Failed to delete the user preferences persistence file.
-    * @throws { BusinessException } 15501001 - The operations is supported in stage mode only.
-    * @throws { BusinessException } 15501002 - Invalid dataGroupId.
-    * @throws { IllegalArgumentException } - The context is invalid.
-    *
-    * @relation function deletePreferences(context: Context, options: Options): Promise<void>
-    */
+     * Deletes a {@link Preferences} instance matching a specified preferences file name
+     * from the cache which is performed by removePreferencesFromCache and deletes the
+     * preferences file.
+     * <p>When deleting the {@link Preferences} instance, you must release all references
+     * of the instance. In addition, do not use the instance to perform data operations. Otherwise, data inconsistency
+     * will occur.
+     *
+     * @param { UIAbilityContext } context - Indicates the context of application or capability.
+     * @param { PreferencesOptions } options - Indicates the {@link PreferencesOptions} option of preferences
+     * file position.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 15500000 - Inner error.
+     * @throws { BusinessException } 15500010 - Failed to delete the user preferences persistence file.
+     * @throws { BusinessException } 15501001 - The operations is supported in stage mode only.
+     * @throws { BusinessException } 15501002 - Invalid dataGroupId.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public static func deletePreferences(context: UIAbilityContext, options: Options): Unit
-    
+    public static func deletePreferences(context: UIAbilityContext, options: PreferencesOptions): Unit
+
     /**
-    * Deletes a {@link Preferences} instance matching a specified preferences file name
-    * from the cache. This interface is executed synchronously.
-    * <p>When deleting the {@link Preferences} instance, you must release all references
-    * of the instance. In addition, do not use the instance to perform data operations. Otherwise, data inconsistency
-    * will occur.
-    *
-    * @param { UIAbilityContext } context - Indicates the context of application or capability.
-    * @param { String } name - Indicates the preferences file name.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation function removePreferencesFromCacheSync(context: Context, name: string): void
-    */
+     * Deletes a {@link Preferences} instance matching a specified preferences file name
+     * from the cache.
+     * <p>When deleting the {@link Preferences} instance, you must release all references
+     * of the instance. In addition, do not use the instance to perform data operations. Otherwise, data inconsistency
+     * will occur.
+     *
+     * @param { UIAbilityContext } context - Indicates the context of application or capability.
+     * @param { String } name - Indicates the preferences file name.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func removePreferencesFromCache(context: UIAbilityContext, name: String): Unit
-    
+
     /**
-    * Deletes a {@link Preferences} instance matching a specified preferences file name
-    * from the cache. This interface is executed synchronously.
-    * <p>When deleting the {@link Preferences} instance, you must release all references
-    * of the instance. In addition, do not use the instance to perform data operations. Otherwise, data inconsistency
-    * will occur.
-    *
-    * @param { UIAbilityContext } context - Indicates the context of application or capability.
-    * @param { Options } options - Indicates the {@link Options} option of preferences file position.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @throws { BusinessException } 15501001 - The operations is supported in stage mode only.
-    * @throws { BusinessException } 15501002 - Invalid dataGroupId.
-    * @throws { IllegalArgumentException } - The context is invalid.
-    *
-    * @relation function removePreferencesFromCacheSync(context: Context, options: Options): void
-    */
+     * Deletes a {@link Preferences} instance matching a specified preferences file name
+     * from the cache.
+     * <p>When deleting the {@link Preferences} instance, you must release all references
+     * of the instance. In addition, do not use the instance to perform data operations. Otherwise, data inconsistency
+     * will occur.
+     *
+     * @param { UIAbilityContext } context - Indicates the context of application or capability.
+     * @param { PreferencesOptions } options - Indicates the {@link PreferencesOptions} option of preferences
+     * file position.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 15500000 - Inner error.
+     * @throws { BusinessException } 15501001 - The operations is supported in stage mode only.
+     * @throws { BusinessException } 15501002 - Invalid dataGroupId.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public static func removePreferencesFromCache(context: UIAbilityContext, options: Options): Unit
-    
+    public static func removePreferencesFromCache(context: UIAbilityContext, options: PreferencesOptions): Unit
+
     /**
-    * Saves the {@link Preferences} object to the file.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Mandatory parameters are left unspecified.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation flush(): Promise<void>
-    */
+     * Obtains the value of a preferences in the PreferencesValueType format.
+     * <p>If the value is null or not in the PreferencesValueType format, the default value is returned.
+     *
+     * @param { String } key - Indicates the key of the preferences. It cannot be null or empty.
+     * <tt>MAX_KEY_LENGTH</tt>.
+     * @param { PreferencesValueType } defValue - Indicates the default value to return.
+     * @returns { PreferencesValueType } The value matching the specified key if it is found;
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public func flush(): Unit
-    
+    public func get(key: String, defValue: PreferencesValueType): PreferencesValueType
+
     /**
-    * Clears all preferences from the {@link Preferences} object.
-    * <p>You can call the {@link #flush} method to save the {@link Preferences} object to the file.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Mandatory parameters are left unspecified.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation clear(): Promise<void>
-    */
+     * Obtains all the keys and values of a preferences in an HashMap.
+     *
+     * @returns { HashMap<String, PreferencesValueType> } The values and keys in an HashMap.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public func clear(): Unit
-    
+    public func getAll(): HashMap<String, PreferencesValueType>
+
     /**
-    * Obtains the value of a preferences in the ValueType format.
-    * <p>If the value is {@code null} or not in the ValueType format, the default value is returned.
-    *
-    * @param { String } key - Indicates the key of the preferences. It cannot be {@code null} or empty.
-    * <tt>MAX_KEY_LENGTH</tt>.
-    * @param { ValueType } defValue - Indicates the default value to return.
-    * @returns { ValueType } The value matching the specified key if it is found;
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation get(key: string, defValue: ValueType): Promise<ValueType>
-    */
+     * Checks whether the {@link Preferences} object contains a preferences matching a specified key.
+     *
+     * @param { String } key - Indicates the key of the preferences to modify. It cannot be null or empty.
+     * <tt>MAX_KEY_LENGTH</tt>.
+     * @returns { Bool } true if the Preferences object contains
+     * a preferences with the specified key; returns false otherwise.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public func get(key: String, defValue: ValueType): ValueType
-    
-    /**
-    * Sets an int value for the key in the {@link Preferences} object.
-    *
-    * @param { String } key - Indicates the key of the preferences to modify. It cannot be {@code null} or empty.
-    * @param { ValueType } value - Indicates the value of the preferences.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation put(key: string, value: ValueType): Promise<void>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public func put(key: String, value: ValueType): Unit
-    
-    /**
-    * Obtains all the keys and values of a preferences in an HashMap.
-    *
-    * @returns { HashMap<String, ValueType> } The values and keys in an HashMap.
-    * @throws { BusinessException } 401 - Parameter error. Mandatory parameters are left unspecified.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation getAllSync(): Object;
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public func getAll(): HashMap<String, ValueType>
-    
-    /**
-    * Deletes the preferences with a specified key from the {@link Preferences} object.
-    *
-    * @param { String } key - Indicates the key of the preferences to delete. It cannot be {@code null} or empty.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation delete(key: string): Promise<void>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
-    ]
-    public func delete(key: String): Unit
-    
-    /**
-    * Checks whether the {@link Preferences} object contains a preferences matching a specified key.
-    *
-    * @param { String } key - Indicates the key of the preferences to modify. It cannot be {@code null} or empty.
-    * @returns { Bool } {@code true} if the {@link Preferences} object contains
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation has(key: string): Promise<boolean>
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func has(key: String): Bool
-    
+
     /**
-    * Registers an observer to listen for the change of a {@link Preferences} object.
-    *
-    * @param { String } tp - Indicates the callback when preferences changes.
-    * @param { Callback1Argument<String> } callback - Indicates the callback function.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation on(type: 'change', callback: Callback<string>): void
-    * @relation on(type: 'multiProcessChange', callback: Callback<string>): void
-    */
+     * Sets an int value for the key in the {@link Preferences} object.
+     * <p>You can call the {@link #flush} method to save the {@link Preferences} object to the
+     * file.
+     * <p>When the value contains strings in a non-UTF-8 format, use the Uint8Array type for storage.
+     * Otherwise, the format of the persistent file is incorrect and the file is damaged.
+     * <p>If the corresponding key already exists, the {@link put} method will overwrite its value.
+     * You can use the {@link #hasSync} method to check whether the corresponding key-value pair exists.
+     *
+     * @param { String } key - Indicates the key of the preferences to modify. It cannot be null or empty.
+     * <tt>MAX_KEY_LENGTH</tt>.
+     * @param { PreferencesValueType } value - Indicates the value of the preferences.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public func on(event :PreferencesEvent, callback: Callback1Argument<String>): Unit
-    
+    public func put(key: String, value: PreferencesValueType): Unit
+
     /**
-    * Unregisters an existing observer.
-    *
-    * @param { String } tp - Indicates the callback when preferences changes.
-    * @param { Callback1Argument<String> } callback - Indicates the callback function.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:
-    * <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types;
-    * <br>3. Parameter verification failed.
-    * @throws { BusinessException } 15500000 - Inner error.
-    * @relation off(type: 'change', callback?: Callback<string>): void
-    * @relation off(type: 'multiProcessChange', callback?: Callback<string>): void
-    */
+     * Deletes the preferences with a specified key from the {@link Preferences} object.
+     * <p>You can call the {@link #flush} method to save the {@link Preferences} object to the file.
+     *
+     * @param { String } key - Indicates the key of the preferences to delete. It cannot be null or empty.
+     * <tt>MAX_KEY_LENGTH</tt>.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
     ]
-    public func off(event :PreferencesEvent, callback!: ?Callback1Argument<String> = None): Unit
+    public func delete(key: String): Unit
+
+    /**
+     * Clears all preferences from the {@link Preferences} object.
+     * <p>You can call the {@link #flush} method to save the {@link Preferences} object to the file.
+     *
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func clear(): Unit
+
+    /**
+     * saves the {@link Preferences} object to the file.
+     *
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func flush(): Unit
+
+    /**
+     * Registers an observer to listen for the change of a {@link Preferences} object.
+     *
+     * @param { PreferencesEvent } event - Indicates the callback when preferences changes.
+     * @param { Callback1Argument<String> } callback - Indicates the callback function.
+     * @throws { BusinessException } 15500000 - Inner error.
+     * @throws { BusinessException } 15500019 - Failed to obtain the subscription service.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true
+    ]
+    public func on(event: PreferencesEvent, callback: Callback1Argument<String>): Unit
+
+    /**
+     * Unregisters an existing observer.
+     *
+     * @param { PreferencesEvent } event - Indicates the callback when preferences changes.
+     * @param { Callback1Argument<String> } [callback] - Indicates the callback function.
+     * @throws { BusinessException } 15500000 - Inner error.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core",
+        throwexception: true
+    ]
+    public func off(event: PreferencesEvent, callback!: ?Callback1Argument<String> = None): Unit
 }
 
+/**
+ * the storage type
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+]
+public enum StorageType {
+    /**
+     * XML storage type
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ]
+    Xml
+    | 
+    /**
+     * GSKV storage type
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ]
+    Gskv
+    | ...
+}
 
+/**
+ * Indicates possible value types
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+]
+public enum PreferencesValueType {
+    /**
+     * Type for Int64.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    Integer(Int64)
+    | 
+    /**
+     * Type for Float64.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    Double(Float64)
+    | 
+    /**
+     * Type for String.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    StringData(String)
+    | 
+    /**
+     * Type for Bool.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    BoolData(Bool)
+    | 
+    /**
+     * Type for Array<Bool>.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    BoolArray(Array<Bool>)
+    | 
+    /**
+     * Type for Float64.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    DoubleArray(Array<Float64>)
+    | 
+    /**
+     * Type for Array<String>.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ] 
+    StringArray(Array<String>)
+    | ...
+}
+
+/**
+ * The Max length of key.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+]
+public const MAX_KEY_LENGTH: UInt32 = 1024
+/**
+ * The Max length of value.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+]
+public const MAX_VALUE_LENGTH: UInt32 = 16 * 1024 * 1024
+
+/**
+ * Manages preferences file configurations.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+]
+public class PreferencesOptions {
+    /**
+     * The preferences file name.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ]
+    public var name: String
+
+    /**
+     * Application Group Id.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ]
+    public var dataGroupId: String
+
+    /**
+     * The preferences storage type.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ]
+    public var storageType: StorageType
+
+    /**
+     * PreferencesOptions constructor.
+     *
+     * @param { String } name - The preferences file name.
+     * @param { String } [dataGroupId] - Application Group Id.
+     * @param { StorageType } [storageType] - The preferences file storage type.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.Preferences.Core"
+    ]
+    public init(name: String, dataGroupId!: String = String.empty, storageType!: StorageType = StorageType.Xml)
+}

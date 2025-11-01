@@ -13,61 +13,98 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.bluetooth.constant
-import std.deriving.Derive
+
 import ohos.labels.APILevel
 
-
 /**
-* The enum of profile connection state.
-* @relation export enum ProfileConnectionState
-*/
-@Derive[ToString, Equatable]
+ * The enum of profile connection state.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum ProfileConnectionState {
+    
     /**
-    * the current profile is disconnected
-    * @relation STATE_DISCONNECTED = 0
-    */
+     * the current profile is disconnected
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    StateDisconnected |
+    StateDisconnected
+    | 
+    
     /**
-    * the current profile is being connected
-    * @relation STATE_CONNECTING = 1
-    */
+     * the current profile is being connected
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    StateConnecting |
+    StateConnecting
+    | 
+    
     /**
-    * the current profile is connected
-    * @relation STATE_CONNECTED = 2
-    */
+     * the current profile is connected
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    StateConnected |
+    StateConnected
+    | 
+    
     /**
-    * the current profile is being disconnected
-    * @relation STATE_DISCONNECTING = 3
-    */
+     * the current profile is being disconnected
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    StateDisconnecting |
-    ...
+    StateDisconnecting
+    | ...
 }
 
 
+extend ProfileConnectionState <: ToString {
+    
+    /**
+     * Converts the ProfileConnectionState to its string representation.
+     * @returns { String } A string representation of the ProfileConnectionState.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
 
+
+extend ProfileConnectionState <: Equatable<ProfileConnectionState> {
+    
+    /**
+     * Compares this ProfileConnectionState with another for equality.
+     * @param { ProfileConnectionState } other - The ProfileConnectionState to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: ProfileConnectionState): Bool
+    
+    /**
+     * Compares this ProfileConnectionState with another for inequality.
+     * @param { ProfileConnectionState } other - The ProfileConnectionState to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: ProfileConnectionState): Bool
+}

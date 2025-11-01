@@ -1,464 +1,648 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.base
 
+import ohos.business_exception.*
 import ohos.ffi.*
+import ohos.hilog.HilogChannel
 import ohos.labels.APILevel
 import std.collection.*
-import ohos.business_exception.*
-import ohos.hilog.HilogChannel
-import std.deriving.Derive
 import std.collection.HashMap
+import std.deriving.Derive
 
+/**
+ * Defines VoidCallback.
+ */
 public type VoidCallback = () -> Unit
 
+/**
+ * Defines the callback.
+ *
+ * @param { T } data - The input data
+ * @returns { V } The result of the callback.
+ */
 public type Callback<T, V> = (T) -> V
 
+/**
+ * Submit the task to the main thread for execution.
+ *
+ * @param { () -> Unit } task - The task to be executed on the main thread
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public func launch(task: () -> Unit): Unit
 
-
-
-
-
-
-
-
-
+/**
+ * Defines interface CollectionEx.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public interface CollectionEx<T> {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * The size of the collection.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop size: Int64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Sets the element at the specified index with a new element.
+ *
+ * @param { Int64 } idx - The index of the element to set
+ * @param { T } value - The new element
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     operator func [](idx: Int64, value!: T): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Gets the element at the specified index.
+ *
+ * @param { Int64 } idx - The index of the element to get
+ * @returns { T } The element at the specified index.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     operator func [](idx: Int64): T
 }
 
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-extend<T> Array<T> <: CollectionEx<T> {
-}
+extend<T> Array<T> <: CollectionEx<T> {}
 
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-extend<T> ArrayList<T> <: CollectionEx<T> {
-}
+extend<T> ArrayList<T> <: CollectionEx<T> {}
 
+/**
+ * Defines the color which can use resource.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public interface ResourceColor {
+/**
+ * The value type of ResourceColor.
+ * @returns { UInt32 } Color value in rgba.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     func toUInt32(): UInt32
 }
 
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
 extend Int64 <: ResourceColor {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        crossplatform: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-@OverflowWrapping
-    public func toUInt32(): UInt32
-}
-
+/**
+ * The hexadecimal value of the color.
+ *
+ * @returns { UInt32 } The rgba value of color.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-extend UInt32 <: ResourceColor {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        crossplatform: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+    @OverflowWrapping
     public func toUInt32(): UInt32
 }
 
+extend UInt32 <: ResourceColor {
+/**
+ * The hexadecimal value of the color.
+ *
+ * @returns { UInt32 } The rgba value of color.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func toUInt32(): UInt32
+}
+
+/**
+ * Common class of color.
+ */
+@!APILevel[
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class Color <: ResourceColor {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Black.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let Black: Color = Color(0xff000000)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Blue.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let Blue: Color = Color(0xff0000ff)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Gray.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let Gray: Color = Color(0xff808080)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Green.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let Green: Color = Color(0xff008000)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Red.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let Red: Color = Color(0xffff0000)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * White.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let White: Color = Color(0xffffffff)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Transparent.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static let Transparent: Color = Color(0, 0, 0, alpha: 0.0)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(red: UInt8, green: UInt8, blue: UInt8, alpha!: Float32 = 1.0)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Constructor of Color.
+ *
+ * @param { UInt8 } red - Red component of color
+ * @param { UInt8 } green - Green component of color
+ * @param { UInt8 } blue - Blue component of color
+ * @param { ?Float32 } [alpha] - Alpha component of color. The default value is 1.0.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(red: UInt8, green: UInt8, blue: UInt8, alpha!: ?Float32 = None)
+
+/**
+ * Constructor of Color.
+ *
+ * @param { UInt32 } value - The rgba value of color
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(value: UInt32)
-    
+
+/**
+ * The hexadecimal value of the color.
+ *
+ * @returns { UInt32 } The rgba value of color.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func toUInt32(): UInt32
 }
 
-extend CString <: CStringExtend {
-    public func free(): Unit
-    
-    public func toStringOption(): ?String
-}
-
+/**
+ * Defines the length property.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public interface Length {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * The value of length property.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop value: Float64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    prop unitType: LengthType
+
+/**
+ * The unit of length property.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    prop unitType: LengthUnit
 }
 
+/**
+ * Defines the length property.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public interface LengthProp {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Defines the length property in units of px.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop px: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of vp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop vp: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of fp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop fp: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of percent.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop percent: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of lpx.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     prop lpx: Length
 }
 
- {
-     |
-     |
-     |
-     |
-     |
-    ...
-    
-    
-    
-    
-    
-    
-    
-}
-
- {
-    
-    
-    
-}
-
- {
-}
-
+/**
+ * Defines class LengthMetrics.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
+public class LengthMetrics <: Length {
+/**
+ * LengthMetrics constructor.
+ *
+ * @param { Float64 } value - The value of length
+ * @param { LengthUnit } [unit] - The unit of length. the default unit is LengthUnit.Vp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(value: Float64, unit!: LengthUnit = LengthUnit.Vp)
+
+/**
+* Defines the value.
+*/
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop value: Float64
+
+/**
+ * Defines the unit.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop unitType: LengthUnit
+}
+
+/**
+ * Defines the dimension property with number with units(vp|px|fp|lpx|%).
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+public enum LengthUnit {
+/**
+ * Defines the length property in units of px.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Px
+    | 
+/**
+ * Defines the length property in units of vp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Vp
+    | 
+/**
+ * Defines the length property in units of fp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Fp
+    | 
+/**
+ * Defines the length property in units of percent.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Percent
+    | 
+/**
+ * Defines the length property in units of lpx.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Lpx
+    | ...
+
+/**
+ * Get the length property of number value.
+ *
+ * @returns { Int32 } The integer value of the length unit.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func getValue(): Int32
+
+/**
+ * Parse the length number value to LengthUnit type.
+ *
+ * @param { Int32 } value - The integer value to parse
+ * @returns { LengthUnit } The corresponding LengthUnit.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public static func parse(value: Int32): LengthUnit
+}
+
+extend LengthUnit <: Equatable<LengthUnit> {
+/**
+ * Compares this LengthUnit with another for equality.
+ * @param { LengthUnit } other - The LengthUnit to compare with
+ * @returns { Bool } True if both modes are equal, false otherwise.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public operator func ==(other: LengthUnit): Bool
+/**
+ * Compares this LengthUnit with another for equality.
+ * @param { LengthUnit } other - The LengthUnit to compare with
+ * @returns { Bool } True if both modes are not equal, false otherwise.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public operator func !=(other: LengthUnit): Bool
+}
+
 extend Float64 <: LengthProp & Length {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop px: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop vp: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop fp: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop percent: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop lpx: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop value: Float64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop unitType: LengthType
-}
-
+/**
+ * Defines the length property in units of px.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
+    public prop px: Length
+
+/**
+ * Defines the length property in units of vp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop vp: Length
+
+/**
+ * Defines the length property in units of fp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop fp: Length
+
+/**
+ * Defines the length property in units of percent.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop percent: Length
+
+/**
+ * Defines the length property in units of lpx.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop lpx: Length
+
+/**
+* Defines the value.
+*/
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop value: Float64
+
+/**
+* Defines the unit.
+*/
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public prop unitType: LengthUnit
+}
+
 extend Int64 <: LengthProp & Length {
+/**
+ * Defines the length property in units of px.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop px: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of vp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop vp: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of fp.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop fp: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of percent.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop percent: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Defines the length property in units of lpx.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop lpx: Length
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+* Defines the value.
+*/
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop value: Float64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public prop unitType: LengthType
-}
 
+/**
+ * Defines the unit.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class MainThreadContext <: ThreadContext {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func end(): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func hasEnded(): Bool
+    public prop unitType: LengthUnit
 }
 
+/**
+ * UIThread get MainThreadContext instance.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public let Main: MainThreadContext = MainThreadContext.instance_
+public let UIThread: MainThreadContext = MainThreadContext.instance_
 
+/**
+ * Defines interface ResourceStr.
+ */
 @!APILevel[
-    21,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public interface ResourceStr {
-}
+public interface ResourceStr {}
 
-extend String <: ResourceStr {
-}
+extend String <: ResourceStr {}
 
+/**
+ * Defines class ReuseParams.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class ReuseParams {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * ReuseParams constructor.
+ *
+ * @param { Array<(String, Any)> } arr - The params array
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(arr: Array<(String, Any)>)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Gets the value of the specified key.
+ *
+ * @param { String } key - The key to get value
+ * @returns { ?T } The value associated with the key, or null if not found.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func get<T>(key: String): ?T
 }
 
+/**
+ * Define syscap function.
+ *
+ * @param { String } syscap - System Capability to be determined
+ * @returns { Bool } True if the system capability is available, false otherwise.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+public func canIUse(syscap: String): Bool

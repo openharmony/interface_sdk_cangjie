@@ -1,13 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.unittest.diff
 import std.unittest.common.PrettyPrinter
 
@@ -17,90 +7,161 @@ import std.collection.ArrayList
 import std.convert.Formattable
 import std.math.ceil
 
-@!APILevel[since: "22"]
+/**
+ * @description An interface for types that can provide a custom "diff" representation for assertions.
+ * This is used to generate detailed, readable output when an assertion comparing two objects fails.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface AssertPrintable<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the type contains nested structures that might have their own diffs.
+     * If `true`, the diffing mechanism may recurse into the object's fields.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop hasNestedDiff: Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Pretty-prints a comparison between two instances of the type, highlighting differences.
+     * @param pp The `PrettyPrinter` to use for generating the output.
+     * @param other The other instance to compare against this one.
+     * @param thisPrefix A prefix string for lines corresponding to 'this' instance, typically indicating additions or common lines.
+     * @param otherPrefix A prefix string for lines corresponding to the 'that' instance, typically indicating removals.
+     * @param level The current nesting level for indentation, used for structured output.
+     * @returns The `PrettyPrinter` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func pprintForAssertion(
-        pp: PrettyPrinter, that: T, thisPrefix: String, thatPrefix: String, level: Int64
+        pp: PrettyPrinter, other: T, thisPrefix: String, thatPrefix: String, level: Int64
     ): PrettyPrinter
 }
 
-extend<T> HashSet<T> <: AssertPrintableCollection<HashSet<T>> where T <: Equatable<T> {
-    @!APILevel[since: "22"]
-    public func pprint(right: HashSet<T>, pp: PrettyPrinter, leftPrefix: String, rightPrefix: String, _: Int64): PrettyPrinter
-}
-
-extend<K, V> HashMap<K, V> <: AssertPrintableCollection<HashMap<K, V>> where K <: Equatable<K> & Hashable,
-    V <: Equatable<V> {
-    @!APILevel[since: "22"]
-    public func pprint(right: HashMap<K, V>, pp: PrettyPrinter, leftPrefix: String, rightPrefix: String, level: Int64): PrettyPrinter
-}
-
-extend<K, V> TreeMap<K, V> <: AssertPrintableCollection<TreeMap<K, V>> where K <: Equatable<K> & Hashable,
-    V <: Equatable<V> {
-    @!APILevel[since: "22"]
-    public func pprint(right: TreeMap<K, V>, pp: PrettyPrinter, leftPrefix: String, rightPrefix: String, level: Int64): PrettyPrinter
-}
-
-
-
 extend Float16 <: AssertPrintable<Float16> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the type contains nested structures for diffing.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasNestedDiff: Bool
     
-    @!APILevel[since: "22"]
-    public func pprintForAssertion(pp: PrettyPrinter, right: Float16, leftPrefix: String, rightPrefix: String,
+    /**
+     * @description Pretty-prints a diff between two Float16 values for assertion output.
+     * @param pp The `PrettyPrinter` to use for generating the output.
+     * @param other The other instance to compare against this one.
+     * @param leftPrefix A prefix string for lines corresponding to 'this' instance, typically indicating additions or common lines.
+     * @param rightPrefix A prefix string for lines corresponding to the 'that' instance, typically indicating removals.
+     * @param level The current nesting level for indentation, used for structured output.
+     * @returns The `PrettyPrinter` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func pprintForAssertion(pp: PrettyPrinter, other: Float16, leftPrefix: String, rightPrefix: String,
         level: Int64): PrettyPrinter
 }
 
 extend Float32 <: AssertPrintable<Float32> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the type contains nested structures for diffing.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasNestedDiff: Bool
     
-    @!APILevel[since: "22"]
-    public func pprintForAssertion(pp: PrettyPrinter, right: Float32, leftPrefix: String, rightPrefix: String,
+    /**
+     * @description Pretty-prints a diff between two Float32 values for assertion output.
+     * @param pp The `PrettyPrinter` to use for generating the output.
+     * @param other The other instance to compare against this one.
+     * @param leftPrefix A prefix string for lines corresponding to 'this' instance, typically indicating additions or common lines.
+     * @param rightPrefix A prefix string for lines corresponding to the 'that' instance, typically indicating removals.
+     * @param level The current nesting level for indentation, used for structured output.
+     * @returns The `PrettyPrinter` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func pprintForAssertion(pp: PrettyPrinter, other: Float32, leftPrefix: String, rightPrefix: String,
         level: Int64): PrettyPrinter
 }
 
 extend Float64 <: AssertPrintable<Float64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the type contains nested structures for diffing.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasNestedDiff: Bool
     
-    @!APILevel[since: "22"]
-    public func pprintForAssertion(pp: PrettyPrinter, right: Float64, leftPrefix: String, rightPrefix: String,
+    /**
+     * @description Pretty-prints a diff between two Float64 values for assertion output.
+     * @param pp The `PrettyPrinter` to use for generating the output.
+     * @param other The other instance to compare against this one.
+     * @param leftPrefix A prefix string for lines corresponding to 'this' instance, typically indicating additions or common lines.
+     * @param rightPrefix A prefix string for lines corresponding to the 'that' instance, typically indicating removals.
+     * @param level The current nesting level for indentation, used for structured output.
+     * @returns The `PrettyPrinter` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func pprintForAssertion(pp: PrettyPrinter, other: Float64, leftPrefix: String, rightPrefix: String,
         level: Int64): PrettyPrinter
 }
-
-/*
-* Conditional compilation shouldn't be used because the strings may come from Windows environment anyway,
-* e.g. by openning a file created on Windows initially
-*/
-
-
-
 
 extend<T> Option<T> <: AssertPrintable<Option<T>> where T <: Equatable<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the type contains nested structures for diffing.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasNestedDiff: Bool
     
-    @!APILevel[since: "22"]
-    public func pprintForAssertion(pp: PrettyPrinter, right: Option<T>, leftPrefix: String, rightPrefix: String,
+    /**
+     * @description Pretty-prints a diff between two Option<T> values for assertion output.
+     * @param pp The `PrettyPrinter` to use for generating the output.
+     * @param other The other instance to compare against this one.
+     * @param leftPrefix A prefix string for lines corresponding to 'this' instance, typically indicating additions or common lines.
+     * @param rightPrefix A prefix string for lines corresponding to the 'that' instance, typically indicating removals.
+     * @param level The current nesting level for indentation, used for structured output.
+     * @returns The `PrettyPrinter` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func pprintForAssertion(pp: PrettyPrinter, other: Option<T>, leftPrefix: String, rightPrefix: String,
         level: Int64): PrettyPrinter
 }
-
-
 
 extend String <: AssertPrintable<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the type contains nested structures for diffing.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasNestedDiff: Bool
     
-    @!APILevel[since: "22"]
-    public func pprintForAssertion(pp: PrettyPrinter, right: String, leftPrefix: String, rightPrefix: String,
+    /**
+     * @description Pretty-prints a diff between two String values for assertion output.
+     * @param pp The `PrettyPrinter` to use for generating the output.
+     * @param other The other instance to compare against this one.
+     * @param leftPrefix A prefix string for lines corresponding to 'this' instance, typically indicating additions or common lines.
+     * @param rightPrefix A prefix string for lines corresponding to the 'that' instance, typically indicating removals.
+     * @param level The current nesting level for indentation, used for structured output.
+     * @returns The `PrettyPrinter` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func pprintForAssertion(pp: PrettyPrinter, other: String, leftPrefix: String, rightPrefix: String,
         level: Int64): PrettyPrinter
 }
-
-
-

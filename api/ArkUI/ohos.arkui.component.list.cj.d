@@ -1,149 +1,390 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.list
+
 import ohos.arkui.component.common.*
+import ohos.arkui.component.list_item_group.*
 import ohos.arkui.component.native_struct.*
 import ohos.arkui.component.scroll.*
 import ohos.arkui.component.util.*
+import ohos.arkui.shape.*
 import ohos.base.*
 import ohos.ffi.*
 import ohos.labels.APILevel
 import ohos.resource.*
 import std.convert.*
 
-
+/**
+ * The data returned by the event handler when onScrollFrameBegin.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class onScrollFrameBeginHandleResult {
-    public var offsetRemain: Float64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(offsetRemain!: Float64)
+public class OnScrollFrameBeginHandlerResult {
+/**
+ * Actual scroll offset.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var offsetRemain: ?Float64
+
+/**
+ * Constructor.
+ *
+ * @param { ?Float64 } offsetRemain - Actual scroll offset.
+ * @returns { OnScrollFrameBeginHandlerResult }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(offsetRemain!: ?Float64)
 }
 
+/**
+ * Defines List Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class List <: ScrollableBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class List <: ScrollableCommonMethodComponent<List> & ListAttribute {
+/**
+ * Defines the constructor of List.
+ *
+ * @param { ?Int64 } [space] - The space between items.
+ * @param { ?Int32 } [initialIndex] - The initial index of the list.
+ * @param { ?Scroller } [scroller] - The scroller instance.
+ * @param { () -> Unit } child - The child component builder.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(
-        space!: Int64 = 0,
-        initialIndex!: Int32 = 0,
+        space!: ?Int64 = None,
+        initialIndex!: ?Int32 = None,
         scroller!: ?Scroller = Option<Scroller>.None,
         child!: () -> Unit
     )
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func listDirection(value: Axis): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func divider(strokeWidth!: Length, color!: ResourceColor = Color.Black, startMargin!: Length = 0.vp,
-        endMargin!: Length = 0.vp): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func edgeEffect(value: EdgeEffect): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func chainAnimation(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func cachedCount(value: Int32): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func multiSelectable(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func lanes(value: Int32): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func lanes(minLength!: Length, maxLength!: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func alignListItem(value: ListItemAlign): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func sticky(value: StickyStyle): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onScrollIndex(event: (Int32, Int32, Int32) -> Unit): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onScrollFrameBegin(event: (Float64, ScrollState) -> onScrollFrameBeginHandleResult): This
+
+/**
+ * Sets the direction in which the list items are arranged.
+ *
+ * @param { ?Axis } value - The axis direction.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func listDirection(value: ?Axis): This
+
+/**
+ * Sets the style of the divider for the list items. By default, there is no divider.
+ *
+ * @param { Option<ListDividerOptions> } value - The divider options.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func divider(value: Option<ListDividerOptions>): This
+
+/**
+ * Sets the effect used when the scroll boundary is reached.
+ *
+ * @param { ?EdgeEffect } value - The edge effect style.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func edgeEffect(value: ?EdgeEffect): This
+
+/**
+ * Sets whether to enable chained animations, which provide a visually connected,
+ * or "chained," effect when the list is scrolled or its top or bottom edge is dragged.
+ *
+ * @param { ?Bool } value - Whether to enable chained animations.
+ *      <br><em>false</em> (default): Chained animations are disabled.
+ *      <br><em>true</em>: Chained animations are enabled.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func chainAnimation(value: ?Bool): This
+
+/**
+ * Called when the minimum number of list item caches is set for long list deferred loading.
+ *
+ * @param { ?Int32 } value - The cached count value.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func cachedCount(value: ?Int32): This
+
+/**
+ * Sets whether to enable multiselect.
+ *
+ * @param { ?Bool } value - Whether to enable multiselect.
+ *      <br><em>false</em> (default): Multiselect is disabled.
+ *      <br><em>true</em>: Multiselect is enabled.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func multiSelectable(value: ?Bool): This
+
+/**
+ * Sets the number of columns or rows in the list. If the value is set to the gutter type, it indicates the gap between columns.
+ * It takes effect when the number of columns is greater than 1.
+ *
+ * @param { ?Int32 } value - The lanes count.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func lanes(value: ?Int32): This
+
+/**
+ * Sets the number of columns or rows in the list. If the value is set to the gutter type, it indicates the gap between columns.
+ * It takes effect when the number of columns is greater than 1.
+ *
+ * @param { ?Length } minLength - The minimum length of lanes.
+ * @param { ?Length } maxLength - The maximum length of lanes.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func lanes(minLength!: ?Length, maxLength!: ?Length): This
+
+/**
+ * Alignment mode of list items along the cross axis when the cross-axis width of the list is greater
+ * than the cross-axis width of list items multiplied by the value of lanes.
+ *
+ * @param { ?ListItemAlign } value - The alignment mode.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func alignListItem(value: ?ListItemAlign): This
+
+/**
+ * Sets whether to pin the header to the top or the footer to the bottom in the list item group.
+ * NOTE: - Occasionally, after sticky is set, floating-point calculation precision may result in small gaps appearing during scrolling.
+ * To address this issue, you can apply the pixelRound attribute to the current component, which rounds down the pixel values and help eliminate the gaps.
+ *
+ * @param { ?StickyStyle } value - Whether to pin the header to the top or the footer to the bottom in the list item group. Default value: StickyStyle.None.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func sticky(value: ?StickyStyle): This
+
+/**
+ * Triggered when a child component enters or leaves the list display area.
+ *
+ * @param { ?(Int32, Int32, Int32) -> Unit } event - The scroll index event handler.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onScrollIndex(event: ?(Int32, Int32, Int32) -> Unit): This
+
+/**
+ * Called when scrolling begin each frame.
+ *
+ * @param { ?(Float64, ScrollState) -> OnScrollFrameBeginHandlerResult } event - The scroll frame begin event handler.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onScrollFrameBegin(event: ?(Float64, ScrollState) -> OnScrollFrameBeginHandlerResult): This
 }
 
+/**
+ * Defines the List attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface ListAttribute <: ScrollableCommonMethod<ListAttribute> {
+/**
+ * Sets the direction in which the list items are arranged.
+ *
+ * @param { ?Axis } value - The axis direction.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func listDirection(value: ?Axis): ListAttribute
+
+/**
+ * Sets the style of the divider for the list items. By default, there is no divider.
+ *
+ * @param { Option<ListDividerOptions> } value - The divider options.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func divider(value: Option<ListDividerOptions>): ListAttribute
+
+/**
+ * Sets the effect used when the scroll boundary is reached.
+ *
+ * @param { ?EdgeEffect } value - The edge effect style.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func edgeEffect(value: ?EdgeEffect): ListAttribute
+
+/**
+ * Sets whether to enable chained animations, which provide a visually connected,
+ * or "chained," effect when the list is scrolled or its top or bottom edge is dragged.
+ *
+ * @param { ?Bool } value - Whether to enable chained animations.
+ *      <br><em>false</em> (default): Chained animations are disabled.
+ *      <br><em>true</em>: Chained animations are enabled.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func chainAnimation(value: ?Bool): ListAttribute
+
+/**
+ * Called when the minimum number of list item caches is set for long list deferred loading.
+ *
+ * @param { ?Int32 } value - The cached count value.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func cachedCount(value: ?Int32): ListAttribute
+
+/**
+ * Sets whether to enable multiselect.
+ *
+ * @param { ?Bool } value - Whether to enable multiselect.
+ *      <br><em>false</em> (default): Multiselect is disabled.
+ *      <br><em>true</em>: Multiselect is enabled.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func multiSelectable(value: ?Bool): ListAttribute
+
+/**
+ * Sets the number of columns or rows in the list. If the value is set to the gutter type, it indicates the gap between columns.
+ * It takes effect when the number of columns is greater than 1.
+ *
+ * @param { ?Int32 } value - The lanes count.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func lanes(value: ?Int32): ListAttribute
+
+/**
+ * Sets the number of columns or rows in the list. If the value is set to the gutter type, it indicates the gap between columns.
+ * It takes effect when the number of columns is greater than 1.
+ *
+ * @param { ?Length } minLength - The minimum length of lanes.
+ * @param { ?Length } maxLength - The maximum length of lanes.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func lanes(minLength!: ?Length, maxLength!: ?Length): ListAttribute
+
+/**
+ * Alignment mode of list items along the cross axis when the cross-axis width of the list is greater
+ * than the cross-axis width of list items multiplied by the value of lanes.
+ *
+ * @param { ?ListItemAlign } value - The alignment mode.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func alignListItem(value: ?ListItemAlign): ListAttribute
+
+/**
+ * Sets whether to pin the header to the top or the footer to the bottom in the list item group.
+ * NOTE: - Occasionally, after sticky is set, floating-point calculation precision may result in small gaps appearing during scrolling.
+ * To address this issue, you can apply the pixelRound attribute to the current component, which rounds down the pixel values and help eliminate the gaps.
+ *
+ * @param { ?StickyStyle } value - Whether to pin the header to the top or the footer to the bottom in the list item group. Default value: StickyStyle.None.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func sticky(value: ?StickyStyle): ListAttribute
+
+/**
+ * Triggered when a child component enters or leaves the list display area.
+ *
+ * @param { ?(Int32, Int32, Int32) -> Unit } event - The scroll index event handler.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onScrollIndex(event: ?(Int32, Int32, Int32) -> Unit): ListAttribute
+
+/**
+ * Called when scrolling begin each frame.
+ *
+ * @param { ?(Float64, ScrollState) -> OnScrollFrameBeginHandlerResult } event - The scroll frame begin event handler.
+ * @returns { ListAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onScrollFrameBegin(event: ?(Float64, ScrollState) -> OnScrollFrameBeginHandlerResult): ListAttribute
+}

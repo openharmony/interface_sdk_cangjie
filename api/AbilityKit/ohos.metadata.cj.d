@@ -13,56 +13,44 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.metadata
-import ohos.labels.*
-import ohos.ffi.*
-import std.collection.ArrayList
 
+import ohos.labels.*
 
 /**
-* Indicates the Metadata
-*
-* @relation export interface Metadata
-*/
+ * Indicates the Metadata.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class Metadata {
     /**
-    * Indicates the metadata name
-    *
-    * @relation name: string
-    */
+     * Indicates the metadata name.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var name: String
-    
+
     /**
-    * Indicates the metadata value
-    *
-    * @relation value: string
-    */
+     * Indicates the metadata value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var value: String
-    
+
     /**
-    * Indicates the metadata resource
-    *
-    * @relation resource: string
-    */
+     * Indicates the metadata resource.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var resource: String
 }
-
-

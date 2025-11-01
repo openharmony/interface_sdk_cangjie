@@ -13,47 +13,46 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.data.values_bucket
-import ohos.ffi.CTypeResource
+
 import ohos.labels.APILevel
 
-
 /**
-* Indicates possible value types
-* @relation export type ValueType = number | string | boolean;
-*/
+ * Indicates possible value types
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
 ]
-public enum ValueType {
+public enum VBValueType {
     /* Integer */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
-    ]
-    Integer(Int64) |
+    ] 
+    Integer(Int64)
+    | 
     /* Double */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
-    ]
-    Double(Float64) |
+    ] 
+    Double(Float64)
+    | 
     /* StringValue */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
-    ]
-    StringValue(String) |
+    ] 
+    StringValue(String)
+    | 
     /* Boolean */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
-    ]
-    Boolean(Bool) |
-    ...
+    ] 
+    Boolean(Bool)
+    | ...
 }
-
-

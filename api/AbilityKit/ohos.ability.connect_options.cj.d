@@ -13,13 +13,6 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
-package ohos.ability.connect_options
-import ohos.element_name.ElementName
-import ohos.ffi.*
-import ohos.rpc.*
-
-import ohos.hilog.*
-
-
+protected package ohos.ability.connect_options

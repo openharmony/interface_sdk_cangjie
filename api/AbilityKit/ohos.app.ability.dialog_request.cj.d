@@ -13,79 +13,64 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.dialog_request
+
 import ohos.app.ability.want.*
 import ohos.labels.*
 
-import ohos.hilog.*
-
 /**
-* The modal bullet box requests the result code.
-*
-* @relation export enum ResultCode
-*/
+ * The modal bullet box requests the result code.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public enum ResultCode {
     /**
-    * The modal bullet box requests succeeded.
-    *
-    * @relation RESULT_OK = 0
-    */
+     * The modal bullet box requests succeeded.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    ResultOk |
+    ResultOk
+    | 
     /**
-    * The modal bullet box requests Failed.
-    *
-    * @relation RESULT_CANCEL = 1
-    */
+     * The modal bullet box requests Failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    ResultCancel |
-    ...
+    ResultCancel
+    | ...
 }
 
-
 /**
-* The result of requestDialogService with asynchronous callback.
-*
-* @relation export interface RequestResult
-*/
+ * The result of requestDialogService with asynchronous callback.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class RequestResult {
     /**
-    * The request result passed in by the user.
-    *
-    * @relation result: ResultCode
-    */
+     * The request result passed in by the user.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var result: ResultCode
-    
+
     /**
-    * The request additional want data passed in by the user.
-    *
-    * @relation want?: Want
-    */
+     * The request additional want data passed in by the user.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var want: Want
 }
-
-

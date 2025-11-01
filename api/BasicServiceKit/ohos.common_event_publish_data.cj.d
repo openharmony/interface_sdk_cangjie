@@ -13,108 +13,109 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.common_event_publish_data
-import std.collection.HashMap
-import ohos.labels.APILevel
-import ohos.value_type.{ValueType, CArrParameters, CParameters, createCpCString, createCArrParam}
-import ohos.ffi.{CArrString, CTypeResource}
 
+
+import ohos.labels.APILevel
+import ohos.value_type.ValueType
+import std.collection.HashMap
 
 /**
-* The CommonEventPublishData module provides APIs for defining common event content and attributes.
-*
-* @relation export interface CommonEventPublishData
-*/
+ * The CommonEventPublishData module provides APIs for defining common event content and attributes.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public class CommonEventPublishData {
     /**
-    * Bundle name of the subscriber that can receive the common event.
-    *
-    * @relation bundleName?: string
-    */
+     * Bundle name of the subscriber that can receive the common event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var bundleName: String
-    
+
     /**
-    * Common event data transferred by the publisher. The data size cannot exceed 64 KB.
-    *
-    * @relation data?: string
-    */
+     * Common event data transferred by the publisher. The data size cannot exceed 64 KB.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var data: String
-    
+
     /**
-    * Common event data transferred by the publisher. The default value is 0.
-    *
-    * @relation code?: number
-    */
+     * Common event data transferred by the publisher. The default value is 0.
+     *
+     * @default 0
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var code: Int32
-    
+
     /**
-    * Permissions required for subscribers to receive the common event.
-    *
-    * @relation subscriberPermissions?: Array<string>
-    */
+     * Permissions required for subscribers to receive the common event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var subscriberPermissions: Array<String>
-    
+
     /**
-    * Whether the common event is an ordered one.
-    *
-    * @relation isOrdered?: boolean
-    */
+     * Whether the common event is an ordered one.
+     *
+     * @default false
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var isOrdered: Bool
-    
+
     /**
-    * Whether the common event is a sticky one. Only system applications and system services are allowed to send sticky events.
-    *
-    * @relation isSticky?: boolean
-    */
+     * Whether the common event is a sticky one. Only system applications and system services are allowed to
+     * send sticky events.
+     *
+     * @default false
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Notification.CommonEvent",
-        permission: "ohos.permission.COMMONEVENT_STICKY"
+        since: "22",
+        permission: "ohos.permission.COMMONEVENT_STICKY",
+        syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var isSticky: Bool
-    
+
     /**
-    * Additional information about the common event transferred by the publisher.
-    *
-    * @relation parameters?: { [key: string]: any }
-    */
+     * The description of the parameters in a common event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var parameters: HashMap<String, ValueType>
-    
+
     /**
-    * init the CommonEventPublishData
-    */
+     * CommonEventPublishData constructor.
+     *
+     * @param { String } [bundleName] - Bundle name of the subscriber that can receive the common event.
+     * @param { String } [data] - Common event data transferred by the publisher. The data size cannot exceed 64 KB.
+     * @param { Int32 } [code] - Common event data transferred by the publisher. The default value is 0.
+     * @param { Array<String> } [subscriberPermissions] - Permissions required for subscribers to
+     * receive the common event.
+     * @param { Bool } [isOrdered] - Whether the common event is an ordered one.
+     * @param { Bool } [isSticky] - Whether the common event is a sticky one. Only system applications
+     * and system services are allowed to send sticky events.
+     * @param { HashMap<String, ValueType> } [parameters] - The description of the parameters in a common event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public init(
@@ -127,5 +128,3 @@ public class CommonEventPublishData {
         parameters!: HashMap<String, ValueType> = HashMap<String, ValueType>()
     )
 }
-
-

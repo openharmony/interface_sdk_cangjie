@@ -13,132 +13,126 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.data.data_share_predicates
+
+
 import ohos.data.values_bucket.*
 import ohos.labels.*
-import ohos.ffi.*
-import ohos.business_exception.{BusinessException, ERR_PARAMETER_ERROR}
-
-import ohos.hilog.*
-import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
 
 /**
-* Manages relational database configurations.
-*
-* @relation class DataSharePredicates
-*/
+ * Manages relational database configurations.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
 ]
-public class DataSharePredicates <: RemoteDataLite {
+public class DataSharePredicates {
     /**
-    * DataSharePredicates constructor.
-    */
+     * DataSharePredicates constructor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
     ]
     public init()
-    
+
     /**
-    * Configure the DataSharePredicates to match the field whose data type is ValueType and value is equal
-    * to a specified value.
-    * This method is similar to = of the SQL statement.
-    *
-    * @param { String } field - Indicates the column name in the database table.
-    * @param { ValueType } value - Indicates the value to match with the DataSharePredicates.
-    * @returns { DataSharePredicates } Returns the DataSharePredicates that match the specified field.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } -1 - Instance invalid.
-    * @relation equalTo(field: string, value: ValueType): DataSharePredicates
-    */
+     * Configure the DataSharePredicates to match the field whose data type is VBValueType and value is equal
+     * to a specified value.
+     * This method is similar to = of the SQL statement.
+     * Currently only used for RDB and KVDB(schema).
+     *
+     * @param { String } field - Indicates the column name in the database table.
+     * @param { VBValueType } value - Indicates the value to match with the DataSharePredicates.
+     * @returns { DataSharePredicates } Returns the DataSharePredicates that match the specified field.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.DataShare.Core",
+        throwexception: true
     ]
-    public func equalTo(field: String, value: ValueType): DataSharePredicates
-    
+    public func equalTo(field: String, value: VBValueType): DataSharePredicates
+
     /**
-    * Adds an and condition to the DataSharePredicates.
-    * This method is similar to and of the SQL statement.
-    *
-    * @returns { DataSharePredicates } Returns the DataSharePredicates with the and condition.
-    * @throws { BusinessException } -1 - Instance invalid.
-    * @relation and(): DataSharePredicates
-    */
+     * Adds an and condition to the DataSharePredicates.
+     * This method is similar to and of the SQL statement.
+     * Currently only used for RDB and KVDB(schema).
+     *
+     * @returns { DataSharePredicates } Returns the DataSharePredicates with the and condition.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.DataShare.Core",
+        throwexception: true
     ]
     public func and(): DataSharePredicates
-    
+
     /**
-    * Restricts the ascending order of the return list. When there are several orders,
-    * the one close to the head has the highest priority.
-    *
-    * @param { String } field - Indicates the column name for sorting the return list.
-    * @returns { DataSharePredicates } Returns the SQL query statement with the specified DataSharePredicates.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } -1 - Instance invalid.
-    * @relation orderByAsc(field: string): DataSharePredicates
-    */
+     * Restricts the ascending order of the return list. When there are several orders,
+     * the one close to the head has the highest priority.
+     * Currently only used for RDB and KVDB(schema).
+     *
+     * @param { String } field - Indicates the column name for sorting the return list.
+     * @returns { DataSharePredicates } Returns the SQL query statement with the specified DataSharePredicates.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.DataShare.Core",
+        throwexception: true
     ]
     public func orderByAsc(field: String): DataSharePredicates
-    
+
     /**
-    * Restricts the descending order of the return list. When there are several orders,
-    * the one close to the head has the highest priority.
-    *
-    * @param { String } field - Indicates the column name for sorting the return list.
-    * @returns { DataSharePredicates } Returns the SQL query statement with the specified DataSharePredicates.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } -1 - Instance invalid.
-    * @relation orderByDesc(field: string): DataSharePredicates
-    */
+     * Restricts the descending order of the return list. When there are several orders,
+     * the one close to the head has the highest priority.
+     * Currently only used for RDB and KVDB(schema).
+     *
+     * @param { String } field - Indicates the column name for sorting the return list.
+     * @returns { DataSharePredicates } Returns the SQL query statement with the specified DataSharePredicates.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.DataShare.Core",
+        throwexception: true
     ]
     public func orderByDesc(field: String): DataSharePredicates
-    
+
     /**
-    * Construct a query object to specify the number of results and the starting position.
-    *
-    * @param { Int32 } total - Represents the specified number of results.
-    * @param { Int32 } offset - Indicates the starting position.
-    * @returns { DataSharePredicates } Returns the query object.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } -1 - Instance invalid.
-    * @relation limit(total: number, offset: number): DataSharePredicates
-    */
+     * Construct a query object to specify the number of results and the starting position.
+     * Currently only used for RDB and KVDB(schema).
+     *
+     * @param { Int32 } total - Represents the specified number of results.
+     * @param { Int32 } offset - Indicates the starting position.
+     * @returns { DataSharePredicates } Returns the query object.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.DataShare.Core",
+        throwexception: true
     ]
     public func limit(total: Int32, offset: Int32): DataSharePredicates
-    
+
     /**
-    * Configure {@code DataSharePredicates} to match the specified field whose data type is ValueType array and values
-    * are within a given range.
-    *
-    * @param { String } field - Indicates the column name in the database table.
-    * @param { Array<ValueType> } values - Indicates the values to match with DataSharePredicates.
-    * @returns { DataSharePredicates } Returns DataSharePredicates that matches the specified field.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } -1 - Instance invalid.
-    * @relation in(field: string, value: Array<ValueType>): DataSharePredicates
-    */
+     * Configure DataSharePredicates to match the specified field whose data type is ValueType array and values
+     * are within a given range.
+     * Currently only used for RDB and KVDB(schema).
+     *
+     * @param { String } field - Indicates the column name in the database table.
+     * @param { Array<VBValueType> } value - Indicates the values to match with DataSharePredicates.
+     * @returns { DataSharePredicates } Returns DataSharePredicates that matches the specified field.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.DistributedDataManager.DataShare.Core"
+        since: "22",
+        syscap: "SystemCapability.DistributedDataManager.DataShare.Core",
+        throwexception: true
     ]
-    public func inValues(field: String, value: Array<ValueType>): DataSharePredicates
+    public func inValues(field: String, value: Array<VBValueType>): DataSharePredicates
 }
-
-

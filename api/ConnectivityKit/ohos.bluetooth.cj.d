@@ -13,12 +13,6 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.bluetooth
-import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
-import ohos.ffi.*
-import ohos.hilog.HilogChannel
-import std.collection.HashMap
-
-

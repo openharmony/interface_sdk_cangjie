@@ -13,81 +13,71 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.common_event_data
-import std.collection.HashMap
-import ohos.labels.APILevel
-import ohos.value_type.{ValueType, CArrParameters, Parameters}
 
+import ohos.labels.APILevel
+import ohos.value_type.ValueType
+import std.collection.HashMap
 
 /**
-* Common event data.
-*
-* @relation export interface CommonEventData
-*/
+ * Common event data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public class CommonEventData {
     /**
-    * Name of the common event that is being received.
-    *
-    * @relation event: string
-    */
+     * Name of the common event that is being received.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var event: String
-    
+
     /**
-    * Bundle name. This parameter is left empty by default.
-    *
-    * @relation bundleName?: string
-    */
+     * Bundle name. This parameter is left empty by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var bundleName: String
-    
+
     /**
-    * Common event data received by the subscriber. The value of this field is the same as that of the code field in
-    * CommonEventPublishData when the publisher uses commonEventManager.publish to publish a common event. The default value is 0.
-    *
-    * @relation code?: number
-    */
+     * Common event data received by the subscriber. The value of this field is the same as that of the code field in
+     * CommonEventPublishData when the publisher uses CommonEventManager.publish to publish a common event. The default
+     * value is 0.
+     *
+     * @default 0
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var code: Int32
-    
+
     /**
-    * Common event data received by the subscriber. The value of this field is the same as that of the data field in
-    * CommonEventPublishData when the publisher uses commonEventManager.publish to publish a common event.
-    *
-    * @relation data?: string
-    */
+     * Common event data received by the subscriber. The value of this field is the same as that of the data field in
+     * CommonEventPublishData when the publisher uses commonEventManager.publish to publish a common event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var data: String
-    
+
     /**
-    * Additional information about the common event received by the subscriber. The value of this field is the same as
-    * that of the parameters field in CommonEventPublishData when the publisher uses commonEventManager.publish to publish a common event.
-    *
-    * @relation parameters?: { [key: string]: any }
-    */
+     * Additional information about the common event received by the subscriber. The value of this field is the same as
+     * that of the parameters field in CommonEventPublishData when the publisher uses commonEventManager.publish to
+     * publish a common event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
     public var parameters: HashMap<String, ValueType>
 }
-
-
