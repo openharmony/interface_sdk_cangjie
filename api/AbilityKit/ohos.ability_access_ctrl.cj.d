@@ -13,138 +13,153 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.ability_access_ctrl
-import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
-import ohos.business_exception.{BusinessException, AsyncCallback}
-import ohos.ffi.{ CArrString, CArrUI32, Callback1Param, freeArrCString, toArrayCString}
-import std.deriving.Derive
-import ohos.ffi.*
-import ohos.hilog.HilogChannel
+
+
+import ohos.app.ability.ui_ability.UIAbilityContext
+import ohos.business_exception.AsyncCallback
+import ohos.labels.APILevel
 public import ohos.security.permission_request_result.*
 import ohos.security.permission_request_result.*
-import ohos.labels.APILevel
-
-import ohos.business_exception.getUniversalErrorMsg
-import std.collection.HashMap
-
-public type Permissions = String
-
 
 /**
-* GrantStatus.
-*
-* @relation export enum GrantStatus
-*/
-@Derive[ToString, Equatable]
+ * Indicates permissions.
+ *
+ */
+public type Permissions = String
+
+/**
+ * GrantStatus.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Security.AccessToken"
 ]
 public enum GrantStatus {
     /**
-    * access_token permission check fail
-    *
-    * @relation PERMISSION_DENIED = -1
-    */
+     * access_token permission check fail
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Security.AccessToken"
     ]
-    PermissionDenied |
+    PermissionDenied
+    | 
     /**
-    * access_token permission check success
-    *
-    * @relation PERMISSION_GRANTED = 0
-    */
+     * access_token permission check success
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Security.AccessToken"
     ]
-    PermissionGranted |
-    ...
+    PermissionGranted
+    | ...
 }
 
 
+extend GrantStatus <: ToString {
+    
+    /**
+     * Converts the GrantStatus to its string representation.
+     * @returns { String } A string representation of the GrantStatus.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Security.AccessToken"
+    ]
+    public func toString(): String
+}
+
+extend GrantStatus <: Equatable<GrantStatus> {
+    
+    /**
+     * Compares this GrantStatus with another for equality.
+     * @param { GrantStatus } other - The GrantStatus to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Security.AccessToken"
+    ]
+    public operator func ==(other: GrantStatus): Bool
+    
+    /**
+     * Compares this GrantStatus with another for inequality.
+     * @param { GrantStatus } other - The GrantStatus to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Security.AccessToken"
+    ]
+    public operator func !=(other: GrantStatus): Bool
+}
 
 /**
-* abilityAccessCtrl
-*
-* @relation declare namespace abilityAccessCtrl
-*/
+ * abilityAccessCtrl
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Security.AccessToken"
 ]
 public class AbilityAccessCtrl {
     /**
-    * Obtains the AtManager instance.
-    *
-    * @relation function createAtManager(): AtManager
-    */
+     * Obtains the AtManager instance.
+     *
+     * @returns { AtManager } Returns the instance of the AtManager.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Security.AccessToken"
     ]
     public static func createAtManager(): AtManager
 }
 
-
 /**
-* Provides methods for managing access_token.
-*
-* @relation interface AtManager
-*/
+ * Provides methods for managing access_token.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Security.AccessToken"
 ]
 public class AtManager {
     /**
-    * Requests certain permissions from the user.
-    *
-    * @param { Context } context - The context that initiates the permission request.
-    * @param { Array<Permissions> } permissionList - Indicates the list of permissions to be requested. This parameter
-    *                                                cannot be null or empty.
-    * @param { PermissionRequestResult } requestCallback Callback for the result from requesting permissions.
-    * @throws { BusinessException } 401 - The parameter check failed.
-    * @throws { BusinessException } 12100001 - The parameter is invalid. The context is invalid when it does not
-    *                                          belong to the application itself.
-    * @throws { IllegalArgumentException } - The context is invalid.
-    *
-    * @relation requestPermissionsFromUser(
-    *             context: Context,
-    *             permissionList: Array<Permissions>,
-    *             requestCallback: AsyncCallback<PermissionRequestResult>
-    *           ): void;
-    */
+     * Checks whether a specified application has been granted the given permission.
+     * On the cross-platform, this function can be used to check the permission grant status for the current
+     * application only.
+     *
+     * @param { UInt32 } tokenID - Token ID of the application.
+     * @param { Permissions } permissionName - Name of the permission to be verified.
+     * @returns { GrantStatus } Returns permission verify result.
+     * @throws { BusinessException } 12100001 - Invalid parameter. The tokenID is 0, or the permissionName exceeds 256
+     * characters.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Security.AccessToken"
+        since: "22",
+        syscap: "SystemCapability.Security.AccessToken",
+        throwexception: true
+    ]
+    public func checkAccessToken(tokenID: UInt32, permissionName: Permissions): GrantStatus
+
+    /**
+     * Requests certain permissions from the user.
+     *
+     * @param { UIAbilityContext } context - The context that initiates the permission request.
+     * <br> The context must belong to the Stage model and only supports UIAbilityContext and UIExtensionContext.
+     * @param { Array<Permissions> } permissionList - Indicates the list of permissions to be requested. This parameter
+     * cannot be null or empty.
+     * @param { AsyncCallback<PermissionRequestResult> } requestCallback - Callback for the result from requesting
+     * permissions.
+     * @throws { BusinessException } 12100001 - Invalid parameter. The context is invalid when it does not belong to
+     * the application itself.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Security.AccessToken",
+        throwexception: true
     ]
     public func requestPermissionsFromUser(context: UIAbilityContext, permissionList: Array<Permissions>,
         requestCallback: AsyncCallback<PermissionRequestResult>): Unit
-    
-    /**
-    * Checks whether a specified application has been granted the given permission.
-    * On the cross-platform,
-    * this function can be used to check the permission grant status for the current application only.
-    *
-    * @param { UInt32 } tokenID - Token ID of the application.
-    * @param { Permissions } permissionName - Name of the permission to be verified.
-    * @returns { GrantStatus } Returns permission verify result.
-    * @throws { BusinessException } 401 - The parameter check failed.
-    * @throws { BusinessException } 12100001 - The parameter is invalid. The tokenID is 0,
-    *                                          or the string size of permissionName is larger than 256.
-    *
-    * @relation checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Security.AccessToken"
-    ]
-    public func checkAccessToken(tokenID: UInt32, permissionName: Permissions): GrantStatus
 }
-
-

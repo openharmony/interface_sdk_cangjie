@@ -13,408 +13,482 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.battery_info
-import ohos.labels.APILevel
-import std.deriving.Derive
 
+import ohos.labels.APILevel
 
 /**
-* Obtains battery information of a device.
-* Battery information includes the remaining battery power,
-* voltage, temperature, model, and charger type.
-*
-* @relation declare namespace batteryInfo
-*/
+ * Obtains battery information of a device.
+ * Battery information includes the remaining battery power,
+ * voltage, temperature, model, and charger type.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public class BatteryInfo {
     /**
-    * Battery state of charge (SoC) of the current device, in percent.
-    *
-    * @relation const batterySOC: number
-    */
+     * Battery state of charge (SoC) of the current device, in percent.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    public static prop batterySOC: Int32
-    
+    public static prop batterySoc: Int32
+
     /**
-    * Battery charging status of the current device.
-    *
-    * @relation const chargingStatus: BatteryChargeState
-    */
+     * Battery charging status of the current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop chargingStatus: BatteryChargeState
-    
+
     /**
-    * Battery health state of the current device.
-    *
-    * @relation const healthStatus: BatteryHealthState
-    */
+     * Battery health state of the current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop healthStatus: BatteryHealthState
-    
+
     /**
-    * Charger type of the current device.
-    *
-    * @relation const pluggedType: BatteryPluggedType
-    */
+     * Charger type of the current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop pluggedType: BatteryPluggedType
-    
+
     /**
-    * Battery voltage of the current device, in µV.
-    *
-    * @relation const voltage: number
-    */
+     * Battery voltage of the current device, in µV.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop voltage: Int32
-    
+
     /**
-    * Battery immediate current of the current device, in mA.
-    *
-    * @relation const nowCurrent: number
-    */
+     * Battery immediate current of the current device, in mA.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop nowCurrent: Int32
-    
+
     /**
-    * Battery technology of the current device.
-    *
-    * @relation const technology: string
-    */
+     * Battery technology of the current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop technology: String
-    
+
     /**
-    * Battery temperature of the current device, in 0.1℃.
-    *
-    * @relation const batteryTemperature: number
-    */
+     * Battery temperature of the current device, in 0.1℃.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batteryTemperature: Int32
-    
+
     /**
-    * Battery present state of the current device.
-    *
-    * @relation const isBatteryPresent: boolean
-    */
+     * Battery present state of the current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop isBatteryPresent: Bool
-    
+
     /**
-    * Battery capacity level of the current device.
-    *
-    * @relation const batteryCapacityLevel: BatteryCapacityLevel
-    */
+     * Battery capacity level of the current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batteryCapacityLevel: BatteryCapacityLevel
 }
 
-
 /**
-* Charger type of a device.
-*
-* @relation export enum BatteryPluggedType
-*/
-@Derive[ToString, Equatable]
+ * Charger type of a device.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryPluggedType {
     /**
-    * Unknown type
-    *
-    * @relation NONE = 0
-    */
+     * Unknown type
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    UnknownType |
+    UnknownType
+    |
     /**
-    * AC charger
-    *
-    * @relation AC = 1
-    */
+     * AC charger
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Ac |
+    Ac
+    |
     /**
-    * USB charger
-    *
-    * @relation USB = 2
-    */
+     * USB charger
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Usb |
+    Usb
+    |
     /**
-    * Wireless charger
-    *
-    * @relation WIRELESS = 3
-    */
+     * Wireless charger
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Wireless |
-    ...
+    Wireless
+    | ...
 }
 
+extend BatteryPluggedType <: ToString {
+    /**
+     * Converts the BatteryPluggedType to its string representation.
+     * @returns { String } A string representation of the BatteryPluggedType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public func toString(): String
+}
 
+extend BatteryPluggedType <: Equatable<BatteryPluggedType> {
+    /**
+     * Compares this BatteryPluggedType with another for equality.
+     * @param { BatteryPluggedType } other - The BatteryPluggedType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func ==(other: BatteryPluggedType): Bool
+
+    /**
+     * Compares this BatteryPluggedType with another for inequality.
+     * @param { BatteryPluggedType } other - The BatteryPluggedType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func !=(other: BatteryPluggedType): Bool
+}
 
 /**
-* Battery charging status of a device.
-*
-* @relation export enum BatteryChargeState
-*/
-@Derive[ToString, Equatable]
+ * Battery charging status of a device.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryChargeState {
     /**
-    * Unknown state.
-    *
-    * @relation NONE = 0
-    */
+     * Unknown state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    UnknownChargeState |
+    UnknownChargeState
+    |
     /**
-    * The battery is being charged.
-    *
-    * @relation ENABLE = 1
-    */
+     * The battery is being charged.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Enabled |
+    Enabled
+    |
     /**
-    * The battery is not being charged.
-    *
-    * @relation DISABLE = 2
-    */
+     * The battery is not being charged.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Disabled |
+    Disabled
+    |
     /**
-    * The battery is fully charged.
-    *
-    * @relation FULL = 3
-    */
+     * The battery is fully charged.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Full |
-    ...
+    Full
+    | ...
 }
 
+extend BatteryChargeState <: ToString {
+    /**
+     * Converts the BatteryChargeState to its string representation.
+     * @returns { String } A string representation of the BatteryChargeState.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public func toString(): String
+}
 
+extend BatteryChargeState <: Equatable<BatteryChargeState> {
+    /**
+     * Compares this BatteryChargeState with another for equality.
+     * @param { BatteryChargeState } other - The BatteryChargeState to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func ==(other: BatteryChargeState): Bool
+
+    /**
+     * Compares this BatteryChargeState with another for inequality.
+     * @param { BatteryChargeState } other - The BatteryChargeState to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func !=(other: BatteryChargeState): Bool
+}
 
 /**
-* Battery health status of a device.
-*
-* @relation export enum BatteryHealthState
-*/
-@Derive[ToString, Equatable]
+ * Battery health status of a device.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryHealthState {
     /**
-    * Unknown state.
-    *
-    * @relation UNKNOWN = 0
-    */
+     * Unknown state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    UnknownHealthState |
+    UnknownHealthState
+    |
     /**
-    * The battery is in healthy state.
-    *
-    * @relation GOOD = 1
-    */
+     * The battery is in healthy state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Good |
+    Good
+    |
     /**
-    * The battery is overheated.
-    *
-    * @relation OVERHEAT = 2
-    */
+     * The battery is overheated.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Overheat |
+    Overheat
+    |
     /**
-    * The battery voltage is over high.
-    *
-    * @relation OVERVOLTAGE = 3
-    */
+     * The battery voltage is over high.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Overvoltage |
+    Overvoltage
+    |
     /**
-    * The battery temperature is low.
-    *
-    * @relation COLD = 4
-    */
+     * The battery temperature is low.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Cold |
+    Cold
+    |
     /**
-    * The battery is dead.
-    *
-    * @relation DEAD = 5
-    */
+     * The battery is dead.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Dead |
-    ...
+    Dead
+    | ...
 }
 
+extend BatteryHealthState <: ToString {
+    /**
+     * Converts the BatteryHealthState to its string representation.
+     * @returns { String } A string representation of the BatteryHealthState.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public func toString(): String
+}
 
+extend BatteryHealthState <: Equatable<BatteryHealthState> {
+    /**
+     * Compares this BatteryHealthState with another for equality.
+     * @param { BatteryHealthState } other - The BatteryHealthState to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func ==(other: BatteryHealthState): Bool
+
+    /**
+     * Compares this BatteryHealthState with another for inequality.
+     * @param { BatteryHealthState } other - The BatteryHealthState to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func !=(other: BatteryHealthState): Bool
+}
 
 /**
-* Battery capacity level of a device.
-*
-* @relation export enum BatteryCapacityLevel
-*/
-@Derive[ToString, Equatable]
+ * Battery capacity level of a device.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryCapacityLevel {
     /**
-    * The battery is in full capacity level.
-    *
-    * @relation LEVEL_FULL = 1
-    */
+     * The battery is in full capacity level.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelFull |
+    LevelFull
+    |
     /**
-    * The battery is in high capacity level.
-    *
-    * @relation LEVEL_HIGH = 2
-    */
+     * The battery is in high capacity level.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelHigh |
+    LevelHigh
+    |
     /**
-    * The battery is in normal capacity level.
-    *
-    * @relation LEVEL_NORMAL = 3
-    */
+     * The battery is in normal capacity level.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelNormal |
+    LevelNormal
+    |
     /**
-    * The battery is in low capacity level.
-    *
-    * @relation LEVEL_LOW = 4
-    */
+     * The battery is in low capacity level.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelLow |
+    LevelLow
+    |
     /**
-    * The battery is in warning low capacity level.
-    *
-    * @relation LEVEL_WARNING = 5
-    */
+     * The battery is in warning low capacity level.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelWarning |
+    LevelWarning
+    |
     /**
-    * The battery is in critical low capacity level.
-    *
-    * @relation LEVEL_CRITICAL = 6
-    */
+     * The battery is in critical low capacity level.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelCritical |
+    LevelCritical
+    |
     /**
-    * The battery is in the lowest capacity level, system will shut down automatically in a few seconds.
-    *
-    * @relation LEVEL_SHUTDOWN = 7
-    */
+     * The battery is in the lowest capacity level, system will shut down automatically in a few seconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    LevelShutdown |
-    ...
+    LevelShutdown
+    | ...
 }
 
+extend BatteryCapacityLevel <: ToString {
+    /**
+     * Converts the BatteryCapacityLevel to its string representation.
+     * @returns { String } A string representation of the BatteryCapacityLevel.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public func toString(): String
+}
 
+extend BatteryCapacityLevel <: Equatable<BatteryCapacityLevel> {
+    /**
+     * Compares this BatteryCapacityLevel with another for equality.
+     * @param { BatteryCapacityLevel } other - The BatteryCapacityLevel to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func ==(other: BatteryCapacityLevel): Bool
 
+    /**
+     * Compares this BatteryCapacityLevel with another for inequality.
+     * @param { BatteryCapacityLevel } other - The BatteryCapacityLevel to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public operator func !=(other: BatteryCapacityLevel): Bool
+}

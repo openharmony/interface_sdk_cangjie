@@ -13,121 +13,110 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.file.fileuri
-import ohos.ffi.*
-import ohos.hilog.*
-import ohos.business_exception.*
-import ohos.labels.*
 
+import ohos.labels.APILevel
 
 /**
-* URI Represents a Uniform Resource Identifier (URI) reference.
-*
-* @relation class URI
-*/
+ * URI Represents a Uniform Resource Identifier (URI) reference.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
-public open class Uri <: RemoteDataLite & ToString {
+public open class Uri <: ToString {
     /**
-    * Gets/Sets the path portion of the URI.
-    *
-    * @relation path: string
-    */
+     * Gets/Sets the path portion of the URI.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open prop path: String
-    
+
     /**
-    * Converts this URI into an encoded string.
-    *
-    * @relation toString(): string
-    */
+     * Converts this URI into an encoded string.
+     *
+     * @returns { String } URI in a serialized string.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open func toString(): String
 }
 
-
 /**
-* FileUri represents the uri of the file.
-*
-* @relation class FileUri extends uri.URI
-*/
+ * FileUri represents the uri of the file.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public class FileUri <: Uri {
     /**
-    * Constructor for obtaining the instance of the FileUri class.
-    *
-    * @param { String } uriOrPath - Uri or Path.
-    * @throws { BusinessException } 13900005 - I/O error
-    * @throws {BusinessException} 13900011 - Out of memory
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 13900042 - Unknown error
-    * @throws { BusinessException } 14300002 - Invalid uri
-    * @relation constructor(uriOrPath: string)
-    */
+     * Constructor for obtaining the instance of the FileUri class.
+     *
+     * @param { String } uriOrPath - Uri or Path.
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900011 - Out of memory
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 14300002 - Invalid uri
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.AppFileService"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.AppFileService",
+        throwexception: true
     ]
     public init(uriOrPath: String)
-    
+
     /**
-    * Obtains the file path of uri.
-    */
+     * Gets/Sets the path portion of the URI.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public override prop path: String
-    
+
     /**
-    * Obtains the file name of uri.
-    *
-    * @throws { BusinessException } 13900005 - I/O error
-    * @throws { BusinessException } 13900042 - Unknown error
-    * @relation readonly name: string
-    */
+     * Obtains the file name of uri.
+     *
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900042 - Unknown error
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.AppFileService"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.AppFileService",
+        throwexception: true
     ]
     public prop name: String
-    
+
     /**
-    * Get the uri string
-    *
-    * @returns { String } Return the file uri string
-    */
+     * Converts this URI into an encoded string.
+     *
+     * @returns { String } Return the file uri string
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public override func toString(): String
 }
 
-
 /**
-* Get the uri from the path of file in app sandbox
-*
-* @throws { BusinessException } 401 - The input parameter is invalid.
-* @relation function getUriFromPath(path: string): string
-*/
+ * Get the uri from the path of file in app sandbox
+ *
+ * @param { String } path - the path of file in app sandbox
+ * @returns { String } Return the file uri
+ * @throws { BusinessException } 13900020 - Invalid argument.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.FileManagement.AppFileService"
+    since: "22",
+    syscap: "SystemCapability.FileManagement.AppFileService",
+    throwexception: true
 ]
 public func getUriFromPath(path: String): String
-
-

@@ -13,88 +13,84 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.application.error_observer
-import std.collection.*
+
 import ohos.labels.*
 
-import ohos.ffi.*
-
 /**
-* Error object.
-*/
+ * Error object.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class ErrorObject {
     /**
-    * Error object name.
-    */
+     * Error object name.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public let name: String
-    
+
     /**
-    * Error object message.
-    */
+     * Error object message.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public let message: String
-    
+
     /**
-    * Error object stack.
-    */
+     * Error object stack.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public let stack: Option<String>
 }
 
-
 /**
-* The observer will be called by system when an error occurs.
-*
-* @relaiton export default class ErrorObserver
-*/
+ * The observer will be called by system when an error occurs.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class ErrorObserver {
     /**
-    * Will be called when the js runtime throws an exception which doesn't caught by user.
-    *
-    * @relation onUnhandledException(errMsg: string): void
-    */
+     * Will be called when the js runtime throws an exception which doesn't caught by user.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onUnhandledException: (String) -> Unit
-    
+
     /**
-    * Will be called when the js runtime throws an exception which doesn't caught by user.
-    *
-    * @relation onException?(errObject: Error): void
-    */
+     * Will be called when the js runtime throws an exception which doesn't caught by user.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onException: Option<(ErrorObject) -> Unit>
-    
+
     /**
-    * ErrorObserver constructor.
-    */
+     * ErrorObserver constructor.
+     *
+     * @param { (String) -> Unit } onUnhandledException - Will be called when the js runtime throws an exception which
+     * doesn't caught by user.
+     * @param { Option<(ErrorObject) -> Unit> } [onException] - Will be called when the js runtime throws an exception
+     * which doesn't caught by user. The default value is None.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public init(
@@ -102,5 +98,3 @@ public class ErrorObserver {
         onException!: Option<(ErrorObject) -> Unit> = None
     )
 }
-
-

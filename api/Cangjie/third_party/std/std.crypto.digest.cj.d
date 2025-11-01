@@ -1,61 +1,107 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.crypto.digest
 import std.io.{InputStream, OutputStream}
 
-
 /**
-* The Digest interface
-*
-*
-*/
-@!APILevel[since: "22"]
+ * @description Represents a cryptographic hash algorithm that can compute a fixed-size hash value from variable-length input data.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Digest {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the size of the digest output in bytes.
+     * @returns The digest size in bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop size: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the block size of the digest algorithm in bytes.
+     * @returns The block size in bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop blockSize: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the name of the digest algorithm.
+     * @returns The algorithm name as a string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop algorithm: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Processes input data and updates the digest calculation.
+     * @param buffer - The input data to be processed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func write(buffer: Array<Byte>): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Completes the digest calculation and stores the result in the provided output array.
+     * @param to! - The output array to store the digest result
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func finish(to!: Array<Byte>): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Completes the digest calculation and returns the result as a new array.
+     * @returns A new array containing the digest result
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func finish(): Array<Byte>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Resets the digest to its initial state, clearing any previously processed data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func reset(): Unit
 }
 
 /**
-* The function is to calculate the digest of data
-*
-* @param algorithm - digest type
-* @param data - data to be digested
-*
-* @return message-digested data
-*/
-@Deprecated[message: "Use global function `public func digest<T>(algorithm: T, input: InputStream): Array<Byte> where T <: Digest` instead."]
-@!APILevel[since: "22"]
+ * @description Calculates the digest of the given string data.
+ * @param algorithm - The digest algorithm to use
+ * @param data - The string data to be digested
+ * @returns A new array containing the digest result
+ */
+@!APILevel[
+    since: "22"
+]
 public func digest<T>(algorithm: T, data: String): Array<Byte> where T <: Digest
 
-@!APILevel[since: "22"]
+/**
+ * @description Calculates the digest of data read from an input stream.
+ * @param algorithm - The digest algorithm to use
+ * @param input - The input stream containing data to be digested
+ * @returns A new array containing the digest result
+ * @throws IllegalArgumentException when an invalid argument is passed to the function
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func digest<T>(algorithm: T, input: InputStream): Array<Byte> where T <: Digest
 
-@!APILevel[since: "22"]
+/**
+ * @description Calculates the digest of the given byte array data.
+ * @param algorithm - The digest algorithm to use
+ * @param data - The byte array data to be digested
+ * @returns A new array containing the digest result
+ */
+@!APILevel[
+    since: "22"
+]
 public func digest<T>(algorithm: T, data: Array<Byte>): Array<Byte> where T <: Digest
-

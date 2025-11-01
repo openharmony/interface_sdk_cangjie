@@ -13,262 +13,268 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.settings
-import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
-import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
-import ohos.labels.*
-import std.collection.HashMap
 
+
+import ohos.app.ability.ui_ability.UIAbilityContext
+import ohos.labels.APILevel
 
 /**
-* Get value from settingsdata.
-* @throws { IllegalArgumentException } - The context is invalid.
-*
-* @relation function getValueSync(context: Context, name: string, defValue: string): string
-*/
+ * Get value from settingsdata.
+ *
+ * @param { UIAbilityContext } context - Indicates the Context or dataAbilityHelper used to access
+ * the database.
+ * @param { T } name - Indicates the name of the character string.
+ * @param { String } defValue - Indicates the default value of the character string.
+ * @returns { String } Returns settingsdata value.
+ * @throws { BusinessException } 14800000 - Parameter error.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Applications.Settings.Core"
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func getValue<T>(context: UIAbilityContext, name: T, defValue: String): String where T <: ToString
 
-
 /**
-* Get value from settingsdata(synchronous method).
-*
-* @throws { IllegalArgumentException } - The context is invalid.
-*
-* @relation function getValueSync(context: Context, name: string, defValue: string, domainName: string): string
-*/
+ * Get value from settingsdata.
+ * [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+ *
+ * @param { UIAbilityContext } context -Indicates the Context or dataAbilityHelper used to access
+ * the database.
+ * @param { T } name - Indicates the name of the character string.
+ * @param { String } defValue - Indicates the default value of the character string.
+ * @param { P } domainName - Indicates the name of the domain name to set.
+ * @returns { String } Returns settingsdata value.
+ * @throws { BusinessException } 14800000 - Parameter error.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Applications.Settings.Core"
+    since: "22",
+    syscap: "SystemCapability.Applications.Settings.Core",
+    throwexception: true,
+    workerthread: true
 ]
-public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String, domainName: P): String where T <: ToString,
-    P <: ToString
-
+public func getValue<T, P>(context: UIAbilityContext, name: T, defValue: String, domainName: P): String
+    where T <: ToString, P <: ToString
 
 /**
-* Provide domain name for query.
-*
-* @relation namespace domainName
-*/
+ * Provide domain name for query.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum DomainName <: ToString {
     /**
-    * Provide the domain name for device shared Key.
-    *
-    * @relation const DEVICE_SHARED: string
-    */
+     * Provide the domain name for device shared Key.
+     * This constants is a domain name for device level shared key.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DeviceShared |
+    DeviceShared
+    |
     /**
-    * Provide the domain name for user property.
-    *
-    * @relation const USER_PROPERTY: string
-    */
+     * Provide the domain name for user property.
+     * This constants is a domain name for user level key.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    UserProperty |
-    ...
+    UserProperty
+    | ...
+
     /**
-    * Obtains the string of DomainName.
-    */
+     * Obtains the string of DomainName.
+     * @returns {String} A string representation of the DomainName.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String
 }
 
-
 /**
-* Provides methods for setting time and date formats.
-*
-* @relation namespace date
-*/
+ * Provides methods for setting time and date formats.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Date <: ToString {
     /**
-    * Indicates the date format.
-    *
-    * @relation const DATE_FORMAT: string
-    */
+     * Indicates the date format.
+     * The formats mm/dd/yyyy, dd/mm/yyyy, and yyyy/mm/dd are available.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DateFormat |
+    DateFormat
+    |
     /**
-    * Specifies whether the time is displayed in 12-hour or 24-hour format.
-    *
-    * @relation const TIME_FORMAT: string
-    */
+     * Specifies whether the time is displayed in 12-hour or 24-hour format.
+     * If the value is 12, the 12-hour format is used. If the value is 24, the 24-hour format is used.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    TimeFormat |
+    TimeFormat
+    |
     /**
-    * Specifies whether the date, time, and time zone are automatically obtained from the Network
-    * Identity and Time Zone (NITZ).
-    *
-    * @relation const AUTO_GAIN_TIME: string
-    */
+     * Specifies whether the date, time, and time zone are automatically obtained from the Network
+     * Identity and Time Zone (NITZ).
+     * If the value is true, the information is automatically obtained from NITZ.
+     * If the value is false, the information is not obtained from NITZ.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AutoGainTime |
+    AutoGainTime
+    |
     /**
-    * Specifies whether the time zone is automatically obtained from NITZ.
-    *
-    * @relation const AUTO_GAIN_TIME_ZONE: string
-    */
+     * Specifies whether the time zone is automatically obtained from NITZ.
+     * If the value is true, the information is automatically obtained from NITZ. If the value
+     * is false, the information is not obtained from NITZ.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AutoGainTimeZone |
-    ...
+    AutoGainTimeZone
+    | ...
+
     /**
-    * Obtains the string of Date.
-    */
+     * Obtains the string of Date.
+     * @returns {String} A string representation of the Date.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String
 }
 
-
 /**
-* Provides methods for setting the display effect, including the font size, screen brightness, screen rotation,
-* animation factor, and display color.
-*
-* @relation namespace display
-*/
+ * Provides methods for setting the display effect, including the font size, screen brightness, screen rotation,
+ * animation factor, and display color.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Applications.Settings.Core"
 ]
 public enum Display <: ToString {
     /**
-    * Indicates the scaling factor of fonts, which is a float number.
-    *
-    * @relation const FONT_SCALE: string
-    */
+     * Indicates the scaling factor of fonts, which is a float number.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    FontScale |
+    FontScale
+    |
     /**
-    * Indicates the screen brightness. The value ranges from 0 to 255.
-    *
-    * @relation const SCREEN_BRIGHTNESS_STATUS: string
-    */
+     * Indicates the screen brightness. The value ranges from 0 to 255.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    ScreenBrightnessStatus |
+    ScreenBrightnessStatus
+    |
     /**
-    * Specifies whether automatic screen brightness adjustment is enabled.
-    *
-    * @relation const AUTO_SCREEN_BRIGHTNESS: string
-    */
+     * Specifies whether automatic screen brightness adjustment is enabled.
+     * If the value is 1, automatic adjustment is enabled. If the value is 0, automatic
+     * adjustment is disabled.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AutoScreenBrightness |
+    AutoScreenBrightness
+    |
     /**
-    * Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
-    *
-    * @relation const SCREEN_OFF_TIMEOUT: string
-    */
+     * Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    ScreenOffTimeout |
+    ScreenOffTimeout
+    |
     /**
-    * Indicates the screen rotation when no other policy is available.
-    *
-    * @relation const DEFAULT_SCREEN_ROTATION: string
-    */
+     * Indicates the screen rotation when no other policy is available.
+     * This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following
+     * values are available:
+     * 0 - The screen rotates 0 degrees.
+     * 1 - The screen rotates 90 degrees.
+     * 2 - The screen rotates 180 degrees.
+     * 3 - The screen rotates 270 degrees.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DefaultScreenRotation |
+    DefaultScreenRotation
+    |
     /**
-    * Indicates the scaling factor for the animation duration.
-    *
-    * @relation const ANIMATOR_DURATION_SCALE: string
-    */
+     * Indicates the scaling factor for the animation duration.
+     * This affects the start delay and duration of all such animations. If the value is 0,
+     * the animation ends immediately. The default value is 1.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    AnimatorDurationScale |
+    AnimatorDurationScale
+    |
     /**
-    * Indicates the scaling factor for transition animations.
-    * If the value is 0, transition animations are disabled.
-    *
-    * @relation const TRANSITION_ANIMATION_SCALE: string
-    */
+     * Indicates the scaling factor for transition animations.
+     * If the value is 0, transition animations are disabled.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    TransitionAnimationScale |
+    TransitionAnimationScale
+    |
     /**
-    * Indicates the scaling factor for normal window animations.
-    * If the value is 0, window animations are disabled.
-    *
-    * @relation const WINDOW_ANIMATION_SCALE: string
-    */
+     * Indicates the scaling factor for normal window animations.
+     * If the value is 0, window animations are disabled.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    WindowAnimationScale |
+    WindowAnimationScale
+    |
     /**
-    * Specifies whether display color inversion is enabled.
-    * If the value is 1, display color inversion is enabled. If the value is 0, display color inversion is disabled.
-    *
-    * @relation const DISPLAY_INVERSION_STATUS: string
-    */
+     * Specifies whether display color inversion is enabled.
+     * If the value is 1, display color inversion is enabled. If the value is 0, display color
+     * inversion is disabled.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
-    DisplayInversionStatus |
-    ...
+    DisplayInversionStatus
+    | ...
+
     /**
-    * Obtains the string of Display.
-    */
+     * Obtains the string of Display.
+     * @returns {String} A string representation of the Display.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Applications.Settings.Core"
     ]
     public override func toString(): String
 }
-
-
-

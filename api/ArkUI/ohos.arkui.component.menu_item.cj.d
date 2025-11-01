@@ -1,114 +1,288 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.menu_item
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.ffi.*
-import ohos.resource.*
 import ohos.labels.APILevel
+import ohos.resource.*
 
-
+/**
+ * A component that represents a single item within a Menu component, typically with text, icons, and optional submenus.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class MenuItem <: ViewBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class MenuItem <: CommonMethodComponent<MenuItem> & MenuItemAttribute {
+/**
+ * Initializes a MenuItem component with optional child content.
+ *
+ * @param { () -> Unit } [child] - The child component builder function for the menu item.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(child!: () -> Unit = {=>})
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(startIcon!: ResourceStr, content!: ResourceStr, endIcon!: ResourceStr, labelInfo!: ResourceStr,
+
+/**
+ * Initializes a MenuItem component with icon, content, and label information.
+ *
+ * @param { ?ResourceStr } startIcon - Defines the start display image info.
+ * @param { ?ResourceStr } content - Defines the content string display info.
+ * @param { ?ResourceStr } endIcon - Defines the end display image info.
+ * @param { ?ResourceStr } labelInfo - Defines the end label info like shortcut.
+ * @param { Option<() -> Unit> } [builder] - Create the submenu.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(startIcon!: ?ResourceStr, content!: ?ResourceStr, endIcon!: ?ResourceStr, labelInfo!: ?ResourceStr,
         builder!: Option<() -> Unit> = None)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selected(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selectIcon(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selectIcon(value: ResourceStr): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Setting whether menuItem is selected.
+ * Configures the selection state of the menu item.
+ *
+ * @param { ?Bool } value - menuItem is selected.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selected(value: ?Bool): This
+
+/**
+ * Whether the relevant check icon is displayed when a menu item is selected.
+ *
+ * @param { ?Bool } value - Indicates whether to display the check icon when selected.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selectIcon(value: ?Bool): This
+
+/**
+ * Whether the relevant check icon is displayed when a menu item is selected.
+ * Sets a custom icon to display when the menu item is selected.
+ *
+ * @param { ?ResourceStr } value - Indicates whether to display icon when selected.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selectIcon(value: ?ResourceStr): This
+
+/**
+ * Configures the font properties of the menu item content text.
+ *
+ * @param { ?Length } [size] - Indicates the font size of content text.
+ * @param { ?FontWeight } [weight] - Indicates the font weight of content text.
+ * @param { ?ResourceStr } [family] - Indicates the font family of content text.
+ * @param { ?FontStyle } [style] - Indicates the font style of content text.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func contentFont(
-        size!: Length = 16.vp,
-        weight!: FontWeight = FontWeight.Normal,
-        family!: ResourceStr = "HarmonyOS Sans",
-        style!: FontStyle = FontStyle.Normal
+        size!: ?Length = None,
+        weight!: ?FontWeight = None,
+        family!: ?ResourceStr = None,
+        style!: ?FontStyle = None
     ): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func contentFontColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Sets the font color of content text.
+ * Configures the font color of the menu item content text.
+ *
+ * @param { ?ResourceColor } value - Indicates the font color of content text.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func contentFontColor(value: ?ResourceColor): This
+
+/**
+ * Sets the label info font style.
+ * Family and style are not supported currently and will be fixed in future.
+ *
+ * @param { ?Length } [size] - Indicates the font size of label info text.
+ * @param { ?FontWeight } [weight] - Indicates the font weight of label info text.
+ * @param { ?ResourceStr } [family] - Indicates the font family of label info text.
+ * @param { ?FontStyle } [style] - Indicates the font style of label info text.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func labelFont(
-        size!: Length = 16.vp,
-        weight!: FontWeight = FontWeight.Normal,
-        family!: ResourceStr = "HarmonyOS Sans",
-        style!: FontStyle = FontStyle.Normal
+        size!: ?Length = None,
+        weight!: ?FontWeight = None,
+        family!: ?ResourceStr = None,
+        style!: ?FontStyle = None
     ): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func labelFontColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onChange(callback: (Bool) -> Unit): This
+
+/**
+ * Sets the font color of label info text.
+ * Configures the font color of the menu item label text.
+ *
+ * @param { ?ResourceColor } value - Indicates the font color of label info text.
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func labelFontColor(value: ?ResourceColor): This
+
+/**
+ * Triggers a callback when a menu item is selected or unchecked.
+ * Called when the selection state of the menu item changes.
+ *
+ * @param { ?(Bool) -> Unit } callback - Callback when a menu item is selected or unchecked.
+ * The parameter indicates whether the menu item is currently selected (true) or not (false).
+ * @returns { This } Returns the MenuItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onChange(callback: ?(Bool) -> Unit): This
 }
 
+/**
+ *  Defines the MenuItem component attributes.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface MenuItemAttribute <: CommonMethod<MenuItemAttribute> {
+/**
+ * Setting whether menuItem is selected.
+ * Configures the selection state of the menu item.
+ *
+ * @param { ?Bool } value - menuItem is selected.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selected(value: ?Bool): MenuItemAttribute
+
+/**
+ * Whether the relevant check icon is displayed when a menu item is selected.
+ * Controls the visibility of the check icon when the menu item is selected.
+ *
+ * @param { ?Bool } value - Indicates whether to display the check icon when selected.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selectIcon(value: ?Bool): MenuItemAttribute
+
+/**
+ * Whether the relevant check icon is displayed when a menu item is selected.
+ *
+ * @param { ?ResourceStr } value - Indicates whether to display icon when selected.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selectIcon(value: ?ResourceStr): MenuItemAttribute
+
+/**
+ * Configures the font properties of the menu item content text.
+ *
+ * @param { ?Length } size - Indicates the font size of content text.
+ * @param { ?FontWeight } weight - Indicates the font weight of content text.
+ * @param { ?ResourceStr } family - Indicates the font family of content text.
+ * @param { ?FontStyle } style - Indicates the font style of content text.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func contentFont(
+        size!: ?Length,
+        weight!: ?FontWeight,
+        family!: ?ResourceStr,
+        style!: ?FontStyle
+    ): MenuItemAttribute
+
+/**
+ * Configures the font color of the menu item content text.
+ *
+ * @param { ?ResourceColor } value - Indicates the font color of content text.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func contentFontColor(value: ?ResourceColor): MenuItemAttribute
+
+/**
+ * Sets the label info font style.
+ * Family and style are not supported currently and will be fixed in future.
+ *
+ * @param { ?Length } size - Indicates the font size of label info text.
+ * @param { ?FontWeight } weight - Indicates the font weight of label info text.
+ * @param { ?ResourceStr } family - Indicates the font family of label info text.
+ * @param { ?FontStyle } style - Indicates the font style of label info text.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func labelFont(
+        size!: ?Length,
+        weight!: ?FontWeight,
+        family!: ?ResourceStr,
+        style!: ?FontStyle
+    ): MenuItemAttribute
+
+/**
+ * Configures the font color of the menu item label text.
+ *
+ * @param { ?ResourceColor } value - Indicates the font color of label info text.
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func labelFontColor(value: ?ResourceColor): MenuItemAttribute
+
+/**
+ * Triggers a callback when a menu item is selected or unchecked.
+ *
+ * @param { ?(Bool) -> Unit } callback - Callback when a menu item is selected or unchecked.
+ * The parameter indicates whether the menu item is currently selected (true) or not (false).
+ * @returns { MenuItemAttribute } Returns the menu item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onChange(callback: ?(Bool) -> Unit): MenuItemAttribute
+}

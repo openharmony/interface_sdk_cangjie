@@ -13,23 +13,18 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.common_event_subscriber
-import ohos.labels.APILevel
-import ohos.ffi.{RemoteDataLite, releaseFFIData}
 
-import ohos.ffi.{RetDataI32, RetDataCString, RetDataBool, RetDataI64}
+
+import ohos.labels.APILevel
 
 /**
-* The CommonEventSubscriber module provides APIs for describing the common event subscriber.
-* @relation export interface CommonEventSubscriber
-*/
+ * The CommonEventSubscriber module provides APIs for describing the common event subscriber.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
-public class CommonEventSubscriber <: RemoteDataLite {
-}
-
-
+public class CommonEventSubscriber {}

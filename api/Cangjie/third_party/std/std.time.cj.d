@@ -1,12 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.time
 
@@ -14,187 +5,228 @@ import std.convert.*
 import std.collection.ArrayList
 
 /**
-* A DateTime represents an instance in time with nanosecond precision.
-*
-* DateTime instances can be compared using common comparison operators.
-* DateTime instances can subtract other DateTime instances, producing a Duration.
-* DateTime instances can add or sub a Duration, producing a new DateTime.
-*
-* Each DateTime is associated with a time zone. When calculating the dateTime representation,
-* the TimeZone is involved in it, such as in the toString function.
-* The methods inLocal, inUTC, and inTimeZone return a new DateTime with a specified TimeZone.
-* Every function returns a dateTime will create a new instance.
-*
-* The comparison results between two DateTimes determined by their current UTC time.
-* For example, 2023-04-10T08:00:00 in CST（China Standard Time）is equal to
-* 2023-04-10T00:00:00 in UTC.
-*/
-@!APILevel[since: "22"]
+ * @description A DateTime represents an instance in time with nanosecond precision, associated with a time zone
+ */
+@!APILevel[
+    since: "22"
+]
 public struct DateTime <: ToString & Hashable & Comparable<DateTime> & Formattable & Parsable<DateTime> {
-    /* Unix epoch time. */
-    @!APILevel[since: "22"]
+    /**
+     * @description The Unix epoch time (January 1, 1970, 00:00:00 UTC)
+     * @returns the DateTime representing Unix epoch time
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop UnixEpoch: DateTime
     
     /**
-    * Get the year of DateTime instance.
-    * Ranges in [-999,999,999, 999,999,999].
-    */
-    @!APILevel[since: "22"]
+     * @description The year component of the datetime
+     * @returns the year value, ranging from -999,999,999 to 999,999,999
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop year: Int64
     
     /**
-    * Get the year of DateTime instance.
-    * Values are in Enum Month.
-    */
-    @!APILevel[since: "22"]
+     * @description The month component of the datetime as a Month enum
+     * @returns the Month enum value (January through December)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop month: Month
     
     /**
-    * Get the month of DateTime instance.
-    * Ranges in [1, 12].
-    */
-    @Deprecated[message: "Use `public prop month: Month` instead."]
-    @!APILevel[since: "22"]
+     * @description The month component of the datetime as an integer value
+     * @returns the month value, ranging from 1 to 12
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop monthValue: Int64
     
     /**
-    * Get the day of DateTime instance.
-    * Ranges in [1, 31], the maximum depends on month and year.
-    */
-    @!APILevel[since: "22"]
+     * @description The day of month component of the datetime
+     * @returns the day of month value, ranging from 1 to 31 depending on the month and year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop dayOfMonth: Int64
     
     /**
-    * Get the day of week of DateTime instance.
-    * Values are in Enum DayOfWeek.
-    */
-    @!APILevel[since: "22"]
+     * @description The day of week component of the datetime
+     * @returns the DayOfWeek enum value (Sunday through Saturday)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop dayOfWeek: DayOfWeek
     
     /**
-    * Get the day of year of DateTime instance.
-    * Ranges in [1, 365] in non leap year and [1, 366] in leap year.
-    */
-    @!APILevel[since: "22"]
+     * @description The day of year component of the datetime
+     * @returns the day of year value, ranging from 1 to 365 in non-leap years and 1 to 366 in leap years
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop dayOfYear: Int64
     
     /**
-    * Get the hour of DateTime instance.
-    * Ranges in [0, 23].
-    */
-    @!APILevel[since: "22"]
+     * @description The hour component of the datetime
+     * @returns the hour value, ranging from 0 to 23
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hour: Int64
     
     /**
-    * Get the minute of DateTime instance.
-    * Ranges in [0, 59].
-    */
-    @!APILevel[since: "22"]
+     * @description The minute component of the datetime
+     * @returns the minute value, ranging from 0 to 59
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop minute: Int64
     
     /**
-    * Get the second of DateTime instance.
-    * Ranges in [0, 59].
-    */
-    @!APILevel[since: "22"]
+     * @description The second component of the datetime
+     * @returns the second value, ranging from 0 to 59
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop second: Int64
     
     /**
-    * Get the nanosecond of DateTime instance.
-    * Ranges in [0, 59].
-    */
-    @!APILevel[since: "22"]
+     * @description The nanosecond component of the datetime
+     * @returns the nanosecond value, ranging from 0 to 999,999,999
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop nanosecond: Int64
     
     /**
-    * Get the year and week tuple of DateTime instance based on ISO-8601.
-    * Ranges in [0, 59].
-    */
-    @!APILevel[since: "22"]
+     * @description The ISO-8601 week-based year and week number
+     * @returns a tuple containing (year, week) according to ISO-8601 standard
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop isoWeek: (Int64, Int64)
     
     /**
-    * Get the timeZone of DateTime instance.
-    */
-    @!APILevel[since: "22"]
+     * @description The time zone associated with this datetime
+     * @returns the TimeZone object representing the time zone
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop zone: TimeZone
     
     /**
-    * Get the zone id of DateTime instance.
-    */
-    @!APILevel[since: "22"]
+     * @description The time zone identifier string
+     * @returns the string identifier of the time zone (e.g., "UTC", "America/New_York")
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop zoneId: String
     
     /**
-    * Get the zone offset of DateTime instance.
-    */
-    @!APILevel[since: "22"]
+     * @description The time zone offset from UTC as a Duration
+     * @returns the Duration representing the offset from UTC (positive for east, negative for west)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop zoneOffset: Duration
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The date components as a tuple of year, month, and day
+     * @returns a tuple containing (year, month, day) where month is a Month enum
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop date: (Int64, Month, Int64)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The time components as a tuple of hour, minute, and second
+     * @returns a tuple containing (hour, minute, second) values
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop time: (Int64, Int64, Int64)
     
     /**
-    * Get current DateTime in specified time zone.
-    *
-    * @param timeZone specified time zone. the default value is set to TimeZone.Local.
-    * @return current DateTime in specified time zone.
-    */
+     * @description Gets the current DateTime in the specified time zone
+     * @param timeZone the time zone to use (defaults to local time zone)
+     * @returns the current DateTime in the specified time zone
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func now(timeZone!: TimeZone = TimeZone.Local): DateTime
     
     /**
-    * Get current DateTime, with time zone set to UTC.
-    *
-    * @return current DateTime of UTC.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the current DateTime in UTC time zone
+     * @returns the current DateTime in UTC
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nowUTC(): DateTime
     
     /**
-    * Construct DateTime after d since unix epoch time.
-    *
-    * @param d duration.
-    * @return DateTime after d since unix epoch time.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a DateTime from a Unix timestamp Duration
+     * @param d the Duration since Unix epoch (January 1, 1970, 00:00:00 UTC)
+     * @returns the DateTime corresponding to the specified Unix timestamp
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func fromUnixTimeStamp(d: Duration): DateTime
     
     /**
-    * Construct a DateTime instance with unix second and unix nanosecond.
-    * The start time is set to unix epoch time.
-    *
-    * @param second unix second.
-    * @param nanosecond unix nanosecond.
-    * @return DateTime after second seconds and nanosecond nanoseconds since unix epoch time.
-    *
-    * @throws IllegalArgumentException if the value of nanosecond is outside the range [0, 999,999,999].
-    * @throws ArithmeticException if the result of year is outside the range [-999,999,999, 999,999,999].
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a DateTime from Unix epoch seconds and nanoseconds
+     * @param second seconds since Unix epoch
+     * @param nanosecond nanoseconds component (0-999,999,999)
+     * @returns the DateTime corresponding to the specified epoch time
+     * @throws IllegalArgumentException when parameters are out of valid range
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func ofEpoch(second!: Int64, nanosecond!: Int64): DateTime
     
     /**
-    * Construct a instance of DateTime with specified parameters.
-    * The start time is set to unix epoch time.
-    *
-    * @param year year A.D, ranges in [-999,999,999, 999,999,999].
-    * @param month month value of year, ranges in [1, 12].
-    * @param dayOfMonth days of month, ranges in [1, 31], the maximum depends on month and year.
-    * @param hour hours of day, ranges in [0, 23].
-    * @param minute minutes of hour, ranges in [0, 59].
-    * @param second seconds of minute, ranges in [0, 59].
-    * @param nanosecond nanoseconds of second, ranges in [0, 999,999,999].
-    * @param timeZone time zone.
-    * @return DateTime with specified parameters.
-    *
-    * @throws IllegalArgumentException if the value of any parameter is out of the range, or the datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a DateTime with specified date and time components using integer month
+     * @param year the year value
+     * @param month the month value (1-12)
+     * @param dayOfMonth the day of month (1-31)
+     * @param hour the hour value (0-23, defaults to 0)
+     * @param minute the minute value (0-59, defaults to 0)
+     * @param second the second value (0-59, defaults to 0)
+     * @param nanosecond the nanosecond value (0-999,999,999, defaults to 0)
+     * @param timeZone the time zone (defaults to local time zone)
+     * @returns the DateTime with the specified components
+     * @throws IllegalArgumentException when parameters are out of valid range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(
         year!: Int64,
         month!: Int64,
@@ -207,22 +239,22 @@ public struct DateTime <: ToString & Hashable & Comparable<DateTime> & Formattab
     ): DateTime
     
     /**
-    * Construct a instance of DateTime with specified parameters.
-    * The start time is set to unix epoch time.
-    *
-    * @param year year A.D, ranges in [-999,999,999, 999,999,999].
-    * @param month month of year.
-    * @param dayOfMonth days of month, ranges in [1, 31], the maximum depends on month and year.
-    * @param hour hours of day, ranges in [0, 23].
-    * @param minute minutes of hour, ranges in [0, 59].
-    * @param second seconds of minute, ranges in [0, 59].
-    * @param nanosecond nanoseconds of second, ranges in [0, 999,999,999].
-    * @param timeZone time zone.
-    * @return DateTime with specified parameters.
-    *
-    * @throws IllegalArgumentException if the value of any parameter is out of the range, or the datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a DateTime with specified date and time components using Month enum
+     * @param year the year value
+     * @param month the Month enum value
+     * @param dayOfMonth the day of month (1-31)
+     * @param hour the hour value (0-23, defaults to 0)
+     * @param minute the minute value (0-59, defaults to 0)
+     * @param second the second value (0-59, defaults to 0)
+     * @param nanosecond the nanosecond value (0-999,999,999, defaults to 0)
+     * @param timeZone the time zone (defaults to local time zone)
+     * @returns the DateTime with the specified components
+     * @throws IllegalArgumentException when parameters are out of valid range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(
         year!: Int64,
         month!: Month,
@@ -235,21 +267,21 @@ public struct DateTime <: ToString & Hashable & Comparable<DateTime> & Formattab
     ): DateTime
     
     /**
-    * Construct a instance of DateTime with specified parameters.
-    * The start time is set to unix epoch time.
-    *
-    * @param year year A.D, ranges in [-999,999,999, 999,999,999].
-    * @param month month value of year, ranges in [1, 12].
-    * @param dayOfMonth days of month, ranges in [1, 31], the maximum depends on month and year.
-    * @param hour hours of day, ranges in [0, 23].
-    * @param minute minutes of hour, ranges in [0, 59].
-    * @param second seconds of minute, ranges in [0, 59].
-    * @param nanosecond nanoseconds of second, ranges in [0, 999,999,999].
-    * @return DateTime with specified parameters.
-    *
-    * @throws IllegalArgumentException if the value of any parameter is out of the range.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a UTC DateTime with specified date and time components using integer month
+     * @param year the year value
+     * @param month the month value (1-12)
+     * @param dayOfMonth the day of month (1-31)
+     * @param hour the hour value (0-23, defaults to 0)
+     * @param minute the minute value (0-59, defaults to 0)
+     * @param second the second value (0-59, defaults to 0)
+     * @param nanosecond the nanosecond value (0-999,999,999, defaults to 0)
+     * @returns the UTC DateTime with the specified components
+     * @throws IllegalArgumentException when parameters are out of valid range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func ofUTC(
         year!: Int64,
         month!: Int64,
@@ -261,21 +293,21 @@ public struct DateTime <: ToString & Hashable & Comparable<DateTime> & Formattab
     ): DateTime
     
     /**
-    * Construct a instance of DateTime with specified parameters.
-    * The start time is set to unix epoch time.
-    *
-    * @param year year A.D, ranges in [-999,999,999, 999,999,999].
-    * @param month month of year.
-    * @param dayOfMonth days of month, ranges in [1, 31], the maximum depends on month and year.
-    * @param hour hours of day, ranges in [0, 23].
-    * @param minute minutes of hour, ranges in [0, 59].
-    * @param second seconds of minute, ranges in [0, 59].
-    * @param nanosecond nanoseconds of second, ranges in [0, 999,999,999].
-    * @return DateTime with specified parameters.
-    *
-    * @throws IllegalArgumentException if the value of any parameter is out of the range.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a UTC DateTime with specified date and time components using Month enum
+     * @param year the year value
+     * @param month the Month enum value
+     * @param dayOfMonth the day of month (1-31)
+     * @param hour the hour value (0-23, defaults to 0)
+     * @param minute the minute value (0-59, defaults to 0)
+     * @param second the second value (0-59, defaults to 0)
+     * @param nanosecond the nanosecond value (0-999,999,999, defaults to 0)
+     * @returns the UTC DateTime with the specified components
+     * @throws IllegalArgumentException when parameters are out of valid range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func ofUTC(
         year!: Int64,
         month!: Month,
@@ -287,767 +319,994 @@ public struct DateTime <: ToString & Hashable & Comparable<DateTime> & Formattab
     ): DateTime
     
     /**
-    * Parse a DateTime from string with RFC3339 date-time format.
-    *
-    * @param str DateTime string.
-    * @return a DateTime if the parsing succeeds.
-    *
-    * @throws TimeParseException if the parsing is incorrect.
-    */
-    @!APILevel[since: "22"]
+     * @description Parses a DateTime from a string using ISO 8601 format
+     * @param str the string to parse in ISO 8601 format
+     * @returns the parsed DateTime
+     * @throws TimeParseException when the string cannot be parsed as a DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(str: String): DateTime
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Attempts to parse a DateTime from a string, returning None if parsing fails
+     * @param str the string to parse in ISO 8601 format
+     * @returns Some(DateTime) if parsing succeeds, None if parsing fails
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func tryParse(str: String): Option<DateTime>
     
     /**
-    * Parse a time from string with specified format.
-    *
-    * @param str DateTime string.
-    * @param format of @p str, for example, "yyyy/MM/dd HH:mm:ss OOOO".
-    * @return a DateTime if the parsing succeeds.
-    *
-    * @throws TimeParseException if the parsing is incorrect.
-    * @throws IllegalArgumentException if the format is illegal.
-    */
-    @!APILevel[since: "22"]
+     * @description Parses a DateTime from a string using a custom format
+     * @param str the string to parse
+     * @param format the format string specifying the expected format
+     * @returns the parsed DateTime
+     * @throws TimeParseException when the string cannot be parsed as a DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(str: String, format: String): DateTime
     
-    @Deprecated[message: "Use member funtion `public static func parse(str: String, format: String): DateTime` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Parses a DateTime from a string using a DateTimeFormat
+     * @param str the string to parse
+     * @param format the DateTimeFormat object specifying the expected format
+     * @returns the parsed DateTime
+     * @throws TimeParseException when the string cannot be parsed as a DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func parse(str: String, format: DateTimeFormat): DateTime
     
     /**
-    * Return DateTime with the time zone set to UTC.
-    *
-    * @return a DateTime with the time zone set to UTC.
-    *
-    * @throws ArithmeticException if the result of year in UTC is outside the range [-999,999,999, 999,999,999].
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this DateTime to UTC time zone
+     * @returns a new DateTime in UTC time zone
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func inUTC(): DateTime
     
     /**
-    * Return DateTime with the time zone set to Local.
-    *
-    * @return a DateTime with the time zone set to Local.
-    *
-    * @throws ArithmeticException if the result of year in Local is outside the range [-999,999,999, 999,999,999].
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this DateTime to local time zone
+     * @returns a new DateTime in local time zone
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func inLocal(): DateTime
     
     /**
-    * Return DateTime with the time zone set to specified time zone.
-    *
-    * @param timeZone time zone
-    * @return a DateTime with the time zone set to Local.
-    *
-    * @throws ArithmeticException if the result of year in Local is outside the range [-999,999,999, 999,999,999]
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this DateTime to the specified time zone
+     * @param timeZone the target time zone
+     * @returns a new DateTime in the specified time zone
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func inTimeZone(timeZone: TimeZone): DateTime
     
     /**
-    * Return the duration elapsed since January 1, 1970 UTC.
-    * The result does not depend on the time zone associated with time,
-    * in other words, base on the UTC time zone.
-    *
-    * @return duration of unix nanosecond.
-    *
-    * @throws ArithmeticException if the timestamp is out of range for 'Duration'.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this DateTime to Unix timestamp as Duration
+     * @returns the Duration since Unix epoch (January 1, 1970, 00:00:00 UTC)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toUnixTimeStamp(): Duration
     
     /**
-    * Return a String that represents the DateTime instance, the format defaults to RFC3339.
-    *
-    * @return a DateTime string formatted in RFC3339.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this DateTime to its string representation in ISO 8601 format
+     * @returns the string representation of this DateTime
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
     /**
-    * Return a String that represents the DateTime instance, the format is set to specified format.
-    *
-    * @param fmt of func format, for example, "yyyy/MM/dd HH:mm:ss OOOO".
-    *
-    * @return a DateTime string formatted in the specified format.
-    *
-    * @throws IllegalArgumentException if the fmt is illegal.
-    */
-    @!APILevel[since: "22"]
+     * @description Formats this DateTime using a custom format string
+     * @param fmt the format string
+     * @returns the formatted string representation of this DateTime
+     * @throws IllegalArgumentException when fmt are invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func format(fmt: String): String
     
-    @Deprecated[message: "Use member funtion `public func format(fmt: String): String` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Formats this DateTime using a DateTimeFormat
+     * @param format the DateTimeFormat object
+     * @returns the formatted string representation of this DateTime
+     * @throws IllegalArgumentException when datetime components are invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toString(format: DateTimeFormat): String
     
     /**
-    * Returns hash value of DateTime instance
-    *
-    * @return Int64 the hash value of the current DateTime instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Calculates the hash code for this DateTime
+     * @returns the hash code value for this DateTime
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
     /**
-    * Adds specified years to DateTime instance, returns a new DateTime to represent the new DateTime.
-    * Specifically, if the day is outside the range of month,
-    * it will shift to the last day of the month due to the impact of leap year.
-    * For example, (2020-02-29).addYears(1) will return (2021-02-28)
-    *
-    * @param n the number of year.
-    * @return a new DateTime instance after adding @p n years.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of years to this DateTime
+     * @param n the number of years to add (can be negative to subtract)
+     * @returns a new DateTime with the specified years added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addYears(n: Int64): DateTime
     
     /**
-    * Adds specified months to DateTime instance, returns a new DateTime to represent the new DateTime.
-    * Specifically, if the day is outside the range of month,
-    * it will shift to the last day of the month.
-    * For example, (March 31st).addMonths(1) will return (April 30th).
-    *
-    * @param n the number of month.
-    * @return a new DateTime instance after adding @p n months.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of months to this DateTime
+     * @param n the number of months to add (can be negative to subtract)
+     * @returns a new DateTime with the specified months added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addMonths(n: Int64): DateTime
     
     /**
-    * Adds specified weeks to DateTime instance, returns a new DateTime to represent the new DateTime.
-    *
-    * @param n the number of week.
-    * @return a new DateTime instance after adding @p n weeks.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of weeks to this DateTime
+     * @param n the number of weeks to add (can be negative to subtract)
+     * @returns a new DateTime with the specified weeks added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addWeeks(n: Int64): DateTime
     
     /**
-    * Adds specified days to DateTime instance, returns a new DateTime to represent the new DateTime.
-    *
-    * @param n the number of day.
-    * @return a new DateTime instance after adding @p n days.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of days to this DateTime
+     * @param n the number of days to add (can be negative to subtract)
+     * @returns a new DateTime with the specified days added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addDays(n: Int64): DateTime
     
     /**
-    * Adds specified hours to DateTime instance, returns a new DateTime to represent the new DateTime.
-    *
-    * @param n the number of hour.
-    * @return a new DateTime instance after adding @p n hours.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of hours to this DateTime
+     * @param n the number of hours to add (can be negative to subtract)
+     * @returns a new DateTime with the specified hours added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addHours(n: Int64): DateTime
     
     /**
-    * Adds specified minutes to DateTime instance, returns a new DateTime to represent the new DateTime.
-    *
-    * @param n the number of minute.
-    * @return a new DateTime instance after adding @p n minutes.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of minutes to this DateTime
+     * @param n the number of minutes to add (can be negative to subtract)
+     * @returns a new DateTime with the specified minutes added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addMinutes(n: Int64): DateTime
     
     /**
-    * Adds specified seconds to DateTime instance, returns a new DateTime to represent the new DateTime.
-    *
-    * @param n the number of second.
-    * @return a new DateTime instance after adding @p n seconds.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999], or the result datetime does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of seconds to this DateTime
+     * @param n the number of seconds to add (can be negative to subtract)
+     * @returns a new DateTime with the specified seconds added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addSeconds(n: Int64): DateTime
     
     /**
-    * Adds specified nanoseconds to DateTime instance, returns a new DateTime to represent the new DateTime.
-    *
-    * @param n the number of nanosecond.
-    * @return a new DateTime instance after adding @p n nanoseconds.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999]
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of nanoseconds to this DateTime
+     * @param n the number of nanoseconds to add (can be negative to subtract)
+     * @returns a new DateTime with the specified nanoseconds added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func addNanoseconds(n: Int64): DateTime
     
     /**
-    * Override the + operator, adds with a Duration instance and
-    * returns a new DateTime instance.
-    *
-    * @param r a duration instance.
-    * @return a new DateTime after adding @p r.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999]
-    */
-    @!APILevel[since: "22"]
+     * @description Adds a Duration to this DateTime
+     * @param r the Duration to add
+     * @returns a new DateTime with the Duration added
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func +(r: Duration): DateTime
     
     /**
-    * Override the - operator, subtracts with a Duration instance and
-    * returns a new DateTime instance.
-    *
-    * @param r a duration instance.
-    * @return a new DateTime after subtracting @p r.
-    *
-    * @throws ArithmeticException if result of year is outside [-999,999,999, 999,999,999]
-    */
-    @!APILevel[since: "22"]
+     * @description Subtracts a Duration from this DateTime
+     * @param r the Duration to subtract
+     * @returns a new DateTime with the Duration subtracted
+     * @throws ArithmeticException when the result exceeds the representable range of DateTime
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func -(r: Duration): DateTime
     
     /**
-    * Override the - operator, subtract another DateTime instance and
-    * returns a Duration instance.
-    * A return value of negative indicates that the time subtracted is later than this time,
-    * otherwise is equal to or earlier than this time.
-    *
-    * @param r another time.
-    * @return a duration as a result of this - @p r.
-    */
-    @!APILevel[since: "22"]
+     * @description Subtracts another DateTime from this DateTime to get the Duration difference
+     * @param r the DateTime to subtract
+     * @returns the Duration difference between this DateTime and the other DateTime
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(r: DateTime): Duration
     
     /**
-    * Override the == operator, determines whether this DateTime equals another DateTime.
-    *
-    * @param r another DateTime to be compared to.
-    * @return true if the DateTime is equal to @p r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DateTime is equal to another DateTime
+     * @param r the DateTime to compare with
+     * @returns true if both represent the same moment in time, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: DateTime): Bool
     
     /**
-    * Override the != operator, determines whether this time is not equal another DateTime.
-    *
-    * @param r another DateTime to be compared to.
-    * @return true if the DateTime is not equal to @p r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DateTime is not equal to another DateTime
+     * @param r the DateTime to compare with
+     * @returns true if they represent different moments in time, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: DateTime): Bool
     
     /**
-    * Override the >= operator, determines whether this time is later than or equal to another DateTime.
-    *
-    * @param r another DateTime to be compared to.
-    * @return true if the DateTime is later than or equal to @p r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DateTime is greater than or equal to another DateTime
+     * @param r the DateTime to compare with
+     * @returns true if this DateTime is later than or equal to the other DateTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func >=(r: DateTime): Bool
     
     /**
-    * Override the > operator, determines whether this time is later than another time.
-    *
-    * @param r another DateTime to be compared to.
-    * @return true if the time is later than @p r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DateTime is greater than another DateTime
+     * @param r the DateTime to compare with
+     * @returns true if this DateTime is later than the other DateTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func >(r: DateTime): Bool
     
     /**
-    * Override the <= operator, determines whether this time is earlier than or equal to another DateTime.
-    *
-    * @param r another DateTime to be compared to.
-    * @return true if the DateTime is earlier than or equal to @p r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DateTime is less than or equal to another DateTime
+     * @param r the DateTime to compare with
+     * @returns true if this DateTime is earlier than or equal to the other DateTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func <=(r: DateTime): Bool
     
     /**
-    * Override the < operator, determines whether this time is earlier than another DateTime.
-    *
-    * @param r another DateTime to be compared to.
-    * @return true if the DateTime is earlier than @p r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DateTime is less than another DateTime
+     * @param r the DateTime to compare with
+     * @returns true if this DateTime is earlier than the other DateTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func <(r: DateTime): Bool
     
     /**
-    * Compare the relationship between two instance of DateTime.
-    *
-    * @param rhs Instance of DateTime compared with this.
-    * @return Value indicating the relationship between two instance of DateTime.
-    */
-    @!APILevel[since: "22"]
-    public func compare(rhs: DateTime): Ordering
+     * @description Compares this DateTime with another DateTime
+     * @param other the DateTime to compare with
+     * @returns Ordering.LT if this is earlier, Ordering.GT if this is later, Ordering.EQ if equal
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: DateTime): Ordering
 }
 
 /**
-* The TimeParseException class
-*/
-@!APILevel[since: "22"]
+ * @description Exception thrown when datetime parsing fails
+ */
+@!APILevel[
+    since: "22"
+]
 public class TimeParseException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new TimeParseException with no message
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new TimeParseException with the specified error message
+     * @param message the error message describing the parsing failure
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A class providing predefined date-time format patterns and formatting capabilities
+ */
+@!APILevel[
+    since: "22"
+]
 public class DateTimeFormat {
-    @!APILevel[since: "22"]
+    /**
+     * @description RFC 1123 date-time format pattern
+     * @returns the RFC 1123 format string
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const RFC1123: String = "www, dd MMM yyyy HH:mm:ss z"
     
-    @!APILevel[since: "22"]
+    /**
+     * @description RFC 3339 date-time format pattern (ISO 8601 profile)
+     * @returns the RFC 3339 format string
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const RFC3339: String = "yyyy-MM-ddTHH:mm:ssOOOO"
     
-    @!APILevel[since: "22"]
+    /**
+     * @description RFC 822 date-time format pattern
+     * @returns the RFC 822 format string
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const RFC822: String = "ww dd MMM yy HH:mm:ss z"
     
-    @!APILevel[since: "22"]
+    /**
+     * @description RFC 850 date-time format pattern
+     * @returns the RFC 850 format string
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const RFC850: String = "wwww, dd-MMM-yy HH:mm:ss z"
     
-    @Deprecated["Use member function `init(formatString: String)` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a DateTimeFormat from a format string
+     * @param format the format string
+     * @returns a DateTimeFormat object
+     * @throws IllegalArgumentException when the format string is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(format: String): DateTimeFormat
     
-    @Deprecated["The prop is deprecated, no substitutions."]
-    @!APILevel[since: "22"]
+    /**
+     * @description The format string property
+     * @returns the format string
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop format: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Enumeration representing days of the week from Sunday to Saturday
+ */
+@!APILevel[
+    since: "22"
+]
 public enum DayOfWeek <: ToString & Equatable<DayOfWeek> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Sunday - the first day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Sunday |
-    @!APILevel[since: "22"]
+    /**
+     * @description Monday - the second day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Monday |
-    @!APILevel[since: "22"]
+    /**
+     * @description Tuesday - the third day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Tuesday |
-    @!APILevel[since: "22"]
+    /**
+     * @description Wednesday - the fourth day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Wednesday |
-    @!APILevel[since: "22"]
+    /**
+     * @description Thursday - the fifth day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Thursday |
-    @!APILevel[since: "22"]
+    /**
+     * @description Friday - the sixth day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Friday |
-    @!APILevel[since: "22"]
+    /**
+     * @description Saturday - the seventh day of the week
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Saturday
     /**
-    * Generates a instance of DayOfWeek according to a Int64 value.
-    *
-    * @param wday a number represents a DayOfWeek.
-    * @return a Result if success to generate a DayOfWeek based on wday, otherwise Failure.
-    *
-    * @throws IllegalArgumentException if dayOfWeek is out of range [0, 6]
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a DayOfWeek from an integer value
+     * @param dayOfWeek the integer value representing a day of week (0=Sunday, 1=Monday, ..., 6=Saturday)
+     * @returns the corresponding DayOfWeek enum value
+     * @throws IllegalArgumentException when dayOfWeek is not in the range 0-6
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(dayOfWeek: Int64): DayOfWeek
     
     /**
-    * Return Int64 value of the DayOfWeek instance.
-    *
-    * @return a number represents the DayOfWeek.
-    *
-    * @since 0.18.4
-    */
-    @Deprecated[message: "Use member function `public func toInteger(): Int64` instead."]
-    @!APILevel[since: "22"]
+     * @description Returns the integer value of this DayOfWeek
+     * @returns the integer value (0=Sunday, 1=Monday, ..., 6=Saturday)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func value(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the integer value of this DayOfWeek
+     * @returns the integer value (0=Sunday, 1=Monday, ..., 6=Saturday)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toInteger(): Int64
     
     /**
-    * Return a String that represents the DayOfWeek, for example, Friday.
-    *
-    * @return a DayOfWeek name.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the string representation of this DayOfWeek
+     * @returns the full name of the day (e.g., "Sunday", "Monday")
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
     /**
-    * Override the == operator, determines whether this DayOfWeek equals another.
-    *
-    * @param r another DayOfWeek.
-    * @return true if the DayOfWeek is equal to @p r, otherwise false.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DayOfWeek is equal to another DayOfWeek
+     * @param r the DayOfWeek to compare with
+     * @returns true if both represent the same day of week, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: DayOfWeek): Bool
     
     /**
-    * Override the != operator, determines whether this DayOfWeek is not equal to another.
-    *
-    * @param r another DayOfWeek.
-    * @return true if the DayOfWeek is not equal to @p r, otherwise false.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this DayOfWeek is not equal to another DayOfWeek
+     * @param r the DayOfWeek to compare with
+     * @returns true if they represent different days of week, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: DayOfWeek): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds the specified number of days to this DayOfWeek
+     * @param n the number of days to add (can be negative)
+     * @returns the resulting DayOfWeek after adding n days
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func +(n: Int64): DayOfWeek
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Subtracts the specified number of days from this DayOfWeek
+     * @param n the number of days to subtract (can be negative)
+     * @returns the resulting DayOfWeek after subtracting n days
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(n: Int64): DayOfWeek
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Enumeration representing months of the year from January to December
+ */
+@!APILevel[
+    since: "22"
+]
 public enum Month <: ToString & Equatable<Month> {
-    @!APILevel[since: "22"]
+    /**
+     * @description January - the first month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     January |
-    @!APILevel[since: "22"]
+    /**
+     * @description February - the second month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     February |
-    @!APILevel[since: "22"]
+    /**
+     * @description March - the third month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     March |
-    @!APILevel[since: "22"]
+    /**
+     * @description April - the fourth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     April |
-    @!APILevel[since: "22"]
+    /**
+     * @description May - the fifth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     May |
-    @!APILevel[since: "22"]
+    /**
+     * @description June - the sixth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     June |
-    @!APILevel[since: "22"]
+    /**
+     * @description July - the seventh month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     July |
-    @!APILevel[since: "22"]
+    /**
+     * @description August - the eighth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     August |
-    @!APILevel[since: "22"]
+    /**
+     * @description September - the ninth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     September |
-    @!APILevel[since: "22"]
+    /**
+     * @description October - the tenth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     October |
-    @!APILevel[since: "22"]
+    /**
+     * @description November - the eleventh month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     November |
-    @!APILevel[since: "22"]
+    /**
+     * @description December - the twelfth month of the year
+     */
+    @!APILevel[
+        since: "22"
+    ]
     December
     /**
-    * Generates a instance of Month according to a Int64 value.
-    *
-    * @param mon a number represents a Month.
-    * @return a Result if success to generate a Month based on mon, otherwise Failure.
-    *
-    * @throws IllegalArgumentException if mon is out of range [1, 12]
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a Month from an integer value
+     * @param mon the integer value representing a month (1=January, 2=February, ..., 12=December)
+     * @returns the corresponding Month enum value
+     * @throws IllegalArgumentException when mon is not in the range 1-12
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(mon: Int64): Month
     
     /**
-    * Return Int64 value of the Month instance.
-    *
-    * @return a nunber represents the Month.
-    *
-    * @since 0.18.4
-    */
-    @Deprecated[message: "Use member function `public func toInteger(): Int64` instead."]
-    @!APILevel[since: "22"]
+     * @description Returns the integer value of this Month
+     * @returns the integer value (1=January, 2=February, ..., 12=December)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func value(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the integer value of this Month
+     * @returns the integer value (1=January, 2=February, ..., 12=December)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toInteger(): Int64
     
     /**
-    * Return a String that represents the Month, for example, June.
-    *
-    * @return a month name.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the string representation of this Month
+     * @returns the full name of the month (e.g., "January", "February")
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
     /**
-    * Override the + operator.
-    *
-    * @param n delta.
-    * @return a new Month after adding @p n to this Month.
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified number of months to this Month
+     * @param n the number of months to add (can be negative)
+     * @returns the resulting Month after adding n months
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func +(n: Int64): Month
     
     /**
-    * Override the - operator.
-    *
-    * @param n delta.
-    * @return a new Month after subtracting @p n from this Month.
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Subtracts the specified number of months from this Month
+     * @param n the number of months to subtract (can be negative)
+     * @returns the resulting Month after subtracting n months
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(n: Int64): Month
     
     /**
-    * Override the == operator, determines whether this Month equals another.
-    *
-    * @param r another Month.
-    * @return true if the Month is equal to @p r, otherwise false
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Month is equal to another Month
+     * @param r the Month to compare with
+     * @returns true if both represent the same month, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: Month): Bool
     
     /**
-    * Override the != operator, determines whether this Month is not equal to another.
-    *
-    * @param r another Month.
-    * @return true if the Month is not equal to @p r, otherwise false.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Month is not equal to another Month
+     * @param r the Month to compare with
+     * @returns true if they represent different months, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: Month): Bool
 }
 
 /**
-* MonoTime is a kind of clock to measure the elapsed time, Like a constantly running stopwatch, independent of any other clock time.
-*
-* MonoTimes created by 'now' are always no less than any previously measured MonoTime created in the same way, and are
-* commonly used in BenchMark or task queues on a first come first served basis.
-*/
-@!APILevel[since: "22"]
+ * @description A monotonic time structure used for measuring elapsed time intervals, independent of system clock changes
+ */
+@!APILevel[
+    since: "22"
+]
 public struct MonoTime <: Hashable & Comparable<MonoTime> {
     /**
-    * Obtain the elapsed time from the start of the system to current.
-    *
-    * @return a MonoTime corresponding to current.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the current monotonic time
+     * @returns a MonoTime representing the current moment from system start
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func now(): MonoTime
     
     /**
-    * Override operator `+`, adds a Duration and returns a new MonoTime instance.
-    *
-    * @param r duration to add.
-    * @return a MonoTime based on this MonoTime with the specified @r added.
-    */
-    @!APILevel[since: "22"]
+     * @description Adds a Duration to this MonoTime
+     * @param r the Duration to add
+     * @returns a new MonoTime with the Duration added
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func +(r: Duration): MonoTime
     
     /**
-    * Override operator `-`, subtracts a Duration and returns a new MonoTime instance.
-    *
-    * @param r duration to subtract.
-    * @return a MonoTime based on this MonoTime with the specified @r subtracted.
-    */
-    @!APILevel[since: "22"]
+     * @description Subtracts a Duration from this MonoTime
+     * @param r the Duration to subtract
+     * @returns a new MonoTime with the Duration subtracted
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(r: Duration): MonoTime
     
     /**
-    * Override operator `-`, subtracts a MonoTime and returns a Duration.
-    *
-    * @param r MonoTime to subtract.
-    * @return a MonoTime based on this MonoTime with the specified @r subtracted.
-    */
-    @!APILevel[since: "22"]
+     * @description Subtracts another MonoTime from this MonoTime to get the Duration difference
+     * @param r the MonoTime to subtract
+     * @returns the Duration difference between this MonoTime and the other MonoTime
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(r: MonoTime): Duration
     
     /**
-    * Override operator `==`, compares whether this MonoTime is equal to another MonoTime.
-    *
-    * @param r another MonoTime to be compared to.
-    * @return true if the elapsed time of this MonoTime is equal to that of @r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this MonoTime is equal to another MonoTime
+     * @param r the MonoTime to compare with
+     * @returns true if both represent the same monotonic time, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: MonoTime): Bool
     
     /**
-    * Override operator `!=`, compares whether this MonoTime is not equal to another MonoTime.
-    *
-    * @param r another MonoTime to be compared to.
-    * @return true if the elapsed time of this MonoTime is not equal to that of @r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this MonoTime is not equal to another MonoTime
+     * @param r the MonoTime to compare with
+     * @returns true if they represent different monotonic times, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: MonoTime): Bool
     
     /**
-    * Override operator `>=`, compares whether this MonoTime is greater than or equal to another MonoTime.
-    *
-    * @param r another MonoTime to be compared to.
-    * @return true if the elapsed time of this MonoTime is greater than or equal to that of @r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this MonoTime is greater than or equal to another MonoTime
+     * @param r the MonoTime to compare with
+     * @returns true if this MonoTime is later than or equal to the other MonoTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func >=(r: MonoTime): Bool
     
     /**
-    * Override operator `>`, compares whether this MonoTime is greater than another MonoTime.
-    *
-    * @param r another MonoTime to be compared to.
-    * @return true if the elapsed time of this MonoTime is greater than that of @r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this MonoTime is greater than another MonoTime
+     * @param r the MonoTime to compare with
+     * @returns true if this MonoTime is later than the other MonoTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func >(r: MonoTime): Bool
     
     /**
-    * Override operator `<=`, compares whether this MonoTime is less than or equal to another MonoTime.
-    *
-    * @param r another MonoTime to be compared to.
-    * @return true if the elapsed time of this MonoTime is less than or equal to that of @r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this MonoTime is less than or equal to another MonoTime
+     * @param r the MonoTime to compare with
+     * @returns true if this MonoTime is earlier than or equal to the other MonoTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func <=(r: MonoTime): Bool
     
     /**
-    * Override operator `<`, compares whether this MonoTime is less than or equal to another MonoTime.
-    *
-    * @param r another MonoTime to be compared to.
-    * @return true if the elapsed time of this MonoTime is less than that of @r, otherwise false.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this MonoTime is less than another MonoTime
+     * @param r the MonoTime to compare with
+     * @returns true if this MonoTime is earlier than the other MonoTime, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func <(r: MonoTime): Bool
     
     /**
-    * Compare the order between two instance of MonoTime.
-    *
-    * @param rhs instance of MonoTime compared with this.
-    * @return a Ordering value indicating the relationship between two instance of MonoTime.
-    */
-    @!APILevel[since: "22"]
-    public func compare(rhs: MonoTime): Ordering
+     * @description Compares this MonoTime with another MonoTime
+     * @param other the MonoTime to compare with
+     * @returns Ordering.LT if this is earlier, Ordering.GT if this is later, Ordering.EQ if equal
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: MonoTime): Ordering
     
     /**
-    * Returns hash value of MonoTime instance
-    *
-    * @return the hash value of this MonoTime.
-    */
-    @!APILevel[since: "22"]
+     * @description Calculates the hash code for this MonoTime
+     * @returns the hash code value for this MonoTime
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 /**
-* The class TimeZone implements the basic functions of the time zone.
-* The time zone data comes from the IANA time zone database file installed in the operating system.
-* The local time zone is determined by the environment variable TZ.
-* If the TZ does not exist, it is determined by the time zone stored in the /etc/localtime file.
-* Otherwise, the host is regarded as the UTC time zone.
-*
-* @since 0.19.3
-*/
-@!APILevel[since: "22"]
+ * @description A class representing time zones with offset and transition information, supporting IANA time zone database
+ */
+@!APILevel[
+    since: "22"
+]
 public class TimeZone <: ToString & Equatable<TimeZone> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The UTC time zone constant
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let UTC: TimeZone = TimeZone("UTC", 0)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The local system time zone constant
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let Local: TimeZone = initLocal()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The time zone identifier property
+     * @returns the string identifier of this time zone
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop id: String
     
     /**
-    * Constructs a fixed TimeZone with given zone id and offset.
-    *
-    * @param id zone id.
-    * @param offset zone offset.
-    *
-    * @throws IllegalArgumentException if TimeZone id is empty.
-    * @since 0.19.3
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a TimeZone with the specified identifier and offset
+     * @param id the time zone identifier string
+     * @param offset the time zone offset as a Duration from UTC
+     * @throws IllegalArgumentException when the time zone id is invalid or offset is out of range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(id: String, offset: Duration)
     
     /**
-    * Loads a TimeZone with the given id.
-    * If the id is "UTC", it returns TimeZone.UTC. If the id is "Local", it returns TimeZone.Local.
-    * Otherwise, the id is considered the TimeZone id corresponding to the file in the IANA
-    * If the CJ_TZPATH environment variable exists, obtain the path from the environment variable first.
-    * time zone database, such as "Asia/Shanghai".
-    *
-    * @param id zone id.
-    * @return the TimeZone if success, otherwise an Exception.
-    *
-    * @throws IllegalArgumentException if TimeZone id is illegal or empty.
-    * @throws InvalidDataException if the timezone data cannot be found when a valid environment variable is set
-    * @throws InvalidDataException if the TimeZone file fails to be parsed.
-    * @throws IllegalMemoryException if failed to call loadTimeZone(cjvm).
-    *
-    * @since 0.19.3
-    */
-    @!APILevel[since: "22"]
+     * @description Loads a TimeZone from the system time zone database
+     * @param id the time zone identifier to load
+     * @returns the TimeZone object for the specified identifier
+     * @throws InvalidDataException when time zone data is corrupted
+     * @throws IllegalArgumentException when the time zone identifier is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func load(id: String): TimeZone
     
     /**
-    * Obtains the TimeZone object based on the given root path and time zone id.
-    * This function searches for the timezone data named <id> from the given root path in turn until it is found.
-    
-    * @param tzpaths Set of root paths for timezone datas.
-    * @param id zone id.
-    * @return the TimeZone if success, otherwise an Exception.
-    *
-    * @throws IllegalArgumentException if TimeZone id is empty.
-    * @throws InvalidDataException if the timezone data cannot be found.
-    * @throws InvalidDataException if the TimeZone file fails to be parsed.
-    * @throws IllegalMemoryException if failed to call loadTimeZone(cjvm).
-    *
-    * @since 0.35.7
-    */
-    @!APILevel[since: "22"]
+     * @description Loads a TimeZone from specified time zone database paths
+     * @param id the time zone identifier to load
+     * @param tzpaths array of file paths to search for time zone data
+     * @returns the TimeZone object for the specified identifier
+     * @throws InvalidDataException when time zone data is corrupted
+     * @throws IllegalArgumentException when the time zone identifier is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func loadFromPaths(id: String, tzpaths: Array<String>): TimeZone
     
     /**
-    * Loads a TimeZone with the given id initialized from the IANA Time LocalTime database format data.
-    *
-    * @param id zone id.
-    * @param data IANA Time LocalTime database format data.
-    * @return the TimeZone if success, otherwise an Exception.
-    *
-    * @throws IllegalArgumentException if id is empty.
-    * @throws InvalidDataException if the TimeZone data fails to be parsed.
-    * @throws IllegalMemoryException if failed to call runtimeNow(cjvm).
-    * @since 0.19.3
-    */
-    @!APILevel[since: "22"]
+     * @description Loads a TimeZone from raw time zone data bytes
+     * @param id the time zone identifier for the loaded zone
+     * @param data the raw time zone data bytes
+     * @returns the TimeZone object created from the data
+     * @throws InvalidDataException when time zone data is corrupted
+     * @throws IllegalArgumentException when the time zone identifier is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func loadFromTZData(id: String, data: Array<UInt8>): TimeZone
     
     /**
-    * Return a String that represents the time zone, actually time zone id.
-    *
-    * @return time zone id.
-    *
-    * @since 0.19.3
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the string representation of this TimeZone
+     * @returns the time zone identifier string
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
     /**
-    * Override the == operator, determines whether this TimeZone equals another TimeZone.
-    *
-    * @param r another TimeZone.
-    * @return true if the TimeZone is equal to @p r, otherwise false.
-    *
-    * @since 0.38.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this TimeZone is equal to another TimeZone
+     * @param r the TimeZone to compare with
+     * @returns true if both represent the same time zone, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: TimeZone): Bool
     
     /**
-    * Override the == operator, determines whether this TimeZone is not equal another TimeZone.
-    *
-    * @param r another TimeZone.
-    * @return true if the TimeZone is not equal to @p r, otherwise false.
-    *
-    * @since 0.38.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this TimeZone is not equal to another TimeZone
+     * @param r the TimeZone to compare with
+     * @returns true if they represent different time zones, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: TimeZone): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when time-related data is invalid or corrupted
+ */
+@!APILevel[
+    since: "22"
+]
 public class InvalidDataException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new InvalidDataException with no message
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new InvalidDataException with the specified error message
+     * @param message the error message describing the invalid data condition
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
-

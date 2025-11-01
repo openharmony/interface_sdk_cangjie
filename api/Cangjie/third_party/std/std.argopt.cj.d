@@ -1,194 +1,249 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.argopt
 import std.collection.*
 
 
 /**
-* This is a library for ArgOpt class.
-* This module helps scripts parse command-line arguments,
-* And parse functions (including special meanings of parameters.
-* in the form of "-" and "--") , Supported by the GNU software.
-* This class uses some methods of String and Rune classes for implementation.
-*
-* @since 0.17.4
-*/
-@Deprecated[message: "Use global function `public func parseArguments(args: Array<String>, specs: Array<ArgumentSpec>): ParsedArguments` instead."]
-@!APILevel[since: "22"]
+ * @description A command-line argument parsing class. Use the global parseArguments function instead for new code.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArgOpt {
     /**
-    * Constructor one parameters.
-    * For example : shortArgFormat ="abc:d:".
-    * indicates that the first letter before the colon can be parsed. that's c and d.
-    *
-    * @see init(args: Array<String>, shortArgFormat: String, longArgList:Array<String>.
-    * @param shortArgFormat Short parameter.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Constructor with short argument format specification
+     * @param shortArgFormat - Short parameter format string where characters followed by ':' expect values (e.g., "abc:d:" means 'c' and 'd' expect values)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(shortArgFormat: String)
     
     /**
-    * Constructor one parameters.
-    * For example: longArgList = {"testA=", "testB"}, args = {"--testA=foo","--test=bar"}
-    * Because of the r'=' exists after testA in longArgList. you can find the value of.
-    * testA in args. Conversely, no value found.
-    *
-    * @see init(args: Array<String>, shortArgFormat: String, longArgList: Array<String>).
-    * @param longArgList Long parameter set.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Constructor with long argument specification
+     * @param longArgList - Array of long parameter names where names ending with '=' expect values (e.g., ["testA=", "testB"] means testA expects a value)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(longArgList: Array<String>)
     
     /**
-    * Constructor two parameters.
-    * For example, see the context.
-    *
-    * @see init(shortArgFormat: String).
-    * @see init(longArgList: Array<String>).
-    * @see init(args: Array<String>, shortArgFormat: String, longArgList: Array<String>).
-    * @param longArgList Long parameter set.
-    * @param shortArgFormat Short parameter.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Constructor with both short and long argument specifications
+     * @param shortArgFormat - Short parameter format string
+     * @param longArgList - Array of long parameter names
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(shortArgFormat: String, longArgList: Array<String>)
     
     /**
-    * This constructor is parsed using the ParserHelper class.
-    * which implements the overall round robin scheduling.
-    * The split parameters are placed in ParserHelper.argMap.
-    * The indexes that do not parse parameters are placed in ParserHelper.argsList.
-    * For example No.1: shortArgFormat="abc:d:", args= {"-afoo", "-bofo", "-cbar", "-d"}.
-    * Because indicates that the first letter before the colon can be parsed.
-    * Keys '-a', '-b', '-c', and '-d' have been saved in the key of ParserHelper.argMap.
-    * so the value of r'c' is "bar", the value of r'd' is "".
-    * For example No.2: longArgList= {"testA=", "testB"}, args= {"--testA=foo", "--testB=bar"}.
-    * Because of the r'=' exists after testA in longArgList.
-    * you can find the value of testA in args. Conversely, no value found.
-    * Keys 'testA' and 'testB' have been parsed into the key of ParserHelper.argMap.
-    * However, The values of keys 'testA' and 'testB' depend on the parametric form of 'longArgList'.
-    * For example No.3: longArgList= {"testA=", "testB"},args= {"--testA", "foo", "--testB", "bar"}.
-    * Because of the r'=' exists after testA in longArgList.
-    * But, if '--testA' in 'args' does not have a value (value after r'='), the next value of '--testA' must be obtained.
-    * In addition, the prefix of this next value cannot be '--' or r'-'.
-    * In the same way, Keys 'testA' and 'testB' have been parsed into the key of ParserHelper.argMap.
-    *
-    * @see Arguments.init().
-    * @see Arguments.getDoubleSign().
-    * @see Arguments.getSingleSign().
-    * @see Arguments.setMyArgs(String).
-    * @see ParserHelper.init(Arguments).
-    * @see ParserHelper.returnTupleFun(String).
-    * @see ParserHelper.isArrayEmptyFun(Array<String>).
-    * @param longArgList Long parameter set.
-    * @param shortArgFormat Short parameter.
-    * @param args setting Default parameters of myArgs.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Main constructor that parses arguments immediately using both short and long format specifications
+     * @param args - Command-line arguments to parse
+     * @param shortArgFormat - Short parameter format string
+     * @param longArgList - Array of long parameter names
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(args: Array<String>, shortArgFormat: String, longArgList: Array<String>)
     
     /**
-    * Getting the value of a parameter.
-    * For example one: getArg("a") or getArg("-a").
-    * The prefix of the input parameter can be without r'-' or can contain r'-'.
-    * which does not affect the returned value.
-    * For example two: getArg("--test").
-    *
-    * @param arg Target key.
-    * @return return the option type corresponding to the parameter.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Retrieves the value of a parsed argument
+     * @param arg - Argument name (with or without '-' prefix)
+     * @returns Option containing the argument value if found, None otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getArg(arg: String): Option<String>
     
     /**
-    * Getting the are no parsed parameters.
-    *
-    * @return if there are no unresolved parameters, returns Arguments.NULL.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Returns arguments that were not parsed as options
+     * @returns Array of unparsed argument strings
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getUnparseArgs(): Array<String>
     
     /**
-    * Getting all parsed parameters and values.
-    *
-    * @return key-value pair. The header of the key value must contain r'-' or '--'.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Returns all parsed arguments as key-value pairs
+     * @returns HashMap with argument names as keys and their values as values
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getArgumentsMap(): HashMap<String, String>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Enumeration specifying whether command-line arguments require values
+ */
+@!APILevel[
+    since: "22"
+]
 public enum ArgumentMode <: ToString & Equatable<ArgumentMode> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Option requires no value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     NoValue |
-    @!APILevel[since: "22"]
+    /**
+     * @description Option requires a value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     RequiredValue |
-    @!APILevel[since: "22"]
+    /**
+     * @description Option accepts an optional value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     OptionalValue
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the ArgumentMode to its string representation
+     * @returns String representation of the mode
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: ArgumentMode): Bool
+    /**
+     * @description Compares this ArgumentMode with another for equality
+     * @param other - The ArgumentMode to compare with
+     * @returns True if both modes are equal, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: ArgumentMode): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Specification for different types of command-line arguments including short options, long options, and their combinations
+ */
+@!APILevel[
+    since: "22"
+]
 public enum ArgumentSpec {
-    @!APILevel[since: "22"]
+    /**
+     * @description Short option specification with a single character and argument mode
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Short(Rune, ArgumentMode) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Short option specification with callback action
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Short(Rune, ArgumentMode, (String) -> Unit) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Long option specification with name and argument mode
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Long(String, ArgumentMode) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Long option specification with callback action
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Long(String, ArgumentMode, (String) -> Unit) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Full option specification with both long name and short character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Full(String, Rune, ArgumentMode) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Full option specification with callback action
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Full(String, Rune, ArgumentMode, (String) -> Unit) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Specification for handling non-option arguments with a callback
+     */
+    @!APILevel[
+        since: "22"
+    ]
     NonOptions((Array<String>) -> Unit)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Structure containing the results of argument parsing
+ */
+@!APILevel[
+    since: "22"
+]
 public struct ParsedArguments {
-    @!APILevel[since: "22"]
+    /**
+     * @description Map of parsed options with their names as keys and values as values
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop options: ReadOnlyMap<String, String>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Array of non-option arguments (positional arguments)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop nonOptions: Array<String>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when argument parsing fails
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArgumentParseException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Default constructor with no message
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructor with error message
+     * @param message - Error message describing the parsing failure
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Parses command-line arguments according to the provided specifications
+ * @param args - Array of command-line argument strings to parse
+ * @param specs - Array of argument specifications defining expected options
+ * @returns ParsedArguments containing parsed options and non-option arguments
+ * @throws ArgumentParseException when parsing fails due to invalid arguments or missing required values
+ * @throws IllegalArgumentException when defining ArgumentSpec with the same name
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func parseArguments(args: Array<String>, specs: Array<ArgumentSpec>): ParsedArguments
 

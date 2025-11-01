@@ -13,88 +13,78 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.resource
-import ohos.ffi.*
-import std.collection.*
-import ohos.base.*
-import ohos.labels.*
-import std.deriving.Derive
 
-import ohos.encoding.json.*
+import ohos.base.{Length, ResourceColor, ResourceStr}
 import ohos.labels.APILevel
 
 /**
-* Contains resource descriptor information.
-*
-* @relation export interface Resource
-*/
+ * Contains resource descriptor information.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Global.ResourceManager"
 ]
 public class AppResource <: Length & ResourceColor & ResourceStr {
     /**
-    * bundle name in hap
-    *
-    * @relation bundleName: string
-    */
+     * bundle name in hap
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let bundleName: String
-    
+    public var bundleName: String
+
     /**
-    * module name in hap
-    *
-    * @relation moduleName: string
-    */
+     * module name in hap
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let moduleName: String
-    
+    public var moduleName: String
+
     /**
-    * resource id in hap
-    *
-    * @relation id: number
-    */
+     * resource id in hap
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let id: UInt32
-    
+    public var id: UInt32
+
     /**
-    * Set params.
-    *
-    * @relation params?: any[]
-    */
+     * Set params.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let params: ?Array<Any>
-    
+    public var params: ?Array<Any>
+
     /**
-    * Set type.
-    *
-    * @relation type?: number
-    */
+     * Set type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
-    public let resType: ?Int32
-    
+    public var resType: ?Int32
+
     /**
-    * AppResource constructor.
-    */
+     * AppResource constructor.
+     *
+     * Create an AppResource instance with specified parameters.
+     * @param { String } bundleName - Bundle name in hap.
+     * @param { String } moduleName - Module name in hap.
+     * @param { UInt32 } id - Resource id in hap.
+     * @param { ?Array<Any> } [params] - Set params. Default is None.
+     * @param { ?Int32 } [resType] - Set type. Default is None.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Global.ResourceManager"
     ]
     public init(
@@ -105,5 +95,3 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
         resType!: ?Int32 = None
     )
 }
-
-

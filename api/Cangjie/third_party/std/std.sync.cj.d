@@ -1,896 +1,1628 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.sync
 
 import std.time.MonoTime
 import std.time.DateTime
 
 /**
-* Don't edit this, or the order should be the same as C's atomic memory_order.
-*/
-@Deprecated
-@!APILevel[since: "22"]
+ * @description Memory ordering model.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum MemoryOrder {
-    @!APILevel[since: "22"]
+    /**
+     * @description Strongest memory ordering; sequentially consistent across threads.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SeqCst
 }
 
-@Deprecated
-@!APILevel[since: "22"]
+/**
+ * @description Default memory ordering.
+ */
+@!APILevel[
+    since: "22"
+]
 public let DefaultMemoryOrder: MemoryOrder = MemoryOrder.SeqCst
 
-// NOTE:// The APIs of atomic types should have a naming parameter with a default argument,// like `atomicInt8.load(memoryOrder!: MemoryOrder.SeqCst)`.// However, most APIs are used with the default argument that will be obtained by// an extra function and passed to the API call.// The default argument construction incurs a huge performance overhead compared to the API call.// So, we split the API with two methods.//   - A method without the order parameter//   - A method with a naming parameter
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class AtomicInt8 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 8-bit signed integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: Int8)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): Int8
     
-    @Deprecated[message: "Use `public func load(): Int8` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): Int8
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int8): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: Int8): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int8, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int8): Int8
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: Int8): Int8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int8, memoryOrder!: MemoryOrder): Int8
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int8, new: Int8): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: Int8, new: Int8): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int8, new: Int8, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int8): Int8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAdd(val: Int8): Int8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int8, memoryOrder!: MemoryOrder): Int8
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int8): Int8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchSub(val: Int8): Int8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int8, memoryOrder!: MemoryOrder): Int8
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int8): Int8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAnd(val: Int8): Int8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int8, memoryOrder!: MemoryOrder): Int8
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int8): Int8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchOr(val: Int8): Int8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int8, memoryOrder!: MemoryOrder): Int8
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int8): Int8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchXor(val: Int8): Int8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int8, memoryOrder!: MemoryOrder): Int8
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An atomic 16-bit signed integer.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AtomicInt16 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 16-bit signed integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: Int16)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func load(): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): Int16
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int16): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: Int16): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int16, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int16): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: Int16): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int16, memoryOrder!: MemoryOrder): Int16
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int16, new: Int16): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: Int16, new: Int16): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int16, new: Int16, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int16): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAdd(val: Int16): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int16, memoryOrder!: MemoryOrder): Int16
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int16): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchSub(val: Int16): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int16, memoryOrder!: MemoryOrder): Int16
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int16): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAnd(val: Int16): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int16, memoryOrder!: MemoryOrder): Int16
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int16): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchOr(val: Int16): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int16, memoryOrder!: MemoryOrder): Int16
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int16): Int16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchXor(val: Int16): Int16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int16, memoryOrder!: MemoryOrder): Int16
 }
 
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class AtomicInt32 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 32-bit signed integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: Int32)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func load(): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): Int32
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int32): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: Int32): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int32, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int32): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: Int32): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int32, memoryOrder!: MemoryOrder): Int32
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int32, new: Int32): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: Int32, new: Int32): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int32, new: Int32, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int32): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAdd(val: Int32): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int32, memoryOrder!: MemoryOrder): Int32
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int32): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func fetchSub(val: Int32): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int32, memoryOrder!: MemoryOrder): Int32
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int32): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAnd(val: Int32): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int32, memoryOrder!: MemoryOrder): Int32
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int32): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func fetchOr(val: Int32): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int32, memoryOrder!: MemoryOrder): Int32
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int32): Int32
     
     @Frozen
-@Deprecated[message: "Use `public func fetchXor(val: Int32): Int32` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int32, memoryOrder!: MemoryOrder): Int32
 }
 
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class AtomicInt64 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 64-bit signed integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: Int64)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func load(): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): Int64
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int64): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: Int64): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: Int64, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int64): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: Int64): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Int64, memoryOrder!: MemoryOrder): Int64
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int64, new: Int64): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: Int64, new: Int64): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Int64, new: Int64, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int64): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAdd(val: Int64): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: Int64, memoryOrder!: MemoryOrder): Int64
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int64): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func fetchSub(val: Int64): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: Int64, memoryOrder!: MemoryOrder): Int64
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int64): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAnd(val: Int64): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: Int64, memoryOrder!: MemoryOrder): Int64
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int64): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func fetchOr(val: Int64): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: Int64, memoryOrder!: MemoryOrder): Int64
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int64): Int64
     
     @Frozen
-@Deprecated[message: "Use `public func fetchXor(val: Int64): Int64` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: Int64, memoryOrder!: MemoryOrder): Int64
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An atomic 8-bit unsigned integer.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AtomicUInt8 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 8-bit unsigned integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: UInt8)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func load(): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): UInt8
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt8): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: UInt8): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt8, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt8): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: UInt8): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt8, memoryOrder!: MemoryOrder): UInt8
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt8, new: UInt8): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: UInt8, new: UInt8): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt8, new: UInt8, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt8): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAdd(val: UInt8): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt8, memoryOrder!: MemoryOrder): UInt8
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt8): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchSub(val: UInt8): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt8, memoryOrder!: MemoryOrder): UInt8
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt8): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAnd(val: UInt8): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt8, memoryOrder!: MemoryOrder): UInt8
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt8): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchOr(val: UInt8): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt8, memoryOrder!: MemoryOrder): UInt8
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt8): UInt8
     
     @Frozen
-@Deprecated[message: "Use `public func fetchXor(val: UInt8): UInt8` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt8, memoryOrder!: MemoryOrder): UInt8
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An atomic 16-bit unsigned integer.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AtomicUInt16 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 16-bit unsigned integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: UInt16)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func load(): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): UInt16
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt16): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: UInt16): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt16, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt16): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: UInt16): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt16, memoryOrder!: MemoryOrder): UInt16
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt16, new: UInt16): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: UInt16, new: UInt16): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt16, new: UInt16, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt16): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAdd(val: UInt16): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt16, memoryOrder!: MemoryOrder): UInt16
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt16): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchSub(val: UInt16): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt16, memoryOrder!: MemoryOrder): UInt16
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt16): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchAnd(val: UInt16): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt16, memoryOrder!: MemoryOrder): UInt16
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt16): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchOr(val: UInt16): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt16, memoryOrder!: MemoryOrder): UInt16
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt16): UInt16
     
     @Frozen
-@Deprecated[message: "Use `public func fetchXor(val: UInt16): UInt16` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt16, memoryOrder!: MemoryOrder): UInt16
 }
 
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class AtomicUInt32 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 32-bit unsigned integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: UInt32)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): UInt32
     
-    @Deprecated[message: "Use `public func load(): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): UInt32
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt32): Unit
     
-    @Deprecated[message: "Use `public func store(val: UInt32): Unit` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt32, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt32): UInt32
     
-    @Deprecated[message: "Use `public func swap(val: UInt32): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt32, memoryOrder!: MemoryOrder): UInt32
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt32, new: UInt32): Bool
     
-    @Deprecated[message: "Use `public func compareAndSwap(old: UInt32, new: UInt32): Bool` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt32, new: UInt32, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt32): UInt32
     
-    @Deprecated[message: "Use `public func fetchAdd(val: UInt32): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt32, memoryOrder!: MemoryOrder): UInt32
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt32): UInt32
     
-    @Deprecated[message: "Use `public func fetchSub(val: UInt32): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+        @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt32, memoryOrder!: MemoryOrder): UInt32
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt32): UInt32
     
-    @Deprecated[message: "Use `public func fetchAnd(val: UInt32): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt32, memoryOrder!: MemoryOrder): UInt32
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt32): UInt32
     
-    @Deprecated[message: "Use `public func fetchOr(val: UInt32): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt32, memoryOrder!: MemoryOrder): UInt32
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt32): UInt32
     
-    @Deprecated[message: "Use `public func fetchXor(val: UInt32): UInt32` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt32, memoryOrder!: MemoryOrder): UInt32
 }
 
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class AtomicUInt64 {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic 64-bit unsigned integer with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: UInt64)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): UInt64
     
-    @Deprecated[message: "Use `public func load(): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): UInt64
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt64): Unit
     
-    @Deprecated[message: "Use `public func store(val: UInt64): Unit` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: UInt64, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt64): UInt64
     
-    @Deprecated[message: "Use `public func swap(val: UInt64): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: UInt64, memoryOrder!: MemoryOrder): UInt64
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt64, new: UInt64): Bool
     
-    @Deprecated[message: "Use `public func compareAndSwap(old: UInt64, new: UInt64): Bool` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: UInt64, new: UInt64, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically adds the given value and returns the previous value.
+     * @param val - Value to add
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt64): UInt64
     
-    @Deprecated[message: "Use `public func fetchAdd(val: UInt64): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAdd(val: UInt64, memoryOrder!: MemoryOrder): UInt64
     
+    /**
+     * @description Atomically subtracts the given value and returns the previous value.
+     * @param val - Value to subtract
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt64): UInt64
     
-    @Deprecated[message: "Use `public func fetchSub(val: UInt64): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchSub(val: UInt64, memoryOrder!: MemoryOrder): UInt64
     
+    /**
+     * @description Atomically applies bitwise AND with the given value and returns the previous value.
+     * @param val - Operand for bitwise AND
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt64): UInt64
     
-    @Deprecated[message: "Use `public func fetchAnd(val: UInt64): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchAnd(val: UInt64, memoryOrder!: MemoryOrder): UInt64
     
+    /**
+     * @description Atomically applies bitwise OR with the given value and returns the previous value.
+     * @param val - Operand for bitwise OR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt64): UInt64
     
-    @Deprecated[message: "Use `public func fetchOr(val: UInt64): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchOr(val: UInt64, memoryOrder!: MemoryOrder): UInt64
     
+    /**
+     * @description Atomically applies bitwise XOR with the given value and returns the previous value.
+     * @param val - Operand for bitwise XOR
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt64): UInt64
     
-    @Deprecated[message: "Use `public func fetchXor(val: UInt64): UInt64` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func fetchXor(val: UInt64, memoryOrder!: MemoryOrder): UInt64
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An atomic boolean value.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AtomicBool {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic boolean with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: Bool)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): Bool
     
-    @Deprecated[message: "Use `public func load(): Bool` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Bool): Unit
     
-    @Deprecated[message: "Use `public func store(val: Bool): Unit` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Bool, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Bool): Bool
     
-    @Deprecated[message: "Use `public func swap(val: Bool): Bool` instead."]
-@Frozen
-    @!APILevel[since: "22"]
+        @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Bool, memoryOrder!: MemoryOrder): Bool
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Bool, new: Bool): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: Bool, new: Bool): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Bool, new: Bool, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An atomic reference to an object.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AtomicReference<T> where T <: Object {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an atomic reference with the given initial value.
+     * @param val - Initial value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: T)
     
+    /**
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): T
     
     @Frozen
-@Deprecated[message: "Use `public func load(): T` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): T
     
+    /**
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: T): Unit
     
     @Frozen
-@Deprecated[message: "Use `public func store(val: T): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: T, memoryOrder!: MemoryOrder): Unit
     
+    /**
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: T): T
     
     @Frozen
-@Deprecated[message: "Use `public func swap(val: T): T` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: T, memoryOrder!: MemoryOrder): T
     
+    /**
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: T, new: T): Bool
     
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: T, new: T): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: T, new: T, successOrder!: MemoryOrder, failureOrder!: MemoryOrder): Bool
 }
 
 /**
-* AtomicOptionReference is an atomic reference type which could store null value, i.e. Option<T>.None.
-*/
-@!APILevel[since: "22"]
+ * @description An atomic optional reference to an object.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AtomicOptionReference<T> where T <: Object {
     /**
-    * Initialize an AtomicOptionReference with null initial value.
-    */
+     * @description Creates an atomic optional reference with no initial value.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Initialize an AtomicOptionReference with the given initial value.
-    */
+     * @description Creates an atomic optional reference with the given initial value.
+     * @param val - Initial value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(val: Option<T>)
     
     /**
-    * Load the current value.
-    */
+     * @description Atomically loads the current value.
+     * @returns Current value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func load(): Option<T>
     
-    /**
-    * Load the current value with the given memory order.
-    */
     @Frozen
-@Deprecated[message: "Use `public func load(): Option<T>` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func load(memoryOrder!: MemoryOrder): Option<T>
     
     /**
-    * Store the given value.
-    */
+     * @description Atomically stores a new value, replacing the current one.
+     * @param val - Value to store
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func store(val: Option<T>): Unit
     
-    /**
-    * Store the given value with the given memory order.
-    */
     @Frozen
-@Deprecated[message: "Use `public func store(val: Option<T>): Unit` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func store(val: Option<T>, memoryOrder!: MemoryOrder): Unit
     
     /**
-    * Atomically store the given value and return the old value.
-    * @return the old value
-    */
+     * @description Atomically swaps the value with the given one.
+     * @param val - New value to set
+     * @returns Previous value
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Option<T>): Option<T>
     
-    /**
-    * Atomically store the given value with the given memory order and return the old value.
-    * @return the old value
-    */
     @Frozen
-@Deprecated[message: "Use `public func swap(val: Option<T>): Option<T>` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func swap(val: Option<T>, memoryOrder!: MemoryOrder): Option<T>
     
     /**
-    * Atomically store the new value if the current value is equal to the old value.
-    * @return `true` if store the new value successfully
-    * @return `false` indicates that the current value is not equal to the old value
-    */
+     * @description Atomically compares with expected and, if equal, stores the new value.
+     * @param old - Expected current value
+     * @param new - Value to set on success
+     * @returns true if the swap occurred; false otherwise
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(old: Option<T>, new: Option<T>): Bool
     
-    /**
-    * Atomically store the new value with the given memory order if the current value is equal to the old value.
-    * @return `true` if store the new value successfully
-    * @return `false` indicates that the current value is not equal to the old value
-    */
     @Frozen
-@Deprecated[message: "Use `public func compareAndSwap(old: Option<T>, new: Option<T>): Bool` instead."]
-    @!APILevel[since: "22"]
+        @!APILevel[
+        since: "22"
+    ]
     public func compareAndSwap(
         old: Option<T>,
         new: Option<T>,
@@ -899,648 +1631,844 @@ public class AtomicOptionReference<T> where T <: Object {
     ): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A synchronization primitive that allows multiple threads to wait for each other to reach a common point.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Barrier {
     /**
-    * Construct a barrier with an initial value.
-    * @throw IllegalArgumentException, if `count` is negative.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a barrier that trips after the specified number of parties arrive.
+     * @param count - Number of parties required to trip; must be positive
+     * @throws IllegalArgumentException when count is not positive
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(count: Int64)
     
     /**
-    * Decrease the count.
-    * If the count becomes zero, wake up all blocked threads,
-    * Otherwise, the current thread waits until the count becomes zero or `timeout` passed.
-    * If the count is zero, it has no effects.
-    * All events before `countDown()` happens-before events after `countDownAndWait()`.
-    * NOTE: `timeout` should be `Duration.Max` by default,
-    * however, the value `Duration.Max` is not supported currently.
-    */
-    @!APILevel[since: "22"]
+     * @description Waits until all parties have arrived or the timeout elapses.
+     * @param timeout - Maximum time to wait; must be greater than Duration.Zero
+     * @throws IllegalArgumentException when timeout is less than or equal to Duration.Zero
+     * @throws IllegalSynchronizationStateException when Barrier in an invalid state
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func wait(timeout!: Duration = Duration.Max): Unit
 }
 
-// Common interface for reentrant mutual exclusion concurrency primitives.//  ! It is a responsibility of implementor to guarantee that underlying mutex actually supports nested locking.//  ! It is a responsibility of implementor to throw ISSE in case of violation of contract.//  ! `synchronized` keyword is not compatible with this interface for performance reasons
-@Deprecated[message: "Use `public interface Lock` instead."]
-@!APILevel[since: "22"]
+/**
+ * @description Reentrant mutex interface. Prefer `Lock`.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface IReentrantMutex {
-    // reentrant lock, blocks until success
-    @!APILevel[since: "22"]
+    /**
+     * @description Acquires the lock, blocking if necessary.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func lock(): Unit
     
-    // returns false on fail, does not block
-    @!APILevel[since: "22"]
+    /**
+     * @description Attempts to acquire the lock without blocking.
+     * @returns true if the lock was acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func tryLock(): Bool
     
-    // if mutex is locked recursively, this method should be invoked N times to fully unlock mutex// throws ISSE("Mutex is not locked by current thread") if current thread does not hold this mutex
-    @!APILevel[since: "22"]
+    /**
+     * @description Releases the lock held by the current thread.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func unlock(): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown for invalid synchronization state or usage.
+ */
+@!APILevel[
+    since: "22"
+]
 public class IllegalSynchronizationStateException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an exception with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an exception with the specified detail message.
+     * @param message - Detail message
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* @brief Base interface for reentrant mutual exclusion concurrency primitives.
-*
-* Instance of the Lock interface can be passed as arguments to `synchronized` expression,
-* which is equivalent to the following transformation
-*        source code      |        semantics
-* ------------------------------------------------------
-*   synchronized(l) {     |  try { l.lock()
-*     foo()               |    foo()
-*   }                     |  } finally { l.unlock() }
-*/
-@!APILevel[since: "22"]
+ * @description Basic mutual exclusion lock interface.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Lock {
     /**
-    * @brief Acquire the ownership of the lock, blocks if the lock is not available.
-    * Support reentrant.
-    */
-    @!APILevel[since: "22"]
+     * @description Acquires the lock, blocking if necessary.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func lock(): Unit
     
     /**
-    * @brief Try to lock the mutex.
-    * @return false if the lock is not available;
-    * @return returns true, otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to acquire the lock without blocking.
+     * @returns true if the lock was acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func tryLock(): Bool
     
     /**
-    * @brief Unlock the mutex.
-    * If there are other threads blocking on this lock, then wake up one of them.
-    * @throws IllegalSynchronizationStateException if the current thread does not hold the lock.
-    */
-    @!APILevel[since: "22"]
+     * @description Releases the lock held by the current thread.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func unlock(): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Lock that can create an associated condition variable.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface UniqueLock <: Lock {
     /**
-    * @brief Generate a Condition instance for the mutex.
-    * @throws IllegalSynchronizationStateException if the current thread does not hold the lock.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a condition associated with this lock.
+     * @returns Condition linked to this lock
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func condition(): Condition
 }
 
 /**
-* Condition (a.k.a. wait queue) associated with a mutex.
-*/
-@!APILevel[since: "22"]
+ * @description Condition variable interface for waiting and notification.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Condition {
     /**
-    * @brief Block until paired `notify` is invoked.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Blocks the current thread until signalled.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func wait(): Unit
     
     /**
-    * @brief Block until paired `notify` is invoked or `timeout` passed.
-    * @return `true` if event was signalled by other thread;
-    * @return `false` on timeout, otherwise.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    * @throws IllegalArgumentException if `timeout <= Duration.Zero`
-    */
-    @!APILevel[since: "22"]
+     * @description Blocks until signalled or the timeout elapses.
+     * @param timeout - Maximum time to wait
+     * @returns true if signalled; false on timeout
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func wait(timeout!: Duration): Bool
     
     /**
-    * @brief Block until paired `notify` is invoked and the `predicate` return true, or the `predicate` always return ture.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Waits until the predicate evaluates to true.
+     * @param predicate - Condition to be satisfied
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func waitUntil(predicate: () -> Bool): Unit
     
     /**
-    * @brief Block until paired `notify` is invoked and the `predicate` return true, or the `predicate` always return ture, or `timeout` passed.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Waits until the predicate evaluates to true or timeout elapses.
+     * @param predicate - Condition to be satisfied
+     * @param timeout - Maximum time to wait
+     * @returns true if predicate became true; false on timeout
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func waitUntil(predicate: () -> Bool, timeout!: Duration): Bool
     
     /**
-    * @brief Wake up a single thread waiting on this mutex (no particular admission policy implied).
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Wakes one waiting thread.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func notify(): Unit
     
     /**
-    * @brief Wake up all threads waiting on this mutex (no particular admission policy implied).
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Wakes all waiting threads.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func notifyAll(): Unit
 }
 
 /**
-* Class that encapsulates single reentrant mutex and single condition instance (a.k.a. wait queue) associated with this mutex.
-*/
-@Deprecated[message: "Use `public interface Condition` instead."]
-@!APILevel[since: "22"]
+ * @description Monitor class providing wait/notify capabilities. Prefer `Mutex` and `Condition`.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Monitor <: ReentrantMutex {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a monitor with an associated reentrant mutex and condition queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * @brief Block until paired `notify` is invoked or `timeout` nanoseconds passed.
-    * @return `true` if event was signalled by other thread;
-    * @return `false` on timeout, otherwise.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    * @throws IllegalArgumentException if `timeout <= Duration.Zero`
-    */
-    @!APILevel[since: "22"]
+     * @description Blocks until a paired notify is invoked or the timeout elapses.
+     * @param timeout - Maximum time to wait; must be greater than Duration.Zero
+     * @returns true if signalled by another thread; false on timeout
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the monitor's mutex
+     * @throws IllegalArgumentException when timeout is less than or equal to Duration.Zero
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func wait(timeout!: Duration = Duration.Max): Bool
     
     /**
-    * @brief Wake up a single thread waiting on this mutex (no particular admission policy implied).
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Wakes a single thread waiting on this monitor.
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the monitor's mutex
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func notify(): Unit
     
     /**
-    * @brief Wake up all threads waiting on this mutex (no particular admission policy implied).
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    */
-    @!APILevel[since: "22"]
+     * @description Wakes all threads waiting on this monitor.
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the monitor's mutex
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func notifyAll(): Unit
 }
 
 /**
-* @brief Record represents unique identifier of an existing wait queue associated with given mutex.
-* Passing invalid ConditionID to the MultiConditionMonitor results into ISSE.
-*/
-@Deprecated[message: "Use `public interface Condition` instead."]
-@!APILevel[since: "22"]
+ * @description Unique identifier of an existing wait queue for a given monitor.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct ConditionID {
 }
 
 /**
-* @brief Class that encapsulates single reentrant mutex and a set of dynamically created condition instances associated with this mutex.
-*/
-@Deprecated[message: "Use `public class Mutex` instead."]
-@!APILevel[since: "22"]
+ * @description A monitor that encapsulates a reentrant mutex and supports multiple condition queues.
+ */
+@!APILevel[
+    since: "22"
+]
 public class MultiConditionMonitor <: ReentrantMutex {
-    @!APILevel[since: "22"]
+    /**
+     * @description Initializes a monitor supporting multiple independent condition queues.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * @return A new ConditionID associated with this mutex. May be used to implement "single mutex -- multiple wait queues" concurrent primitives.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new condition identifier bound to this monitor.
+     * @returns A new ConditionID associated with this monitor
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func newCondition(): ConditionID
     
     /**
-    * @brief Block until paired `notify` is invoked or `timeout` nanoseconds passed
-    * @return `true` if specified condition was signalled by other thread;
-    * @return `false` if timeouted.
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    * @throws IllegalSynchronizationStateException if `id` isn't provided by `newCondition` of this MultiConditionMonitor instance
-    * @throws IllegalArgumentException if `timeout <= Duration.Zero`
-    */
-    @!APILevel[since: "22"]
+     * @description Blocks until the specified condition is signalled or the timeout elapses.
+     * @param condID - Condition identifier created by this instance via newCondition
+     * @param timeout - Maximum time to wait; must be greater than Duration.Zero
+     * @returns true if the condition was signalled; false on timeout
+     * @throws IllegalArgumentException when timeout is less than or equal to Duration.Zero
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the mutex or condID is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func wait(condID: ConditionID, timeout!: Duration = Duration.Max): Bool
     
     /**
-    * @brief Wake up a single thread waiting on this mutex (no particular admission policy implied)
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    * @throws IllegalSynchronizationStateException if `id` was not provided by `newCondition` of this MultiConditionMonitor instance
-    */
-    @!APILevel[since: "22"]
+     * @description Wakes a single thread waiting on the specified condition.
+     * @param condID - Condition identifier created by this instance via newCondition
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the mutex or condID is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func notify(condID: ConditionID): Unit
     
     /**
-    * @brief Wake up all threads waiting on this mutex (no particular admission policy implied)
-    * @throws IllegalSynchronizationStateException if current thread does not hold this mutex
-    * @throws IllegalSynchronizationStateException if `id` was not provided by `newCondition` of this MultiConditionMonitor instance
-    */
-    @!APILevel[since: "22"]
+     * @description Wakes all threads waiting on the specified condition.
+     * @param condID - Condition identifier created by this instance via newCondition
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the mutex or condID is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func notifyAll(condID: ConditionID): Unit
 }
 
 /**
-* @brief Base class for built-in reentrant mutual exclusion concurrency primitives.
-* Instance of the Lock interface can be passed as arguments to `synchronized` expression,
-* which is equivalent to the following transformation
-*        source code      |        semantics
-* ------------------------------------------------------
-*   synchronized(m) {     |  try { m.lock()
-*     foo()               |    foo()
-*   }                     |  } finally { m.unlock() }
-*/
-@!APILevel[since: "22"]
+ * @description A mutual exclusion lock that can be used with the synchronized statement and supports conditions.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Mutex <: UniqueLock {
-    /*
-    * @throws IllegalSynchronizationStateException if `ptr` is null
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a non-reentrant mutual exclusion lock.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * @brief Acquire the ownership of the lock, blocks if the lock is not available.
-    * Support reentrant.
-    */
-    @!APILevel[since: "22"]
+     * @description Acquires the lock, blocking if necessary.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func lock(): Unit
     
     /**
-    * @brief Try to lock the mutex.
-    * @return false if the lock is not available;
-    * @return returns true, otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to acquire the lock without blocking.
+     * @returns true if the lock was acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryLock(): Bool
     
     /**
-    * @brief Unlock the mutex.
-    * If there are other threads blocking on this lock, then wake up one of them.
-    * @throws IllegalSynchronizationStateException if the current thread does not hold the lock.
-    */
-    @!APILevel[since: "22"]
+     * @description Releases the lock held by the current thread.
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the lock
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func unlock(): Unit
     
     /**
-    * @brief Generate a Condition instance for the mutex.
-    * @throws IllegalSynchronizationStateException if the current thread does not hold the lock.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a condition object associated with this mutex.
+     * @returns Condition linked to this mutex
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the lock
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func condition(): Condition
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A read-write lock that supports separate read and write locking.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ReadWriteLock {
-    @!APILevel[since: "22"]
+    /**
+     * @description Read-side view that allows shared access.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop readLock: Lock
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Write-side view that requires exclusive access.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop writeLock: UniqueLock
     
     /**
-    * @param fair - Set up the fair mode.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a read/write lock.
+     * @param fair - If true, enables fair acquisition policy
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(fair!: Bool = false)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Indicates whether the lock uses a fair acquisition policy.
+     * @returns true if fair; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isFair(): Bool
 }
 
 /**
-* @brief Base class for built-in reentrant mutual exclusion concurrency primitives.
-* ReentrantMutex and its subclasses instances can be passed as arguments to `synchronized` expression,
-* which is equivalent to the following transformation
-*        source code      |        semantics
-* ------------------------------------------------------
-*   synchronized(m) {     |  try { m.lock()
-*     foo()               |    foo()
-*   }                     |  } finally { m.unlock() }
-*/
-@Deprecated[message: "Use `public class Mutex` instead."]
-@!APILevel[since: "22"]
+ * @description A mutual exclusion lock that can be used with the synchronized statement.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class ReentrantMutex <: Lock {
-    /* @throws IllegalSynchronizationStateException if the Mutex initialization is failed.*/
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a reentrant mutex wrapper over an internal Mutex.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * @brief Acquire the ownership of the lock, blocks if the lock is not available.
-    * Support reentrant.
-    */
-    @!APILevel[since: "22"]
+     * @description Acquires the lock, blocking if necessary.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open func lock(): Unit
     
     /**
-    * @brief Try to lock the mutex.
-    * @return false if the lock is not available;
-    * @return returns true, otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to acquire the lock without blocking.
+     * @returns true if the lock was acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open func tryLock(): Bool
     
     /**
-    * @brief Unlock the mutex.
-    * If there are other threads blocking on this lock, then wake up one of them.
-    * @throws IllegalSynchronizationStateException if the current thread does not hold the lock
-    */
-    @!APILevel[since: "22"]
+     * @description Releases one level of ownership; wakes a waiting thread if any.
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the lock
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public open func unlock(): Unit
 }
 
-@Deprecated
-@!APILevel[since: "22"]
+/**
+ * @description Mode values for reentrant read/write mutex.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum ReadWriteMutexMode {
-    @!APILevel[since: "22"]
+    /**
+     * @description Non-fair acquisition policy.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Unfair |
-    @!APILevel[since: "22"]
+    /**
+     * @description Fair acquisition policy.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Fair
 }
 
-@Deprecated[message: "Use `public class ReadWriteLock` instead."]
-@!APILevel[since: "22"]
+/**
+ * @description A reentrant read-write mutex.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ReentrantReadWriteMutex {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a reentrant read/write mutex with the specified mode.
+     * @param mode - Fairness mode
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(mode!: ReadWriteMutexMode = ReadWriteMutexMode.Unfair)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the read mutex view.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop readMutex: ReentrantReadMutex
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the write mutex view.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop writeMutex: ReentrantWriteMutex
 }
 
-@Deprecated[message: "Use `public interface Lock` instead."]
-@!APILevel[since: "22"]
+/**
+ * @description A reentrant read mutex.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ReentrantReadMutex <: ReentrantMutex {
     /**
-    * Acquire the read-mutex.
-    * Under fair mode,
-    *   non-reentrantly hold the lock if there are no other threads holding or waiting for the write-mutex;
-    *   otherwise, blocked.
-    * Under nonfair mode,
-    *   block if there are other threads holding the write-mutex;
-    *   hold the mutex if there are no waiting writer threads;
-    *   otherwise, holding the mutex or being blocked is decided by the implementation.
-    * Multiple threads can hold the read-mutex concurrently, and one thread can acquire recursively.
-    * If one thread holds the write-mutex, it can also hold the read-mutex.
-    */
-    @!APILevel[since: "22"]
+     * @description Acquires a shared (read) lock; may block if a writer holds the lock.
+     * @throws IllegalSynchronizationStateException when Lock state invalid for the current thread
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func lock(): Unit
     
     /**
-    * Try to acquire the read-mutex.
-    * Return true if it succeeds to hold the read-mutex;
-    * otherwise, return false.
-    * This method does not obey the fairness constraints.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to acquire a shared (read) lock without blocking.
+     * @returns true if the read lock was acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryLock(): Bool
     
     /**
-    * Release the read-mutex.
-    * This method should be invoked N times to fully unlock the mutex.
-    * If fully released, waiting writer threads are notified to acquire the write-mutex.
-    * Throws ISSE("Mutex is not hold by the current thread") if the current thread does not hold this read-mutex.
-    */
-    @!APILevel[since: "22"]
+     * @description Releases a shared (read) lock.
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the read lock
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func unlock(): Unit
 }
 
-@Deprecated[message: "Use `public interface UniqueLock` instead."]
-@!APILevel[since: "22"]
+/**
+ * @description A reentrant write mutex.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ReentrantWriteMutex <: ReentrantMutex {
     /**
-    * Acquire the write-mutex.
-    * Only one thread can hold the write-mutex, and it can acquire recursively.
-    * Blocked if there are other threads holding the read-mutex or write-mutex.
-    * Throws ISSE("Read-mutex is hold by the current thread") if the current thread holds the read-mutex.
-    */
-    @!APILevel[since: "22"]
+     * @description Acquires an exclusive (write) lock; may block while readers/writers hold the lock.
+     * @throws IllegalSynchronizationStateException when Lock state invalid for the current thread
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func lock(): Unit
     
     /**
-    * Try to acquire the write-mutex.
-    * Return true if it succeeds to hold the write-mutex;
-    * otherwise, return false.
-    * This method does not obey the fairness constraints.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to acquire an exclusive (write) lock without blocking.
+     * @returns true if the write lock was acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryLock(): Bool
     
     /**
-    * Release the write-mutex.
-    * This method should be invoked N times to fully unlock the mutex.
-    * Under fair mode,
-    *   if fully released, waiting reader threads are notified first to acquire the write-mutex.
-    * Under nonfair mode,
-    *   if fully released, notifying waiting reader or writer threads are decided by the implementation.
-    * Throws ISSE("Mutex is not hold by the current thread") if the current thread does not hold this write-mutex.
-    */
-    @!APILevel[since: "22"]
+     * @description Releases an exclusive (write) lock.
+     * @throws IllegalSynchronizationStateException when Current thread does not hold the write lock
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func unlock(): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A counting semaphore that maintains a set of permits.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Semaphore {
     /**
-    * Construct a semephore with an initial value.
-    * Throw IllegalArgumentException, if `count` is negative.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a counting semaphore with the specified initial permits.
+     * @param count - Initial number of permits; must be non-negative
+     * @throws IllegalArgumentException when count is negative
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(count: Int64)
     
     /**
-    * Return the current available counts.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the current number of permits.
+     * @returns Current number of permits
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop count: Int64
     
     /**
-    * Acquire `amount` from the semaphore.
-    * If there is no sufficient available counts,
-    * the current thread will be blocked until enough counts become available.
-    * The acquisition is atomic, which means it will never acquire partial counts before blocked.
-    * Throw IllegalArgumentException, if `amount` is negative or larger than the initial value.
-    * The acquisition order is not guranteed under contention.
-    */
-    @!APILevel[since: "22"]
+     * @description Acquires the specified number of permits, blocking if necessary.
+     * @param amount - Number of permits to acquire; must be positive
+     * @throws IllegalSynchronizationStateException when Semaphore in an invalid state
+     * @throws IllegalArgumentException when amount is not positive
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func acquire(amount!: Int64 = 1): Unit
     
     /**
-    * Try to acquire `amount` from the semaphore.
-    * If there is no sufficient available counts, return false;
-    * otherwise, return true.
-    * Throw IllegalArgumentException, if `amount` is negative or larger than the initial value.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to acquire the specified number of permits without blocking.
+     * @param amount - Number of permits to acquire; must be positive
+     * @returns true if the permits were acquired; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryAcquire(amount!: Int64 = 1): Bool
     
     /**
-    * Release `amount` to the semaphore.
-    * Wake blocked threads if there are enough counts for them.
-    * The number of accumulated counts will never exceed the initial value.
-    * Throw IllegalArgumentException, if `amount` is negative or larger than the initial value.
-    * All events before `release()` happens-before events after `acquire/tryAcquire()`.
-    */
-    @!APILevel[since: "22"]
+     * @description Releases the specified number of permits.
+     * @param amount - Number of permits to release; must be positive
+     * @throws IllegalSynchronizationStateException when Semaphore in an invalid state
+     * @throws IllegalArgumentException when amount is not positive
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func release(amount!: Int64 = 1): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A synchronization aid that allows one or more threads to wait until a set of operations being performed in other threads completes.
+ */
+@!APILevel[
+    since: "22"
+]
 public class SyncCounter {
     /**
-    * Construct a counter with an initial value.
-    * @throw IllegalArgumentException, if `count` is negative.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a countdown-style synchronization counter with an initial value.
+     * @param count - Initial count; must be non-negative
+     * @throws IllegalArgumentException when count is negative
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(count: Int64)
     
     /**
-    * Get the remaining count.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the current count.
+     * @returns Current count
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop count: Int64
     
     /**
-    * Decrease the count.
-    * If the count becomes zero, wake up all blocked threads.
-    * If the count is equal or less than zero, it has no effects.
-    */
-    @!APILevel[since: "22"]
+     * @description Decrements the counter by one; unblocks waiters when it reaches zero.
+     * @throws IllegalSynchronizationStateException when Counter is already zero
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func dec(): Unit
     
     /**
-    * Wait until the count becomes zero or `timeout` passed.
-    * If the count is zero, it will never be blocked.
-    * All events before `dec()` happens-before events after `waitUntilZero()`.
-    * NOTE: `timeout` should be `Duration.Max` by default,
-    * however, the value `Duration.Max` is not supported currently.
-    */
-    @!APILevel[since: "22"]
+     * @description Blocks until the counter reaches zero or the timeout elapses.
+     * @param timeout - Maximum time to wait; must be greater than Duration.Zero
+     * @throws IllegalArgumentException when timeout is less than or equal to Duration.Zero
+     * @throws IllegalSynchronizationStateException when Counter in an invalid state
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func waitUntilZero(timeout!: Duration = Duration.Max): Unit
 }
 
 /**
-* Timer is used to execute a specified task one or more times at a specified time point or after a specified interval.
-* 1. Each Timer creates a new thread to execute the task associated with the Timer.
-* 2. A Timer can be bound to only one task during initialization and cannot be reset after initialization.
-* 3. A Timer ends its lifetime when the task associated with the Timer finish or are cancelled.
-*    The Timer can then be reclaimed by the GC.
-*    On the other hand, a Timer will not be reclaimed by GC in any case until the associated task have finished
-*    or are actively cancelled, ensuring that the associated task will be executed.
-* 4. If the system is busy, the task triggering time may be affected.
-*    The Timer does not ensure that the task triggering time is punctual.
-*    Timer ensures that tasks are executed if the trigger time of the task is less than or equal tothe current time.
-*    Subsequent tasks will be postponed.
-* 5. Timer does not actively catch the exception thrown by the associated task.
-*    As long as the task has exceptions that are not caught, the Timer will be invalid.
-*/
-@!APILevel[since: "22"]
+ * @description A timer that can execute tasks at a specified time or interval.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Timer <: Equatable<Timer> & Hashable {
     /**
-    * Create a timer, the number of times the associated task is scheduled to run depends on its return value.
-    * If @p delay duration is less than `Duration.Zero`, the associated task will be scheduled to run immediately.
-    * If @p task return `Option.None`, the timer will stop to schedule the task to run,
-    * if `Option.Some(v)` and `v > Duration.Zero`, the minimum interval before the next run will be set to v,
-    * otherwise, the associated task will be scheduled to run immediately.
-    *
-    * @param delay The time from now until the associated task is scheduled to run for the first time.
-    * @param task Associated task that are scheduled to run by the timer.
-    *
-    * @return A Timer instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Schedules a task to run after a delay; task may reschedule by returning a duration.
+     * @param delay - Time before first execution; must be non-negative
+     * @param task - Function returning next delay or none to stop
+     * @returns A Timer handle controlling the scheduled task
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func after(delay: Duration, task: () -> Option<Duration>): Timer
     
     /**
-    * Create a disposable timer, the associated task will be scheduled to run only once.
-    * If @p delay duration is less than `Duration.Zero`, the associated task will be scheduled to run immediately.
-    *
-    * @param delay The time from now until the associated task is scheduled to run for the first time.
-    * @param task Associated task that are scheduled to run by the timer.
-    */
-    @!APILevel[since: "22"]
+     * @description Schedules a task to run once after the specified delay.
+     * @param delay - Time before execution; must be non-negative
+     * @param task - Task to execute once
+     * @returns A Timer handle controlling the scheduled task
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func once(delay: Duration, task: () -> Unit): Timer
     
     /**
-    * Create a periodic timer, the associated task will be scheduled to run repeatedly.
-    * If @p delay duration is less than `Duration.Zero`, the associated task will be scheduled to run immediately.
-    *
-    * @param delay The time from now until the associated task is scheduled to run for the first time.
-    * @param interval The minimum interval between two execution times of the associated task.
-    * @param task Associated task that are scheduled to run by the timer.
-    * @param style The catchup style, default is Burst.
-    *
-    * @throw IllegalArgumentException if @p interval is less than or equal to `Duration.Zero`.
-    */
-    @!APILevel[since: "22"]
+     * @description Schedules a repeating task with a fixed interval after an initial delay.
+     * @param delay - Time before first execution; must be non-negative
+     * @param interval - Interval between executions; must be positive
+     * @param task - Task to execute repeatedly
+     * @param style - Catch-up policy when executions are delayed
+     * @returns A Timer handle controlling the scheduled task
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func repeat(delay: Duration, interval: Duration, task: () -> Unit, style!: CatchupStyle = Burst): Timer
     
     /**
-    * Create a periodic timer, the associated task will be scheduled to run repeatedly.
-    * If @p delay time point is less than now, the associated task will be scheduled to run immediately.
-    *
-    * @param period Maximum duration for which the associated task can be scheduled since @p delay.
-    * @param delay The time from now until the associated task is scheduled to run for the first time.
-    * @param interval The minimum interval between two execution times of the associated task.
-    * @param task Associated task that are scheduled to run by the timer.
-    * @param style The catchup style, default is Burst.
-    *
-    * @throw IllegalArgumentException when the @p period is less than or equal to `Duration.Zero`,
-    *                                 or @p interval is less than or equal to `Duration.Zero`.
-    */
-    @!APILevel[since: "22"]
+     * @description Schedules a repeating task to run during a fixed period with an initial delay.
+     * @param period - Total period to run; must be non-negative
+     * @param delay - Time before first execution; must be non-negative
+     * @param interval - Interval between executions; must be positive
+     * @param task - Task to execute during the period
+     * @param style - Catch-up policy when executions are delayed
+     * @returns A Timer handle controlling the scheduled task
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func repeatDuring(period: Duration, delay: Duration, interval: Duration, task: () -> Unit,
         style!: CatchupStyle = Burst): Timer
     
     /**
-    * Create a periodic timer, the associated task will be scheduled to run repeatedly.
-    * If @p delay duration is less than `Duration.Zero`, the associated task will be scheduled to run immediately.
-    *
-    * @param count Number of times the associated task is scheduled to run.
-    * @param delay The time from now until the associated task is scheduled to run for the first time.
-    * @param interval The minimum interval between two execution times of the associated task.
-    * @param task Associated task that are scheduled to run by the timer.
-    * @param style The catchup style, default is Burst.
-    *
-    * @throw IllegalArgumentException when @p count is less than or equal to 0,
-    *                                 or @p interval is less than or equal to `Duration.Zero`.
-    */
-    @!APILevel[since: "22"]
+     * @description Schedules a task to run a fixed number of times with a fixed interval.
+     * @param count - Number of executions; must be non-negative
+     * @param delay - Time before first execution; must be non-negative
+     * @param interval - Interval between executions; must be positive
+     * @param task - Task to execute repeatedly
+     * @param style - Catch-up policy when executions are delayed
+     * @returns A Timer handle controlling the scheduled task
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func repeatTimes(count: Int64, delay: Duration, interval: Duration, task: () -> Unit,
         style!: CatchupStyle = Burst): Timer
     
     /**
-    * Cancel the timer, the associated task will no longer be scheduled to run.
-    * If the associated task is running when calling `cancel`, cancel will not interrupt the current run.
-    * The method does not block the current thread.
-    * Calling `cancel` more than once is equal to calling only once.
-    */
-    @!APILevel[since: "22"]
+     * @description Cancels the timer, the associated task will no longer be scheduled to run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func cancel(): Unit
     
     /**
-    * Check if the two Timer instances are the same one actually.
-    */
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Timer): Bool
+     * @description Checks equality with another Timer.
+     * @param other - Timer to compare with
+     * @returns true if timers are equal; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Timer): Bool
     
     /**
-    * Check if the two Timer instances are different actually.
-    */
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Timer): Bool
+     * @description Checks inequality with another Timer.
+     * @param other - Timer to compare with
+     * @returns true if timers are not equal; false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Timer): Bool
     
     /**
-    * Return the instance id as the hash code of the timer.
-    */
-    @!APILevel[since: "22"]
+     * @description Computes hash code for this Timer.
+     * @returns Hash code value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 /**
-* The catchup style of the periodic timer.
-*/
-@!APILevel[since: "22"]
+ * @description The catchup style of the periodic timer.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum CatchupStyle {
-    @!APILevel[since: "22"]
+    /**
+     * @description Delay subsequent executions to maintain the interval.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Delay |
-    @!APILevel[since: "22"]
+    /**
+     * @description Execute missed executions immediately.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Burst |
-    @!APILevel[since: "22"]
+    /**
+     * @description Skip missed executions.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Skip
 }
 

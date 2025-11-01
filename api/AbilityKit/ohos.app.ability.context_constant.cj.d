@@ -13,81 +13,108 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.context_constant
-import std.deriving.Derive
+
 import ohos.labels.*
 
-
 /**
-* File area mode
-*
-* @relation export enum AreaMode
-*/
-@Derive[ToString, Equatable]
+ * File area mode
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public enum AreaMode {
+public enum AreaMode <: ToString & Equatable<AreaMode> {
     /**
-    * System level device encryption area
-    *
-    * @relation EL1 = 0
-    */
+     * System level device encryption area
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    El1 |
+    El1
+    | 
     /**
-    * User credential encryption area
-    *
-    * @relation EL2 = 1
-    */
+     * User credential encryption area
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    El2 |
+    El2
+    | 
     /**
-    * User credential encryption area
-    * when screen locked, can read/write, and create file
-    *
-    * @relation EL3 = 2
-    */
+     * User credential encryption area
+     * when screen locked, can read/write, and create file
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    El3 |
+    El3
+    | 
     /**
-    * User credential encryption area
-    * when screen locked, FEB2.0 can read/write, FEB3.0 can't
-    * read/write, and all can't create file
-    *
-    * @relation EL4 = 3
-    */
+     * User credential encryption area
+     * when screen locked, FEB2.0 can read/write, FEB3.0 can't
+     * read/write, and all can't create file
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    El4 |
+    El4
+    | 
     /**
-    * User privacy sensitive encryption area
-    * when the screen locked, a closed file cannot be opened, read, or written,
-    * a file can be created and then opened, read, or written.
-    *
-    * @relation EL5 = 4
-    */
+     * User privacy sensitive encryption area
+     * when the screen locked, a closed file cannot be opened, read, or written,
+     * a file can be created and then opened, read, or written.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    El5 |
-    ...
+    El5
+    | ...
 }
 
 
+extend AreaMode <: ToString {
+    
+    /**
+     * Converts the AreaMode to its string representation.
+     * @returns { String } A string representation of the AreaMode.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+    ]
+    public func toString(): String
+}
 
+
+extend AreaMode <: Equatable<AreaMode> {
+    
+    /**
+     * Compares this AreaMode with another for equality.
+     * @param { AreaMode } other - The AreaMode to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+    ]
+    public operator func ==(other: AreaMode): Bool
+    
+    /**
+     * Compares this AreaMode with another for inequality.
+     * @param { AreaMode } other - The AreaMode to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+    ]
+    public operator func !=(other: AreaMode): Bool
+}

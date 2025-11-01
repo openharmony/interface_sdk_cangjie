@@ -1,49 +1,85 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.rich_text
+
 import ohos.arkui.component.common.*
-import ohos.ffi.*
 import ohos.base.*
-import ohos.resource.*
+import ohos.ffi.*
 import ohos.labels.APILevel
+import ohos.resource.*
 
-
+/**
+ * A component that displays rich text content formatted in HTML or loaded from a resource file.
+ */
 @!APILevel[
-    21,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class RichText <: ViewBase {
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(content: ResourceStr)
-    
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onStart(callback: () -> Unit): This
-    
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onComplete(callback: () -> Unit): This
+public class RichText <: CommonMethodComponent<RichText> & RichTextAttribute {
+/**
+ * Creates a RichText component.
+ * Initializes a RichText component with HTML content or a resource file.
+ *
+ * @param { ?ResourceStr } content - HTML format string or local resource file.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(content: ?ResourceStr)
+
+/**
+ * Triggered when the RichText loading starts.
+ *
+ * @param { ?() -> Unit } callback - Callback function when loading starts.
+ * @returns { This } Returns the RichText instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onStart(callback: ?() -> Unit): This
+
+/**
+ * Triggered when the RichText loading ends.
+ *
+ * @param { ?() -> Unit } callback - Callback function when loading completes.
+ * @returns { This } Returns the RichText instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onComplete(callback: ?() -> Unit): This
 }
 
+/**
+ * Defines the RichText attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface RichTextAttribute <: CommonMethod<RichTextAttribute> {
+/**
+ * Called when the rich text content begins loading.
+ *
+ * @param { ?() -> Unit } callback - Callback function when loading starts.
+ * @returns { RichTextAttribute } Returns the rich text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onStart(callback: ?() -> Unit): RichTextAttribute
+
+/**
+ * Triggered when the RichText loading ends.
+ *
+ * @param { ?() -> Unit } callback - Callback function when loading completes.
+ * @returns { RichTextAttribute } Returns the rich text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onComplete(callback: ?() -> Unit): RichTextAttribute
+}

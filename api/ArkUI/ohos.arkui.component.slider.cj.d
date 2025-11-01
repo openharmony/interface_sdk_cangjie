@@ -1,103 +1,253 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.slider
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.ffi.*
 import ohos.labels.APILevel
 
-
+/**
+ * Defines Slider Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Slider <: ViewBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class Slider <: CommonMethodComponent<Slider> & SliderAttribute {
+/**
+ * Defines Slider Component instance.
+ *
+ * @param { ?Float64 } [min] - Minimum value.
+ * @param { ?Float64 } [max] - Maximum value.
+ * @param { ?Float64 } [step] - Step of the slider.
+ * @param { ?Float64 } [value] - Current value of Slider.
+ * @param { ?SliderStyle } [style] - Style of the slider thumb and track.
+ * @param { ?Axis } [direction] - Whether the slider moves horizontally or vertically.
+ * @param { ?Bool } [reverse] - Whether the slider values are revers. By default, the values increase from left to right for a horizontal
+ *      slider and from top to bottom for a vertical slider.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(
-        min!: Float64 = 0.0,
-        max!: Float64 = 100.0,
-        step!: Float64 = 1.0,
-        value!: Float64 = min,
-        style!: SliderStyle = SliderStyle.OutSet,
-        direction!: Axis = Axis.Horizontal,
-        reverse!: Bool = false
+        min!: ?Float64 = None,
+        max!: ?Float64 = None,
+        step!: ?Float64 = None,
+        value!: ?Float64 = None,
+        style!: ?SliderStyle = None,
+        direction!: ?Axis = None,
+        reverse!: ?Bool = None
     )
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func blockColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func trackColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selectedColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func showSteps(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func showTips(value: Bool, content!: ?ResourceStr = None): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func trackThickness(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onChange(callback: (Float64, SliderChangeMode) -> Unit): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func blockBorderColor(value: ResourceColor): This
+
+/**
+ * Called when the slider color of the slider bar is set.
+ *
+ * @param { ?ResourceColor } value
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func blockColor(value: ?ResourceColor): This
+
+/**
+ * Called when the track color of the slider is set.
+ *
+ * @param { ?ResourceColor } value
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func trackColor(value: ?ResourceColor): This
+
+/**
+ * Called when the slider of the slider bar is set to slide over the area color.
+ *
+ * @param { ?ResourceColor } selectedColor
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selectedColor(selectedColor: ?ResourceColor): This
+
+/**
+ * Called when setting whether to display step size.
+ *
+ * @param { ?Bool } value - Called when setting whether to display step size.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func showSteps(value: ?Bool): This
+
+/**
+ * Called when the percentage of bubble prompt is set when sliding.
+ *
+ * @param { ?Bool } value - Whether to display the bubble.
+ * @param { ?ResourceStr } [content] - Text content in the bubble.
+ *      If the content is not specified, the current percentage is displayed by default.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func showTips(value: ?Bool, content!: ?ResourceStr = None): This
+
+/**
+ * Called when the thickness of track is set.
+ *
+ * @param { ?Length } value
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func trackThickness(value: ?Length): This
+
+/**
+ * Triggered when the slider is dragged or clicked.
+ * NOTE: The Begin and End states are triggered when the slider is clicked with a gesture.
+ * The Moving and Click states are triggered when the value of value changes.
+ * If the coherent action is a drag action, the Click state will not be triggered.
+ *
+ * @param { ?(Float64, SliderChangeMode) -> Unit } callback
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onChange(callback: ?(Float64, SliderChangeMode) -> Unit): This
+
+/**
+ * Called when the border color of block is set.
+ *
+ * @param { ?ResourceColor } value - The border color of block.
+ * @returns { This }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func blockBorderColor(value: ?ResourceColor): This
 }
 
+/**
+ * Defines the attribute functions of Slider.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface SliderAttribute <: CommonMethod<SliderAttribute> {
+/**
+ * Called when the slider color of the slider bar is set.
+ *
+ * @param { ?ResourceColor } value
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func blockColor(value: ?ResourceColor): SliderAttribute
+
+/**
+ * Called when the track color of the slider is set.
+ *
+ * @param { ?ResourceColor } value
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func trackColor(value: ?ResourceColor): SliderAttribute
+
+/**
+ * Called when the slider of the slider bar is set to slide over the area color.
+ *
+ * @param { ?ResourceColor } selectedColor
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selectedColor(selectedColor: ?ResourceColor): SliderAttribute
+
+/**
+ * Called when setting whether to display step size.
+ *
+ * @param { ?Bool } value - Called when setting whether to display step size.
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func showSteps(value: ?Bool): SliderAttribute
+
+/**
+ * Called when the percentage of bubble prompt is set when sliding.
+ *
+ * @param { ?Bool } value - Whether to display the bubble.
+ * @param { ?ResourceStr } content - Text content in the bubble. If the content is not specified,
+ *     the current percentage is displayed by default.
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func showTips(value: ?Bool, content!: ?ResourceStr): SliderAttribute
+
+/**
+ * Called when the thickness of track is set.
+ *
+ * @param { ?Length } value
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func trackThickness(value: ?Length): SliderAttribute
+
+/**
+ * Triggered when the slider is dragged or clicked.
+ * NOTE: The Begin and End states are triggered when the slider is clicked with a gesture.
+ * The Moving and Click states are triggered when the value of value changes.
+ * If the coherent action is a drag action, the Click state will not be triggered.
+ *
+ * @param { ?(Float64, SliderChangeMode) -> Unit } callback
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onChange(callback: ?(Float64, SliderChangeMode) -> Unit): SliderAttribute
+
+/**
+ * Called when the border color of block is set.
+ *
+ * @param { ?ResourceColor } value - the border color of block.
+ * @returns { SliderAttribute }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func blockBorderColor(value: ?ResourceColor): SliderAttribute
+}

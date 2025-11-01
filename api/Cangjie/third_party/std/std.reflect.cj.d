@@ -1,1285 +1,2765 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.reflect
 import std.collection.*
 import std.sync.*
 
 import std.fs.*
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents the type information for a class.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ClassTypeInfo <: TypeInfo {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `ClassTypeInfo` for a class with the specified qualified name.
+     * @param qualifiedName The fully qualified name of the class.
+     * @returns The `ClassTypeInfo` object for the class.
+     * @throws InfoNotFoundException if the class information cannot be found.
+     * @throws IllegalTypeException if the type is not a class.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public redef static func get(qualifiedName: String): ClassTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `ClassTypeInfo` for the runtime class of the given object.
+     * @param a The object to get the class information from.
+     * @returns The `ClassTypeInfo` for the object's class.
+     * @throws InfoNotFoundException if the class information cannot be found.
+     * @throws IllegalTypeException if the type is not a class.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public redef static func of(a: Any): ClassTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `ClassTypeInfo` for the runtime class of the given object.
+     * @param a The object to get the class information from.
+     * @returns The `ClassTypeInfo` for the object's class.
+     * @throws InfoNotFoundException if the class information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(a: Object): ClassTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `ClassTypeInfo` for the specified type `T`.
+     * @returns The `ClassTypeInfo` for type `T`.
+     * @throws InfoNotFoundException if the class information cannot be found.
+     * @throws IllegalTypeException if the type is not a class.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public redef static func of<T>(): ClassTypeInfo
     
     /**
-    * Returns the collection of public constructors of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ConstructorInfo` objects for the public constructors of this class.
+     * @returns A collection of `ConstructorInfo` objects.
+     * @throws InfoNotFoundException if constructor information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop constructors: Collection<ConstructorInfo>
     
     /**
-    * Returns the collection of public instance variables of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `InstanceVariableInfo` objects for the instance variables of this class.
+     * @returns A collection of `InstanceVariableInfo` objects.
+     * @throws InfoNotFoundException if instance variable information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop instanceVariables: Collection<InstanceVariableInfo>
     
     /**
-    * Returns the collection of public static variables of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `StaticVariableInfo` objects for the static variables of this class.
+     * @returns A collection of `StaticVariableInfo` objects.
+     * @throws InfoNotFoundException if static variable information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop staticVariables: Collection<StaticVariableInfo>
     
     /**
-    * Returns the super class of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `ClassTypeInfo` for the superclass of this class, if it exists.
+     * @returns An `Option` containing the `ClassTypeInfo` of the superclass, or `None` if this class is `std.core.Object`.
+     * @throws MisMatchException if there is a type mismatch.
+     * @throws InfoNotFoundException if superclass information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop superClass: Option<ClassTypeInfo>
     
     /**
-    * Returns the collection of sealed subclasses of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ClassTypeInfo` objects for the direct sealed subclasses of this class.
+     * @returns A collection of `ClassTypeInfo` objects for the sealed subclasses.
+     * @throws InfoNotFoundException if subclass information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop sealedSubclasses: Collection<ClassTypeInfo>
     
     /**
-    * Creates a new instance of class with corresponding type for incoming args.
-    *
-    * @param args parameter list.
-    *
-    * @throw IllegalTypeException, if this class ia abstract.
-    * @throw MisMatchException, if no public constructor is found to construct new instance.
-    * @throw InvocationTargetException, if an exception is thrown when the constructor is called to construct the instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new instance of this class by invoking the appropriate constructor with the given arguments.
+     * @param args An array of arguments to be passed to the constructor.
+     * @returns A new instance of the class.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws InfoNotFoundException if constructor information cannot be found.
+     * @throws InvocationTargetException if the constructor throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func construct(args: Array<Any>): Any
     
     /**
-    * Returns true if type info is 'public', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the class is declared as `open`.
+     * @returns `true` if the class is `open`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isOpen(): Bool
     
     /**
-    * Returns true if type info is 'abstract', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the class is declared as `abstract`.
+     * @returns `true` if the class is `abstract`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAbstract(): Bool
     
     /**
-    * Returns true if type info is 'sealed', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the class is declared as `sealed`.
+     * @returns `true` if the class is `sealed`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isSealed(): Bool
     
     /**
-    * Searches the type info's public constructor by incoming parameter types.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `ConstructorInfo` for the constructor with the specified parameter types.
+     * @param parameterTypes An array of `TypeInfo` objects representing the parameter types of the constructor.
+     * @returns The `ConstructorInfo` for the matching constructor.
+     * @throws InfoNotFoundException if a matching constructor is not found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getConstructor(parameterTypes: Array<TypeInfo>): ConstructorInfo
     
     /**
-    * Searches the type info's public instance variable by incoming name.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `InstanceVariableInfo` for the instance variable with the specified name.
+     * @param name The name of the instance variable.
+     * @returns The `InstanceVariableInfo` for the matching instance variable.
+     * @throws InfoNotFoundException if a matching instance variable is not found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getInstanceVariable(name: String): InstanceVariableInfo
     
     /**
-    * Searches the type info's public static variable by incoming name.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `StaticVariableInfo` for the static variable with the specified name.
+     * @param name The name of the static variable.
+     * @returns The `StaticVariableInfo` for the matching static variable.
+     * @throws InfoNotFoundException if a matching static variable is not found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getStaticVariable(name: String): StaticVariableInfo
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description The base class for exceptions thrown by the reflection API.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class ReflectException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a `ReflectException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a `ReflectException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class InfoNotFoundException <: ReflectException {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class MisMatchException <: ReflectException {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class IllegalSetException <: ReflectException {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class IllegalTypeException <: ReflectException {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class InvocationTargetException <: ReflectException {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class GenericTypeInfo <: TypeInfo & Equatable<GenericTypeInfo> {
-    @!APILevel[since: "22"]
-    public operator func ==(that: GenericTypeInfo): Bool
 }
 
 /**
-* Contains the reflective information about instance functions.
-*/
-@!APILevel[since: "22"]
+ * @description Thrown when a requested reflective element (such as a class, method, or field) cannot be found.
+ */
+@!APILevel[
+    since: "22"
+]
+public class InfoNotFoundException <: ReflectException {
+    /**
+     * @description Constructs an `InfoNotFoundException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs an `InfoNotFoundException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Thrown to indicate a mismatch between an expected type and an actual type in a reflective operation.
+ */
+@!APILevel[
+    since: "22"
+]
+public class MisMatchException <: ReflectException {
+    /**
+     * @description Constructs a `MisMatchException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs a `MisMatchException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Thrown when an attempt to set a field's value is denied, for example, when trying to modify a non-mutable property.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IllegalSetException <: ReflectException {
+    /**
+     * @description Constructs an `IllegalSetException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs an `IllegalSetException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Thrown when a reflective operation encounters an incorrect or inappropriate type.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IllegalTypeException <: ReflectException {
+    /**
+     * @description Constructs an `IllegalTypeException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs an `IllegalTypeException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description A wrapper exception for any exception thrown by an invoked method or constructor.
+ */
+@!APILevel[
+    since: "22"
+]
+public class InvocationTargetException <: ReflectException {
+    /**
+     * @description Constructs an `InvocationTargetException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs an `InvocationTargetException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Provides reflection information about a generic type parameter.
+ */
+@!APILevel[
+    since: "22"
+]
+public class GenericTypeInfo <: TypeInfo & Equatable<GenericTypeInfo> {
+    /**
+     * @description Compares this `GenericTypeInfo` to another object for equality.
+     * @param other The object to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: GenericTypeInfo): Bool
+}
+
+/**
+ * @description Provides reflection information about an instance function (method).
+ */
+@!APILevel[
+    since: "22"
+]
 public class InstanceFunctionInfo <: Equatable<InstanceFunctionInfo> & Hashable & ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `GenericTypeInfo` objects for the generic parameters of this function.
+     * @returns A collection of `GenericTypeInfo` objects.
+     * @throws InfoNotFoundException if generic parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop genericParams: Collection<GenericTypeInfo>
     
     /**
-    * Returns the name of instance function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the function.
+     * @returns The function name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the list of parameters of instance function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a read-only list of `ParameterInfo` objects for the parameters of this function.
+     * @returns A read-only list of `ParameterInfo` objects.
+     * @throws InfoNotFoundException if parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop parameters: ReadOnlyList<ParameterInfo>
     
     /**
-    * Returns the return type of instance function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the return type of this function.
+     * @returns The `TypeInfo` for the return type.
+     * @throws InfoNotFoundException if return type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop returnType: TypeInfo
     
     /**
-    * Returns the collection of modifiers of instance function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this function.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns the collection of annotations of instance function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this function.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Returns true if instance function is 'public', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the function is declared as `open`.
+     * @returns `true` if the function is `open`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isOpen(): Bool
     
     /**
-    * Returns true if instance function is 'abstract', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the function is declared as `abstract`.
+     * @returns `true` if the function is `abstract`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAbstract(): Bool
     
     /**
-    * Makes a call of public instance function with incoming args for incoming instance.
-    *
-    * @param args parameter list.
-    *
-    * @throw IllegalArgumentException, if the number of input parameters is different from the number of invoked function parameters.
-    * @throw IllegalTypeException, if the input parameter type does not match the required parameter type.
-    * @throw InvocationTargetException, if an exception is thrown when the function is abstract.
-    */
-    @!APILevel[since: "22"]
+     * @description Invokes the function on the specified instance with the given arguments.
+     * @param instance The object instance on which to invoke the function.
+     * @param args An array of arguments to pass to the function.
+     * @returns The result of the function invocation.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalArgumentException if the number of arguments in args is not equal to the number of parameters in 
+     *         the parameter list of the instance member function corresponding to the instance member function information.
+     * @throws InvocationTargetException if the invoked function throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(instance: Any, args: Array<Any>): Any
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Invokes the generic function on the specified instance with the given generic type arguments and arguments.
+     * @param instance The object instance on which to invoke the function.
+     * @param genericTypeArgs An array of `TypeInfo` objects for the generic type arguments.
+     * @param args An array of arguments to pass to the function.
+     * @returns The result of the function invocation.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     * @throws IllegalArgumentException if an argument is invalid.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws InvocationTargetException if the invoked function throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(instance: Any, genericTypeArgs: Array<TypeInfo>, args: Array<Any>): Any
     
     /**
-    * Searches the instance function's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this function.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: InstanceFunctionInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this function.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: InstanceFunctionInfo): Bool
+    /**
+     * @description Gets all annotations present on this function.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `InstanceFunctionInfo` to another for equality.
+     * @param other The other `InstanceFunctionInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: InstanceFunctionInfo): Bool
+    
+    /**
+     * @description Compares this `InstanceFunctionInfo` to another for inequality.
+     * @param other The other `InstanceFunctionInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: InstanceFunctionInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `InstanceFunctionInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `InstanceFunctionInfo`.
+     * @returns A string representation of the function.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about static functions.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a static function.
+ */
+@!APILevel[
+    since: "22"
+]
 public class StaticFunctionInfo <: Equatable<StaticFunctionInfo> & Hashable & ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `GenericTypeInfo` objects for the generic parameters of this function.
+     * @returns A collection of `GenericTypeInfo` objects.
+     * @throws InfoNotFoundException if generic parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop genericParams: Collection<GenericTypeInfo>
     
     /**
-    * Returns the name of static function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the function.
+     * @returns The function name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the list of parameters of static function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a read-only list of `ParameterInfo` objects for the parameters of this function.
+     * @returns A read-only list of `ParameterInfo` objects.
+     * @throws InfoNotFoundException if parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop parameters: ReadOnlyList<ParameterInfo>
     
     /**
-    * Returns the return type of static function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the return type of this function.
+     * @returns The `TypeInfo` for the return type.
+     * @throws InfoNotFoundException if return type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop returnType: TypeInfo
     
     /**
-    * Returns the collection of modifiers of static function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this function.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns the collection of annotations of static function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this function.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Makes a call of static function with incoming args.
-    *
-    * @param args parameter list.
-    *
-    * @throw IllegalArgumentException, if the number of input parameters is different from the number of invoked function parameters.
-    * @throw IllegalTypeException, if the input parameter type does not match the required parameter type.
-    */
-    @!APILevel[since: "22"]
+     * @description Invokes the static function with the given arguments.
+     * @param thisType The type on which the static function is defined.
+     * @param args An array of arguments to pass to the function.
+     * @returns The result of the function invocation.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalArgumentException if thisType is inconsistent with the function signature of this static function.
+     * @throws InvocationTargetException if the invoked function throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(thisType: TypeInfo, args: Array<Any>): Any
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Invokes the generic static function with the given generic type arguments and arguments.
+     * @param thisType The type on which the static function is defined.
+     * @param genericTypeArgs An array of `TypeInfo` objects for the generic type arguments.
+     * @param args An array of arguments to pass to the function.
+     * @returns The result of the function invocation.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalArgumentException if thisType is inconsistent with the function signature of this static function.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     * @throws InvocationTargetException if the invoked function throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(thisType: TypeInfo, genericTypeArgs: Array<TypeInfo>, args: Array<Any>): Any
     
     /**
-    * Searches the static function's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this function.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: StaticFunctionInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this function.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: StaticFunctionInfo): Bool
+    /**
+     * @description Gets all annotations present on this function.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `StaticFunctionInfo` to another for equality.
+     * @param other The other `StaticFunctionInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: StaticFunctionInfo): Bool
+    
+    /**
+     * @description Compares this `StaticFunctionInfo` to another for inequality.
+     * @param other The other `StaticFunctionInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: StaticFunctionInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `StaticFunctionInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `StaticFunctionInfo`.
+     * @returns A string representation of the function.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about instance properties.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about an instance property.
+ */
+@!APILevel[
+    since: "22"
+]
 public class InstancePropertyInfo <: Equatable<InstancePropertyInfo> & Hashable & ToString {
     /**
-    * Returns the name of instance property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the property.
+     * @returns The property name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the return type of instance property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the type of this property.
+     * @returns The `TypeInfo` for the property's type.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfo: TypeInfo
     
     /**
-    * Returns the collection of modifiers of instance property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this property.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns the collection of annotations of instance property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this property.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Returns true if instance property is 'public', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the property is declared as `open`.
+     * @returns `true` if the property is `open`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isOpen(): Bool
     
     /**
-    * Returns true if instance property is 'abstract', false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the property is declared as `abstract`.
+     * @returns `true` if the property is `abstract`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAbstract(): Bool
     
     /**
-    * Returns true if instance property is 'mut' and typeInfo is not struct
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the property is mutable (declared with `mut`).
+     * @returns `true` if the property is mutable, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isMutable(): Bool
     
     /**
-    * Returns the instance property's value for incoming instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the value of this property from the specified instance.
+     * @param instance The object instance from which to get the property value.
+     * @returns The value of the property.
+     * @throws IllegalTypeException if the runtime type of the instance is not strictly the same as the type 
+     *         that the instance member property corresponding to the instance member property information belongs to.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getValue(instance: Any): Any
     
     /**
-    * Updates the instance property's value with incoming new value for incoming instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Sets the value of this property on the specified instance.
+     * @param instance The object instance on which to set the property value.
+     * @param newValue The new value for the property.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalSetException if the property is not mutable.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setValue(instance: Any, newValue: Any): Unit
     
     /**
-    * Searches the instance property's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this property.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: InstancePropertyInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this property.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: InstancePropertyInfo): Bool
+    /**
+     * @description Gets all annotations present on this property.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `InstancePropertyInfo` to another for equality.
+     * @param other The other `InstancePropertyInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: InstancePropertyInfo): Bool
+    
+    /**
+     * @description Compares this `InstancePropertyInfo` to another for inequality.
+     * @param other The other `InstancePropertyInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: InstancePropertyInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `InstancePropertyInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `InstancePropertyInfo`.
+     * @returns A string representation of the property.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about static properties.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a static property.
+ */
+@!APILevel[
+    since: "22"
+]
 public class StaticPropertyInfo <: Equatable<StaticPropertyInfo> & Hashable & ToString {
     /**
-    * Returns the name of static property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the property.
+     * @returns The property name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the return type of static property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the type of this property.
+     * @returns The `TypeInfo` for the property's type.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfo: TypeInfo
     
     /**
-    * Returns the collection of modifiers of static property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this property.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns the collection of annotations of static property.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this property.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Returns true if static property is 'mut' and typeInfo is not struct
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the property is mutable (declared with `mut`).
+     * @returns `true` if the property is mutable, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isMutable(): Bool
     
     /**
-    * Returns the instance property's value for incoming instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the value of this static property.
+     * @returns The value of the property.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws InfoNotFoundException if the property information cannot be found.
+     * @throws InvocationTargetException if the property getter throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getValue(): Any
     
     /**
-    * Updates the instance property's value with incoming new value for incoming instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Sets the value of this static property.
+     * @param newValue The new value for the property.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalSetException if the property is not mutable.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setValue(newValue: Any): Unit
     
     /**
-    * Searches the static property's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this property.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: StaticPropertyInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this property.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: StaticPropertyInfo): Bool
+    /**
+     * @description Gets all annotations present on this property.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `StaticPropertyInfo` to another for equality.
+     * @param other The other `StaticPropertyInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: StaticPropertyInfo): Bool
+    
+    /**
+     * @description Compares this `StaticPropertyInfo` to another for inequality.
+     * @param other The other `StaticPropertyInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: StaticPropertyInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `StaticPropertyInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `StaticPropertyInfo`.
+     * @returns A string representation of the property.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about constructors.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a class constructor.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ConstructorInfo <: Equatable<ConstructorInfo> & Hashable & ToString {
     /**
-    * Returns the list of parameters of constructor.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a read-only list of `ParameterInfo` objects for the parameters of this constructor.
+     * @returns A read-only list of `ParameterInfo` objects.
+     * @throws InfoNotFoundException if parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop parameters: ReadOnlyList<ParameterInfo>
     
     /**
-    * Returns the collection of annotations of constructor.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this constructor.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Makes a call of constructor with incoming args.
-    *
-    * @param args parameter list.
-    *
-    * @throw IllegalArgumentException, if the number of input parameters is different from the number of invoked function parameters.
-    * @throw IllegalTypeException, if the input parameter type does not match the required parameter type.
-    * @throw InvocationTargetException, if the constructor is abstract
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new instance by invoking this constructor with the given arguments.
+     * @param args An array of arguments to pass to the constructor.
+     * @returns A new instance of the class.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalArgumentException if the number of actual parameters in args is not equal to the number of 
+     *         formal parameters in the parameter list of the constructor corresponding to this constructor information.
+     * @throws InvocationTargetException if the constructor throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(args: Array<Any>): Any
     
     /**
-    * Searches the constructor's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this constructor.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: ConstructorInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this constructor.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: ConstructorInfo): Bool
+    /**
+     * @description Gets all annotations present on this constructor.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `ConstructorInfo` to another for equality.
+     * @param other The other `ConstructorInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: ConstructorInfo): Bool
+    
+    /**
+     * @description Compares this `ConstructorInfo` to another for inequality.
+     * @param other The other `ConstructorInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: ConstructorInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `ConstructorInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `ConstructorInfo`.
+     * @returns A string representation of the constructor.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about global functions.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a global function.
+ */
+@!APILevel[
+    since: "22"
+]
 public class GlobalFunctionInfo <: Equatable<GlobalFunctionInfo> & Hashable & ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `GenericTypeInfo` objects for the generic parameters of this function.
+     * @returns A collection of `GenericTypeInfo` objects.
+     * @throws InfoNotFoundException if generic parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop genericParams: Collection<GenericTypeInfo>
     
-    // Function name, overloaded functions have the same function name
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the name of the function.
+     * @returns The function name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the list of parameters of global function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a read-only list of `ParameterInfo` objects for the parameters of this function.
+     * @returns A read-only list of `ParameterInfo` objects.
+     * @throws InfoNotFoundException if parameter information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop parameters: ReadOnlyList<ParameterInfo>
     
     /**
-    * Returns the return type of global function.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the return type of this function.
+     * @returns The `TypeInfo` for the return type.
+     * @throws InfoNotFoundException if return type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop returnType: TypeInfo
     
-    // Annotation, when there is no data, size is 0. Note that this api does not guarantee a constant traversal order.
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this function.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop modifiers: Collection<ModifierInfo>
+    
+    /**
+     * @description Gets a collection of annotations present on this function.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Makes a call of global function with incoming args.
-    *
-    * @param args parameter list.
-    *
-    * @throw IllegalArgumentException, if the number of input parameters is different from the number of invoked function parameters.
-    * @throw IllegalTypeException, if the input parameter type does not match the required parameter type.
-    * @throw InvocationTargetException, if then generic parameter check failed.
-    */
-    @!APILevel[since: "22"]
+     * @description Invokes the global function with the given arguments.
+     * @param args An array of arguments to pass to the function.
+     * @returns The result of the function invocation.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalArgumentException if the number of actual parameters in args is not equal to the number of 
+     *         formal parameters in the formal parameter list of the global function corresponding to the global function information GlobalFunctionInfo.
+     * @throws InvocationTargetException if the invoked function throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(args: Array<Any>): Any
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Invokes the generic global function with the given generic type arguments and arguments.
+     * @param genericTypeArgs An array of `TypeInfo` objects for the generic type arguments.
+     * @param args An array of arguments to pass to the function.
+     * @returns The result of the function invocation.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     * @throws IllegalArgumentException if The number of parameters in the function generic parameter list 
+     *         genericTypeArgs is not equal to the number of parameters in the generic parameter list genericParams of the global function corresponding to the global function information.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws InvocationTargetException if the invoked function throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func apply(genericTypeArgs: Array<TypeInfo>, args: Array<Any>): Any
     
-    // Get the annotation by name, return None if not found
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+    /**
+     * @description Finds an annotation of the specified type `T` on this function.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: GlobalFunctionInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this function.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: GlobalFunctionInfo): Bool
+    /**
+     * @description Gets all annotations present on this function.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `GlobalFunctionInfo` to another for equality.
+     * @param other The other `GlobalFunctionInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: GlobalFunctionInfo): Bool
+    
+    /**
+     * @description Compares this `GlobalFunctionInfo` to another for inequality.
+     * @param other The other `GlobalFunctionInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: GlobalFunctionInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `GlobalFunctionInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `GlobalFunctionInfo`.
+     * @returns A string representation of the function.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains reflective information about interfaces.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about an interface type.
+ */
+@!APILevel[
+    since: "22"
+]
 public class InterfaceTypeInfo <: TypeInfo {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `InterfaceTypeInfo` for an interface with the specified qualified name.
+     * @param qualifiedName The fully qualified name of the interface.
+     * @returns The `InterfaceTypeInfo` object for the interface.
+     * @throws InfoNotFoundException if the interface information cannot be found.
+     * @throws IllegalTypeException if the type is not an interface.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public redef static func get(qualifiedName: String): InterfaceTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `InterfaceTypeInfo` for the runtime type of the given object, if it's an interface.
+     * @param a The object to get the interface information from.
+     * @returns The `InterfaceTypeInfo` for the object's type.
+     * @throws InfoNotFoundException if the interface information cannot be found.
+     * @throws IllegalTypeException if the type is not an interface.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public redef static func of(a: Any): InterfaceTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `InterfaceTypeInfo` for the specified interface type `T`, if it's an interface.
+     * @returns The `InterfaceTypeInfo` for type `T`.
+     * @throws InfoNotFoundException if the interface information cannot be found.
+     * @throws IllegalTypeException if the type is not an interface.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public redef static func of<T>(): InterfaceTypeInfo
     
     /**
-    * Returns the collection of sealed subtypes of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `TypeInfo` objects for the direct sealed subtypes of this interface.
+     * @returns A collection of `TypeInfo` objects for the sealed subtypes.
+     * @throws InfoNotFoundException if subtype information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop sealedSubtypes: Collection<TypeInfo>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the interface is declared as `sealed`.
+     * @returns `true` if the interface is `sealed`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isSealed(): Bool
 }
 
 /**
-* Contains the reflective information about modifiers.
-*/
-@!APILevel[since: "22"]
+ * @description Represents language modifiers like `open`, `static`, etc.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum ModifierInfo <: Equatable<ModifierInfo> & Hashable & ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description The `open` modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Open |
-    @!APILevel[since: "22"]
+    /**
+     * @description The `override` modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Override |
-    @!APILevel[since: "22"]
+    /**
+     * @description The `redef` modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Redef |
-    @!APILevel[since: "22"]
+    /**
+     * @description The `abstract` modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Abstract |
-    @!APILevel[since: "22"]
+    /**
+     * @description The `sealed` modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Sealed |
-    @!APILevel[since: "22"]
+    /**
+     * @description The `mut` modifier for mutable properties.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Mut |
-    @!APILevel[since: "22"]
+    /**
+     * @description The `static` modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Static
-    @!APILevel[since: "22"]
-    public override operator func == (that: ModifierInfo): Bool
+    /**
+     * @description Compares this `ModifierInfo` to another for equality.
+     * @param other The other `ModifierInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public override operator func == (other: ModifierInfo): Bool
     
-    @!APILevel[since: "22"]
-    public override operator func != (that: ModifierInfo): Bool
+    /**
+     * @description Compares this `ModifierInfo` to another for inequality.
+     * @param other The other `ModifierInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public override operator func != (other: ModifierInfo): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Computes the hash code for this `ModifierInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `ModifierInfo`.
+     * @returns A string representation of the modifier.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func toString(): String
 }
 
 /**
-* Contains the reflective information about packages.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a package.
+ */
+@!APILevel[
+    since: "22"
+]
 public class PackageInfo <: Equatable<PackageInfo> & Hashable & ToString {
-    // Return a specified packageInfo from the loaded dynamic module
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PackageInfo` for a package with the specified qualified name.
+     * @param qualifiedName The fully qualified name of the package.
+     * @returns The `PackageInfo` object for the package.
+     * @throws InfoNotFoundException if the package information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func get(qualifiedName: String): PackageInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Loads a package from the specified path and returns its `PackageInfo`.
+     * @param path The file system path to the package.
+     * @returns The `PackageInfo` object for the loaded package.
+     * @throws ReflectException if shared library loading fails or shared libraries with the same package name, or the same file name are loaded repeatedly,
+     *         or there are multiple Packages inside the shared library
+     * @throws IllegalArgumentException if path is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func load(path: String): PackageInfo
     
-    // package name with prefix// returns "a.b.c" when the package name is "a.b.c"
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the fully qualified name of the package.
+     * @returns The qualified name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop qualifiedName: String
     
-    // current package name// returns "c" when the package name is "a.b.c"
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the simple name of the package.
+     * @returns The simple name.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    // Get all type information of the current package
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `TypeInfo` objects for all types within this package.
+     * @returns A collection of `TypeInfo` objects.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfos: Collection<TypeInfo>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the version of the package.
+     * @returns The package version string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop version: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `PackageInfo` objects for the sub-packages of this package.
+     * @returns A collection of `PackageInfo` objects.
+     * @throws InfoNotFoundException if sub-package information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop subPackages: Collection<PackageInfo>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PackageInfo` for the parent package of this package.
+     * @returns The `PackageInfo` for the parent package.
+     * @throws InfoNotFoundException if the parent package information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop parentPackage: PackageInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PackageInfo` for the root package of this package hierarchy.
+     * @returns The `PackageInfo` for the root package.
+     * @throws InfoNotFoundException if the root package information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop rootPackage: PackageInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PackageInfo` for a sub-package with the specified qualified name.
+     * @param qualifiedName The qualified name of the sub-package.
+     * @returns The `PackageInfo` for the sub-package.
+     * @throws IllegalArgumentException if qualifiedName is invalid.
+     * @throws InfoNotFoundException if the sub-package information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSubPackage(qualifiedName: String): PackageInfo
     
-    // Get all global variable information of the current package
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `GlobalVariableInfo` objects for the global variables in this package.
+     * @returns A collection of `GlobalVariableInfo` objects.
+     * @throws InfoNotFoundException if variable information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop variables: Collection<GlobalVariableInfo>
     
-    // Get all global function information of the current package
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of `GlobalFunctionInfo` objects for the global functions in this package.
+     * @returns A collection of `GlobalFunctionInfo` objects.
+     * @throws InfoNotFoundException if function information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop functions: Collection<GlobalFunctionInfo>
     
-    // lookup type information, return None if// Unable to look up the generic type
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `TypeInfo` for a type with the specified qualified name within this package.
+     * @param qualifiedTypeName The qualified name of the type.
+     * @returns The `TypeInfo` for the type.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getTypeInfo(qualifiedTypeName: String): TypeInfo
     
-    // Find the global variable, return None if not found or the type does not match
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `GlobalVariableInfo` for a global variable with the specified name in this package.
+     * @param name The name of the global variable.
+     * @returns The `GlobalVariableInfo` for the variable.
+     * @throws InfoNotFoundException if the variable information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getVariable(name: String): GlobalVariableInfo
     
-    // Find the global function, return None if not found or the type does not match// Could not find generic function
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `GlobalFunctionInfo` for a global function with the specified name and parameter types.
+     * @param name The name of the global function.
+     * @param parameterTypes An array of `TypeInfo` objects for the parameter types.
+     * @returns The `GlobalFunctionInfo` for the function.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getFunction(name: String, parameterTypes: Array<TypeInfo>): GlobalFunctionInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets all `GlobalFunctionInfo` objects for global functions with the specified name (handling overloads).
+     * @param name The name of the global functions.
+     * @returns An array of `GlobalFunctionInfo` objects.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getFunctions(name: String): Array<GlobalFunctionInfo>
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: PackageInfo): Bool
+    /**
+     * @description Compares this `PackageInfo` to another for equality.
+     * @param other The other `PackageInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: PackageInfo): Bool
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: PackageInfo): Bool
+    /**
+     * @description Compares this `PackageInfo` to another for inequality.
+     * @param other The other `PackageInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: PackageInfo): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Computes the hash code for this `PackageInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `PackageInfo`.
+     * @returns A string representation of the package.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about parameters.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a function or constructor parameter.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ParameterInfo <: Equatable<ParameterInfo> & Hashable & ToString {
     /**
-    * Returns the index of parameter.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the index of the parameter in the parameter list.
+     * @returns The parameter index.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop index: Int64
     
     /**
-    * Returns the name of parameter.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the parameter.
+     * @returns The parameter name.
+     * @throws InfoNotFoundException if the parameter name is not available.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop name: String
     
     /**
-    * Returns the return type of parameter.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the type of this parameter.
+     * @returns The `TypeInfo` for the parameter's type.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfo: TypeInfo
     
     /**
-    * Returns the collection of annotations of parameter.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this parameter.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Searches the parameter's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this parameter.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: ParameterInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this parameter.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: ParameterInfo): Bool
+    /**
+     * @description Gets all annotations present on this parameter.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `ParameterInfo` to another for equality.
+     * @param other The other `ParameterInfo` to compare with.
+     * @returns `true` if the objects are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: ParameterInfo): Bool
+    
+    /**
+     * @description Compares this `ParameterInfo` to another for inequality.
+     * @param other The other `ParameterInfo` to compare with.
+     * @returns `true` if the objects are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: ParameterInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `ParameterInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `ParameterInfo`.
+     * @returns A string representation of the parameter.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains reflective information about primitive types.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a primitive type (e.g., `Int32`, `Bool`).
+ */
+@!APILevel[
+    since: "22"
+]
 public class PrimitiveTypeInfo <: TypeInfo {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PrimitiveTypeInfo` for a primitive type with the specified qualified name.
+     * @param qualifiedName The qualified name of the primitive type.
+     * @returns The `PrimitiveTypeInfo` object for the type.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     * @throws IllegalTypeException if the type is not a primitive.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static redef func get(qualifiedName: String): PrimitiveTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PrimitiveTypeInfo` for the runtime type of the given value.
+     * @param a The value to get the type information from.
+     * @returns The `PrimitiveTypeInfo` for the value's type.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     * @throws IllegalTypeException if the type is not a primitive.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static redef func of(a: Any): PrimitiveTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `PrimitiveTypeInfo` for the specified primitive type `T`.
+     * @returns The `PrimitiveTypeInfo` for type `T`.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     * @throws IllegalTypeException if the type is not a primitive.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static redef func of<T>(): PrimitiveTypeInfo
 }
 
 /**
-* Contains reflective information about structs.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a struct type.
+ */
+@!APILevel[
+    since: "22"
+]
 public class StructTypeInfo <: TypeInfo {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `StructTypeInfo` for a struct with the specified qualified name.
+     * @param qualifiedName The fully qualified name of the struct.
+     * @returns The `StructTypeInfo` object for the struct.
+     * @throws InfoNotFoundException if the struct information cannot be found.
+     * @throws IllegalTypeException if the type is not a struct.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static redef func get(qualifiedName: String): StructTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `StructTypeInfo` for the runtime type of the given value.
+     * @param a The value to get the struct information from.
+     * @returns The `StructTypeInfo` for the value's type.
+     * @throws InfoNotFoundException if the struct information cannot be found.
+     * @throws IllegalTypeException if the type is not a struct.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static redef func of(a: Any): StructTypeInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `StructTypeInfo` for the specified struct type `T`.
+     * @returns The `StructTypeInfo` for type `T`.
+     * @throws InfoNotFoundException if the struct information cannot be found.
+     * @throws IllegalTypeException if the type is not a struct.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static redef func of<T>(): StructTypeInfo
     
     /**
-    * Returns the collection of public constructors of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ConstructorInfo` objects for the public constructors of this struct.
+     * @returns A collection of `ConstructorInfo` objects.
+     * @throws InfoNotFoundException if constructor information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop constructors: Collection<ConstructorInfo>
     
     /**
-    * Returns the collection of public instance variables of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `InstanceVariableInfo` objects for the fields of this struct.
+     * @returns A collection of `InstanceVariableInfo` objects.
+     * @throws InfoNotFoundException if field information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop instanceVariables: Collection<InstanceVariableInfo>
     
     /**
-    * Returns the collection of public static variables of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `StaticVariableInfo` objects for the static variables of this struct.
+     * @returns A collection of `StaticVariableInfo` objects.
+     * @throws InfoNotFoundException if static variable information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop staticVariables: Collection<StaticVariableInfo>
     
     /**
-    * Creates a new instance struct with corresponding type for incoming args.
-    *
-    * @param args parameter list.
-    *
-    * @throw MisMatchException, if no public constructor is found to construct new instance.
-    * @throw InvocationTargetException, if an exception is thrown when the constructor is called to construct the instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new instance of this struct by invoking the appropriate constructor with the given arguments.
+     * @param args An array of arguments to be passed to the constructor.
+     * @returns A new instance of the struct.
+     * @throws InvocationTargetException if the constructor throws an exception.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func construct(args: Array<Any>): Any
     
     /**
-    * Searches the type info's public constructor by incoming parameter types.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `ConstructorInfo` for the constructor with the specified parameter types.
+     * @param parameterTypes An array of `TypeInfo` objects representing the parameter types of the constructor.
+     * @returns The `ConstructorInfo` for the matching constructor.
+     * @throws InfoNotFoundException if a matching constructor is not found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getConstructor(parameterTypes: Array<TypeInfo>): ConstructorInfo
     
     /**
-    * Searches the type info's public instance variable by incoming name.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `InstanceVariableInfo` for the field with the specified name.
+     * @param name The name of the field.
+     * @returns The `InstanceVariableInfo` for the matching field.
+     * @throws InfoNotFoundException if a matching field is not found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getInstanceVariable(name: String): InstanceVariableInfo
     
     /**
-    * Searches the type info's public static variable by incoming name.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `StaticVariableInfo` for the static variable with the specified name.
+     * @param name The name of the static variable.
+     * @returns The `StaticVariableInfo` for the matching static variable.
+     * @throws InfoNotFoundException if a matching static variable is not found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getStaticVariable(name: String): StaticVariableInfo
 }
 
 /**
-* This file defines the `toAny` methods for each primitive type.
-*/
-extend Object {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Int64 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend IntNative {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Int32 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Int16 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Int8 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend UInt64 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend UIntNative {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend UInt32 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend UInt16 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend UInt8 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Float64 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Float32 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Float16 {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Bool {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Rune {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend Unit {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-extend<Object> Array<Object> {
-    @!APILevel[since: "22"]
-    public func toAny(): Any
-}
-
-/**
-* Contains the reflective information that is common for classes, interfaces, structs and primitive types.
-*/
+ * @description Provides reflection information about a type. This is the base class for all type information classes.
+ */
+@!APILevel[
+    since: "22"
+]
 sealed abstract class TypeInfo <: Equatable<TypeInfo> & Hashable & ToString {
     /**
-    * Creates the certain type info by generic type T.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the specified generic type `T`.
+     * @returns The `TypeInfo` object for type `T`.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of<T>(): TypeInfo
     
     /**
-    * Creates the certain type info for incoming instance with 'Any' type.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the runtime type of the given object.
+     * @param a The object to get the type information from.
+     * @returns The `TypeInfo` for the object's type.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(a: Any): TypeInfo
     
     /**
-    * Creates the class type info for incoming instance with 'Object' type.
-    */
-    @Deprecated[message: "Use 'ClassTypeInfo.get(Object)' instead."]
-    @!APILevel[since: "22"]
+     * @description Gets the `ClassTypeInfo` for the runtime class of the given object.
+     * @param a The object to get the class information from.
+     * @returns The `ClassTypeInfo` for the object's class.
+     * @throws InfoNotFoundException if the class information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(a: Object): ClassTypeInfo
     
     /**
-    * Searches and creates the certain type info by incoming qualified name.
-    * If no corresponding type information for incoming qualified name is found, the exception is thrown.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for a type with the specified qualified name.
+     * @param qualifiedName The fully qualified name of the type.
+     * @returns The `TypeInfo` object for the type.
+     * @throws InfoNotFoundException if the type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func get(qualifiedName: String): TypeInfo
     
     /**
-    * Returns the simple name of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the simple name of the type.
+     * @returns The simple name of the type.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the qualified name of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the fully qualified name of the type.
+     * @returns The fully qualified name of the type.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop qualifiedName: String
     
     /**
-    * Returns the collection of public instance functions of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `InstanceFunctionInfo` objects for the instance functions of this type.
+     * @returns A collection of `InstanceFunctionInfo` objects.
+     * @throws InfoNotFoundException if function information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop instanceFunctions: Collection<InstanceFunctionInfo>
     
     /**
-    * Returns the list of public static functions of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `StaticFunctionInfo` objects for the static functions of this type.
+     * @returns A collection of `StaticFunctionInfo` objects.
+     * @throws InfoNotFoundException if function information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop staticFunctions: Collection<StaticFunctionInfo>
     
     /**
-    * Returns the collection of public instance properties of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `InstancePropertyInfo` objects for the instance properties of this type.
+     * @returns A collection of `InstancePropertyInfo` objects.
+     * @throws InfoNotFoundException if property information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop instanceProperties: Collection<InstancePropertyInfo>
     
     /**
-    * Returns the collection of public static properties of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `StaticPropertyInfo` objects for the static properties of this type.
+     * @returns A collection of `StaticPropertyInfo` objects.
+     * @throws InfoNotFoundException if property information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop staticProperties: Collection<StaticPropertyInfo>
     
     /**
-    * Returns the collection of annotations of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this type.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Returns the collection of super interfaces of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `InterfaceTypeInfo` objects for the interfaces implemented by this type.
+     * @returns A collection of `InterfaceTypeInfo` objects.
+     * @throws InfoNotFoundException if interface information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop superInterfaces: Collection<InterfaceTypeInfo>
     
     /**
-    * Returns the collection of modifiers of type info.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this type.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns true, if current type info is subtype of incoming type info, false otherwise.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this type is a subtype of the specified supertype.
+     * @param supertype The `TypeInfo` of the potential supertype.
+     * @returns `true` if this type is a subtype of `supertype`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isSubtypeOf(supertype: TypeInfo): Bool
     
     /**
-    * Searches the type info's public instance function by incoming name and parameter types.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `InstanceFunctionInfo` for an instance function with the specified name and parameter types.
+     * @param name The name of the instance function.
+     * @param parameterTypes An array of `TypeInfo` objects for the parameter types.
+     * @returns The `InstanceFunctionInfo` for the function.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getInstanceFunction(name: String, parameterTypes: Array<TypeInfo>): InstanceFunctionInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets all `InstanceFunctionInfo` objects for instance functions with the specified name (handling overloads).
+     * @param name The name of the instance functions.
+     * @returns An array of `InstanceFunctionInfo` objects.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getInstanceFunctions(name: String): Array<InstanceFunctionInfo>
     
     /**
-    * Searches the type info's public static function by incoming name and parameter types.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `StaticFunctionInfo` for a static function with the specified name and parameter types.
+     * @param name The name of the static function.
+     * @param parameterTypes An array of `TypeInfo` objects for the parameter types.
+     * @returns The `StaticFunctionInfo` for the function.
+     * @throws InfoNotFoundException if the function information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getStaticFunction(name: String, parameterTypes: Array<TypeInfo>): StaticFunctionInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets all `StaticFunctionInfo` objects for static functions with the specified name (handling overloads).
+     * @param name The name of the static functions.
+     * @returns An array of `StaticFunctionInfo` objects.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getStaticFunctions(name: String): Array<StaticFunctionInfo>
     
     /**
-    * Searches the type info's public instance property by incoming name and signature.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `InstancePropertyInfo` for an instance property with the specified name.
+     * @param name The name of the instance property.
+     * @returns The `InstancePropertyInfo` for the property.
+     * @throws InfoNotFoundException if the property information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getInstanceProperty(name: String): InstancePropertyInfo
     
     /**
-    * Searches the type info's public static property by incoming name and signature.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `StaticPropertyInfo` for a static property with the specified name.
+     * @param name The name of the static property.
+     * @returns The `StaticPropertyInfo` for the property.
+     * @throws InfoNotFoundException if the property information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getStaticProperty(name: String): StaticPropertyInfo
     
     /**
-    * Searches the type info's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T>
+     * @description Finds an annotation of the specified type `T` on this type.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: TypeInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this type.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: TypeInfo): Bool
+    /**
+     * @description Gets all annotations present on this type.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `TypeInfo` to another for equality.
+     * @param other The other `TypeInfo` to compare with.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: TypeInfo): Bool
+    
+    /**
+     * @description Compares this `TypeInfo` to another for inequality.
+     * @param other The other `TypeInfo` to compare with.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: TypeInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `TypeInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `TypeInfo`.
+     * @returns A string representation of the type.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-
-
+/**
+ * @description A type alias representing an annotation. All annotation types must be subtypes of `Object`.
+ */
+@!APILevel[
+    since: "22"
+]
 public type Annotation = Object
 
 /**
-* Parses the input string as a TypeInfo array
-*
-* @param parameterTypes the parameter type part of the function type.
-* It does not contain the parameter name, default value, or outermost parenthesis.
-* @return TypeInfo array converted from a parameter type string.
-*
-* @throws IllegalArgumentException if the input string does not comply with the specifications
-*/
-@!APILevel[since: "22"]
+ * @description Parses a string of comma-separated qualified type names into an array of `TypeInfo` objects.
+ * @param parameters A string containing the qualified names of parameter types.
+ * @returns An array of `TypeInfo` objects.
+ * @throws InfoNotFoundException if a type name cannot be resolved.
+ * @throws IllegalArgumentException if an argument is invalid.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func parseParameterTypes(parameters: String): Array<TypeInfo>
 
 /**
-* Contains the reflective information about instance variables.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about an instance variable (field).
+ */
+@!APILevel[
+    since: "22"
+]
 public class InstanceVariableInfo <: Equatable<InstanceVariableInfo> & Hashable & ToString {
     /**
-    * Returns the name of instance variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the instance variable.
+     * @returns The name of the variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the return type of instance variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the type of this instance variable.
+     * @returns The `TypeInfo` for the variable's type.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfo: TypeInfo
     
     /**
-    * Returns the collection of modifiers of instance variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this instance variable.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns the collection of annotations of instance variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this instance variable.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Returns true if instance variable is 'mut' and typeInfo is not struct
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the instance variable is mutable (declared with `mut`).
+     * @returns `true` if the variable is mutable, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isMutable(): Bool
     
     /**
-    * Returns the instance variable's value for incoming instance.
-    *
-    * @throw IllegalTypeException, if the input instance type is different from the instance which this InstanceVariableInfo belong to.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the value of this instance variable from the specified instance.
+     * @param instance The object instance from which to get the variable's value.
+     * @returns The value of the variable.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getValue(instance: Any): Any
     
     /**
-    * Updates the instance variable's value with incoming new value for incoming instance.
-    *
-    * @param instance which the member variable belongs.
-    * @param newValue new value to set.
-    *
-    * @throw IllegalSetException, if the instance variable is immutable.
-    * @throw IllegalTypeException, if the input newValue type is different from the instance variable type.
-    * @throw UnsupportedException, if this variable is struct
-    * @throw IllegalTypeException, if the input instance type is different from the instance which this InstanceVariableInfo belong to.
-    */
-    @!APILevel[since: "22"]
+     * @description Sets the value of this instance variable on the specified instance.
+     * @param instance The object instance on which to set the variable's value.
+     * @param newValue The new value for the variable.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalSetException if the variable is not mutable.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setValue(instance: Any, newValue: Any): Unit
     
     /**
-    * Searches the instance variable's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this instance variable.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: InstanceVariableInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this instance variable.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: InstanceVariableInfo): Bool
+    /**
+     * @description Gets all annotations present on this instance variable.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `InstanceVariableInfo` to another for equality.
+     * @param other The other `InstanceVariableInfo` to compare with.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: InstanceVariableInfo): Bool
+    
+    /**
+     * @description Compares this `InstanceVariableInfo` to another for inequality.
+     * @param other The other `InstanceVariableInfo` to compare with.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: InstanceVariableInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `InstanceVariableInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `InstanceVariableInfo`.
+     * @returns A string representation of the instance variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about static variables.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a static variable.
+ */
+@!APILevel[
+    since: "22"
+]
 public class StaticVariableInfo <: Equatable<StaticVariableInfo> & Hashable & ToString {
     /**
-    * Returns the name of static variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the static variable.
+     * @returns The name of the variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
     /**
-    * Returns the return type of static variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the `TypeInfo` for the type of this static variable.
+     * @returns The `TypeInfo` for the variable's type.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfo: TypeInfo
     
     /**
-    * Returns the collection of modifiers of static variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of `ModifierInfo` enums representing the modifiers of this static variable.
+     * @returns A collection of `ModifierInfo` enums.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop modifiers: Collection<ModifierInfo>
     
     /**
-    * Returns the collection of annotations of static variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets a collection of annotations present on this static variable.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
     /**
-    * Returns true if static variable is 'mut' and typeInfo is not struct
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the static variable is mutable (declared with `mut`).
+     * @returns `true` if the variable is mutable, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isMutable(): Bool
     
     /**
-    * Returns the static variable's value.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the value of this static variable.
+     * @returns The value of the variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getValue(): Any
     
     /**
-    * Updates the static variable's value with incoming new value.
-    *
-    * @param newValue new value to set.
-    *
-    * @throw IllegalSetException, if the static variable is immutable.
-    * @throw UnsupportedException, if this variable is struct
-    * @throw IllegalTypeException, if the input newValue type is different from the static variable type.
-    */
-    @!APILevel[since: "22"]
+     * @description Sets the value of this static variable.
+     * @param newValue The new value for the variable.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalSetException if the variable is not mutable.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setValue(newValue: Any): Unit
     
     /**
-    * Searches the static variable's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this static variable.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: StaticVariableInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this static variable.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: StaticVariableInfo): Bool
+    /**
+     * @description Gets all annotations present on this static variable.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `StaticVariableInfo` to another for equality.
+     * @param other The other `StaticVariableInfo` to compare with.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: StaticVariableInfo): Bool
+    
+    /**
+     * @description Compares this `StaticVariableInfo` to another for inequality.
+     * @param other The other `StaticVariableInfo` to compare with.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: StaticVariableInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `StaticVariableInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `StaticVariableInfo`.
+     * @returns A string representation of the static variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Contains the reflective information about global variables.
-*/
-@!APILevel[since: "22"]
+ * @description Provides reflection information about a global variable.
+ */
+@!APILevel[
+    since: "22"
+]
 public class GlobalVariableInfo <: Equatable<GlobalVariableInfo> & Hashable & ToString {
     /**
-    * Returns the name of global variable.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the name of the global variable.
+     * @returns The name of the variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    // variable type
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the `TypeInfo` for the type of this global variable.
+     * @returns The `TypeInfo` for the variable's type.
+     * @throws InfoNotFoundException if type information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop typeInfo: TypeInfo
     
-    // Annotation, when there is no data, size is 0. Note that this api does not guarantee a constant traversal order.
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a collection of annotations present on this global variable.
+     * @returns A collection of `Annotation` objects.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop annotations: Collection<Annotation>
     
-    // Whether it is a variable modified by var and typeInfo is not struct. Calling setValue on a variable modified by let will throw an exception.
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the global variable is mutable (declared with `mut`).
+     * @returns `true` if the variable is mutable, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isMutable(): Bool
     
-    // get variable value
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the value of this global variable.
+     * @returns The value of the variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getValue(): Any
     
     /**
-    * Updates the global variable's value with incoming new value.
-    *
-    * @param newValue new value to set.
-    *
-    * @throw IllegalSetException, if the global variable is immutable.
-    * @throw IllegalTypeException, if the input newValue type is different from the global variable type.
-    */
-    @!APILevel[since: "22"]
+     * @description Sets the value of this global variable.
+     * @param newValue The new value for the variable.
+     * @throws IllegalTypeException if a type is invalid for an operation.
+     * @throws IllegalSetException if the variable is not mutable.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setValue(newValue: Any): Unit
     
     /**
-    * Searches the global variable's annotation by incoming name.
-    */
-    @!APILevel[since: "22"]
-    public func findAnnotation<T>(): Option<T> where T <: Annotation
+     * @description Finds an annotation of the specified type `T` on this global variable.
+     * @returns An `Option` containing the annotation if present, otherwise `None`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func findAnnotation<T>(): ?T where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func ==(that: GlobalVariableInfo): Bool
+    /**
+     * @description Finds all annotations of the specified type `T` on this global variable.
+     * @returns An array of all annotations of type `T`.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func findAllAnnotations<T>(): Array<T> where T <: Annotation
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: GlobalVariableInfo): Bool
+    /**
+     * @description Gets all annotations present on this global variable.
+     * @returns An array containing all annotations.
+     * @throws InfoNotFoundException if annotation information cannot be found.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getAllAnnotations(): Array<Annotation>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this `GlobalVariableInfo` to another for equality.
+     * @param other The other `GlobalVariableInfo` to compare with.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: GlobalVariableInfo): Bool
+    
+    /**
+     * @description Compares this `GlobalVariableInfo` to another for inequality.
+     * @param other The other `GlobalVariableInfo` to compare with.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: GlobalVariableInfo): Bool
+    
+    /**
+     * @description Computes the hash code for this `GlobalVariableInfo`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this `GlobalVariableInfo`.
+     * @returns A string representation of the global variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 

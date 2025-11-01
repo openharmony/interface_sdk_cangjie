@@ -1,97 +1,157 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.span
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.native_struct.*
 import ohos.arkui.component.util.*
 import ohos.base.*
-import ohos.resource.*
 import ohos.labels.APILevel
+import ohos.resource.*
 
-
-
+/**
+ * Define the BaseSpan interface, contains the common methods of span.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Span <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(value: ResourceStr)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontSize(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontStyle(value: FontStyle): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontWeight(value: FontWeight): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontFamily(value: ResourceStr): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func decoration(decorationType!: TextDecorationType, color!: ResourceColor = Color.Black): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func letterSpacing(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func textCase(value: TextCase): This
-}
+public abstract class BaseSpan <: UINodeBase {}
 
+/**
+ * Defines Span Component.
+ * A component for displaying formatted text segments within a Text component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+public class Span <: BaseSpan {
+/**
+ * Called when text is entered in span.
+ * Creates a span with the specified text content.
+ *
+ * @param { ?ResourceStr } value - The text content of the span.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(value: ?ResourceStr)
+
+/**
+ * Called when the font size is set.
+ * Sets the font size for the text in the span.
+ *
+ * @param { ?Length } value - The font size.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontSize(value: ?Length): This
+
+/**
+ * Called when the font color is set.
+ * Sets the font color for the text in the span.
+ *
+ * @param { ?ResourceColor } value - The font color.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontColor(value: ?ResourceColor): This
+
+/**
+ * Called when the font style of a font is set.
+ * Sets the font style (normal or italic) for the text in the span.
+ *
+ * @param { ?FontStyle } value - The font style.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontStyle(value: ?FontStyle): This
+
+/**
+ * Called when the font weight is set.
+ * Sets the font weight (thickness) for the text in the span.
+ *
+ * @param { ?FontWeight } value - The font weight.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontWeight(value: ?FontWeight): This
+
+/**
+ * Called when the font list of text is set.
+ * Sets the font family for the text in the span.
+ *
+ * @param { ?ResourceStr } value - The font family.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontFamily(value: ?ResourceStr): This
+
+/**
+ * Called when the text decoration of the text is set.
+ * Sets the text decoration (e.g., underline, strikethrough) for the text in the span.
+ *
+ * @param { ?TextDecorationType } value - The type of text decoration.
+ * @param { ?ResourceColor } [color] - The color of the text decoration.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func decoration(value!: ?TextDecorationType, color!: ?ResourceColor = None): This
+
+/**
+ * Called when the distance between text fonts is set.
+ * Sets the letter spacing (tracking) for the text in the span.
+ *
+ * @param { ?Length } value - The letter spacing.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func letterSpacing(value: ?Length): This
+
+/**
+ * Called when the type of letter in the text font is set.
+ * Sets the text case transformation (e.g., uppercase, lowercase) for the text in the span.
+ *
+ * @param { ?TextCase } value - The text case.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func textCase(value: ?TextCase): This
+
+/**
+ * Called when a click event occurs.
+ * Sets the click event handler for the span.
+ *
+ * @param { ?(ClickEvent) -> Unit } event - The click event handler.
+ * @returns { This } Returns Span component instance itself.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onClick(event: ?(ClickEvent) -> Unit): This
+}

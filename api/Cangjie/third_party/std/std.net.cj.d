@@ -1,13 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.net
 
 import std.binary.SwapEndianOrder
@@ -25,1407 +15,2572 @@ import std.io.*
 import std.time.*
 import std.math.*
 
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+/**
+ * @description Represents a network address family.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct AddressFamily <: ToString & Equatable<AddressFamily> {
-    // UNSPEC
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Unspecified address family.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const UNSPEC: AddressFamily = AddressFamily("UNSPEC", 0)
     
-    // UNIX
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Unix domain sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const UNIX: AddressFamily = AddressFamily("UNIX", 1)
     
-    // INET
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Internet Protocol version 4 (IPv4).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const INET: AddressFamily = AddressFamily("INET", 2)
     
-    // INET6
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Internet Protocol version 6 (IPv6).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const INET6: AddressFamily = AddressFamily("INET6", 10)
     
-    // NETLINK
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Netlink sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const NETLINK: AddressFamily = AddressFamily("NETLINK", 16)
     
-    // name
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The name of the address family (e.g., "INET").
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let name: String
     
-    // value
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The numeric value corresponding to the address family.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let value: UInt16
     
-    // init
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs an `AddressFamily` with a specified name and value.
+     * @param name The name of the address family.
+     * @param value The numeric value of the address family.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public const init(name: String, value: UInt16)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: AddressFamily): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: AddressFamily): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toString(): String
-}
-
-sealed abstract class IPAddress <: ToString & Equatable<IPAddress> & Hashable & BigEndianOrder<IPAddress> {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop size: Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop hostName: ?String
-    
-    // parse a address string into IPAddress
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func parse(s: String): IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func tryParse(s: String): ?IPAddress
-    
-    // resolve domain
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func resolve(family: AddressFamily, domain: String): Array<IPAddress>
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func resolve(domain: String): Array<IPAddress>
-    
-    // get addr bytes
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getAddressBytes(): Array<Byte>
-    
-    // is ipv4 addr
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isIPv4(): Bool
-    
-    // is ipv6 addr
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isIPv6(): Bool
-    
-    // either the IPv4 address "0.0.0.0" or the IPv6 address "::".
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func isUnspecified(): Bool
-    
-    // Requirements for Internet Hosts -- Communication Layers (3.2.1.3 Addressing)// https://www.rfc-editor.org/rfc/rfc1122.html#section-3.2.1.3
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func isLoopback(): Bool
-    
-    // Host Extensions for IP Multicasting (4. HOST GROUP ADDRESSES)// https://www.rfc-editor.org/rfc/rfc1112.html#section-4
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func isMulticast(): Bool
-    
-    // RFC 1918 allocates 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16 as// private IPv4 address subnets.
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func isPrivate(): Bool
-    
-    // Dynamic Configuration of IPv4 Link-Local Addresses// https://www.rfc-editor.org/rfc/rfc3927.html#section-2.1
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func isLinkLocal(): Bool
-    
-    // Whether the address is a global unicast IPv6 address or a public IPv4 address
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func isGlobalUnicast(): Bool
-    
-    // Obtains the IP prefix object based on the prefix length.
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func getPrefix(prefixLen: UInt8): IPPrefix
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func writeBigEndian(buffer: Array<Byte>): Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func readBigEndian(buffer: Array<Byte>): IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: IPAddress): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: IPAddress): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func hashCode(): Int64
-}
-
-
-
-sealed abstract class IPPrefix <: Equatable<IPPrefix> & Hashable & ToString {
-    // IPAddress
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop address: IPAddress
-    
-    // prefix length
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop prefixLength: UInt8
-    
-    // Parse the IP address prefix from the character string. If the IP address prefix is invalid, IllegalFormatException is thrown.
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func parse(s: String): IPPrefix
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func tryParse(s: String): ?IPPrefix
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func contains(rhs: IPAddress): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func contains(rhs: IPPrefix): Bool
-    
-    // Overlap with the Specified IP Network
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func overlaps(rhs: IPPrefix): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func netmask(): IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func hostmask(): IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func broadcast(): IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func network(): IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public open func masked(): IPPrefix
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: IPPrefix): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: IPPrefix): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toString(): String
-}
-
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class IPSocketAddress <: SocketAddress & Equatable<IPSocketAddress> {
-    // init with byte array and port
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(address: Array<Byte>, port: UInt16)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(address: String, port: UInt16)
-    
-    // init by IPAddress and port
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(address: IPAddress, port: UInt16)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop size: Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop family: AddressFamily
+    /**
+     * @description Checks if this `AddressFamily` is equal to another.
+     * @param other The `AddressFamily` to compare against.
+     * @returns `true` if the address families are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: AddressFamily): Bool
     
     /**
-    * Parses the socket address in text format, for example, 192.168.0.0:80 or [fc00::1]:8080.
-    * If the parsing fails, an exception is thrown.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func parse(s: String): IPSocketAddress
+     * @description Checks if this `AddressFamily` is not equal to another.
+     * @param other The `AddressFamily` to compare against.
+     * @returns `true` if the address families are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: AddressFamily): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func tryParse(s: String): ?IPSocketAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop address: IPAddress
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop port: UInt16
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getAddressBytes(): Array<Byte>
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isIPv4(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isIPv6(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: IPSocketAddress): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: IPSocketAddress): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func hashCode(): Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the address family.
+     * @returns The name of the address family.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
-}
-
-// ref https://www.rfc-editor.org/rfc/rfc791.html
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class IPv4Address <: IPAddress & ToString & Equatable<IPv4Address> & LessOrEqual<IPv4Address> {
-    // An IPv4 address with the address pointing to localhost: `127.0.0.1`
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static let localhost: IPv4Address = IPv4Address(0x7F, 0, 0, 0x01)
-    
-    // An IPv4 address representing an unspecified address: `0.0.0.0`
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static let unspecified: IPv4Address = IPv4Address(0, 0, 0, 0)
-    
-    // An IPv4 address representing the broadcast address: `255.255.255.255`
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static let broadcast: IPv4Address = IPv4Address(0xFF, 0xFF, 0xFF, 0xFF)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(bits: UInt32)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(a: Byte, b: Byte, c: Byte, d: Byte)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toBits(): UInt32
-    
-    // into in_addr
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func writeBigEndian(buffer: Array<Byte>): Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func readBigEndian(buffer: Array<Byte>): IPv4Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isBroadcast(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isGlobalUnicast(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isLinkLocal(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isLoopback(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isMulticast(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isPrivate(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isUnspecified(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toIPv6Compatible(): IPv6Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toIPv6Mapped(): IPv6Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getPrefix(prefixLen: UInt8): IPPrefix
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func <=(rhs: IPv4Address): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: IPv4Address): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: IPv4Address): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toString(): String
-}
-
-extend<T> Array<T> where T <: LessOrEqual<T> {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func <=(rhs: Array<T>): Bool
-}
-
-// ref https://www.rfc-editor.org/rfc/rfc4291.html
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class IPv6Address <: IPAddress & ToString & Equatable<IPv6Address> & LessOrEqual<IPv6Address> {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static let localhost: IPv6Address = IPv6Address(0u16, 0, 0, 0, 0, 0, 0, 1)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static let unspecified: IPv6Address = IPv6Address(0u16, 0, 0, 0, 0, 0, 0, 0)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(octets: Array<Byte>, scopeId!: ?UInt32 = None)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(a: UInt16, b: UInt16, c: UInt16, d: UInt16, e: UInt16, f: UInt16, g: UInt16, h: UInt16,
-        scopeId!: ?UInt32 = None)
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop scopeId: ?UInt32
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getPrefix(prefixLen: UInt8): IPPrefix
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toIPv4(): ?IPv4Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toIPv4Mapped(): ?IPv4Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func scope(scopeId: ?UInt32): IPv6Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func writeBigEndian(buffer: Array<Byte>): Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public static func readBigEndian(buffer: Array<Byte>): IPv6Address
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isGlobalUnicast(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isIPv4Mapped(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isLinkLocal(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isLoopback(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isMulticast(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isPrivate(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isTeredo(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isUnspecified(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func <=(rhs: IPv6Address): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: IPv6Address): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: IPv6Address): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toString(): String
-}
-
-
-extend<T> Result<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func toString(): String
-}
-
-
-
-sealed abstract class SocketAddress <: ToString & Equatable<SocketAddress> & Hashable {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop size: Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public prop family: AddressFamily
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getAddressBytes(): Array<Byte>
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: SocketAddress): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: SocketAddress): Bool
 }
 
 /**
-* Represents a socket that works in streaming mode. It is a duplex stream having both read and write operations.
-*
-* A streaming socket could be bound and connected. The remote and local address could be determined via the corresponding properties.
-* Read and write operations can optionally have completion time limit.
-*
-* A streaming socket does send bytes sequentially (possibly batching by packets), the order or incoming and outgoing bytes is always considered
-* and kept. The actuall streaming socket implementation usually has buffers for reading and writing.
-*
-* The read function copies some incoming bytes to the specified buffer, the actual amount of bytes per invocation is generally unpredictable
-* and depends on many factors like the buffer size, the underlying buffer size, timing and the operating system and it's implementation.
-* Every time read() function is invoked, a batch of bytes (at least one byte) is copied and the bytes are remembered as read.
-* So the next read invocation can only receive remaining bytes. If there are no unprocessed incoming bytes yet, the read operation blocks until
-* any bytes arrives (or timeout limit exceeded).
-* The write operation works in a similar way: writing buffer does copy and schedule bytes for sending. If the underlying buffer capacity is not enough
-* or we are writing bytes faster then they are transferred, then the write operation may block until some buffer space get freed or the timeout limit exceeded.
-*
-* The order of bytes and batches/packets is always preserved in both read and write direction.
-* However, the timing and the number of batches is not guaranteed to remain the same during transferring, only the total number of bytes and the content.
-* For example, a peer sends 10 bytes and then 15 more bytes. The remote peer could receive these bytes in two pieces (10 then 15 bytes) or
-* it may receive all bytes at once (25 bytes) depending on timing, network strucuture and many other reasons.
-*
-* A streaming socket is usually (but not necessarily) connected to a stream of unknown/unpredictable size
-* so the length property inherited from InputStream returns -1 for such sockets.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Represents an IP address (both IPv4 and IPv6). This is the base class for `IPv4Address` and `IPv6Address`.
+ */
+@!APILevel[
+    since: "22"
+]
+sealed abstract class IPAddress <: ToString & Equatable<IPAddress> & Hashable & BigEndianOrder<IPAddress> {
+    /**
+     * @description The size of the IP address in bytes (4 for IPv4, 16 for IPv6).
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop size: Int64
+    
+    /**
+     * @description The host name associated with the IP address, if available.
+     * @throws UnsupportedException if the host name cannot be resolved.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public prop hostName: ?String
+    
+    /**
+     * @description Parses a string representation of an IP address.
+     * @param s The string to parse.
+     * @returns An `IPAddress` object.
+     * @throws IllegalArgumentException if the string is not a valid IP address.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func parse(s: String): IPAddress
+    
+    /**
+     * @description Tries to parse a string representation of an IP address, returning `None` on failure.
+     * @param s The string to parse.
+     * @returns An optional `IPAddress` object; `None` if parsing fails.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static func tryParse(s: String): ?IPAddress
+    
+    /**
+     * @description Resolves a domain name to an array of IP addresses for a specific address family.
+     * @param family The address family to resolve (e.g., `AddressFamily.INET`).
+     * @param domain The domain name to resolve.
+     * @returns An array of `IPAddress` objects.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public static func resolve(family: AddressFamily, domain: String): Array<IPAddress>
+    
+    /**
+     * @description Resolves a domain name to an array of IP addresses, trying all supported address families.
+     * @param domain The domain name to resolve.
+     * @returns An array of `IPAddress` objects.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public static func resolve(domain: String): Array<IPAddress>
+    
+    /**
+     * @description Gets the raw byte representation of the IP address.
+     * @returns An array of bytes representing the address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func getAddressBytes(): Array<Byte>
+    
+    /**
+     * @description Checks if this is an IPv4 address.
+     * @returns `true` if it is an IPv4 address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isIPv4(): Bool
+    
+    /**
+     * @description Checks if this is an IPv6 address.
+     * @returns `true` if it is an IPv6 address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isIPv6(): Bool
+    
+    /**
+     * @description Checks if this is the unspecified "any" address.
+     * @returns `true` if the address is unspecified, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func isUnspecified(): Bool
+    
+    /**
+     * @description Checks if this is a loopback address.
+     * @returns `true` if it is a loopback address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func isLoopback(): Bool
+    
+    /**
+     * @description Checks if this is a multicast address.
+     * @returns `true` if it is a multicast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func isMulticast(): Bool
+    
+    /**
+     * @description Checks if this is a private (site-local) address.
+     * @returns `true` if it is a private address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func isPrivate(): Bool
+    
+    /**
+     * @description Checks if this is a link-local address.
+     * @returns `true` if it is a link-local address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func isLinkLocal(): Bool
+    
+    /**
+     * @description Checks if this is a global unicast address.
+     * @returns `true` if it is a global unicast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func isGlobalUnicast(): Bool
+    
+    /**
+     * @description Creates an `IPPrefix` from this address and a given prefix length.
+     * @param prefixLen The length of the network prefix.
+     * @returns An `IPPrefix` object.
+     * @throws IllegalArgumentException if the size of prefixLen is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public open func getPrefix(prefixLen: UInt8): IPPrefix
+    
+    /**
+     * @description Writes the IP address to a buffer in big-endian byte order.
+     * @param buffer The destination byte array.
+     * @returns The number of bytes written.
+     * @throws IllegalArgumentException if the buffer is too small to write the value.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public open func writeBigEndian(buffer: Array<Byte>): Int64
+    
+    /**
+     * @description Reads an IP address from a buffer in big-endian byte order.
+     * @param buffer The source byte array.
+     * @returns An `IPAddress` object.
+     * @throws IllegalArgumentException if the buffer is too small to read the value.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func readBigEndian(buffer: Array<Byte>): IPAddress
+    
+    /**
+     * @description Checks if this `IPAddress` is equal to another.
+     * @param other The `IPAddress` to compare against.
+     * @returns `true` if the addresses are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: IPAddress): Bool
+    
+    /**
+     * @description Checks if this `IPAddress` is not equal to another.
+     * @param other The `IPAddress` to compare against.
+     * @returns `true` if the addresses are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: IPAddress): Bool
+    
+    /**
+     * @description Computes the hash code for this `IPAddress`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func hashCode(): Int64
+}
+
+/**
+ * @description Represents an IP network prefix, consisting of an IP address and a prefix length (e.g., 192.168.1.0/24).
+ */
+@!APILevel[
+    since: "22"
+]
+sealed abstract class IPPrefix <: Equatable<IPPrefix> & Hashable & ToString {
+    /**
+     * @description The IP address part of the prefix.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop address: IPAddress
+    
+    /**
+     * @description The length of the network prefix in bits.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop prefixLength: UInt8
+    
+    /**
+     * @description Parses a string representation of an IP prefix (e.g., "192.168.1.0/24").
+     * @param s The string to parse.
+     * @returns An `IPPrefix` object.
+     * @throws IllegalFormatException if the string format is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func parse(s: String): IPPrefix
+    
+    /**
+     * @description Tries to parse a string representation of an IP prefix, returning `None` on failure.
+     * @param s The string to parse.
+     * @returns An optional `IPPrefix` object; `None` if parsing fails.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static func tryParse(s: String): ?IPPrefix
+    
+    /**
+     * @description Checks if the given `IPAddress` is contained within this network prefix.
+     * @param other The `IPAddress` to check.
+     * @returns `true` if the address is within the prefix, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func contains(other: IPAddress): Bool
+    
+    /**
+     * @description Checks if the given `IPPrefix` is completely contained within this network prefix.
+     * @param other The `IPPrefix` to check.
+     * @returns `true` if the other prefix is a sub-prefix of this one, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func contains(other: IPPrefix): Bool
+    
+    /**
+     * @description Checks if this network prefix overlaps with another one.
+     * @param other The `IPPrefix` to check for overlap.
+     * @returns `true` if the prefixes overlap, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func overlaps(other: IPPrefix): Bool
+    
+    /**
+     * @description Calculates the netmask for this prefix.
+     * @returns An `IPAddress` representing the netmask.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func netmask(): IPAddress
+    
+    /**
+     * @description Calculates the hostmask for this prefix.
+     * @returns An `IPAddress` representing the hostmask.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func hostmask(): IPAddress
+    
+    /**
+     * @description Calculates the broadcast address for this prefix.
+     * @returns An `IPAddress` representing the broadcast address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func broadcast(): IPAddress
+    
+    /**
+     * @description Calculates the network address for this prefix.
+     * @returns An `IPAddress` representing the network address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func network(): IPAddress
+    
+    /**
+     * @description Returns a new `IPPrefix` with the address masked by the prefix length.
+     * @returns A new, masked `IPPrefix`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public open func masked(): IPPrefix
+    
+    /**
+     * @description Checks if this `IPPrefix` is equal to another.
+     * @param other The `IPPrefix` to compare against.
+     * @returns `true` if the prefixes are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: IPPrefix): Bool
+    
+    /**
+     * @description Checks if this `IPPrefix` is not equal to another.
+     * @param other The `IPPrefix` to compare against.
+     * @returns `true` if the prefixes are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: IPPrefix): Bool
+    
+    /**
+     * @description Returns a string representation of the IP prefix.
+     * @returns A string in the format "address/prefixLength".
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toString(): String
+}
+
+/**
+ * @description Represents a socket address, combining an IP address and a port number.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IPSocketAddress <: SocketAddress & Equatable<IPSocketAddress> {
+    /**
+     * @description Creates an `IPSocketAddress` from a raw byte array and a port.
+     * @param address The IP address as a byte array.
+     * @param port The port number.
+     * @throws IllegalArgumentException if arguments are invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(address: Array<Byte>, port: UInt16)
+    
+    /**
+     * @description Creates an `IPSocketAddress` from a string representation of an IP address and a port.
+     * @param address The IP address as a string.
+     * @param port The port number.
+     * @throws IllegalFormatException if the address format is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(address: String, port: UInt16)
+    
+    /**
+     * @description Creates an `IPSocketAddress` from an `IPAddress` object and a port.
+     * @param address The `IPAddress` object.
+     * @param port The port number.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(address: IPAddress, port: UInt16)
+    
+    /**
+     * @description The size of the socket address structure in bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop size: Int64
+    
+    /**
+     * @description The address family of the socket address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop family: AddressFamily
+    
+    /**
+     * @description Parses a string representation of a socket address (e.g., "127.0.0.1:8080").
+     * @param s The string to parse.
+     * @returns An `IPSocketAddress` object.
+     * @throws IllegalFormatException if the string format is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func parse(s: String): IPSocketAddress
+    
+    /**
+     * @description Tries to parse a string representation of a socket address, returning `None` on failure.
+     * @param s The string to parse.
+     * @returns An optional `IPSocketAddress` object; `None` if parsing fails.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static func tryParse(s: String): ?IPSocketAddress
+    
+    /**
+     * @description The `IPAddress` part of the socket address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop address: IPAddress
+    
+    /**
+     * @description The port number of the socket address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop port: UInt16
+    
+    /**
+     * @description Gets the raw byte representation of the IP address part.
+     * @returns An array of bytes representing the IP address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func getAddressBytes(): Array<Byte>
+    
+    /**
+     * @description Checks if the IP address is an IPv4 address.
+     * @returns `true` if it is an IPv4 address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isIPv4(): Bool
+    
+    /**
+     * @description Checks if the IP address is an IPv6 address.
+     * @returns `true` if it is an IPv6 address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isIPv6(): Bool
+    
+    /**
+     * @description Checks if this `IPSocketAddress` is equal to another.
+     * @param other The `IPSocketAddress` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: IPSocketAddress): Bool
+    
+    /**
+     * @description Checks if this `IPSocketAddress` is not equal to another.
+     * @param other The `IPSocketAddress` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: IPSocketAddress): Bool
+    
+    /**
+     * @description Computes the hash code for this `IPSocketAddress`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func hashCode(): Int64
+    
+    /**
+     * @description Returns a string representation of the socket address.
+     * @returns A string in the format "address:port".
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toString(): String
+}
+
+/**
+ * @description Represents an Internet Protocol version 4 (IPv4) address.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IPv4Address <: IPAddress & ToString & Equatable<IPv4Address> & LessOrEqual<IPv4Address> {
+    /**
+     * @description The standard loopback address: 127.0.0.1.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static let localhost: IPv4Address = IPv4Address(0x7F, 0, 0, 0x01)
+    
+    /**
+     * @description The unspecified "any" address: 0.0.0.0.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static let unspecified: IPv4Address = IPv4Address(0, 0, 0, 0)
+    
+    /**
+     * @description The broadcast address: 255.255.255.255.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static let broadcast: IPv4Address = IPv4Address(0xFF, 0xFF, 0xFF, 0xFF)
+    
+    /**
+     * @description Constructs an `IPv4Address` from a 32-bit integer.
+     * @param bits The 32-bit integer representing the IPv4 address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(bits: UInt32)
+    
+    /**
+     * @description Constructs an `IPv4Address` from four byte octets.
+     * @param a The first octet.
+     * @param b The second octet.
+     * @param c The third octet.
+     * @param d The fourth octet.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(a: Byte, b: Byte, c: Byte, d: Byte)
+    
+    /**
+     * @description Converts the `IPv4Address` to its 32-bit integer representation.
+     * @returns A `UInt32` representing the address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toBits(): UInt32
+    
+    /**
+     * @description Writes the IPv4 address to a buffer in big-endian byte order.
+     * @param buffer The destination byte array.
+     * @returns The number of bytes written (4).
+     * @throws IllegalArgumentException if the buffer is too small to write the value.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func writeBigEndian(buffer: Array<Byte>): Int64
+    
+    /**
+     * @description Reads an IPv4 address from a buffer in big-endian byte order.
+     * @param buffer The source byte array.
+     * @returns An `IPv4Address` object.
+     * @throws IllegalArgumentException if the buffer is too small to write the value. 
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func readBigEndian(buffer: Array<Byte>): IPv4Address
+    
+    /**
+     * @description Checks if this is the broadcast address (255.255.255.255).
+     * @returns `true` if it is the broadcast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isBroadcast(): Bool
+    
+    /**
+     * @description Checks if this is a global unicast address.
+     * @returns `true` if it is a global unicast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isGlobalUnicast(): Bool
+    
+    /**
+     * @description Checks if this is a link-local address (169.254.0.0/16).
+     * @returns `true` if it is a link-local address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isLinkLocal(): Bool
+    
+    /**
+     * @description Checks if this is a loopback address (127.0.0.0/8).
+     * @returns `true` if it is a loopback address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isLoopback(): Bool
+    
+    /**
+     * @description Checks if this is a multicast address (224.0.0.0/4).
+     * @returns `true` if it is a multicast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isMulticast(): Bool
+    
+    /**
+     * @description Checks if this is a private address (e.g., 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).
+     * @returns `true` if it is a private address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isPrivate(): Bool
+    
+    /**
+     * @description Checks if this is the unspecified "any" address (0.0.0.0).
+     * @returns `true` if the address is unspecified, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isUnspecified(): Bool
+    
+    /**
+     * @description Converts this IPv4 address to an IPv4-compatible IPv6 address.
+     * @returns An `IPv6Address` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toIPv6Compatible(): IPv6Address
+    
+    /**
+     * @description Converts this IPv4 address to an IPv4-mapped IPv6 address.
+     * @returns An `IPv6Address` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toIPv6Mapped(): IPv6Address
+    
+    /**
+     * @description Creates an `IPPrefix` from this address and a given prefix length.
+     * @param prefixLen The length of the network prefix (0-32).
+     * @returns An `IPPrefix` object.
+     * @throws IllegalArgumentException if the prefix length is > 32.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getPrefix(prefixLen: UInt8): IPPrefix
+    
+    /**
+     * @description Compares this `IPv4Address` with another to determine if it is less than or equal.
+     * @param other The `IPv4Address` to compare against.
+     * @returns `true` if this address is less than or equal to `rhs`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: IPv4Address): Bool
+    
+    /**
+     * @description Checks if this `IPv4Address` is equal to another.
+     * @param other The `IPv4Address` to compare against.
+     * @returns `true` if the addresses are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: IPv4Address): Bool
+    
+    /**
+     * @description Checks if this `IPv4Address` is not equal to another.
+     * @param other The `IPv4Address` to compare against.
+     * @returns `true` if the addresses are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: IPv4Address): Bool
+    
+    /**
+     * @description Returns a string representation of the IPv4 address.
+     * @returns A string in the format "a.b.c.d".
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toString(): String
+}
+
+/**
+ * @description Represents an Internet Protocol version 6 (IPv6) address.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IPv6Address <: IPAddress & ToString & Equatable<IPv6Address> & LessOrEqual<IPv6Address> {
+    /**
+     * @description The standard loopback address: ::1.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static let localhost: IPv6Address = IPv6Address(0u16, 0, 0, 0, 0, 0, 0, 1)
+    
+    /**
+     * @description The unspecified "any" address: ::.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static let unspecified: IPv6Address = IPv6Address(0u16, 0, 0, 0, 0, 0, 0, 0)
+    
+    /**
+     * @description Constructs an `IPv6Address` from a 16-byte array and an optional scope ID.
+     * @param octets The 16-byte array representing the IPv6 address.
+     * @param scopeId An optional scope ID for link-local addresses.
+     * @throws IllegalArgumentException if octets is less than 16.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(octets: Array<Byte>, scopeId!: ?UInt32 = None)
+    
+    /**
+     * @description Constructs an `IPv6Address` from eight 16-bit segments and an optional scope ID.
+     * @param a The first 16-bit segment.
+     * @param b The second 16-bit segment.
+     * @param c The third 16-bit segment.
+     * @param d The fourth 16-bit segment.
+     * @param e The fifth 16-bit segment.
+     * @param f The sixth 16-bit segment.
+     * @param g The seventh 16-bit segment.
+     * @param h The eighth 16-bit segment.
+     * @param scopeId An optional scope ID for link-local addresses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(a: UInt16, b: UInt16, c: UInt16, d: UInt16, e: UInt16, f: UInt16, g: UInt16, h: UInt16,
+        scopeId!: ?UInt32 = None)
+    
+    /**
+     * @description The scope ID of the address, used for link-local addresses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop scopeId: ?UInt32
+    
+    /**
+     * @description Creates an `IPPrefix` from this address and a given prefix length.
+     * @param prefixLen The length of the network prefix (0-128).
+     * @returns An `IPPrefix` object.
+     * @throws IllegalFormatException if the prefix length is > 128.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getPrefix(prefixLen: UInt8): IPPrefix
+    
+    /**
+     * @description Converts this IPv6 address to an `IPv4Address` if it is an IPv4-compatible or IPv4-mapped address.
+     * @returns An optional `IPv4Address`; `None` if it cannot be converted.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toIPv4(): ?IPv4Address
+    
+    /**
+     * @description Converts this IPv6 address to an `IPv4Address` if it is an IPv4-mapped address.
+     * @returns An optional `IPv4Address`; `None` if it's not an IPv4-mapped address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toIPv4Mapped(): ?IPv4Address
+    
+    /**
+     * @description Creates a new `IPv6Address` with a different scope ID.
+     * @param scopeId The new scope ID.
+     * @returns A new `IPv6Address` with the updated scope ID.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func scope(scopeId: ?UInt32): IPv6Address
+    
+    /**
+     * @description Writes the IPv6 address to a buffer in big-endian byte order.
+     * @param buffer The destination byte array.
+     * @returns The number of bytes written (16).
+     * @throws IllegalArgumentException if the buffer is too small to write the value.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func writeBigEndian(buffer: Array<Byte>): Int64
+    
+    /**
+     * @description Reads an IPv6 address from a buffer in big-endian byte order.
+     * @param buffer The source byte array.
+     * @returns An `IPv6Address` object.
+     * @throws IllegalArgumentException if the buffer is too small to read the value. 
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func readBigEndian(buffer: Array<Byte>): IPv6Address
+    
+    /**
+     * @description Checks if this is a global unicast address.
+     * @returns `true` if it is a global unicast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isGlobalUnicast(): Bool
+    
+    /**
+     * @description Checks if this is an IPv4-mapped address (::ffff:x:x).
+     * @returns `true` if it is an IPv4-mapped address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isIPv4Mapped(): Bool
+    
+    /**
+     * @description Checks if this is a link-local address (fe80::/10).
+     * @returns `true` if it is a link-local address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isLinkLocal(): Bool
+    
+    /**
+     * @description Checks if this is a loopback address (::1).
+     * @returns `true` if it is a loopback address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isLoopback(): Bool
+    
+    /**
+     * @description Checks if this is a multicast address (ff00::/8).
+     * @returns `true` if it is a multicast address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isMulticast(): Bool
+    
+    /**
+     * @description Checks if this is a private (unique local) address (fc00::/7).
+     * @returns `true` if it is a private address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isPrivate(): Bool
+    
+    /**
+     * @description Checks if this is a Teredo tunneling address (2001::/32).
+     * @returns `true` if it is a Teredo address, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isTeredo(): Bool
+    
+    /**
+     * @description Checks if this is the unspecified "any" address (::).
+     * @returns `true` if the address is unspecified, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isUnspecified(): Bool
+    
+    /**
+     * @description Compares this `IPv6Address` with another to determine if it is less than or equal.
+     * @param other The `IPv6Address` to compare against.
+     * @returns `true` if this address is less than or equal to `rhs`, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: IPv6Address): Bool
+    
+    /**
+     * @description Checks if this `IPv6Address` is equal to another.
+     * @param other The `IPv6Address` to compare against.
+     * @returns `true` if the addresses are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: IPv6Address): Bool
+    
+    /**
+     * @description Checks if this `IPv6Address` is not equal to another.
+     * @param other The `IPv6Address` to compare against.
+     * @returns `true` if the addresses are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: IPv6Address): Bool
+    
+    /**
+     * @description Returns a string representation of the IPv6 address.
+     * @returns A string in the canonical compressed format.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toString(): String
+}
+
+extend<T> Result<T> <: ToString where T <: ToString {
+    /**
+     * @description Returns a string representation of the `Result`.
+     * @returns A string representing the success or failure value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func toString(): String
+}
+
+/**
+ * @description Represents a generic socket address. This is the base class for specific socket address types like `IPSocketAddress`.
+ */
+@!APILevel[
+    since: "22"
+]
+sealed abstract class SocketAddress <: ToString & Equatable<SocketAddress> & Hashable {
+    /**
+     * @description The size of the socket address structure in bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop size: Int64
+    
+    /**
+     * @description The address family of the socket address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop family: AddressFamily
+    
+    /**
+     * @description Gets the raw byte representation of the socket address.
+     * @returns An array of bytes representing the address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func getAddressBytes(): Array<Byte>
+    
+    /**
+     * @description Checks if this `SocketAddress` is equal to another.
+     * @param other The `SocketAddress` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: SocketAddress): Bool
+    
+    /**
+     * @description Checks if this `SocketAddress` is not equal to another.
+     * @param other The `SocketAddress` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: SocketAddress): Bool
+}
+
+/**
+ * @description Represents a connected, stream-oriented socket (like TCP). Provides input and output streams.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface StreamingSocket <: IOStream & Resource & ToString {
     /**
-    * Local address the socket will be or currently is bound at.
-    *
-    * @throws SocketException is the socket is already closed
-    * or no local address is available (local address was not provided during creation and the socket is not connected).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The local address to which the socket is bound.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop localAddress: SocketAddress
     
     /**
-    * Remote address the socket will be or is currently connected to.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The remote address to which the socket is connected.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop remoteAddress: SocketAddress
     
     /**
-    * Read operation time limit or `None` for infinite read attempts.
-    * The value specified here is actually the minimal amount of time before a read operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    *
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for read operations. `None` means an infinite timeout.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut prop readTimeout: ?Duration
     
     /**
-    * Write operation time limit or `None` for infinite read attempts.
-    *
-    * The value specified here is actually the minimal amount of time before a write operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for write operations. `None` means an infinite timeout.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut prop writeTimeout: ?Duration
 }
 
 /**
-* Represents a socket that handles datagrams in both input and output directions.
-*
-* A datagram is a bytes message of a finite size (possibly empty).
-* Depending on the actual datagram socket kind, there is usually a maxmimal datagram size. For example, a UDP socket can handle up to 64KiB at once.
-*
-* A datagram is transferred at once while the order or datagrams is not guaranteed, only the order and content of bytes inside.
-* Unlike streaming socket, datagrams may arrive in different order or not arrive at all.
-* This is because datagrams are routed independently and possibly via different actual routes.
-* Also, datagram size is always preserved (if possible, see receive/receiveFrom). For example, a peer sends datagrams of 10 and 15 bytes. Then,
-* the remote peer receives bytes in batches of the same size, 10 bytes and 15 bytes.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Represents a datagram-oriented socket (like UDP).
+ */
+@!APILevel[
+    since: "22"
+]
 public interface DatagramSocket <: Resource & ToString {
     /**
-    * Local address the socket will be or currently is bound at.
-    *
-    * @throws SocketException is the socket is already closed
-    * or no local address is available (local address was not provided during creation and the socket is not connected).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The local address to which the socket is bound.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop localAddress: SocketAddress
     
     /**
-    * Remote address the socket is connected to or `None` if the socket is unconnected.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The remote address if the socket is connected.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop remoteAddress: ?SocketAddress
     
     /**
-    * Receive/ReceiveFrom operation time limit or `None` for infinite read attempts.
-    * The value specified here is actually the minimal amount of time before a read operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for receive operations. `None` means an infinite timeout.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut prop receiveTimeout: ?Duration
     
     /**
-    * Send/SendTo operation time limit or `None` for infinite read attempts.
-    *
-    * The value specified here is actually the minimal amount of time before a write operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for send operations. `None` means an infinite timeout.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut prop sendTimeout: ?Duration
     
     /**
-    * Receive the next datagram into the specified buffer waiting for data if needed.
-    *
-    * Returns a pair of the datagram sender address and the actual size of received datagram, possibly zero
-    * or a value greater than the passed buffer size.
-    *
-    * Unlike read in streams, this function requires a buffer of proper size (big enough),
-    * otherwise a datagram that is bigger than the provided buffer will be
-    * truncated and the returned datagram size will be greater that the buffer size.
-    *
-    * @throws SocketException if buffer is empty or if it is not possible to read the data.
-    * @throws SocketTimeoutException if reading time has expired
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Receives a datagram into a buffer.
+     * @param buffer The buffer to store the received data.
+     * @returns A tuple containing the source `SocketAddress` and the number of bytes received.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
     
     /**
-    * Send datagram to the specified remote peer.
-    *
-    * It also may block in this function invocation if there is not enough
-    * output buffer space available for some reason. Depending on the underlying
-    * implementation, it may also silently discard a datagram in this case.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sends a datagram to a specified address.
+     * @param address The destination `SocketAddress`.
+     * @param payload The byte array of data to send.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     func sendTo(address: SocketAddress, payload: Array<Byte>): Unit
 }
 
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+/**
+ * @description Represents a server-side socket that listens for incoming connections (like a TCP listener).
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ServerSocket <: Resource & ToString {
     /**
-    * Local address the server socket will be or currently is bound at.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The local address and port the server socket is listening on.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop localAddress: SocketAddress
     
     /**
-    * Bind a streaming socket. Depending on reuse flags and environment state,
-    * it may fail if the local port/address/path is already occupied
-    * or when there are connections remaining from the previously bound socket.
-    * This function also does listen just after binding creating an incoming connections queue that could be accessed via "accept()" function.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Binds the server socket to its configured local address.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     func bind(): Unit
     
     /**
-    * Accept a client socket, waiting for one if there are no pending connection requests.
-    *
-    * The OS implementation usually provides an incoming connection requests queue,
-    * so calling accept() does takes a candidate from the queue
-    * or wait until we get some request if the queue is empty.
-    *
-    * @throws SocketTimeoutException if the specified timeout ellapsed before any connection request were made.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Accepts an incoming connection, waiting up to the specified timeout.
+     * @param timeout An optional duration to wait for a connection. `None` means wait indefinitely.
+     * @returns A `StreamingSocket` for the new connection.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     func accept(timeout!: ?Duration): StreamingSocket
     
     /**
-    * Accept a client socket, waiting for one if there are no pending connection requests.
-    *
-    * The OS implementation usually provides an incoming connection requests queue,
-    * so calling accept() does takes a candidate from the queue
-    * or wait until we get some request if the queue is empty.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Accepts an incoming connection, waiting indefinitely.
+     * @returns A `StreamingSocket` for the new connection.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     func accept(): StreamingSocket
 }
 
 /**
-* Transport Layer Protocol Kind
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description An enumeration of common socket network protocols.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum SocketNet <: ToString & Equatable<SocketNet> {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Transmission Control Protocol (TCP).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     TCP |
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description User Datagram Protocol (UDP).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     UDP |
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Unix Domain Sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     UNIX
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the socket network type.
+     * @returns The name of the protocol (e.g., "TCP").
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(that: SocketNet): Bool
+    /**
+     * @description Checks if this `SocketNet` is equal to another.
+     * @param other The `SocketNet` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: SocketNet): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(that: SocketNet): Bool
+    /**
+     * @description Checks if this `SocketNet` is not equal to another.
+     * @param other The `SocketNet` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: SocketNet): Bool
 }
 
-
-
 /**
-* The SocketException class is used to handle exceptions related to socket connection errors.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description An exception indicating an error occurred on a socket operation.
+ */
+@!APILevel[
+    since: "22"
+]
 public class SocketException <: IOException {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `SocketException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `SocketException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* The SocketTimeoutException class is used to handle exceptions related to socket connection timeout.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description An exception indicating that a timeout has occurred on a socket read or accept operation.
+ */
+@!APILevel[
+    since: "22"
+]
 public class SocketTimeoutException <: Exception {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `SocketTimeoutException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `SocketTimeoutException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
-
-
 /**
-* TCP KeepAlive Options
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Configuration for TCP keep-alive behavior.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct SocketKeepAliveConfig <: ToString & Equatable<SocketKeepAliveConfig> {
     /**
-    * If no data is exchanged within the `idle` period, the probe is performed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The duration of inactivity before sending a keep-alive probe.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let idle: Duration
     
     /**
-    * The interval for sending probe packets is `interval`.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The interval between keep-alive probes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let interval: Duration
     
     /**
-    * Number of probe packets are sent before the connection is considered invalid.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The number of keep-alive probes to send before dropping the connection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let count: UInt32
     
     /**
-    * Creates a socket keep alive config instance.
-    * Please note that the actual time granularity could be different depending on the operating system
-    * so could be bumped or rounded if needed correspondingly.
-    *
-    * @throws IllegalArgumentException if the specified idle or interval duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Constructs a `SocketKeepAliveConfig`.
+     * @param idle The idle time before sending probes. Defaults to 45 seconds.
+     * @param interval The interval between probes. Defaults to 5 seconds.
+     * @param count The number of probes before failure. Defaults to 5.
+     * @throws IllegalArgumentException if configured to the idle state or when the set interval is less than 0.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(
         idle!: Duration = Duration.second * 45,
         interval!: Duration = Duration.second * 5,
         count!: UInt32 = 5
     )
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the keep-alive configuration.
+     * @returns A string detailing the idle time, interval, and count.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func toString(): String
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `SocketKeepAliveConfig` is equal to another.
+     * @param other The config to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override operator func ==(other: SocketKeepAliveConfig): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `SocketKeepAliveConfig` is not equal to another.
+     * @param other The config to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override operator func !=(other: SocketKeepAliveConfig): Bool
 }
 
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+/**
+ * @description A collection of constants for common socket options.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct SocketOptions {
-    @Deprecated[message: "Use `public static const SOCKET: Int32` in `public struct OptionLevel` instead."]
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket-level options.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SOL_SOCKET: Int32 = SOL_SOCKET
     
-    @Deprecated[message: "Use `public static const TCP: Int32` in `public struct OptionLevel` instead."]
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description TCP-level options.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const IPPROTO_TCP: Int32 = IPPROTO_TCP
     
-    @Deprecated[message: "Use `public static const UDP: Int32` in `public struct OptionLevel` instead."]
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description UDP-level options.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const IPPROTO_UDP: Int32 = IPPROTO_UDP
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Enable keep-alive probes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_KEEPALIVE: Int32 = SOCK_KEEPALIVE
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Disable Nagle's algorithm (TCP_NODELAY).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP_NODELAY: Int32 = SOCK_TCP_NODELAY
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Enable quick ACK for TCP.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP_QUICKACK: Int32 = SOCK_TCP_QUICKACK
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Configure lingering on close.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_LINGER: Int32 = SOCK_LINGER
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Set send buffer size.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_SNDBUF: Int32 = SOCK_SNDBUF
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Set receive buffer size.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_RCVBUF: Int32 = SOCK_RCVBUF
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Allow reuse of local addresses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_REUSEADDR: Int32 = SOCK_REUSEADDR
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Allow reuse of local ports.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_REUSEPORT: Int32 = SOCK_REUSEPORT
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket option: Bind socket to a specific network device.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_BINDTODEVICE: Int32 = SOCK_BINDTODEVICE
 }
 
-/*
-* This API supplies users with the basic functionality to create and use sockets of different domains and types.
-* For example, based on this API user should be able to create sockets in following domains: AF_PACKET, AF_NETLINK,
-* and in following types: SOCK_RAW, SOCK_SEQPACKET.
-* This is a low-level API, not recommended for general and direct usage. Users are encouraged to construct their own
-* higher level APIs based on this one to access a socket of specific domain and/or type.
-* For general usage of TCP, UDP, UDS in stream or datagram mode, it's encouraged to use existing corresponding
-* Cangjie APIs rather than this one.
-* Implementation note:
-* This API is an thin interface between Cangjie code and system calls related to socket.
-* To enable users to access these system calls, the implementation makes sure that calling these wrapped cangjie API
-* will not block underlying system thread.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+/**
+ * @description Provides a low-level, platform-agnostic interface for raw socket operations.
+ */
+@!APILevel[
+    since: "22"
+]
 public class RawSocket {
-    /* Get local socket address */
-    @Deprecated[message: "Use `public prop localAddress: RawAddress` instead."]
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The local address to which the socket is bound.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop localAddr: RawAddress
     
-    /* Get local socket address */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The local address to which the socket is bound.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop localAddress: RawAddress
     
-    /* Get remote socket address */
-    @Deprecated[message: "Use `public prop remoteAddress: RawAddress` instead."]
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The remote address to which the socket is connected.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop remoteAddr: RawAddress
     
-    /* Get remote socket address */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The remote address to which the socket is connected.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop remoteAddress: RawAddress
     
-    /* Get or set timeout for socket read */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The timeout for read operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop readTimeout: ?Duration
     
-    /* Get or set timeout for socket write */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The timeout for write operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop writeTimeout: ?Duration
     
     /**
-    * Create a socket with specific domain, type and protocol.
-    *
-    * @param domain The socket communication domain defined in struct SocketDomain.
-    * @param sockType The socket type defined in struct SocketType.
-    * @param protocol The socket protocol defined in struct ProtocolType.
-    *
-    * @throws SocketException if fail to create socket.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a new raw socket.
+     * @param domain The socket domain (e.g., `SocketDomain.INET`).
+     * @param type The socket type (e.g., `SocketType.STREAM`).
+     * @param protocol The protocol type (e.g., `ProtocolType.TCP`).
+     * @throws SocketException on failure to create the socket.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(domain: SocketDomain, `type`: SocketType, protocol: ProtocolType)
     
     /**
-    * Assign an address to the socket.
-    *
-    * @param addr The socket address stored in byte array.
-    *
-    * @throws SocketException if fail to bind address.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Binds the socket to a specific local address.
+     * @param addr The `RawAddress` to bind to.
+     * @throws SocketTimeoutException if a timeout occurs.
+     * @throws SocketException on binding failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func bind(addr: RawAddress): Unit
     
     /**
-    * Mark the socket as a passive socket to accept incoming connection.
-    *
-    * @param backlog The maximum length of the pending connections queue.
-    *
-    * @throws SocketException if fail to listen.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Puts the socket in a listening state for incoming connections.
+     * @param backlog The maximum length of the pending connection queue.
+     * @throws SocketException on failure to listen.
+     * @throws SocketTimeoutException if a timeout occurs.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func listen(backlog: Int32): Unit
     
     /**
-    * Accept a connecting socket, waiting for one if there are no pending connection requests within the specified timeout.
-    * If the timeout is `None`, then acception attempts will continue without time limit.
-    * If the timeout less than or equal to Duration.Zero, it will timeout immediately.
-    *
-    * @param timeout The maxium waiting duration for getting a connection.
-    * @return RawSocket for communication.
-    *
-    * @throws IllegalArgumentException if timeout is negative.
-    * @throws SocketTimeoutException if the specified timeout ellapsed before any connection request were made.
-    * @throws SocketException when other error occurs.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Accepts an incoming connection.
+     * @param timeout An optional duration to wait for a connection. `None` means wait indefinitely.
+     * @returns A new `RawSocket` for the accepted connection.
+     * @throws SocketTimeoutException if the timeout is reached before a connection is accepted.
+     * @throws SocketException on accept failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func accept(timeout!: ?Duration = None): RawSocket
     
     /**
-    * Connect the socket to the address specified by addr within the specified timeout.
-    * If the timeout is `None`, then acception attempts will continue without time limit.
-    *
-    * @param addr The peer socket address.
-    * @param timeout The maxium duration for connection.
-    *
-    * @throws IllegalArgumentException if timeout is negative.
-    * @throws SocketTimeoutException if the specified timeout ellapsed before acception was made.
-    * @throws SocketException when other error occurs.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Connects the socket to a remote address.
+     * @param addr The remote `RawAddress` to connect to.
+     * @param timeout An optional duration to wait for the connection to be established.
+     * @throws SocketException on connection failure.
+     * @throws SocketTimeoutException if the timeout is reached.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func connect(addr: RawAddress, timeout!: ?Duration = None): Unit
     
-    /* Close the socket */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Closes the socket, releasing any associated resources.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public func close(): Unit
     
     /**
-    * Transmit a message specified by buffer to another socket.
-    *
-    * @param addr The peer address.
-    * @param buffer The array data to be send.
-    * @param flag The flag of how to invoke this func.
-    *
-    * @throws SocketTimeoutException when timeout.
-    * @throws SocketException when other error occurs.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sends data to a specific destination address (for connectionless sockets).
+     * @param addr The destination `RawAddress`.
+     * @param buffer The data to send.
+     * @param flags Optional flags to control send behavior.
+     * @throws SocketTimeoutException if a timeout occurs.
+     * @throws SocketException on send failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func sendTo(addr: RawAddress, buffer: Array<Byte>, flags: Int32): Unit
     
     /**
-    * Receive a message and store it in buffer.
-    *
-    * @param buffer The buffer for message to be stored in.
-    * @param flag The flag of how to invoke this func.
-    * @return tuple of peer address and the number of bytes sent.
-    *
-    * @throws SocketTimeoutException when timeout.
-    * @throws SocketException when other error occurs.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Receives data, capturing the source address (for connectionless sockets).
+     * @param buffer The buffer to store the received data.
+     * @param flags Optional flags to control receive behavior.
+     * @returns A tuple containing the source `RawAddress` and the number of bytes received.
+     * @throws SocketTimeoutException if a timeout occurs.
+     * @throws SocketException on receive failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func receiveFrom(buffer: Array<Byte>, flags: Int32): (RawAddress, Int64)
     
     /**
-    * Transmit a message specified by buffer to another socket. This api is only used for connected socket.
-    *
-    * @param buffer The array data to be send.
-    * @param flag The flag of how to invoke this func.
-    *
-    * @throws SocketTimeoutException when timeout.
-    * @throws SocketException when other error occurs.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sends data on a connected socket.
+     * @param buffer The data to send.
+     * @param flags Optional flags to control send behavior.
+     * @throws SocketTimeoutException if a timeout occurs.
+     * @throws SocketException on send failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func send(buffer: Array<Byte>, flags: Int32): Unit
     
     /**
-    * Receive a message and store it in buffer. This api is only used for connected socket.
-    *
-    * @param buffer The buffer for message to be stored in.
-    * @param flag The flag of how to invoke this func.
-    * @return the number of bytes sent.
-    *
-    * @throws SocketTimeoutException when timeout.
-    * @throws SocketException when other error occurs.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Receives data from a connected socket.
+     * @param buffer The buffer to store the received data.
+     * @param flags Optional flags to control receive behavior.
+     * @returns The number of bytes received.
+     * @throws SocketException on receive failure.
+     * @throws SocketTimeoutException if a timeout occurs.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func receive(buffer: Array<Byte>, flags: Int32): Int64
     
     /**
-    * Set socket option with value specified by @p value in byte array form.
-    *
-    * @param level Socket option level defined in struct OptionLevel or Int32 value.
-    * @param option Socket option name defined in struct OptionName or Int32 value.
-    * @param value The value of option name in CPointer form.
-    * @param len The length of option name struct.
-    
-    * @throws SocketException if fail to set socket option.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a low-level socket option. This is an unsafe operation.
+     * @param level The option level (e.g., `SocketOptions.SOL_SOCKET`).
+     * @param option The option to set (e.g., `SocketOptions.SO_KEEPALIVE`).
+     * @param value A C pointer to the option value.
+     * @param len The length of the option value.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public unsafe func setSocketOption(level: Int32, option: Int32, value: CPointer<Byte>, len: Int32): Unit
     
     /**
-    * Get socket option value.
-    *
-    * @param level Socket option level defined in struct OptionLevel or Int32 value.
-    * @param option Socket option name defined in struct OptionName or Int32 value.
-    * @param value The value of option name to be stored in.
-    * @param len The length of value to be stored in.
-    *
-    * @throws SocketException if fail to get socket option.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a low-level socket option. This is an unsafe operation.
+     * @param level The option level.
+     * @param option The option to get.
+     * @param value A C pointer to a buffer to store the option value.
+     * @param len A C pointer to an integer holding the buffer length, which will be updated with the actual value length.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public unsafe func getSocketOption(level: Int32, option: Int32, value: CPointer<Byte>, len: CPointer<Int32>): Unit
 }
 
+
 /**
-* Socket domain values.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Represents the communication domain for a socket, defining the protocol family.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct SocketDomain <: Equatable<SocketDomain> & ToString & Hashable {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description IPv4 Internet protocols.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let IPV4: SocketDomain = SocketDomain(AF_INET)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description IPv6 Internet protocols.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let IPV6: SocketDomain = SocketDomain(AF_INET6)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Local communication (Unix domain sockets).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let UNIX: SocketDomain = SocketDomain(AF_UNIX)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Netlink sockets, for communication between kernel and user-space processes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let NETLINK: SocketDomain = SocketDomain(AF_NETLINK)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Low-level packet interface.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let PACKET: SocketDomain = SocketDomain(AF_PACKET)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `SocketDomain` from a raw integer value.
+     * @param domain The low-level integer constant for the domain (e.g., `AF_INET`).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(domain: Int32)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `SocketDomain` is equal to another.
+     * @param r The `SocketDomain` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: SocketDomain): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `SocketDomain` is not equal to another.
+     * @param r The `SocketDomain` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: SocketDomain): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the socket domain.
+     * @returns A string representing the domain (e.g., "IPV4").
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Computes the hash code for this `SocketDomain`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 /**
-* Socket type values.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Specifies the communication semantics for a socket.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct SocketType <: Equatable<SocketType> & ToString & Hashable {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Provides sequenced, reliable, two-way, connection-based byte streams (e.g., TCP).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let STREAM: SocketType = SocketType(SOCKET_STREAM)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Supports datagrams (connectionless, unreliable messages of a fixed maximum length) (e.g., UDP).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let DATAGRAM: SocketType = SocketType(SOCKET_DGRAM)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Provides raw network protocol access.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let RAW: SocketType = SocketType(SOCKET_RAW)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Provides a sequenced, reliable, two-way connection-based data transmission path for datagrams of a fixed maximum length.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let SEQPACKET: SocketType = SocketType(SOCKET_SEQPACKET)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `SocketType` from a raw integer value.
+     * @param type The low-level integer constant for the socket type (e.g., `SOCKET_STREAM`).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(`type`: Int32)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `SocketType` is equal to another.
+     * @param r The `SocketType` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: SocketType): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `SocketType` is not equal to another.
+     * @param r The `SocketType` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: SocketType): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the socket type.
+     * @returns A string representing the type (e.g., "STREAM").
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Computes the hash code for this `SocketType`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 /**
-* Socket protocol values.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Specifies a particular protocol to be used with the socket.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct ProtocolType <: Equatable<ProtocolType> & ToString & Hashable {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Unspecified protocol. The system will select a default protocol.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let Unspecified: ProtocolType = ProtocolType(0)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Internet Protocol version 4.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let IPV4: ProtocolType = ProtocolType(IPPROTO_IPV4)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Internet Protocol version 6.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let IPV6: ProtocolType = ProtocolType(IPPROTO_IPV6)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Internet Control Message Protocol.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let ICMP: ProtocolType = ProtocolType(IPPROTO_ICMP)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Transmission Control Protocol.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let TCP: ProtocolType = ProtocolType(IPPROTO_TCP)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description User Datagram Protocol.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let UDP: ProtocolType = ProtocolType(IPPROTO_UDP)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Raw IP packets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static let RAW: ProtocolType = ProtocolType(IPPROTO_RAW)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Constructs a `ProtocolType` from a raw integer value.
+     * @param protocol The low-level integer constant for the protocol (e.g., `IPPROTO_TCP`).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(protocol: Int32)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `ProtocolType` is equal to another.
+     * @param r The `ProtocolType` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: ProtocolType): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `ProtocolType` is not equal to another.
+     * @param r The `ProtocolType` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: ProtocolType): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the protocol type.
+     * @returns A string representing the protocol (e.g., "TCP").
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Computes the hash code for this `ProtocolType`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 /**
-* Socket option level values.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Defines constants for the `level` parameter in `getSocketOption` and `setSocketOption`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct OptionLevel {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Options at the IP protocol level.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const IP: Int32 = IPPROTO_IP
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Options for TCP sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP: Int32 = IPPROTO_TCP
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Options for UDP sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const UDP: Int32 = IPPROTO_UDP
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Options for ICMP sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const ICMP: Int32 = IPPROTO_ICMP
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Options for raw sockets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const RAW: Int32 = IPPROTO_RAW
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Options at the socket level.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SOCKET: Int32 = SOL_SOCKET
 }
 
 /**
-* Socket optoin name values.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Defines constants for the `option` parameter in `getSocketOption` and `setSocketOption`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct OptionName {
-    // IPOption
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description IP level: Header is included with data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const IP_HDRINCL: Int32 = SOCK_IP_HDRINCL
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description IP level: Type of service.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const IP_TOS: Int32 = SOCK_IP_TOS
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description IP level: Time to live.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const IP_TTL: Int32 = SOCK_IP_TTL
     
-    // TCPOption
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description TCP level: Number of keep-alive probes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP_KEEPCNT: Int32 = SOCK_TCP_KEEPCNT
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description TCP level: Idle time before starting keep-alive probes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP_KEEPIDLE: Int32 = SOCK_TCP_KEEPIDLE
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description TCP level: Interval between keep-alive probes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP_KEEPINTVL: Int32 = SOCK_TCP_KEEPINTVL
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description TCP level: Disable Nagle's algorithm.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const TCP_NODELAY: Int32 = SOCK_TCP_NODELAY
     
-    // SOCKETOption
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Enable debugging.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_DEBUG: Int32 = SOCK_DEBUG
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Socket has been marked to accept connections.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_ACCEPTCONN: Int32 = SOCK_ACCEPTCONN
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Allow reuse of local addresses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_REUSEADDR: Int32 = SOCK_REUSEADDR
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Enable keep-alive probes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_KEEPALIVE: Int32 = SOCK_KEEPALIVE
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Bypass routing, use direct interface.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_DONTROUTE: Int32 = SOCK_DONTROUTE
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Allow sending of broadcast messages.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_BROADCAST: Int32 = SOCK_BROADCAST
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Linger on close if data is present.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_LINGER: Int32 = SOCK_LINGER
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Receive out-of-band data in-line.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_OOBINLINE: Int32 = SOCK_OOBINLINE
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Set send buffer size.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_SNDBUF: Int32 = SOCK_SNDBUF
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Set receive buffer size.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_RCVBUF: Int32 = SOCK_RCVBUF
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Set send timeout.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_SNDTIMEO: Int32 = SOCK_SNDTIMEO
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Set receive timeout.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_RCVTIMEO: Int32 = SOCK_RCVTIMEO
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Socket level: Get socket error status.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const SO_ERROR: Int32 = SOCK_ERROR
 }
 
 /**
-* This class defines the address for RawSocket.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Represents a raw, low-level socket address, typically used for interoperability with native code.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct RawAddress {
-    /* Get the array of RawAddress */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The raw byte array representing the address.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop addr: Array<Byte>
     
     /**
-    * Initialize an address with a byte array.
-    * The byte array needs to be memory aligned with the C struct, such as SockAddrIn, SockAddrUn.
-    *
-    * @param addr The byte sequence corresponding to socket address.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Constructs a `RawAddress` from a byte array.
+     * @param addr The byte array containing the address data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(addr: Array<Byte>)
 }
 
-
-/*
-* Represents a TCP streaming socket.
-*
-* Once an instance is created, it is not yet connected so should be connected explicitly via connect().
-*
-* Instances of this type should be explicitly closed even when the connect() hasn't been invoked.
-*
-* @see StreamingSocket for more details on how do streaming sockets work.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+/**
+ * @description Represents a TCP socket for stream-based communication.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     /**
-    * Create an unconnected TCP socket ready to connect to the specified address and port
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a TCP socket and connects it to the specified address and port.
+     * @param address The destination host name or IP address string.
+     * @param port The destination port number.
+     * @throws SocketException if address is invalid or all-zero on the Windows platform.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(address: String, port: UInt16)
     
     /**
-    * Create an unconnected TCP socket ready to connect to the specified address and port
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a TCP socket and connects it to the specified socket address.
+     * @param address The destination `SocketAddress`.
+     * @throws SocketException if address is invalid or all-zero on the Windows platform.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(address: SocketAddress)
     
     /**
-    * Create an unconnected TCP socket ready to connect to the specified address and port
-    * and optionally binding client socket to the particular localAddress (None to automatically find local address to bind)
-    *
-    * Specifying localAddress usually makes sense to give a hint, which network interface to use for connection.
-    * If in doubt or don't know, specify None or use the constructor without localAddress.
-    * Specifying localAddress does also configure SO_REUSEADDR by default for convenience ortherwise spurious "address already in use" may occur.
-    * Use setSocketOptionBool(SocketOptions.SOL_SOCKET, SocketOptions.SO_REUSEADDR, false) to eliminate this option if needed.
-    * Also note that local and remote address should always have the same address family: for example, both IPv4.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a TCP socket, binds it to a local address, and connects it to a remote address.
+     * @param address The destination `SocketAddress`.
+     * @param localAddress An optional `SocketAddress` to bind the socket to locally.
+     * @throws SocketException if address is invalid or all-zero on the Windows platform.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(address: SocketAddress, localAddress!: ?SocketAddress)
     
     /**
-    * Remote address the socket will be or is currently connected to.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The remote address to which the socket is connected.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override prop remoteAddress: SocketAddress
     
     /**
-    * Local address the socket will be or currently is bound at.
-    *
-    * @throws SocketException is the socket is already closed
-    * or no local address is available (local address was not provided during creation and the socket is not connected).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The local address to which the socket is bound.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override prop localAddress: SocketAddress
     
     /**
-    * Read operation time limit or `None` for infinite read attempts.
-    * The value specified here is actually the minimal amount of time before a read operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for read operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override mut prop readTimeout: ?Duration
     
     /**
-    * Write operation time limit or `None` for infinite read attempts.
-    *
-    * The value specified here is actually the minimal amount of time before a write operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for write operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override mut prop writeTimeout: ?Duration
     
     /**
-    * Network interface name to bind at.
-    * Despite it's a client TCP socket, we still do bind before
-    * connect to occupy a local port and it is sometimes important
-    * to bind at some particular network interface to try to
-    * enforce the particular route.
-    *
-    * This option is a hint for the operating system that may decide to ignore the value
-    * or reject an attempt to configure it, especially when it's not
-    * allowed, unsupported or we specify a wrong name.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Binds the socket to a specific network device by name.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop bindToDevice: ?String
     
     /**
-    * TCP Keep-Alive options or `None` if disabled.
-    * If not configured, the operating system may decide to use some default keep-alive configuration.
-    * Changing this option may have delayed effect or may be silently ignored or reinterpreted by the operating system
-    * due to some reasons such as system configurations and/or missing support of particular features in the underlying TCP stack implementation.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The TCP keep-alive configuration. Setting to `None` disables keep-alive.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop keepAlive: ?SocketKeepAliveConfig
     
     /**
-    * `TCP_NODELAY`, true by default
-    *
-    * This option disables the Nagel's algorithm so any bytes chunk
-    * written to the socket is scheduled for sending immediately without delay.
-    * When this option is disabled, then Nagel's implementation does introduce time-based
-    * delay before actually sending bytes. This is done to group outgoing byte chunks to bigger
-    * TCP packets so there will be less quantity of them and the overhead decreases. In other words,
-    * this is a time-based debouncing algorithm.
-    * Despite that it looks reasonable, most applications already have proper buffering usually
-    * on multiple application layers so this Nagel algorithm will simply introduce latency without
-    * any benefits. So in this case TCP_NODELAY option is used to disable the debouncing.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Enables or disables Nagle's algorithm (TCP_NODELAY). `true` disables the algorithm.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop noDelay: Bool
     
     /**
-    * TCP_QUICKACK, false by default
-    *
-    * This is similar to TCP_NODELAY but affects only TCP ACK and first response bytes chunk.
-    * Usually (without TCP_QUICKACK), the TCP stack implementation does defer sending TCP ACK packet
-    * until the first bytes will be sent (but with some time limit).
-    * The idea is to group ACK and data bytes into a single batch, and reduce overhead.
-    * Because of this, the remote peer doesn't get connection acknowledgement immediately but after some delay.
-    * In some latency-sensitive or interactive protocols it is not acceptable.
-    * So here TCP_QUCKACK option comes and provides a way to force sending TCP ACK immediately to reduce
-    * the connection latency. However, generally this is not always good as we sacrify throughput a little bit
-    * and increase the number of network packets, enlarging load on network hardware, switches.
-    * Increasing the number of packets also leads to loss probability growth reducing robustness.
-    * This is why this option could be good or bad depending on the usage scenario and environment.
-    *
-    * Not supported on windows and macOS
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Enables or disables quick acknowledgment.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop quickAcknowledge: Bool
     
     /**
-    * SO_LINGER duration, the default is system-dependant. `None` if linger is disabled.
-    *
-    * When a socket is closed, if there are pending outgoing bytes, we are waiting
-    * for the linger time before aborting connection. If the time is out but bytes were not sent yet,
-    * then usually the connection get aborted (via reset / TCP reset).
-    *
-    * When the linger is disabled (`None`), then the connection will be aborted immediately:
-    * depending on the presence of pending outgoing bytes, it will be either terminated successully (FIN-ACK)
-    * or reset (RST).
-    *
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The linger-on-close timeout. `None` disables lingering.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop linger: ?Duration
     
     /**
-    * SO_SNDBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired outgoing buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The size of the socket send buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop sendBufferSize: Int64
     
     /**
-    * SO_RCVBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired receive buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The size of the socket receive buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop receiveBufferSize: Int64
     
     /**
-    * Read at least one byte to the specified buffer waiting for incoming data if necessary.
-    *
-    * Returns number of bytes written to the buffer or 0 when the remote peer closed the stream
-    * or also 0 when the socket is closed.
-    *
-    * @throws IllegalArgumentException if the specified buffer is empty
-    * @throws SocketTimeoutException if the waiting time has expired.
-    * @throws SocketException when the connection is broken
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Reads data from the socket into the provided buffer.
+     * @param buffer The buffer to read data into.
+     * @returns The number of bytes read, or -1 if the end of the stream is reached.
+     * @throws SocketException on read errors.
+     * @throws IllegalArgumentException if the buffer is too small to read.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func read(buffer: Array<Byte>): Int64
     
     /**
-    * Write the payload bytes to the socket waiting for the output buffer space if necessary.
-    *
-    * The provided bytes are copied and transmitted asynchronously so returning from this function
-    * doesn't guarantee actual data delivery. When the link is poor or the remote peer is unable
-    * to handle data fast enough, the send buffer may overflow and in this case an attempt
-    * to write more bytes may block coroutine here until enough bytes will be transmitted to
-    * get enough send buffer space to write the payload. If the payload is too big to fit the send
-    * buffer, then the payload will be fragmented and sent chunk by chunk.
-    *
-    * Also note that due to the nature of IP and TCP having packet fragmentation,
-    * the underlying network may split the payload into smaller parts of any size
-    * so it is not guaranteed that the the whole payload will be delivered to the remote peer at once.
-    *
-    * Despite TCP provides delivery acknowledge, the delivery here means that bytes were transmitted
-    * to the remote peer and it doesn't gurantee that the remote application actually received
-    * and processed bytes. Also, this function only schedule the payload for sending.
-    * Therefore, successfully returning write() invocation doesn't mean that bytes were
-    * deliverd. To get guaranteed delivery, use application-level acknowledges instead.
-    *
-    * @throws IllegalArgumentException if the specified buffer is empty
-    * @throws SocketTimeoutException if the waiting time has expired.
-    * @throws SocketException when the socket is closed or the connection is broken
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Writes data from the provided payload to the socket.
+     * @param payload The byte array of data to write.
+     * @throws IllegalArgumentException if the buffer size is zero or write fails.
+     * @throws SocketException on write errors.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func write(payload: Array<Byte>): Unit
     
     /**
-    * Connects to the remote peer within the specified timeout.
-    * If the timeout is `None`, then connection attempts will continue without time limit.
-    * Please note that this function doesn't do retry so if the server peer does reject connection, we get error despite the timeout duration.
-    *
-    * This function also does bind first before doing connect so there is no need to invoke bind
-    *
-    * @throws SocketException if the connection cannot be established.
-    * @throws SocketTimeoutException if the waiting time has expired.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Connects the socket to its configured remote address, with an optional timeout.
+     * @param timeout An optional duration to wait for the connection.
+     * @throws IllegalArgumentException if the remote address is invalid, or the connection timeout is less than 0, or the timeout is less than 0.
+     * @throws SocketException on connection failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func connect(timeout!: ?Duration = None): Unit
     
     /**
-    * Read the specified socket option writing the result to value buffer
-    * of the specified valueLength (in bytes).
-    * Before invoking this function valueLength should be initialized with the buffer size
-    * After invoking this function valueLength will contain the actual result
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a raw socket option value.
+     * @param level The option level (e.g., `OptionLevel.SOCKET`).
+     * @param option The option name (e.g., `OptionName.SO_KEEPALIVE`).
+     * @param value A C pointer to a buffer to store the option value.
+     * @param valueLength A C pointer to the length of the value buffer.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -1434,14 +2589,17 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     ): Unit
     
     /**
-    * Write the specified socket option from value buffer having valueLength
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to the option value.
+     * @param valueLength The length of the option value.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -1450,28 +2608,32 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     ): Unit
     
     /**
-    * Read the specified socket option returning it's value as IntNative result.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The integer value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
     ): IntNative
     
     /**
-    * Write a numeric IntNative value to the specified socket option.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The integer value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -1479,33 +2641,32 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     ): Unit
     
     /**
-    * Read the specified socket option returning it's value as a boolean value
-    * converting it from an IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as 0 => false, other values => true.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The boolean value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
     ): Bool
     
     /**
-    * Write a boolean value to the specified socket option converting it to IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as false => 0, true => 1
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The boolean value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
@@ -1513,205 +2674,226 @@ public class TcpSocket <: StreamingSocket & Equatable<TcpSocket> & Hashable {
     ): Unit
     
     /**
-    * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
-    * This function is reentrant.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Closes the socket, releasing any associated resources.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public func close(): Unit
     
     /**
-    * Checks whether this socket has been explicitly closed via close()
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Checks if the socket is closed.
+     * @returns `true` if the socket is closed, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public func isClosed(): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `TcpSocket` is equal to another.
+     * @param other The `TcpSocket` to compare against.
+     * @returns `true` if they are equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override operator func ==(other: TcpSocket): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Checks if this `TcpSocket` is not equal to another.
+     * @param other The `TcpSocket` to compare against.
+     * @returns `true` if they are not equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override operator func !=(other: TcpSocket): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Computes the hash code for this `TcpSocket`.
+     * @returns The hash code.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func hashCode(): Int64
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the TCP socket.
+     * @returns A string detailing the socket's state and addresses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func toString(): String
 }
 
 /**
-* TCP server socket providing a way to listen for TCP incoming connections.
-*
-* Once created, could be configured via corresponding properties (e.g. reusePort) or setSocketOptionXX functions.
-*
-* To start listening, use bind() function that does bind socket on a local port and start listening for connections.
-*
-* Receiving an incoming connection is provided via accept() function that does wait for the next connection or returns immediately
-* if there is already pending connection.
-*
-* Instances of this type should be explicitly closed even when the bind() hasn't been invoked.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+ * @description Represents a server socket that listens for incoming TCP connections.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TcpServerSocket <: ServerSocket {
     /**
-    * Local address the socket will be or is currently bound at.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The local address and port the server socket is listening on.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override prop localAddress: SocketAddress
     
     /**
-    * Creates a TCP server socket that is not yet bound so client can't connects until we do bind()
-    * bindAt specifies the local port to bind at or zero to bind at a random free local port
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a server socket that will bind to the specified port on the wildcard address.
+     * @param bindAt The port number to listen on.
+     * @throws IllegalArgumentException if the port is invalid.
+     * @throws SocketException on socket creation or binding errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(bindAt!: UInt16)
     
     /**
-    * Creates a TCP server socket that is not yet bound so clients can't connect until we do bind()
-    * bindAt specifies the local address to bind at, possibly with zero port to bind at a random free local port
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a server socket and binds it to the specified local socket address.
+     * @param bindAt The `SocketAddress` to bind to.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(bindAt!: SocketAddress)
     
     /**
-    * When binding socket, try to reuse the address even if it's already used and bound. This property configures SO_REUSEADDR.
-    * This is usually makes sense when we are binding and there are still opened connections remaining from the previous socket.
-    * Such old sockets are usually hanging in TIME_WAIT state and may prevent us from binding a new server socket.
-    * Enabled by default
-    * Behaviour of this option is system-dependant. Please consult with SO_REUSEADDR/SOCK_REUSEADDR documentation before using.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Enables or disables the SO_REUSEADDR socket option.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop reuseAddress: Bool
     
     /**
-    * When binding socket to a local port, try to reuse it even if it's already used and bound.
-    *
-    * Please note that there are limitations on when ports could be reused. Behaviour of this option
-    * is system-dependant (e.g. this option is unavailable on Windows).
-    * Please consult with SO_REUSEPORT documentation before using.
-    *
-    * This option could be only modified before binding and will fail
-    * after a successful bind() invocation.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Enables or disables the SO_REUSEPORT socket option.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop reusePort: Bool
     
     /**
-    * SO_SNDBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired outgoing buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The size of the socket send buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop sendBufferSize: Int64
     
     /**
-    * SO_RCVBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired receive buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The size of the socket receive buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop receiveBufferSize: Int64
     
     /**
-    * Network interface name to bind to.
-    * This option is a hint for the operating system that may decide to ignore the value
-    * or reject an attempt to configure it.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The network interface to bind to.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut prop bindToDevice: ?String
     
     /**
-    * Configure incoming connections backlog size. This only works before binding socket.
-    * Changing this value is not guaranteed to be actually applied since the operating system may decide to
-    * change or bump it, or simply ignore.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description backlog size.
+     * @throws SocketException if use backlogSize after bind.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop backlogSize: Int64
     
     /**
-    * Bind TCP socket on a local port. Depending on [reusePort] and [reuseAddress] flag, it may fail if the port is already occupied
-    * or when there are connections remaining from the previously bound socket.
-    * This function also does listen just after binding creating an incoming connections queue that could be accessed via "accept()" function.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Binds the server socket to its configured address and begins listening.
+     * @throws SocketException on binding or listening failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func bind(): Unit
     
     /**
-    * Accept a client TCP socket, waiting for one if there are no pending connection requests.
-    *
-    * The OS implementation usually provides an incoming connection requests queue (called backlog),
-    * so calling accept() does takes a candidate from the queue
-    * or wait until we get some request if the queue is empty.
-    *
-    * Usually, a TCP client is waiting for connection until we get it from server.accept() function. If the server don't
-    * get it in time then the client may fail to connect with error (e.g. connection timeout error). If the backlog queue is full
-    * due to the missing accept() invocations then the operating system usually start rejecting new incoming connections that don't fit
-    * the backlog queue capacity.
-    * This fact could be used for backpressure control so if a server detects that no requests could be processed for some reason
-    * then it may stop doing accept() to keep client in the queue and limit workload.
-    *
-    * The specified timeout is applied to accept operation
-    * @throws SocketTimeoutException when the specified timeout is over
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Accepts an incoming connection, waiting up to the specified timeout.
+     * @param timeout An optional duration to wait for a connection. `None` means wait indefinitely.
+     * @returns A `TcpSocket` for the new connection.
+     * @throws SocketException on accept failure or timeout.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func accept(timeout!: ?Duration): TcpSocket
     
     /**
-    * Accept a client TCP socket, waiting for one if there are no pending connection requests.
-    *
-    * The OS implementation usually provides an incoming connection requests queue (called backlog),
-    * so calling accept() does takes a candidate from the queue
-    * or wait until we get some request if the queue is empty.
-    *
-    * Usually, a TCP client is waiting for connection until we get it from server.accept() function. If the server don't
-    * get it in time then the client may fail to connect with error (e.g. connection timeout error). If the backlog queue is full
-    * due to the missing accept() invocations then the operating system usually start rejecting new incoming connections that don't fit
-    * the backlog queue capacity.
-    * This fact could be used for backpressure control so if a server detects that no requests could be processed for some reason
-    * then it may stop doing accept() to keep client in the queue and limit workload.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Accepts an incoming connection, waiting indefinitely.
+     * @returns A `TcpSocket` for the new connection.
+     * @throws SocketException on accept failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func accept(): TcpSocket
     
     /**
-    * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
-    * This function is reentrant.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Closes the server socket, releasing any associated resources.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public override func close(): Unit
     
     /**
-    * Checks whether this socket has been explicitly closed via close()
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Checks if the server socket is closed.
+     * @returns `true` if the socket is closed, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public override func isClosed(): Bool
     
     /**
-    * Read the specified socket option writing the result to value buffer
-    * of the specified valueLength (in bytes).
-    * Before invoking this function valueLength should be initialized with the buffer size
-    * After invoking this function valueLength will contain the actual result
-    * size in bytes.
-    *
-    * Throws an exception if failed (when getsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to a buffer to store the option value.
+     * @param valueLength A C pointer to the length of the value buffer.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -1720,12 +2902,17 @@ public class TcpServerSocket <: ServerSocket {
     ): Unit
     
     /**
-    * Write the specified socket option from value buffer having valueLength
-    * size in bytes.
-    *
-    * Throws an exception if failed (when setsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to the option value.
+     * @param valueLength The length of the option value.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -1734,24 +2921,32 @@ public class TcpServerSocket <: ServerSocket {
     ): Unit
     
     /**
-    * Read the specified socket option returning it's value as IntNative result.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The integer value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
     ): IntNative
     
     /**
-    * Write a numeric IntNative value to the specified socket option.
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The integer value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -1759,572 +2954,32 @@ public class TcpServerSocket <: ServerSocket {
     ): Unit
     
     /**
-    * Read the specified socket option returning it's value as a boolean value
-    * converting it from an IntNative.
-    *
-    * The conversion is defined as 0 => false, other values => true.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The boolean value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
     ): Bool
     
     /**
-    * Write a boolean value to the specified socket option converting it to IntNative.
-    *
-    * The conversion is defined as false => 0, true => 1
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOptionBool(
-        level: Int32,
-        option: Int32,
-        value: Bool
-    ): Unit
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func toString(): String
-}
-
-/*
-* Represents a UDP datagram socket.
-*
-* Once an instance is created, it is not yet bound so should be bound explicitly via bind().
-* Unlike TCP, a UDP socket may remain unconnected and work without pairing to any remote address handling
-* multiple peers at the same time.
-* However, a UDP socket could be optionally paired via connect() that generally doesn't involve any negotiation so "connecting" to
-* a non-existing address could compelte successfully. A created pairing (after connect invocation) could be terminated via disconnect().
-*
-* UDP protocol does only allow sending and receiving datagrams at most of 64Kib long.
-*
-* Instances of this type should be explicitly closed even when the bind() hasn't been invoked.
-*
-* @see DatagramSocket for more details on how do datagram sockets work.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class UdpSocket <: DatagramSocket {
-    /**
-    * Creates an unbound UDP socket ready to bind at the specified port
-    *
-    * The default address is 0.0.0.0 what means every IP address of current machine,
-    * this is more suitable for a server that can be connected from the local network
-    * using localhost address (127.0.0.1) or from outside using corresponding address.
-    * Therefore, this address (0.0.0.0) shall not be used as the destination address,
-    * so it is necessary to specify an address in a particular network when calling
-    * `connect` or `sendTo`. In other words, needs to select the network
-    * through which to communicate. Linux, however, able to resolve network on its own,
-    * in case of acting with 0.0.0.0 real address resolves in network of other side
-    * (source address copies to destination address or vice versa), however,
-    * do not rely on it in case of a portable app because windows does not support it.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(bindAt!: UInt16)
-    
-    /**
-    * Creates an unbound UDP socket ready to bind at the specified interface/port
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(bindAt!: SocketAddress)
-    
-    /**
-    * Remote address the socket is connected to or `None` if the socket is unconnected.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override prop remoteAddress: ?SocketAddress
-    
-    /**
-    * Local address the socket will be or is currently bound at.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override prop localAddress: SocketAddress
-    
-    /**
-    * Receive/ReceiveFrom operation time limit or `None` for infinite read attempts.
-    * The value specified here is actually the minimal amount of time before a read operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override mut prop receiveTimeout: ?Duration
-    
-    /**
-    * Send/SendTo operation time limit or `None` for infinite read attempts.
-    *
-    * The value specified here is actually the minimal amount of time before a write operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override mut prop sendTimeout: ?Duration
-    
-    /**
-    * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
-    * This function is reentrant.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func close(): Unit
-    
-    /**
-    * Checks whether this socket has been explicitly closed via close()
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func isClosed(): Bool
-    
-    /**
-    * Bind UDP socket at local port
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func bind(): Unit
-    
-    /**
-    * Configure the socket to only work with the specified remote peer address. To undo this action use disconnect()
-    * Note that the remote address should always have the same address family as local at which the socket is bound: for example, both IPv4.
-    *
-    * After invoking this function with a particular address, function send will use the preset address. Functions send/sendTo may throw exceptions if
-    * ICMP abnormal responses are recieved. We will also never receive any messages from other peers (they will be just filtered out).
-    * Invoking disconnect() reverts the filter to the initial state so it will be possible to send message to any recipients again.
-    *
-    * This function should be only invoked after bind()
-    *
-    * @throws IllegalArgumentException if remote address has wrong kind.
-    * @throws SocketException if the socket is not bound.
-    * @throws SocketException if the connection cannot be established.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func connect(remote: SocketAddress): Unit
-    
-    /**
-    * Reverts the effect of connect() function so we can send and receive to/from any address again.
-    * This function makes no effect if invoked multiple times or if we invoke disconnect without connect invocation.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func disconnect(): Unit
-    
-    /**
-    * Receive the next datagram into the specified buffer waiting for data if needed.
-    *
-    * Returns a pair of the datagram sender address and the actual size of received datagram, possibly zero
-    * or a value greater than the passed buffer size.
-    *
-    * Unlike read in streams, this function requires a buffer of proper size (big enough),
-    * otherwise a datagram that is bigger than the provided buffer will be
-    * truncated and the returned datagram size will be greater that the buffer size.
-    *
-    * @throws SocketException if buffer is empty or if it is not possible to read the data.
-    * @throws SocketException if not bound or already closed
-    * @throws SocketTimeoutException if reading time has expired.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
-    
-    /**
-    * Sends datagram of the payload to the specified recipient address.
-    *
-    * It also may block in this function invocation if there is not enough
-    * output buffer space available for some reason. Depending on the underlying
-    * implementation, it may also silently discard a datagram in this case.
-    *
-    * @throws SocketException if payload size is larger than allowed by platform.
-    * @throws SocketException if connect was preliminary called and abnormal ICMP was received.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func sendTo(recipient: SocketAddress, payload: Array<Byte>): Unit
-    
-    /**
-    * Send a message with the specified payload to the peer with preconfigured address.
-    * This only works if address has been specified using `connect() ` otherwise will fail immediately.
-    *
-    * In other aspects, it works the same as regular `sendTo(recipient,payload).
-    *
-    * @throws SocketException if not connected, not bound or already closed
-    * @throws SocketException if payload size is larger than allowed by platform.
-    * @throws SocketException if connect was preliminary called and abnormal ICMP was received.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func send(payload: Array<Byte>): Unit
-    
-    /**
-    * Receive a datagram message from the preconfigured peer address.
-    * This only works if the address has been specified via connect() otherwise will fail.
-    * In other aspects, it works the same as regular `receiveFrom(buffer).
-    *
-    * @throws SocketException if buffer is empty or if it is not possible to read the data.
-    * @throws SocketException if not connected, not bound or already closed
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func receive(buffer: Array<Byte>): Int64
-    
-    /**
-    * When binding socket to a local port, try to reuse it even if it's already used and bound.
-    *
-    * Please note that there are limitations on when ports could be reused. Behaviour of this option
-    * is system-dependant (e.g. this option is unavailable on Windows).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop reusePort: Bool
-    
-    /**
-    * When binding socket, try to reuse the address even if it's already used and bound. This property configures SO_REUSEADDR.
-    * This is especially useful when doing multicasting. Behaviour of this option is system-dependant.
-    * Please consult with SO_REUSEADDR/SOCK_REUSEADDR documentation before using.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop reuseAddress: Bool
-    
-    /**
-    * SO_SNDBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired outgoing buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop sendBufferSize: Int64
-    
-    /**
-    * SO_RCVBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired receive buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop receiveBufferSize: Int64
-    
-    /**
-    * Read the specified socket option writing the result to value buffer
-    * of the specified valueLength (in bytes).
-    * Before invoking this function valueLength should be initialized with the buffer size
-    * After invoking this function valueLength will contain the actual result
-    * size in bytes.
-    *
-    * Throws an exception if failed (when getsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOption(
-        level: Int32,
-        option: Int32,
-        value: CPointer<Unit>,
-        valueLength: CPointer<UIntNative>
-    ): Unit
-    
-    /**
-    * Write the specified socket option from value buffer having valueLength
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOption(
-        level: Int32,
-        option: Int32,
-        value: CPointer<Unit>,
-        valueLength: UIntNative
-    ): Unit
-    
-    /**
-    * Read the specified socket option returning it's value as IntNative result.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOptionIntNative(
-        level: Int32,
-        option: Int32
-    ): IntNative
-    
-    /**
-    * Write a numeric IntNative value to the specified socket option.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOptionIntNative(
-        level: Int32,
-        option: Int32,
-        value: IntNative
-    ): Unit
-    
-    /**
-    * Read the specified socket option returning it's value as a boolean value
-    * converting it from an IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as 0 => false, other values => true.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOptionBool(
-        level: Int32,
-        option: Int32
-    ): Bool
-    
-    /**
-    * Write a boolean value to the specified socket option converting it to IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as false => 0, true => 1
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOptionBool(
-        level: Int32,
-        option: Int32,
-        value: Bool
-    ): Unit
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func toString(): String
-}
-
-/*
-* Represents a Unix domain streaming socket.
-*
-* Once an instance is created, it is not yet connected so should be connected explicitly via connect().
-*
-* Instances of this type should be explicitly closed even when the connect() hasn't been invoked.
-*
-* @see StreamingSocket for more details on how do streaming sockets work.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class UnixSocket <: StreamingSocket {
-    /**
-    * Create an unconnected Unix domain socket ready to connect to the specified socket path
-    *
-    * @param path to connect to
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(path: String, localPath!: ?String = None)
-    
-    /**
-    * Create an unconnected Unix domain socket ready to connect to the specified socket path
-    * @param address to connect to
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(address: SocketAddress, localAddress!: ?SocketAddress = None)
-    
-    /**
-    * Remote address the socket will be or is currently connected to.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override prop remoteAddress: SocketAddress
-    
-    /**
-    * Local address the socket will be or currently is bound at.
-    *
-    * @throws SocketException is the socket is already closed
-    * or no local address is available (local address was not provided during creation and the socket is not connected).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override prop localAddress: SocketAddress
-    
-    /**
-    * Read operation time limit or `None` for infinite read attempts.
-    * The value specified here is actually the minimal amount of time before a read operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override mut prop readTimeout: ?Duration
-    
-    /**
-    * Write operation time limit or `None` for infinite read attempts.
-    *
-    * The value specified here is actually the minimal amount of time before a write operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override mut prop writeTimeout: ?Duration
-    
-    /**
-    * SO_SNDBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired outgoing buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop sendBufferSize: Int64
-    
-    /**
-    * SO_RCVBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired receive buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop receiveBufferSize: Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func read(buffer: Array<Byte>): Int64
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func write(buffer: Array<Byte>): Unit
-    
-    /**
-    * Connects to the remote peer within the specified timeout.
-    * If the timeout is `None`, then connection attempts will continue without time limit.
-    * Please note that this function doesn't do retry so if the server peer does reject connection, we get error despite the timeout duration.
-    *
-    * This function also does bind first before doing connect so there is no need to invoke bind
-    *
-    * @throws SocketException if the connection cannot be established.
-    * @throws SocketTimeoutException if the waiting time has expired.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func connect(timeout!: ?Duration = None): Unit
-    
-    /**
-    * Read the specified socket option writing the result to value buffer
-    * of the specified valueLength (in bytes).
-    * Before invoking this function valueLength should be initialized with the buffer size
-    * After invoking this function valueLength will contain the actual result
-    * size in bytes.
-    *
-    * Throws an exception if failed (when getsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOption(
-        level: Int32,
-        option: Int32,
-        value: CPointer<Unit>,
-        valueLength: CPointer<UIntNative>
-    ): Unit
-    
-    /**
-    * Write the specified socket option from value buffer having valueLength
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOption(
-        level: Int32,
-        option: Int32,
-        value: CPointer<Unit>,
-        valueLength: UIntNative
-    ): Unit
-    
-    /**
-    * Read the specified socket option returning it's value as IntNative result.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOptionIntNative(
-        level: Int32,
-        option: Int32
-    ): IntNative
-    
-    /**
-    * Write a numeric IntNative value to the specified socket option.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOptionIntNative(
-        level: Int32,
-        option: Int32,
-        value: IntNative
-    ): Unit
-    
-    /**
-    * Read the specified socket option returning it's value as a boolean value
-    * converting it from an IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as 0 => false, other values => true.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOptionBool(
-        level: Int32,
-        option: Int32
-    ): Bool
-    
-    /**
-    * Write a boolean value to the specified socket option converting it to IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as false => 0, true => 1
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The boolean value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
@@ -2332,460 +2987,241 @@ public class UnixSocket <: StreamingSocket {
     ): Unit
     
     /**
-    * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
-    * This function is reentrant.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func close(): Unit
-    
-    /**
-    * Checks whether this socket has been explicitly closed via close()
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func isClosed(): Bool
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Returns a string representation of the socket.
+     * @returns A string representation of the socket.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func toString(): String
 }
 
 /**
-* Unix Domain server socket providing a way to listen for incoming connections.
-*
-* Once created, could be configured via corresponding properties (e.g. reusePort) or setSocketOptionXX functions.
-*
-* To start listening, use bind() function that does bind socket on a local path and start listening for connections.
-* The local path to bind at should be a non-existing path otherwise bind() will fail.
-*
-* Receiving an incoming connection is provided via accept() function that does wait for the next connection or returns immediately
-* if there is already pending connection.
-*
-* Instances of this type should be explicitly closed even when the bind() hasn't been invoked.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class UnixServerSocket <: ServerSocket {
+ * @description Represents a UDP socket for datagram-based communication.
+ */
+@!APILevel[
+    since: "22"
+]
+public class UdpSocket <: DatagramSocket {
     /**
-    * Local address the socket will be or is currently bound at.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override prop localAddress: SocketAddress
+     * @description Creates a UDP socket and binds it to the specified port on the wildcard address.
+     * @param bindAt The port number to bind to.
+     * @throws SocketException on socket creation or binding errors.
+     * @throws IllegalArgumentException if the port is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(bindAt!: UInt16)
     
     /**
-    * Creates an anbound Unix server streaming socket configured to bind at the specified path
-    * @param bindAt path for the unix server socket
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(bindAt!: String)
-    
-    /**
-    * Creates an anbound Unix server streaming socket configured to bind at the specified path
-    * @param bindAt path for the unix server socket
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Creates a UDP socket and binds it to the specified local socket address.
+     * @param bindAt The `SocketAddress` to bind to.
+     * @throws SocketException on socket creation or binding errors.
+     * @throws IllegalArgumentException if the address is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(bindAt!: SocketAddress)
     
     /**
-    * SO_SNDBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired outgoing buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop sendBufferSize: Int64
-    
-    /**
-    * SO_RCVBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired receive buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop receiveBufferSize: Int64
-    
-    /**
-    * Configure incoming connections backlog size. This only works before binding socket.
-    * Changing this value is not guaranteed to be actually applied since the operating system may decide to
-    * change or bump it, or simply ignore.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public mut prop backlogSize: Int64
-    
-    /**
-    * Bind a streaming UNIX domain socket.
-    *
-    * This function also does listen just after binding creating an incoming connections queue that could be accessed via "accept()" function.
-    *
-    * This operation does atomically create a socket file at the local path.
-    * If the path is already existing then bind() fails with SocketException.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func bind(): Unit
-    
-    /**
-    * Accept a client socket, waiting for one if there are no pending connection requests.
-    *
-    * The OS implementation usually provides an incoming connection requests queue,
-    * so calling accept() does takes a candidate from the queue
-    * or wait until we get some request if the queue is empty.
-    *
-    * @throws SocketTimeoutException if the spcified timeout allapsed before got pending connection request
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func accept(timeout!: ?Duration): UnixSocket
-    
-    /**
-    * Accept a client socket, waiting for one if there are no pending connection requests.
-    *
-    * The OS implementation usually provides an incoming connection requests queue,
-    * so calling accept() does takes a candidate from the queue
-    * or wait until we get some request if the queue is empty.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func accept(): UnixSocket
-    
-    /**
-    * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
-    * This function is reentrant.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func close(): Unit
-    
-    /**
-    * Checks whether this socket has been explicitly closed via close()
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func isClosed(): Bool
-    
-    /**
-    * Read the specified socket option writing the result to value buffer
-    * of the specified valueLength (in bytes).
-    * Before invoking this function valueLength should be initialized with the buffer size
-    * After invoking this function valueLength will contain the actual result
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOption(
-        level: Int32,
-        option: Int32,
-        value: CPointer<Unit>,
-        valueLength: CPointer<UIntNative>
-    ): Unit
-    
-    /**
-    * Write the specified socket option from value buffer having valueLength
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOption(
-        level: Int32,
-        option: Int32,
-        value: CPointer<Unit>,
-        valueLength: UIntNative
-    ): Unit
-    
-    /**
-    * Read the specified socket option returning it's value as IntNative result.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOptionIntNative(
-        level: Int32,
-        option: Int32
-    ): IntNative
-    
-    /**
-    * Write a numeric IntNative value to the specified socket option.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOptionIntNative(
-        level: Int32,
-        option: Int32,
-        value: IntNative
-    ): Unit
-    
-    /**
-    * Read the specified socket option returning it's value as a boolean value
-    * converting it from an IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as 0 => false, other values => true.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func getSocketOptionBool(
-        level: Int32,
-        option: Int32
-    ): Bool
-    
-    /**
-    * Write a boolean value to the specified socket option converting it to IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as false => 0, true => 1
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func setSocketOptionBool(
-        level: Int32,
-        option: Int32,
-        value: Bool
-    ): Unit
-    
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public override func toString(): String
-}
-
-/*
-* Represents a Unix Domain datagram socket.
-*
-* Once an instance is created, it is not yet bound so should be bound explicitly via bind().
-* Unlike UnixSocket, a UnixDatagramSocket may remain unconnected and work without pairing to any remote address handling
-* multiple peers at the same time.
-* However, a UnixDatagramSocket socket could be optionally paired via connect() to an existing bound socket file.
-* A created pairing (after connect invocation) could be terminated via disconnect().
-*
-* Unlike UDP, Unix Domain socket don't limit datagram size to 64Kib, however due to the underlying implementation and operation system
-* limitations, the maximum datagram size could be still limited to some amount.
-*
-* Instances of this type should be explicitly closed even when the bind() hasn't been invoked.
-*
-* @see DatagramSocket for more details on how do datagram sockets work.
-*/
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-public class UnixDatagramSocket <: DatagramSocket {
-    /**
-    * Creates an unbound Unix datagram socket ready to bind at the specified path
-    *
-    * @param bindAt local path (should be a non-existing path that will be created during bind)
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(bindAt!: String)
-    
-    /**
-    * Creates an unbound Unix datagram socket ready to bind at the specified address
-    *
-    * @param bindAt local path (should be a non-existing path that will be created during bind)
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public init(bindAt!: SocketAddress)
-    
-    /**
-    * Remote address the socket is connected to or `None` if the socket is unconnected.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The remote address if the socket is connected.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override prop remoteAddress: ?SocketAddress
     
     /**
-    * Local address the socket will be or is currently bound at.
-    *
-    * @throws SocketException is the socket is already closed.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The local address to which the socket is bound.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override prop localAddress: SocketAddress
     
     /**
-    * Receive/ReceiveFrom operation time limit or `None` for infinite read attempts.
-    * The value specified here is actually the minimal amount of time before a read operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for receive operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override mut prop receiveTimeout: ?Duration
     
     /**
-    * Send/SendTo operation time limit or `None` for infinite read attempts.
-    *
-    * The value specified here is actually the minimal amount of time before a write operation cancelled.
-    * The actual time is not guaranteed but it will be never cancelled earlier than the specified timeout value.
-    * If the duration is too big than it can be bumped to the infinite. When it's too small then if will be bumped to the minimal clock granularity.
-    *
-    * The default value is None.
-    * @throws IllegalArgumentException if the specified timeout duration is negative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The timeout for send operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public override mut prop sendTimeout: ?Duration
     
     /**
-    * Close the socket releasing all resources. All operations except for close() and isClose() are no longer available.
-    * This function is reentrant.
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Closes the UDP socket.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public override func close(): Unit
     
     /**
-    * Checks whether this socket has been explicitly closed via close()
-    **/
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Checks if the UDP socket is closed.
+     * @returns `true` if the socket is closed, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public override func isClosed(): Bool
     
     /**
-    * Bind Unix datagram socket at local path.
-    *
-    * This operation does atomically create a socket file at the local path.
-    *
-    * @throws SocketException if the socket is already bound or path already exists.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Binds the socket to its configured local address.
+     * @throws SocketException on binding failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func bind(): Unit
     
     /**
-    * Configure the socket to only work with the specified remote peer address. To undo this action use disconnect()
-    *
-    * After invoking this function with a particular address, we will not be able to send message to peers other than this. We will also never receive any messages from other peers (they will be just filtered out). Invoking disconnect() reverts the filter to the initial state so it will be possible to send message to any recipients again.
-    *
-    * This function should be only invoked after bind()
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public func connect(remotePath: String): Unit
-    
-    /**
-    * Configure the socket to only work with the specified remote peer address. To undo this action use disconnect()
-    *
-    * After invoking this function with a particular address, we will not be able to send message to peers other than this. We will also never receive any messages from other peers (they will be just filtered out). Invoking disconnect() reverts the filter to the initial state so it will be possible to send message to any recipients again.
-    *
-    * This function should be only invoked after bind()
-    *
-    * @throws SocketException if the socket is not bound.
-    * @throws SocketException if the connection cannot be established.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Connects the socket to a specific remote address, allowing `send` and `receive` to be used.
+     * @param remote The remote `SocketAddress` to connect to.
+     * @throws SocketException on connection failure.
+     * @throws IllegalArgumentException if the address is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func connect(remote: SocketAddress): Unit
     
     /**
-    * Reverts the effect of connect() function so we can send and receive to/from any address again.
-    * This function makes no effect if invoked multiple times or if we invoke disconnect without connect invocation.
-    *
-    * @throws SocketException if the socket is not bound.
-    * @throws SocketException if the connection cannot be established.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Disconnects the socket from its remote address.
+     * @throws SocketException on disconnection failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func disconnect(): Unit
     
     /**
-    * Receive the next datagram into the specified buffer waiting for data if needed.
-    *
-    * Returns a pair of the datagram sender address and the actual size of received datagram, possibly zero
-    * or a value greater than the passed buffer size.
-    *
-    * Unlike read in streams, this function requires a buffer of proper size (big enough),
-    * otherwise a datagram that is bigger than the provided buffer will be
-    * truncated and the returned datagram size will be greater that the buffer size.
-    *
-    * @throws SocketException if buffer is empty or if it is not possible to read the data.
-    * @throws SocketTimeoutException if reading time has expired.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Receives a datagram, storing the data and source address.
+     * @param buffer The buffer to store the received data.
+     * @returns A tuple containing the source `SocketAddress` and the number of bytes received.
+     * @throws SocketException if the buffer is too small.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
     
     /**
-    * Sends datagram of the payload to the specified recipient address.
-    *
-    * It also may block in this function invocation if there is not enough
-    * output buffer space available for some reason. Depending on the underlying
-    * implementation, it may also silently discard a datagram in this case.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sends a datagram to a specified recipient.
+     * @param recipient The destination `SocketAddress`.
+     * @param payload The byte array of data to send.
+     * @throws SocketException on send failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public override func sendTo(recipient: SocketAddress, payload: Array<Byte>): Unit
     
     /**
-    * Send a message with the specified payload to the peer with preconfigured address.
-    * This only works if address has been specified using `connect() ` otherwise will fail immediately.
-    *
-    * In other aspects, it works the same as regular `sendTo(recipient,payload).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sends a datagram on a connected socket.
+     * @param payload The byte array of data to send.
+     * @throws SocketException if the payload is too large or send fails.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
     public func send(payload: Array<Byte>): Unit
     
     /**
-    * Receive a datagram message from the preconfigured peer address.
-    * This only works if the address has been specified via connect() otherwise will fail.
-    * In other aspects, it works the same as regular `receiveFrom(buffer).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Receives a datagram from a connected socket.
+     * @param buffer The buffer to store the received data.
+     * @returns The number of bytes received.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
     public func receive(buffer: Array<Byte>): Int64
     
     /**
-    * SO_SNDBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired outgoing buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Enables or disables the SO_REUSEPORT socket option.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop reusePort: Bool
+    
+    /**
+     * @description Enables or disables the SO_REUSEADDR socket option.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop reuseAddress: Bool
+    
+    /**
+     * @description The size of the socket send buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop sendBufferSize: Int64
     
     /**
-    * SO_RCVBUF option, providing a way to specify hint for the underlying
-    * native socket implementation about the desired receive buffer size.
-    *
-    * Changing this option is not guaranteed to have any effect since it's
-    * completely up to the operating system.
-    *
-    * Reading this property could also provide non-realistic values on some systems in
-    * some cases so no logic should strictly rely on this value.
-    *
-    * @throws IllegalArgumentException if the specified buffer size is negative or 0.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description The size of the socket receive buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop receiveBufferSize: Int64
     
     /**
-    * Read the specified socket option writing the result to value buffer
-    * of the specified valueLength (in bytes).
-    * Before invoking this function valueLength should be initialized with the buffer size
-    * After invoking this function valueLength will contain the actual result
-    * size in bytes.
-    *
-    * Throws an exception if failed (when getsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to a buffer to store the option value.
+     * @param valueLength A C pointer to the length of the value buffer.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOption(
         level: Int32,
         option: Int32,
@@ -2794,14 +3230,17 @@ public class UnixDatagramSocket <: DatagramSocket {
     ): Unit
     
     /**
-    * Write the specified socket option from value buffer having valueLength
-    * size in bytes.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1).
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to the option value.
+     * @param valueLength The length of the option value.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOption(
         level: Int32,
         option: Int32,
@@ -2810,28 +3249,32 @@ public class UnixDatagramSocket <: DatagramSocket {
     ): Unit
     
     /**
-    * Read the specified socket option returning it's value as IntNative result.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The integer value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOptionIntNative(
         level: Int32,
         option: Int32
     ): IntNative
     
     /**
-    * Write a numeric IntNative value to the specified socket option.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The integer value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOptionIntNative(
         level: Int32,
         option: Int32,
@@ -2839,70 +3282,967 @@ public class UnixDatagramSocket <: DatagramSocket {
     ): Unit
     
     /**
-    * Read the specified socket option returning it's value as a boolean value
-    * converting it from an IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as 0 => false, other values => true.
-    *
-    * Throws an exception if failed (when getsockopt returns -1) or if the result
-    * has size different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Gets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The boolean value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getSocketOptionBool(
         level: Int32,
         option: Int32
     ): Bool
     
     /**
-    * Write a boolean value to the specified socket option converting it to IntNative.
-    *
-    * See SocketOptions for popular option constants.
-    *
-    * The conversion is defined as false => 0, true => 1
-    *
-    * Throws an exception if failed (when setsockopt returns -1), for example
-    * when the option size is different from IntNative.
-    */
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+     * @description Sets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The boolean value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setSocketOptionBool(
         level: Int32,
         option: Int32,
         value: Bool
     ): Unit
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Returns a string representation of the socket.
+     * @returns A string representation of the socket.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func toString(): String
 }
 
-@!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+/**
+ * @description Represents a Unix domain socket for inter-process communication on the same host.
+ */
+@!APILevel[
+    since: "22"
+]
+public class UnixSocket <: StreamingSocket {
+    /**
+     * @description Creates a Unix socket and connects it to the specified path.
+     * @param path The filesystem path to connect to.
+     * @param localPath An optional local path to bind to before connecting.
+     * @throws SocketException on socket creation or connection errors.
+     * @throws IllegalArgumentException if arguments are invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(path: String, localPath!: ?String = None)
+    
+    /**
+     * @description Creates a Unix socket and connects it to the specified socket address.
+     * @param address The destination `SocketAddress` (must be a Unix domain address).
+     * @param localAddress An optional local `SocketAddress` to bind to.
+     * @throws SocketException on socket creation or connection errors.
+     * @throws IllegalArgumentException if arguments are invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(address: SocketAddress, localAddress!: ?SocketAddress = None)
+    
+    /**
+     * @description The remote address to which the socket is connected.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override prop remoteAddress: SocketAddress
+    
+    /**
+     * @description The local address to which the socket is bound.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override prop localAddress: SocketAddress
+    
+    /**
+     * @description The timeout for read operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override mut prop readTimeout: ?Duration
+    
+    /**
+     * @description The timeout for write operations. `None` means an infinite timeout.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override mut prop writeTimeout: ?Duration
+    
+    /**
+     * @description The size of the socket send buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop sendBufferSize: Int64
+    
+    /**
+     * @description The size of the socket receive buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop receiveBufferSize: Int64
+    
+    /**
+     * @description Reads data from the socket into the provided buffer.
+     * @param buffer The buffer to read data into.
+     * @returns The number of bytes read, or -1 if the end of the stream is reached.
+     * @throws SocketException if the buffer is too small.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func read(buffer: Array<Byte>): Int64
+    
+    /**
+     * @description Writes data from the provided payload to the socket.
+     * @param buffer The byte array of data to write.
+     * @throws SocketException if the buffer size is zero or write fails.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func write(buffer: Array<Byte>): Unit
+    
+    /**
+     * @description Connects the socket to its configured remote address, with an optional timeout.
+     * @param timeout An optional duration to wait for the connection.
+     * @throws IllegalArgumentException if timeout is negative.
+     * @throws SocketException on connection failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public func connect(timeout!: ?Duration = None): Unit
+    
+    /**
+     * @description Gets a raw socket option value.
+     * @param level The option level (e.g., `OptionLevel.SOCKET`).
+     * @param option The option name (e.g., `OptionName.SO_KEEPALIVE`).
+     * @param value A C pointer to a buffer to store the option value.
+     * @param valueLength A C pointer to the length of the value buffer.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOption(
+        level: Int32,
+        option: Int32,
+        value: CPointer<Unit>,
+        valueLength: CPointer<UIntNative>
+    ): Unit
+    
+    /**
+     * @description Sets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to the option value.
+     * @param valueLength The length of the option value.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOption(
+        level: Int32,
+        option: Int32,
+        value: CPointer<Unit>,
+        valueLength: UIntNative
+    ): Unit
+    
+    /**
+     * @description Gets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The integer value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOptionIntNative(
+        level: Int32,
+        option: Int32
+    ): IntNative
+    
+    /**
+     * @description Sets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The integer value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOptionIntNative(
+        level: Int32,
+        option: Int32,
+        value: IntNative
+    ): Unit
+    
+    /**
+     * @description Gets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The boolean value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOptionBool(
+        level: Int32,
+        option: Int32
+    ): Bool
+    
+    /**
+     * @description Sets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The boolean value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOptionBool(
+        level: Int32,
+        option: Int32,
+        value: Bool
+    ): Unit
+    
+    /**
+     * @description Closes the socket, releasing any associated resources.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public func close(): Unit
+    
+    /**
+     * @description Checks if the socket is closed.
+     * @returns `true` if the socket is closed, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public func isClosed(): Bool
+    
+    /**
+     * @description Returns a string representation of the Unix socket.
+     * @returns A string detailing the socket's state and addresses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public override func toString(): String
+}
+
+/**
+ * @description Represents a server socket that listens for incoming Unix domain socket connections.
+ */
+@!APILevel[
+    since: "22"
+]
+public class UnixServerSocket <: ServerSocket {
+    /**
+     * @description The local address (filesystem path) the server socket is listening on.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override prop localAddress: SocketAddress
+    
+    /**
+     * @description Creates a Unix server socket and binds it to the specified filesystem path.
+     * @param bindAt The path to bind to.
+     * @throws SocketException on socket creation or binding errors.
+     * @throws IllegalArgumentException if the path is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(bindAt!: String)
+    
+    /**
+     * @description Creates a Unix server socket and binds it to the specified socket address.
+     * @param bindAt The `SocketAddress` to bind to (must be a Unix domain address).
+     * @throws SocketException on socket creation or binding errors.
+     * @throws IllegalArgumentException if the address is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(bindAt!: SocketAddress)
+    
+    /**
+     * @description The size of the socket send buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop sendBufferSize: Int64
+    
+    /**
+     * @description The size of the socket receive buffer in bytes.
+     * @throws SocketException on socket-related errors.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop receiveBufferSize: Int64
+    
+    /**
+     * @description backlog size.
+     * @throws SocketException if use backlogSize after bind.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop backlogSize: Int64
+    
+    /**
+     * @description Binds the server socket to its configured address and begins listening.
+     * @throws SocketException on binding or listening failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func bind(): Unit
+    
+    /**
+     * @description Accepts an incoming connection, waiting up to the specified timeout.
+     * @param timeout An optional duration to wait for a connection. `None` means wait indefinitely.
+     * @returns A `UnixSocket` for the new connection.
+     * @throws SocketException on accept failure or timeout.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func accept(timeout!: ?Duration): UnixSocket
+    
+    /**
+     * @description Accepts an incoming connection, waiting indefinitely.
+     * @returns A `UnixSocket` for the new connection.
+     * @throws SocketException on accept failure.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func accept(): UnixSocket
+    
+    /**
+     * @description Closes the server socket, releasing any associated resources.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public override func close(): Unit
+    
+    /**
+     * @description Checks if the server socket is closed.
+     * @returns `true` if the socket is closed, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public override func isClosed(): Bool
+    
+    /**
+     * @description Gets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to a buffer to store the option value.
+     * @param valueLength A C pointer to the length of the value buffer.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOption(
+        level: Int32,
+        option: Int32,
+        value: CPointer<Unit>,
+        valueLength: CPointer<UIntNative>
+    ): Unit
+    
+    /**
+     * @description Sets a raw socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value A C pointer to the option value.
+     * @param valueLength The length of the option value.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOption(
+        level: Int32,
+        option: Int32,
+        value: CPointer<Unit>,
+        valueLength: UIntNative
+    ): Unit
+    
+    /**
+     * @description Gets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The integer value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOptionIntNative(
+        level: Int32,
+        option: Int32
+    ): IntNative
+    
+    /**
+     * @description Sets a socket option value of type `IntNative`.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The integer value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOptionIntNative(
+        level: Int32,
+        option: Int32,
+        value: IntNative
+    ): Unit
+    
+    /**
+     * @description Gets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @returns The boolean value of the socket option.
+     * @throws SocketException on failure to get the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOptionBool(
+        level: Int32,
+        option: Int32
+    ): Bool
+    
+    /**
+     * @description Sets a boolean socket option value.
+     * @param level The option level.
+     * @param option The option name.
+     * @param value The boolean value to set.
+     * @throws SocketException on failure to set the option.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOptionBool(
+        level: Int32,
+        option: Int32,
+        value: Bool
+    ): Unit
+    
+    /**
+     * @description Returns a string representation of the socket.
+     * @returns A string representation of the socket.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public override func toString(): String
+}
+
+
+/**
+ * @description Represents a Unix domain datagram socket that can optionally be bound and/or connected to a single peer. Unlike a stream socket it preserves datagram message boundaries and may stay unconnected to communicate with multiple peers.
+ */
+@!APILevel[
+    since: "22"
+]
+public class UnixDatagramSocket <: DatagramSocket {
+    /**
+     * @description Create an unbound Unix datagram socket with an intended local filesystem path. The actual bind happens when bind() is invoked later.
+     * @param bindAt local path to bind at later; must refer to a non‑existing entry that will be created on bind
+     * @throws SocketException when underlying socket creation failure
+     * @throws IllegalArgumentException when path invalid (e.g. empty or contains illegal bytes)
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(bindAt!: String)
+    
+    /**
+     * @description Create an unbound Unix datagram socket with an already constructed Unix socket address.
+     * @param bindAt Unix socket address that will be used when bind() is invoked
+     * @throws SocketException when underlying socket creation failure
+     * @throws IllegalArgumentException when address family or value is invalid
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public init(bindAt!: SocketAddress)
+    
+    /**
+     * @description Remote peer address this socket is connected to, or None when the socket is currently unconnected.
+     * @returns Optional remote socket address; None means no peer filtering is applied
+     * @throws SocketException when socket already closed
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override prop remoteAddress: ?SocketAddress
+    
+    /**
+     * @description Local address this socket is (or will be) bound at. Accessing before bind() may raise an error if not yet bound.
+     * @returns Local socket address; throws if not bound yet
+     * @throws SocketException when socket closed or not yet bound
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override prop localAddress: SocketAddress
+    
+    /**
+     * @description Receive operation timeout. None means infinite wait. Set value is normalized to clock granularity and validated to be non‑negative.
+     * @returns Current timeout duration or None
+     * @throws SocketException when socket already closed
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override mut prop receiveTimeout: ?Duration
+    
+    /**
+     * @description Send operation timeout. None means infinite wait. Set value is normalized to clock granularity and validated to be non‑negative.
+     * @returns Current timeout duration or None
+     * @throws SocketException when socket already closed
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public override mut prop sendTimeout: ?Duration
+    
+    /**
+     * @description Close the socket releasing all underlying resources. Safe to invoke multiple times (reentrant).
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public override func close(): Unit
+    
+    /**
+     * @description Checks if the socket is closed.
+     * @returns `true` if the socket is closed, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public override func isClosed(): Bool
+    
+    /**
+     * @description Bind the socket to its configured local address creating the filesystem entry atomically.
+     * @throws SocketException when native bind failure or path already exists
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public func bind(): Unit
+    
+    /**
+     * @description Connects the socket to a specific peer path, restricting subsequent send/receive operations to that peer until disconnect().
+     * @param remotePath filesystem path to an existing bound Unix datagram socket file
+     * @throws IllegalArgumentException when invalid remote path
+     * @throws SocketException when native connect failure
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public func connect(remotePath: String): Unit
+    
+    /**
+     * @description Connect the socket to a specific peer address object, restricting subsequent send/receive operations to that peer until disconnect().
+     * @param remote Unix socket address of an existing bound datagram peer
+     * @throws IllegalArgumentException when invalid remote address
+     * @throws SocketException when native connect failure
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public func connect(remote: SocketAddress): Unit
+    
+    /**
+     * @description Disconnect from the previously connected peer so the socket can communicate with any peer again. No effect if not connected.
+     * @throws SocketException when native disconnect failure or not bound
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public func disconnect(): Unit
+    
+    /**
+     * @description Receive a datagram from any peer writing data into buffer and returning sender address and actual datagram size. Size may exceed buffer length indicating truncation.
+     * @param buffer target byte array to store the datagram (must not be empty)
+     * @returns Pair (sender address, received datagram size in bytes) — size may be greater than buffer.size if truncated
+     * @throws SocketException when read failure or timeout
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func receiveFrom(buffer: Array<Byte>): (SocketAddress, Int64)
+    
+    /**
+     * @description Send a datagram with the provided payload to the specified recipient address.
+     * @param recipient target peer address
+     * @param payload datagram bytes to send
+     * @throws SocketException when native send failure
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public override func sendTo(recipient: SocketAddress, payload: Array<Byte>): Unit
+    
+    /**
+     * @description Send a datagram payload to the preconfigured peer set via connect().
+     * @param payload datagram bytes to send
+     * @throws SocketException when native send failure
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET",
+        throwexception: true
+    ]
+    public func send(payload: Array<Byte>): Unit
+    
+    /**
+     * @description Receive a datagram payload from the preconfigured peer into buffer. Fails if not connected.
+     * @param buffer destination byte array (must not be empty)
+     * @returns Size of received datagram; may exceed buffer length if truncated
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"
+    ]
+    public func receive(buffer: Array<Byte>): Int64
+    
+    /**
+     * @description Hint for native send buffer size (SO_SNDBUF). May not reflect actual buffer size due to OS policies.
+     * @returns Configured or reported send buffer size in bytes
+     * @throws SocketException when failed to query or set option / socket closed
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop sendBufferSize: Int64
+    
+    /**
+     * @description Hint for native receive buffer size (SO_RCVBUF). May not reflect actual buffer size due to OS policies.
+     * @returns Configured or reported receive buffer size in bytes
+     * @throws SocketException when failed to query or set option / socket closed
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public mut prop receiveBufferSize: Int64
+    
+    /**
+     * @description Read a raw socket option value into the supplied buffer writing resulting size to valueLength.
+     * @param level protocol level at which the option resides
+     * @param option numeric option identifier
+     * @param value pointer to memory where option value will be written
+     * @param valueLength pointer to size variable (in/out) describing buffer size then actual value size
+     * @throws SocketException when native getsockopt failure
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOption(
+        level: Int32,
+        option: Int32,
+        value: CPointer<Unit>,
+        valueLength: CPointer<UIntNative>
+    ): Unit
+    
+    /**
+     * @description Set a raw socket option value from the supplied buffer.
+     * @param level protocol level at which the option resides
+     * @param option numeric option identifier
+     * @param value pointer to memory containing option value
+     * @param valueLength size (in bytes) of value buffer
+     * @throws SocketException when native setsockopt failure
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOption(
+        level: Int32,
+        option: Int32,
+        value: CPointer<Unit>,
+        valueLength: UIntNative
+    ): Unit
+    
+    /**
+     * @description Read a numeric socket option (fits IntNative) and return its value.
+     * @param level protocol level at which the option resides
+     * @param option numeric option identifier
+     * @returns Option value as IntNative
+     * @throws SocketException when native getsockopt failure
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOptionIntNative(
+        level: Int32,
+        option: Int32
+    ): IntNative
+    
+    /**
+     * @description Set a numeric IntNative value for the specified socket option.
+     * @param level protocol level at which the option resides
+     * @param option numeric option identifier
+     * @param value numeric value to set
+     * @throws SocketException when native setsockopt failure
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOptionIntNative(
+        level: Int32,
+        option: Int32,
+        value: IntNative
+    ): Unit
+    
+    /**
+     * @description Read a boolean socket option converting non‑zero integer to true and zero to false.
+     * @param level protocol level at which the option resides
+     * @param option numeric option identifier
+     * @returns Boolean interpretation of the option value
+     * @throws SocketException when native getsockopt failure
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func getSocketOptionBool(
+        level: Int32,
+        option: Int32
+    ): Bool
+    
+    /**
+     * @description Set a boolean socket option converting true->1 and false->0.
+     * @param level protocol level at which the option resides
+     * @param option numeric option identifier
+     * @param value boolean value to set
+     * @throws SocketException when native setsockopt failure
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public func setSocketOptionBool(
+        level: Int32,
+        option: Int32,
+        value: Bool
+    ): Unit
+    
+    /**
+     * @description Human readable representation including internal implementation info for debugging.
+     * @returns String form UnixDatagramSocket(<internal state>)
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public override func toString(): String
+}
+
+/**
+ * @description Represents a Unix domain socket address, which can be unnamed, abstract, or path-based.
+ */
+@!APILevel[
+    since: "22"
+]
 public class UnixSocketAddress <: SocketAddress & Equatable<UnixSocketAddress> {
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Construct an address from a raw byte array (UTF‑8) trimming trailing zeros.
+     * @param path raw bytes representing an address; length must be <= 108
+     * @throws IllegalArgumentException when path too long or contains interior NULs
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(path: Array<Byte>)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Construct an address from a String verifying format: may be empty (unnamed), abstract (leading NUL) or regular pathname without interior NULs.
+     * @param path string path representation (<=108 bytes)
+     * @throws IllegalArgumentException when path too long or contains interior NULs
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(path: String)
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The size of the socket address structure in bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description The address family of the socket address (always `UNIX`).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop family: AddressFamily
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func ==(rhs: UnixSocketAddress): Bool
+    /**
+     * @description Equality comparison by underlying path bytes up to effective length.
+     * @param other address to compare with
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: UnixSocketAddress): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
-    public operator func !=(rhs: UnixSocketAddress): Bool
+    /**
+     * @description Inequality comparison, logical negation of ==.
+     * @param other address to compare with
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: UnixSocketAddress): Bool
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Serialize this address into the binary representation used by native sockaddr_un (family + path).
+     * @returns Byte array containing serialized address
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getAddressBytes(): Array<Byte>
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Compute hash code based on path bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22", permission: "ohos.permission.GET_NETWORK_INFO" & "ohos.permission.INTERNET"]
+    /**
+     * @description Human readable string form of this Unix socket address (effective path substring).
+     * @returns Path string (could be empty or begin with NUL for abstract addresses)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
