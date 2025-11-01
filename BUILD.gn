@@ -126,14 +126,19 @@ group("sdk_cangjie_wrapper") {
   }
 }
 
- 
-
 cj_ohos_sdk_copy("sdk_api") {
   out_relative_dir = "cangjie_sdk/api"
   deps = [ ":sdk_cangjie_wrapper" ]
 }
 
-ohos_copy("sdk_compiler") {
+cj_ohos_sdk_copy("sdk_compiler") {
+  out_relative_dir = "cangjie_sdk/build-tools"
+  deps = [ ":sdk_build_tools_copy" ]
+}
+
+action_with_pydeps("sdk_build_tools_copy") {
+  script = "//interface/sdk_cangjie/build-tools/script/copy_and_prue.py"
+  depfile = "${target_gen_dir}/${target_name}.d"
   sources = []
   if (is_mingw) {
     sources += [ "${cjc_cangjie_sdk_path}/windows-x64/cangjie" ]
@@ -149,9 +154,14 @@ ohos_copy("sdk_compiler") {
     assert(false && "unsupported platform %{target_cpu}")
   }
 
-  outputs = [ "${target_out_dir}/${target_name}" ]
-  module_source_dir = "${target_out_dir}/${target_name}"
-  module_install_name = ""
+  args = [
+    "--source",
+    rebase_path(sources[0], root_build_dir),
+    "--destination",
+    rebase_path("${target_out_dir}/cangjie_sdk/build-tools", root_build_dir),
+  ]
+
+  outputs = [ "${target_out_dir}/cangjie_sdk/build-tools" ]
 }
 
 ohos_copy("sdk_compiler_modules") {
