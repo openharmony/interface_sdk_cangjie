@@ -1,71 +1,97 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.ref
 
-
 /**
-* A base non-generic class with all necessary fields to simplify the backend implementation.
-*/
+ * @description Base class for weak reference implementations
+ */
+@!APILevel[
+    since: "22"
+]
 sealed abstract class WeakRefBase {
 }
 
 /**
-* Specifies behavior of the runtime regarding this weak reference:
-* EAGER    - clear weak reference as soon as possible.
-*            Useful for listeners, canonicalizing mapping, etc.
-* DEFERRED - clear weak reference only on lack of free memory.
-*            Useful for caches.
-*/
-@!APILevel[since: "22"]
+ * @description Enumeration defining the cleanup policy for weak references
+ */
+@!APILevel[
+    since: "22"
+]
 public enum CleanupPolicy <: Equatable<CleanupPolicy> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Eager cleanup policy that releases resources as soon as possible
+     */
+    @!APILevel[
+        since: "22"
+    ]
     EAGER |
-    @!APILevel[since: "22"]
+    /**
+     * @description Deferred cleanup policy that delays resource release until necessary
+     */
+    @!APILevel[
+        since: "22"
+    ]
     DEFERRED
-    @!APILevel[since: "22"]
-    public operator func ==(that: CleanupPolicy): Bool
+    /**
+     * @description Compares two CleanupPolicy values for equality
+     * @param other - The CleanupPolicy to compare with
+     * @returns True if the policies are equal, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: CleanupPolicy): Bool
     
-    @!APILevel[since: "22"]
-    public operator func !=(that: CleanupPolicy): Bool
+    /**
+     * @description Compares two CleanupPolicy values for inequality
+     * @param other - The CleanupPolicy to compare with
+     * @returns True if the policies are not equal, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: CleanupPolicy): Bool
 }
 
 /**
-* A weak reference to T. Weak references do not prevent GC from reclaiming their referents.
-* If referent of a weak reference was reclaimed, the WeakRef.value returns None.
-*/
-@!APILevel[since: "22"]
+ * @description A class that holds a weak reference to an object, allowing the object to be garbage collected when no strong references exist
+ */
+@!APILevel[
+    since: "22"
+]
 public class WeakRef<T> <: WeakRefBase where T <: Object {
     /**
-    * Creates a weak reference to the given object with the given cleanup policy.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new weak reference to the specified object with the given cleanup policy
+     * @param value - The object to create a weak reference to
+     * @param cleanupPolicy - The policy determining when the reference should be cleaned up
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(value: T, cleanupPolicy: CleanupPolicy)
     
     /**
-    * Returns the cleanup policy of this weak reference.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets or sets the cleanup policy for this weak reference
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop cleanupPolicy: CleanupPolicy
     
     /**
-    * The value of this weak reference. If the referent has been reclaimed by GC or this reference has been
-    * cleared by calling the clear() method, the `value` is `None`.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the referenced object if it still exists
+     * @returns An Option containing the referenced object, or None if the object has been garbage collected
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop value: Option<T>
     
     /**
-    * Forcibly clears the weak reference.
-    */
-    @!APILevel[since: "22"]
+     * @description Explicitly clears the weak reference, allowing the referenced object to be garbage collected
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
 }
 

@@ -13,471 +13,603 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.bluetooth.a2dp
-import ohos.bluetooth.*
-import ohos.bluetooth.base_profile.*
-import ohos.bluetooth.constant.*
-import ohos.business_exception.{ BusinessException, ERR_PARAMETER_ERROR}
-import ohos.callback_invoke.{ CallbackObject, Callback1Argument}
-import ohos.ffi.*
-import ohos.labels.*
-import std.collection.{ArrayList, HashMap}
-import std.deriving.*
 
+import ohos.bluetooth.base_profile.{ BaseProfile, StateChangeParam, ProfileCallbackType }
+import ohos.callback_invoke.{Callback1Argument, CallbackObject}
+import ohos.bluetooth.constant.ProfileConnectionState
+import ohos.labels.APILevel
 
 /**
-* create the instance of a2dp profile.
-*
-* @relation function createA2dpSrcProfile(): A2dpSourceProfile
-*/
+ * create the instance of a2dp profile.
+ *
+ * @returns { A2dpSourceProfile } Returns the instance of profile.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func createA2dpSrcProfile(): A2dpSourceProfile
 
-
 /**
-* Manager a2dp source profile.
-*
-* @relation interface A2dpSourceProfile extends BaseProfile
-*/
+ * Manager a2dp source profile.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class A2dpSourceProfile <: BaseProfile {
     /**
-    * Obtains the playing state of device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation getPlayingState(deviceId: string): PlayingState
-    */
+     * Obtains the playing state of device.
+     *
+     * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
+     * @returns { PlayingState } Returns the playing state.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getPlayingState(deviceId: String): PlayingState
-    
+
     /**
-    * Obtains the connected devices list of profile.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation getConnectedDevices(): Array<string>
-    */
+     * Obtains the connected devices list of profile.
+     *
+     * @returns { Array<String> } Returns the address of connected devices list.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getConnectedDevices(): Array<String>
-    
+
     /**
-    * Obtains the profile connection state.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation getConnectionState(deviceId: string): ProfileConnectionState
-    */
+     * Obtains the profile connection state.
+     *
+     * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
+     * @returns { ProfileConnectionState } Returns the profile connection state.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getConnectionState(deviceId: String): ProfileConnectionState
-    
+
     /**
-    * Subscribe the event reported when the profile connection state changes.
-    *
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
-    */
+     * Subscribe the event reported when the profile connection state changes.
+     *
+     * @param { ProfileCallbackType } eventType - The type of event to subscribe.
+     * @param { Callback1Argument<StateChangeParam> } callback - The callback function to be called when the event occurs.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: ProfileCallbackType, callback: Callback1Argument<StateChangeParam>): Unit
-    
+
     /**
-    * Unsubscribe the event reported when the profile connection state changes.
-    *
-    * @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
-    */
+     * Unsubscribe the event reported when the profile connection state changes.
+     *
+     * @param { ProfileCallbackType } eventType - The type of event to unsubscribe.
+     * @param { CallbackObject } callback - The callback function to be removed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: ProfileCallbackType, callback: CallbackObject): Unit
-    
+
     /**
-    * Unsubscribe the event reported when the profile connection state changes.
-    *
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
-    */
+     * Unsubscribe the event reported when the profile connection state changes.
+     *
+     * @param { ProfileCallbackType } eventType - The type of event to unsubscribe.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: ProfileCallbackType): Unit
 }
 
-
 /**
-* The enum of a2dp playing state.
-*
-* @relation enum PlayingState
-*/
-@Derive[ToString, Equatable]
+ * The enum of a2dp playing state.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum PlayingState {
     /**
-    * Not playing.
-    *
-    * @relation STATE_NOT_PLAYING
-    */
+     * Not playing.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    StateNotPlaying |
+    StateNotPlaying
+    | 
     /**
-    * Playing.
-    *
-    * @relation STATE_PLAYING
-    */
+     * Playing.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    StatePlaying |
-    ...
+    StatePlaying
+    | ...
 }
 
 
+extend PlayingState <: ToString {
+    
+    /**
+     * Converts the PlayingState to its string representation.
+     * @returns { String } A string representation of the PlayingState.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend PlayingState <: Equatable<PlayingState> {
+    
+    /**
+     * Compares this PlayingState with another for equality.
+     * @param { PlayingState } other - The PlayingState to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: PlayingState): Bool
+    
+    /**
+     * Compares this PlayingState with another for inequality.
+     * @param { PlayingState } other - The PlayingState to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: PlayingState): Bool
+}
 
 /**
-* Describes the codec information.
-*
-* @relation interface CodecInfo
-*/
+ * Describes the codec information.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class CodecInfo {
     /**
-    * codec type
-    *
-    * @relation codecType: CodecType
-    */
+     * codec type
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var codecType: CodecType
-    
+
     /**
-    * codec bits per sample.
-    *
-    * @relation codecBitsPerSample: CodecBitsPerSample
-    */
+     * codec bits per sample.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var codecBitsPerSample: CodecBitsPerSample
-    
+
     /**
-    * codec channel mode.
-    *
-    * @relation codecChannelMode: CodecChannelMode
-    */
+     * codec channel mode.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var codecChannelMode: CodecChannelMode
-    
+
     /**
-    * codec sample rate.
-    *
-    * @relation codecSampleRate: CodecSampleRate
-    */
+     * codec sample rate.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var codecSampleRate: CodecSampleRate
 }
 
-
 /**
-* Describes the codec type.
-*
-* @relation enum CodecType
-*/
-@Derive[ToString, Equatable]
+ * Describes the codec type.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum CodecType {
     /**
-    * invalid codec type.
-    *
-    * @relation CODEC_TYPE_INVALID = -1
-    */
+     * invalid codec type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecTypeInvalid |
+    CodecTypeInvalid
+    | 
     /**
-    * SBC - Sub-band coding.
-    *
-    * @relation CODEC_TYPE_SBC = 0
-    */
+     * SBC - Sub-band coding.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecTypeSbc |
+    CodecTypeSbc
+    | 
     /**
-    * AAC -Advanced Audio Coding.
-    *
-    * @relation CODEC_TYPE_AAC = 1
-    */
+     * AAC -Advanced Audio Coding.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecTypeAac |
+    CodecTypeAac
+    | 
     /**
-    * L2HC.
-    *
-    * @relation CODEC_TYPE_L2HC = 2
-    */
+     * L2HC.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecTypeL2hc |
-    ...
+    CodecTypeL2hc
+    | ...
 }
 
 
+extend CodecType <: ToString {
+    
+    /**
+     * Converts the CodecType to its string representation.
+     * @returns { String } A string representation of the CodecType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend CodecType <: Equatable<CodecType> {
+    
+    /**
+     * Compares this CodecType with another for equality.
+     * @param { CodecType } other - The CodecType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: CodecType): Bool
+    
+    /**
+     * Compares this CodecType with another for inequality.
+     * @param { CodecType } other - The CodecType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: CodecType): Bool
+}
 
 /**
-* Describes the codec channel mode.
-*
-* @relation enum CodecChannelMode
-*/
-@Derive[ToString, Equatable]
+ * Describes the codec channel mode.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum CodecChannelMode {
     /**
-    * Codec channel mode none.
-    *
-    * @relation CODEC_CHANNEL_MODE_NONE = 0
-    */
+     * Codec channel mode none.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecChannelModeNone |
+    CodecChannelModeNone
+    | 
     /**
-    * Codec channel mode MONO.
-    *
-    * @relation CODEC_CHANNEL_MODE_MONO = 1
-    */
+     * Codec channel mode MONO.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecChannelModeMono |
+    CodecChannelModeMono
+    | 
     /**
-    * Codec channel mode STEREO.
-    *
-    * @relation CODEC_CHANNEL_MODE_STEREO = 2
-    */
+     * Codec channel mode STEREO.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecChannelModeStereo |
-    ...
+    CodecChannelModeStereo
+    | ...
 }
 
 
+extend CodecChannelMode <: ToString {
+    
+    /**
+     * Converts the CodecChannelMode to its string representation.
+     * @returns { String } A string representation of the CodecChannelMode.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend CodecChannelMode <: Equatable<CodecChannelMode> {
+    
+    /**
+     * Compares this CodecChannelMode with another for equality.
+     * @param { CodecChannelMode } other - The CodecChannelMode to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: CodecChannelMode): Bool
+    
+    /**
+     * Compares this CodecChannelMode with another for inequality.
+     * @param { CodecChannelMode } other - The CodecChannelMode to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: CodecChannelMode): Bool
+}
 
 /**
-* Describes the codec bits per sample.
-*
-* @relation enum CodecBitsPerSample
-*/
-@Derive[ToString, Equatable]
+ * Describes the codec bits per sample.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum CodecBitsPerSample {
     /**
-    * Codec bits per sample none.
-    *
-    * @relation CODEC_BITS_PER_SAMPLE_NONE = 0
-    */
+     * Codec bits per sample none.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecBitsPerSampleNone |
+    CodecBitsPerSampleNone
+    | 
     /**
-    * Codec 16 bits per sample.
-    *
-    * @relation CODEC_BITS_PER_SAMPLE_16 = 1
-    */
+     * Codec 16 bits per sample.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecBitsPerSample16 |
+    CodecBitsPerSample16
+    | 
     /**
-    * Codec 24 bits per sample.
-    *
-    * @relation CODEC_BITS_PER_SAMPLE_24 = 2
-    */
+     * Codec 24 bits per sample.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecBitsPerSample24 |
+    CodecBitsPerSample24
+    | 
     /**
-    * Codec 32 bits per sample.
-    *
-    * @relation CODEC_BITS_PER_SAMPLE_32 = 3
-    */
+     * Codec 32 bits per sample.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecBitsPerSample32 |
-    ...
+    CodecBitsPerSample32
+    | ...
 }
 
 
+extend CodecBitsPerSample <: ToString {
+    
+    /**
+     * Converts the CodecBitsPerSample to its string representation.
+     * @returns { String } A string representation of the CodecBitsPerSample.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend CodecBitsPerSample <: Equatable<CodecBitsPerSample> {
+    
+    /**
+     * Compares this CodecBitsPerSample with another for equality.
+     * @param { CodecBitsPerSample } other - The CodecBitsPerSample to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: CodecBitsPerSample): Bool
+    
+    /**
+     * Compares this CodecBitsPerSample with another for inequality.
+     * @param { CodecBitsPerSample } other - The CodecBitsPerSample to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: CodecBitsPerSample): Bool
+}
 
 /**
-* Describes the codec sample rate.
-*
-* @relation enum CodecSampleRate
-*/
-@Derive[ToString, Equatable]
+ * Describes the codec sample rate.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum CodecSampleRate {
     /**
-    * Codec sample rate none.
-    *
-    * @relation CODEC_SAMPLE_RATE_NONE = 0
-    */
+     * Codec sample rate none.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRateNone |
+    CodecSampleRateNone
+    | 
     /**
-    * Codec sample rate 44.1k.
-    *
-    * @relation CODEC_SAMPLE_RATE_44100 = 1
-    */
+     * Codec sample rate 44.1k.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRate44100 |
+    CodecSampleRate44100
+    | 
     /**
-    * Codec sample rate 48k.
-    *
-    * @relation CODEC_SAMPLE_RATE_48000 = 2
-    */
+     * Codec sample rate 48k.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRate48000 |
+    CodecSampleRate48000
+    | 
     /**
-    * Codec sample rate 88.2k.
-    *
-    * @relation CODEC_SAMPLE_RATE_88200 = 3
-    */
+     * Codec sample rate 88.2k.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRate88200 |
+    CodecSampleRate88200
+    | 
     /**
-    * Codec sample rate 96k.
-    *
-    * @relation CODEC_SAMPLE_RATE_96000 = 4
-    */
+     * Codec sample rate 96k.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRate96000 |
+    CodecSampleRate96000
+    | 
     /**
-    * Codec sample rate 176.4k.
-    *
-    * @relation CODEC_SAMPLE_RATE_176400 = 5
-    */
+     * Codec sample rate 176.4k.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRate176400 |
+    CodecSampleRate176400
+    | 
     /**
-    * Codec sample rate 192k.
-    *
-    * @relation CODEC_SAMPLE_RATE_192000 = 6
-    */
+     * Codec sample rate 192k.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CodecSampleRate192000 |
-    ...
+    CodecSampleRate192000
+    | ...
 }
 
 
+extend CodecSampleRate <: ToString {
+    
+    /**
+     * Converts the CodecSampleRate to its string representation.
+     * @returns { String } A string representation of the CodecSampleRate.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
 
+
+extend CodecSampleRate <: Equatable<CodecSampleRate> {
+    
+    /**
+     * Compares this CodecSampleRate with another for equality.
+     * @param { CodecSampleRate } other -  The CodecSampleRate to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: CodecSampleRate): Bool
+    
+    /**
+     * Compares this CodecSampleRate with another for inequality.
+     * @param { CodecSampleRate } other -  The CodecSampleRate to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: CodecSampleRate): Bool
+}

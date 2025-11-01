@@ -13,543 +13,581 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.ability_delegator_registry
-import ohos.business_exception.{BusinessException, getUniversalErrorMsg}
-import ohos.ffi.*
-import ohos.app.ability.ui_ability.*
-import ohos.app.ability.want.*
-import ohos.app.ability.ability_stage.*
-import std.deriving.*
-import std.collection.HashMap
-import ohos.labels.*
 
-import ohos.hilog.*
+import ohos.app.ability.ability_stage.AbilityStage
+import ohos.app.ability.ui_ability.{Context, UIAbility}
+import ohos.app.ability.want.Want
+import ohos.labels.APILevel
+import std.collection.HashMap
 
 /**
-* Describes all lifecycle states of an ability.
-*
-* @relation export enum AbilityLifecycleState
-*/
-@Derive[ToString, Equatable]
+ * Describes all lifecycle states of an ability.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public enum AbilityLifecycleState {
+    
     /**
-    * Ability is in invalid state.
-    *
-    * @relation UNINITIALIZED = 0
-    */
+     * Ability is in invalid state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    Uninitialized |
+    Uninitialized
+    | 
+    
     /**
-    * Ability is in invalid state.
-    *
-    * @relation CREATE = 1
-    */
+     * Ability is in the created state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    Create |
+    Create
+    | 
+    
     /**
-    * Ability is in invalid state.
-    *
-    * @relation FOREGROUND = 2
-    */
+     * Ability is in the foreground state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    Foreground |
+    Foreground
+    | 
+    
     /**
-    * Ability is in invalid state.
-    *
-    * @relation BACKGROUND = 3
-    */
+     * Ability is in the background state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    Background |
+    Background
+    | 
+
     /**
-    * Ability is in invalid state.
-    *
-    * @relation DESTROY = 4
-    */
+     * Ability is in a destroyed state.
+     */
+    
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    Destroy |
-    ...
+    Destroy
+    | ...
 }
 
 
+extend AbilityLifecycleState <: ToString {
+    
+    /**
+     * Converts the AbilityLifecycleState to its string representation.
+     * @returns { String } A string representation of the AbilityLifecycleState.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend AbilityLifecycleState <: Equatable<AbilityLifecycleState> {
+    
+    /**
+     * Compares this AbilityLifecycleState with another for equality.
+     * @param { AbilityLifecycleState } other - The AbilityLifecycleState to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+    ]
+    public operator func ==(other: AbilityLifecycleState): Bool
+    
+    /**
+     * Compares this AbilityLifecycleState with another for inequality.
+     * @param { AbilityLifecycleState } other - The AbilityLifecycleState to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+    ]
+    public operator func !=(other: AbilityLifecycleState): Bool
+}
 
 /**
-* A global register used to store the AbilityDelegator and AbilityDelegatorArgs objects registered
-* during application startup.
-*
-* @relation declare namespace abilityDelegatorRegistry
-*/
+ * A global register used to store the AbilityDelegator and AbilityDelegatorArgs objects registered
+ * during application startup.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class AbilityDelegatorRegistry {
     /**
-    * Get the AbilityDelegator object of the application.
-    *
-    * @relation function getAbilityDelegator(): AbilityDelegator
-    */
+     * Get the AbilityDelegator object of the application.
+     *
+     * @returns { AbilityDelegator } Return the AbilityDelegator object initialized when the application is started.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public static func getAbilityDelegator(): AbilityDelegator
-    
+
     /**
-    * Get unit test arguments stored in the AbilityDelegatorArgs object.
-    *
-    * @relation function getArguments(): AbilityDelegatorArgs
-    */
+     * Get unit test arguments stored in the AbilityDelegatorArgs object.
+     *
+     * @returns { AbilityDelegatorArgs } Return the previously registered AbilityDelegatorArgs object.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public static func getArguments(): AbilityDelegatorArgs
 }
 
-
 /**
-* A object that records the result of shell command executes.
-*
-* @relation export interface ShellCmdResult
-*/
+ * A object that records the result of shell command executes.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public class ShellCmdResult <: RemoteDataLite {
+public class ShellCmdResult {
     /**
-    * shell cmd exec result.
-    *
-    * @relation exitCode: number
-    */
+     * shell cmd exec result.
+     *
+     * @returns { Int32 } Returns the exit code of shell command execution.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop exitCode: Int32
-    
+
     /**
-    * the cmd standard result.
-    *
-    * @relation stdResult: string
-    */
+     * the cmd standard result.
+     *
+     * @returns { String } Returns the standard output result of shell command execution.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop stdResult: String
 }
 
-
 /**
-* A global test utility interface used for adding AbilityMonitor objects and control lifecycle states of abilities.
-*
-* @relation export interface AbilityDelegator
-*/
+ * A global test utility interface used for adding AbilityMonitor objects and control lifecycle states of abilities.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public class AbilityDelegator <: RemoteDataLite {
+public class AbilityDelegator {
     /**
-    * Start a new ability.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000001 - The specified ability does not exist.
-    * @throws { BusinessExecption } 16000002 - Incorrect ability type.
-    * @throws { BusinessExecption } 16000004 - Cannot start an invisible component.
-    * @throws { BusinessExecption } 16000005 - The specified process does not have the permission.
-    * @throws { BusinessExecption } 16000006 - Cross-user operations are not allowed.
-    * @throws { BusinessExecption } 16000008 - The crowdtesting application expires.
-    * @throws { BusinessExecption } 16000009 - An ability cannot be started or stopped in Wukong mode.
-    * @throws { BusinessExecption } 16000010 - The call with the continuation and prepare continuation flag is forbidden.
-    * @throws { BusinessExecption } 16000011 - The context does not exist.
-    * @throws { BusinessExecption } 16000012 - The application is controlled.
-    * @throws { BusinessExecption } 16000013 - The application is controlled by EDM.
-    * @throws { BusinessExecption } 16000050 - Internal error.
-    * @throws { BusinessExecption } 16000053 - The ability is not on the top of the UI.
-    * @throws { BusinessExecption } 16000055 - Installation-free timed out.
-    * @throws { BusinessExecption } 16200001 - The caller has been released.
-    * @relation startAbility(want: Want): Promise<void>
-    */
+     * Start a new ability.
+     *
+     * @param { Want } want - Indicates the ability to start
+     * @throws { BusinessException } 16000001 - The specified ability does not exist.
+     * @throws { BusinessException } 16000002 - Incorrect ability type.
+     * @throws { BusinessException } 16000004 - Cannot start an invisible component.
+     * @throws { BusinessException } 16000005 - The specified process does not have the permission.
+     * @throws { BusinessException } 16000006 - Cross-user operations are not allowed.
+     * @throws { BusinessException } 16000008 - The crowdtesting application expires.
+     * @throws { BusinessException } 16000009 - An ability cannot be started or stopped in Wukong mode.
+     * @throws { BusinessException } 16000010 - The call with the continuation and prepare continuation flag is
+     * forbidden.
+     * @throws { BusinessException } 16000011 - The context does not exist.
+     * @throws { BusinessException } 16000012 - The application is controlled.
+     * @throws { BusinessException } 16000013 - The application is controlled by EDM.
+     * @throws { BusinessException } 16000050 - Internal error.
+     * @throws { BusinessException } 16000053 - The ability is not on the top of the UI.
+     * @throws { BusinessException } 16000055 - Installation-free timed out.
+     * @throws { BusinessException } 16200001 - The caller has been released.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func startAbility(want: Want): Unit
-    
+
     /**
-    * Execute the given command in the aa tools side.
-    *
-    * @relation executeShellCommand(cmd: string, timeoutSecs?: number): Promise<ShellCmdResult>
-    */
+     * Execute the given command in the aa tools side.
+     *
+     * @param { String } cmd - Shell command
+     * @param { Int64 } [timeoutSecs] - Timeout, in seconds.
+     * @returns { ShellCmdResult } Returns the result of the shell command execution.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        workerthread: true
     ]
     public func executeShellCommand(cmd: String, timeoutSecs!: Int64 = 0): ShellCmdResult
-    
+
     /**
-    * Obtain the application context.
-    *
-    * @relation getAppContext(): Context
-    */
+     * Obtain the application context.
+     *
+     * @returns { Context } Returns the app Context.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func getAppContext(): Context
-    
+
     /**
-    * Finish the test and print log information to the unit testing console.
-    * The total length of the log information to be printed cannot exceed 1000 characters.
-    *
-    * @relation finishTest(msg: string, code: number): Promise<void>
-    */
+     * Finish the test and print log information to the unit testing console.
+     * The total length of the log information to be printed cannot exceed 1000 characters.
+     *
+     * @param { String } msg - Log information.
+     * @param { Int64 } code - Result code.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        workerthread: true
     ]
     public func finishTest(msg: String, code: Int64): Unit
-    
+
     /**
-    * Add an AbilityMonitor object for monitoring the lifecycle state changes of the specified ability in this process.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling AddAbilityMonitor failed.
-    * @relation addAbilityMonitorSync(monitor: AbilityMonitor): void
-    */
+     * Add an AbilityMonitor object for monitoring the lifecycle state changes of the specified ability in this process.
+     *
+     * @param { AbilityMonitor } monitor - AbilityMonitor objects.
+     * @throws { BusinessException } 16000100 - Calling AddAbilityMonitor failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func addAbilityMonitor(monitor: AbilityMonitor): Unit
-    
+
     /**
-    * Remove a specified AbilityMonitor object from the application memory.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling RemoveAbilityMonitor failed.
-    * @relation removeAbilityMonitorSync(monitor: AbilityMonitor): void
-    */
+     * Remove a specified AbilityMonitor object from the application memory.
+     *
+     * @param { AbilityMonitor } monitor - AbilityMonitor object.
+     * @throws { BusinessException } 16000100 - Calling RemoveAbilityMonitor failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func removeAbilityMonitor(monitor: AbilityMonitor): Unit
-    
+
     /**
-    * Wait for and returns the Ability object that matches the conditions set in the given AbilityMonitor.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling WaitAbilityMonitor failed.
-    * @throws { IllegalMemoryException } - Invalid Ability.
-    * @relation waitAbilityMonitor(monitor: AbilityMonitor, timeout?: number): Promise<UIAbility>
-    */
+     * Wait for and returns the Ability object that matches the conditions set in the given AbilityMonitor.
+     *
+     * @param { AbilityMonitor } monitor - AbilityMonitor object.
+     * @param { Int64 } [timeout] - Maximum wait time, in milliseconds.
+     * @returns { UIAbility } Returns the Ability object that matches the conditions.
+     * @throws { BusinessException } 16000050 - Internal error.
+     * @throws { BusinessException } 16000100 - Calling WaitAbilityMonitor failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func waitAbilityMonitor(monitor: AbilityMonitor, timeout!: Int64 = 5000): UIAbility
-    
+
     /**
-    * Add an AbilityStageMonitor object for monitoring the lifecycle state changes of the specified abilityStage in this process.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling AddAbilityStageMonitor failed.
-    * @relation addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
-    */
+     * Add an AbilityStageMonitor object for monitoring the lifecycle state changes of the specified abilityStage in
+     * this process.
+     *
+     * @param { AbilityStageMonitor } monitor - AbilityStageMonitor object.
+     * @throws { BusinessException } 16000100 - Calling AddAbilityStageMonitor failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func addAbilityStageMonitor(monitor: AbilityStageMonitor): Unit
-    
+
     /**
-    * Remove a specified AbilityStageMonitor object from the application memory.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling RemoveAbilityStageMonitor failed.
-    * @relation removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
-    */
+     * Remove a specified AbilityStageMonitor object from the application memory.
+     *
+     * @param { AbilityStageMonitor } monitor - AbilityStageMonitor object.
+     * @throws { BusinessException } 16000100 - Calling RemoveAbilityStageMonitor failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func removeAbilityStageMonitor(monitor: AbilityStageMonitor): Unit
-    
+
     /**
-    * Wait for and returns the AbilityStage object that matches the conditions set in the given AbilityStageMonitor.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling WaitAbilityStageMonitor failed.
-    * @throws { IllegalMemoryException } - Invalid AbilityStage.
-    * @relation waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: number): Promise<AbilityStage>
-    */
+     * Wait for and returns the AbilityStage object that matches the conditions set in the given AbilityStageMonitor.
+     *
+     * @param { AbilityStageMonitor } monitor - AbilityStageMonitor object.
+     * @param { Int64 } [timeout] - Maximum wait time, in milliseconds.
+     * @returns { AbilityStage } Returns the AbilityStage object that matches the conditions.
+     * @throws { BusinessException } 16000050 - Internal error.
+     * @throws { BusinessException } 16000100 - Calling WaitAbilityStageMonitor failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout!: Int64 = 5000): AbilityStage
-    
+
     /**
-    * Prints log information to the unit testing console.
-    * The total length of the log information to be printed cannot exceed 1000 characters.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @relation printSync(msg: string): void
-    */
+     * Prints log information to the unit testing console.
+     * The total length of the log information to be printed cannot exceed 1000 characters.
+     *
+     * @param { String } msg - Log information.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        workerthread: true
     ]
     public func print(msg: String): Unit
-    
+
     /**
-    * Obtain the lifecycle state of a specified ability.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @relation getAbilityState(ability: UIAbility): number
-    */
+     * Obtain the lifecycle state of a specified ability.
+     *
+     * @param { UIAbility } ability - The Ability object.
+     * @returns { AbilityLifecycleState } Returns the state of the Ability object.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public func getAbilityState(ability: UIAbility): AbilityLifecycleState
-    
+
     /**
-    * Obtain the ability that is currently being displayed in this process.
-    *
-    * @throws { BusinessExecption } 16000100 - Calling GetCurrentTopAbility failed.
-    * @throws { IllegalMemoryException } - Invalid Ability.
-    * @relation getCurrentTopAbility(): Promise<UIAbility>
-    */
+     * Obtain the ability that is currently being displayed in this process.
+     *
+     * @returns { UIAbility } Returns the UIAbility object that is currently on top.
+     * @throws { BusinessException } 16000050 - Internal error.
+     * @throws { BusinessException } 16000100 - Calling GetCurrentTopAbility failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getCurrentTopAbility(): UIAbility
-    
+
     /**
-    * Invoke the Ability.onForeground() callback of a specified ability without changing its lifecycle state.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling DoAbilityForeground failed.
-    * @relation doAbilityForeground(ability: UIAbility): Promise<void>
-    */
+     * Invoke the Ability.onForeground() callback of a specified ability without changing its lifecycle state.
+     *
+     * @param { UIAbility } ability - The ability object.
+     * @throws { BusinessException } 16000100 - Calling DoAbilityForeground failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func doAbilityForeground(ability: UIAbility): Unit
-    
+
     /**
-    * Invoke the Ability.onBackground() callback of a specified ability without changing its lifecycle state.
-    *
-    * @throws { BusinessExecption } 401 - Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types.
-    * @throws { BusinessExecption } 16000100 - Calling DoAbilityBackground failed.
-    * @relation doAbilityBackground(ability: UIAbility): Promise<void>
-    */
+     * Invoke the Ability.onBackground() callback of a specified ability without changing its lifecycle state.
+     *
+     * @param { UIAbility } ability - The ability object.
+     * @throws { BusinessException } 16000100 - Calling DoAbilityBackground failed.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func doAbilityBackground(ability: UIAbility): Unit
 }
 
-
 /**
-* Store unit testing-related parameters, including test case names, and test runner name.
-*
-* @relation export interface AbilityDelegatorArgs
-*/
+ * Store unit testing-related parameters, including test case names, and test runner name.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public class AbilityDelegatorArgs <: RemoteDataLite {
+public class AbilityDelegatorArgs {
     /**
-    * the bundle name of the application being tested.
-    *
-    * @relation bundleName: string
-    */
+     * the bundle name of the application being tested.
+     *
+     * @returns { String } Returns the bundle name of the application being tested.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop bundleName: String
-    
+
     /**
-    * the parameters used for unit testing.
-    *
-    * @relation parameters: Record<string, string>
-    */
+     * the parameters used for unit testing.
+     *
+     * @returns { HashMap<String, String> } Returns the parameters used for unit testing.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop parameters: HashMap<String, String>
-    
+
     /**
-    * the class names of all test cases.
-    *
-    * @relation testCaseNames: string
-    */
+     * the class names of all test cases.
+     *
+     * @returns { String } Returns the class names of all test cases.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop testCaseNames: String
-    
+
     /**
-    * the class name of the test runner used to execute test cases.
-    *
-    * @relation testRunnerClassName: string
-    */
+     * the class name of the test runner used to execute test cases.
+     *
+     * @returns { String } Returns the class name of the test runner.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop testRunnerClassName: String
 }
 
-
 /**
-* Provide methods for matching monitored Ability objects that meet specified conditions.
-* The most recently matched Ability objects will be saved in the AbilityMonitor object.
-*
-* @relation export interface AbilityMonitor
-*/
+ * Provide methods for matching monitored Ability objects that meet specified conditions.
+ * The most recently matched Ability objects will be saved in the AbilityMonitor object.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public class AbilityMonitor <: FFIData {
+public class AbilityMonitor {
     /**
-    * The name of the ability to monitor.
-    *
-    * @relation abilityName: string
-    */
+     * The name of the ability to monitor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var abilityName: String
-    
+
     /**
-    * The name of the module to monitor.
-    *
-    * @relation moduleName?: string
-    */
+     * The name of the module to monitor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var moduleName: String
-    
+
     /**
-    * Called back when the ability is created for initialization.
-    *
-    * @relation onAbilityCreate?: (ability: UIAbility) => void
-    */
+     * Called back when the ability is created for initialization.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onAbilityCreate: ?(UIAbility) -> Unit
-    
+
     /**
-    * Called back when the state of the ability changes to foreground.
-    *
-    * @relation onAbilityForeground?: (ability: UIAbility) => void
-    */
+     * Called back when the state of the ability changes to foreground.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onAbilityForeground: ?(UIAbility) -> Unit
-    
+
     /**
-    * Called back when the state of the ability changes to background.
-    *
-    * @relation onAbilityBackground?: (ability: UIAbility) => void
-    */
+     * Called back when the state of the ability changes to background.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onAbilityBackground: ?(UIAbility) -> Unit
-    
+
     /**
-    * Called back before the ability is destroyed.
-    *
-    * @relation onAbilityDestroy?: (ability: UIAbility) => void
-    */
+     * Called back before the ability is destroyed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onAbilityDestroy: ?(UIAbility) -> Unit
-    
+
     /**
-    * Called back when an ability window stage is created.
-    *
-    * @relation onWindowStageCreate?: (ability: UIAbility) => void
-    */
+     * Called back when an ability window stage is created.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onWindowStageCreate: ?(UIAbility) -> Unit
-    
+
     /**
-    * Called back when an ability window stage is restored.
-    *
-    * @relation onWindowStageRestore?: (ability: UIAbility) => void
-    */
+     * Called back when an ability window stage is restored.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onWindowStageRestore: ?(UIAbility) -> Unit
-    
+
     /**
-    * Called back when an ability window stage is destroyed.
-    *
-    * @relation onWindowStageDestroy?: (ability: UIAbility) => void
-    */
+     * Called back when an ability window stage is destroyed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var onWindowStageDestroy: ?(UIAbility) -> Unit
-    
+
     /**
-    * AbilityMonitor constructor.
-    */
+     * AbilityMonitor constructor.
+     *
+     * @param { String } abilityName - The name of the ability to monitor.
+     * @param { String } [moduleName] - The name of the module to monitor. The default value is "".
+     * @param { ?(UIAbility) -> Unit } [onAbilityCreate] - Called back when the ability is created for initialization.
+     * The default value is None.
+     * @param { ?(UIAbility) -> Unit } [onAbilityForeground] - Called back when the state of the ability changes to
+     * foreground. The default value is None.
+     * @param { ?(UIAbility) -> Unit } [onAbilityBackground] - Called back when the state of the ability changes to
+     * background. The default value is None.
+     * @param { ?(UIAbility) -> Unit } [onAbilityDestroy] - Called back before the ability is destroyed. The default
+     * value is None.
+     * @param { ?(UIAbility) -> Unit } [onWindowStageCreate] - Called back when an ability window stage is created. The
+     * default value is None.
+     * @param { ?(UIAbility) -> Unit } [onWindowStageRestore] - Called back when an ability window stage is restored. The
+     * default value is None.
+     * @param { ?(UIAbility) -> Unit } [onWindowStageDestroy] - Called back when an ability window stage is destroyed.
+     * The default value is None.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public init(
@@ -565,45 +603,41 @@ public class AbilityMonitor <: FFIData {
     )
 }
 
-
 /**
-* Provide methods for matching monitored AbilityStage objects that meet specified conditions.
-* The most recently matched AbilityStage objects will be saved in the AbilityStageMonitor object.
-*
-* @relation export interface AbilityStageMonitor
-*/
+ * Provide methods for matching monitored AbilityStage objects that meet specified conditions.
+ * The most recently matched AbilityStage objects will be saved in the AbilityStageMonitor object.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public class AbilityStageMonitor <: FFIData {
+public class AbilityStageMonitor {
     /**
-    * The module name of the abilityStage to monitor.
-    *
-    * @relation moduleName: string
-    */
+     * The module name of the abilityStage to monitor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var moduleName: String
-    
+
     /**
-    * The source path of the abilityStage to monitor.
-    *
-    * @relation srcEntrance: string
-    */
+     * The source path of the abilityStage to monitor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var srcEntrance: String
-    
+
     /**
-    * AbilityStageMonitor constructor.
-    */
+     * AbilityStageMonitor constructor.
+     *
+     * @param { String } moduleName - The module name of the abilityStage to monitor.
+     * @param { String } srcEntrance - The source path of the abilityStage to monitor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public init(
@@ -611,5 +645,3 @@ public class AbilityStageMonitor <: FFIData {
         srcEntrance: String
     )
 }
-
-

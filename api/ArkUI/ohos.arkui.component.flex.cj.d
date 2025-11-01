@@ -1,40 +1,41 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.flex
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.labels.APILevel
 
-
+/**
+ * Defines Flex Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Flex <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(direction!: FlexDirection = FlexDirection.Row, wrap!: FlexWrap = FlexWrap.NoWrap,
-        justifyContent!: FlexAlign = FlexAlign.Start, alignItems!: ItemAlign = ItemAlign.Start,
-        alignContent!: FlexAlign = FlexAlign.Start, child!: () -> Unit = {=>})
+public class Flex <: CommonMethodComponent<Flex> & FlexAttribute {
+/**
+ * Defines the constructor of Flex.
+ *
+ * @param { ?FlexDirection } [direction] - Direction in which child components are arranged in the Flex component.
+ * @param { ?FlexWrap } [wrap] - Whether the Flex component has a single line or multiple lines.
+ * @param { ?FlexAlign } [justifyContent] - Alignment mode of the child components in the Flex component along the main axis.
+ * @param { ?ItemAlign } [alignItems] - Alignment mode of the child components in the Flex component along the cross axis.
+ * @param { ?FlexAlign } [alignContent] - Alignment mode of the child components in a multi-row Flex component along the cross axis.
+ * @param { () -> Unit } [child] - The child component to be added to the Flex component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(direction!: ?FlexDirection = None, wrap!: ?FlexWrap = None, justifyContent!: ?FlexAlign = None,
+        alignItems!: ?ItemAlign = None, alignContent!: ?FlexAlign = None, child!: () -> Unit = {=>})
 }
 
+/**
+ * Defines the Flex attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface FlexAttribute <: CommonMethod<FlexAttribute> {}

@@ -1,2927 +1,3578 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.collection
 
 import std.math.*
 
-@!APILevel[since: "22"]
+/**
+ * @description A resizable array implementation of a double-ended queue (`Deque`).
+ * This class provides methods to add, remove, and inspect elements at both ends.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArrayDeque<T> <: Deque<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an empty deque with an initial default capacity.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an empty deque with the specified initial capacity.
+     * @param capacity The initial capacity of the deque.
+     * @throws IllegalArgumentException if the specified capacity is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The number of elements in the deque.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The first element of the deque, or `null` if the deque is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop first: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The last element of the deque, or `null` if the deque is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop last: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The current capacity of the deque.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if the deque contains no elements.
+     * @returns `true` if this deque is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
+    /**
+     * @description Inserts the specified element at the front of this deque.
+     * @param element The element to add.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func addFirst(element: T): Unit
     
+    /**
+     * @description Inserts the specified element at the end of this deque.
+     * @param element The element to add.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func addLast(element: T): Unit
     
+    /**
+     * @description Retrieves and removes the first element of this deque.
+     * @returns The head of the deque, or `null` if it is empty.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func removeFirst(): ?T
     
+    /**
+     * @description Retrieves and removes the last element of this deque.
+     * @returns The tail of the deque, or `null` if it is empty.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func removeLast(): ?T
     
+    /**
+     * @description Returns an array containing all of the elements in this deque in proper sequence (from first to last element).
+     * @returns An array containing all of the elements in this deque.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
+    /**
+     * @description Removes all of the elements from this deque. The deque will be empty after this call returns.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Increases the capacity of this `ArrayDeque` instance, if necessary, to ensure that it can hold at least the number of elements specified by the `additional` argument.
+     * @param additional The desired number of additional elements.
+     * @throws IllegalArgumentException if the requested capacity is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
     
+    /**
+     * @description Returns an iterator over the elements in this deque in proper sequence.
+     * @returns An iterator over the elements in this deque.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
 }
 
 extend<T> ArrayDeque<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this deque.
+     * @returns A string representation of the deque.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Resizable-array implementation of the Collection.
-* Implements all Collection operations, and permits all elements, including null.
-* In addition to implementing the Collection interface, this class provides methods to manipulate the size of the array that is used to store the ArrayList.
-*
-* @since 0.18.2
-*/
-@!APILevel[since: "22"]
+ * @description A resizable-array implementation of the `List` interface. Implements all optional list operations, and permits all elements, including `null`.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArrayList<T> <: List<T> {
-    /* Defines the capacity of the ArrayList. */
+    /**
+     * @description The current capacity of the list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
     /**
-    * Initializes an empty ArrayList with the default capacity.
-    *
-    * @since 0.18.2
-    */
+     * @description Constructs an empty list with an initial default capacity.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Initializes an empty ArrayList with the specified initial capacity.
-    *
-    * @param capacity incoming initialized capacity.
-    * @throws IllegalArgumentException if the capacity is less than 0.
-    * @since 0.18.2
-    */
+     * @description Constructs an empty list with the specified initial capacity.
+     * @param capacity The initial capacity of the list.
+     * @throws IllegalArgumentException if the specified capacity is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
     /**
-    * Initializes an ArrayList with the specified initial size and specified initial function.
-    *
-    * @param size incoming initialize size.
-    * @param initElement incoming initialize initElement.
-    *
-    * @throws IllegalArgumentException if size is negative.
-    *
-    * @since 0.18.2
-    */
+     * @description Constructs a list containing the elements returned by the given initializer function.
+     * @param size The size of the list to create.
+     * @param initElement A function that returns an element for a given index.
+     * @throws IllegalArgumentException if the specified size is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> T)
     
     /**
-    * Initializes an ArrayList with the iterable of elements initial function.
-    *
-    * @param  elements transfer the element type collection.
-    *
-    * @since 0.18.2
-    */
+     * @description Constructs a list containing the elements of the specified collection, in the order they are returned by the collection's iterator.
+     * @param elements The collection whose elements are to be placed into this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<T>)
     
     /**
-    * Statically generate an ArrayList with the specified Array.
-    *
-    * @param elements input element type array.
-    *
-    */
+     * @description Creates an `ArrayList` from an existing `Array`.
+     * @param elements The array of elements.
+     * @returns A new `ArrayList` containing the elements from the array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func of(elements: Array<T>): ArrayList<T>
     
     /**
-    * Returns the raw data of the ArrayList.
-    *
-    * @since 0.23.3
-    *
-    */
+     * @description Returns the internal backing array. This is an unsafe operation; modifications to the returned array may corrupt the list.
+     * @returns The raw backing array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe func getRawArray(): Array<T>
     
     /**
-    * Returns the element in this ArrayList as an Array.
-    *
-    * @throws IndexOutOfBoundsException if "mySize" is out of bound.
-    */
+     * @description Returns an array containing all of the elements in this list in proper sequence.
+     * @returns An array containing all of the elements in this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
     /**
-    * Gets the element at the specified location in this ArrayList.
-    *
-    * @param index indicates the index of the get interface.
-    * @return the T type of value.
-    *
-    * @since 0.18.2
-    */
+     * @description Returns the element at the specified position in this list, or `null` if the index is out of bounds.
+     * @param index The index of the element to return.
+     * @returns The element at the specified position, or `null`.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func get(index: Int64): ?T
     
+    /**
+     * @description The first element of the list, or `null` if the list is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop first: ?T
     
+    /**
+     * @description The last element of the list, or `null` if the list is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop last: ?T
     
     /**
-    * Appends the specified element to the next index of the element at the end of the ArrayList
-    *
-    * @param element the type of the inserted element is T.
-    *
-    */
+     * @description Appends the specified element to the end of this list.
+     * @param element The element to be appended to this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: T): Unit
     
     /**
-    * Adds all elements in the specified collection after the end element of this ArrayList.
-    *
-    * @param elements import elements of the collection type and insert them one by one.
-    * @throws ConcurrentModificationException if there are some system errors.
-    */
+     * @description Appends all of the elements in the specified collection to the end of this list.
+     * @param all The collection containing elements to be added to this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func add(all!: Collection<T>): Unit
     
     /**
-    * Inserts the specified element at the specified position in this ArrayList.
-    *
-    * @param index the index of the element to insert.
-    * @param element the element to insert is of type T.
-    * @throws IndexOutOfBoundsException if index is out of range.
-    * @since 0.18.2
-    */
+     * @description Inserts the specified element at the specified position in this list.
+     * @param element The element to be inserted.
+     * @param at The index at which the specified element is to be inserted.
+     * @throws IndexOutOfBoundsException if the index is out of range (`index < 0 || index > size`).
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func add(element: T, at!: Int64): Unit
     
     /**
-    * Inserts all of the elements in the specified Collection into this ArrayList, starting at the specified position.
-    *
-    * @param index the index of the element to insert.
-    * @param elements the collection type element to insert.
-    * @throws IndexOutOfBoundsException if index is out of bounds.
-    * @since 0.18.2
-    */
+     * @description Inserts all of the elements in the specified collection into this list at the specified position.
+     * @param all The collection containing elements to be added to this list.
+     * @param at The index at which to insert the first element from the specified collection.
+     * @throws IndexOutOfBoundsException if the index is out of range (`index < 0 || index > size`).
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func add(all!: Collection<T>, at!: Int64): Unit
     
     /**
-    * Removes an element at the specified location from this ArrayList.
-    *
-    * @param index remove an Index of an Element.
-    * @throws IndexOutOfBoundsException if index is out of range.
-    * @since 0.18.2
-    */
+     * @description Removes the element at the specified position in this list.
+     * @param at The index of the element to be removed.
+     * @returns The element that was removed from the list.
+     * @throws IndexOutOfBoundsException if the index is out of range (`index < 0 || index >= size`).
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func remove(at!: Int64): T
     
     /**
-    * Removes multiple elements at the specified location from this ArrayList.
-    *
-    * @param range indexs of element to remove
-    *
-    * @throws IllegalArgumentException if range.step is not equal to 1.
-    * @throws IndexOutOfBoundsException if range.start or range.end is less than zero, or range.end is greater than mySize.
-    *
-    * @since 0.31.3
-    */
+     * @description Removes from this list all of the elements whose index is between `fromIndex`, inclusive, and `toIndex`, exclusive.
+     * @param range The range of indices to remove.
+     * @throws IndexOutOfBoundsException for an illegal endpoint index value (`fromIndex < 0 || toIndex > size || fromIndex > toIndex`).
+     * @throws IllegalArgumentException if an argument is invalid.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func remove(range: Range<Int64>): Unit
     
     /**
-    * Removes all of the elements of this ArrayList that satisfy the given predicate.
-    *
-    * @param predicate transfer the condition for determining the deletion.
-    *
-    * @since 0.18.2
-    */
+     * @description Removes all of the elements of this collection that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for elements to be removed.
+     * @throws ConcurrentModificationException if the list is modified externally during the operation.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeIf(predicate: (T) -> Bool): Unit
     
     /**
-    * Removes all of the elements from this ArrayList.
-    *
-    * @since 0.18.2
-    *
-    */
+     * @description Removes all of the elements from this list. The list will be empty after this call returns.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
     /**
-    * Reserves capacity for at least additional more elements to be inserted in this ArrayList.
-    *
-    * @param additional ensure that there is sufficient capacity. additional indicates the quantity to be added.
-    *
-    * @since 0.18.2
-    */
+     * @description Increases the capacity of this `ArrayList` instance, if necessary, to ensure that it can hold at least the number of elements specified by the `additional` argument.
+     * @param additional The desired number of additional elements.
+     * @throws IllegalArgumentException if the requested capacity is invalid.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
     
     /**
-    * Incoming Sort by Condition.
-    *
-    * @param comparator transfer the condition to be judged.
-    * @param stable Whether to use stable sorting.
-    *
-    * @since 0.27.3
-    */
+     * @description Sorts this list according to the order induced by the specified comparator.
+     * @param stable Whether to perform a stable sort.
+     * @param comparator The comparator to determine the order of the list.
+     */
     @Frozen
-@Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` in std.sort instead."]
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func sortBy(stable!: Bool, comparator!: (T, T) -> Ordering): Unit
     
     /**
-    * Incoming Sort by Condition.
-    *
-    * @param comparator transfer the condition to be judged.
-    *
-    * @since 0.27.3
-    */
+     * @description Sorts this list according to the order induced by the specified comparator. Performs an unstable sort.
+     * @param comparator The comparator to determine the order of the list.
+     */
     @Frozen
-@Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` in std.sort instead."]
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func sortBy(comparator!: (T, T) -> Ordering): Unit
     
     /**
-    * Reverses the order of the elements in this ArrayList.
-    *
-    * @since 0.18.2
-    *
-    */
+     * @description Reverses the order of the elements in this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func reverse(): Unit
     
     /**
-    * Operator overload slice.
-    *
-    * @param range transfer the range for the slice.
-    *
-    * @throws IllegalArgumentException if the step of range is not 1.
-    * @throws IndexOutOfBoundsException if range is invalid.
-    * @since 0.18.2
-    *
-    */
+     * @description Returns a view of the portion of this list between the specified `fromIndex`, inclusive, and `toIndex`, exclusive.
+     * @param range The range of indices for the slice.
+     * @returns A new `ArrayList` containing the specified slice.
+     * @throws IndexOutOfBoundsException for an illegal endpoint index value (`fromIndex < 0 || toIndex > size || fromIndex > toIndex`).
+     * @throws IllegalArgumentException if an argument is invalid.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](range: Range<Int64>): ArrayList<T>
     
     /**
-    * The input parameter range is used as the index and the ArrayList corresponding to the index is returned.
-    *
-    * @param range transfer the range for the slice.
-    *
-    * @throws IllegalArgumentException if the step of range is not 1.
-    * @throws IndexOutOfBoundsException if range is invalid.
-    * @since 0.18.2
-    */
+     * @description Returns a view of the portion of this list between the specified `fromIndex`, inclusive, and `toIndex`, exclusive.
+     * @param range The range of indices for the slice.
+     * @returns A new `ArrayList` containing the specified slice.
+     * @throws IndexOutOfBoundsException for an illegal endpoint index value (`fromIndex < 0 || toIndex > size || fromIndex > toIndex`).
+     * @throws IllegalArgumentException if an argument is invalid.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func slice(range: Range<Int64>): ArrayList<T>
     
     /**
-    * Clone a new ArrayList.
-    *
-    * @return new ArrayList
-    *
-    * @since 0.18.2
-    */
+     * @description Returns a shallow copy of this `ArrayList` instance.
+     * @returns A clone of this `ArrayList` instance.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): ArrayList<T>
     
     /**
-    * Operator overload get.
-    * An exception is reported when no index exists.
-    *
-    * @param index indicates the index of the get interface.
-    * @return the T type of value.
-    * @throws IndexOutOfBoundsException if index is out of range.
-    * @since 0.18.2
-    */
+     * @description Returns the element at the specified position in this list.
+     * @param index The index of the element to return.
+     * @returns The element at the specified position.
+     * @throws IndexOutOfBoundsException if the index is out of range (`index < 0 || index >= size`).
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](index: Int64): T
     
     /**
-    * Operator overload set.
-    * An exception is reported when no index exists.
-    *
-    * @param index Index value to be set.
-    * @param value the T type of element.
-    *
-    * @since 0.18.2
-    */
+     * @description Replaces the element at the specified position in this list with the specified element.
+     * @param index The index of the element to replace.
+     * @param value The element to be stored at the specified position.
+     * @throws IndexOutOfBoundsException if the index is out of range (`index < 0 || index >= size`).
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](index: Int64, value!: T): Unit
     
     /**
-    * Returns an iterator over the elements in this ArrayList in proper Collection.
-    *
-    * @return Iterator<T>.
-    *
-    * @since 0.18.2
-    */
+     * @description Returns an iterator over the elements in this list in proper sequence.
+     * @returns An iterator over the elements in this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
     /**
-    * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
-    *
-    * @return If this size is empty, true is returned. Otherwise, false is returned.
-    *
-    * @since 0.18.2
-    */
+     * @description Returns `true` if this list contains no elements.
+     * @returns `true` if this list is empty, `false` otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Returns the number of elements in this ArrayList.
-    *
-    * @return the size.
-    *
-    * @since 0.18.2
-    */
+     * @description The number of elements in the list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
 }
 
-/**
-* The `ArrayList` conforms `Equatable` interface where `T` is `Equatable`
-*
-* @since 0.18.2
-*/
 extend<T> ArrayList<T> <: Equatable<ArrayList<T>> where T <: Equatable<T> {
-    /** overloaded determination == method. */
+    /**
+     * @description Compares the specified object with this list for equality.
+     * @param other The object to be compared for equality with this list.
+     * @returns `true` if the specified object is equal to this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(that: ArrayList<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: ArrayList<T>): Bool
     
-    /** overloaded determination != method. */
+    /**
+     * @description Compares the specified object with this list for inequality.
+     * @param other The object to be compared for inequality with this list.
+     * @returns `true` if the specified object is not equal to this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(that: ArrayList<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: ArrayList<T>): Bool
     
+    /**
+     * @description Returns `true` if this list contains the specified element.
+     * @param element The element whose presence in this list is to be tested.
+     * @returns `true` if this list contains the specified element.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(element: T): Bool
 }
 
 extend<T> ArrayList<T> where T <: Comparable<T> {
     /**
-    * Sort data in ascending order.
-    *
-    * @param stable Whether to use stable sorting
-    *
-    * @since 0.27.3
-    */
+     * @description Sorts this list into ascending order, according to the natural ordering of its elements.
+     * @param stable Whether to perform a stable sort.
+     */
     @Frozen
-@Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func sort(stable!: Bool): Unit
     
+    /**
+     * @description Sorts this list into ascending order, according to the natural ordering of its elements. Performs an unstable sort.
+     */
     @Frozen
-@Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func sort(): Unit
     
     /**
-    * Sort data in descending order.
-    *
-    * @param stable Whether to use stable sorting
-    *
-    * @since 0.27.3
-    */
+     * @description Sorts this list into descending order, according to the natural ordering of its elements.
+     * @param stable Whether to perform a stable sort.
+     */
     @Frozen
-@Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func sortDescending(stable!: Bool): Unit
     
+    /**
+     * @description Sorts this list into descending order, according to the natural ordering of its elements. Performs an unstable sort.
+     */
     @Frozen
-@Deprecated[message: "Use global function `public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` in std.sort instead."]
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func sortDescending(): Unit
 }
 
 extend<T> ArrayList<T> <: ToString where T <: ToString {
+    /**
+     * @description Returns a string representation of this list.
+     * @returns A string representation of the list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-// Temporary code, deleted when @Deprecated ends
 
 
-// Temporary code, deleted when @Deprecated ends
 
-
-// Temporary code, deleted when @Deprecated ends
-
-
-@!APILevel[since: "22"]
+/**
+ * @description A resizable-array implementation of the `Queue` interface. This class provides FIFO (first-in-first-out) queue operations.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArrayQueue<T> <: Queue<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an empty queue with an initial default capacity.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an empty queue with the specified initial capacity.
+     * @param capacity The initial capacity of the queue.
+     * @throws IllegalArgumentException if the specified capacity is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns The head of this queue, or `null` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func peek(): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element into this queue.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: T): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue.
+     * @returns The head of this queue, or `null` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The number of elements in the queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The current capacity of the queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if the queue contains no elements.
+     * @returns `true` if this queue is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes all of the elements from this queue. The queue will be empty after this call returns.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
+    /**
+     * @description Returns an iterator over the elements in this queue.
+     * @returns An iterator over the elements in this queue.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an array containing all of the elements in this queue.
+     * @returns An array containing all of the elements in this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Increases the capacity of this `ArrayQueue` instance, if necessary.
+     * @param additional The desired number of additional elements.
+     * @throws IllegalArgumentException if the requested capacity is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
 }
 
 extend<T> ArrayQueue<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this queue.
+     * @returns A string representation of the queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A resizable-array implementation of the `Stack` interface. This class provides LIFO (last-in-first-out) stack operations.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArrayStack<T> <: Stack<T> {
     /**
-    * Constructs an empty stack with the specified capacity.
-    *
-    * @param capacity the capacity of the stack
-    * @throws IllegalArgumentException if the capacity is negative
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs an empty stack with the specified initial capacity.
+     * @param capacity The initial capacity of the stack.
+     * @throws IllegalArgumentException if the specified capacity is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
     /**
-    * Constructs an empty stack with the default capacity.
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs an empty stack with an initial default capacity.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Returns the element at the top of the stack without removing it, or null if the stack is empty.
-    *
-    * @return the element at the top of the stack, or null if the stack is empty
-    */
-    @!APILevel[since: "22"]
+     * @description Looks at the object at the top of this stack without removing it from the stack.
+     * @returns The object at the top of this stack, or `null` if the stack is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func peek(): ?T
     
     /**
-    * Removes and returns the element at the top of the stack, or null if the stack is empty.
-    *
-    * @return the element at the top of the stack, or null if the stack is empty
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the object at the top of this stack and returns that object as the value of this function.
+     * @returns The object at the top of this stack, or `null` if the stack is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(): ?T
     
     /**
-    * Adds an element to the top of the stack.
-    *
-    * @param element the element to add
-    */
-    @!APILevel[since: "22"]
+     * @description Pushes an item onto the top of this stack.
+     * @param element The item to be pushed onto this stack.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: T): Unit
     
     /**
-    * Returns the capacity of the stack.
-    *
-    * @return the capacity of the stack
-    */
-    @!APILevel[since: "22"]
+     * @description The current capacity of the stack.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
     /**
-    * Returns the size of the stack.
-    *
-    * @return the size of the stack
-    */
-    @!APILevel[since: "22"]
+     * @description The number of elements in the stack.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Returns true if the stack is empty, and false otherwise.
-    *
-    * @return true if the stack is empty, and false otherwise
-    */
-    @!APILevel[since: "22"]
+     * @description Tests if this stack is empty.
+     * @returns `true` if and only if this stack contains no items; `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Reserves space for additional elements in the stack.
-    *
-    * @param additional the number of additional elements to reserve space for
-    */
-    @!APILevel[since: "22"]
+     * @description Increases the capacity of this `ArrayStack` instance, if necessary.
+     * @param additional The desired number of additional elements.
+     * @throws IllegalArgumentException if the requested capacity is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
     
     /**
-    * Clears the stack.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the elements from this stack. The stack will be empty after this call returns.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
     /**
-    * Converts the stack to an array.
-    *
-    * @return an array containing the elements of the stack in the order of popping the stack
-    */
-    @!APILevel[since: "22"]
+     * @description Returns an array containing all of the elements in this stack.
+     * @returns An array containing all of the elements in this stack.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
     /**
-    * Returns an iterator over the elements in the stack.
-    *
-    * @return an iterator over the elements in the stack
-    */
+     * @description Returns an iterator over the elements in this stack.
+     * @returns An iterator over the elements in this stack.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
 }
 
 extend<T> ArrayStack<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this stack.
+     * @returns A string representation of the stack.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Thrown when an operation is performed on a collection that would be invalid due to a concurrent modification of the collection by another thread or operation.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ConcurrentModificationException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a `ConcurrentModificationException` with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a `ConcurrentModificationException` with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* This func reduce is calculated from left to right using the first value as initial value.
-*
-* @param operation This is the callback function that executes each value in Iterator.
-* @return (Iterable<T>) -> Option<T> An iteration function accept an Iterable as its input.
-*
-*/
+ * @description Returns a function that reduces an `Iterable` to a single value by repeatedly applying a binary operation.
+ * @param operation A binary function that combines two elements.
+ * @returns A function that takes an `Iterable` and returns an `Option<T>` containing the reduced value, or `None` if the iterable is empty.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func reduce<T>(operation: (T, T) -> T): (Iterable<T>) -> Option<T>
 
 /**
-* This func fold is calculated from left to right using the specified initial value.
-*
-* @param initial This is initial value.
-* @param operation This is the callback function that executes each value in Iterator.
-* @return (Iterable<T>) -> R An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that folds an `Iterable` into a single value by applying an operation to each element and an accumulator.
+ * @param initial The initial value of the accumulator.
+ * @param operation A function that takes the current accumulator value and an element, and returns the new accumulator value.
+ * @returns A function that takes an `Iterable` and returns the final accumulated value.
+ */
+@!APILevel[
+    since: "22"
+]
 public func fold<T, R>(initial: R, operation: (R, T) -> R): (Iterable<T>) -> R
 
 /**
-* This func isEmpty is used to check whether Iterable<T> is empty.
-*
-* @param it An Iteratable.
-* @return Bool Whether the Iterable is empty.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Checks if an `Iterable` is empty.
+ * @param it The iterable to check.
+ * @returns `true` if the iterable has no elements, `false` otherwise.
+ */
+@!APILevel[
+    since: "22"
+]
 public func isEmpty<T>(it: Iterable<T>): Bool
 
 /**
-* This func count is used to count the number of Iterable<T>.
-*
-* @param it An Iteratable.
-* @return Int64 The number of the Iterable.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Counts the number of elements in an `Iterable`.
+ * @param it The iterable to count.
+ * @returns The number of elements in the iterable.
+ */
+@!APILevel[
+    since: "22"
+]
 public func count<T>(it: Iterable<T>): Int64
 
 /**
-* This func contains is used to check whether Iterable<T> contains a specified element.
-*
-* @param element The specified element.
-* @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that checks if an `Iterable` contains a specific element.
+ * @param element The element to search for.
+ * @returns A function that takes an `Iterable` and returns `true` if the element is found, `false` otherwise.
+ */
+@!APILevel[
+    since: "22"
+]
 public func contains<T>(element: T): (Iterable<T>) -> Bool where T <: Equatable<T>
 
 /**
-* This func max is used to find the maximum value of Iterable<T>.
-*
-* @param it An Iteratable.
-* @return Option<T> The maximum value.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Finds the maximum element in an `Iterable` according to natural ordering.
+ * @param it The iterable to search.
+ * @returns An `Option<T>` containing the maximum element, or `None` if the iterable is empty.
+ */
+@!APILevel[
+    since: "22"
+]
 public func max<T>(it: Iterable<T>): Option<T> where T <: Comparable<T>
 
 /**
-* This func min is used to find the minimum value of Iterable<T>.
-*
-* @param it An Iteratable.
-* @return Option<T> The minimum value.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Finds the minimum element in an `Iterable` according to natural ordering.
+ * @param it The iterable to search.
+ * @returns An `Option<T>` containing the minimum element, or `None` if the iterable is empty.
+ */
+@!APILevel[
+    since: "22"
+]
 public func min<T>(it: Iterable<T>): Option<T> where T <: Comparable<T>
 
 /**
-* This func all is used to check whether all elements pass the test.
-*
-* @param predicate The function used to test each element.
-* @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that checks if all elements in an `Iterable` satisfy a given predicate.
+ * @param predicate The predicate to apply to each element.
+ * @returns A function that takes an `Iterable` and returns `true` if all elements satisfy the predicate, `false` otherwise.
+ */
+@!APILevel[
+    since: "22"
+]
 public func all<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 
 /**
-* This func any is used to check that at least one element passes the test.
-*
-* @param predicate The function used to test each element.
-* @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that checks if any element in an `Iterable` satisfies a given predicate.
+ * @param predicate The predicate to apply to each element.
+ * @returns A function that takes an `Iterable` and returns `true` if at least one element satisfies the predicate, `false` otherwise.
+ */
+@!APILevel[
+    since: "22"
+]
 public func any<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 
 /**
-* This func none is used to check whether all elements fail the test.
-*
-* @param predicate The function used to test each element.
-* @return (Iterable<T>) -> Bool An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that checks if no elements in an `Iterable` satisfy a given predicate.
+ * @param predicate The predicate to apply to each element.
+ * @returns A function that takes an `Iterable` and returns `true` if no elements satisfy the predicate, `false` otherwise.
+ */
+@!APILevel[
+    since: "22"
+]
 public func none<T>(predicate: (T) -> Bool): (Iterable<T>) -> Bool
 
 /**
-* This func first is used to get the first element of the Iterator.
-*
-* @param it An Iteratable.
-* @return Option<T> The first element.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Gets the first element of an `Iterable`.
+ * @param it The iterable.
+ * @returns An `Option<T>` containing the first element, or `None` if the iterable is empty.
+ */
+@!APILevel[
+    since: "22"
+]
 public func first<T>(it: Iterable<T>): Option<T>
 
 /**
-* This func last is used to get the last element of the Iterator.
-*
-* @param it An Iteratable.
-* @return Option<T> The last element.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Gets the last element of an `Iterable`.
+ * @param it The iterable.
+ * @returns An `Option<T>` containing the last element, or `None` if the iterable is empty.
+ */
+@!APILevel[
+    since: "22"
+]
 public func last<T>(it: Iterable<T>): Option<T>
 
 /**
-* This func at function is used to get the specified index element of the iterator.
-*
-* @param n The specified index.
-* @return (Iterable<T>) -> Option<T> An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that gets the element at a specific index in an `Iterable`.
+ * @param n The zero-based index of the element to retrieve.
+ * @returns A function that takes an `Iterable` and returns an `Option<T>` containing the element, or `None` if the index is out of bounds.
+ */
+@!APILevel[
+    since: "22"
+]
 public func at<T>(n: Int64): (Iterable<T>) -> Option<T>
 
 /**
-* This func forEach function is used to perform a specific function on each element of Iterable.
-*
-* @param action The function executed by each element.
-* @return (Iterable<T>) -> Unit An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that performs a given action for each element of an `Iterable`.
+ * @param action The action to perform for each element.
+ * @returns A function that takes an `Iterable` and applies the action to each element.
+ */
+@!APILevel[
+    since: "22"
+]
 public func forEach<T>(action: (T) -> Unit): (Iterable<T>) -> Unit
 
 /**
-* The hashmap is implemented based on the hash algorithm.
-* You can use put key-value to obtain the value and get key to obtain the value.
-*
-* @since 0.18.4
-*/
-@!APILevel[since: "22"]
+ * @description A hash table based implementation of the `Map` interface. This implementation provides all of the optional map operations, and permits `null` values and the `null` key.
+ */
+@!APILevel[
+    since: "22"
+]
 public class HashMap<K, V> <: Map<K, V> where K <: Hashable & Equatable<K> {
     /**
-    * Initializes an empty HashMap with a default initial DEFAULT_CAPACITY (16) and a default load factor.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs an empty `HashMap` with the default initial capacity and load factor.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Initializes a HashMap with an incoming iterator for initialization.
-    *
-    * @param elements an incoming iterator is initialized.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a new `HashMap` with the same mappings as the specified `Collection` of pairs.
+     * @param elements The collection of key-value pairs whose mappings are to be placed in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<(K, V)>)
     
     /**
-    * Initializes a hashmap with an incoming list for initialization.
-    *
-    * @param elements an incoming list is initialized.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a new `HashMap` with the same mappings as the specified `Array` of pairs.
+     * @param elements The array of key-value pairs whose mappings are to be placed in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Array<(K, V)>)
     
     /**
-    * Initializes a HashMap with an incoming @p DEFAULT_CAPACITY for initialization.
-    *
-    * @param capacity an incoming capacity is initialized.
-    *
-    * @throws IllegalArgumentException if capacity is less than zero
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs an empty `HashMap` with the specified initial capacity.
+     * @param capacity The initial capacity.
+     * @throws IllegalArgumentException if the initial capacity is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
     /**
-    * Initializes a hash map with an incoming size and an initial element for initialization.
-    *
-    * @param size the size of the incoming initial element.
-    * @param initElement an incoming initElement is initialized.
-    *
-    * @throws IllegalArgumentException if size is less than zero
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a `HashMap` containing the elements returned by the given initializer function.
+     * @param size The size of the map to create.
+     * @param initElement A function that returns a key-value pair for a given index.
+     * @throws IllegalArgumentException if the specified size is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> (K, V))
     
     /**
-    * Returns value Iterator<T> - Iterator<T> type, which can be traversed using an iterator.
-    *
-    * @param key transfer key to obtain the value.
-    * @return the value corresponding to the return key is encapsulated with option.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns the value to which the specified key is mapped, or `null` if this map contains no mapping for the key.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped, or `null`.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func get(key: K): ?V
     
     /**
-    * Associates the specified @p value with the specified @p key in this map.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param key the key to put.
-    * @param value the value to assign.
-    * @return If the key exists before the assignment, the value before the assignment is encapsulated with Option.
-    * Otherwise, return to Option<V>.None
-    *
-    * @since 0.18.4
-    */
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with `key`, or `None` if there was no mapping for `key`.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func add(key: K, value: V): Option<V>
     
     /**
-    * A view of a single entry in a hashmap, which can be empty or has a value.
-    *
-    * @param key the key to put.
-    * @return If the hashmap has this key, a view with a value is returned. Otherwise, an empty view is returned.
-    *
-    * @since 0.45.1
-    */
+     * @description Returns a `MapEntryView` for the given key, allowing in-place operations on the entry.
+     * @param key The key of the entry.
+     * @returns A `MapEntryView` for the specified key.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func entryView(key: K): MapEntryView<K, V>
     
     /**
-    * Transfer specified elements for traversal and assign values in sequence.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param elements the element passing in for traversal assignment.
-    *
-    * @since 0.18.4
-    */
+     * @description Copies all of the mappings from the specified collection to this map.
+     * @param all Mappings to be stored in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func add(all!: Collection<(K, V)>): Unit
     
     /**
-    * Removes the key-value pair corresponding to the key based on the specified key from this mapping, if one exists.
-    *
-    * @param key pass in the key to be deleted.
-    * @return removed element
-    *
-    * @since 0.18.4
-    */
+     * @description Removes the mapping for a key from this map if it is present.
+     * @param key The key whose mapping is to be removed from the map.
+     * @returns The previous value associated with `key`, or `None` if there was no mapping for `key`.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(key: K): Option<V>
     
     /**
-    * Traverse the set of transferred keys and delete them based on the traversal result.
-    *
-    * @param keys pass in the collection to traverse.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes the mappings for the specified keys from this map.
+     * @param all The collection of keys whose mappings are to be removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(all!: Collection<K>): Unit
     
     /**
-    * Transfer a lambda expression and delete the corresponding key value if the condition is met.
-    *
-    * @param predicate transfer a lambda expression for judgment.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes all of the entries of this map that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for entries to be removed.
+     * @throws ConcurrentModificationException if the map is modified externally during the operation.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeIf(predicate: (K, V) -> Bool): Unit
     
     /**
-    * Clear all key-value pairs.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes all of the mappings from this map. The map will be empty after this call returns.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
     /**
-    * Reserves capacity for at least additional more elements to be inserted in this hashmap.
-    * If the additional parameter is negative, the hash map does not change.
-    * If the additional parameter plus the size of the hashmap is smaller than the capacity of the  array, the hashmap does not change.
-    *
-    * @param additional ensure that there is sufficient capacity. additional indicates the quantity to be added.
-    *
-    * @since 0.18.4
-    */
+     * @description Increases the capacity of this `HashMap` instance, if necessary.
+     * @param additional The desired number of additional entries.
+     * @throws IllegalArgumentException if the requested capacity is invalid.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
     
     /**
-    * Returns the capacity of the hashmap.
-    * The return value is the size of the array, not the size of the elements that can be accommodated.
-    *
-    * @return the capacity of the hashmap.
-    *
-    * @since 0.18.4
-    */
+     * @description The current capacity of the map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
     /**
-    * Checks whether the mapping relationship corresponding to the collection key exists in this mapping.
-    *
-    * @param keys transfer the collection key to be judged.
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this map contains a mapping for all of the specified keys.
+     * @param all The collection of keys to check.
+     * @returns `true` if this map contains all specified keys.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(all!: Collection<K>): Bool
     
     /**
-    * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
-    *
-    * @param key transfer the key to be judged.
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this map contains a mapping for the specified key.
+     * @param key The key whose presence in this map is to be tested.
+     * @returns `true` if this map contains a mapping for the specified key.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(key: K): Bool
     
     /**
-    * Copy a HashMap.
-    *
-    * @return a clone value of HashMap.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns a shallow copy of this `HashMap` instance: the keys and values themselves are not cloned.
+     * @returns A shallow copy of this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): HashMap<K, V>
     
     /**
-    * Returns the Set view of all keys in this HashMap.
-    *
-    * @return the Set view of the keys.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns a `Collection` view of the keys contained in this map.
+     * @returns A collection view of the keys contained in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func keys(): EquatableCollection<K>
     
     /**
-    * Returns the Set view of all values in this HashMap.
-    *
-    * @return the list view of the values.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns a `Collection` view of the values contained in this map.
+     * @returns A collection view of the values contained in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func values(): Collection<V>
     
     /**
-    * An exception is reported when the get operator is overloaded and the key does not exist.
-    *
-    * @param key transfer the value for judgment.
-    * @return the value corresponding to the key.
-    *
-    * @throws NoneValueException if value does not exist.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns the value to which the specified key is mapped.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped.
+     * @throws IndexOutOfBoundsException if an internal indexing error occurs.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](key: K): V
     
     /**
-    * The operator overloads the set. If the key does not exist, an exception is reported.
-    *
-    * @param key transfer the value for judgment.
-    * @param value transfer the value to be set.
-    *
-    * @since 0.18.4
-    */
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @throws IndexOutOfBoundsException if an internal indexing error occurs.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](key: K, value!: V): Unit
     
     /**
-    * Returns sizes of key-value.
-    *
-    * @return sizes of key-value.
-    *
-    * @since 0.18.4
-    */
+     * @description The number of key-value mappings in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Returns iterator of hashmap.
-    *
-    * @return iterator of hashmap.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns an iterator over the key-value pairs in this map.
+     * @returns An iterator over the entries in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): HashMapIterator<K, V>
     
     /**
-    * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
-    *
-    * @return bool if yes, true is returned. Otherwise, false is returned.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this map contains no key-value mappings.
+     * @returns `true` if this map is empty, `false` otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Returns the element in this Map as an Array.
-    */
+     * @description Returns an array containing all of the key-value pairs in this map.
+     * @returns An array of the key-value pairs in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<(K, V)>
 }
 
-/**
-*
-*
-* @since 0.18.4
-*/
 extend<K, V> HashMap<K, V> <: ToString where V <: ToString, K <: ToString {
+    /**
+     * @description Returns a string representation of this map.
+     * @returns A string representation of the map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-/**
-* This is the function of hashmap equal and not equal. If the keys and values are same for two hasmaps, then they are equal.
-*
-* Returns true if the two hashmaps are equal for ==. Return true if the two hashmaps are not equal for !=.
-*
-* @since 0.18.4
-*/
 extend<K, V> HashMap<K, V> <: Equatable<HashMap<K, V>> where V <: Equatable<V> {
+    /**
+     * @description Compares the specified object with this map for equality.
+     * @param right The object to be compared for equality with this map.
+     * @returns `true` if the specified object is equal to this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(right: HashMap<K, V>): Bool
     
+    /**
+     * @description Compares the specified object with this map for inequality.
+     * @param right The object to be compared for inequality with this map.
+     * @returns `true` if the specified object is not equal to this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(right: HashMap<K, V>): Bool
 }
 
 /**
-* This is a hashmap iterator used to iterate effects.
-*
-* @since 0.18.4
-*/
-@!APILevel[since: "22"]
+ * @description An iterator over a `HashMap`.
+ */
+@!APILevel[
+    since: "22"
+]
 public class HashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equatable<K> {
     /**
-    * Initialize the iterator and transfer the hashmap.
-    *
-    * @param map the hashmap to be transferred.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs an iterator for the given `HashMap`.
+     * @param map The `HashMap` to iterate over.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(map: HashMap<K, V>)
     
     /**
-    * Iterates the bucketIndex element. The return type is option, which contains key and value.
-    *
-    * @return type is option, which contains key and value.
-    *
-    * @throws ConcurrentModificationException if lockVersion is not equal to "data.version()".
-    *
-    * @since 0.18.4
-    */
+     * @description Returns the next key-value pair in the iteration.
+     * @returns The next entry, or `null` if the iteration has no more elements.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func next(): ?(K, V)
     
     /**
-    * Remove the element returned by the next function of this iterator.
-    * This method can be called only once when the next function is called.
-    *
-    * @see Currently, the Cangjie modifier does not implement the function visible in the package,
-    * and the API function modified by public is insecure. It is recommended that this method be used temporarily.
-    * This method can be improved after the function visible in the package is supported in the future.
-    * In the future, the  function should be used to implement the function.
-    *
-    * @throws ConcurrentModificationException if lockVersion is not equal to "data.version()".
-    *
-    * @since 0.24.1
-    */
+     * @description Removes from the underlying map the last element returned by this iterator.
+     * @returns The removed entry, or `None` if `next()` has not yet been called or `remove()` has already been called after the last call to `next()`.
+     * @throws ConcurrentModificationException if the map was modified since the iterator was created.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func remove(): Option<(K, V)>
 }
 
 /**
-* This class implements the Set interface. The underlying structure is a hash table.
-* (Actually, It is an instance of encapsulating HashMap.) . It is not an ordered set.
-* Please note that, this class is asynchronous. When multiple threads access this class
-* at the same time and at least one thread modifies it,it may cause thread insecureness.
-*
-* @see Collection
-* @see Set
-* @see HashMap
-*
-* @since 0.18.4
-*/
-@!APILevel[since: "22"]
+ * @description A hash table based implementation of the `Set` interface. This implementation makes no guarantees as to the iteration order of the set.
+ */
+@!APILevel[
+    since: "22"
+]
 public class HashSet<T> <: Set<T> where T <: Hashable & Equatable<T> {
     /**
-    * Constructs a new, empty set; the backing @p HashSet instance has
-    * default initial capacity (16) and load factor (0.75).
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a new, empty set; the backing `HashMap` instance has default initial capacity.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Construct a HashSet with an incoming iterator for initialization.
-    *
-    * @param elements an incoming iterator is initialized.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a new set containing the elements in the specified collection.
+     * @param elements The collection whose elements are to be placed into this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<T>)
     
     /**
-    * Construct a HashSet with an incoming array for initialization.
-    *
-    * @param elements an incoming array is initialized.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a new set containing the elements in the specified array.
+     * @param elements The array whose elements are to be placed into this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Array<T>)
     
     /**
-    * Construct a HashSet with an incoming @p myCapacity for initialization.
-    *
-    * @param capacity myCapacity an incoming capacity is initialized.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a new, empty set with the specified initial capacity.
+     * @param capacity The initial capacity of the hash set.
+     * @throws IllegalArgumentException if the initial capacity is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
     /**
-    * Constructs a hash map with an incoming size and an initial element for initialization.
-    *
-    * @param size the size of the incoming initial element.
-    * @param initElement an incoming initElement is initialized.
-    *
-    * @since 0.18.4
-    */
+     * @description Constructs a `HashSet` containing the elements returned by the given initializer function.
+     * @param size The size of the set to create.
+     * @param initElement A function that returns an element for a given index.
+     * @throws IllegalArgumentException if the specified size is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> T)
     
     /**
-    * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
-    *
-    * @param element key transfer the key to be judged.
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this set contains the specified element.
+     * @param element The element whose presence in this set is to be tested.
+     * @returns `true` if this set contains the specified element.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(element: T): Bool
     
     /**
-    * Check whether the set is a subset of other.
-    *
-    * @param other a set of the set type.
-    * @return bool returns true if it is a subset, false otherwise.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this set is a subset of the given set.
+     * @param other The set to check against.
+     * @returns `true` if all elements of this set are also in `other`.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func subsetOf(other: ReadOnlySet<T>): Bool
     
     /**
-    * Checks whether the mapping relationship corresponding to the collection key exists in this mapping.
-    *
-    * @param elements keys transfer the collection key to be judged.
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this set contains all of the elements of the specified collection.
+     * @param all The collection to be checked for containment in this set.
+     * @returns `true` if this set contains all of the elements of the specified collection.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(all!: Collection<T>): Bool
     
     /**
-    * Add element operation. If the element already exists, it will not be added.
-    *
-    * @param element the key to put.
-    * @return bool returns true if element is added; otherwise, false.
-    *
-    * @since 0.18.4
-    */
+     * @description Adds the specified element to this set if it is not already present.
+     * @param element The element to be added to this set.
+     * @returns `true` if this set did not already contain the specified element.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: T): Bool
     
     /**
-    * Removes the key-value pair corresponding to the key based on the specified key from this mapping, if one exists.
-    *
-    * @param element key pass in the key to be deleted.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes the specified element from this set if it is present.
+     * @param element The object to be removed from this set, if present.
+     * @returns `true` if this set contained the specified element.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(element: T): Bool
     
     /**
-    * Transfer specified elements for traversal and assign values in sequence.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param elements the element passing in for traversal assignment.
-    *
-    * @since 0.18.4
-    */
+     * @description Adds all of the elements in the specified collection to this set.
+     * @param all The collection containing elements to be added to this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func add(all!: Collection<T>): Unit
     
     /**
-    * Traverse the set of transferred keys and delete them based on the traversal result.
-    *
-    * @param elements keys pass in the collection to traverse.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes from this set all of its elements that are contained in the specified collection.
+     * @param all The collection containing elements to be removed from this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(all!: Collection<T>): Unit
     
     /**
-    * Transfer a lambda expression and delete the corresponding key value if the condition is met.
-    *
-    * @param predicate transfer a lambda expression for judgment.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes all of the elements of this set that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for elements to be removed.
+     * @throws ConcurrentModificationException if the set is modified externally during the operation.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeIf(predicate: (T) -> Bool): Unit
     
     /**
-    * Clear all key-value pairs.
-    *
-    * @since 0.18.4
-    */
+     * @description Removes all of the elements from this set. The set will be empty after this call returns.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
     /**
-    * Retain only duplicate T.
-    * Removes all elements from this collection that are not contained
-    * in the specified collection. This function depends on the contains function.
-    * Please note that. If the incoming interface is a subtype of a malicious implementation.
-    * We do not guarantee the correctness of results for retaining duplicate elements.
-    *
-    * @param elements collections to be saved.
-    *
-    * @since 0.18.4
-    */
+     * @description Retains only the elements in this set that are contained in the specified set.
+     * @param all The set containing elements to be retained in this set.
+     * @throws ConcurrentModificationException if the set is modified externally during the operation.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func retain(all!: Set<T>): Unit
     
     /**
-    * Clone of hashset.
-    *
-    * @return a clone value of HashSet.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns a shallow copy of this `HashSet` instance: the elements themselves are not cloned.
+     * @returns A shallow copy of this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): HashSet<T>
     
     /**
-    * Ensure that there is sufficient capacity. additional indicates the quantity to be added.
-    * If the additional parameter is negative, the hash map does not change.
-    * If the additional parameter plus the size of the hashset is smaller than the capacity of the  array, the hashset does not change.
-    *
-    * @param additional size of the increment.
-    *
-    * @since 0.18.4
-    */
+     * @description Increases the capacity of this `HashSet` instance, if necessary.
+     * @param additional The desired number of additional elements.
+     * @throws IllegalArgumentException if the requested capacity is invalid.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
     
     /**
-    * Returns the capacity of the hashSet.
-    *
-    * @return the capacity of the hashSet.
-    *
-    * @since 0.18.4
-    */
+     * @description The current capacity of the set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
     /**
-    * Returns iterator of hashSet.
-    *
-    * @return iterator of Keys.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns an iterator over the elements in this set.
+     * @returns An iterator over the elements in this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
     /**
-    * Returns sizes of key-value.
-    *
-    * @return sizes of key-value.
-    *
-    * @since 0.18.4
-    */
+     * @description The number of elements in this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
-    *
-    * @return bool if yes, true is returned. Otherwise, false is returned.
-    *
-    * @since 0.18.4
-    */
+     * @description Returns `true` if this set contains no elements.
+     * @returns `true` if this set is empty, `false` otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Returns the element in this HashSet as an Array.
-    *
-    * @throws IndexOutOfBoundsException if "mySize" is out of bound.
-    */
+     * @description Returns an array containing all of the elements in this set.
+     * @returns An array containing all of the elements in this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
     /**
-    * Computes the intersection of this set and another set.
-    * Returns a new set containing only the elements that are present in both sets.
-    *
-    * - Parameter other: Another set to intersect with.
-    * - Returns: A new `HashSet` containing elements common to both sets.
-    *
-    * Example:
-    * ```
-    * let set1 = HashSet([1, 2, 3])
-    * let set2 = HashSet([2, 3, 4])
-    * let result = set1 & set2 // result is [2, 3]
-    * ```
-    */
+     * @description Returns a new set containing the intersection of this set and the other set.
+     * @param other The set to intersect with.
+     * @returns A new `HashSet` containing only the elements present in both sets.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func &(other: ReadOnlySet<T>): HashSet<T>
     
     /**
-    * Computes the union of this set and another set.
-    * Returns a new set containing all unique elements from both sets.
-    *
-    * - Parameter other: Another set to unite with.
-    * - Returns: A new `HashSet` containing all unique elements from both sets.
-    *
-    * Example:
-    * ```
-    * let set1 = HashSet([1, 2, 3])
-    * let set2 = HashSet([3, 4, 5])
-    * let result = set1 | set2 // result is [1, 2, 3, 4, 5]
-    * ```
-    */
+     * @description Returns a new set containing the union of this set and the other set.
+     * @param other The set to form the union with.
+     * @returns A new `HashSet` containing all elements from both sets.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func |(other: ReadOnlySet<T>): HashSet<T>
     
     /**
-    * Computes the difference of this set and another set.
-    * Returns a new set containing elements that are present in this set but not in the other set.
-    *
-    * - Parameter other: Another set to subtract from this set.
-    * - Returns: A new `HashSet` containing elements unique to this set.
-    *
-    * Example:
-    * ```
-    * let set1 = HashSet([1, 2, 3])
-    * let set2 = HashSet([3, 4, 5])
-    * let result = set1 - set2 // result is [1, 2]
-    * ```
-    */
+     * @description Returns a new set containing the difference of this set and the other set (elements in this set but not in the other).
+     * @param other The set of elements to remove.
+     * @returns A new `HashSet` containing the elements that are in this set but not in the other.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(other: ReadOnlySet<T>): HashSet<T>
 }
 
-/**
-* Defines the HashSet inherits the Equalable method and determines whether = = and! = methods.
-*
-* @since 0.18.4
-*/
 extend<T> HashSet<T> <: Equatable<HashSet<T>> {
-    /** overloaded determination equal function. */
+    /**
+     * @description Compares the specified object with this set for equality.
+     * @param other The object to be compared for equality with this set.
+     * @returns `true` if the specified object is equal to this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(that: HashSet<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: HashSet<T>): Bool
     
-    /** overloaded determination unequal function. */
+    /**
+     * @description Compares the specified object with this set for inequality.
+     * @param other The object to be compared for inequality with this set.
+     * @returns `true` if the specified object is not equal to this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(that: HashSet<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: HashSet<T>): Bool
 }
 
 extend<T> HashSet<T> <: ToString where T <: ToString {
+    /**
+     * @description Returns a string representation of this set.
+     * @returns A string representation of the set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A node in a `LinkedList`. Each node contains a value and references to the next and previous nodes.
+ */
+@!APILevel[
+    since: "22"
+]
 public class LinkedListNode<T> {
+    /**
+     * @description The value stored in this node.
+     * @throws IllegalStateException if the node has been detached from its list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public mut prop value: T
     
+    /**
+     * @description The next node in the list, or `None` if this is the last node.
+     * @throws IllegalStateException if the node has been detached from its list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop next: Option<LinkedListNode<T>>
     
+    /**
+     * @description The previous node in the list, or `None` if this is the first node.
+     * @throws IllegalStateException if the node has been detached from its list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop prev: Option<LinkedListNode<T>>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A doubly-linked list implementation of the `Collection` interface.
+ */
+@!APILevel[
+    since: "22"
+]
 public class LinkedList<T> <: Collection<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an empty list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a list containing the elements of the specified collection.
+     * @param elements The collection whose elements are to be placed into this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<T>)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a list containing the elements of the specified array.
+     * @param elements The array whose elements are to be placed into this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Array<T>)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a list containing elements returned by the given initializer function.
+     * @param size The size of the list to create.
+     * @param initElement A function that returns an element for a given index.
+     * @throws IllegalArgumentException if the specified size is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> T)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The number of elements in this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The first element in this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop first: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The last element in this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop last: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The first node in this list, or `null` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop firstNode: ?LinkedListNode<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The last node in this list, or `null` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop lastNode: ?LinkedListNode<T>
     
+    /**
+     * @description Inserts the specified element at the beginning of this list.
+     * @param element The element to add.
+     * @returns The new `LinkedListNode` containing the element.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func addFirst(element: T): LinkedListNode<T>
     
+    /**
+     * @description Appends the specified element to the end of this list.
+     * @param element The element to add.
+     * @returns The new `LinkedListNode` containing the element.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func addLast(element: T): LinkedListNode<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an array containing all of the elements in this list in proper sequence.
+     * @returns An array containing all of the elements in this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts element `e` before non-null node `succ`.
+     * @param node The node before which to insert the new element.
+     * @param element The element to insert.
+     * @returns The new `LinkedListNode` containing the element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func addBefore(node: LinkedListNode<T>, element: T): LinkedListNode<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts element `e` after non-null node `pred`.
+     * @param node The node after which to insert the new element.
+     * @param element The element to insert.
+     * @returns The new `LinkedListNode` containing the element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func addAfter(node: LinkedListNode<T>, element: T): LinkedListNode<T>
     
+    /**
+     * @description Removes the specified node from the list.
+     * @param node The node to remove.
+     * @returns The value that was stored in the removed node.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(node: LinkedListNode<T>): T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes all of the elements of this list that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for elements to be removed.
+     * @throws ConcurrentModificationException if the list is modified externally during the operation.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeIf(predicate: (T) -> Bool): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes all of the elements from this list. The list will be empty after this call returns.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Reverses the order of the elements in this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func reverse(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this list contains no elements.
+     * @returns `true` if this list is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
+    /**
+     * @description Returns an iterator over the elements in this list in proper sequence.
+     * @returns An iterator over the elements in this list.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes and returns the first element from this list.
+     * @returns The first element from this list, or `null` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func removeFirst(): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes and returns the last element from this list.
+     * @returns The last element from this list, or `null` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func removeLast(): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the node at the specified element index.
+     * @param index The index of the node to return.
+     * @returns An `Option` containing the node at the specified index, or `None` if the index is out of range.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nodeAt(index: Int64): Option<LinkedListNode<T>>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Splits the list into two at the specified node. The current list will contain all elements up to the given node (exclusive), and a new list is returned containing all elements from the given node onwards.
+     * @param node The node at which to split the list.
+     * @returns A new `LinkedList` containing the tail portion of the list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func splitOff(node: LinkedListNode<T>): LinkedList<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a forward iterator starting from the given node.
+     * @param mark The node to start iterating from.
+     * @returns An `Iterator` that traverses forward from the mark.
+     * @throws IllegalStateException if the mark node is detached.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func forward(mark: LinkedListNode<T>): Iterator<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a backward iterator starting from the given node.
+     * @param mark The node to start iterating from.
+     * @returns An `Iterator` that traverses backward from the mark.
+     * @throws IllegalStateException if the mark node is detached.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func backward(mark: LinkedListNode<T>): Iterator<T>
 }
 
 extend<T> LinkedList<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this list.
+     * @returns A string representation of the list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend<T> LinkedList<T> <: Equatable<LinkedList<T>> where T <: Equatable<T> {
-    /** overloaded determination == method. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares the specified object with this list for equality.
+     * @param right The object to be compared for equality with this list.
+     * @returns `true` if the specified object is equal to this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(right: LinkedList<T>): Bool
     
-    /** overloaded determination != method. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares the specified object with this list for inequality.
+     * @param right The object to be compared for inequality with this list.
+     * @returns `true` if the specified object is not equal to this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(right: LinkedList<T>): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A read-only collection of elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ReadOnlyList<T> <: Collection<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The first element of the list, or `null` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop first: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The last element of the list, or `null` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop last: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the element at the specified position in this list, or `null` if the index is out of bounds.
+     * @param index The index of the element to return.
+     * @returns The element at the specified position, or `null`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func get(index: Int64): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the element at the specified position in this list.
+     * @param index The index of the element to return.
+     * @returns The element at the specified position.
+     * @throws IndexOutOfBoundsException if the index is out of range.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     operator func [](index: Int64): T
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A mutable, ordered collection of elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface List<T> <: ReadOnlyList<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Appends the specified element to the end of this list.
+     * @param element The element to be appended to this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(element: T): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Appends all of the elements in the specified collection to the end of this list.
+     * @param all The collection containing elements to be added to this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(all!: Collection<T>): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the specified position in this list.
+     * @param element The element to be inserted.
+     * @param at The index at which the specified element is to be inserted.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(element: T, at!: Int64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts all of the elements in the specified collection into this list at the specified position.
+     * @param all The collection containing elements to be added to this list.
+     * @param at The index at which to insert the first element from the specified collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(all!: Collection<T>, at!: Int64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes the element at the specified position in this list.
+     * @param at The index of the element to be removed.
+     * @returns The element that was removed from the list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(at!: Int64): T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes from this list all of the elements whose index is between `fromIndex`, inclusive, and `toIndex`, exclusive.
+     * @param range The range of indices to remove.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(range: Range<Int64>): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes all of the elements of this collection that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for elements to be removed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeIf(predicate: (T) -> Bool): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes all of the elements from this list.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func clear(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Replaces the element at the specified position in this list with the specified element.
+     * @param index The index of the element to replace.
+     * @param value The element to be stored at the specified position.
+     * @throws IndexOutOfBoundsException if an index is out of bounds.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     operator func [](index: Int64, value!: T): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A view of an entry in a `Map`. It provides methods to access and modify the value of the entry.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface MapEntryView<K, V> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The key of the map entry.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop key: K
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The value of the map entry. Can be get or set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut prop value: ?V
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A read-only view of a `Map`. It provides methods to access key-value pairs but not to modify the map.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ReadOnlyMap<K, V> <: Collection<(K, V)> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the value to which the specified key is mapped, or `null` if this map contains no mapping for the key.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped, or `null`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func get(key: K): ?V
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this map contains a mapping for the specified key.
+     * @param key The key whose presence in this map is to be tested.
+     * @returns `true` if this map contains a mapping for the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(key: K): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this map contains a mapping for all of the specified keys.
+     * @param all The collection of keys to check.
+     * @returns `true` if this map contains all specified keys.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(all!: Collection<K>): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a `Collection` view of the keys contained in this map.
+     * @returns A collection view of the keys contained in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func keys(): EquatableCollection<K>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a `Collection` view of the values contained in this map.
+     * @returns A collection view of the values contained in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func values(): Collection<V>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the value to which the specified key is mapped.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     operator func [](key: K): V
 }
 
 /**
-* This interface is a key-value pair that does not guarantee the sequence of elements.
-* That is, the sequence of adding elements is different from the sequence of obtaining elements.
-*
-* @since 0.24.2
-*/
-@!APILevel[since: "22"]
+ * @description A mutable collection that maps keys to values.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Map<K, V> <: ReadOnlyMap<K, V> {
     /**
-    * Add a new key value to the map. If the key already exists,
-    * the value will be overwritten and the overwritten value will be returned.
-    *
-    * @return @p value If the key does exist, Return the old value. Otherwise, none is returned.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(key: K, value: V): ?V
     
     /**
-    * Transfer specified elements for traversal and assign values in sequence.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param elements the element passing in for traversal assignment.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Copies all of the mappings from the specified collection to this map.
+     * @param all Mappings to be stored in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(all!: Collection<(K, V)>): Unit
     
     /**
-    * Removes the key-value pair corresponding to the key based on the specified key from this mapping, if one exists.
-    *
-    * @param key pass in the key to be deleted.
-    * @return removed element
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the mapping for a key from this map if it is present.
+     * @param key The key whose mapping is to be removed from the map.
+     * @returns An `Option` containing the previous value associated with `key`, or `None` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(key: K): Option<V>
     
     /**
-    * Traverse the set of transferred keys and delete them based on the traversal result.
-    *
-    * @param keys pass in the collection to traverse.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the mappings for the specified keys from this map.
+     * @param all The collection of keys whose mappings are to be removed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(all!: Collection<K>): Unit
     
     /**
-    * Transfer a lambda expression and delete the corresponding key value if the condition is met.
-    *
-    * @param predicate transfer a lambda expression for judgment.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the entries of this map that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for entries to be removed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeIf(predicate: (K, V) -> Bool): Unit
     
     /**
-    * Clear all key-value pairs.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the mappings from this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func clear(): Unit
     
     /**
-    * The operator overloads the set. If the key does not exist, an exception is reported.
-    *
-    * @param key transfer the value for judgment.
-    * @param value transfer the value to be set.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     operator func [](key: K, value!: V): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a `MapEntryView` for the given key, allowing in-place operations on the entry.
+     * @param k The key of the entry.
+     * @returns A `MapEntryView` for the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func entryView(k: K): MapEntryView<K, V>
     
     /**
-    * Associates the specified @p value with the specified @p key in this map if the key is absent.
-    *
-    * @param key the key to put.
-    * @param value the value to set if absent.
-    *
-    * @return:
-    * - Some(v): if the @p key exists in map before invoking this method, return the old value.
-    * - None: if @p key is not in the map, set the @p key and @p value pair and return None.
-    *
-    * @since 0.59.3
-    */
+     * @description If the specified key is not already associated with a value, associates it with the given value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     func addIfAbsent(key: K, value: V): ?V
     
     /**
-    * Replaces the value associated with @p key to @p value,
-    * if there exists a pair of @p key and some value v in the map.
-    * Otherwise, just returns 'None' and does nothing.
-    *
-    * @param key: the key of the key-value pair, whose value needs to be replaced.
-    * @param value: the value to be set.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in map before invoking this method.
-    * - None: if @p key is not in the map.
-    *
-    * @since 0.59.3
-    */
+     * @description Replaces the entry for the specified key only if it is currently mapped to some value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     func replace(key: K, value: V): ?V
 }
 
 /**
-* This interface is a collection of keys returned by a key-value pair.
-*
-* @since 0.24.2
-*/
-@!APILevel[since: "22"]
+ * @description A `Collection` that supports an efficient `contains` operation for its elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface EquatableCollection<T> <: Collection<T> {
     /**
-    * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
-    *
-    * @param element specified element
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.24.2
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this collection contains the specified element.
+     * @param element The element whose presence in this collection is to be tested.
+     * @returns `true` if this collection contains the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(element: T): Bool
     
     /**
-    * Checks whether the mapping relationship corresponding to the collection key exists in this mapping.
-    *
-    * @param elements specified collection of elements
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.24.2
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this collection contains all of the elements of the specified collection.
+     * @param all The collection to be checked for containment in this collection.
+     * @returns `true` if this collection contains all of the elements of the specified collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(all!: Collection<T>): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A `Map` that maintains a defined order of its elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface OrderedMap<K, V> <: Map<K, V> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The first key-value pair in the map, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop first: ?(K, V)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The last key-value pair in the map, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop last: ?(K, V)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes and returns the first key-value pair from this map.
+     * @returns The first entry, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeFirst(): ?(K, V)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes and returns the last key-value pair from this map.
+     * @returns The last entry, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeLast(): ?(K, V)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an iterator over the elements of this map in reverse sequential order, starting from the specified key.
+     * @param mark The key to start iterating from.
+     * @param inclusive If `true`, the iteration includes the element at the `mark`.
+     * @returns An `Iterator` that traverses backward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func backward(mark: K, inclusive!: Bool): Iterator<(K, V)>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an iterator over the elements of this map in sequential order, starting from the specified key.
+     * @param mark The key to start iterating from.
+     * @param inclusive If `true`, the iteration includes the element at the `mark`.
+     * @returns An `Iterator` that traverses forward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func forward(mark: K, inclusive!: Bool): Iterator<(K, V)>
 }
 
 /**
-* This func enumerate returns an Iterator with index.
-*
-* @param it An Iteratable.
-* @return Iterator<Int64*T> An Iterator with index.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns an iterator that yields pairs of (index, value) for each element of the given iterable.
+ * @param it The iterable to enumerate.
+ * @returns An iterator of (index, value) pairs.
+ */
+@!APILevel[
+    since: "22"
+]
 public func enumerate<T>(it: Iterable<T>): Iterator<(Int64, T)>
 
 /**
-* This func filter is used to filter Iterator<T>.
-*
-* @param predicate Filter condition.
-* @return (Iterable<T>) -> Iterator<T> A filter function accept an Iterable.
-*
-*/
+ * @description Returns a function that creates an iterator which filters elements from an iterable based on a predicate.
+ * @param predicate A function to test each element of an iterable. Return `true` to keep the element, `false` otherwise.
+ * @returns A function that takes an iterable and returns an iterator with elements that satisfy the predicate.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func filter<T>(predicate: (T) -> Bool): (Iterable<T>) -> Iterator<T>
 
 /**
-* This func filterMap is used to filter and map Iterator<T>.
-*
-* @param transform Filter and map function.
-* @return (Iterable<T>) -> Iterator<R> A filterMap function accept an Iterable.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that filters and maps elements of an iterable simultaneously.
+ * @param transform A function to apply to each element. If it returns a non-null value, that value is included in the result.
+ * @returns A function that takes an iterable and returns an iterator with the transformed, non-null elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public func filterMap<T, R>(transform: (T) -> ?R): (Iterable<T>) -> Iterator<R>
 
 /**
-* This func map is used to Convert Iterable<T> to Iterator<R>.
-*
-* @param transform The callback function, that converts T to R.
-* @return (Iterable<T>) -> Iterator<R> A map function accept an Iterable as its input.
-*
-*/
+ * @description Returns a function that creates an iterator that applies a given transformation to each element of an iterable.
+ * @param transform The function to apply to each element.
+ * @returns A function that takes an iterable and returns an iterator with the transformed elements.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func map<T, R>(transform: (T) -> R): (Iterable<T>) -> Iterator<R>
 
 /**
-* This func flatten is used to flatten nested structure.
-*
-* @param it An Iteratable.
-* @return Iterator<R>, an Iterator removing one level of indirection.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Flattens an iterable of iterables into a single iterator.
+ * @param it The iterable of iterables to flatten.
+ * @returns An iterator that yields the elements of the inner iterables.
+ */
+@!APILevel[
+    since: "22"
+]
 public func flatten<T, R>(it: Iterable<T>): Iterator<R> where T <: Iterable<R>
 
 /**
-* This func flatMap is used to map and flatten Iterator.
-*
-* @param transform The callback function, that converts T to Iterable<R>.
-* @return (Iterable<T>) -> Iterator<R> A map-flatten function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that first applies a transformation to each element and then flattens the resulting iterables into one.
+ * @param transform A function that takes an element and returns an iterable.
+ * @returns A function that takes an iterable and returns a single iterator over all the mapped and flattened elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public func flatMap<T, R>(transform: (T) -> Iterable<R>): (Iterable<T>) -> Iterator<R>
 
 /**
-* This func zip is used to zip two Iterables into one (mainly the short one).
-*
-* @param other An Iteratable.
-* @return (Iterable<T>) -> Iterator<(T, R)> A zip function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that combines elements from two iterables into pairs.
+ * @param other The second iterable to zip with the first.
+ * @returns A function that takes an iterable and returns an iterator of pairs, where the i-th pair contains the i-th element from each of the input iterables.
+ */
+@!APILevel[
+    since: "22"
+]
 public func zip<T, R>(other: Iterable<R>): (Iterable<T>) -> Iterator<(T, R)>
 
 /**
-* This func concat is used to concat two Iterables into one.
-*
-* @param other An Iteratable.
-* @return (Iterable<T>) -> Iterator<T> A concat function accept an Iterable as its input.
-*
-*/
+ * @description Returns a function that creates an iterator that concatenates two iterables.
+ * @param other The iterable to concatenate.
+ * @returns A function that takes an iterable and returns a new iterator containing the elements of the first iterable followed by the elements of the second.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func concat<T>(other: Iterable<T>): (Iterable<T>) -> Iterator<T>
 
 /**
-* This func skip is used to skip count in Iterable<T>.
-* if count < 0, an exception will be throwed.
-* if count == 0, no operations will be done.
-* if 0 < count < size, return the remainning elements after skipping.
-* if count >= size, skip all elements and return an empty Iterator.
-*
-* @param count This is an Int64,number of skip.
-* @return (Iterable<T>) -> Iterator<T> A skip function accept an Iterable as its input.
-* @throws IllegalArgumentException if skip count is less than 0.
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that skips a specified number of elements from the beginning of an iterable.
+ * @param count The number of elements to skip.
+ * @returns A function that takes an iterable and returns an iterator that starts after the skipped elements.
+ * @throws IllegalArgumentException if `count` is negative.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func skip<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 
 /**
-* This func take is used to take count in Iterable<T>.
-*
-* @param count This is an Int64
-* @return (Iterable<T>) -> Iterator<T> A take function accept an Iterable as its input.
-* @throws IllegalArgumentException if count is less than 0.
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that yields a specified number of elements from the beginning of an iterable.
+ * @param count The number of elements to take.
+ * @returns A function that takes an iterable and returns an iterator that contains at most `count` elements.
+ * @throws IllegalArgumentException if `count` is negative.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func take<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 
 /**
-* This func step is used to step count in Iterable<T>.
-*
-* @param count This is an Int64, number of step.
-* @return (Iterable<T>) -> Iterator<T> A step function accept an Iterable as its input.
-* @throws IllegalArgumentException if step count is less than 0.
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that yields every N-th element of an iterable.
+ * @param count The step size.
+ * @returns A function that takes an iterable and returns an iterator yielding every `count`-th element.
+ * @throws IllegalArgumentException if `count` is not positive.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func step<T>(count: Int64): (Iterable<T>) -> Iterator<T>
 
 /**
-* This func inspect performs an extra operation on the current element each time when use next().
-*
-* @param action The function executed by each element.
-* @return (Iterable<T>) -> Iterator<T> An iteration function accept an Iterable as its input.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that creates an iterator that performs a side effect for each element of an iterable.
+ * @param action The action to perform on each element.
+ * @returns A function that takes an iterable and returns an iterator that is functionally identical but executes the action for each element.
+ */
+@!APILevel[
+    since: "22"
+]
 public func inspect<T>(action: (T) -> Unit): (Iterable<T>) -> Iterator<T>
 
 /**
-* Interface for a double-ended queue.
-*
-* @param <T> The type of elements in the queue.
-*/
-@!APILevel[since: "22"]
+ * @description A double-ended queue.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Deque<T> <: Collection<T> {
     /**
-    * Get the first element in the queue.
-    *
-    * @return The first element if the queue is not empty, otherwise null.
-    */
-    @!APILevel[since: "22"]
+     * @description The first element of the deque, or `null` if the deque is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop first: ?T
     
     /**
-    * Get the last element in the queue.
-    *
-    * @return The last element if the queue is not empty, otherwise null.
-    */
-    @!APILevel[since: "22"]
+     * @description The last element of the deque, or `null` if the deque is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop last: ?T
     
     /**
-    * Add an element to the front of the queue.
-    *
-    * @param element The element to add.
-    */
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the front of this deque.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func addFirst(element: T): Unit
     
     /**
-    * Add an element to the back of the queue.
-    *
-    * @param element The element to add.
-    */
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the end of this deque.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func addLast(element: T): Unit
     
     /**
-    * Remove the first element from the queue.
-    *
-    * @return The removed element if the queue was not empty, otherwise null.
-    */
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the first element of this deque.
+     * @returns The head of the deque, or `null` if it is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeFirst(): ?T
     
     /**
-    * Remove the last element from the queue.
-    *
-    * @return The removed element if the queue was not empty, otherwise null.
-    */
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the last element of this deque.
+     * @returns The tail of the deque, or `null` if it is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeLast(): ?T
 }
 
 /**
-* Queue interface that inherits from the Collection interface.
-* @param <T> The type of elements in the queue.
-*/
-@!APILevel[since: "22"]
+ * @description A first-in, first-out (FIFO) queue of elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Queue<T> <: Collection<T> {
     /**
-    * Adds an element to the queue.
-    * @param element The element to add.
-    * @return No return value.
-    */
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element into this queue.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(element: T): Unit
     
     /**
-    * Views the head element of the queue but does not remove it.
-    * @return The head element of the queue, or None if the queue is empty.
-    */
-    @!APILevel[since: "22"]
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns The head of this queue, or `null` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func peek(): ?T
     
     /**
-    * Removes and returns the head element of the queue.
-    * @return The removed head element, or None if the queue is empty.
-    */
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue.
+     * @returns The head of this queue, or `null` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(): ?T
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A read-only view of a `Set`. It provides methods to check for element containment but not to modify the set.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ReadOnlySet<T> <: Collection<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this set contains the specified element.
+     * @param element The element whose presence in this set is to be tested.
+     * @returns `true` if this set contains the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(element: T): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this set contains all of the elements of the specified collection.
+     * @param all The collection to be checked for containment in this set.
+     * @returns `true` if this set contains all of the elements of the specified collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(all!: Collection<T>): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this set is a subset of the given set.
+     * @param other The set to check against.
+     * @returns `true` if all elements of this set are also in `other`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func subsetOf(other: ReadOnlySet<T>): Bool
 }
 
 /**
-* This interface is a collection that does not guarantee the sequence of elements.
-* That is, the sequence of adding elements is different from the sequence of obtaining elements.
-*
-* @since 0.18.4
-*/
-@!APILevel[since: "22"]
+ * @description A mutable collection that contains no duplicate elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Set<T> <: ReadOnlySet<T> {
     /**
-    * Add element operation. If the element already exists, it will not be added.
-    *
-    * @param element the key to put.
-    * @return bool returns true if element is added; otherwise, false.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified element to this set if it is not already present.
+     * @param element The element to be added to this set.
+     * @returns `true` if this set did not already contain the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(element: T): Bool
     
     /**
-    * Transfer specified elements for traversal and assign values in sequence.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param elements the element passing in for traversal assignment.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Adds all of the elements in the specified collection to this set.
+     * @param all The collection containing elements to be added to this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(all!: Collection<T>): Unit
     
     /**
-    * Removes the key-value pair corresponding to the key based on the specified key from this mapping, if one exists.
-    *
-    * @param element key pass in the key to be deleted.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the specified element from this set if it is present.
+     * @param element The object to be removed from this set, if present.
+     * @returns `true` if this set contained the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(element: T): Bool
     
     /**
-    * Traverse the set of transferred keys and delete them based on the traversal result.
-    *
-    * @param elements keys pass in the collection to traverse.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes from this set all of its elements that are contained in the specified collection.
+     * @param all The collection containing elements to be removed from this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(all!: Collection<T>): Unit
     
     /**
-    * Transfer a lambda expression and delete the corresponding key value if the condition is met.
-    *
-    * @param predicate transfer a lambda expression for judgment.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the elements of this set that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for elements to be removed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeIf(predicate: (T) -> Bool): Unit
     
     /**
-    * Clear all key-value pairs.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the elements from this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func clear(): Unit
     
     /**
-    * Retain only duplicate T.
-    *
-    * @param elements collections to be saved.
-    *
-    * @since 0.18.4
-    */
-    @!APILevel[since: "22"]
+     * @description Retains only the elements in this set that are contained in the specified set.
+     * @param all The set containing elements to be retained in this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func retain(all!: Set<T>): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A `Set` that maintains a defined order of its elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface OrderedSet<T> <: Set<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The first element in the set, or `null` if the set is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop first: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The last element in the set, or `null` if the set is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop last: ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes and returns the first element from this set.
+     * @returns The first element, or `null` if the set is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeFirst(): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes and returns the last element from this set.
+     * @returns The last element, or `null` if the set is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func removeLast(): ?T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an iterator over the elements of this set in reverse sequential order, starting from the specified element.
+     * @param mark The element to start iterating from.
+     * @param inclusive If `true`, the iteration includes the `mark` element.
+     * @returns An `Iterator` that traverses backward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func backward(mark: T, inclusive!: Bool): Iterator<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an iterator over the elements of this set in sequential order, starting from the specified element.
+     * @param mark The element to start iterating from.
+     * @param inclusive If `true`, the iteration includes the `mark` element.
+     * @returns An `Iterator` that traverses forward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func forward(mark: T, inclusive!: Bool): Iterator<T>
 }
 
 /**
-* Stack interface, inherits from Collection interface
-* @param <T> Generic parameter
-*/
-@!APILevel[since: "22"]
+ * @description A last-in, first-out (LIFO) stack of elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Stack<T> <: Collection<T> {
     /**
-    * Peek at the top element without removing it
-    * @return The top element, or None if the stack is empty
-    */
-    @!APILevel[since: "22"]
+     * @description Looks at the object at the top of this stack without removing it.
+     * @returns The object at the top of this stack, or `null` if the stack is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func peek(): ?T
     
     /**
-    * Remove and return the top element
-    * @return The removed element, or None if the stack is empty
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the object at the top of this stack and returns that object.
+     * @returns The object at the top of this stack, or `null` if the stack is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(): ?T
     
     /**
-    * Push an element onto the top of the stack
-    * @param element The element to be pushed
-    * @return No return value
-    */
-    @!APILevel[since: "22"]
+     * @description Pushes an item onto the top of this stack.
+     * @param element The item to be pushed onto this stack.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(element: T): Unit
 }
 
 /**
-* This function is used to convert Iterable<T> to String.
-*
-* @param delimiter Delimiter used in concatenation.
-* @return String A new string containing all elements's string value in original iterator.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Returns a function that collects all elements of an iterable into a single string.
+ * @param delimiter The separator to be used between elements.
+ * @returns A function that takes an iterable and returns the resulting string.
+ * @throws IllegalArgumentException if an argument is invalid.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func collectString<T>(delimiter!: String = ""): (Iterable<T>) -> String where T <: ToString
 
 /**
-* This function is used to convert Iterable<T> to Array<T>.
-*
-* @param it This is an Iterable.
-* @return Array<T> A new Array<T> containing all elements in original iterator.
-*
-*/
+ * @description Collects all elements of an iterable into a new `Array`.
+ * @param it The iterable to collect.
+ * @returns A new `Array` containing the elements of the iterable.
+ * @throws IllegalArgumentException if an allocation error occurs.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func collectArray<T>(it: Iterable<T>): Array<T>
 
 /**
-* This function is used to convert Iterable<T> to ArrayList<T>.
-*
-* @param it This is an Iterable.
-* @return ArrayList<T> A new ArrayList<T> containing all elements in original iterator.
-*
-*/
+ * @description Collects all elements of an iterable into a new `ArrayList`.
+ * @param it The iterable to collect.
+ * @returns A new `ArrayList` containing the elements of the iterable.
+ * @throws IllegalArgumentException if an allocation error occurs.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func collectArrayList<T>(it: Iterable<T>): ArrayList<T>
 
 /**
-* This function is used to convert Iterable<T> to HashSet<T>.
-*
-* @param it This is an Iterable.
-* @return HashSet<T> A new HashSet<T> containing all elements in original iterator.
-*
-*/
+ * @description Collects all elements of an iterable into a new `HashSet`.
+ * @param it The iterable to collect.
+ * @returns A new `HashSet` containing the unique elements of the iterable.
+ * @throws IllegalArgumentException if an allocation error occurs.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func collectHashSet<T>(it: Iterable<T>): HashSet<T> where T <: Hashable & Equatable<T>
 
 /**
-* This function is used to convert Iterable<(K, V)> to HashMap<K, V>.
-*
-* @param it This is an Iterable.
-* @return HashMap<K, V> A new HashMap<K, V> containing all elements in original iterator.
-*
-*/
+ * @description Collects all key-value pairs of an iterable into a new `HashMap`.
+ * @param it The iterable of pairs to collect.
+ * @returns A new `HashMap` containing the key-value pairs from the iterable.
+ * @throws IllegalArgumentException if an allocation error occurs.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func collectHashMap<K, V>(it: Iterable<(K, V)>): HashMap<K, V> where K <: Hashable & Equatable<K>
 
-@!APILevel[since: "22"]
+/**
+ * @description A Red-Black tree based `OrderedMap` implementation. The map is sorted according to the natural ordering of its keys.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TreeMap<K, V> <: OrderedMap<K, V> where K <: Comparable<K> {
     /**
-    * Initializes an empty TreeMap.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs an empty `TreeMap`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Initializes a TreeMap with an incoming iterator for initialization.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs a new `TreeMap` with the same mappings as the specified `Collection` of pairs.
+     * @param elements The collection of key-value pairs.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<(K, V)>)
     
     /**
-    * Initializes a TreeMap with an incoming list for initialization.
-    *
-    * @param elements an incoming list is initialized.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs a new `TreeMap` with the same mappings as the specified `Array` of pairs.
+     * @param elements The array of key-value pairs.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Array<(K, V)>)
     
     /**
-    * Initializes a TreeMap with an incoming size and an initial element for initialization.
-    *
-    * @param size the size of the incoming initial element.
-    * @param initElement an incoming initElement is initialized.
-    *
-    * @throws IllegalArgumentException if size is less than zero
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs a `TreeMap` containing the elements returned by the given initializer function.
+     * @param size The size of the map to create.
+     * @param initElement A function that returns a key-value pair for a given index.
+     * @throws IllegalArgumentException if the specified size is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> (K, V))
     
     /**
-    * Returns the value to which the specified key is mapped.
-    *
-    * @param key transfer key to obtain the value.
-    * @return the value corresponding to the return key is encapsulated with Option.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the value to which the specified key is mapped, or `null` if this map contains no mapping for the key.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value, or `null` if the key is not found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func get(key: K): ?V
     
     /**
-    * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
-    *
-    * @param key transfer the key to be judged.
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this map contains a mapping for the specified key.
+     * @param key The key whose presence in this map is to be tested.
+     * @returns `true` if this map contains a mapping for the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(key: K): Bool
     
     /**
-    * Checks whether the mapping relationship corresponding to the collection key exists in this mapping.
-    *
-    * @param keys transfer the collection key to be judged.
-    * @return bool returns true if exists; otherwise, false.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this map contains a mapping for all of the specified keys.
+     * @param all The collection of keys to check.
+     * @returns `true` if this map contains all specified keys.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(all!: Collection<K>): Bool
     
     /**
-    * Associates the specified @p value with the specified @p key in this map.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param key the key to put.
-    * @param value the value to assign.
-    * @return If the key exists before the assignment, the value before the assignment is encapsulated with Option.
-    * Otherwise, return to Option<V>.None
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns An `Option` containing the previous value, or `None` if the key was not present.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(key: K, value: V): Option<V>
     
     /**
-    * Transfer specified elements for traversal and assign values in sequence.
-    * If you map a mapping that previously contained a key, the old value is replaced.
-    *
-    * @param elements the element passing in for traversal assignment.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Copies all of the mappings from the specified collection to this map.
+     * @param all Mappings to be stored in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(all!: Collection<(K, V)>): Unit
     
     /**
-    * Removes the key-value pair corresponding to the key based on the specified key from this mapping, if one exists.
-    *
-    * @param key pass in the key to be deleted.
-    * @return removed element
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the mapping for a key from this map if it is present.
+     * @param key The key whose mapping is to be removed from the map.
+     * @returns An `Option` containing the previous value, or `None` if the key was not present.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(key: K): Option<V>
     
     /**
-    * Traverse the set of transferred keys and delete them based on the traversal result.
-    *
-    * @param keys pass in the collection to traverse.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the mappings for the specified keys from this map.
+     * @param all The collection of keys whose mappings are to be removed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(all!: Collection<K>): Unit
     
     /**
-    * Transfer a lambda expression and delete the corresponding key value if the condition is met.
-    *
-    * @param predicate transfer a lambda expression for judgment.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the entries of this map that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for entries to be removed.
+     * @throws ConcurrentModificationException if the map is modified externally during the operation.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeIf(predicate: (K, V) -> Bool): Unit
     
     /**
-    * Clear all key-value pairs.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the mappings from this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
     /**
-    * Copy a TreeMap.
-    *
-    * @return a clone value of TreeMap.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a shallow copy of this `TreeMap` instance.
+     * @returns A clone of this `TreeMap` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): TreeMap<K, V>
     
     /**
-    * An exception is reported when the get operator is overloaded and the key does not exist.
-    *
-    * @param key transfer the value for judgment.
-    * @return the value corresponding to the key.
-    *
-    * @throws NoneValueException if value does not exist.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the value to which the specified key is mapped.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func [](key: K): V
     
     /**
-    * The operator overloads the set. If the key does not exist, an exception is reported.
-    *
-    * @param key transfer the value for judgment.
-    * @param value transfer the value to be set.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func [](key: K, value!: V): Unit
     
     /**
-    * Returns the Set view of all keys in this TreeMap.
-    *
-    * @return the Set view of the keys.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a `Collection` view of the keys contained in this map.
+     * @returns A collection view of the keys contained in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func keys(): EquatableCollection<K>
     
     /**
-    * Returns the Set view of all values in this TreeMap.
-    *
-    * @return the list view of the values.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a `Collection` view of the values contained in this map.
+     * @returns A collection view of the values contained in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func values(): Collection<V>
     
     /**
-    * Returns sizes of key-value.
-    *
-    * @return sizes of key-value.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description The number of key-value mappings in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
-    *
-    * @return bool if yes, true is returned. Otherwise, false is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this map contains no key-value mappings.
+     * @returns `true` if this map is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Get an iterator.
-    *
-    * @return type is iterator, which contains key and value.
-    *
-    * @since 0.43.1
-    */
+     * @description Returns an iterator over the key-value pairs in this map.
+     * @returns An iterator over the entries in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<(K, V)>
     
     /**
-    * Gets the first node of the TreeMap.
-    *
-    * @return If the first node exists, the key-value pair stored on the first node is returned. Otherwise, None is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description The first key-value pair in the map, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop first: ?(K, V)
     
     /**
-    * Delete the first node of the TreeMap.
-    *
-    * @return If there is a first node, return the deletion and return the key-value pair it stores; Otherwise, None is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Removes and returns the first key-value pair from this map.
+     * @returns The first entry, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func removeFirst(): ?(K, V)
     
     /**
-    * Gets the last node of the TreeMap.
-    *
-    * @return If the last node exists, the key-value pair stored on the first node is returned. Otherwise, None is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description The last key-value pair in the map, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop last: ?(K, V)
     
     /**
-    * Delete the last node of the TreeMap.
-    *
-    * @return If there is a last node, return the deletion and return the key-value pair it stores; Otherwise, None is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Removes and returns the last key-value pair from this map.
+     * @returns The last entry, or `null` if the map is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func removeLast(): ?(K, V)
     
     /**
-    * Generate an iterator in positive order from the current node to the end of the bound node.
-    *
-    * @param bound - Passed key
-    * @param inclusive: indicates whether the input key is included. The default value is true, indicating that the input key is included.
-    *
-    * @return value Iterator<(K, V)> - Returns an iterator in positive order from the current node to the end of the bound.
-    *
-    * @throws ConcurrentModificationException if lockVersion is not equal to "this.map.version()".
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns an iterator over the elements of this map in reverse sequential order, starting from the specified key.
+     * @param mark The key to start iterating from.
+     * @param inclusive If `true`, the iteration includes the element at the `mark`.
+     * @returns An `Iterator` that traverses backward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func backward(mark: K, inclusive!: Bool = true): Iterator<(K, V)>
     
     /**
-    * Generate an iterator in positive order from the current node to the end of the bound node.
-    *
-    * @param bound - Passed key
-    * @param inclusive: indicates whether the input key is included. The default value is true, indicating that the input key is included.
-    *
-    * @return value Iterator<(K, V)> - Returns an iterator in positive order from the current node to the end of the bound.
-    *
-    * @throws ConcurrentModificationException if lockVersion is not equal to "this.map.version()".
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns an iterator over the elements of this map in sequential order, starting from the specified key.
+     * @param mark The key to start iterating from.
+     * @param inclusive If `true`, the iteration includes the element at the `mark`.
+     * @returns An `Iterator` that traverses forward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func forward(mark: K, inclusive!: Bool = true): Iterator<(K, V)>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a `MapEntryView` for the given key, allowing in-place operations on the entry.
+     * @param k The key of the entry.
+     * @returns A `MapEntryView` for the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func entryView(k: K): MapEntryView<K, V>
 }
 
 extend<K, V> TreeMap<K, V> <: ToString where V <: ToString, K <: ToString & Comparable<K> {
     /**
-    * Returns the string form of a TreeMap
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a string representation of this map.
+     * @returns A string representation of the map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend<K, V> TreeMap<K, V> <: Equatable<TreeMap<K, V>> where V <: Equatable<V> {
     /**
-    * Compares whether two TreeMaps are equal.
-    *
-    * @param that Another TreeMap instance.
-    * @return If two TreeMaps are equal, true is returned. Otherwise, false is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Compares the specified object with this map for equality.
+     * @param right The object to be compared for equality with this map.
+     * @returns `true` if the specified object is equal to this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(right: TreeMap<K, V>): Bool
     
     /**
-    * Compares whether two TreeMaps are not equal.
-    *
-    * @param that Another TreeMap instance.
-    * @return If two TreeMaps are equal, false is returned. Otherwise, true is returned.
-    *
-    * @since 0.43.1
-    */
-    @!APILevel[since: "22"]
+     * @description Compares the specified object with this map for inequality.
+     * @param right The object to be compared for inequality with this map.
+     * @returns `true` if the specified object is not equal to this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(right: TreeMap<K, V>): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A Red-Black tree based `OrderedSet` implementation. The set is sorted according to the natural ordering of its elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TreeSet<T> <: OrderedSet<T> where T <: Comparable<T> {
     /**
-    * Returns the size.
-    *
-    * @return size.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description The number of elements in this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Gets the first node of the TreeSet.
-    *
-    * @return If the first node exists, the element on the first node is returned. Otherwise, None is returned.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description The first (lowest) element currently in this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop first: ?T
     
     /**
-    * Gets the last node of the TreeSet.
-    *
-    * @return If the last node exists, the element on the last node is returned. Otherwise, None is returned.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description The last (highest) element currently in this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop last: ?T
     
     /**
-    * Constructs a new, empty set.
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs a new, empty `TreeSet`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Construct a TreeSet with an incoming collection for initialization.
-    *
-    * @param elements an incoming collection.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs a new set containing the elements in the specified collection.
+     * @param elements The collection whose elements are to be placed into this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<T>)
     
     /**
-    * Constructs a tree map with an incoming size and an initial element for initialization.
-    *
-    * @param size the size of the incoming initial element.
-    * @param initElement an incoming initElement is initialized.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Constructs a `TreeSet` containing the elements returned by the given initializer function.
+     * @param size The size of the set to create.
+     * @param initElement A function that returns an element for a given index.
+     * @throws IllegalArgumentException if the specified size is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> T)
     
     /**
-    * Statically generate an TreeSet with the specified Array.
-    *
-    * @param elements input element type array.
-    * @return new TreeSet
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a `TreeSet` from an existing `Array` of elements.
+     * @param elements The array of elements.
+     * @returns A new `TreeSet` containing the elements from the array.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func of(elements: Array<T>): TreeSet<T>
     
     /**
-    * Checks whether the specified element is contained in this set.
-    *
-    * @param element elements to judge.
-    * @return bool returns true if contained; otherwise, false.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this set contains the specified element.
+     * @param element The element whose presence in this set is to be tested.
+     * @returns `true` if this set contains the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(element: T): Bool
     
     /**
-    * Checks whether the specified collection of elements is all contained in this set.
-    *
-    * @param all collection of elements to be judged.
-    * @return bool returns true if all elements are included, false otherwise.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this set contains all of the elements of the specified collection.
+     * @param all The collection to be checked for containment in this set.
+     * @returns `true` if this set contains all of the elements of the specified collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(all!: Collection<T>): Bool
     
     /**
-    * Add element operation. If the element already exists, it will not be added.
-    *
-    * @param element the element to put.
-    * @return Bool returns true if element is added; otherwise, false.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Adds the specified element to this set if it is not already present.
+     * @param element The element to be added to this set.
+     * @returns `true` if this set did not already contain the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: T): Bool
     
     /**
-    * All elements in the incoming collection are added.
-    *
-    * @param all the collection.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Adds all of the elements in the specified collection to this set.
+     * @param all The collection containing elements to be added to this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(all!: Collection<T>): Unit
     
     /**
-    * Removes a specified element from a set.
-    *
-    * @param element a specified element.
-    * @return Bool if the removal is successful, true is returned. If the removal fails or the element does not exist, false is returned.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the specified element from this set if it is present.
+     * @param element The object to be removed from this set, if present.
+     * @returns `true` if this set contained the specified element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(element: T): Bool
     
     /**
-    * Traversal removal of elements in this collection.
-    *
-    * @param all the collection.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Removes from this set all of its elements that are contained in the specified collection.
+     * @param all The collection containing elements to be removed from this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(all!: Collection<T>): Unit
     
     /**
-    * Transfer a lambda expression and delete the corresponding element if the condition is met.
-    *
-    * @param predicate transfer a lambda expression for judgment.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the elements of this set that satisfy the given predicate.
+     * @param predicate A predicate which returns `true` for elements to be removed.
+     * @throws ConcurrentModificationException if the set is modified externally during the operation.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeIf(predicate: (T) -> Bool): Unit
     
     /**
-    * Clears all elements.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes all of the elements from this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clear(): Unit
     
     /**
-    * Copy a TreeSet.
-    *
-    * @return returns a cloned TreeSet.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a shallow copy of this `TreeSet` instance.
+     * @returns A clone of this `TreeSet` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): TreeSet<T>
     
     /**
-    * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
-    *
-    * @return bool if yes, true is returned. Otherwise, false is returned.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this set contains no elements.
+     * @returns `true` if this set is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Get an iterator.
-    *
-    * @return the return type is an iterator and contains all elements.
-    *
-    */
+     * @description Returns an iterator over the elements in this set in ascending order.
+     * @returns An iterator over the elements in this set.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
     /**
-    * Delete the first node of the TreeSet.
-    *
-    * @return If the first node exists, it is deleted and the element it stores is returned. Otherwise, it returns None.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Removes and returns the first (lowest) element from this set.
+     * @returns The first element, or `null` if the set is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func removeFirst(): ?T
     
     /**
-    * Delete the last node of the TreeSet.
-    *
-    * @return If the last node exists, it is deleted and the element it stores is returned. Otherwise, it returns None.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Removes and returns the last (highest) element from this set.
+     * @returns The last element, or `null` if the set is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func removeLast(): ?T
     
     /**
-    * Gets a descending iterator.
-    * The head node of the iterator is the first node whose value is less than or equal to the marked element, and the tail node is the head node of the original set.
-    *
-    * @param mark Marked element.
-    * @param inclusive Indicates whether the iterator includes the marked element node.
-    * If yes, the iterator includes the marked element node. Otherwise, the iterator does not include the marked element node.
-    *
-    * @return iterator.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns an iterator over the elements of this set in reverse sequential order, starting from the specified element.
+     * @param mark The element to start iterating from.
+     * @param inclusive If `true`, the iteration includes the `mark` element.
+     * @returns An `Iterator` that traverses backward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func backward(mark: T, inclusive!: Bool = true): Iterator<T>
     
     /**
-    * Gets a Ascending iterator.
-    * The head node of the iterator is the first node with a value greater than or equal to the marked element, and the tail node is the tail node of the original set.
-    *
-    * @param mark Marked element.
-    * @param inclusive Indicates whether the iterator includes the marked element node.
-    * If yes, the iterator includes the marked element node. Otherwise, the iterator does not include the marked element node.
-    *
-    * @return iterator.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns an iterator over the elements of this set in sequential order, starting from the specified element.
+     * @param mark The element to start iterating from.
+     * @param inclusive If `true`, the iteration includes the `mark` element.
+     * @returns An `Iterator` that traverses forward from the mark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func forward(mark: T, inclusive!: Bool = true): Iterator<T>
     
     /**
-    * Retain only duplicate T.
-    * Removes all elements from this collection that are not contained
-    * in the specified collection. This function depends on the contains function.
-    * Please note that. If the incoming interface is a subtype of a malicious implementation.
-    * We do not guarantee the correctness of results for retaining duplicate elements.
-    *
-    * @param all the other set.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Retains only the elements in this set that are contained in the specified set.
+     * @param all The set containing elements to be retained in this set.
+     * @throws ConcurrentModificationException if the set is modified externally during the operation.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func retain(all!: Set<T>): Unit
     
     /**
-    * Returns the element in this TreeSet as an Array.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns an array containing all of the elements in this set.
+     * @returns An array containing all of the elements in this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
     
     /**
-    * Check whether the set is a subset of other.
-    *
-    * @param other a set of the set type.
-    * @return bool returns true if it is a subset, false otherwise.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this set is a subset of the given set.
+     * @param other The set to check against.
+     * @returns `true` if all elements of this set are also in `other`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func subsetOf(other: ReadOnlySet<T>): Bool
     
     /**
-    * Computes the intersection of this set and another set.
-    * Returns a new set containing only the elements that are present in both sets.
-    *
-    * @param other Another set to intersect with.
-    * @return A new `TreeSet` containing elements common to both sets.
-    *
-    * Example:
-    * ```
-    * let set1 = TreeSet([1, 2, 3])
-    * let set2 = TreeSet([2, 3, 4])
-    * let result = set1 & set2 // result is [2, 3]
-    * ```
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a new set containing the intersection of this set and the other set.
+     * @param other The set to intersect with.
+     * @returns A new `TreeSet` containing only the elements present in both sets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func &(other: ReadOnlySet<T>): TreeSet<T>
     
     /**
-    * Computes the union of this set and another set.
-    * Returns a new set containing all unique elements from both sets.
-    *
-    * @param other Another set to unite with.
-    * @return A new `TreeSet` containing all unique elements from both sets.
-    *
-    * Example:
-    * ```
-    * let set1 = TreeSet([1, 2, 3])
-    * let set2 = TreeSet([3, 4, 5])
-    * let result = set1 | set2 // result is [1, 2, 3, 4, 5]
-    * ```
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a new set containing the union of this set and the other set.
+     * @param other The set to form the union with.
+     * @returns A new `TreeSet` containing all elements from both sets.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func |(other: ReadOnlySet<T>): TreeSet<T>
     
     /**
-    * Computes the difference of this set and another set.
-    * Returns a new set containing elements that are present in this set but not in the other set.
-    *
-    * @param other Another set to subtract from this set.
-    * @return A new `TreeSet` containing elements unique to this set.
-    *
-    * Example:
-    * ```
-    * let set1 = TreeSet([1, 2, 3])
-    * let set2 = TreeSet([3, 4, 5])
-    * let result = set1 - set2 // result is [1, 2]
-    * ```
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a new set containing the difference of this set and the other set (elements in this set but not in the other).
+     * @param other The set of elements to remove.
+     * @returns A new `TreeSet` containing the elements that are in this set but not in the other.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func -(other: ReadOnlySet<T>): TreeSet<T>
 }
 
-/**
-* Defines the TreeSet inherits the Equalable method and determines whether == and != methods.
-*
-*/
 extend<T> TreeSet<T> <: Equatable<TreeSet<T>> {
-    /** overloaded determination equal function. */
-    @!APILevel[since: "22"]
-    public operator func ==(that: TreeSet<T>): Bool
+    /**
+     * @description Compares the specified object with this set for equality.
+     * @param other The object to be compared for equality with this set.
+     * @returns `true` if the specified object is equal to this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: TreeSet<T>): Bool
     
-    /** overloaded determination unequal function. */
-    @!APILevel[since: "22"]
-    public operator func !=(that: TreeSet<T>): Bool
+    /**
+     * @description Compares the specified object with this set for inequality.
+     * @param other The object to be compared for inequality with this set.
+     * @returns `true` if the specified object is not equal to this set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: TreeSet<T>): Bool
 }
 
 extend<T> TreeSet<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this set.
+     * @returns A string representation of the set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 

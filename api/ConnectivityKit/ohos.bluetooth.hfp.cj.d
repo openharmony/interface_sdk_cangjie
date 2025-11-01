@@ -13,136 +13,108 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.bluetooth.hfp
-import std.collection.ArrayList
-import ohos.business_exception.{ BusinessException, ERR_PARAMETER_ERROR}
-import ohos.callback_invoke.{ CallbackObject, Callback1Argument}
-import ohos.bluetooth.*
-import ohos.bluetooth.base_profile.*
-import ohos.bluetooth.constant.*
-import ohos.ffi.*
-import ohos.labels.*
 
+import ohos.bluetooth.base_profile.{ BaseProfile, StateChangeParam, ProfileCallbackType }
+import ohos.bluetooth.constant.ProfileConnectionState
+import ohos.callback_invoke.{CallbackObject, Callback1Argument}
+import ohos.labels.APILevel
 
 /**
-* create the instance of hfp profile.
-*
-* @returns { HandsFreeAudioGatewayProfile } Returns the instance of profile.
-* @relation createHfpAgProfile(): HandsFreeAudioGatewayProfile
-*/
+ * create the instance of hfp profile.
+ *
+ * @returns { HandsFreeAudioGatewayProfile } Returns the instance of profile.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func createHfpAgProfile(): HandsFreeAudioGatewayProfile
 
-
 /**
-* Manager hfp source profile.
-*
-* @relation interface HandsFreeAudioGatewayProfile extends BaseProfile
-*/
+ * Manager hfp source profile.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class HandsFreeAudioGatewayProfile <: BaseProfile {
     /**
-    * Obtains the connected devices list of profile.
-    *
-    * @permission ohos.permission.ACCESS_BLUETOOTH
-    * @returns { Array<String> } Returns the address of connected devices list.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation getConnectedDevices(): Array<string>
-    */
+     * Obtains the connected devices list of profile.
+     *
+     * @returns { Array<String> } Returns the address of connected devices list.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getConnectedDevices(): Array<String>
-    
+
     /**
-    * Obtains the profile connection state.
-    *
-    * @permission ohos.permission.ACCESS_BLUETOOTH
-    * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
-    * @returns { ProfileConnectionState } Returns the connection state.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900004 - Profile not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation getConnectionState(deviceId: string): ProfileConnectionState
-    */
+     * Obtains the profile connection state.
+     *
+     * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
+     * @returns { ProfileConnectionState } Returns the connection state.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900004 - Profile not supported.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getConnectionState(deviceId: String): ProfileConnectionState
-    
+
     /**
-    * Subscribe the event reported when the profile connection state changes .
-    *
-    * @permission ohos.permission.ACCESS_BLUETOOTH
-    * @param { ProfileCallbackType } type - Type of the profile connection state changes event to listen for.
-    * @param { Callback1Argument<StateChangeParam> } callback - Callback used to listen for event.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
-    */
+     * Subscribe the event reported when the profile connection state changes .
+     *
+     * @param { ProfileCallbackType } eventType - Type of the profile connection state changes event to listen for.
+     * @param { Callback1Argument<StateChangeParam> } callback - Callback used to listen for event.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: ProfileCallbackType, callback: Callback1Argument<StateChangeParam>): Unit
-    
+
     /**
-    * Unsubscribe the event reported when the profile connection state changes .
-    *
-    * @permission ohos.permission.ACCESS_BLUETOOTH
-    * @param { ProfileCallbackType } type - Type of the profile connection state changes event to listen for.
-    * @param { CallbackObject } callback - Callback used to listen for event.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    *  @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
-    */
+     * Unsubscribe the event reported when the profile connection state changes .
+     *
+     * @param { ProfileCallbackType } eventType - Type of the profile connection state changes event to listen for.
+     * @param { CallbackObject } callback - Callback used to listen for event.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: ProfileCallbackType, callback: CallbackObject): Unit
-    
+
     /**
-    * Unsubscribe the event reported when the profile connection state changes .
-    *
-    * @permission ohos.permission.ACCESS_BLUETOOTH
-    * @param { ProfileCallbackType } type - Type of the profile connection state changes event to listen for.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
-    */
+     * Unsubscribe the event reported when the profile connection state changes .
+     *
+     * @param { ProfileCallbackType } eventType - Type of the profile connection state changes event to listen for.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: ProfileCallbackType): Unit
 }
-
-

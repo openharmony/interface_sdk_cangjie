@@ -13,73 +13,69 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.error_manager
+
 public import ohos.application.error_observer.*
 import ohos.application.error_observer.*
 import ohos.labels.*
-import ohos.business_exception.BusinessException
-
-import ohos.hilog.*
 
 /**
-* Error manager event type.
-*/
+ * Error manager event type.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public enum ErrorManagerEvent {
     /**
-    * Error event.
-    */
+     * Error event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
-    Error |
-    ...
+    Error | ...
 }
 
-
 /**
-* This module provides the function of error manager.
-*
-* @relation declare namespace errorManager
-*/
+ * This module provides the function of error manager.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public class ErrorManager {
     /**
-    * Register error observer.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 16000003 - The specified ID does not exist.
-    * @relation function on(type: 'error', observer: ErrorObserver): number
-    */
+     * Register error observer.
+     *
+     * @param { ErrorManagerEvent } eventType - Indicates the error event type to observe.
+     * @param { ErrorObserver } observer - The error observer.
+     * @returns { Int32 } Returns the number code of the observer.
+     * @throws { BusinessException } 16000003 - The specified ID does not exist.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true
     ]
     public static func on(eventType: ErrorManagerEvent, observer: ErrorObserver): Int32
-    
+
     /**
-    * Unregister error observer.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * 2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 16000003 - The specified ID does not exist.
-    * @relation function off(type: 'error', observerId: number): Promise<void>
-    */
+     * Unregister error observer.
+     *
+     * @param { ErrorManagerEvent } eventType - Indicates the error event type to unregister.
+     * @param { Int32 } observerId - Indicates the number code of the observer.
+     * @throws { BusinessException } 16000003 - The specified ID does not exist.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityRuntime.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func off(eventType: ErrorManagerEvent, observerId: Int32): Unit
 }
-
-

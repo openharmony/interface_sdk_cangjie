@@ -13,14 +13,12 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.common
+
 public import ohos.ability.ability_result.*
 public import ohos.ability.connect_options.*
-
-//base_context
 public import ohos.app.ability.BaseContext
-// event_hub
 public import ohos.application.event_hub.*
 

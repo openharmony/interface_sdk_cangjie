@@ -13,2068 +13,2384 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.file.photo_access_helper
-import ohos.labels.*
-import ohos.ffi.*
 
 import ohos.app.ability.ui_ability.*
-import ohos.business_exception.*
 import ohos.callback_invoke.*
-import ohos.bundle.bundle_manager.{BundleManager, BundleInfo, BundleFlag}
-import ohos.hilog.*
-import std.sync.*
-import std.collection.*
-import ohos.resource_manager.ResourceManager
 import ohos.data.data_share_predicates.*
+import ohos.labels.*
 import ohos.multimedia.image.*
-import ohos.business_exception.{ UNIVERSAL_ERROR_MAP, BusinessException}
-import std.deriving.Derive
+import std.collection.*
 
 /**
-* Defines the abstract interface of albums.
-*
-* @relation interface AbsAlum
-*/
+ * Defines the abstract interface of albums.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public open class AbsAlbum <: RemoteDataLite {
+public open class AbsAlbum {
+    
+    protected init(id: Int64)
+
     /**
-    * Album type
-    *
-    * @relation readonly albumType: AlbumType
-    */
+     * Album type
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop albumType: AlbumType
-    
+
     /**
-    * Album subtype
-    *
-    * @relation readonly albumSubtype: AlbumSubtype
-    */
+     * Album subtype
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop albumSubtype: AlbumSubtype
-    
+
     /**
-    * Album name.
-    *
-    * @relation albumName: string
-    */
+     * Album name.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public mut prop albumName: String
-    
+
     /**
-    * Album uri.
-    *
-    * @relation readonly albumUri: string
-    */
+     * Album uri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop albumUri: String
-    
+
     /**
-    * Number of assets in the album
-    *
-    * @relation readonly count: number
-    */
+     * Number of assets in the album
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop count: Int32
-    
+
     /**
-    * Cover uri for the album
-    *
-    * @relation readonly coverUri: string
-    */
+     * Cover uri for the album
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop coverUri: String
-    
+
     /**
-    * Fetch assets in an album.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
-    */
+     * Fetch assets in an album.
+     * @param { FetchOptions } options - Fetch options.
+     * @returns { PhotoAssetResult } Returns the fetch result
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        permission: "ohos.READ_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        permission: "ohos.permission.READ_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getAssets(options: FetchOptions): PhotoAssetResult
 }
 
-
 /**
-* Defines the album.
-*
-* @relation interface Album extends AbsAlbum
-*/
+ * Defines the album.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class Album <: AbsAlbum {
     /**
-    * Number of image assets in the album
-    *
-    * @relation readonly imageCount: number
-    */
+     * Number of image assets in the album
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop imageCount: Int32
-    
+
     /**
-    * Number of video assets in the album
-    *
-    * @relation readonly videoCount: number
-    */
+     * Number of video assets in the album
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop videoCount: Int32
-    
+
     /**
-    * Modify metadata for the album
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation commitModify(): Promise<void>
-    */
+     * Modify metadata for the album
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        permission: "ohos.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        permission: "ohos.permission.WRITE_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func commitModify(): Unit
 }
 
-
 /**
-* Provides APIs to manage the file retrieval result.
-*
-* @relation interface FetchResult<T>
-*/
+ * Provides APIs to manage the file retrieval result.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public open class FetchResult <: RemoteDataLite {
-    /**
-    * Release the fetch result.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation close(): void
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
-    ]
-    public func close(): Unit
+public open class FetchResult {
     
+    protected init(id: Int64)
+
     /**
-    * Obtains the total number of objects in the fetch result.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getCount(): number
-    */
+     * Obtains the total number of objects in the fetch result.
+     * @returns { Int32 } Total number of objects.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func getCount(): Int32
-    
+
     /**
-    * Checks whether the result set points to the last row.
-    * You need to check whether the object is the last one before calling getNextObject.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation isAfterLast(): boolean
-    */
+     * Checks whether the result set points to the last row.
+     * You need to check whether the object is the last one before calling getNextObject.
+     * @returns { Bool } Whether the object is the last one in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func isAfterLast(): Bool
+
+    /**
+     * Release the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
+    ]
+    public func close(): Unit
 }
 
-
 /**
-* Provides APIs to manage the file retrieval album result.
-*
-* @relation interface FetchResult<T>
-*/
+ * Provides APIs to manage the file retrieval album result.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class AlbumResult <: FetchResult {
     /**
-    * Obtains the first object in the fetch result.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getFirstObject(): Promise<T>
-    */
+     * Obtains the first object in the fetch result.
+     * @returns { Album } Returns the first Album object in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getFirstObject(): Album
-    
+
     /**
-    * Obtains the next object in the fetch result.
-    * Before calling this method, you must use isAfterLast() to check whether the current position is the last row
-    * in the fetch result. This method only works when the current position is not the last row.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getNextObject(): Promise<T>
-    */
+     * Obtains the next object in the fetch result.
+     * Before using this API, you must use isAfterLast() to check whether the current position is the end of the result set.
+     * in the fetch result. This method only works when the current position is not the last row.
+     * @returns { Album } Returns the next Album object in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getNextObject(): Album
-    
+
     /**
-    * Obtains the last object in the fetch result
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getLastObject(): Promise<T>
-    */
+     * Obtains the last object asset in the fetch result.
+     * @returns { Album } Returns the last Album object
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getLastObject(): Album
-    
+
     /**
-    * Obtains the object with the specified index in the result set.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getObjectByPosition(index: number): Promise<T>
-    */
+     * Obtains the object with the specified index in the result set.
+     * @param { Int32 } index - Index of the file asset to obtain. The value starts from 0.
+     * @returns { Album } Returns the Album object at the specified index.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getObjectByPosition(index: Int32): Album
-    
+
     /**
-    * Obtains all objects in the fetch result.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAllObjects(): Promise<Array<T>>
-    */
+     * Obtains all objects in the fetch result.
+     * @returns { Array<Album> } Returns an array containing all Album objects in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getAllObjects(): Array<Album>
 }
 
-
 /**
-* Provides APIs to manage the file retrieval photoasset result.
-*
-* @relation interface FetchResult<T>
-*/
+ * Defines information about the images or videos selected.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class PhotoAssetResult <: FetchResult {
     /**
-    * Obtains the first object in the fetch result.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getFirstObject(): Promise<T>
-    */
+     * Obtains the first object in the fetch result.
+     * @returns { PhotoAsset } Returns the first PhotoAsset object in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getFirstObject(): PhotoAsset
-    
+
     /**
-    * Obtains the next object in the fetch result.
-    * Before calling this method, you must use isAfterLast() to check whether the current position is the last row
-    * in the fetch result. This method only works when the current position is not the last row.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getNextObject(): Promise<T>
-    */
+     * Obtains the next object in the fetch result.
+     * Before using this API, you must use isAfterLast() to check whether the current position is the end of the result set.
+     * in the fetch result. This method only works when the current position is not the last row.
+     * @returns { PhotoAsset } Returns the next PhotoAsset object in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getNextObject(): PhotoAsset
-    
+
     /**
-    * Obtains the last object in the fetch result
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getLastObject(): Promise<T>
-    */
+     * Obtains the last object asset in the fetch result.
+     * @returns { PhotoAsset } Returns the last PhotoAsset object
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getLastObject(): PhotoAsset
-    
+
     /**
-    * Obtains the object with the specified index in the result set.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getObjectByPosition(index: number): Promise<T>
-    */
+     * Obtains the object with the specified index in the result set.
+     * @param { Int32 } index - Index of the file asset to obtain. The value starts from 0.
+     * @returns { PhotoAsset } Returns the PhotoAsset object at the specified index.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getObjectByPosition(index: Int32): PhotoAsset
-    
+
     /**
-    * Obtains all objects in the fetch result.
-    *
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAllObjects(): Promise<Array<T>>
-    */
+     * Obtains all objects in the fetch result.
+     * @returns { Array<PhotoAsset> } Returns an array containing all PhotoAsset objects in the fetch result.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getAllObjects(): Array<PhotoAsset>
 }
 
-
 /**
-* Defines the class of media album change request.
-*
-* @relation class MediaAlbumChangeRequest implements MediaChangeRequest
-*/
+ * Defines the class of media album change request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public class MediaAlbumChangeRequest <: RemoteDataLite & MediaChangeRequest {
+public class MediaAlbumChangeRequest <: MediaChangeRequest {
+    /**
+     * The constructor to create a MediaAlbumChangeRequest instance.
+     * @param { Album } album - Specify which album to change
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
-    /**
-    * The constructor to create a MediaAlbumChangeRequest instance.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation constructor(album: Album)
-    */
     public init(album: Album)
-    
+
     /**
-    * Obtains the album in the current album change request.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAlbum(): Album
-    */
+     * Obtains the album in the current album change request.
+     * @returns { Album } Returns the album
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func getAlbum(): Album
-    
+
     /**
-    * Sets the album name.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation setAlbumName(name: string): void
-    */
+     * Sets the album name.
+     * @param { String } name - Album name to set.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func setAlbumName(name: String): Unit
-    
+
     /**
-    * Add assets to the album.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation addAssets(assets: Array<PhotoAsset>): void
-    */
+     * Add assets to the album.
+     * @param { Array<PhotoAsset> } assets - Array of assets to add.
+     * @throws { BusinessException } 14000011 - System inner fail
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func addAssets(assets: Array<PhotoAsset>): Unit
-    
+
     /**
-    * Removes assets from the album.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation removeAssets(assets: Array<PhotoAsset>): void
-    */
+     * Removes assets from the album.
+     * @param { Array<PhotoAsset> } assets - Array of assets to remove.
+     * @throws { BusinessException } 14000011 - System inner fail
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func removeAssets(assets: Array<PhotoAsset>): Unit
 }
 
-
 /**
-* Defines the interface of media change request.
-*
-* @relation interface MediaChangeRequest {}
-*/
+ * Defines the interface of media change request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public interface MediaChangeRequest {
-}
-
+public interface MediaChangeRequest {}
 
 /**
-* Defines the class of media asset change request.
-*
-* @relation class MediaAssetChangeRequest implements MediaChangeRequest
-*/
+ * Defines the class of media asset change request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public class MediaAssetChangeRequest <: RemoteDataLite & MediaChangeRequest {
+public class MediaAssetChangeRequest <: MediaChangeRequest {
     /**
-    * Constructor used to initialize an asset change request.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation constructor(asset: PhotoAsset)
-    */
+     * Constructor used to initialize an asset change request.
+     * @param { PhotoAsset } asset - Assets to change.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public init(asset: PhotoAsset)
-    
+
     /**
-    * Creates an image asset change request.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900002 - The file corresponding to the URI is not in the app sandbox.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
-    */
+     * Creates an image asset change request.
+     * @param { UIAbilityContext } context - Context of the ability instance.
+     * @param { String } fileUri - Data source of the image asset, which is specified by a URI in the application sandbox directory.
+     * @returns { MediaAssetChangeRequest } Returns a MediaAssetChangeRequest instance
+     * @throws { BusinessException } 13900002 - The file corresponding to the URI is not in the app sandbox.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public static func createImageAssetRequest(context: UIAbilityContext, fileUri: String): MediaAssetChangeRequest
-    
+
     /**
-    * Creates a video asset change request.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900002 - The file corresponding to the URI is not in the app sandbox.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
-    */
+     * Creates a video asset change request.
+     * @param { UIAbilityContext } context - Context of the ability instance.
+     * @param { String } fileUri - Data source of the video asset, which is specified by a URI in the application sandbox directory.
+     * @returns { MediaAssetChangeRequest } Returns a MediaAssetChangeRequest instance
+     * @throws { BusinessException } 13900002 - The file corresponding to the URI is not in the app sandbox.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public static func createVideoAssetRequest(context: UIAbilityContext, fileUri: String): MediaAssetChangeRequest
-    
+
     /**
-    * Create an asset change request based on the file type and filename extension.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: CreateOptions): MediaAssetChangeRequest
-    */
+     * Create an asset change request based on the file type and filename extension.
+     * @param { UIAbilityContext } context - Context of the ability instance.
+     * @param { PhotoType } photoType - Type of the file to create, which can be IMAGE or VIDEO.
+     * @param { String } extension - File name extension, for example, 'jpg'.
+     * @param { CreateOptions } [options] - Options for creating the image or video asset, for example, {title: 'testPhoto'}.
+     * @returns { MediaAssetChangeRequest } Returns a MediaAssetChangeRequest instance
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public static func createAssetRequest(context: UIAbilityContext, photoType: PhotoType, extension: String,
         options!: CreateOptions = CreateOptions(title: "", subtype: Default)): MediaAssetChangeRequest
-    
+
     /**
-    * Deletes media assets. This API uses a promise to return the result. The deleted assets are moved to the trash.
-    *
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>
-    */
+     * Deletes media assets. This API uses a promise to return the result. The deleted assets are moved to the trash.
+     * @param { UIAbilityContext } context - Context of the ability instance.
+     * @param { Array<PhotoAsset> } assets - Array of assets to delete.
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func deleteAssets(context: UIAbilityContext, assets: Array<PhotoAsset>): Unit
-    
+
     /**
-    * Deletes media assets. This API uses a promise to return the result. The deleted assets are moved to the trash.
-    *
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000002 - The uri format is incorrect or does not exist.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation static deleteAssets(context: Context, uriList: Array<string>): Promise<void>
-    */
+     * Deletes media assets. This API uses a promise to return the result. The deleted assets are moved to the trash.
+     * @param { UIAbilityContext } context - Context of the ability instance.
+     * @param { Array<String> } assets - URIs of the media files to delete.
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 14000002 - The uri format is incorrect or does not exist.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func deleteAssets(context: UIAbilityContext, assets: Array<String>): Unit
-    
+
     /**
-    * Obtains the asset in this asset change request.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAsset(): PhotoAsset
-    */
+     * Obtains the asset in this asset change request.
+     * @returns { PhotoAsset } Returns the PhotoAsset object in this change request.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func getAsset(): PhotoAsset
-    
+
     /**
-    * Sets the media asset title.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation setTitle(title: string): void
-    */
+     * Sets the media asset title.
+     * @param { String } title - Title to set.
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func setTitle(title: String): Unit
-    
+
     /**
-    * Obtains the handler used for writing a file to cache.
-    *
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation getWriteCacheHandler(): Promise<number>
-    */
+     * Obtains the handler used for writing a file to cache.
+     * @returns { Int32 } Returns the write cache handler
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 14000011 - System inner fail
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getWriteCacheHandler(): Int32
-    
+
     /**
-    * Adds a resource using fileUri.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900002 - The file corresponding to the URI is not in the app sandbox.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation addResource(type: ResourceType, fileUri: string): void
-    */
+     * Adds a resource using fileUri.
+     * @param { ResourceType } resourceType - Type of the resource to add.
+     * @param { String } fileUri - Data source of the resource to be added, which is specified by a URI in the application sandbox directory.
+     * @throws { BusinessException } 13900002 - The file corresponding to the URI is not in the app sandbox.
+     * @throws { BusinessException } 14000011 - System inner fail
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func addResource(resourceType: ResourceType, fileUri: String): Unit
-    
+
     /**
-    * Adds a resource using ArrayBuffer data.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation addResource(type: ResourceType, data: ArrayBuffer): void
-    */
+     * Adds a resource using ArrayBuffer data.
+     * @param { ResourceType } resourceType - Type of the resource to add.
+     * @param { Array<Byte> } data - Data of the resource to add.
+     * @throws { BusinessException } 14000011 - System inner fail
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func addResource(resourceType: ResourceType, data: Array<Byte>): Unit
-    
+
     /**
-    * Saves the photo taken by the camera.
-    *
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation saveCameraPhoto(): void
-    */
+     * Saves the photo taken by the camera.
+     * @throws { BusinessException } 14000011 - System inner fail
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func saveCameraPhoto(): Unit
-    
+
     /**
-    * Discards the photo taken by the camera.
-    *
-    * @throws { BusinessException } 14000011 - Internal system error
-    * @throws { BusinessException } 14000016 - Operation Not Support
-    * @relation discardCameraPhoto(): void
-    */
+     * Discards the photo taken by the camera.
+     * @throws { BusinessException } 14000011 - Internal system error
+     * @throws { BusinessException } 14000016 - Operation Not Support
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func discardCameraPhoto(): Unit
 }
 
-
 /**
-* Returns an instance of PhotoAccessHelper
-*
-* @throws { BusinessException } 13900020 - Invalid argument
-* @relation function getPhotoAccessHelper(context: Context): PhotoAccessHelper
-*/
+ * Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album.
+ * @param { UIAbilityContext } context - Context of the ability instance.
+ * @returns { PhotoAccessHelper } Instance of PhotoAccessHelper
+ * @throws { BusinessException } 13900020 - Invalid argument
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    since: "22",
+    permission: "ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS",
+    syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+    throwexception: true
 ]
 public func getPhotoAccessHelper(context: UIAbilityContext): PhotoAccessHelper
 
-
 /**
-* Helper functions to access photos and albums.
-*
-* @relation interface PhotoAccessHelper
-*/
+ * Helper functions to access photos and albums.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public class PhotoAccessHelper <: RemoteDataLite {
+public class PhotoAccessHelper {
     /**
-    * Release PhotoAccessHelper instance
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation release(): Promise<void>;
-    */
+     * Fetch photo assets
+     * @param { FetchOptions } options - Options for fetching the image and video assets.
+     * @returns { PhotoAssetResult } Returns the fetch result.
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
-    ]
-    public func release(): Unit
-    
-    /**
-    * Fetch photo assets
-    *
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>;
-    */
-    @!APILevel[
-        22,
-        permission: "ohos.READ_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        permission: "ohos.permission.READ_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getAssets(options: FetchOptions): PhotoAssetResult
-    
+
     /**
-    * Fetch a group of burst assets
-    *
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 14000011 - Internal system error
-    * @relation getBurstAssets(burstKey: string, options: FetchOptions): Promise<FetchResult<PhotoAsset>>;
-    */
+     * Fetch a group of burst assets
+     * @param { String } burstKey - UUID of a set of burst photos (BURST_KEY of PhotoKeys). The value is a string of 36 characters.
+     * @param { FetchOptions } options - Options for fetching the burst photos.
+     * @returns { PhotoAssetResult } Returns the fetch result.
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 14000011 - Internal system error
+     */
     @!APILevel[
-        22,
-        permission: "ohos.READ_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        permission: "ohos.permission.READ_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getBurstAssets(burstKey: String, options: FetchOptions): PhotoAssetResult
-    
+
     /**
-    * Obtains albums based on the specified options and album type.
-    * Before the operation, ensure that the albums to obtain exist.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>;
-    */
+     * Obtains albums based on the specified options and album type.
+     * Before the operation, ensure that the albums to obtain exist.
+     * @param { AlbumType } albumType - Type of the album.
+     * @param { AlbumSubtype } subtype - Album subtype.
+     * @param { FetchOptions } [options] - Options for fetching the albums.
+     * @returns { AlbumResult } Returns the fetch result
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        permission: "ohos.READ_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        permission: "ohos.permission.READ_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getAlbums(albumType: AlbumType, subtype: AlbumSubtype,
         options!: FetchOptions = FetchOptions(["uri", "album_name"], DataSharePredicates())): AlbumResult
-    
+
     /**
-    * Registers listening for the specified URI. This API uses a callback to return the result.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900012 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @relation registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData>): void;
-    */
+     * Registers listening for the specified URI. This API uses a callback to return the result.
+     * @param { String } uri - URI of the photo asset, URI of the album, or DefaultChangeUri.
+     * @param { Bool } forChildUris - Whether to perform fuzzy listening.
+     * If uri is the URI of an album, the value true means to listen for the changes of the files in the album;
+     * the value false means to listen for the changes of the album only.
+     * If uri is the URI of a photoAsset, there is no difference between true and false for forChildUris.
+     * If uri is DefaultChangeUri, forChildUris must be set to true. If forChildUris is false,
+     * the URI cannot be found and no message can be received.
+     * @param { Callback1Argument<ChangeData> } callback - Callback used to return the ChangeData.
+     * Multiple callback listeners can be registered for a URI.
+     * You can use unRegisterChange to unregister all listeners for the URI or a specified callback listener.
+     * @throws { BusinessException } 13900012 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func registerChange(uri: String, forChildUris: Bool, callback: Callback1Argument<ChangeData>): Unit
-    
+
     /**
-    * Unregisters listening for the specified URI. Multiple callbacks can be registered for a URI for listening.
-    * You can use this API to unregister the listening of the specified callbacks or all callbacks.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900012 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @relation unRegisterChange(uri: string, callback?: Callback<ChangeData>): void;
-    */
+     * Unregisters listening for the specified URI. Multiple callbacks can be registered for a URI for listening.
+     * You can use this API to unregister the listening of the specified callbacks or all callbacks.
+     * @param { String } uri - URI of the photo asset, URI of the album, or DefaultChangeUri.
+     * @param { ?Callback1Argument<ChangeData> } [callback] - The callback function to unregister.
+     * @throws { BusinessException } 13900012 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func unRegisterChange(uri: String, callback!: ?Callback1Argument<ChangeData> = None): Unit
-    
+
     /**
-    * Create a save dialog to save photos
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - Internal system error
-    * @relation showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>;
-    */
+     * Create a save dialog to save photos
+     * @param { Array<String> } srcFileUris - List of the file uris to be saved
+     * @param { Array<PhotoCreationConfig> } photoCreationConfigs - List of the photo asset creation configs
+     * @param { Callback1Argument<Array<String>> } callback - Callback used to returns the media library file uri list to application which has been authorized
+     * @throws { BusinessException } 14000011 - Internal system error
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func showAssetsCreationDialog(srcFileUris: Array<String>, photoCreationConfigs: Array<PhotoCreationConfig>,
         callback: Callback1Argument<Array<String>>): Unit
-    
+
     /**
-    * Applies media changes.
-    *
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>;
-    */
+     * Releases this PhotoAccessHelper instance.
+     * Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+     *
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        permission: "ohos.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
+    ]
+    public func release(): Unit
+
+    /**
+     * Applies media changes.
+     * @param { MediaChangeRequest } mediaChangeRequest - Request for asset changes or album changes.
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.WRITE_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func applyChanges(mediaChangeRequest: MediaChangeRequest): Unit
 }
 
-
 /**
-* Enumerate the album subtypes.
-*
-* @relation enum AlbumSubtype
-*/
-@Derive[ToString, Equatable]
+ * Enumerate the album subtypes.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum AlbumSubtype {
+    
     /**
-    * Generic user-created albums.
-    *
-    * @relation USER_GENERIC = 1
-    */
+     * Generic user-created albums.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    UserGeneric |
+    UserGeneric
+    | 
+    
     /**
-    * Favorite album, which assets are marked as favorite.
-    *
-    * @relation FAVORITE = 1025
-    */
+     * Favorite album, which assets are marked as favorite.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Favorite |
+    Favorite
+    | 
+    
     /**
-    * Video album, which contains all video assets.
-    *
-    * @relation VIDEO
-    */
+     * Video album, which contains all video assets.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Video |
+    Video
+    | 
+    
     /**
-    * Image album
-    *
-    * @relation IMAGE = 1031
-    */
+     * Image album
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Image |
+    Image
+    | 
+
     /**
-    * Any album
-    *
-    * @relation ANY = 2147483647
-    */
+     * Any album
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    AnyAlbum |
-    ...
+    AnyAlbum
+    | ...
 }
 
 
+extend AlbumSubtype <: ToString {
+    
+    /**
+     * Converts the AlbumSubtype to its string representation.
+     * @returns { String } A string representation of the AlbumSubtype.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend AlbumSubtype <: Equatable<AlbumSubtype> {
+    
+    /**
+     * Compares this AlbumSubtype with another for equality.
+     * @param { AlbumSubtype } other - The AlbumSubtype to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: AlbumSubtype): Bool
+    
+    /**
+     * Compares this AlbumSubtype with another for inequality.
+     * @param { AlbumSubtype } other - The AlbumSubtype to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: AlbumSubtype): Bool
+}
 
 /**
-* Enumerates the album types.
-*
-* @relation enum AlbumType
-*/
-@Derive[ToString, Equatable]
+ * Enumerates the album types.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum AlbumType {
+    
     /**
-    * User album.
-    *
-    * @relation USER = 0
-    */
+     * User album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    User |
+    User
+    | 
+
     /**
-    * System album.
-    *
-    * @relation SYSTEM = 1024
-    */
+     * System album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    System |
-    ...
+    System
+    | ...
 }
 
 
+extend AlbumType <: ToString {
+    
+    /**
+     * Converts the AlbumType to its string representation.
+     * @returns { String } A string representation of the AlbumType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend AlbumType <: Equatable<AlbumType> {
+    
+    /**
+     * Compares this AlbumType with another for equality.
+     * @param { AlbumType } other - The AlbumType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: AlbumType): Bool
+    
+    /**
+     * Compares this AlbumType with another for inequality.
+     * @param { AlbumType } other - The AlbumType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: AlbumType): Bool
+}
 
 /**
-* Defines the options for fetching media files.
-*
-* @relation interface FetchOptions
-*/
+ * Defines the options for fetching media files.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class FetchOptions {
     /**
-    * Indicates the members to query.
-    *
-    * @relation fetchColumns: Array<string>
-    */
+     * Indicates the members to query.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var fetchColumns: Array<String>
-    
+
     /**
-    * Predicates that specify the fetch criteria.
-    *
-    * @relation predicates: dataSharePredicates.DataSharePredicates;
-    */
+     * Predicates that specify the fetch criteria.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var predicates: DataSharePredicates
-    
+
     /**
-    * Create fetchOptions instance.
-    */
+     * Create fetchOptions instance.
+     *
+     * @param {Array<String>} fetchColumns - indicates the members to query.
+     * @param {DataSharePredicates} predicates - indicates specify the fetch criteria.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(fetchColumns: Array<String>, predicates: DataSharePredicates)
 }
 
-
 /**
-* Enumerates the PhotoAsset types.
-*
-* @relation enum PhotoSubtype
-*/
-@Derive[ToString, Equatable]
+ * Enumerates the PhotoAsset types.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoSubtype {
+    
     /**
-    * Default Photo Type
-    *
-    * @relation DEFAULT = 0
-    */
+     * Default Photo Type
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Default |
+    Default
+    | 
+    
     /**
-    * Moving Photo Type
-    *
-    * @relation MOVING_PHOTO = 3
-    */
+     * Moving Photo Type
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    MovingPhoto |
+    MovingPhoto
+    | 
+
     /**
-    * Burst Photo Type
-    *
-    * @relation BURST = 4
-    */
+     * Burst Photo Type
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Burst |
-    ...
+    Burst
+    | ...
 }
 
 
+extend PhotoSubtype <: ToString {
+    
+    /**
+     * Converts the PhotoSubtype to its string representation.
+     * @returns { String } A string representation of the PhotoSubtype.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend PhotoSubtype <: Equatable<PhotoSubtype> {
+    
+    /**
+     * Compares this PhotoSubtype with another for equality.
+     * @param { PhotoSubtype } other - The PhotoSubtype to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: PhotoSubtype): Bool
+    
+    /**
+     * Compares this PhotoSubtype with another for inequality.
+     * @param { PhotoSubtype } other - The PhotoSubtype to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: PhotoSubtype): Bool
+}
 
 /**
-* Enumerates the asset delivery modes.
-*
-* @relation enum DeliveryMode
-*/
-@Derive[ToString, Equatable]
+ * Enumerates the asset delivery modes.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum DeliveryMode {
+    
     /**
-    * Fast mode.
-    *
-    * @relation FAST_MODE = 0
-    */
+     * Fast mode.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    FastMode |
+    FastMode
+    | 
+    
     /**
-    * High-quality mode.
-    *
-    * @relation HIGH_QUALITY_MODE = 1
-    */
+     * High-quality mode.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    HighQualityMode |
+    HighQualityMode
+    | 
+    
     /**
-    * Balance mode.
-    *
-    * @relation BALANCE_MODE = 2
-    */
+     * Balance mode.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    BalanceMode |
-    ...
+    BalanceMode
+    | ...
 }
 
 
+extend DeliveryMode <: ToString {
+    
+    /**
+     * Converts the DeliveryMode to its string representation.
+     * @returns { String } A string representation of the DeliveryMode.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend DeliveryMode <: Equatable<DeliveryMode> {
+    
+    /**
+     * Compares this DeliveryMode with another for equality.
+     * @param { DeliveryMode } other - The DeliveryMode to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: DeliveryMode): Bool
+    
+    /**
+     * Compares this DeliveryMode with another for inequality.
+     * @param { DeliveryMode } other - The DeliveryMode to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: DeliveryMode): Bool
+}
 
 /**
-* PhotoViewMIMETypes represents the type of media resource that photo picker selects.
-*
-* @relation export enum PhotoViewMIMETypes
-*/
-@Derive[ToString, Equatable]
+ * PhotoViewMIMETypes represents the type of media resource that photo picker selects.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoViewMIMETypes {
+    
     /**
-    * IMAGE_TYPE indicates that the selected media resources are images.
-    *
-    * @relation IMAGE_TYPE = 'image/\*'
-    */
+     * ImageType indicates that the selected media resources are images.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    ImageType |
+    ImageType
+    | 
+    
     /**
-    * VIDEO_TYPE indicates that the selected media resources are videos.
-    *
-    * @relation VIDEO_TYPE = 'video/\*'
-    */
+     * VideoType indicates that the selected media resources are videos.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    VideoType |
+    VideoType
+    | 
+    
     /**
-    * IMAGE_VIDEO_TYPE indicates that the selected media resources are images and videos.
-    *
-    * @relation IMAGE_VIDEO_TYPE = '*\/\*',
-    */
+     * ImageVideoType indicates that the selected media resources are images and videos.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    ImageVideoType |
+    ImageVideoType
+    | 
+    
     /**
-    * MOVING_PHOTO_IMAGE_TYPE indicates that the selected media resources are moving photos.
-    *
-    * @relation MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
-    */
+     * MovingPhotoImageType indicates that the selected media resources are moving photos.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    MovingPhotoImageType |
-    ...
+    MovingPhotoImageType
+    | ...
 }
 
 
+extend PhotoViewMIMETypes <: ToString {
+    
+    /**
+     * Converts the PhotoViewMIMETypes to its string representation.
+     * @returns { String } A string representation of the PhotoViewMIMETypes.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend PhotoViewMIMETypes <: Equatable<PhotoViewMIMETypes> {
+    
+    /**
+     * Compares this PhotoViewMIMETypes with another for equality.
+     * @param { PhotoViewMIMETypes } other - The PhotoViewMIMETypes to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: PhotoViewMIMETypes): Bool
+    
+    /**
+     * Compares this PhotoViewMIMETypes with another for inequality.
+     * @param { PhotoViewMIMETypes } other - The PhotoViewMIMETypes to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: PhotoViewMIMETypes): Bool
+}
 
 /**
-* Enumerates the types of recommended images.
-*
-* @relation enum RecommendationType
-*/
-@Derive[ToString, Equatable]
+ * Enumerates the types of recommended images.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum RecommendationType {
+    
     /**
-    * QR_OR_BAR_CODE indicates that QR code or barcode photos can be recommended
-    *
-    * @relation QR_OR_BAR_CODE = 1
-    */
+     * QrOrBarCode indicates that QR code or barcode photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    QrOrBarCode |
+    QrOrBarCode
+    | 
+    
     /**
-    * QR_CODE indicates that QR code photos can be recommended
-    *
-    * @relation QR_CODE = 2
-    */
+     * QrCode indicates that QR code photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    QrCode |
+    QrCode
+    | 
+    
     /**
-    * BAR_CODE indicates that barcode photos can be recommended
-    *
-    * @relation BAR_CODE = 3
-    */
+     * BarCode indicates that barcode photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    BarCode |
+    BarCode
+    | 
+    
     /**
-    * ID_CARD indicates that QR code or barcode photos can be recommended
-    *
-    * @relation ID_CARD = 4
-    */
+     * IdCard indicates that QR code or barcode photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    IdCard |
+    IdCard
+    | 
+    
     /**
-    * PROFILE_PICTURE indicates that profile picture photos can be recommended
-    *
-    * @relation PROFILE_PICTURE = 5
-    */
+     * ProfilePicture indicates that profile picture photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    ProfilePicture |
+    ProfilePicture
+    | 
+    
     /**
-    * PASSPORT indicates that passport photos can be recommended
-    *
-    * @relation PASSPORT = 6
-    */
+     * PassPort indicates that passport photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    PassPort |
+    PassPort
+    | 
+    
     /**
-    * BANK_CARD indicates that bank card photos can be recommended
-    *
-    * @relation BANK_CARD = 7
-    */
+     * BankCard indicates that bank card photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    BankCard |
+    BankCard
+    | 
+    
     /**
-    * DRIVER_LICENSE indicates that driver license photos can be recommended
-    *
-    * @relation DRIVER_LICENSE = 8
-    */
+     * DriverLicense indicates that driver license photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DriverLicense |
+    DriverLicense
+    | 
+    
     /**
-    * DRIVING_LICENSE indicates that driving license photos can be recommended
-    *
-    * @relation DRIVING_LICENSE = 9
-    */
+     * DrivingLicense indicates that driving license photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DrivingLicense |
+    DrivingLicense
+    | 
+
     /**
-    * FEATURED_SINGLE_PORTRAIT indicates that featured single portrait photos can be recommended
-    *
-    * @relation FEATURED_SINGLE_PORTRAIT = 10
-    */
+     * FeaturedSinglePortrait indicates that featured single portrait photos can be recommended
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    FeaturedSinglePortrait |
-    ...
+    FeaturedSinglePortrait
+    | ...
 }
 
 
+extend RecommendationType <: ToString {
+    
+    /**
+     * Converts the RecommendationType to its string representation.
+     * @returns { String } A string representation of the RecommendationType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend RecommendationType <: Equatable<RecommendationType> {
+    
+    /**
+     * Compares this RecommendationType with another for equality.
+     * @param { RecommendationType } other - The RecommendationType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: RecommendationType): Bool
+    
+    /**
+     * Compares this RecommendationType with another for inequality.
+     * @param { RecommendationType } other - The RecommendationType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: RecommendationType): Bool
+}
 
 /**
-* Enumerates the formats for displaying media assets.
-*
-* @relation enum DynamicRangeType
-*/
-@Derive[ToString, Equatable]
+ * Enumerates the formats for displaying media assets.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum DynamicRangeType {
+    
     /**
-    * Standard dynamic range (SDR).
-    *
-    * @relation SDR = 0
-    */
+     * Standard dynamic range (SDR).
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Sdr |
+    Sdr
+    | 
+
     /**
-    * High dynamic range (HDR).
-    *
-    * @relation HDR = 1
-    */
+     * High dynamic range (HDR).
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Hdr |
-    ...
+    Hdr
+    | ...
 }
 
 
+extend DynamicRangeType <: ToString {
+    
+    /**
+     * Converts the DynamicRangeType to its string representation.
+     * @returns { String } A string representation of the DynamicRangeType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend DynamicRangeType <: Equatable<DynamicRangeType> {
+    
+    /**
+     * Compares this DynamicRangeType with another for equality.
+     * @param { DynamicRangeType } other - The DynamicRangeType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: DynamicRangeType): Bool
+    
+    /**
+     * Compares this DynamicRangeType with another for inequality.
+     * @param { DynamicRangeType } other - The DynamicRangeType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: DynamicRangeType): Bool
+}
 
 /**
-* Enumerates the types of the resources to write.
-*
-* @relation enum ResourceType
-*/
-@Derive[ToString, Equatable]
+ * Enumerates the types of the resources to write.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum ResourceType {
+    
     /**
-    * Image resource
-    *
-    * @relation IMAGE_RESOURCE = 1
-    */
+     * Image resource
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    ImageResource |
+    ImageResource
+    | 
+
     /**
-    * Video resource
-    *
-    * @relation VIDEO_RESOURCE = 2
-    */
+     * Video resource
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    VideoResource |
-    ...
+    VideoResource
+    | ...
 }
 
 
+extend ResourceType <: ToString {
+    
+    /**
+     * Converts the ResourceType to its string representation.
+     * @returns { String } A string representation of the ResourceType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend ResourceType <: Equatable<ResourceType> {
+    
+    /**
+     * Compares this ResourceType with another for equality.
+     * @param { ResourceType } other - The ResourceType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: ResourceType): Bool
+    
+    /**
+     * Compares this ResourceType with another for inequality.
+     * @param { ResourceType } other - The ResourceType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: ResourceType): Bool
+}
 
 /**
-* Config to create photo asset
-*
-* @relation interface PhotoCreationConfig
-*/
+ * Config to create photo asset
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class PhotoCreationConfig {
     /**
-    * Extension of the asset
-    *
-    * @relation fileNameExtension: string
-    */
+     * Extension of the asset
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var fileNameExtension: String
-    
+
     /**
-    * Specify photo type of the asset to create, include image or video
-    *
-    * @relation photoType: PhotoType
-    */
+     * Specify photo type of the asset to create, include image or video
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var photoType: PhotoType
-    
+
     /**
-    * Title of the asset
-    *
-    * @relation title?: string
-    */
+     * Title of the asset
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var title: String
-    
+
     /**
-    * Specify photo subtype of the asset to create, include default or moving_photo
-    *
-    * @relation subtype?: PhotoSubtype
-    */
+     * Specify photo subtype of the asset to create, include default or moving_photo
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var subtype: PhotoSubtype
-    
+
     /**
-    * Create PhotoCreationConfig instance
-    */
+     * Create PhotoCreationConfig instance
+     *
+     * @param { String } fileNameExtension - indicates extension of the asset.
+     * @param { PhotoType } photoType - indicates indicates specify photo type of the asset to create, include image or video.
+     * @param { String } [title] - indicates title of the asset.
+     * @param { PhotoSubtype } [subtype] - indicates specify photo subtype of the asset to create, include default or moving_photo.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(fileNameExtension: String, photoType: PhotoType, title!: String = "", subtype!: PhotoSubtype = Default)
 }
 
-
 /**
-* Enumeration types of data change.
-*
-* @relation enum NotifyType
-*/
-@Derive[ToString, Equatable]
+ * Enumeration types of data change.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum NotifyType {
+    
     /**
-    * Data(assets or albums) have been newly created
-    *
-    * @relation NOTIFY_ADD
-    */
+     * Data(assets or albums) have been newly created
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    NotifyAdd |
+    NotifyAdd
+    | 
+    
     /**
-    * Data(assets or albums) have been modified
-    *
-    * @relation NOTIFY_UPDATE
-    */
+     * Data(assets or albums) have been modified
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    NotifyUpdate |
+    NotifyUpdate
+    | 
+    
     /**
-    * Data(assets or albums) have been removed
-    *
-    * @relation NOTIFY_REMOVE
-    */
+     * Data(assets or albums) have been removed
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    NotifyRemove |
+    NotifyRemove
+    | 
+    
     /**
-    * Assets have been added to an album.
-    *
-    * @relation NOTIFY_ALBUM_ADD_ASSET
-    */
+     * Assets have been added to an album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    NotifyAlbumAddAsset |
+    NotifyAlbumAddAsset
+    | 
+
     /**
-    * Assets have been removed from an album.
-    *
-    * @relation NOTIFY_ALBUM_REMOVE_ASSET
-    */
+     * Assets have been removed from an album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    NotifyAlbumRemoveAsset |
-    ...
+    NotifyAlbumRemoveAsset
+    | ...
 }
 
 
+extend NotifyType <: ToString {
+    
+    /**
+     * Converts the NotifyType to its string representation.
+     * @returns { String } A string representation of the NotifyType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend NotifyType <: Equatable<NotifyType> {
+    
+    /**
+     * Compares this NotifyType with another for equality.
+     * @param { NotifyType } other - The NotifyType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: NotifyType): Bool
+    
+    /**
+     * Compares this NotifyType with another for inequality.
+     * @param { NotifyType } other - The NotifyType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: NotifyType): Bool
+}
 
 /**
-* Defines the change data
-*
-* @relation interface ChangeData
-*/
+ * Defines the change data
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class ChangeData {
     /**
-    * The NotifyType of ChangeData
-    *
-    * @relation type: NotifyType
-    */
+     * The NotifyType of ChangeData
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var notifyType: NotifyType
-    
+
     /**
-    * The changed uris
-    *
-    * @relation uris: Array<string>
-    */
+     * The changed uris
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var uris: Array<String>
-    
+
     /**
-    * Change details of the asset uris to an album.
-    *
-    * @relation extraUris: Array<string>
-    */
+     * Change details of the asset uris to an album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var extraUris: Array<String>
 }
 
-
 /**
-* Options for creating an image or video asset.
-*
-* @relation interface CreateOptions
-*/
+ * Options for creating an image or video asset.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class CreateOptions {
     /**
-    * Title of the asset
-    *
-    * @relation title?: string
-    */
+     * Title of the asset
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var title: String = ""
-    
+
     /**
-    * Specify subtype of the asset to create
-    *
-    * @relation subtype?: PhotoSubtype
-    */
+     * Specify subtype of the asset to create
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var subtype: PhotoSubtype
-    
+
     /**
-    * Create CreateOptions instance
-    */
+     * Create CreateOptions instance
+     *
+     * @param { String } [title] - indicates title of the asset.
+     * @param { PhotoSubtype } [subtype] - indicates specify subtype of the asset to create.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public init(title!: String = "", subtype!: PhotoSubtype = Default)
 }
 
-
 /**
-* Options to request media asset
-*
-* @relation interface RequestOptions
-*/
+ * Options to request media asset
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public class RequestOptions {
     /**
-    * Indicates the delivery mode
-    *
-    * @relation deliveryMode: DeliveryMode
-    */
+     * Indicates the delivery mode
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public var deliveryMode: DeliveryMode
 }
 
-
 /**
-* Enumeration of photo asset members
-*
-* @relation enum PhotoKeys
-*/
-@Derive[Equatable]
+ * Enumeration of photo asset members
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoKeys <: ToString {
+    
     /**
-    * Asset uri, read only
-    *
-    * @relation URI = 'uri'
-    */
+     * Asset uri, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Uri |
+    Uri
+    | 
+    
     /**
-    * Photo type of the asset, read only
-    *
-    * @relation PHOTO_TYPE = 'media_type'
-    */
+     * Photo type of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    PhotoType |
+    PhotoType
+    | 
+    
     /**
-    * Asset name, read only
-    *
-    * @relation DISPLAY_NAME = 'display_name'
-    */
+     * Asset name, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DisplayName |
+    DisplayName
+    | 
+    
     /**
-    * Size of the asset, read only
-    *
-    * @relation SIZE = 'size'
-    */
+     * Size of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Size |
+    Size
+    | 
+    
     /**
-    * Creation date of the asset, read only
-    *
-    * @relation DATE_ADDED = 'date_added'
-    */
+     * Creation date of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DateAdded |
+    DateAdded
+    | 
+    
     /**
-    * Modified date of the asset, read only
-    *
-    * @relation DATE_MODIFIED = 'date_modified'
-    */
+     * Modified date of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DateModified |
+    DateModified
+    | 
+    
     /**
-    * Duration of video files, read only
-    *
-    * @relation DURATION = 'duration'
-    */
+     * Duration of video files, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Duration |
+    Duration
+    | 
+    
     /**
-    * Width of the image asset, read only
-    *
-    * @relation WIDTH = 'width'
-    */
+     * Width of the image asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Width |
+    Width
+    | 
+    
     /**
-    * Height of the image asset, read only
-    *
-    * @relation HEIGHT = 'height'
-    */
+     * Height of the image asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Height |
+    Height
+    | 
+    
     /**
-    * Date taken of the asset, read only
-    *
-    * @relation DATE_TAKEN = 'date_taken'
-    */
+     * Date taken of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DateTaken |
+    DateTaken
+    | 
+    
     /**
-    * Orientation of the image asset, read only
-    *
-    * @relation ORIENTATION = 'orientation'
-    */
+     * Orientation of the image asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Orientation |
+    Orientation
+    | 
+    
     /**
-    * Favorite state of the asset, read only
-    *
-    * @relation FAVORITE = 'is_favorite'
-    */
+     * Favorite state of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Favorite |
+    Favorite
+    | 
+    
     /**
-    * Title of the asset
-    *
-    * @relation TITLE = 'title'
-    */
+     * Title of the asset
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Title |
+    Title
+    | 
+    
     /**
-    * Creation time of the asset in milliseconds, read only
-    *
-    * @relation DATE_ADDED_MS = 'date_added_ms',
-    */
+     * Creation time of the asset in milliseconds, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DateAddedMs |
+    DateAddedMs
+    | 
+    
     /**
-    * Modified time of the asset in milliseconds, read only
-    *
-    * @relation DATE_MODIFIED_MS = 'date_modified_ms'
-    */
+     * Modified time of the asset in milliseconds, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DateModifiedMs |
+    DateModifiedMs
+    | 
+    
     /**
-    * Photo subtype of the asset, read only
-    *
-    * @relation PHOTO_SUBTYPE = 'subtype'
-    */
+     * Photo subtype of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    PhotoSubtype |
+    PhotoSubtype
+    | 
+    
     /**
-    * Dynamic range type of the asset, read only
-    *
-    * @relation DYNAMIC_RANGE_TYPE = 'dynamic_range_type'
-    */
+     * Dynamic range type of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DynamicRangeType |
+    DynamicRangeType
+    | 
+    
     /**
-    * Cover position of the asset, read only
-    *
-    * @relation COVER_POSITION = 'cover_position'
-    */
+     * Cover position of the asset, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    CoverPosition |
+    CoverPosition
+    | 
+    
     /**
-    * Unique uuid of the burst photos, read only
-    *
-    * @relation BURST_KEY = 'burst_key'
-    */
+     * Unique uuid of the burst photos, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    BurstKey |
+    BurstKey
+    | 
+    
     /**
-    * Width and height information of lcd picture, read only
-    *
-    * @relation LCD_SIZE = 'lcd_size'
-    */
+     * Width and height information of lcd picture, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    LcdSize |
+    LcdSize
+    | 
+
     /**
-    * Width and height information of thumbnail picture, read only
-    *
-    * @relation THM_SIZE = 'thm_size'
-    */
+     * Width and height information of thumbnail picture, read only
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    ThmSize |
-    ...
+    ThmSize
+    | ...
+
+    
     /**
-    * Obtaining the string value of enum
-    */
+     * Converts the PhotoKeys to its string representation.
+     * @returns A string representation of the PhotoKeys.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func toString(): String
 }
 
 
+extend PhotoKeys <: Equatable<PhotoKeys> {
+    
+    /**
+     * Compares this PhotoKeys with another for equality.
+     * @param { PhotoKeys } other - The PhotoKeys to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: PhotoKeys): Bool
+    
+    /**
+     * Compares this PhotoKeys with another for inequality.
+     * @param { PhotoKeys } other - The PhotoKeys to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: PhotoKeys): Bool
+}
 
 /**
-* Enumeration uris for registerChange.
-*
-* @relation enum DefaultChangeUri
-*/
-@Derive[Equatable]
+ * Enumeration uris for registerChange.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum DefaultChangeUri <: ToString {
+    
     /**
-    * Uri for default PhotoAsset, use with forDescendant{true}, will receive all PhotoAsset's change notifications
-    *
-    * @relation DEFAULT_PHOTO_URI = 'file://media/Photo'
-    */
+     * Uri for default PhotoAsset, use with forDescendant{true}, will receive all PhotoAsset's change notifications
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DefaultPhotoUri |
+    DefaultPhotoUri
+    | 
+
     /**
-    * Uri for default Album, use with forDescendant{true}, will receive all Album's change notifications
-    *
-    * @relation DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'
-    */
+     * Uri for default Album, use with forDescendant{true}, will receive all Album's change notifications
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    DefaultAlbumUri |
-    ...
+    DefaultAlbumUri
+    | ...
+
+    
     /**
-    * Obtaining the string value of enum
-    */
+     * Converts the DefaultChangeUri to its string representation.
+     * @returns A string representation of the DefaultChangeUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func toString(): String
 }
 
 
+extend DefaultChangeUri <: Equatable<DefaultChangeUri> {
+    
+    /**
+     * Compares this DefaultChangeUri with another for equality.
+     * @param { DefaultChangeUri } other - The DefaultChangeUri to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: DefaultChangeUri): Bool
+    
+    /**
+     * Compares this DefaultChangeUri with another for inequality.
+     * @param { DefaultChangeUri } other - The DefaultChangeUri to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: DefaultChangeUri): Bool
+}
 
 /**
-* Enumerates the key album attributes.
-*
-* @relation enum AlbumKeys
-*/
-@Derive[Equatable]
+ * Enumerates the key album attributes.
+ *
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum AlbumKeys <: ToString {
+    
     /**
-    * URI of the album.
-    *
-    * @relation URI = 'uri'
-    */
+     * URI of the album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Uri |
+    Uri
+    | 
+
     /**
-    * Name of the album.
-    *
-    * @relation ALBUM_NAME = 'album_name',
-    */
+     * Name of the album.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    AlbumName |
-    ...
+    AlbumName
+    | ...
+
+    
     /**
-    * Obtaining the string value of enum
-    */
+     * Converts the AlbumKeys to its string representation.
+     * @returns A string representation of the AlbumKeys.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public func toString(): String
 }
 
 
+extend AlbumKeys <: Equatable<AlbumKeys> {
+    
+    /**
+     * Compares this AlbumKeys with another for equality.
+     * @param { AlbumKeys } other - The AlbumKeys to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: AlbumKeys): Bool
+    
+    /**
+     * Compares this AlbumKeys with another for inequality.
+     * @param { AlbumKeys } other - The AlbumKeys to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: AlbumKeys): Bool
+}
 
 /**
-* Enumerates media file types.
-*
-* @relation enum PhotoType
-*/
-@Derive[ToString, Equatable]
+ * Enumerates media file types.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum PhotoType {
+    
     /**
-    * Image asset
-    *
-    * @relation IMAGE = 1
-    */
+     * Image asset
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Image |
+    Image
+    | 
+
     /**
-    * Video asset
-    *
-    * @relation VIDEO = 2
-    */
+     * Video asset
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
-    Video |
-    ...
+    Video
+    | ...
 }
 
 
+extend PhotoType <: ToString {
+    
+    /**
+     * Converts the PhotoType to its string representation.
+     * @returns { String } A string representation of the PhotoType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend PhotoType <: Equatable<PhotoType> {
+    
+    /**
+     * Compares this PhotoType with another for equality.
+     * @param { PhotoType } other - The PhotoType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func ==(other: PhotoType): Bool
+    
+    /**
+     * Compares this PhotoType with another for inequality.
+     * @param { PhotoType } other - The PhotoType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+    ]
+    public operator func !=(other: PhotoType): Bool
+}
 
 /**
-* Indicates the type of photo asset member.
-*
-* @relation type MemberType = number | string | boolean
-*/
+ * Indicates the type of photo asset member.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
 public enum MemberType {
     /**
-    * Indicates the type of photo asset member.
-    *
-    * @relation type MemberType = number | string | boolean
-    */
+     * Indicates the type of photo asset member.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
-    ]
-    Int64Value(Int64) |
+    ] 
+    Int64Value(Int64)
+    | 
     /**
-    * Indicates the type of photo asset member.
-    *
-    * @relation type MemberType = number | string | boolean
-    */
+     * Indicates the type of photo asset member.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
-    ]
-    StringValue(String) |
+    ] 
+    StringValue(String)
+    | 
     /**
-    * Indicates the type of photo asset member.
-    *
-    * @relation type MemberType = number | string | boolean
-    */
+     * Indicates the type of photo asset member.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
-    ]
-    BoolValue(Bool) |
-    ...
+    ] 
+    BoolValue(Bool)
+    | ...
 }
 
-
 /**
-* Provides APIs for encapsulating file asset attributes.
-*
-* @relation interface PhotoAsset
-*/
+ * Provides APIs for encapsulating file asset attributes.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
 ]
-public class PhotoAsset <: RemoteDataLite {
+public class PhotoAsset {
     /**
-    * uri of the asset.
-    *
-    * @relation readonly uri: string
-    */
+     * uri of the asset.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop uri: String
-    
+
     /**
-    * Photo type, image or video
-    *
-    * @relation readonly photoType: PhotoType
-    */
+     * Photo type, image or video
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop photoType: PhotoType
-    
+
     /**
-    * Display name (with a file name extension) of the asset.
-    *
-    * @relation readonly displayName: string
-    */
+     * Display name (with a file name extension) of the asset.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
     ]
     public prop displayName: String
-    
+
     /**
-    * Obtains a PhotoAsset member parameter.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000014 - The provided member must be a property name of PhotoKey.
-    * @relation get(member: string): MemberType
-    */
+     * Obtains a PhotoAsset member parameter.
+     * @param { String } member - Photo asset member. for example : get(PhotoKeys.SIZE)
+     * @returns { MemberType } Returns the value of the specified photo asset member
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000014 - The provided member must be a property name of PhotoKey.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func get(member: String): MemberType
-    
+
     /**
-    * Sets a PhotoAsset member parameter.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000014 - The provided member must be a property name of PhotoKey.
-    * @relation set(member: string, value: string): void
-    */
+     * Sets a PhotoAsset member parameter.
+     * @param { String } member - Photo asset member
+     * @param { String } value - The new value of the member.
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000014 - The provided member must be a property name of PhotoKey.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true
     ]
     public func set(member: String, value: String): Unit
-    
+
     /**
-    * Commits the modification on the file metadata to the database.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types.
-    * @throws { BusinessException } 201 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000001 - Invalid display name
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation commitModify(): Promise<void>
-    */
+     * Commits the modification on the file metadata to the database.
+     * @throws { BusinessException } 201 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000001 - Invalid display name
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func commitModify(): Unit
-    
+
     /**
-    * Obtains the file thumbnail of the given size.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;
-    * <br>2. Incorrect parameter types; 3. Parameter verification failed.
-    * @throws { BusinessException } 13900012 - Permission denied
-    * @throws { BusinessException } 13900020 - Invalid argument
-    * @throws { BusinessException } 14000011 - System inner fail
-    * @relation getThumbnail(size?: image.Size): Promise<image.PixelMap>
-    */
+     * Obtains the file thumbnail of the given size.
+     * @param { ?Size } [size] - Size of the thumbnail.
+     * @returns { PixelMap } Returns the thumbnail's pixelMap.
+     * @throws { BusinessException } 13900012 - Permission denied
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 14000011 - System inner fail
+     */
     @!APILevel[
-        22,
-        permission: "ohos.permission.WRITE_IMAGEVIDEO",
-        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core"
+        since: "22",
+        permission: "ohos.permission.READ_IMAGEVIDEO",
+        syscap: "SystemCapability.FileManagement.PhotoAccessHelper.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getThumbnail(size!: ?Size = Size(256, 256)): PixelMap
 }
-
-

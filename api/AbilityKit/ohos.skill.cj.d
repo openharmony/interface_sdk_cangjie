@@ -13,190 +13,152 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.skill
-import std.convert.Parsable
+
 import ohos.labels.*
 
-import ohos.ffi.*
-import std.collection.ArrayList
-
 /**
-* Obtains configuration information about an skill
-*
-* @relation export interface Skill
-*/
+ * Obtains configuration information about an skill.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class Skill {
     /**
-    * Indicates the actions of the skill
-    *
-    * @relation readonly actions: Array<string>
-    */
+     * Indicates the actions of the skill.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let actions: Array<String>
-    
+
     /**
-    * Indicates the entities of the skill
-    *
-    * @relation readonly entities: Array<string>
-    */
+     * Indicates the entities of the skill.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let entities: Array<String>
-    
+
     /**
-    * Indicates the uris of the skill
-    *
-    * @relation readonly uris: Array<SkillUri>
-    */
+     * Indicates the uris of the skill.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let uris: Array<SkillUri>
-    
+
     /**
-    * Indicates the domainVerify of the skill
-    *
-    * @relation readonly domainVerify: boolean
-    */
+     * Indicates the domainVerify of the skill.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let domainVerify: Bool
 }
 
-
 /**
-* Obtains configuration information about an skillUri
-*
-* @relation export interface SkillUri
-*/
+ * Obtains configuration information about an skillUri.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class SkillUri {
     /**
-    * Indicates the scheme of the skillUri
-    *
-    * @relation readonly scheme: string
-    */
+     * Indicates the scheme of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let scheme: String
-    
+
     /**
-    * Indicates the host of the skillUri
-    *
-    * @relation readonly host: string
-    */
+     * Indicates the host of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let host: String
-    
+
     /**
-    * Indicates the port of the skillUri
-    *
-    * @relation readonly port: number
-    */
+     * Indicates the port of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let port: Int32
-    
+
     /**
-    * Indicates the path of the skillUri
-    *
-    * @relation readonly path: string
-    */
+     * Indicates the path of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let path: String
-    
+
     /**
-    * Indicates the pathStartWith of the skillUri
-    *
-    * @relation readonly pathStartWith: string
-    */
+     * Indicates the pathStartWith of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let pathStartWith: String
-    
+
     /**
-    * Indicates the pathRegex of the skillUri
-    *
-    * @relation readonly pathRegex: string
-    */
+     * Indicates the pathRegex of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let pathRegex: String
-    
+
     /**
-    * Indicates the type of the skillUri
-    *
-    * @relation readonly type: string
-    */
+     * Indicates the type of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let uriType: String
-    
+
     /**
-    * Indicates the utd of the skillUri
-    *
-    * @relation readonly utd: string
-    */
+     * Indicates the utd of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let utd: String
-    
+
     /**
-    * Indicates the maxFileSupported of the skillUri
-    *
-    * @relation readonly maxFileSupported: number
-    */
+     * Indicates the maxFileSupported of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let maxFileSupported: Int32
-    
+
     /**
-    * Indicates the linkFeature of the skillUri
-    *
-    * @relation readonly linkFeature: string
-    */
+     * Indicates the linkFeature of the skillUri.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public let linkFeature: String
 }
-
-

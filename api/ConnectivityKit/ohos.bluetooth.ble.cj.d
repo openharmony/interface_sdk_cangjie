@@ -13,482 +13,515 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.bluetooth.ble
-import ohos.bluetooth.{ BLUETOOTH_LOG, OPERATION_FAILED, checkRet, getErrorMsg}
-import ohos.business_exception.{ BusinessException, ERR_PARAMETER_ERROR}
-import ohos.callback_invoke.{ Callback1Argument, CallbackObject}
-import ohos.ffi.{ Callback1Param, SUCCESS_CODE, safeMalloc, cArr2cjArr}
-import ohos.labels.APILevel
-import std.collection.{ArrayList, HashMap}
 
-import ohos.bluetooth.{ BLUETOOTH_LOG, checkRet, getErrorMsg}
-import ohos.business_exception.{ BusinessException, AsyncCallback, ERR_PARAMETER_ERROR}
-import ohos.callback_invoke.{ CallbackObject, Callback1Argument}
-import ohos.ffi.{ Callback1Param, RemoteDataLite, RetDataI32, SUCCESS_CODE, cArr2cjArr, releaseFFIData}
-import ohos.bluetooth.{ BLUETOOTH_LOG, getErrorMsg, checkRet}
-import ohos.ffi.{ SUCCESS_CODE , RemoteDataLite, releaseFFIData, Callback1Param}
+
 import ohos.bluetooth.constant.ProfileConnectionState
-import ohos.ffi.{ CArrUI8, cArr2cjArr, cjArr2CArr}
-import std.deriving.Derive
-import ohos.labels.*
-import ohos.ffi.*
-import std.collection.HashMap
+import ohos.business_exception.AsyncCallback
+import ohos.callback_invoke.{Callback1Argument, CallbackObject}
+import ohos.labels.APILevel
 
 /**
-* create a Gatt server instance.
-*
-* @relation function createGattServer(): GattServer
-*/
+ * create a Gatt server instance.
+ *
+ * @returns { GattServer } Returns a Gatt server instance GattServer.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func createGattServer(): GattServer
 
-
 /**
-* create a Gatt client device instance.
-*
-* @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function createGattClientDevice(deviceId: string): GattClientDevice
-*/
+ * create a Gatt client device instance.
+ *
+ * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
+ * @returns { GattClientDevice } Returns a Gatt client device instance GattClientDevice.
+ * @throws { BusinessException } 801 - Capability not supported.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    since: "22",
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true
 ]
 public func createGattClientDevice(deviceId: String): GattClientDevice
 
-
 /**
-* Starts scanning for specified BLE devices with filters.
-*
-* @param { ?ScanOptions } options - Indicates the parameters for scanning and if the user does not assign a value, the default value will be used.
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { BusinessException } 2900001 - Service stopped.
-* @throws { BusinessException } 2900003 - Bluetooth disabled.
-* @throws { BusinessException } 2900099 - Operation failed.
-* @throws { BusinessException } 2902054 - The length of the advertising data exceeds the upper limit.
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function startBLEScan(filters: Array<ScanFilter>, options?: ScanOptions): void
-*/
+ * Starts scanning for specified BLE devices with filters.
+ *
+ * @param { Array<ScanFilter> } filters - Indicates the list of filters used to filter out specified devices.
+ * If you do not want to use filter, set this parameter to empty array.
+ * @param { ?ScanOptions } [options] - Indicates the parameters for scanning and if the user does not assign a value,
+ * the default value will be used.
+ * {@link ScanOptions#interval} set to 0, {@link ScanOptions#dutyMode} set to {@link SCAN_MODE_LOW_POWER}
+ * and {@link ScanOptions#matchMode} set to {@link MATCH_MODE_AGGRESSIVE}.
+ * and {@link ScanOptions#phyType} set to {@link PHY_LE_ALL_SUPPORTED}.
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 801 - Capability not supported.
+ * @throws { BusinessException } 2900001 - Service stopped.
+ * @throws { BusinessException } 2900003 - Bluetooth disabled.
+ * @throws { BusinessException } 2900099 - Operation failed.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true
 ]
 public func startBLEScan(filters: Array<ScanFilter>, options!: ?ScanOptions = None): Unit
 
-
 /**
-* Stops BLE scanning.
-*
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { BusinessException } 2900001 - Service stopped.
-* @throws { BusinessException } 2900003 - Bluetooth disabled.
-* @throws { BusinessException } 2900099 - Operation failed.
-* @relation function stopBLEScan(): void
-*/
+ * Stops BLE scanning.
+ *
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 801 - Capability not supported.
+ * @throws { BusinessException } 2900001 - Service stopped.
+ * @throws { BusinessException } 2900003 - Bluetooth disabled.
+ * @throws { BusinessException } 2900099 - Operation failed.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true
 ]
 public func stopBLEScan(): Unit
 
-
 /**
-* Starts BLE advertising.
-*
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { BusinessException } 2900001 - Service stopped.
-* @throws { BusinessException } 2900003 - Bluetooth disabled.
-* @throws { BusinessException } 2900099 - Operation failed.
-* @throws { BusinessException } 2902054 - The length of the advertising data exceeds the upper limit.
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void
-*/
+ * Starts BLE advertising.
+ *
+ * @param { AdvertiseSetting } setting - Indicates the settings for BLE advertising.
+ * @param { AdvertiseData } advData - Indicates the advertising data.
+ * @param { ?AdvertiseData } [advResponse] - Indicates the scan response associated with the advertising data.
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 801 - Capability not supported.
+ * @throws { BusinessException } 2900001 - Service stopped.
+ * @throws { BusinessException } 2900003 - Bluetooth disabled.
+ * @throws { BusinessException } 2900010 - The numeber of advertising resources reaches the upper limit.
+ * @throws { BusinessException } 2900099 - Operation failed.
+ * @throws { BusinessException } 2902054 - The length of the advertising data exceeds the upper limit.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse!: ?AdvertiseData = None): Unit
 
-
 /**
-* Stops BLE advertising.
-*
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { BusinessException } 2900001 - Service stopped.
-* @throws { BusinessException } 2900003 - Bluetooth disabled.
-* @throws { BusinessException } 2900099 - Operation failed.
-* @relation function stopAdvertising(): void
-*/
+ * Stops BLE advertising.
+ *
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 801 - Capability not supported.
+ * @throws { BusinessException } 2900001 - Service stopped.
+ * @throws { BusinessException } 2900003 - Bluetooth disabled.
+ * @throws { BusinessException } 2900099 - Operation failed.
+ * @throws { BusinessException } 2902055 - Invalid advertising id.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func stopAdvertising(): Unit
 
-
 /**
-* Starts BLE advertising.
-*
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { BusinessException } 2900001 - Service stopped.
-* @throws { BusinessException } 2900003 - Bluetooth disabled.
-* @throws { BusinessException } 2900099 - Operation failed.
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
-*/
+ * Starts BLE advertising.
+ * The API returns a advertising ID. The ID can be used to completely stop the advertising corresponding to the ID,
+ * invoke the API {@link stopAdvertising} with ID.
+ *
+ * @param { AdvertisingParams } advertisingParams - Indicates the param for BLE advertising.
+ * @returns { UInt32 }the callback of advertise ID.
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 801 - Capability not supported.
+ * @throws { BusinessException } 2900001 - Service stopped.
+ * @throws { BusinessException } 2900003 - Bluetooth disabled.
+ * @throws { BusinessException } 2900010 - The numeber of advertising resources reaches the upper limit.
+ * @throws { BusinessException } 2900099 - Operation failed.
+ * @throws { BusinessException } 2902054 - The length of the advertising data exceeds the upper limit.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func startAdvertising(advertisingParams: AdvertisingParams): UInt32
 
-
 /**
-* Stops BLE advertising.
-* Completely stop the advertising corresponding to the ID.
-*
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 801 - Capability not supported.
-* @throws { BusinessException } 2900001 - Service stopped.
-* @throws { BusinessException } 2900003 - Bluetooth disabled.
-* @throws { BusinessException } 2900099 - Operation failed.
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function stopAdvertising(advertisingId: number): Promise<void>
-*/
+ * Stops BLE advertising.
+ * Completely stop the advertising corresponding to the ID.
+ *
+ * @param { UInt32 } advertisingId - Indicates the ID for this BLE advertising.
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 801 - Capability not supported.
+ * @throws { BusinessException } 2900001 - Service stopped.
+ * @throws { BusinessException } 2900003 - Bluetooth disabled.
+ * @throws { BusinessException } 2900099 - Operation failed.
+ * @throws { BusinessException } 2902055 - Invalid advertising id.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
-    syscap: "SystemCapability.Communication.Bluetooth.Core"
+    syscap: "SystemCapability.Communication.Bluetooth.Core",
+    throwexception: true,
+    workerthread: true
 ]
 public func stopAdvertising(advertisingId: UInt32): Unit
 
-
 /**
-* Subscribing to advertising state change event.
-*
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function on(type: 'advertisingStateChange', callback: Callback<AdvertisingStateChangeInfo>): void
-*/
+ * Subscribing to advertising state change event.
+ *
+ * @param { BluetoothBleCallbackType } eventType - Type of the advertising state to listen for.
+ * @param { Callback1Argument<AdvertisingStateChangeInfo> } callback - Callback used to listen for the advertising state.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func on(eventType: BluetoothBleCallbackType, callback: Callback1Argument<AdvertisingStateChangeInfo>): Unit
 
-
 /**
-* Subscribe BLE scan result.
-*
-* @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-* @relation function on(type: 'BLEDeviceFind', callback: Callback<Array<ScanResult>>): void
-*/
+ * Subscribe BLE scan result.
+ *
+ * @param { BluetoothBleCallbackType } eventType - Type of the scan result event to listen for.
+ * @param { Callback1Argument<Array<ScanResult>> } callback - Callback used to listen for the scan result event.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func on(eventType: BluetoothBleCallbackType, callback: Callback1Argument<Array<ScanResult>>): Unit
 
-
 /**
-* Unsubscribe from callback event.
-*
-* @relation function off(type: 'advertisingStateChange', callback?: Callback<AdvertisingStateChangeInfo>): void
-* @relation function off(type: 'BLEDeviceFind', callback?: Callback<Array<ScanResult>>): void
-*/
+ * Unsubscribe from callback event.
+ *
+ * @param { BluetoothBleCallbackType } eventType - Type of unsubscribe event.
+ * @param { ?CallbackObject } [callback] - Callback used to listen.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.ACCESS_BLUETOOTH",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public func off(eventType: BluetoothBleCallbackType, callback!: ?CallbackObject = None): Unit
 
-
 /**
-* Manages GATT client. Before calling an Gatt client method, you must use createGattClientDevice to create an GattClientDevice instance.
-*
-* @relation interface GattClientDevice
-*/
+ * Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an
+ * GattClientDevice instance.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
-public class GattClientDevice <: RemoteDataLite {
+public class GattClientDevice {
     /**
-    * Connects to a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation connect(): void
-    */
+     * Connects to a BLE peripheral device.
+     * <p>The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+     *
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func connect(): Unit
-    
+
     /**
-    * Disconnects from or stops an ongoing connection to a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation disconnect(): void
-    */
+     * Disconnects from or stops an ongoing connection to a BLE peripheral device.
+     *
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func disconnect(): Unit
-    
+
     /**
-    * Disables a BLE peripheral device.
-    * This method unregisters the device and clears the registered callbacks and handles.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation close(): void
-    */
+     * Disables a BLE peripheral device.
+     * <p> This method unregisters the device and clears the registered callbacks and handles.
+     *
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func close(): Unit
-    
+
     /**
-    * Obtains the name of BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation getDeviceName(): Promise<string>
-    */
+     * Obtains the name of BLE peripheral device.
+     *
+     * @returns { String } Returns a string representation of the name if obtained;
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func getDeviceName(): String
-    
+
     /**
-    * Starts discovering services.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation getServices(): Promise<Array<GattService>>
-    */
+     * Starts discovering services.
+     *
+     * @param { AsyncCallback<Array<GattService>> } callback - Callback used to catch the services.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getServices(callback: AsyncCallback<Array<GattService>>): Unit
-    
+
     /**
-    * Reads the characteristic of a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2901000 - Read forbidden.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>
-    */
+     * Reads the characteristic of a BLE peripheral device.
+     *
+     * @param { BLECharacteristic } characteristic - Indicates the characteristic to read.
+     * @param { AsyncCallback<BLECharacteristic> } callback - Callback invoked to return the characteristic value read.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not completed.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901000 - Read forbidden.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     * @throws { BusinessException } 2901004 - The connection is congested.
+     * @throws { BusinessException } 2901005 - The connection is not encrypted.
+     * @throws { BusinessException } 2901006 - The connection is not authenticated.
+     * @throws { BusinessException } 2901007 - The connection is not authorized.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func readCharacteristicValue(
         characteristic: BLECharacteristic,
         callback: AsyncCallback<BLECharacteristic>
     ): Unit
-    
+
     /**
-    * Reads the descriptor of a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not complete.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { BusinessException } 2901000 - Read forbidden.
-    * @throws { BusinessException } 2901003 - The connection is not established.
-    * @throws { BusinessException } 2901004 - The connection is congested.
-    * @throws { BusinessException } 2901005 - The connection is not encrypted.
-    * @throws { BusinessException } 2901006 - The connection is not authenticated.
-    * @throws { BusinessException } 2901007 - The connection is not authorized.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
-    */
+     * Reads the descriptor of a BLE peripheral device.
+     *
+     * @param { BLEDescriptor } descriptor - Indicates the descriptor to read.
+     * @param { AsyncCallback<BLEDescriptor> } callback - Callback invoked to return the descriptor read.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not complete.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901000 - Read forbidden.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     * @throws { BusinessException } 2901004 - The connection is congested.
+     * @throws { BusinessException } 2901005 - The connection is not encrypted.
+     * @throws { BusinessException } 2901006 - The connection is not authenticated.
+     * @throws { BusinessException } 2901007 - The connection is not authorized.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): Unit
-    
+
     /**
-    * Writes the characteristic of a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2901001 - Write forbidden.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType): Promise<void>
-    */
+     * Writes the characteristic of a BLE peripheral device.
+     *
+     * @param { BLECharacteristic } characteristic - Indicates the characteristic to write.
+     * @param { GattWriteType } writeType - Write type of the characteristic.
+     * @param { AsyncCallback<Unit> } callback - Callback used to return the result.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not completed.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901001 - Write forbidden.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     * @throws { BusinessException } 2901004 - The connection is congested.
+     * @throws { BusinessException } 2901005 - The connection is not encrypted.
+     * @throws { BusinessException } 2901006 - The connection is not authenticated.
+     * @throws { BusinessException } 2901007 - The connection is not authorized.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType,
         callback: AsyncCallback<Unit>): Unit
-    
+
     /**
-    * Writes the descriptor of a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2901001 - Write forbidden.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>
-    */
+     * Writes the descriptor of a BLE peripheral device.
+     *
+     * @param { BLEDescriptor } descriptor - Indicates the descriptor to write.
+     * @param { AsyncCallback<Unit> } callback - Callback used to return the result.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not complete.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901001 - Write forbidden.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     * @throws { BusinessException } 2901004 - The connection is congested.
+     * @throws { BusinessException } 2901005 - The connection is not encrypted.
+     * @throws { BusinessException } 2901006 - The connection is not authenticated.
+     * @throws { BusinessException } 2901007 - The connection is not authorized.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<Unit>): Unit
-    
+
     /**
-    * Get the RSSI value of this BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation getRssiValue(): Promise<number>
-    */
+     * Get the RSSI value of this BLE peripheral device.
+     *
+     * @param { AsyncCallback<Int32> } callback - Callback invoked to return the RSSI, in dBm.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not completed.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func getRssiValue(callback: AsyncCallback<Int32>): Unit
-    
+
     /**
-    * Set the mtu size of a BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation setBLEMtuSize(mtu: number): void
-    */
+     * Set the mtu size of a BLE peripheral device.
+     *
+     * @param { Int32 } mtu - The maximum transmission unit.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func setBLEMtuSize(mtu: Int32): Unit
-    
+
     /**
-    * Enables or disables indication of a characteristic when value changed.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: boolean): Promise<void>
-    */
+     * Enables or disables notification of a characteristic when value changed.
+     *
+     * @param { BLECharacteristic } characteristic - Indicates the characteristic to indicate.
+     * @param { Bool } enable - Specifies whether to enable indication of the characteristic. The value true indicates
+     * that notification is enabled, and the value false indicates that indication is disabled.
+     * @param { AsyncCallback<Unit> } callback - the callback of setCharacteristicChangeNotification.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not completed.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
-    public func setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: Bool, callback: AsyncCallback<Unit>): Unit
-    
+    public func setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: Bool,
+        callback: AsyncCallback<Unit>): Unit
+
     /**
-    * Enables or disables indication of a characteristic when value changed.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boolean): Promise<void>
-    */
+     * Enables or disables indication of a characteristic when value changed.
+     *
+     * @param { BLECharacteristic } characteristic - Indicates the characteristic to indicate.
+     * @param { Bool } enable - Specifies whether to enable indication of the characteristic. The value true indicates
+     * that indication is enabled, and the value false indicates that indication is disabled.
+     * @param { AsyncCallback<Unit> } callback - the callback of setCharacteristicChangeIndication.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900011 - The operation is busy. The last operation is not completed.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     * @throws { BusinessException } 2901003 - The connection is not established.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
-    public func setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: Bool, callback: AsyncCallback<Unit>): Unit
-    
+    public func setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: Bool,
+        callback: AsyncCallback<Unit>): Unit
+
     /**
-    * Subscribe characteristic value changed event.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
-    */
+     * Subscribe characteristic value changed event.
+     *
+     * @param { BluetoothBleGattClientDeviceCallbackType } eventType - Type of the characteristic value changed event to listen for.
+     * @param { Callback1Argument<BLECharacteristic> } callback - Callback used to listen for the characteristic value changed event.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func on(eventType: BluetoothBleGattClientDeviceCallbackType, callback: Callback1Argument<BLECharacteristic>): Unit
-    
+
     /**
-    * Subscribe client connection state changed event.
-    *
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectionChangeState>): void
-    */
+     * Subscribe client connection state changed event.
+     *
+     * @param { BluetoothBleGattClientDeviceCallbackType } eventType - Type of the connection state changed event to listen for.
+     * @param { Callback1Argument<BLEConnectionChangeState> } callback - Callback used to listen for the connection state changed event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
@@ -496,391 +529,381 @@ public class GattClientDevice <: RemoteDataLite {
         eventType: BluetoothBleGattClientDeviceCallbackType,
         callback: Callback1Argument<BLEConnectionChangeState>
     ): Unit
-    
+
     /**
-    * Subscribe mtu changed event.
-    *
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'BLEMtuChange', callback: Callback<number>): void
-    */
+     * Subscribe mtu changed event.
+     *
+     * @param { BluetoothBleGattClientDeviceCallbackType } eventType - Type of the mtu changed event to listen for.
+     * @param { Callback1Argument<Int32> } callback - Callback used to listen for the mtu changed event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattClientDeviceCallbackType, callback: Callback1Argument<Int32>): Unit
-    
+
     /**
-    * Unsubscribe mtu changed event.
-    *
-    * @relation off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void
-    * @relation off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectionChangeState>): void
-    * @relation off(type: 'BLEMtuChange', callback?: Callback<number>): void
-    */
+     * Unsubscribe gatt client device callback event.
+     *
+     * @param { BluetoothBleGattClientDeviceCallbackType } eventType - Type of unsubscribe event.
+     * @param { ?CallbackObject } [callback] - Callback used to listen.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: BluetoothBleGattClientDeviceCallbackType, callback!: ?CallbackObject = None): Unit
 }
 
-
 /**
-* Manages GATT server. Before calling an Gatt server method, you must use createGattServer to create an GattServer instance.
-*
-* @relation interface GattServer
-*/
+ * Manages GATT server. Before calling an Gatt server method, you must use createGattServer to create an GattServer
+ * instance.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
-public class GattServer <: RemoteDataLite {
+public class GattServer {
     /**
-    * Adds a specified service to be hosted.
-    * The added service and its characteristics are provided by the local device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation addService(service: GattService): void
-    */
+     * Adds a specified service to be hosted.
+     * <p>The added service and its characteristics are provided by the local device.
+     *
+     * @param { GattService } service - Indicates the service to add.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func addService(service: GattService): Unit
-    
+
     /**
-    * Removes a specified service from the list of GATT services provided by this device.
-    *
-    * @throws { BusinessException} 201 - Permission denied.
-    * @throws { BusinessException} 801 - Capability not supported.
-    * @throws { BusinessException} 2900001 - Service stopped.
-    * @throws { BusinessException} 2900003 - Bluetooth disabled.
-    * @throws { BusinessException} 2900004 - Profile not supported.
-    * @throws { BusinessException} 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation removeService(serviceUuid: string): void
-    */
+     * Removes a specified service from the list of GATT services provided by this device.
+     *
+     * @param { String } serviceUUID - Indicates the UUID of the service to remove.
+     * @throws { BusinessException} 201 - Permission denied.
+     * @throws { BusinessException} 801 - Capability not supported.
+     * @throws { BusinessException} 2900001 - Service stopped.
+     * @throws { BusinessException} 2900003 - Bluetooth disabled.
+     * @throws { BusinessException} 2900004 - Profile not supported.
+     * @throws { BusinessException} 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
-    public func removeService(serviceUuid: String): Unit
-    
+    public func removeService(serviceUUID: String): Unit
+
     /**
-    * Closes this GattServer object and unregisters its callbacks.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @relation close(): void
-    */
+     * Closes this GattServer object and unregisters its callbacks.
+     *
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func close(): Unit
-    
+
     /**
-    * Sends a notification of a change in a specified local characteristic with a asynchronous callback.
-    * This method should be called for every BLE peripheral device that has requested notifications.
-    *
-    * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>
-    */
+     * Sends a notification of a change in a specified local characteristic with a asynchronous callback.
+     * <p>This method should be called for every BLE peripheral device that has requested notifications.
+     *
+     * @param { String } deviceId - Indicates device ID. For example, "11:22:33:AA:BB:FF".
+     * @param { NotifyCharacteristic } notifyCharacteristic - Indicates the local characteristic that has changed.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public func notifyCharacteristicChanged(deviceId: String, notifyCharacteristic: NotifyCharacteristic): Unit
-    
+
     /**
-    * Sends a response to a specified read or write request to a given BLE peripheral device.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { BusinessException } 2900001 - Service stopped.
-    * @throws { BusinessException } 2900003 - Bluetooth disabled.
-    * @throws { BusinessException } 2900099 - Operation failed.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation sendResponse(serverResponse: ServerResponse): void
-    */
+     * Sends a response to a specified read or write request to a given BLE peripheral device.
+     *
+     * @param { ServerResponse } serverResponse - Indicates the response parameters {@link ServerResponse}.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 2900001 - Service stopped.
+     * @throws { BusinessException } 2900003 - Bluetooth disabled.
+     * @throws { BusinessException } 2900099 - Operation failed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func sendResponse(serverResponse: ServerResponse): Unit
-    
+
     /**
-    * Subscribe characteristic read event.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void
-    */
+     * Subscribe characteristic read event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of the characteristic read event to listen for.
+     * @param { Callback1Argument<CharacteristicReadRequest> } callback - Callback used to listen for the characteristic read event.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<CharacteristicReadRequest>): Unit
-    
+
     /**
-    * Subscribe characteristic write event.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void
-    */
+     * Subscribe characteristic write event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of the characteristic write event to listen for.
+     * @param { Callback1Argument<CharacteristicWriteRequest> } callback - Callback used to listen for the characteristic write event.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
-    public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<CharacteristicWriteRequest>): Unit
-    
+    public func on(eventType: BluetoothBleGattServerCallbackType,
+        callback: Callback1Argument<CharacteristicWriteRequest>): Unit
+
     /**
-    * Subscribe descriptor read event.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void
-    */
+     * Subscribe descriptor read event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of the descriptor read event to listen for.
+     * @param { Callback1Argument<DescriptorReadRequest> } callback - Callback used to listen for the descriptor read event.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<DescriptorReadRequest>): Unit
-    
+
     /**
-    * Subscribe descriptor write event.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void
-    */
+     * Subscribe descriptor write event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of the descriptor write event to listen for.
+     * @param { Callback1Argument<DescriptorWriteRequest> } callback - Callback used to listen for the descriptor write event.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<DescriptorWriteRequest>): Unit
-    
+
     /**
-    * Subscribe server connection state changed event.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 801 - Capability not supported.
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'connectionStateChange', callback: Callback<BLEConnectionChangeState>): void
-    */
+     * Subscribe server connection state changed event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of the connection state changed event to listen for.
+     * @param { Callback1Argument<BLEConnectionChangeState> } callback - Callback used to listen for the connection state changed event.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 801 - Capability not supported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
-        syscap: "SystemCapability.Communication.Bluetooth.Core"
+        syscap: "SystemCapability.Communication.Bluetooth.Core",
+        throwexception: true
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<BLEConnectionChangeState>): Unit
-    
+
     /**
-    * Subscribe mtu changed event.
-    *
-    * @throws { IllegalArgumentException } - Invalid parameter, Parameter verification failed.
-    * @relation on(type: 'BLEMtuChange', callback: Callback<number>): void
-    */
+     * Subscribe mtu changed event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of the mtu changed event to listen for.
+     * @param { Callback1Argument<Int32> } callback - Callback used to listen for the mtu changed event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func on(eventType: BluetoothBleGattServerCallbackType, callback: Callback1Argument<Int32>): Unit
-    
+
     /**
-    * Unsubscribe mtu changed event.
-    *
-    * @relation off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void
-    * @relation off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void
-    * @relation off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void
-    * @relation off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void
-    * @relation off(type: 'connectionStateChange', callback?: Callback<BLEConnectionChangeState>): void
-    * @relation off(type: 'BLEMtuChange', callback?: Callback<number>): void
-    */
+     * Unsubscribe gatt server callback event.
+     *
+     * @param { BluetoothBleGattServerCallbackType } eventType - Type of unsubscribe event.
+     * @param { ?CallbackObject } [callback] - Callback used to listen.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.ACCESS_BLUETOOTH",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public func off(eventType: BluetoothBleGattServerCallbackType, callback!: ?CallbackObject = None): Unit
 }
 
-
 /**
-* Describes the Gatt service.
-*
-* @relation interface GattService
-*/
+ * Describes the Gatt service.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattService {
     /**
-    * The UUID of a GattService instance.
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of a GattService instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
-    
+    public var serviceUUID: String
+
     /**
-    * Indicates whether the GattService instance is primary or secondary.
-    *
-    * @relation isPrimary: boolean
-    */
+     * Indicates whether the GattService instance is primary or secondary.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var isPrimary: Bool
-    
+
     /**
-    * The BLECharacteristic list belongs to this GattService instance.
-    *
-    * @relation characteristics: Array<BLECharacteristic>
-    */
+     * The {@link BLECharacteristic} list belongs to this GattService instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristics: Array<BLECharacteristic>
-    
+
     /**
-    * The list of GATT services contained in the service.
-    *
-    * @relation includeServices?: Array<GattService>
-    */
+     * The list of GATT services contained in the service.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var includeServices: Array<GattService>
-    
+
     /**
-    * GattService constructor.
-    */
+     * GattService constructor.
+     *
+     * @param { String } serviceUUID - The UUID of a GattService instance.
+     * @param { Bool } isPrimary - Indicates whether the GattService instance is primary or secondary.
+     * @param { Array<BLECharacteristic> } characteristics - The {@link BLECharacteristic} list belongs to this GattService instance
+     * @param { Array<GattService> } includeServices - The list of GATT services contained in the service.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
-        serviceUuid: String,
+        serviceUUID: String,
         isPrimary: Bool,
         characteristics: Array<BLECharacteristic>,
         includeServices!: Array<GattService> = []
     )
 }
 
-
 /**
-* Describes the Gatt characteristic.
-*
-* @relation interface BLECharacteristic
-*/
+ * Describes the Gatt characteristic.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class BLECharacteristic {
     /**
-    * The UUID of the GattService instance to which the characteristic belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the {@link GattService} instance to which the characteristic belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
-    
+    public var serviceUUID: String
+
     /**
-    * The UUID of a BLECharacteristic instance
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of a BLECharacteristic instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The value of a BLECharacteristic instance
-    *
-    * @relation characteristicValue: ArrayBuffer
-    */
+     * The value of a BLECharacteristic instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicValue: Array<Byte>
-    
+
     /**
-    * The list of BLEDescriptor contained in the characteristic
-    *
-    * @relation descriptors: Array<BLEDescriptor>
-    */
+     * The list of {@link BLEDescriptor} contained in the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptors: Array<BLEDescriptor>
-    
+
     /**
-    * The properties of a BLECharacteristic instance
-    *
-    * @relation properties?: GattProperties
-    */
+     * The properties of a BLECharacteristic instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var properties: GattProperties
-    
+
     /**
-    * BLECharacteristic constructor.
-    */
+     * BLECharacteristic constructor.
+     *
+     * @param { String } serviceUUID - The UUID of the GattService instance to which the characteristic belongs
+     * @param { String } characteristicUUID - The UUID of a BLECharacteristic instance
+     * @param { Array<Byte> } characteristicValue - The value of a BLECharacteristic instance
+     * @param { Array<BLEDescriptor> } descriptors - The list of BLEDescriptor contained in the characteristic
+     * @param { GattProperties } properties - The properties of a BLECharacteristic instance
+     * @param { GattPermissions } permissions - The permissions of a BLECharacteristic instance.
+     * The default value is Readable and Writable.
+     * @param { UInt32 } characteristicValueHandle - The characteristic value handle of a BLECharacteristic instance
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
-        serviceUuid: String,
-        characteristicUuid: String,
+        serviceUUID: String,
+        characteristicUUID: String,
         characteristicValue: Array<Byte>,
         descriptors: Array<BLEDescriptor>,
         properties!: GattProperties = GattProperties(),
@@ -889,149 +912,142 @@ public class BLECharacteristic {
     )
 }
 
-
 /**
-* Describes the Gatt descriptor.
-*
-* @relation interface BLEDescriptor
-*/
+ * Describes the Gatt descriptor.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class BLEDescriptor {
     /**
-    * The UUID of the GattService instance to which the descriptor belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the {@link GattService} instance to which the descriptor belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
-    
+    public var serviceUUID: String
+
     /**
-    * The UUID of the BLECharacteristic instance to which the descriptor belongs
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of the {@link BLECharacteristic} instance to which the descriptor belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The UUID of the BLEDescriptor instance
-    *
-    * @relation descriptorUuid: string
-    */
+     * The UUID of the BLEDescriptor instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var descriptorUuid: String
-    
+    public var descriptorUUID: String
+
     /**
-    * The value of the BLEDescriptor instance
-    *
-    * @relation descriptorValue: ArrayBuffer
-    */
+     * The value of the BLEDescriptor instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var descriptorValue: Array<Byte>
-    
+
     /**
-    * BLEDescriptor constructor.
-    */
+     * BLEDescriptor constructor.
+     *
+     * @param { String } serviceUUID - The UUID of the {@link GattService} instance to which the descriptor belongs
+     * @param { String } characteristicUUID - The UUID of the {@link GattService} instance to which the descriptor belongs
+     * @param { String } descriptorUUID - The UUID of the BLEDescriptor instance
+     * @param { Array<Byte> } descriptorValue - The value of the BLEDescriptor instance
+     * @param { UInt32 } descriptorHandle - The descriptor handle of a BLEDescriptor instance
+     * @param { GattPermissions } permissions - The permissions of a BLEDescriptor instance. The default value is Readable and Writable.
+     * The default value is Readable and Writable.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
-        serviceUuid: String,
-        characteristicUuid: String,
-        descriptorUuid: String,
+        serviceUUID: String,
+        characteristicUUID: String,
+        descriptorUUID: String,
         descriptorValue: Array<Byte>,
         descriptorHandle!: UInt32 = 0,
         permissions!: GattPermissions = GattPermissions()
     )
 }
 
-
 /**
-* Describes the properties of a gatt characteristic.
-*
-* @relation interface GattProperties
-*/
+ * Describes the properties of a gatt characteristic.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattProperties {
     /**
-    * Support write property of the characteristic.
-    *
-    * @relation write?: boolean
-    */
+     * Support write property of the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var write: Bool
-    
+
     /**
-    * Support write no response property of the characteristic.
-    *
-    * @relation writeNoResponse?: boolean
-    */
+     * Support write no response property of the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeNoResponse: Bool
-    
+
     /**
-    * Support read property of the characteristic.
-    *
-    * @relation read?: boolean
-    */
+     * Support read property of the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var read: Bool
-    
+
     /**
-    * Support notify property of the characteristic.
-    *
-    * @relation notify?: boolean
-    */
+     * Support notify property of the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var notify: Bool
-    
+
     /**
-    * Support indicate property of the characteristic.
-    *
-    * @relation indicate?: boolean
-    */
+     * Support indicate property of the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var indicate: Bool
-    
+
     /**
-    * GattProperties constructor.
-    */
+     * GattProperties constructor.
+     *
+     * @param { Bool } write - Support write property of the characteristic.
+     * @param { Bool } writeNoResponse - Support write no response property of the characteristic.
+     * @param { Bool } read - Support read property of the characteristic.
+     * @param { Bool } notify - Support notify property of the characteristic.
+     * @param { Bool } indicate - Support indicate property of the characteristic.
+     * @param { Bool } broadcast - Support broadcast property of the characteristic.
+     * @param { Bool } authenticatedSignedWrite - Support authenticated signed write property of the characteristic.
+     * @param { Bool } extendedProperties - Support extended properties property of the characteristic.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -1046,148 +1062,136 @@ public class GattProperties {
     )
 }
 
-
 /**
-* Describes the value of the indication or notification sent by the Gatt server.
-*
-* @relation interface NotifyCharacteristic
-*/
+ * Describes the value of the indication or notification sent by the Gatt server.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class NotifyCharacteristic {
     /**
-    * The UUID of the GattService instance to which the characteristic belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the GattService instance to which the characteristic belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
-    
+    public var serviceUUID: String
+
     /**
-    * The UUID of a NotifyCharacteristic instance
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of a NotifyCharacteristic instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The value of a NotifyCharacteristic instance
-    *
-    * @relation characteristicValue: ArrayBuffer
-    */
+     * The value of a NotifyCharacteristic instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var characteristicValue: Array<Byte>
-    
+
     /**
-    * Specifies whether to request confirmation from the BLE peripheral device (indication) or
-    * send a notification. Value true indicates the former and false indicates the latter.
-    *
-    * @relation confirm: boolean
-    */
+     * Specifies whether to request confirmation from the BLE peripheral device (indication) or
+     * send a notification. Value true indicates the former and false indicates the latter.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var confirm: Bool
-    
+
     /**
-    * NotifyCharacteristic constructor.
-    */
+     * NotifyCharacteristic constructor.
+     *
+     * @param { String } serviceUUID - The UUID of the {@link GattService} instance to which the characteristic belongs
+     * @param { String } characteristicUUID - The UUID of a NotifyCharacteristic instance
+     * @param { Array<Byte> } characteristicValue - The value of a NotifyCharacteristic instance
+     * @param { Bool } confirm - Specifies whether to request confirmation from the BLE peripheral device (indication) or
+     * send a notification. Value true indicates the former and false
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
-        serviceUuid: String,
-        characteristicUuid: String,
+        serviceUUID: String,
+        characteristicUUID: String,
         characteristicValue: Array<Byte>,
         confirm: Bool
     )
 }
 
-
 /**
-* Describes the parameters of a response send by the server to a specified read or write request.
-*
-* @relation interface ServerResponse
-*/
+ * Describes the parameters of a response send by the server to a specified read or write request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ServerResponse {
     /**
-    * Indicates the address of the client to which to send the response
-    *
-    * @relation deviceId: string
-    */
+     * Indicates the address of the client to which to send the response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * The Id of the write request
-    *
-    * @relation transId: number
-    */
+     * The Id of the write request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
-    
+
     /**
-    * Indicates the status of the read or write request, set this parameter to '0' in normal cases
-    *
-    * @relation status: number
-    */
+     * Indicates the status of the read or write request, set this parameter to '0' in normal cases.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var status: Int32
-    
+
     /**
-    * Indicates the byte offset of the start position for reading or writing operation
-    *
-    * @relation offset: number
-    */
+     * Indicates the byte offset of the start position for reading or writing operation.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
-    
+
     /**
-    * Indicates the value to be sent
-    *
-    * @relation value: ArrayBuffer
-    */
+     * Indicates the value to be sent.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var value: Array<Byte>
-    
+
     /**
-    * ServerResponse constructor.
-    */
+     * ServerResponse constructor.
+     *
+     * @param { String } deviceId - Indicates the address of the client to which to send the response
+     * @param { Int32 } transId  - The Id of the write request
+     * @param { Int32 } status - Indicates the status of the read or write request, set this parameter to '0' in normal cases
+     * @param { Int32 } offset - Indicates the byte offset of the start position for reading or writing operation
+     * @param { Array<Byte> } value - Indicates the value to be sent
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -1199,651 +1203,700 @@ public class ServerResponse {
     )
 }
 
-
 /**
-* The enum of gatt characteristic write type
-*
-* @relation enum GattWriteType
-*/
-@Derive[ToString, Equatable]
+ * The enum of gatt characteristic write type
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum GattWriteType {
+    
     /**
-    * Write characteristic with response.
-    *
-    * @relation WRITE = 1
-    */
+     * Write characteristic with response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Write |
+    Write
+    | 
     /**
-    * Write characteristic without response.
-    *
-    * @relation WRITE_NO_RESPONSE = 2
-    */
+     * Write characteristic without response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    WriteNoResponse |
-    ...
+    WriteNoResponse
+    | ...
 }
 
 
+extend GattWriteType <: ToString {
+    /**
+     * Converts the GattWriteType to its string representation.
+     * @returns { String } A string representation of the GattWriteType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend GattWriteType <: Equatable<GattWriteType> {
+    /**
+     * Compares this GattWriteType with another for equality.
+     * @param { GattWriteType } other - The GattWriteType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: GattWriteType): Bool
+    
+    /**
+     * Compares this GattWriteType with another for inequality.
+     * @param { GattWriteType } other - The GattWriteType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: GattWriteType): Bool
+}
 
 /**
-* Describes the parameters of the Gatt client's characteristic read request.
-*
-* @relation interface CharacteristicReadRequest
-*/
+ * Describes the parameters of the Gatt client's characteristic read request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class CharacteristicReadRequest {
     /**
-    * Indicates the address of the client that initiates the read request
-    *
-    * @relation deviceId: string
-    */
+     * Indicates the address of the client that initiates the read request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * The Id of the read request
-    *
-    * @relation transId: number
-    */
+     * The Id of the read request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
-    
+
     /**
-    * Indicates the byte offset of the start position for reading characteristic value
-    *
-    * @relation offset: number
-    */
+     * Indicates the byte offset of the start position for reading characteristic value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
-    
+
     /**
-    * The UUID of a CharacteristicReadRequest instance
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of a CharacteristicReadRequest instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The UUID of the service to which the characteristic belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the service to which the characteristic belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
+    public var serviceUUID: String
 }
 
-
 /**
-* Describes the parameters of the of the Gatt client's characteristic write request.
-*
-* @relation interface CharacteristicWriteRequest
-*/
+ * Describes the parameters of the of the Gatt client's characteristic write request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class CharacteristicWriteRequest {
     /**
-    * Indicates the address of the client that initiates the write request
-    *
-    * @relation deviceId: string
-    */
+     * Indicates the address of the client that initiates the write request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * The Id of the write request
-    *
-    * @relation transId: number
-    */
+     * The Id of the write request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
-    
+
     /**
-    * Indicates the byte offset of the start position for writing characteristic value
-    *
-    * @relation offset: number
-    */
+     * Indicates the byte offset of the start position for writing characteristic value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
-    
+
     /**
-    * Whether this request should be pending for later operation
-    *
-    * @relation isPrepared: boolean
-    */
+     * Whether this request should be pending for later operation.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var isPrepared: Bool
-    
+
     /**
-    * Whether the remote client need a response
-    *
-    * @relation needRsp: boolean
-    */
+     * Whether the remote client need a response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var needRsp: Bool
-    
+
     /**
-    * Indicates the value to be written
-    *
-    * @relation value: ArrayBuffer
-    */
+     * Indicates the value to be written.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var value: Array<Byte>
-    
+
     /**
-    * The UUID of a CharacteristicWriteRequest instance
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of a CharacteristicWriteRequest instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The UUID of the service to which the characteristic belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the service to which the characteristic belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
+    public var serviceUUID: String
 }
 
-
 /**
-* Describes the parameters of the Gatt client's descriptor read request.
-*
-* @relation interface DescriptorReadRequest
-*/
+ * Describes the parameters of the Gatt client's descriptor read request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class DescriptorReadRequest {
     /**
-    * Indicates the address of the client that initiates the read request
-    *
-    * @relation deviceId: string
-    */
+     * Indicates the address of the client that initiates the read request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * The Id of the read request
-    *
-    * @relation transId: number
-    */
+     * The Id of the read request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
-    
+
     /**
-    * Indicates the byte offset of the start position for reading characteristic value
-    *
-    * @relation offset: number
-    */
+     * Indicates the byte offset of the start position for reading characteristic value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
-    
+
     /**
-    * The UUID of a DescriptorReadRequest instance
-    *
-    * @relation descriptorUuid: string
-    */
+     * The UUID of a DescriptorReadRequest instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var descriptorUuid: String
-    
+    public var descriptorUUID: String
+
     /**
-    * The UUID of the characteristic to which the descriptor belongs
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of the characteristic to which the descriptor belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The UUID of the service to which the descriptor belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the service to which the descriptor belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
+    public var serviceUUID: String
 }
 
-
 /**
-* Describes the parameters of the Gatt client's characteristic write request.
-*
-* @relation interface DescriptorWriteRequest
-*/
+ * Describes the parameters of the Gatt client's characteristic write request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class DescriptorWriteRequest {
     /**
-    * Indicates the address of the client that initiates the write request
-    *
-    * @relation deviceId: string
-    */
+     * Indicates the address of the client that initiates the write request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * The Id of the write request
-    *
-    * @relation transId: number
-    */
+     * The Id of the write request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var transId: Int32
-    
+
     /**
-    * Indicates the byte offset of the start position for writing characteristic value
-    *
-    * @relation offset: number
-    */
+     * Indicates the byte offset of the start position for writing characteristic value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var offset: Int32
-    
+
     /**
-    * Whether this request should be pending for later operation
-    *
-    * @relation isPrepared: boolean
-    */
+     * Whether this request should be pending for later operation.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var isPrepared: Bool
-    
+
     /**
-    * Whether the remote client need a response
-    *
-    * @relation needRsp: boolean
-    */
+     * Whether the remote client need a response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var needRsp: Bool
-    
+
     /**
-    * Indicates the value to be written
-    *
-    * @relation value: ArrayBuffer
-    */
+     * Indicates the value to be written.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var value: Array<Byte>
-    
+
     /**
-    * The UUID of a DescriptorWriteRequest instance
-    *
-    * @relation descriptorUuid: string
-    */
+     * The UUID of a DescriptorWriteRequest instance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var descriptorUuid: String
-    
+    public var descriptorUUID: String
+
     /**
-    * The UUID of the characteristic to which the descriptor belongs
-    *
-    * @relation characteristicUuid: string
-    */
+     * The UUID of the characteristic to which the descriptor belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var characteristicUuid: String
-    
+    public var characteristicUUID: String
+
     /**
-    * The UUID of the service to which the descriptor belongs
-    *
-    * @relation serviceUuid: string
-    */
+     * The UUID of the service to which the descriptor belongs.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
+    public var serviceUUID: String
 }
 
-
 /**
-* Describes the Gatt profile connection state.
-*
-* @relation interface BLEConnectionChangeState
-*/
+ * Describes the Gatt profile connection state.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class BLEConnectionChangeState {
     /**
-    * Indicates the peer device address
-    *
-    * @relation deviceId: string
-    */
+     * Indicates the peer device address.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * Connection state of the Gatt profile
-    *
-    * @relation state: ProfileConnectionState
-    */
+     * Connection state of the Gatt profile.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var state: ProfileConnectionState
 }
 
-
 /**
-* Bluetooth Ble GattServer CallbackType.
-*/
-@Derive[ToString, Hashable, Equatable]
+ * Bluetooth Ble GattServer CallbackType.
+ */
 @!APILevel[
-    22,
-    permission: "ohos.ACCESS_BLUETOOTH",
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum BluetoothBleGattServerCallbackType {
     /**
-    * Characteristic Read
-    */
+     * Characteristic read request.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CharacteristicRead |
+    CharacteristicRead
+    | 
     /**
-    * Characteristic Write
-    */
+     * Characteristic write request.
+     *
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    CharacteristicWrite |
+    CharacteristicWrite
+    | 
+    
     /**
-    * Descriptor Read
-    */
+     * Descriptor read request.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    DescriptorRead |
+    DescriptorRead
+    | 
+    
     /**
-    * Descriptor Write
-    */
+     * Descriptor write request.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    DescriptorWrite |
+    DescriptorWrite
+    | 
+    
     /**
-    * Connection State Change
-    */
+     * Connection state changed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ConnectionStateChange |
+    ConnectionStateChange
+    | 
     /**
-    * Ble Mtu Change
-    */
+     * Server ble mtu changed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ServerBleMtuChange |
-    ...
+    ServerBleMtuChange
+    | ...
 }
 
 
+extend BluetoothBleGattServerCallbackType <: ToString {
+    /**
+     * Converts the BluetoothBleGattServerCallbackType to its string representation.
+     * @returns { String } A string representation of the BluetoothBleGattServerCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend BluetoothBleGattServerCallbackType <: Hashable {
+    /**
+     * Returns a hash code value for this BluetoothBleGattServerCallbackType.
+     * @returns { Int64 } A hash code value for this BluetoothBleGattServerCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func hashCode(): Int64
+}
+
+
+extend BluetoothBleGattServerCallbackType <: Equatable<BluetoothBleGattServerCallbackType> {
+    /**
+     * Compares this BluetoothBleGattServerCallbackType with another for equality.
+     * @param { BluetoothBleGattServerCallbackType } other - The BluetoothBleGattServerCallbackType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: BluetoothBleGattServerCallbackType): Bool
+    
+    /**
+     * Compares this BluetoothBleGattServerCallbackType with another for inequality.
+     * @param { BluetoothBleGattServerCallbackType } other - The BluetoothBleGattServerCallbackType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: BluetoothBleGattServerCallbackType): Bool
+}
 
 /**
-* Bluetooth Ble GattClientDevice CallbackType.
-*/
-@Derive[ToString, Hashable, Equatable]
+ * Bluetooth Ble GattClientDevice CallbackType.
+ */
 @!APILevel[
-    22,
-    permission: "ohos.ACCESS_BLUETOOTH",
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum BluetoothBleGattClientDeviceCallbackType {
     /**
-    * Ble Characteristic Change
-    */
+     * BLE characteristic changed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    BleCharacteristicChange |
+    BleCharacteristicChange
+    | 
     /**
-    * BleConnection State Change
-    */
+     * BLE connection state changed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    BleConnectionStateChange |
+    BleConnectionStateChange
+    | 
     /**
-    * Ble Mtu Change
-    */
+     * Client ble mtu changed.
+     */
     @!APILevel[
-        22,
-        permission: "ohos.ACCESS_BLUETOOTH",
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ClientBleMtuChange |
-    ...
+    ClientBleMtuChange
+    | ...
 }
 
 
+extend BluetoothBleGattClientDeviceCallbackType <: ToString {
+    /**
+     * Converts the BluetoothBleGattClientDeviceCallbackType to its string representation.
+     * @returns { String } A string representation of the BluetoothBleGattClientDeviceCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend BluetoothBleGattClientDeviceCallbackType <: Hashable {
+    /**
+     * Returns a hash code value for this BluetoothBleGattClientDeviceCallbackType.
+     * @returns { Int64 } A hash code value for this BluetoothBleGattClientDeviceCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func hashCode(): Int64
+}
+
+
+extend BluetoothBleGattClientDeviceCallbackType <: Equatable<BluetoothBleGattClientDeviceCallbackType> {
+    /**
+     * Compares this BluetoothBleGattClientDeviceCallbackType with another for equality.
+     * @param { BluetoothBleGattClientDeviceCallbackType } other - The BluetoothBleGattClientDeviceCallbackType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: BluetoothBleGattClientDeviceCallbackType): Bool
+    
+    /**
+     * Compares this BluetoothBleGattClientDeviceCallbackType with another for inequality.
+     * @param { BluetoothBleGattClientDeviceCallbackType } other - The BluetoothBleGattClientDeviceCallbackType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        permission: "ohos.permission.ACCESS_BLUETOOTH",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: BluetoothBleGattClientDeviceCallbackType): Bool
+}
 
 /**
-* Describes the permission of a att attribute item.
-*
-* @relation interface GattPermissions
-*/
-@Derive[Equatable]
+ * Describes the permission of a att attribute item.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class GattPermissions {
     /**
-    * The attribute field has the read permission.
-    *
-    * @relation read?: boolean
-    */
+     * The attribute field has the read permission.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var read: Bool
-    
+
     /**
-    * The attribute field has the encrypted read permission.
-    *
-    * @relation readEncrypted?: boolean
-    */
+     * The attribute field has the encrypted read permission.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var readEncrypted: Bool
-    
+
     /**
-    * The attribute field has the read permission for encryption authentication.
-    *
-    * @relation readEncryptedMitm?: boolean
-    */
+     * The attribute field has the read permission for encryption authentication.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var readEncryptedMitm: Bool
-    
+
     /**
-    * The attribute field has the write permission.
-    *
-    * @relation write?: boolean
-    */
+     * The attribute field has the write permission.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var write: Bool
-    
+
     /**
-    * The attribute field has the encrypted write permission.
-    *
-    * @relation writeEncrypted?: boolean
-    */
+     * The attribute field has the encrypted write permission.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeEncrypted: Bool
-    
+
     /**
-    * The attribute field has the write permission for encryption authentication.
-    *
-    * @relation writeEncryptedMitm?: boolean
-    */
+     * The attribute field has the write permission for encryption authentication.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeEncryptedMitm: Bool
-    
+
     /**
-    * The attribute field has the signed write permission.
-    *
-    * @relation writeSigned?: boolean
-    */
+     * The attribute field has the signed write permission.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeSigned: Bool
-    
+
     /**
-    * The attribute field has the write permission for signature authentication.
-    *
-    * @relation writeSignedMitm?: boolean
-    */
+     * The attribute field has the write permission for signature authentication.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var writeSignedMitm: Bool
-    
+
     /**
-    * GattPermissions constructor.
-    */
+     * GattPermissions constructor.
+     *
+     * @param { Bool } read -  The attribute field has the read permission.
+     * @param { Bool } readEncrypted - The attribute field has the encrypted read permission.
+     * @param { Bool } readEncryptedMitm - The attribute field has the read permission for encryption authentication.
+     * @param { Bool } write - The attribute field has the write permission.
+     * @param { Bool } writeEncrypted - The attribute field has the encrypted write permission.
+     * @param { Bool } writeEncryptedMitm - The attribute field has the write permission for encryption authentication.
+     * @param { Bool } writeSigned - The attribute field has the signed write permission.
+     * @param { Bool } writeSignedMitm - The attribute field has the write permission for signature authentication.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public init (
+    public init(
         read!: Bool = true,
         readEncrypted!: Bool = false,
         readEncryptedMitm!: Bool = false,
@@ -1856,152 +1909,166 @@ public class GattPermissions {
 }
 
 
+extend GattPermissions <: Equatable<GattPermissions> {
+    /**
+     * Compares this GattPermissions with another for equality.
+     * @param { GattPermissions } other - The GattPermissions to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: GattPermissions): Bool
+    
+    /**
+     * Compares this GattPermissions with another for inequality.
+     * @param { GattPermissions } other - The GattPermissions to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: GattPermissions): Bool
+}
+
+
+extend GattPermissions {}
 
 /**
-* Describes the criteria for filtering scanning results can be set.
-*
-* @relation interface ScanFilter
-*/
+ * Describes the criteria for filtering scanning results can be set.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ScanFilter {
     /**
-    * The address of a BLE peripheral device
-    *
-    * @relation deviceId?: string
-    */
+     * The address of a BLE peripheral device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * The name of a BLE peripheral device
-    *
-    * @relation name?: string
-    */
+     * The name of a BLE peripheral device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var name: String
-    
+
     /**
-    * The service UUID of a BLE peripheral device
-    *
-    * @relation serviceUuid?: string
-    */
+     * The service UUID of a BLE peripheral device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
-    
+    public var serviceUUID: String
+
     /**
-    * Service UUID mask.
-    *
-    * @relation serviceUuidMask?: string
-    */
+     * Service UUID mask.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuidMask: String
-    
+    public var serviceUUIDMask: String
+
     /**
-    * Service solicitation UUID.
-    *
-    * @relation serviceSolicitationUuid?: string
-    */
+     * Service solicitation UUID.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceSolicitationUuid: String
-    
+    public var serviceSolicitationUUID: String
+
     /**
-    * Service solicitation UUID mask.
-    *
-    * @relation serviceSolicitationUuidMask?: string
-    */
+     * Service solicitation UUID mask.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceSolicitationUuidMask: String
-    
+    public var serviceSolicitationUUIDMask: String
+
     /**
-    * Service data.
-    *
-    * @relation serviceData?: ArrayBuffer
-    */
+     * Service data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceData: Array<Byte>
-    
+
     /**
-    * Service data mask.
-    *
-    * @relation serviceDataMask?: ArrayBuffer
-    */
+     * Service data mask.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceDataMask: Array<Byte>
-    
+
     /**
-    * Manufacture id.
-    *
-    * @relation manufactureId?: number
-    */
+     * Manufacture id.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureId: UInt16
-    
+
     /**
-    * Manufacture data.
-    *
-    * @relation manufactureData?: ArrayBuffer
-    */
+     * Manufacture data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureData: Array<Byte>
-    
+
     /**
-    * Manufacture data mask.
-    *
-    * @relation manufactureDataMask?: ArrayBuffer
-    */
+     * Manufacture data mask.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureDataMask: Array<Byte>
-    
+
     /**
-    * ScanFilter constructor.
-    */
+     * ScanFilter constructor.
+     *
+     * @param { String } deviceId - The address of a BLE peripheral device.
+     * @param { String } name - The name of a BLE peripheral device.
+     * @param { String } serviceUUID - The service UUID of a BLE peripheral device.
+     * @param { String } serviceUUIDMask - Service UUID mask.
+     * @param { String } serviceSolicitationUUID - Service solicitation UUID.
+     * @param { String } serviceSolicitationUUIDMask - Service solicitation UUID mask.
+     * @param { Array<Byte> } serviceData - Service data.
+     * @param { Array<Byte> } serviceDataMask - Service data mask.
+     * @param { UInt16 } manufactureId - Manufacture id.
+     * @param { Array<Byte> } manufactureData - Manufacture data.
+     * @param { Array<Byte> } manufactureDataMask - Manufacture data mask.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
         deviceId!: String = "",
         name!: String = "",
-        serviceUuid!: String = "",
-        serviceUuidMask!: String = "",
-        serviceSolicitationUuid!: String = "",
-        serviceSolicitationUuidMask!: String = "",
+        serviceUUID!: String = "",
+        serviceUUIDMask!: String = "",
+        serviceSolicitationUUID!: String = "",
+        serviceSolicitationUUIDMask!: String = "",
         serviceData!: Array<Byte> = [],
         serviceDataMask!: Array<Byte> = [],
         manufactureId!: UInt16 = 0,
@@ -2010,66 +2077,61 @@ public class ScanFilter {
     )
 }
 
-
 /**
-* Describes the parameters for scan.
-*
-* @relation interface ScanOptions
-*/
+ * Describes the parameters for scan.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ScanOptions {
     /**
-    * Time of delay for reporting the scan result
-    *
-    * @relation interval?: number
-    */
+     * Time of delay for reporting the scan result.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var interval: Int32
-    
+
     /**
-    * Bluetooth LE scan mode
-    *
-    * @relation dutyMode?: ScanDuty
-    */
+     * Bluetooth LE scan mode.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var dutyMode: ScanDuty
-    
+
     /**
-    * Match mode for Bluetooth LE scan filters hardware match
-    *
-    * @relation matchMode?: MatchMode
-    */
+     * Match mode for Bluetooth LE scan filters hardware match.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var matchMode: MatchMode
-    
+
     /**
-    * Physical Layer used during scan.
-    *
-    * @relation phyType?: PhyType
-    */
+     * Physical Layer used during scan.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var phyType: PhyType
-    
+
     /**
-    * ScanOptions constructor.
-    */
+     * ScanOptions constructor.
+     *
+     * @param { Int32 } interval - Time of delay for reporting the scan result.
+     * @param { ScanDuty } dutyMode - Bluetooth LE scan mode.
+     * @param { MatchMode } matchMode - Match mode for Bluetooth LE scan filters hardware match.
+     * @param { PhyType } phyType - Physical Layer used during scan.
+     * @param { ScanReportMode } reportMode - Report mode used during scan.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2081,128 +2143,123 @@ public class ScanOptions {
     )
 }
 
-
 /**
-* Describes the settings for BLE advertising.
-*
-* @relation interface AdvertiseSetting
-*/
+ * Describes the settings for BLE advertising.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertiseSetting {
     /**
-    * Minimum slot value for the advertising interval, which is 32 (20 ms)
-    * Maximum slot value for the advertising interval, which is 16777215} (10485.759375s)
-    * Default slot value for the advertising interval, which is 1600 (1s)
-    *
-    * @relation interval?: number
-    */
+     * Minimum slot value for the advertising interval, which is 32 (20 ms)
+     * Maximum slot value for the advertising interval, which is 16777215 (10485.759375s)
+     * Default slot value for the advertising interval, which is 1600 (1s)
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var interval: UInt16
-    
+
     /**
-    * Minimum transmission power level for advertising, which is -127
-    * Maximum transmission power level for advertising, which is 1
-    * Default transmission power level for advertising, which is -7
-    *
-    * @relation txPower?: number
-    */
+     * Minimum transmission power level for advertising, which is -127
+     * Maximum transmission power level for advertising, which is 1
+     * Default transmission power level for advertising, which is -7
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var txPower: Int8
-    
+
     /**
-    * Indicates whether the BLE is connectable, default is true
-    *
-    * @relation connectable?: boolean
-    */
+     * Indicates whether the BLE is connectable, default is true
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var connectable: Bool
-    
+
     /**
-    * AdvertiseSetting constructor.
-    */
+     * AdvertiseSetting constructor.
+     *
+     * @param { UInt16 } [interval] - Minimum slot value for the advertising interval, which is 32 (20 ms)
+     * Maximum slot value for the advertising interval, which is 16777215 (10485.759375s)
+     * Default slot value for the advertising interval, which is 1600 (1s)
+     * @param { Int8 } [txPower] - Minimum transmission power level for advertising, which is -127
+     * Maximum transmission power level for advertising, which is 1
+     * Default transmission power level for advertising, which is -7
+     * @param { Bool } connectable - Indicates whether the BLE is connectable, default is true
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public init(interval!: UInt16 = BLE_ADV_DEFAULT_INTERVAL, txPower!: Int8 = BLE_ADV_TX_POWER_MEDIUM_VALUE, connectable!: Bool = true)
+    public init(interval!: UInt16 = BLE_ADV_DEFAULT_INTERVAL, txPower!: Int8 = BLE_ADV_TX_POWER_MEDIUM_VALUE,
+        connectable!: Bool = true)
 }
 
-
 /**
-* Describes the advertising data.
-*
-* @relation interface AdvertiseData
-*/
+ * Describes the advertising data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertiseData {
     /**
-    * The specified service UUID list to this advertisement
-    *
-    * @relation serviceUuids: Array<string>
-    */
+     * The specified service UUID list to this advertisement
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuids: Array<String>
-    
+    public var serviceUUIDs: Array<String>
+
     /**
-    * The specified manufacturer data list to this advertisement
-    *
-    * @relation manufactureData: Array<ManufactureData>
-    */
+     * The specified manufacturer data list to this advertisement
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureData: Array<ManufactureData>
-    
+
     /**
-    * The specified service data list to this advertisement
-    *
-    * @relation serviceData: Array<ServiceData>
-    */
+     * The specified service data list to this advertisement
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceData: Array<ServiceData>
-    
+
     /**
-    * Indicates whether the device name will be included in the advertisement packet.
-    *
-    * @relation includeDeviceName?: boolean
-    */
+     * Indicates whether the device name will be included in the advertisement packet.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var includeDeviceName: Bool
-    
+
     /**
-    * AdvertiseData constructor.
-    */
+     * AdvertiseData constructor.
+     *
+     * @param { Array<String> } serviceUUIDs - The specified service UUID list to this advertisement.
+     * @param { Array<ManufactureData> } manufactureData - The specified manufacturer data list to this advertisement.
+     * @param { Array<ServiceData> } serviceData - The specified service data list to this advertisement.
+     * @param { Bool } includeDeviceName - Indicates whether the device name will be included in the advertisement packet.
+     * @param { Bool } includeTxPower - Indicates whether the tx power will be included in the advertisement packet.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
-        serviceUuids: Array<String>,
+        serviceUUIDs: Array<String>,
         manufactureData: Array<ManufactureData>,
         serviceData: Array<ServiceData>,
         includeDeviceName!: Bool = false,
@@ -2210,44 +2267,40 @@ public class AdvertiseData {
     )
 }
 
-
 /**
-* Describes the manufacturer data.
-*
-* @relation interface ManufactureData
-*/
+ * Describes the manufacturer data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ManufactureData {
     /**
-    * Indicates the manufacturer ID assigned by Bluetooth SIG
-    *
-    * @relation manufactureId: number
-    */
+     * Indicates the manufacturer ID assigned by Bluetooth SIG.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureId: UInt16
-    
+
     /**
-    * Indicates the manufacturer data to add
-    *
-    * @relation manufactureValue: ArrayBuffer
-    */
+     * Indicates the manufacturer data to add.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var manufactureValue: Array<Byte>
-    
+
     /**
-    * ManufactureData constructor.
-    */
+     * ManufactureData constructor.
+     *
+     * @param { UInt16 } manufactureId - Indicates the manufacturer ID assigned by Bluetooth SIG
+     * @param { Array<Byte> } manufactureValue - Indicates the manufacturer data to add
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2256,114 +2309,106 @@ public class ManufactureData {
     )
 }
 
-
 /**
-* Describes the service data.
-*
-* @relation interface ServiceData
-*/
+ * Describes the service data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ServiceData {
     /**
-    * Indicates the UUID of the service data to add
-    *
-    * @relation serviceUuid: string
-    */
+     * Indicates the UUID of the service data to add.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    public var serviceUuid: String
-    
+    public var serviceUUID: String
+
     /**
-    * Indicates the service data to add
-    *
-    * @relation serviceValue: ArrayBuffer
-    */
+     * Indicates the service data to add.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var serviceValue: Array<Byte>
-    
+
     /**
-    * ServiceData constructor
-    */
+     * ServiceData constructor.
+     *
+     * @param { String } serviceUUID - Indicates the UUID of the service data to add
+     * @param { Array<Byte> } serviceValue - Indicates the service data to add
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
-        serviceUuid: String,
+        serviceUUID: String,
         serviceValue: Array<Byte>
     )
 }
 
-
 /**
-* Describes the advertising parameters.
-*
-* @relation interface AdvertisingParams
-*/
+ * Describes the advertising parameters.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertisingParams {
     /**
-    * Indicates the advertising settings.
-    *
-    * @relation advertisingSettings: AdvertiseSetting
-    */
+     * Indicates the advertising settings.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingSettings: AdvertiseSetting
-    
+
     /**
-    * Indicates the advertising data.
-    *
-    * @relation advertisingData: AdvertiseData
-    */
+     * Indicates the advertising data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingData: AdvertiseData
-    
+
     /**
-    * Indicates the advertising response.
-    *
-    * @relation advertisingResponse?: AdvertiseData
-    */
+     * Indicates the advertising response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingResponse: AdvertiseData
-    
+
     /**
-    * Indicates the duration for advertising continuously.
-    * The duration, in 10ms unit. Valid range is from 1 (10ms) to 65535 (655,350 ms).
-    * If this parameter is not specified or is set to 0, advertisement is continuously sent.
-    *
-    * @relation duration?: number
-    */
+     * Indicates the duration for advertising continuously.
+     * The duration, in 10ms unit. Valid range is from 1 (10ms) to 65535 (655,350 ms).
+     * If this parameter is not specified or is set to 0, advertisement is continuously sent.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var duration: UInt16
-    
+
     /**
-    * AdvertisingParams constructor.
-    */
+     * AdvertisingParams constructor.
+     *
+     * @param { AdvertiseSetting } advertisingSettings - Indicates the advertising settings.
+     * @param { AdvertiseData } advertisingData - Indicates the advertising data.
+     * @param { AdvertiseData } advertisingResponse - Indicates the advertising response.
+     * @param { UInt16 } duration - Indicates the duration for advertising continuously.
+     * The duration, in 10ms unit. Valid range is from 1 (10ms) to 65535 (655,350 ms).
+     * If this parameter is not specified or is set to 0, advertisement is continuously sent.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public init(
@@ -2374,368 +2419,559 @@ public class AdvertisingParams {
     )
 }
 
-
 /**
-* Advertising state change information.
-*
-* @relation interface AdvertisingStateChangeInfo
-*/
+ * Advertising state change information.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class AdvertisingStateChangeInfo {
     /**
-    * Indicates the ID of current advertising.
-    *
-    * @relation advertisingId: number
-    */
+     * Indicates the ID of current advertising.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var advertisingId: Int32
-    
+
     /**
-    * Indicates the advertising state.
-    *
-    * @relation state: AdvertisingState
-    */
+     * Indicates the advertising state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var state: AdvertisingState
 }
 
-
 /**
-* Describes the contents of the scan results.
-*
-* @relation interface ScanResult
-*/
+ * Describes the contents of the scan results.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public class ScanResult {
     /**
-    * Address of the scanned device
-    *
-    * @relation deviceId: string
-    */
+     * Address of the scanned device
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * RSSI of the remote device
-    *
-    * @relation rssi: number
-    */
+     * RSSI of the remote device
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var rssi: Int32
-    
+
     /**
-    * The raw data of broadcast packet
-    *
-    * @relation data: ArrayBuffer
-    */
+     * The raw data of broadcast packet
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var data: Array<Byte>
-    
+
     /**
-    * The local name of the BLE device
-    *
-    * @relation deviceName: string
-    */
+     * The local name of the BLE device
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var deviceName: String
-    
+
     /**
-    * Connectable of the remote device
-    *
-    * @relation connectable: boolean
-    */
+     * Connectable of the remote device
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
     public var connectable: Bool
 }
 
-
 /**
-* The enum of scan duty.
-*
-* @relation enum ScanDuty
-*/
-@Derive[ToString, Equatable]
+ * The enum of scan duty.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum ScanDuty {
     /**
-    * low power mode
-    *
-    * @relation SCAN_MODE_LOW_POWER = 0
-    */
+     * low power mode
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ScanModeLowPower |
+    ScanModeLowPower
+    | 
+    
     /**
-    * balanced power mode
-    *
-    * @relation SCAN_MODE_BALANCED = 1
-    */
+     * balanced power mode
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ScanModeBalanced |
+    ScanModeBalanced
+    | 
     /**
-    * Scan using highest duty cycle
-    *
-    * @relation SCAN_MODE_LOW_LATENCY = 2
-    */
+     * Scan using highest duty cycle
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    ScanModeLowLatency |
-    ...
+    ScanModeLowLatency
+    | ...
 }
 
 
+extend ScanDuty <: ToString {
+    
+    /**
+     * Converts the ScanDuty to its string representation.
+     * @returns { String } A string representation of the ScanDuty.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend ScanDuty <: Equatable<ScanDuty> {
+    
+    /**
+     * Compares this ScanDuty with another for equality.
+     * @param { ScanDuty } other - The ScanDuty to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: ScanDuty): Bool
+    
+    /**
+     * Compares this ScanDuty with another for inequality.
+     * @param { ScanDuty } other - The ScanDuty to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: ScanDuty): Bool
+}
 
 /**
-* The enum of BLE match mode.
-*
-* @relation enum MatchMode
-*/
-@Derive[ToString, Equatable]
+ * The enum of BLE match mode.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum MatchMode {
     /**
-    * aggressive mode
-    *
-    * @relation MATCH_MODE_AGGRESSIVE = 1
-    */
+     * aggressive mode
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    MatchModeAggressive |
+    MatchModeAggressive
+    | 
     /**
-    * sticky mode
-    *
-    * @relation MATCH_MODE_STICKY = 2
-    */
+     * sticky mode
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    MatchModeSticky |
-    ...
+    MatchModeSticky
+    | ...
 }
 
 
+extend MatchMode <: ToString {
+    
+    /**
+     * Converts the MatchMode to its string representation.
+     * @returns { String } A string representation of the MatchMode.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend MatchMode <: Equatable<MatchMode> {
+    
+    /**
+     * Compares this MatchMode with another for equality.
+     * @param { MatchMode } other - The MatchMode to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: MatchMode): Bool
+    
+    /**
+     * Compares this MatchMode with another for inequality.
+     * @param { MatchMode } other - The MatchMode to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: MatchMode): Bool
+}
 
 /**
-* The enum of BLE advertising state.
-*
-* @relation enum AdvertisingState
-*/
-@Derive[ToString, Equatable]
+ * The enum of BLE advertising state.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum AdvertisingState {
     /**
-    * advertising started.
-    *
-    * @relation STARTED = 1
-    */
+     * advertising started.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Started |
+    Started
+    | 
+    
     /**
-    * advertising temporarily enabled.
-    *
-    * @relation ENABLED = 2
-    */
+     * advertising temporarily enabled.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Enabled |
+    Enabled
+    | 
+    
     /**
-    * advertising temporarily disabled.
-    *
-    * @relation DISABLED = 3
-    */
+     * advertising temporarily disabled.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Disabled |
+    Disabled
+    | 
     /**
-    * advertising stopped.
-    *
-    * @relation STOPPED = 4
-    */
+     * advertising stopped.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Stopped |
-    ...
+    Stopped
+    | ...
 }
 
 
+extend AdvertisingState <: ToString {
+    
+    /**
+     * Converts the AdvertisingState to its string representation.
+     * @returns { String } A string representation of the AdvertisingState.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend AdvertisingState <: Equatable<AdvertisingState> {
+    
+    /**
+     * Compares this AdvertisingState with another for equality.
+     * @param { AdvertisingState } other - The AdvertisingState to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: AdvertisingState): Bool
+    
+    /**
+     * Compares this AdvertisingState with another for inequality.
+     * @param { AdvertisingState } other - The AdvertisingState to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: AdvertisingState): Bool
+}
 
 /**
-* Phy type used during scan.
-*
-* @relation enum PhyType
-*/
-@Derive[ToString, Equatable]
+ * Phy type used during scan.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum PhyType {
     /**
-    * Use 1M phy for scanning.
-    *
-    * @relation PHY_LE_1M = 1
-    */
+     * Use 1M phy for scanning.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    PhyLe1M |
+    PhyLe1M
+    | 
     /**
-    * Use all supported Phys for scanning.
-    *
-    * @relation PHY_LE_ALL_SUPPORTED = 255
-    */
+     * Use all supported Phys for scanning.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    PhyLeAllSupported |
-    ...
+    PhyLeAllSupported
+    | ...
 }
 
 
+extend PhyType <: ToString {
+    
+    /**
+     * Converts the PhyType to its string representation.
+     * @returns { String } A string representation of the PhyType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend PhyType <: Equatable<PhyType> {
+    /**
+     * Compares this PhyType with another for equality.
+     * @param { PhyType } other - The PhyType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: PhyType): Bool
+    
+    /**
+     * Compares this PhyType with another for inequality.
+     * @param { PhyType } other - The PhyType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: PhyType): Bool
+}
 
 /**
-* Bluetooth Ble CallbackType
-*/
-@Derive[ToString, Hashable, Equatable]
+ * Bluetooth Ble CallbackType
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum BluetoothBleCallbackType {
+    
     /**
-    * Advertising State Change
-    */
+     * Advertising state changed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    AdvertisingStateChange |
+    AdvertisingStateChange
+    | 
     /**
-    * Ble Device Find
-    */
+     * ble device find changed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    BleDeviceFind |
-    ...
+    BleDeviceFind
+    | ...
 }
 
 
+extend BluetoothBleCallbackType <: ToString {
+    
+    /**
+     * Converts the BluetoothBleCallbackType to its string representation.
+     * @returns { String } A string representation of the BluetoothBleCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
+
+
+extend BluetoothBleCallbackType <: Hashable {
+    
+    /**
+     * Returns a hash code value for this BluetoothBleCallbackType.
+     * @returns { Int64 } A hash code value for this BluetoothBleCallbackType.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func hashCode(): Int64
+}
+
+
+extend BluetoothBleCallbackType <: Equatable<BluetoothBleCallbackType> {
+    
+    /**
+     * Compares this BluetoothBleCallbackType with another for equality.
+     * @param { BluetoothBleCallbackType } other - The BluetoothBleCallbackType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: BluetoothBleCallbackType): Bool
+    
+    /**
+     * Compares this BluetoothBleCallbackType with another for inequality.
+     * @param { BluetoothBleCallbackType } other - The BluetoothBleCallbackType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: BluetoothBleCallbackType): Bool
+}
 
 /**
-* Report mode used during scan.
-*
-* @relation enum ScanReportMode
-*/
-@Derive[ToString, Equatable]
+ * Report mode used during scan.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.Bluetooth.Core"
 ]
 public enum ScanReportMode {
+    
     /**
-    * In normal mode, the advertisement packet is reported immediately after being scanned.
-    *
-    * @relation NORMAL = 1
-    */
+     * In normal mode, the advertisement packet is reported immediately after being scanned.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Normal |
+    Normal
+    | 
+    
     /**
-    * Enables the batch mode in which advertisement packets are sent after the interval specified by {@link
-    * ScanOptions#interval}.
-    *
-    * @relation BATCH = 2
-    */
+     * Enables the batch mode in which advertisement packets are sent after the interval specified by {@link
+     * ScanOptions#interval}.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    Batch |
+    Batch
+    | 
+    
     /**
-    * In low sensitivity fence mode, the advertisement packets are reported only when they are received for
-    * the first time and lost for the last time. The reception sensitivity is low.
-    *
-    * @relation FENCE_SENSITIVITY_LOW = 10
-    */
+     * In low sensitivity fence mode, the advertisement packets are reported only when they are received for
+     * the first time and lost for the last time. The reception sensitivity is low.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    FenceSensitivityLow |
+    FenceSensitivityLow
+    | 
     /**
-    * In high sensitivity fence mode, the advertisement packets are reported only when they are received for
-    * the first time and lost for the last time. The reception sensitivity is high.
-    *
-    * @relation FENCE_SENSITIVITY_HIGH = 11
-    */
+     * In high sensitivity fence mode, the advertisement packets are reported only when they are received for
+     * the first time and lost for the last time. The reception sensitivity is high.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.Bluetooth.Core"
     ]
-    FenceSensitivityHigh |
-    ...
+    FenceSensitivityHigh
+    | ...
 }
 
 
+extend ScanReportMode <: ToString {
+    
+    /**
+     * Converts the ScanReportMode to its string representation.
+     * @returns { String } A string representation of the ScanReportMode.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public func toString(): String
+}
 
+
+extend ScanReportMode <: Equatable<ScanReportMode> {
+    
+    /**
+     * Compares this ScanReportMode with another for equality.
+     * @param { ScanReportMode } other - The ScanReportMode to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func ==(other: ScanReportMode): Bool
+    
+    /**
+     * Compares this ScanReportMode with another for inequality.
+     * @param { ScanReportMode } other - The ScanReportMode to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.Bluetooth.Core"
+    ]
+    public operator func !=(other: ScanReportMode): Bool
+}

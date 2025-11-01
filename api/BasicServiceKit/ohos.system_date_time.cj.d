@@ -13,101 +13,82 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.system_date_time
+
 import ohos.labels.APILevel
 
-import ohos.business_exception.{ BusinessException, getUniversalErrorMsg}
-import ohos.ffi.SUCCESS_CODE
-import ohos.hilog.Hilog
-import ohos.ffi.{ RetCode, RetDataCString, RetDataI64}
-
 /**
-* Indicates time type.
-*
-* @relation enum TimeType
-*/
+ * Indicates time type.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public enum TimeType {
     /**
-    * Indicates the time elapsed since the system was booted, including deep sleep time.
-    *
-    * @relation STARTUP = 0
-    */
+     * Indicates the time elapsed since the system was booted, including deep sleep time.
+     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
-    Startup |
+    Startup
+    |
     /**
-    * Indicates the time elapsed since the system was booted, including deep sleep time.
-    *
-    * @relation ACTIVE = 1
-    */
+     * Indicates the time elapsed since the system was booted, not including deep sleep time.
+     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
-    Active |
-    ...
+    Active
+    | ...
 }
 
-
 /**
-* System time and timezone.
-*
-* @relation declare namespace systemDateTime
-*/
+ * System time and timezone.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public class SystemDateTime {
     /**
-    * Obtains the number of timestamp that have elapsed since the Unix epoch.
-    *
-    * @relation function getTime(isNanoseconds?: boolean): number
-    */
+     * Obtains the number of timestamp that have elapsed since the Unix epoch.
+     *
+     * @param { Bool } [isNanoseconds] - True if the result is in nanoseconds, otherwise in milliseconds.
+     * @returns { Int64 } The timestamp returned of getTime.
+     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTime(isNanoseconds!: Bool = false): Int64
-    
+
     /**
-    * Obtains the number of milliseconds since the system has been running.
-    *
-    * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;
-    *     3. Parameter verification failed. This error code was added due to missing issues.
-    * @relation function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
-    */
+     * Obtains the number of milliseconds since the system has been running.
+     *
+     * @param { TimeType } timeType - indicates the type of get uptime. It can only be `STARTUP` or `ACTIVE`.
+     * @param { Bool } [isNanoseconds] - True if the result is in nanoseconds, otherwise in milliseconds.
+     * @returns { Int64 } The timestamp returned of getUpTime.
+     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getUptime(timeType: TimeType, isNanoseconds!: Bool = false): Int64
-    
+
     /**
-    * Obtains the number of milliseconds since the system has been running.
-    *
-    * @relation function getTimezoneSync(): string
-    */
+     * Obtains the system time zone.
+     *
+     * @returns { String } The timezone returned of getTimezone.
+     */
     @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.MiscServices.Time"
+        since: "22",
+        syscap: "SystemCapability.MiscServices.Time",
+        workerthread: true
     ]
     public static func getTimezone(): String
 }
-
-

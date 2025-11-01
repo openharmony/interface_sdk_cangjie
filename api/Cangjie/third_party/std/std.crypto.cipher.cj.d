@@ -1,34 +1,69 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.crypto.cipher
 
-
-@!APILevel[since: "22"]
+/**
+ * @description Represents a block cipher algorithm that can encrypt and decrypt data in blocks of a fixed size.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface BlockCipher {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the block size of the cipher algorithm in bytes.
+     * @returns The block size in bytes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop blockSize: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the name of the cipher algorithm.
+     * @returns The algorithm name as a string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop algorithm: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Encrypts the input data block and returns a new array with the encrypted data.
+     * @param input - The data to be encrypted
+     * @returns A new array containing the encrypted data
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func encrypt(input: Array<Byte>): Array<Byte>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Decrypts the input data block and returns a new array with the decrypted data.
+     * @param input - The data to be decrypted
+     * @returns A new array containing the decrypted data
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func decrypt(input: Array<Byte>): Array<Byte>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Encrypts the input data block and stores the result in the provided output array.
+     * @param input - The data to be encrypted
+     * @param to! - The output array to store the encrypted data
+     * @returns The number of bytes written to the output array
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func encrypt(input: Array<Byte>, to!: Array<Byte>): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Decrypts the input data block and stores the result in the provided output array.
+     * @param input - The data to be decrypted
+     * @param to! - The output array to store the decrypted data
+     * @returns The number of bytes written to the output array
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func decrypt(input: Array<Byte>, to!: Array<Byte>): Int64
 }
-

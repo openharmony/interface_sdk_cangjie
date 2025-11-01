@@ -1,266 +1,512 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.unicode
 import std.collection.*
 
 
-@!APILevel[since: "22"]
+/**
+ * @description Enumeration representing different casing options for locale-specific character case conversion
+ */
+@!APILevel[
+    since: "22"
+]
 public enum CasingOption {
-    @!APILevel[since: "22"]
-    // Turkish
+    /**
+     * @description Turkish casing option for character case conversion
+     */
+    @!APILevel[
+        since: "22"
+    ]
     TR |
-    @!APILevel[since: "22"]
-    // Azeri
+    /**
+     * @description Azerbaijani casing option for character case conversion
+     */
+    @!APILevel[
+        since: "22"
+    ]
     AZ |
-    @!APILevel[since: "22"]
-    // Lithuanian
+    /**
+     * @description Lithuanian casing option for character case conversion
+     */
+    @!APILevel[
+        since: "22"
+    ]
     LT |
-    @!APILevel[since: "22"]
+    /**
+     * @description Other/default casing option for standard character case conversion
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Other
 }
 
-/* Methods for  Unicode. */
-@!APILevel[since: "22"]
+/**
+ * @description Interface providing Unicode character classification and case conversion methods for Rune
+ */
+@!APILevel[
+    since: "22"
+]
 public interface UnicodeRuneExtension {
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a letter (Uppercase_Letter, Lowercase_Letter, Titlecase_Letter, Modifier_Letter, or Other_Letter)
+     * @returns true if the character is a letter, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isLetter(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a number (Decimal_Number, Letter_Number, or Other_Number)
+     * @returns true if the character is a number, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isNumber(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a lowercase letter
+     * @returns true if the character is lowercase, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isLowerCase(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is an uppercase letter
+     * @returns true if the character is uppercase, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isUpperCase(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a titlecase letter
+     * @returns true if the character is titlecase, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isTitleCase(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a whitespace character
+     * @returns true if the character is whitespace, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isWhiteSpace(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its uppercase equivalent
+     * @returns the uppercase version of the character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toUpperCase(): Rune
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its lowercase equivalent
+     * @returns the lowercase version of the character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toLowerCase(): Rune
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its titlecase equivalent
+     * @returns the titlecase version of the character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toTitleCase(): Rune
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its uppercase equivalent using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns the uppercase version of the character according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toUpperCase(opt: CasingOption): Rune
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its lowercase equivalent using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns the lowercase version of the character according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toLowerCase(opt: CasingOption): Rune
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its titlecase equivalent using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns the titlecase version of the character according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toTitleCase(opt: CasingOption): Rune
 }
 
 extend Rune <: UnicodeRuneExtension {
     /**
-    * Returns true if this Unicode character is Letter.
-    * In Unicode, Letter includes Uppercase_Letter, Lowercase_Letter, Titlecase_Letter, Modifier_Letter and Other_Letter.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the Unicode character is a letter (Uppercase_Letter, Lowercase_Letter, Titlecase_Letter, Modifier_Letter, or Other_Letter)
+     * @returns true if the character is a letter, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isLetter(): Bool
     
     /**
-    * Returns true if this Unicode character is Number.
-    * In Unicode, Number includes Decimal_Number, Letter_Number and Other_Number.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the Unicode character is a number (Decimal_Number, Letter_Number, or Other_Number)
+     * @returns true if the character is a number, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNumber(): Bool
     
-    /** Returns true if this Unicode character is Lowercase. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a lowercase letter
+     * @returns true if the character is lowercase, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isLowerCase(): Bool
     
-    /** Returns true if this Unicode character is Uppercase. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is an uppercase letter
+     * @returns true if the character is uppercase, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isUpperCase(): Bool
     
-    /** Returns true if this Unicode character is Titlecase. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a titlecase letter
+     * @returns true if the character is titlecase, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isTitleCase(): Bool
     
-    /** Returns true if this Unicode character is whitespace. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the Unicode character is a whitespace character
+     * @returns true if the character is whitespace, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isWhiteSpace(): Bool
     
-    /** Returns the uppercase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its uppercase equivalent
+     * @returns the uppercase version of the character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toUpperCase(): Rune
     
-    /** Returns the lowercase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its lowercase equivalent
+     * @returns the lowercase version of the character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toLowerCase(): Rune
     
-    /** Returns the titlecase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its titlecase equivalent
+     * @returns the titlecase version of the character
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toTitleCase(): Rune
     
-    /** Returns the uppercase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its uppercase equivalent using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns the uppercase version of the character according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toUpperCase(opt: CasingOption): Rune
     
-    /** Returns the lowercase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its lowercase equivalent using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns the lowercase version of the character according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toLowerCase(opt: CasingOption): Rune
     
-    /** Returns the titlecase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the Unicode character to its titlecase equivalent using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns the titlecase version of the character according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toTitleCase(opt: CasingOption): Rune
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface providing Unicode string processing methods including case conversion, trimming, and blank checking
+ */
+@!APILevel[
+    since: "22"
+]
 public interface UnicodeStringExtension {
-    @!APILevel[since: "22"]
+    /**
+     * @description Determines if the string is empty or contains only whitespace characters
+     * @returns true if the string is blank (empty or only whitespace), false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isBlank(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts all characters in the string to lowercase
+     * @returns a new string with all characters converted to lowercase
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toLower(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts all characters in the string to lowercase using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns a new string with all characters converted to lowercase according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toLower(opt: CasingOption): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts all characters in the string to titlecase
+     * @returns a new string with all characters converted to titlecase
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toTitle(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts all characters in the string to titlecase using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns a new string with all characters converted to titlecase according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toTitle(opt: CasingOption): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts all characters in the string to uppercase
+     * @returns a new string with all characters converted to uppercase
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toUpper(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts all characters in the string to uppercase using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns a new string with all characters converted to uppercase according to the specified locale rules
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toUpper(opt: CasingOption): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes leading and trailing whitespace characters from the string
+     * @returns a new string with leading and trailing whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func trim(): String
     
-    @Deprecated[message: "Use member function `func trimEnd(): String` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes trailing whitespace characters from the string
+     * @returns a new string with trailing whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func trimRight(): String
     
-    @Deprecated[message: "Use member function `func trimStart(): String` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes leading whitespace characters from the string
+     * @returns a new string with leading whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func trimLeft(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes leading whitespace characters from the string
+     * @returns a new string with leading whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func trimStart(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes trailing whitespace characters from the string
+     * @returns a new string with trailing whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func trimEnd(): String
 }
 
 extend String <: UnicodeStringExtension {
     /**
-    * Returns true if this string is empty or contains only whitespace Unicode, otherwise `false`.
-    */
-    @!APILevel[since: "22"]
+     * @description Determines if the string is empty or contains only whitespace characters
+     * @returns true if the string is blank (empty or only whitespace), false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isBlank(): Bool
     
     /**
-    * @return a string which is the result of converting every character in this
-    *         string to its lower case.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `itemBytes`.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts all characters in the string to lowercase
+     * @returns a new string with all characters converted to lowercase
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toLower(): String
     
     /**
-    * @return a string which is the result of converting every character in
-    *         this string to its upper case.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `itemBytes`.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts all characters in the string to uppercase
+     * @returns a new string with all characters converted to uppercase
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toUpper(): String
     
     /**
-    * @return a string which is the result of converting every character in
-    *         this string to its title case.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `itemBytes`.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts all characters in the string to titlecase
+     * @returns a new string with all characters converted to titlecase
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toTitle(): String
     
     /**
-    * @return a string which is the result of converting every character in this
-    *         string to its lower case.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `itemBytes`.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts all characters in the string to lowercase using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns a new string with all characters converted to lowercase according to the specified locale rules
+     * @throws IllegalArgumentException when encountering invalid UTF-8 encoding
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toLower(opt: CasingOption): String
     
     /**
-    * @return a string which is the result of converting every character in
-    *         this string to its upper case.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `itemBytes`.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts all characters in the string to uppercase using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns a new string with all characters converted to uppercase according to the specified locale rules
+     * @throws IllegalArgumentException when encountering invalid UTF-8 encoding
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toUpper(opt: CasingOption): String
     
     /**
-    * @return a string which is the result of converting every character in
-    *         this string to its title case.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `itemBytes`.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts all characters in the string to titlecase using locale-specific casing rules
+     * @param opt the casing option for locale-specific conversion (Turkish, Azerbaijani, Lithuanian, or Other)
+     * @returns a new string with all characters converted to titlecase according to the specified locale rules
+     * @throws IllegalArgumentException when encountering invalid UTF-8 encoding
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toTitle(opt: CasingOption): String
     
     /**
-    * @return a string which is the result of removing the leading and trailing
-    *         whitespace of this string.
-    * @throws IllegalArgumentException if there is no valid utf8 code in array `myData`.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes leading and trailing whitespace characters from the string
+     * @returns a new string with leading and trailing whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func trim(): String
     
     /**
-    * @return a string which is the result of removing the leading whitespace of this string.
-    * @throws IllegalArgumentException if there is no valid utf8 leading code in array `myData`.
-    */
-    @Deprecated[message: "Use member function ` public func trimStart(): String` instead."]
-    @!APILevel[since: "22"]
+     * @description Removes leading whitespace characters from the string
+     * @returns a new string with leading whitespace removed    
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func trimLeft(): String
     
     /**
-    * @return a string which is the result of removing the trailing whitespace of this string.
-    * @throws IllegalArgumentException if there is no valid utf8 code in array `myData`.
-    */
-    @Deprecated[message: "Use member function ` public func trimEnd(): String` instead."]
-    @!APILevel[since: "22"]
+     * @description Removes trailing whitespace characters from the string
+     * @returns a new string with trailing whitespace removed    
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func trimRight(): String
     
     /**
-    * @return a string which is the result of removing the leading whitespace of this string.
-    * @throws IllegalArgumentException if there is no valid utf8 leading code in array `myData`.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes leading whitespace characters from the string
+     * @returns a new string with leading whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func trimStart(): String
     
     /**
-    * @return a string which is the result of removing the trailing whitespace of this string.
-    * @throws IllegalArgumentException if there is no valid utf8 code in array `myData`.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes trailing whitespace characters from the string
+     * @returns a new string with trailing whitespace removed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func trimEnd(): String
 }
 

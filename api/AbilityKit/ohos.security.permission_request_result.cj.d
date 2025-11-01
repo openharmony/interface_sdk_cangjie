@@ -13,58 +13,46 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.security.permission_request_result
-import ohos.business_exception.BusinessException
-import ohos.ffi.{ CArrString, CArrI32, CArrBool}
+
 import ohos.labels.APILevel
 
-
 /**
-* The result of requestPermissionsFromUser with asynchronous callback.
-*
-* @relation declare class PermissionRequestResult
-*/
+ * The result of requestPermissionsFromUser with asynchronous callback.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Security.AccessToken"
 ]
 public class PermissionRequestResult {
     /**
-    * The permissions passed in by the user.
-    *
-    * @relation permissions: Array<string>
-    */
+     * The permissions passed in by the user.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Security.AccessToken"
     ]
     public var permissions: Array<String>
-    
+
     /**
-    * The results for the corresponding request permissions. The value 0 indicates that a
-    * permission is granted, the value -1 indicates not, and the value 2 indicates the request is invalid.
-    *
-    * @relation authResults: Array<int>
-    */
+     * The results for the corresponding request permissions. The value 0 indicates that a
+     * permission is granted, the value -1 indicates not, and the value 2 indicates the request is invalid.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Security.AccessToken"
     ]
     public var authResults: Array<Int32>
-    
+
     /**
-    * Specifies whether a dialog box is shown for each requested permission.
-    * The value true means that a dialog box is shown, and false means the opposite.
-    *
-    * @relation dialogShownResults?: Array<boolean>
-    */
+     * Specifies whether a dialog box is shown for each requested permission.
+     * The value true means that a dialog box is shown, and false means the opposite.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Security.AccessToken"
     ]
     public var dialogShownResults = Array<Bool>()
 }
-
-

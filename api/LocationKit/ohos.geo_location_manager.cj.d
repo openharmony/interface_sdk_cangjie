@@ -13,530 +13,469 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.geo_location_manager
-import ohos.business_exception.{ BusinessException, UNIVERSAL_ERROR_MAP}
-import ohos.ffi.*
-import ohos.labels.*
 
-import ohos.business_exception.getUniversalErrorMsg
-import ohos.hilog.*
-import std.collection.*
+import ohos.labels.APILevel
 
 /**
-* Provides interfaces for acquiring location information, managing location switches,
-* geocoding, reverse geocoding, country code, fencing and other functions.
-*
-* @relation declare namespace geoLocationManager
-*/
+ * Provides interfaces for acquiring location information, managing location switches,
+ * geocoding, reverse geocoding, country code, fencing and other functions.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public class GeoLocationManager {
     /**
-    * Subscribe location changed.
-    *
-    * @throws { BusinessException } 201 - Permission verification failed. The   application does not have the permission required to call the API.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:   1. Mandatory parameters are left unspecified; 2. Incorrect parameter   types; 3. Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported. Failed to   call ${geoLocationManager.getCurrentLocation} due to limited device   capabilities.
-    * @throws { BusinessException } 3301000 - The location service is   unavailable.
-    * @throws { BusinessException } 3301100 - The location switch is off.
-    * @throws { BusinessException } 3301200 - Failed to obtain the   geographical location.
-    * @relation function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest): Promise<Location>
-    */
+      * Obtain current location.
+      *
+      * @returns { Location } Returns the current location information.
+      * @throws { BusinessException } 201 - Permission verification failed. The application does not have the
+      * permission required to call the API.
+      * @throws { BusinessException } 801 - Capability not supported. Failed to call
+      * ${geoLocationManager.getCurrentLocation} due to limited device capabilities.
+      * @throws { BusinessException } 3301000 - The location service is unavailable.
+      * @throws { BusinessException } 3301100 - The location switch is off.
+      * @throws { BusinessException } 3301200 - Failed to obtain the geographical location.
+      */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.APPROXIMATELY_LOCATION",
-        syscap: "SystemCapability.Location.Location.Core"
+        syscap: "SystemCapability.Location.Location.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func getCurrentLocation(): Location
-    
+
     /**
-    * Obtain current location.
-    *
-    * @throws { BusinessException } 201 - Permission verification failed. The   application does not have the permission required to call the API.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:   1. Mandatory parameters are left unspecified; 2. Incorrect parameter   types; 3. Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported. Failed to   call ${geoLocationManager.getCurrentLocation} due to limited device   capabilities.
-    * @throws { BusinessException } 3301000 - The location service is   unavailable.
-    * @throws { BusinessException } 3301100 - The location switch is off.
-    * @throws { BusinessException } 3301200 - Failed to obtain the   geographical location.
-    * @relation function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest): Promise<Location>
-    */
+      * Obtain current location.
+      *
+      * @param { CurrentLocationRequest } request - Indicates the location request parameters.
+      * @returns { Location } Returns the current location information.
+      * @throws { BusinessException } 201 - Permission verification failed. The application does not have the
+      * permission required to call the API.
+      * @throws { BusinessException } 801 - Capability not supported. Failed to call
+      * ${geoLocationManager.getCurrentLocation} due to limited device capabilities.
+      * @throws { BusinessException } 3301000 - The location service is unavailable.
+      * @throws { BusinessException } 3301100 - The location switch is off.
+      * @throws { BusinessException } 3301200 - Failed to obtain the geographical location.
+      */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.APPROXIMATELY_LOCATION",
-        syscap: "SystemCapability.Location.Location.Core"
+        syscap: "SystemCapability.Location.Location.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func getCurrentLocation(request: CurrentLocationRequest): Location
-    
+
     /**
-    * Obtain current location.
-    *
-    * @throws { BusinessException } 201 - Permission verification failed. The   application does not have the permission required to call the API.
-    * @throws { BusinessException } 401 - Parameter error. Possible causes:   1. Mandatory parameters are left unspecified; 2. Incorrect parameter   types; 3. Parameter verification failed.
-    * @throws { BusinessException } 801 - Capability not supported. Failed to   call ${geoLocationManager.getCurrentLocation} due to limited device   capabilities.
-    * @throws { BusinessException } 3301000 - The location service is   unavailable.
-    * @throws { BusinessException } 3301100 - The location switch is off.
-    * @throws { BusinessException } 3301200 - Failed to obtain the   geographical location.
-    * @relation function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest): Promise<Location>
-    */
+      * Obtain current location.
+      *
+      * @param { SingleLocationRequest } request - Indicates the location request parameters.
+      * @returns { Location } Returns the current location information.
+      * @throws { BusinessException } 201 - Permission verification failed. The application does not have the
+      * permission required to call the API.
+      * @throws { BusinessException } 801 - Capability not supported. Failed to call
+      * ${geoLocationManager.getCurrentLocation} due to limited device capabilities.
+      * @throws { BusinessException } 3301000 - The location service is unavailable.
+      * @throws { BusinessException } 3301100 - The location switch is off.
+      * @throws { BusinessException } 3301200 - Failed to obtain the geographical location.
+      */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.APPROXIMATELY_LOCATION",
-        syscap: "SystemCapability.Location.Location.Core"
+        syscap: "SystemCapability.Location.Location.Core",
+        throwexception: true,
+        workerthread: true
     ]
     public static func getCurrentLocation(request: SingleLocationRequest): Location
-    
+
     /**
-    * Obtain current location switch status.
-    *
-    * @throws { BusinessException } 801 - Capability not supported. Failed to call ${geoLocationManager.isLocationEnabled} due to limited device capabilities.
-    * @throws { BusinessException } 3301000 - The location service is unavailable.
-    * @relation function isLocationEnabled(): boolean
-    */
+      * Obtain current location switch status.
+      *
+      * @returns { Bool } Returns true if the location switch is on, returns false otherwise.
+      * @throws { BusinessException } 801 - Capability not supported. Failed to call
+      * ${geoLocationManager.isLocationEnabled} due to limited device capabilities.
+      * @throws { BusinessException } 3301000 - The location service is unavailable.
+      */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Location.Location.Core"
+        since: "22",
+        syscap: "SystemCapability.Location.Location.Core",
+        throwexception: true
     ]
     public static func isLocationEnabled(): Bool
 }
 
-
 /**
-* Enum for the source of the location.
-*
-* @relation export enum LocationSourceType
-*/
+ * Enum for the source of the location.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public enum LocationSourceType {
     /**
-    * The location is obtained from the GNSS.
-    *
-    * @relation GNSS = 1
-    */
+     * The location is obtained from the GNSS.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Gnss |
+    Gnss
+    | 
     /**
-    * The location comes from the network positioning technology.
-    *
-    * @relation NETWORK = 2
-    */
+     * The location comes from the network positioning technology.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Network |
+    Network
+    | 
     /**
-    * The location comes from the indoor positioning technology.
-    *
-    * @relation INDOOR = 3
-    */
+     * The location comes from the indoor positioning technology.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Indoor |
+    Indoor
+    | 
     /**
-    * The location comes from the GNSS RTK technology.
-    *
-    * @relation RTK = 4
-    */
+     * The location comes from the GNSS RTK technology.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Rtk |
-    ...
+    Rtk
+    | ...
 }
 
-
 /**
-* Provides information about geographic locations.
-*
-* @relation export interface Location
-*/
+ * Provides information about geographic locations.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public class Location {
     /**
-    * Indicates latitude information.
-    * A positive value indicates north latitude,
-    * and a negative value indicates south latitude.
-    *
-    * @relation latitude: number
-    */
+     * Indicates latitude information.
+     * A positive value indicates north latitude,
+     * and a negative value indicates south latitude.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var latitude: Float64
-    
+
     /**
-    * Indicates Longitude information.
-    * A positive value indicates east longitude ,
-    * and a negative value indicates west longitude.
-    *
-    * @relation longitude: number
-    */
+     * Indicates Longitude information.
+     * A positive value indicates east longitude ,
+     * and a negative value indicates west longitude.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var longitude: Float64
-    
+
     /**
-    * Indicates location altitude, in meters.
-    *
-    * @relation altitude: number
-    */
+     * Indicates location altitude, in meters.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var altitude: Float64
-    
+
     /**
-    * Indicates location accuracy, in meters.
-    *
-    * @relation accuracy: number
-    */
+     * Indicates location accuracy, in meters.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var accuracy: Float64
-    
+
     /**
-    * Indicates speed, in m/s.
-    *
-    * @relation speed: number
-    */
+     * Indicates speed, in m/s.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var speed: Float64
-    
+
     /**
-    * Indicates location timestamp in the UTC format.
-    *
-    * @relation timeStamp: number
-    */
+     * Indicates location timestamp in the UTC format.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var timeStamp: Int64
-    
+
     /**
-    * Indicates direction information.
-    *
-    * @relation direction: number
-    */
+     * Indicates direction information.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var direction: Float64
-    
+
     /**
-    * Indicates location timestamp since boot.
-    *
-    * @relation timeSinceBoot: number
-    */
+     * Indicates location timestamp since boot.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var timeSinceBoot: Int64
-    
+
     /**
-    * Indicates additional information.
-    *
-    * @relation additions?: Array<string>
-    */
+     * Indicates additional information.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var additions: ?Array<String>
-    
+
     /**
-    * Indicates the amount of additional descriptive information.
-    *
-    * @relation additionSize?: number
-    */
+     * Indicates additional information map.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Location.Location.Core"
-    ]
-    public var additionSize: ?Int64
-    
-    /**
-    * Indicates additional information map.
-    *
-    * @relation additionsMap?: Map<string, string>
-    */
-    @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var additionsMap: ?Map<String, String>
-    
+
     /**
-    * Indicates vertical position accuracy in meters.
-    *
-    * @relation altitudeAccuracy?: number
-    */
+     * Indicates the amount of additional descriptive information.
+     */
     @!APILevel[
-        22,
+        since: "22",
+        syscap: "SystemCapability.Location.Location.Core"
+    ]
+    public var additionSize: ?Int64
+
+    /**
+     * Indicates vertical position accuracy in meters.
+     */
+    @!APILevel[
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var altitudeAccuracy: ?Float64
-    
+
     /**
-    * Indicates speed accuracy in meter per seconds.
-    *
-    * @relation speedAccuracy?: number
-    */
+     * Indicates speed accuracy in meter per seconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var speedAccuracy: ?Float64
-    
+
     /**
-    * Indicates direction accuracy in degrees.
-    *
-    * @relation directionAccuracy?: number
-    */
+     * Indicates direction accuracy in degrees.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var directionAccuracy: ?Float64
-    
+
     /**
-    * Time uncertainty Of timeSinceBoot in nanosecond.
-    *
-    * @relation uncertaintyOfTimeSinceBoot?: number
-    */
+     * Time uncertainty Of timeSinceBoot in nanosecond.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var uncertaintyOfTimeSinceBoot: ?Int64
-    
+
     /**
-    * Indicates the source of the location.
-    *
-    * @relation sourceType?: LocationSourceType
-    */
+     * Indicates the source of the location.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var sourceType: ?LocationSourceType
 }
 
-
 /**
-* Enum for location priority.
-*
-* @relation export enum LocationRequestPriority
-*/
+ * Enum for location priority.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public enum LocationRequestPriority {
     /**
-    * Default priority.
-    *
-    * @relation UNSET = 0x200
-    */
+     * Default priority.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Unset |
+    Unset
+    | 
     /**
-    * Preferentially ensure the locating accuracy.
-    *
-    * @relation ACCURACY = 0x201
-    */
+     * Preferentially ensure the locating accuracy.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Accuracy |
+    Accuracy
+    | 
     /**
-    * Preferentially ensure low power consumption for locating.
-    *
-    * @relation LOW_POWER = 0x202
-    */
+     * Preferentially ensure low power consumption for locating.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    LowPower |
+    LowPower
+    | 
     /**
-    * Preferentially ensure that the first location is time-consuming.
-    *
-    * @relation FIRST_FIX = 0x203
-    */
+     * Preferentially ensure that the first location is time-consuming.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    FirstFix |
-    ...
+    FirstFix
+    | ...
 }
 
-
 /**
-* Enum for location scenario.
-*
-* @relation export enum LocationRequestScenario
-*/
+ * Enum for location scenario.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public enum LocationRequestScenario {
     /**
-    * Default scenario.
-    *
-    * @relation UNSET = 0x300
-    */
+     * Default scenario.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Unset |
+    Unset
+    | 
     /**
-    * Navigation scenario. High positioning precision and real-time performance are required.
-    *
-    * @relation NAVIGATION = 0x301
-    */
+     * Navigation scenario. High positioning precision and real-time performance are required.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    Navigation |
+    Navigation
+    | 
     /**
-    * Trajectory tracking scenario. High positioning precision is required.
-    *
-    * @relation TRAJECTORY_TRACKING = 0x302
-    */
+     * Trajectory tracking scenario. High positioning precision is required.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    TrajectoryTracking |
+    TrajectoryTracking
+    | 
     /**
-    * Car hailing scenario. High positioning precision and real-time performance are required.
-    *
-    * @relation CAR_HAILING = 0x303
-    */
+     * Car hailing scenario. High positioning precision and real-time performance are required.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    CarHailing |
+    CarHailing
+    | 
     /**
-    * Daily life scenarios. Low requirements on positioning precision and real-time performance.
-    *
-    * @relation DAILY_LIFE_SERVICE = 0x304
-    */
+     * Daily life scenarios. Low requirements on positioning precision and real-time performance.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    DailyLifeService |
+    DailyLifeService
+    | 
     /**
-    * Power saving scenarios.
-    *
-    * @relation NO_POWER = 0x305
-    */
+     * Power saving scenarios.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    NoPower |
-    ...
+    NoPower
+    | ...
 }
 
-
 /**
-* Configuring parameters in current location requests.
-*
-* @relation export interface CurrentLocationRequest
-*/
+ * Configuring parameters in current location requests.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public class CurrentLocationRequest {
     /**
-    * Priority of the location request.
-    *
-    * @relation priority?: LocationRequestPriority
-    */
+     * Priority of the location request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var priority: LocationRequestPriority
-    
+
     /**
-    * User scenario of the location request.
-    *
-    * @relation scenario?: LocationRequestScenario
-    */
+     * User scenario of the location request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var scenario: LocationRequestScenario
-    
+
     /**
-    * Accuracy requirements for reporting locations.
-    *
-    * @relation maxAccuracy?: number
-    */
+     * Accuracy requirements for reporting locations.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var maxAccuracy: Float32
-    
+
     /**
-    * Timeout interval of a single location request.
-    *
-    * @relation timeoutMs?: number
-    */
+     * Timeout interval of a single location request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var timeoutMs: Int32
-    
+
     /**
-    * CurrentLocationRequest Constructor.
-    */
+     * CurrentLocationRequest Constructor.
+     *
+     * @param { LocationRequestPriority } [priority] - The priority of the location request. The default value is FirstFix.
+     * @param { LocationRequestScenario } [scenario] - The user scenario of the location request. The default value is Unset.
+     * @param { Float32 } [maxAccuracy] - The accuracy requirements for reporting locations. The default value is 0.0.
+     * @param { Int32 } [timeoutMs] - The timeout interval of a single location request. The default value is 5000.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public init(priority!: LocationRequestPriority = LocationRequestPriority.FirstFix,
@@ -544,81 +483,69 @@ public class CurrentLocationRequest {
         timeoutMs!: Int32 = 5000)
 }
 
-
 /**
-* Enum for locating priority.
-*
-* @relation export enum LocatingPriority
-*/
+ * Enum for locating priority.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public enum LocatingPriority {
     /**
-    * Preferentially ensure the highest locating accuracy.
-    *
-    * @relation PRIORITY_ACCURACY = 0x501
-    */
+     * Preferentially ensure the highest locating accuracy.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    PriorityAccuracy |
+    PriorityAccuracy
+    | 
     /**
-    * Preferentially ensure the fastest locating speed.
-    *
-    * @relation PRIORITY_LOCATING_SPEED = 0x502
-    */
+     * Preferentially ensure the fastest locating speed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
-    PriorityLocatingSpeed |
-    ...
+    PriorityLocatingSpeed
+    | ...
 }
 
-
 /**
-* Configuring parameters in single location requests.
-*
-* @relation export interface SingleLocationRequest
-*/
+ * Configuring parameters in single location requests.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Location.Location.Core"
 ]
 public class SingleLocationRequest {
     /**
-    * Priority of the location request.
-    *
-    * @relation locatingPriority: LocatingPriority
-    */
+     * Priority of the location request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var locatingPriority: LocatingPriority
-    
+
     /**
-    * Timeout of a single location request, in milliseconds.
-    *
-    * @relation locatingTimeoutMs: number
-    */
+     * Timeout of a single location request, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public var locatingTimeoutMs: Int32
-    
+
     /**
-    * SingleLocationRequest Constructor.
-    */
+     * SingleLocationRequest Constructor.
+     *
+     * @param { LocatingPriority } locatingPriority - The priority of the location request.
+     * @param { Int32 } locatingTimeoutMs - The timeout of a single location request, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Location.Location.Core"
     ]
     public init(locatingPriority: LocatingPriority, locatingTimeoutMs: Int32)
 }
-
-

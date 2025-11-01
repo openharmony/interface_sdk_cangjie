@@ -1,27 +1,41 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.objectpool
 import std.collection.concurrent.*
 
 
-@Deprecated
-@!APILevel[since: "22"]
+/**
+ * @description A pool for reusing objects of type T to improve performance by reducing object creation overhead.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ObjectPool<T> where T <: Object {
-    @!APILevel[since: "22"]
+    /**
+     * @description Initializes the object pool with a function to create new objects and an optional function to reset objects before reuse.
+     * @param newFunc: The function that creates new instances of type T.
+     * @param resetFunc: An optional function that resets an object of type T before it is reused.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(newFunc: () -> T, resetFunc!: Option<(T) -> T> = None)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves an object from the pool. If the pool is empty, a new object is created using the provided newFunc.
+     * @returns An object of type T, either reused from the pool or newly created.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func get(): T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an object back to the pool for future reuse.
+     * @param item: The object of type T to be returned to the pool.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func put(item: T): Unit
 }
 

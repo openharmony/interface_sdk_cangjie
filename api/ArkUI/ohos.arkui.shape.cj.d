@@ -1,150 +1,221 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.shape
+
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.ffi.*
 import ohos.labels.APILevel
 
-
+/**
+ * A shape component that renders a circular graphic element.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class CircleShape <: BaseShape {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(width!: Length = 0.vp, height!: Length = 0.vp)
+/**
+ * Initializes a circular shape with optional width and height parameters.
+ *
+ * @param { ?Length } [width] - Width of the circle.
+ * @param { ?Length } [height] - Height of the circle.
+ * @returns { CircleShape } Returns the CircleShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(width!: ?Length = None, height!: ?Length = None)
 }
 
+/**
+ * A shape component that renders an elliptical graphic element.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class EllipseShape <: BaseShape {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(width!: Length = 0.vp, height!: Length = 0.vp)
+/**
+ * Initializes an elliptical shape with optional width and height parameters.
+ *
+ * @param { ?Length } [width] - Width of the ellipse.
+ * @param { ?Length } [height] - Height of the ellipse.
+ * @returns { EllipseShape } Returns the EllipseShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(width!: ?Length = None, height!: ?Length = None)
 }
 
+/**
+ * A shape component that renders custom paths defined by SVG path commands.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class PathShape <: BaseShape {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(commands!: ResourceStr = "")
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(width!: Length, height!: Length, commands!: ResourceStr = "")
+/**
+ * Initializes a path shape with optional path commands.
+ *
+ * @param { ?ResourceStr } [commands] - Path drawing commands in SVG path format.
+ * @returns { PathShape } Returns the PathShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(commands!: ?ResourceStr = None)
+
+/**
+ * Initializes a path shape with specified dimensions and optional path commands.
+ *
+ * @param { ?Length } width - Width of the path shape.
+ * @param { ?Length } height - Height of the path shape.
+ * @param { ?ResourceStr } [commands] - Path drawing commands in SVG path format.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(width!: ?Length, height!: ?Length, commands!: ?ResourceStr = None)
 }
 
+/**
+ * A shape component that renders rectangular graphic elements with optional rounded corners.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class RectShape <: BaseShape {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(width!: Length = 0.vp, height!: Length = 0.vp)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func radiusWidth(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func radiusHeight(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func radius(value: Length): This
+/**
+ * Initializes a rectangular shape with optional width and height parameters.
+ *
+ * @param { ?Length } [width] - Width of the rectangle.
+ * @param { ?Length } [height] - Height of the rectangle.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(width!: ?Length = None, height!: ?Length = None)
+
+/**
+ * Sets the width of the corner radius for RectShape.
+ * Configures the horizontal radius of the rectangle's rounded corners.
+ *
+ * @param { ?Length } rWidth - Width of the corner radius.
+ * @returns { This } Returns the RectShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func radiusWidth(rWidth: ?Length): This
+
+/**
+ * Sets the height of the corner radius for RectShape.
+ * Configures the vertical radius of the rectangle's rounded corners.
+ *
+ * @param { ?Length } rHeight - Height of the corner radius.
+ * @returns { This } Returns the RectShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func radiusHeight(rHeight: ?Length): This
+
+/**
+ * Sets the corner radius for RectShape.
+ * Configures both the horizontal and vertical radius of the rectangle's rounded corners.
+ *
+ * @param { ?Length } radius - Corner radius value applied to both width and height.
+ * @returns { This } Returns the RectShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func radius(radius: ?Length): This
 }
 
+/**
+ * Base shape class.
+ * Abstract base class for all shape components, providing common properties and methods for shape rendering.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public abstract class BaseShape <: RemoteDataLite {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fill(color: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func width(width: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func height(height: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func size(width!: Length, height!: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func offset(x!: Length, y!: Length): This
-}
+/**
+ * Sets the color of the filled area. The abnormal value is processed based on the default value.
+ * Configures the fill color used to paint the interior of the shape.
+ *
+ * @param { ?ResourceColor } color - Color of the filled area.
+ * @returns { This } Returns the BaseShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fill(color: ?ResourceColor): This
 
+/**
+ * Sets the shape width.
+ * Configures the width dimension of the shape.
+ *
+ * @param { ?Length } width - Shape width.
+ * @returns { This } Returns the BaseShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func width(width: ?Length): This
+
+/**
+ * Sets the shape height.
+ * Configures the height dimension of the shape.
+ *
+ * @param { ?Length } height - Shape height.
+ * @returns { This } Returns the BaseShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func height(height: ?Length): This
+
+/**
+ * Sets the shape size.
+ * Configures both the width and height dimensions of the shape.
+ *
+ * @param { ?Length } width - Shape width.
+ * @param { ?Length } height - Shape height.
+ * @returns { This } Returns the BaseShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func size(width!: ?Length, height!: ?Length): This
+
+/**
+ * Sets the shape offset.
+ * Configures the position offset of the shape relative to its container.
+ *
+ * @param { ?Length } x - x Offset from the left.
+ * @param { ?Length } y - y Offset from the top.
+ * @returns { This } Returns the BaseShape instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func offset(x!: ?Length, y!: ?Length): This
+}

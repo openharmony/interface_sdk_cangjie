@@ -13,77 +13,75 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.element_name
+
 import ohos.labels.*
 
-
-
 /**
-* Contains basic Ability information, which uniquely identifies an ability.
-* You can use this class to obtain values of the fields set in an element,
-* such as the device ID, bundle name, and ability name.
-*
-* @relation export interface ElementName
-*/
+ * Contains basic Ability information, which uniquely identifies an ability.
+ * You can use this class to obtain values of the fields set in an element,
+ * such as the device ID, bundle name, and ability name.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.BundleManager.BundleFramework.Core"
 ]
 public class ElementName {
     /**
-    * Indicates device id
-    *
-    * @relation deviceId?: string
-    */
+     * Indicates device id.
+     *
+     * @default -
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var deviceId: String
-    
+
     /**
-    * Indicates bundle name
-    * 
-    * @relation bundleName: string
-    */
+     * Indicates bundle name.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var bundleName: String
-    
+
     /**
-    * Indicates ability name
-    *
-    * @relation abilityName: string
-    */
+     * Indicates ability name.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var abilityName: String
-    
+
     /**
-    * Indicates module name
-    *
-    * @relation moduleName?: string
-    */
+     * Indicates module name.
+     *
+     * @default -
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public var moduleName: String
-    
+
     /**
-    * ElementName constructor.
-    */
+     * ElementName constructor.
+     *
+     * @param { String } bundleName - Indicates bundle name.
+     * @param { String } abilityName - Indicates ability name.
+     * @param { String } [deviceId] - Indicates device id. The default value is "".
+     * @param { String } [moduleName] - Indicates module name. The default value is "".
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.BundleManager.BundleFramework.Core"
     ]
     public init(bundleName: String, abilityName: String, deviceId!: String = "", moduleName!: String = "")
 }
-
-

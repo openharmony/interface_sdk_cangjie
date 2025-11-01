@@ -1,372 +1,337 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.random
 import std.math.*
 
 
 /**
-* Random class used for random manipulations.
-* @since 0.16.5
-*/
-@!APILevel[since: "22"]
+ * @description A class that provides methods for generating random numbers with various distributions
+ */
+@!APILevel[
+    since: "22"
+]
 public class Random {
     /**
-    * Create a new Random object.
-    *
-    * Default constructor.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Initializes a new random number generator with a time-based seed
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Create a new Random object.
-    *
-    * @param seed a seed of type UInt64.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Initializes a new random number generator with the specified seed
+     * @param seed - The seed value to initialize the random number generator
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(seed: UInt64)
     
     /**
-    * Set the size of Seed.
-    *
-    * @param seed a seed of type UInt64.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets or sets the seed value for the random number generator
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop seed: UInt64
     
     /**
-    * Get random of UInt64.
-    *
-    * @param bits bits of type UInt64.
-    * @return Parameters of UInt64.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if bits greater than 64.
-    */
-    @Deprecated["Use member function `public func nextBits(bits: UInt64): UInt64` instead."]
-    @!APILevel[since: "22"]
+     * @description Generates a random integer with the specified number of random bits
+     * @param bits - The number of random bits to generate (must be between 1 and 64)
+     * @returns A random UInt64 value with the specified number of random bits
+     * @throws IllegalArgumentException when bits parameter is out of range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func next(bits: UInt64): UInt64
     
     /**
-    * Get random of UInt64.
-    *
-    * @param bits bits of type UInt64.
-    * @return Parameters of UInt64.
-    *
-    * @throws IllegalArgumentException if bits greater than 64 or equal to 0.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random integer with the specified number of random bits
+     * @param bits - The number of random bits to generate (must be between 1 and 64)
+     * @returns A random UInt64 value with the specified number of random bits
+     * @throws IllegalArgumentException when bits parameter is out of range
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextBits(bits: UInt64): UInt64
     
     /**
-    * Get random of Bool.
-    *
-    * @return bool a random bool.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random boolean value
+     * @returns A random boolean value (true or false)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextBool(): Bool
     
     /**
-    * Get random of UInt8.
-    *
-    * @return Parameters of UInt8.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random UInt8 value
+     * @returns A random UInt8 value between 0 and 255
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextUInt8(): UInt8
     
     /**
-    * Get random of UInt16.
-    *
-    * @return Parameters of UInt16.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random UInt16 value
+     * @returns A random UInt16 value between 0 and 65535
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextUInt16(): UInt16
     
     /**
-    * Get random of UInt32.
-    *
-    * @return Parameters of UInt32.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random UInt32 value
+     * @returns A random UInt32 value between 0 and 4294967295
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextUInt32(): UInt32
     
     /**
-    * Get random of UInt64.
-    *
-    * @return Parameters of UInt64.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random UInt64 value
+     * @returns A random UInt64 value
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextUInt64(): UInt64
     
     /**
-    * Get random of Int8.
-    *
-    * @return Parameters of Int8.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random Int8 value
+     * @returns A random Int8 value between -128 and 127
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextInt8(): Int8
     
     /**
-    * Get random of Int16.
-    *
-    * @return Parameters of Int16.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random Int16 value
+     * @returns A random Int16 value between -32768 and 32767
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextInt16(): Int16
     
     /**
-    * Get random of Int32.
-    *
-    * @return Parameters of Int32.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random Int32 value
+     * @returns A random Int32 value between -2147483648 and 2147483647
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextInt32(): Int32
     
     /**
-    * Get random of Int64.
-    *
-    * @return Parameters of Int64.
-    *
-    * @since 0.16.5
-    */
+     * @description Generates a random Int64 value
+     * @returns A random Int64 value
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func nextInt64(): Int64
     
     /**
-    * Get random of UInt8.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper UInt8 type upper.
-    * @return Parameters of UInt8.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper is equal to zero.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random UInt8 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random UInt8 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextUInt8(upper: UInt8): UInt8
     
     /**
-    * Get random of UInt16.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper UInt16 type upper.
-    * @return Parameters of UInt16.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper is equal to zero.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random UInt16 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random UInt16 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextUInt16(upper: UInt16): UInt16
     
     /**
-    * Get random of UInt32.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper UInt32 type upper.
-    * @return Parameters of UInt32.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper is equal to zero.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random UInt32 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random UInt32 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextUInt32(upper: UInt32): UInt32
     
     /**
-    * Get random of UInt64.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper UInt64 type upper.
-    * @return Parameters of UInt64.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper is equal to zero.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random UInt64 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random UInt64 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextUInt64(upper: UInt64): UInt64
     
     /**
-    * Get random of Int8.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper Int8 type upper.
-    * @return Parameters of Int8.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper <= 0.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Int8 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random Int8 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is less than or equal to 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextInt8(upper: Int8): Int8
     
     /**
-    * Get random of Int16.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper Int16 type upper.
-    * @return Parameters of Int16.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper <= 0.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Int16 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random Int16 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is less than or equal to 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextInt16(upper: Int16): Int16
     
     /**
-    * Get random of Int32.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper Int32 type upper.
-    * @return Parameters of Int32.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper <= 0.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Int32 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random Int32 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is less than or equal to 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextInt32(upper: Int32): Int32
     
     /**
-    * Get random of Int64.An exception is thrown when upper is less than or equal to 0.
-    * upper is excluded from the results
-    *
-    * @param upper Int64 type upper.
-    * @return Parameters of Int64.
-    *
-    * @since 0.16.5
-    *
-    * @throws IllegalArgumentException if upper <= 0.
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Int64 value with an upper bound
+     * @param upper - The exclusive upper bound for the generated value
+     * @returns A random Int64 value between 0 (inclusive) and upper (exclusive)
+     * @throws IllegalArgumentException when upper is less than or equal to 0
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextInt64(upper: Int64): Int64
     
     /**
-    * Get random of UInt8s.
-    *
-    * @return Parameters of UInt8s[].
-    *
-    * @since 0.16.5
-    */
-    @Deprecated["Use member function `public func nextBytes(arr: Array<Byte>): Unit` instead."]
-    @!APILevel[since: "22"]
+     * @description Fills the provided array with random UInt8 values
+     * @param array - The array to fill with random values
+     * @returns The filled array
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextUInt8s(array: Array<UInt8>): Array<UInt8>
     
     /**
-    * Fill the byte array with random bytes.
-    */
-    @!APILevel[since: "22"]
+     * @description Fills the provided byte array with random values(in-place modification and no return value).
+     * @param bytes - The byte array to fill with random values
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextBytes(bytes: Array<Byte>): Unit
     
     /**
-    * Generate a byte array with random bytes.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new byte array of the specified length and fills it with random values
+     * @param length - The length of the byte array to create
+     * @returns A new byte array filled with random values
+     * @throws IllegalArgumentException when length is negative or zero
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func nextBytes(length: Int32): Array<Byte>
     
     /**
-    * Get random of Float16.
-    *
-    * @return Parameters of Float16.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Float16 value between 0.0 (inclusive) and 1.0 (exclusive)
+     * @returns A random Float16 value between 0.0 (inclusive) and 1.0 (exclusive)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextFloat16(): Float16
     
     /**
-    * Get random of Float32.
-    *
-    * @return Parameters of Float32.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Float32 value between 0.0 (inclusive) and 1.0 (exclusive)
+     * @returns A random Float32 value between 0.0 (inclusive) and 1.0 (exclusive)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextFloat32(): Float32
     
     /**
-    * Get random of Float64.
-    *
-    * @return Parameters of Float64.
-    *
-    * @since 0.16.5
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Float64 value between 0.0 (inclusive) and 1.0 (exclusive)
+     * @returns A random Float64 value between 0.0 (inclusive) and 1.0 (exclusive)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextFloat64(): Float64
     
     /**
-    * Obtaining Gaussian (normal) distribution random values.
-    *
-    * @param mean: mean value
-    * @param sigma: standard deviation
-    * @return Float16 random value
-    *
-    * @since 0.40.2
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Float16 value from a Gaussian distribution
+     * @param mean - The mean of the Gaussian distribution, defaults to 0.0
+     * @param sigma - The standard deviation of the Gaussian distribution, defaults to 1.0
+     * @returns A random Float16 value from a Gaussian distribution with the specified mean and standard deviation
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextGaussianFloat16(mean!: Float16 = 0.0, sigma!: Float16 = 1.0): Float16
     
     /**
-    * Obtaining Gaussian (normal) distribution random values.
-    *
-    * @param mean: mean value
-    * @param sigma: standard deviation
-    * @return Float32 random value
-    *
-    * @since 0.40.2
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Float32 value from a Gaussian distribution
+     * @param mean - The mean of the Gaussian distribution, defaults to 0.0
+     * @param sigma - The standard deviation of the Gaussian distribution, defaults to 1.0
+     * @returns A random Float32 value from a Gaussian distribution with the specified mean and standard deviation
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextGaussianFloat32(mean!: Float32 = 0.0, sigma!: Float32 = 1.0): Float32
     
     /**
-    * Obtaining Gaussian (normal) distribution random values.
-    *
-    * @param mean: mean value
-    * @param sigma: standard deviation
-    * @return Float64 random value
-    *
-    * @since 0.40.2
-    */
-    @!APILevel[since: "22"]
+     * @description Generates a random Float64 value from a Gaussian distribution
+     * @param mean - The mean of the Gaussian distribution, defaults to 0.0
+     * @param sigma - The standard deviation of the Gaussian distribution, defaults to 1.0
+     * @returns A random Float64 value from a Gaussian distribution with the specified mean and standard deviation
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func nextGaussianFloat64(mean!: Float64 = 0.0, sigma!: Float64 = 1.0): Float64
 }
 

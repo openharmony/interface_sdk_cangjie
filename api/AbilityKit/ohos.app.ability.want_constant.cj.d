@@ -13,187 +13,255 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.want_constant
-import std.deriving.Derive
+
 import ohos.labels.*
 
-
 /**
-* The constant for params of the want
-*
-* @relation export enum Params
-*/
-@Derive[ToString, Equatable]
+ * The constant for params of the want.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public enum Params {
+    
     /**
-    * Indicates the ability in this want can back to the current top ability even though they are not in the same
-    * mission stack
-    *
-    * @relation ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'
-    */
+     * Indicates the ability in this want can back to the current top ability even though they are not in the same
+     * mission stack.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    AbilityBackToOtherMissionStack |
+    AbilityBackToOtherMissionStack
+    | 
+    
     /**
-    * Indicates the param of ability failure restart recovery identification
-    *
-    * @relation ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'
-    */
+     * Indicates the param of ability failure restart recovery identification.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    AbilityRecoveryRestart |
+    AbilityRecoveryRestart
+    | 
+    
     /**
-    * Indicates the param of extra content title
-    *
-    * @relation CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
-    */
+     * Indicates the param of extra content title.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    ContentTitleKey |
+    ContentTitleKey
+    | 
+    
     /**
-    * Indicates the param of extra shared abstract
-    *
-    * @relation SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
-    */
+     * Indicates the param of extra shared abstract
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    ShareAbstractKey |
+    ShareAbstractKey
+    | 
+    
     /**
-    * Indicates the param of extra shareURL
-    *
-    * @relation SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
-    */
+     * Indicates the param of extra shareURL
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    ShareUrlKey |
+    ShareUrlKey
+    | 
+    
     /**
-    * Indicates the param of extra support continue page stack.
-    * The default value of the param is true,
-    * and the system will automatically flow the page stack information by default.
-    *
-    * @relation SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'
-    */
+     * Indicates the param of extra support continue page stack.
+     * The default value of the param is true,
+     * and the system will automatically flow the page stack information by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    SupportContinuePageStackKey |
+    SupportContinuePageStackKey
+    | 
+    
     /**
-    * Indicates the param of extra stop source ability on continue.
-    * The default value of the param is true,
-    * and the system will exit the source application by default.
-    *
-    * SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'
-    */
+     * Indicates the param of extra stop source ability on continue.
+     * The default value of the param is true,
+     * and the system will exit the source application by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    SupportContinueSourceExitKey |
-    ...
+    SupportContinueSourceExitKey
+    | ...
+
+    
     /**
-    * get the corresponding mapping value.
-    *
-    * @throws { IllegalArgumentException } - The type is not supported.
-    */
+     * Get the corresponding mapping value.
+     *
+     * @returns { String } Returns the corresponding mapping value.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityBase"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase",
+        throwexception: true
     ]
     public func getValue(): String
 }
 
 
+extend Params <: ToString {
+    
+    /**
+     * Converts the Params to its string representation.
+     * @returns { String } A string representation of the Params.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase"
+    ]
+    public func toString(): String
+}
+
+
+extend Params <: Equatable<Params> {
+    
+    /**
+     * Compares this Params with another for equality.
+     * @param { Params } other - The Params to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase"
+    ]
+    public operator func ==(other: Params): Bool
+    
+    /**
+     * Compares this Params with another for inequality.
+     * @param { Params } other - The Params to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase"
+    ]
+    public operator func !=(other: Params): Bool
+}
 
 /**
-* Used to indicate how Want is handled.
-*
-* @relation export enum Flags
-*/
-@Derive[ToString, Equatable]
+ * Used to indicate how Want is handled.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public enum Flags {
     /**
-    * Indicates the grant to perform read operations on the URI.
-    *
-    * @relation FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
-    */
+     * Indicates the grant to perform read operations on the URI.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    FlagAuthReadUriPermission |
+    FlagAuthReadUriPermission
+    | 
     /**
-    * Indicates the grant to perform write operations on the URI.
-    *
-    * @relation FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
-    */
+     * Indicates the grant to perform write operations on the URI.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    FlagAuthWriteUriPermission |
+    FlagAuthWriteUriPermission
+    | 
     /**
-    * Indicates the grant for possible persisting on the URI.
-    *
-    * @relation FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
-    */
+     * Indicates that the URI can be persisted by the callee.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    FlagAuthPersistableUriPermission |
+    FlagAuthPersistableUriPermission
+    | 
     /**
-    * Install the specified ability if it's not installed.
-    *
-    * @relation FLAG_INSTALL_ON_DEMAND = 0x00000800
-    */
+     * Install the specified ability if it's not installed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    FlagInstallOnDemand |
+    FlagInstallOnDemand
+    | 
     /**
-    * Indicates that if implicit start ability couldn't match any application, no tip dialog will be pulled up.
-    *
-    * @relation FLAG_START_WITHOUT_TIPS = 0x40000000
-    */
+     * Indicates that if implicit start ability couldn't match any application, no tip dialog will be pulled up.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
-    FlagStartWithoutTips |
-    ...
+    FlagStartWithoutTips
+    | ...
+
     /**
-    * get the corresponding mapping value.
-    *
-    * @throws { IllegalArgumentException } - The type is not supported.
-    */
+     * Get the corresponding mapping value.
+     *
+     * @returns { UInt32 } Returns the corresponding mapping value.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityBase"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase",
+        throwexception: true
     ]
     public func getValue(): UInt32
 }
 
 
+extend Flags <: ToString {
+    
+    /**
+     * Converts the Flags to its string representation.
+     * @returns { String } A string representation of the Flags.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase"
+    ]
+    public func toString(): String
+}
 
+
+extend Flags <: Equatable<Flags> {
+    
+    /**
+     * Compares this Flags with another for equality.
+     * @param { Flags } other - The Flags to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase"
+    ]
+    public operator func ==(other: Flags): Bool
+    
+    /**
+     * Compares this Flags with another for inequality.
+     * @param { Flags } other - The Flags to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase"
+    ]
+    public operator func !=(other: Flags): Bool
+}

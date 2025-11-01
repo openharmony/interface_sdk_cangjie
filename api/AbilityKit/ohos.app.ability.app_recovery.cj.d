@@ -13,24 +13,19 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.app_recovery
-import ohos.app.ability.want.*
+
 import ohos.labels.*
 
-
 /**
-* Restart current process and launch the first ability(the entry ability in most cases) of current process.
-* The previous saved state will be filled in the want.wantParams of UIAbility.onCreate interface.
-* and the param of UIAbility.onCreate will be set to AppRecovery.
-*
-* @relation function restartApp(): void
-*/
+ * Restart current process and launch the first ability(the entry ability in most cases) of current process.
+ * The previous saved state will be filled in the want.wantParams of UIAbility.onCreate interface.
+ * and the param of UIAbility.onCreate will be set to AppRecovery.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public func restartApp(): Unit
-
-
