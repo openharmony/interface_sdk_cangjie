@@ -1,12 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.process
 import std.collection.*
@@ -17,291 +8,554 @@ import std.sync.*
 import std.time.*
 
 /**
-* CurrentProcess provide the base func for current process.
-*/
-@Deprecated[message: "Use related global functions in the std.env instead."]
-@!APILevel[since: "22"]
+ * @description Represents the current process and provides access to its properties and operations
+ */
+@!APILevel[
+    since: "22"
+]
 public class CurrentProcess <: Process {
-    @!APILevel[since: "22"]
+    /**
+     * @description Standard error stream of the current process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdErr: OutputStream
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Standard output stream of the current process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdOut: OutputStream
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Standard input stream of the current process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdIn: InputStream
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the command-line arguments of the current process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop arguments: Array<String>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the home directory path of the current user
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop homeDirectory: Path
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the temporary directory path for the current process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop tempDirectory: Path
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves the value of an environment variable
+     * @param key - The name of the environment variable
+     * @returns An Option containing the value if the variable exists
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getEnv(key: String): Option<String>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets an environment variable to a specified value
+     * @param k - The name of the environment variable
+     * @param v - The value to set
+     * @throws IllegalArgumentException when k or v is empty
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func setEnv(k: String, v: String): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Removes an environment variable
+     * @param k - The name of the environment variable to remove
+     * @throws IllegalArgumentException when k is empty
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeEnv(k: String): Unit
     
     /**
-    * Sets the function to be called before the program ends normally.
-    * Function description: atexit() is used to set a function to be called before the program ends normally. When the program returns from main by calling exit(),
-    * The function specified by the function parameter is called before exit() ends the program.
-    * Do not use the atexit function of the C language. Otherwise, unexpected problems may arise.
-    *
-    * @param callback Called Before Normal Exit.
-    *
-    * since 0.24.3
-    */
-    @!APILevel[since: "22"]
+     * @description Registers a callback function to be executed when the process exits
+     * @param callback - The function to execute at process exit
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func atExit(callback: () -> Unit): Unit
     
     /**
-    * exit() is used to terminate the execution of the current progetStdoutStreamcess and return the status parameter to the parent Process.
-    * All buffer data of the Process is automatically written back and the files that are not closed are closed
-    *
-    * @param code Register the function to be executed before the Process exits.
-    */
-    @!APILevel[since: "22"]
+     * @description Terminates the current process with the specified exit code
+     * @param code - The exit code to return to the operating system
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func exit(code: Int64): Nothing
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents an operating system process and provides access to its properties and operations
+ */
+@!APILevel[
+    since: "22"
+]
 public open class Process {
     /**
-    * return a process instance for current process.The process instance can used to find processInfo and terminate
-    * current process. Also the process instance provide stdio, which can be used to read or write message.
-    */
-    @Deprecated[message: "CurrentProcess has been marked as deprecated, use related global functions in the std.env instead."]
-    @!APILevel[since: "22"]
+     * @description Gets the current process instance
+     * @throws ProcessException when the process operation fails
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static prop current: CurrentProcess
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the process identifier (PID)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop pid: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the name of the process
+     * @throws ProcessException when the process information cannot be retrieved
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the command used to start the process
+     * @throws ProcessException when the process information cannot be retrieved
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop command: String
     
-    // Process start time
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the time when the process was started
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop startTime: DateTime
     
-    // Time spent on system calls executed directly or indirectly by the program
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the amount of system CPU time used by the process
+     * @returns The duration of system CPU time consumed by the process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop systemTime: Duration
     
-    // Time spent by the program itself and the subprocesses in the libraries it calls
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the amount of user CPU time used by the process
+     * @returns The duration of user CPU time consumed by the process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop userTime: Duration
     
-    @Deprecated
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the command-line arguments of the process
+     * @returns An array of strings containing the command-line arguments
+     * @throws ProcessException when the process information cannot be retrieved
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public open prop arguments: Array<String>
     
-    @Deprecated[message: "Use global function `public func getCommandLine(): Array<String>` in std.env instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the full command line used to start the process
+     * @returns An array of strings representing the command line
+     * @throws ProcessException when the process information cannot be retrieved
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop commandLine: Array<String>
     
-    @Deprecated[message: "Use global function `public func getHomeDirectory(): Path` in std.env instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the working directory of the process
+     * @returns The path to the working directory
+     * @throws ProcessException when the process information cannot be retrieved
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop workingDirectory: Path
     
-    @Deprecated[message: "Use global function `public func getVariables(): Array<(String, String)>` in std.env instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the environment variables of the process
+     * @returns A map of environment variable names to their values
+     * @throws ProcessException when the process information cannot be retrieved
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public prop environment: Map<String, String>
     
     /**
-    * return a process instance for an existing process which pid is giving by user.
-    * The process instance can used to find processInfo and terminate the process.
-    * We can not get stdio for any pid process, so that do not provide the stream attribute to operate stdio.
-    */
-    @Deprecated[message: "Use global function `public func findProcess(pid: Int64): Process` instead."]
-    @!APILevel[since: "22"]
+     * @description Creates a Process object for the specified process ID
+     * @param pid - The process ID to find
+     * @returns A Process object representing the specified process
+     * @throws ProcessException when memory allocation fails or the process corresponding to pid does not exist
+     * @throws IllegalArgumentException when pid is less than 0 or greater than max value of Int32
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func of(pid: Int64): Process
     
     /**
-    * start a new subProcess using command and arguments which provide by user.
-    *
-    * @param command - vaild system command, should not be empty string and can not include Null character.
-    * @param arguments - command arguments, each of the arguments should not be empty string and can not include Null character.
-    * @param workingDirectory - command working directory, if None, means inherit current process working directory.
-    * @param environment - command working environment, if None, means inherit current process environment.
-    * @param stdIn - stdIn redirect mode.
-    * @param stdOut - stdOut redirect mode.
-    * @param stdErr - stdErr redirect mode.
-    *
-    * @return SubProcess - a new subProcess instance.
-    */
-    @Deprecated[message: "Use global function `public func launch(command: String, arguments: Array<String>, workingDirectory!: ?Path = None, environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit, stdErr!: ProcessRedirect = Inherit): SubProcess` instead."]
-    @!APILevel[since: "22"]
+     * @description Launches a new subprocess with the specified command and arguments
+     * @param command - The command to execute
+     * @param arguments - The arguments to pass to the command
+     * @param workingDirectory - The working directory for the subprocess
+     * @param environment - The environment variables for the subprocess
+     * @param stdIn - The standard input redirection
+     * @param stdOut - The standard output redirection
+     * @param stdErr - The standard error redirection
+     * @returns A SubProcess object representing the launched subprocess
+     * @throws ProcessException when memory allocation fails or the command corresponding to command does not exist
+     * @throws IllegalArgumentException when the input parameter command contains a null character, 
+     *         or the strings in the arguments array contain a null character, 
+     *         or workingDirectory is not an existing directory, is an empty path, or contains a null character, 
+     *         or in the environment table, the key string contains a null character or '=', 
+     *         or the value string contains a null character, or when stdIn, stdOut
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func start(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
         environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit,
         stdOut!: ProcessRedirect = Inherit, stdErr!: ProcessRedirect = Inherit): SubProcess
     
     /**
-    * func run is combine the start and wait.
-    * provide a convenient way for user, which want start a subprocess and wait the command exec return code.
-    */
-    @Deprecated[message: "Use global function `public func execute(command: String, arguments: Array<String>, workingDirectory!: ?Path = None, environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit, stdErr!: ProcessRedirect = Inherit, timeout!: ?Duration = None): Int64` instead."]
-    @!APILevel[since: "22"]
-    public static func run(command: String, arguments: Array<String>, 
-            workingDirectory!: ?Path = None, 
-            environment!: ?Map<String, String> = None, 
-            stdIn!: ProcessRedirect = Inherit, 
-            stdOut!: ProcessRedirect = Inherit, 
-            stdErr!: ProcessRedirect = Inherit, 
+     * @description Executes a command and waits for it to complete
+     * @param command - The command to execute
+     * @param arguments - The arguments to pass to the command
+     * @param workingDirectory - The working directory for the process
+     * @param environment - The environment variables for the process
+     * @param stdIn - The standard input redirection
+     * @param stdOut - The standard output redirection
+     * @param stdErr - The standard error redirection
+     * @param timeout - The maximum duration to wait for the process to complete
+     * @returns The exit code of the process
+     * @throws ProcessException when memory allocation fails or the command corresponding to command does not exist or timeout
+     * @throws IllegalArgumentException when the input parameter command contains a null character, 
+     *         or the strings in the arguments array contain a null character, 
+     *         or workingDirectory is not an existing directory, is an empty path, or contains a null character, 
+     *         or in the environment table, the key string contains a null character or '=', 
+     *         or the value string contains a null character, or when stdIn, stdOut
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
+    public static func run(command: String, arguments: Array<String>,
+            workingDirectory!: ?Path = None,
+            environment!: ?Map<String, String> = None,
+            stdIn!: ProcessRedirect = Inherit,
+            stdOut!: ProcessRedirect = Inherit,
+            stdErr!: ProcessRedirect = Inherit,
             timeout!: ?Duration = None): Int64
     
     /**
-    * func runOutput is combine the start and waitOutput.
-    * provide a convenient way for user, which want start a subprocess and wait the command exec output and err result.
-    */
-    @Deprecated[message: "Use global function `public func executeWithOutput(command: String, arguments: Array<String>, workingDirectory!: ?Path = None, environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Pipe, stdErr!: ProcessRedirect = Pipe): (Int64, Array<Byte>, Array<Byte>)` instead."]
-    @!APILevel[since: "22"]
+     * @description Executes a command, captures its output, and waits for it to complete
+     * @param command - The command to execute
+     * @param arguments - The arguments to pass to the command
+     * @param workingDirectory - The working directory for the process
+     * @param environment - The environment variables for the process
+     * @param stdIn - The standard input redirection
+     * @param stdOut - The standard output redirection
+     * @param stdErr - The standard error redirection
+     * @returns A tuple containing the exit code, standard output, and standard error
+     * @throws ProcessException when memory allocation fails or the command corresponding to command does not exist, 
+     *         or subprocess does not exist, or fails to read stdout
+     * @throws IllegalArgumentException when the input parameter command contains a null character, 
+     *         or the strings in the arguments array contain a null character, 
+     *         or workingDirectory is not an existing directory, is an empty path, or contains a null character, 
+     *         or in the environment table, the key string contains a null character or '=', 
+     *         or the value string contains a null character, or when stdIn, stdOut
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func runOutput(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
         environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Pipe,
         stdErr!: ProcessRedirect = Pipe): (Int64, Array<Byte>, Array<Byte>)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if the process is still running
+     * @returns True if the process is running, false otherwise
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAlive(): Bool
     
     /**
-    * terminate process
-    * when terminate the subprocess, the spawn which open to wait subprocess
-    * will modify status and change stdio stream to ByteBuffer let user can read
-    * stdOut & stdErr unread data after subprocess be killed.
-    *
-    * @param force - true terminated forcibly
-    *                false terminated normally
-    *
-    * @throws ProcessException - if the pid invaild
-    * @return Unit
-    */
-    @!APILevel[since: "22"]
+     * @description Terminates the process
+     * @param force - If true, forcefully terminates the process; otherwise attempts a graceful termination
+     * @throws ProcessException when the process does not exist
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func terminate(force!: Bool = false): Unit
 }
 
 /**
-* Supported process redirect mode.
-* Pipe: create a pipe between parent current and child process, which can provide a way to exchange info.
-* Inherit: use the same stdio with the current process.
-* FromFile: redirect stdio to a specified file which define by user.
-* Discard: discard the stdio, redirect to system specific "null file".
-*/
-@!APILevel[since: "22"]
+ * @description Defines how process input/output streams are redirected
+ */
+@!APILevel[
+    since: "22"
+]
 public enum ProcessRedirect {
-    @!APILevel[since: "22"]
+    /**
+     * @description Inherits the stream from the parent process
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Inherit |
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a pipe for the stream
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Pipe |
-    @!APILevel[since: "22"]
+    /**
+     * @description Redirects the stream from a file
+     */
+    @!APILevel[
+        since: "22"
+    ]
     FromFile(File) |
-    @!APILevel[since: "22"]
+    /**
+     * @description Discards the stream output
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Discard
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Finds a process by its process ID
+ * @param pid - The process ID to find
+ * @returns A Process object representing the specified process
+ * @throws ProcessException when the process cannot be found or accessed
+ * @throws IllegalArgumentException when providing invalid arguments
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func findProcess(pid: Int64): Process
 
 /**
-* start a new subProcess using command and arguments which provide by user.
-*
-* @param command - vaild system command, should not be empty string and can not include Null character.
-* @param arguments - command arguments, each of the arguments should not be empty string and can not include Null character.
-* @param workingDirectory - command working directory, if None, means inherit current process working directory.
-* @param environment - command working environment, if None, means inherit current process environment.
-* @param stdIn - stdIn redirect mode.
-* @param stdOut - stdOut redirect mode.
-* @param stdErr - stdErr redirect mode.
-*
-* @return SubProcess - a new subProcess instance.
-*/
-@!APILevel[since: "22"]
+ * @description Launches a new subprocess with the specified command and arguments
+ * @param command - The command to execute
+ * @param arguments - The arguments to pass to the command
+ * @param workingDirectory - The working directory for the subprocess
+ * @param environment - The environment variables for the subprocess
+ * @param stdIn - The standard input redirection
+ * @param stdOut - The standard output redirection
+ * @param stdErr - The standard error redirection
+ * @returns A SubProcess object representing the launched subprocess
+ * @throws FSException when workingDirectory does not exist
+ * @throws ProcessException when the process cannot be launched
+ * @throws IllegalArgumentException when providing invalid arguments
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func launch(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
     environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit,
     stdErr!: ProcessRedirect = Inherit): SubProcess
 
 /**
-* func execute is combine the launch and wait.
-* provide a convenient way for user, which want start a subprocess and wait the command exec return code.
-*/
-@!APILevel[since: "22"]
+ * @description Executes a command and waits for it to complete
+ * @param command - The command to execute
+ * @param arguments - The arguments to pass to the command
+ * @param workingDirectory - The working directory for the process
+ * @param environment - The environment variables for the process
+ * @param stdIn - The standard input redirection
+ * @param stdOut - The standard output redirection
+ * @param stdErr - The standard error redirection
+ * @param timeout - The maximum duration to wait for the process to complete
+ * @returns The exit code of the process
+ * @throws IllegalArgumentException when providing invalid arguments
+ * @throws TimeoutException when the process execution exceeds the timeout
+ * @throws FSException when workingDirectory does not exist
+ * @throws ProcessException when the process execution fails
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func execute(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
     environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Inherit,
     stdErr!: ProcessRedirect = Inherit, timeout!: ?Duration = None): Int64
 
 /**
-* func executeWithOutput is combine the start and waitOutput.
-* provide a convenient way for user, which want start a subprocess and wait the command exec output and err result.
-*/
-@!APILevel[since: "22"]
+ * @description Executes a command, captures its output, and waits for it to complete
+ * @param command - The command to execute
+ * @param arguments - The arguments to pass to the command
+ * @param workingDirectory - The working directory for the process
+ * @param environment - The environment variables for the process
+ * @param stdIn - The standard input redirection
+ * @param stdOut - The standard output redirection
+ * @param stdErr - The standard error redirection
+ * @returns A tuple containing the exit code, standard output, and standard error
+ * @throws IllegalArgumentException when providing invalid arguments
+ * @throws FSException when workingDirectory does not exist
+ * @throws ProcessException when the process execution fails
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func executeWithOutput(command: String, arguments: Array<String>, workingDirectory!: ?Path = None,
     environment!: ?Map<String, String> = None, stdIn!: ProcessRedirect = Inherit, stdOut!: ProcessRedirect = Pipe,
     stdErr!: ProcessRedirect = Pipe): (Int64, Array<Byte>, Array<Byte>)
 
 /**
-* ProcessException
-*
-*/
-@!APILevel[since: "22"]
+ * @description Exception thrown when a process operation fails
+ */
+@!APILevel[
+    since: "22"
+]
 public class ProcessException <: IOException {
-    @!APILevel[since: "22"]
+    /**
+     * @description Initializes a new instance of ProcessException with the specified error message
+     * @param message - The error message that explains the reason for the exception
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* SubProcess
-*
-*/
-@!APILevel[since: "22"]
+ * @description Represents a child process created by the current process
+ */
+@!APILevel[
+    since: "22"
+]
 public class SubProcess <: Process {
-    @!APILevel[since: "22"]
+    /**
+     * @description Output stream for writing to the standard input of the subprocess
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdInPipe: OutputStream
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Input stream for reading from the standard output of the subprocess
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdOutPipe: InputStream
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Input stream for reading from the standard error of the subprocess
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdErrPipe: InputStream
     
-    @Deprecated[message: "Use `public prop stdErrPipe: InputStream` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Input stream for reading from the standard error of the subprocess
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdErr: InputStream
     
-    @Deprecated[message: "Use `public prop stdOutPipe: InputStream` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Input stream for reading from the standard output of the subprocess
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdOut: InputStream
     
-    @Deprecated[message: "Use `public prop stdInPipe: OutputStream` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Output stream for writing to the standard input of the subprocess
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop stdIn: OutputStream
     
     /**
-    * wait func developer should read the outputStream or errStream first and then invoke this func.
-    * if developer invoke wait func first and then read stream, it can be occur unexpected concurrency results.
-    *
-    * @param timeout
-    * @return Int64
-    */
-    @!APILevel[since: "22"]
+     * @description Waits for the subprocess to complete
+     * @param timeout - The maximum time to wait for the process to complete
+     * @returns The exit code of the subprocess
+     * @throws TimeoutException when the process does not complete within the specified timeout
+     * @throws ProcessException when the process operation fails
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func wait(timeout!: ?Duration = None): Int64
     
     /**
-    * waitOutput func is applicable to scenarios where number of bytes in output or error stream is small.
-    * If you need to deal with big size within output or error stream, please use stdOut or stdErr prop and wait func.
-    *
-    * @return (exitCode: Int64, out: Array<Byte>, err: Array<Byte>)
-    */
-    @!APILevel[since: "22"]
+     * @description Waits for the subprocess to complete and returns its output
+     * @returns A tuple containing the exit code, standard output, and standard error
+     * @throws ProcessException when the process operation fails
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func waitOutput(): (Int64, Array<Byte>, Array<Byte>)
 }
 

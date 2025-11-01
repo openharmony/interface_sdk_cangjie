@@ -1,976 +1,851 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.state_management
-import ohos.base.*
-import ohos.labels.APILevel
-import std.collection.*
 
+import ohos.ark_interop.*
+import ohos.base.*
 import ohos.ffi.*
 import ohos.hilog.*
-import ohos.ark_interop.*
+import ohos.labels.APILevel
+import std.collection.*
 import std.collection.ArrayList
+import std.deriving.Derive
 
+/**
+ * AppStorage singleton is sub-class of see LocalStorage for
+ * UI state of app-wide access and same life cycle as the app.
+ * Provides a centralized storage for application-wide state management.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class AppStorage {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Establishes a bidirectional synchronization between a component variable and an AppStorage property.
+ *
+ * @param { String } propName - name of source property in AppStorage
+ * @returns { ?ObservedProperty<T> } The instance of ObservedProperty<T>, return 'None' if named property does not already exist in AppStorage.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func link<T>(propName: String): ?ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Like see @link(), but will create and initialize a new source property in AppStorage if missing
+ * Same as see LocalStorage.setAndLink()
+ *
+ * @param { String } propName - name of source property in AppStorage.
+ * @param { T } defaultValue - value to be used for initializing new property in AppStorage,
+ * default value must be of type T, can be None.
+ * @returns { ObservedProperty<T> } The instance of ObservedProperty<T>.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func setAndLink<T>(propName: String, defaultValue: T): ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func `prop`<T>(propName: String): ?ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Create and return a one-way sync ('prop') to named property.
+ * Establishes a unidirectional synchronization from AppStorage to a component variable.
+ *
+ * @param { String } propName - name of source property in AppStorage.
+ * @returns { ?ObservedProperty<T> } instance of ObservedProperty<T>, return None if named property does not already exist in AppStorage.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public static func property<T>(propName: String): ?ObservedProperty<T>
+
+/**
+ * Like prop(), will create and initialize a new source property in AppStorage if missing.
+ * Same as see LocalStorage.setAndProp().
+ *
+ * @param { String } propName - name of source property in AppStorage.
+ * @param { T } defaultValue - value to be used for initializing new property in AppStorage.
+ * @returns { ObservedProperty<T> } The instance of  ObservedProperty<T>.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func setAndProp<T>(propName: String, defaultValue: T): ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Checks if AppStorage has a property with given name.
+ * Returns true if property with given name exists.
+ * Same as ES6 Map.prototype.has().
+ * Same as see LocalStorage.has().
+ *
+ * @param { String } propName - searched property
+ * @returns { Bool } true if property with such name exists in AppStorage.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func has(propName: String): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Same as see LocalStorage.get().
+ * Obtain the value of property with given name, returns undefined if the property does not exist in AppStorage.
+ *
+ * @param { String } propName - name of the property to retrieve
+ * @returns { ?T } property value of type T if found or None.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func get<T>(propName: String): ?T
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Set value of given property in AppStorage.
+ * Method sets nothing and returns false if property with this name does not exist in AppStorage.
+ * Same as see LocalStorage.set().
+ *
+ * @param { String } propName - name of the property to set
+ * @param { T } newValue - must be of type T
+ * @returns { Bool } true on success, i.e. when above conditions are satisfied, otherwise false.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func set<T>(propName: String, newValue: T): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Set value of given property, if it exists, see set() .
+ * Add property if no property with given name in AppStorage, and initialize with given value.
+ * newValue can be undefined or null from API 12.
+ * see LocalStorage.setOrCreate().
+ *
+ * @param { String } propName - name of the property to set or create
+ * @param { T } newValue - must be of type T.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func setOrCreate<T>(propName: String, newValue: T): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Delete property with given name from AppStorage.
+ * Use with caution:
+ * Before deleting a prop from AppStorage all its subscribers need to
+ * unsubscribe from the property.
+ * This method fails and returns false if given property still has subscribers.
+ * Another reason for failing is unknown property name.
+ * Developer advise:
+ * Subscribers to a property in AppStorage are created with see link(), see prop()
+ * and also via @StorageLink and @StorageProp state variable decorators.
+ * That means as long as their is a @Component instance that uses such decorated variable
+ * or a sync relationship with a SubscribedAbstractProperty variable the property can not
+ * (and also should not!) be deleted from AppStorage.
+ * Same as see LocalStorage.delete()
+ *
+ * @param { String } propName - name of the property to delete
+ * @returns { Bool } false if method failed.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func delete(propName: String): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Return the array of all keys.
+ *
+ * @returns { EquatableCollection<String> } the array of all keys.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func keys(): EquatableCollection<String>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Method returns the number of properties currently in AppStorage.
+ *
+ * @returns { Int64 } Returns the number of properties currently in AppStorage.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func size(): Int64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Delete all properties from the AppStorage.
+ * Precondition is that there are no subscribers, see Delete().
+ *
+ * @returns { Bool } false and deletes no properties if there is any property that still has subscribers.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func clear(): Bool
 }
 
+/**
+ * Represents the color mode (theme) of the device.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public enum ColorMode {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    Light |
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    Dark |
-    ...
+/**
+ * Represents the light color theme of the device.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Light
+    | 
+/**
+ * Represents the dark color theme of the device.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Dark
+    | ...
 }
 
+extend ColorMode <: Equatable<ColorMode> {
+/**
+ * Compares this ColorMode with another for equality.
+ * @param { ColorMode } other - The ColorMode to compare with.
+ * @returns { Bool } true if both modes are equal, false otherwise.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public operator func ==(other: ColorMode): Bool
+/**
+ * Compares this ColorMode with another for inequality.
+ * @param { ColorMode } other - The ColorMode to compare with.
+ * @returns { Bool } true if both modes are not equal, false otherwise.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public operator func !=(other: ColorMode): Bool
+}
+
+/**
+ * Defines the LayoutDirection of device.
+ * Represents the layout direction of the device interface.
+ */
+@!APILevel[
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public enum LayoutDirection {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    Ltr |
-    @!APILevel[
-    21,
-    stagemodelonly: true,
+/**
+ * Represents left-to-right layout direction.
+ */
+@!APILevel[
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    Rtl |
-    @!APILevel[
-    21,
-    stagemodelonly: true,
+]
+    Ltr
+    | 
+/**
+ * Represents right-to-left layout direction.
+ */
+@!APILevel[
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    Auto |
-    ...
+]
+    Rtl
+    | 
+/**
+ * Represents automatic layout direction based on locale.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    Auto
+    | ...
 }
 
+extend LayoutDirection <: Equatable<LayoutDirection> {
+/**
+ * Compares this LayoutDirection with another for equality.
+ * @param { LayoutDirection } other - The LayoutDirection to compare with.
+ * @returns { Bool } true if both directions are equal, false otherwise.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public operator func ==(other: LayoutDirection): Bool
+/**
+ * Compares this LayoutDirection with another for inequality.
+ * @param { LayoutDirection } other - The LayoutDirection to compare with.
+ * @returns { Bool } true if both directions are not equal, false otherwise.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public operator func !=(other: LayoutDirection): Bool
+}
+
+/**
+ * Defines the Environment interface.
+ * Provides access to device environment properties and allows binding them to AppStorage.
+ */
+@!APILevel[
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class Environment {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func aboutToBeDeleted(): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Return the array of all keys.
+ *
+ * @returns { Array<String> } the array of all keys.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func keys(): Array<String>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Creates a new property in AppStorage. The UI framework implementation takes care of updating
+ * its value whenever the named device environment property changes. Recommended use is at app startup.
+ * The function call fails and returns false if a property with given name exists in AppStorage already.
+ * It is wrong API use to access a property with given name in AppStorage before calling Environment.envProp.
+ *
+ * @param { String } key - environment property name
+ * @param { T } defaultValue - is the default value if cannot get the environment property value
+ * @returns { Bool } false if method failed.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func envProp<T>(key: String, defaultValue: T): Bool
 }
 
+/**
+ * LocalStorage
+ * Class implements a Map of ObservableObjectBase UI state variables.
+ * Instances can be created to manage UI state within a limited "local"
+ * access, and life cycle as defined by the app.
+ * AppStorage singleton is sub-class of LocalStorage for
+ * UI state of app-wide access and same life cycle as the app.
+ * Provides storage for component-local state management.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class LocalStorage {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Construct new instance of LocalStorage
+ * initialize with all properties and their values that Object.keys(params) returns
+ * Property values must not be undefined.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init()
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func aboutToBeDeleted(): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Check if LocalStorage has a property with given name.
+ * Return true if property with given name exists.
+ * Same as ES6 Map.prototype.has().
+ *
+ * @param { String } propName - searched property name.
+ * @returns { Bool } true if property with such name exists in LocalStorage.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func has(propName: String): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Return the array of all keys.
+ *
+ * @returns { EquatableCollection<String> } the array of all keys.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func keys(): EquatableCollection<String>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Returns number of properties in LocalStorage.
+ * Same as Map.prototype.size().
+ *
+ * @returns { Int64 } return number of properties.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func size(): Int64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Returns value of given property.
+ * Returns undefined if no property with this name.
+ *
+ * @param { String } propName - name of the property to retrieve
+ * @returns { ?T } property value if found.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func get<T>(propName: String): ?T
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Set value of given property in LocalStorage.
+ * Method sets nothing and returns false if property with this name does not exist in LocalStorage.
+ * newValue can be undefined or null from API 12.
+ *
+ * @param { String } propName - name of the property to set
+ * @param { T } newValue - must be of type T.
+ * @returns { Bool } true on success.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func set<T>(propName: String, newValue: T): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Set value of given property, if it exists, see set() .
+ * Add property if no property with given name and initialize with given value.
+ * newValue can be undefined or null from API 12.
+ *
+ * @param { String } propName - name of the property to set or create
+ * @param { T } newValue - must be of type T, can be undefined or null.
+ * @returns { Bool } true on success, i.e. when above conditions are satisfied, otherwise false.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func setOrCreate<T>(propName: String, newValue: T): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Create and return a two-way sync "(link") to named property.
+ *
+ * @param { String } propName - name of source property in LocalStorage.
+ * @returns { ?ObservedProperty<T> } The instance of ObservedProperty<T>.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func link<T>(propName: String): ?ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Like see link(), but will create and initialize a new source property in LocalStorage if missing.
+ *
+ * @param { String } propName - name of source property in LocalStorage
+ * @param { T } defaultValue - value to be used for initializing new property in LocalStorage
+ *        default value must be of type T.
+ * @returns { ObservedProperty<T> } The instance of ObservedProperty<T>. Apps can use SDK functions of base class ObservedProperty<T>
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func setAndLink<T>(propName: String, defaultValue: T): ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func `prop`<T>(propName: String): ?ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Create and return a one-way sync ('prop') to named property.
+ *
+ * @param { String } propName - name of source property in LocalStorage.
+ * @returns { ?ObservedProperty<T> } The instance of ObservedProperty<T>.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func property<T>(propName: String): ?ObservedProperty<T>
+
+/**
+ * Like see prop(), will create and initialize a new source property in LocalStorage if missing.
+ *
+ * @param { String } propName - name of source property in LocalStorage.
+ * @param { T } defaultValue - value to be used for initializing new property in LocalStorage.
+ *         Default value must be of type T.
+ * @returns { ObservedProperty<T> } The instance of ObservedProperty<T>.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func setAndProp<T>(propName: String, defaultValue: T): ObservedProperty<T>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Delete property from StorageBase.
+ * Use with caution:
+ * Before deleting a prop from LocalStorage all its subscribers need to
+ * unsubscribe from the property.
+ * This method fails and returns false if given property still has subscribers.
+ * Another reason for failing is unknown property.
+ * Developer advise:
+ * Subscribers are created with see link(), see prop()
+ * and also via @LocalStorageLink and @LocalStorageProp state variable decorators.
+ * That means as long as their is a @Component instance that uses such decorated variable
+ * or a sync relationship with a SubscribedAbstractProperty variable the property can nit
+ * (and also should not!) be deleted from LocalStorage.
+ *
+ * @param { String } propName - name of the property to delete
+ * @returns { Bool } false if method failed.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func delete(propName: String): Bool
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Delete all properties from the LocalStorage instance.
+ * Precondition is that there are no subscribers.
+ * Method returns false and deletes no properties if there is any property
+ * that still has subscribers.
+ *
+ * @returns { Bool } false if method failed.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func clear(): Bool
 }
 
+/**
+ * Defines class ObservedArrayList.
+ * An observable array list that can be used for reactive state management.
+ */
 @!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public open class Observable {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func subscribe(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribe(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func isSubscribed(observer: Observer): Bool
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func numberOfSubscribers(): Int64
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribeAll(): Unit
-}
-
-@!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class ObservedArrayList<T> <: ObservedComplexAbstract & CollectionEx<T> {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Creates an ObservedArrayList from an ArrayList.
+ *
+ * @param { ArrayList<T> } initValue - Initial values for the array list.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(initValue: ArrayList<T>)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Creates an ObservedArrayList from an Array.
+ *
+ * @param { Array<T> } initValue - Initial values for the array list.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(initValue: Array<T>)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func subscribeInner(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribeInner(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Gets the current ArrayList value. And record the dependency elements that need to be updated.
+ *
+ * @returns { ArrayList<T> } The current ArrayList value.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func get(): ArrayList<T>
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Sets the current ArrayList value. Enable observers to receive updated information whenever state variables change.
+ *
+ * @param { ArrayList<T> } newValue - The new ArrayList value to set.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func set(newValue: ArrayList<T>): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Sets the current ArrayList value from another Array object. Enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Array<T> } newValue - The new Array value to set.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func set(newValue: Array<T>): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Sets the current ArrayList value from another ObservedComplexAbstract object. Enable observers to receive updated information whenever state variables change.
+ *
+ * @param { ObservedComplexAbstract } newValue - The new ObservedComplexAbstract value to set.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func set(newValue: ObservedComplexAbstract): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Gets the element at the specified index in the observed array list. And record the dependency elements that need to be updated.
+ *
+ * @param { Int64 } index - The zero-based index of the element to get.
+ * @returns { T } The element at the specified index.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public operator func [](index: Int64): T
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public operator func [](index: Int64, value!: T): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Sets the element at the specified index in the observed array list. Enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Int64 } index - The zero-based index of the element to set.
+ * @param { T } value - The new value to set at the specified index.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+        public operator func [](index: Int64, value!: T): Unit
+
+/**
+ * Gets the number of elements in the observed array list.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public prop size: Int64
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Checks if the observed array list is empty.
+ *
+ * @returns { Bool } true if the array list is empty, false otherwise.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func isEmpty(): Bool
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Creates a shallow copy of the observed array list. This function also record the dependency elements that need to be updated.
+ *
+ * @returns { ObservedArrayList<T> } A new ObservedArrayList instance with the same elements.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func clone(): ObservedArrayList<T>
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Removes all elements from the observed array list. Enable observers to receive updated information whenever state variables change.
+ *
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func clear(): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Adds an element to the end of the observed array list. This function can enable observers to receive updated information whenever state variables change.
+ *
+ * @param { T } element - The element to append to the array list.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func append(element: T): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Adds all elements from a collection to the end of the observed array list. This function can enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Collection<T> } elements - The collection of elements to append.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func appendAll(elements: Collection<T>): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Inserts an element at the specified position in the observed array list. This function can enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Int64 } index - The zero-based index at which to insert the element.
+ * @param { T } element - The element to insert.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func insert(index: Int64, element: T): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Inserts all elements from a collection at the specified position in the observed array list. This function can enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Int64 } index - The zero-based index at which to insert the elements.
+ * @param { Collection<T> } elements - The collection of elements to insert.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func insertAll(index: Int64, elements: Collection<T>): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Adds an element to the beginning of the observed array list. This function can enable observers to receive updated information whenever state variables change.
+ *
+ * @param { T } element - The element to prepend to the array list.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func prepend(element: T): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Adds all elements from a collection to the beginning of the observed array list. This function can enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Collection<T> } elements - The collection of elements to prepend.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func prependAll(elements: Collection<T>): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Removes and returns the element at the specified index. Enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Int64 } index - The zero-based index of the element to remove.
+ * @returns { T } The removed element.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func remove(index: Int64): T
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Removes elements in the specified range from the observed array list. Enable observers to receive updated information whenever state variables change.
+ *
+ * @param { Range<Int64> } range - The range of indices to remove.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func remove(range: Range<Int64>): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Removes all elements that satisfy the provided predicate.
+ *
+ * @param { (T) -> Bool } predicate - A function that returns true for elements to be removed. Enable observers to receive updated information whenever state variables change.
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func removeIf(predicate: (T) -> Bool): Unit
 }
 
+/**
+ * Provides mechanisms for persisting AppStorage properties across application sessions.
+ */
 @!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public abstract class ObservedComplexAbstract <: Observable {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func subscribeInner(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribeInner(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func set(v: ObservedComplexAbstract): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func inheritObservers(newObservers: ArrayList<Observer>)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func setDependentElementIds(dependentElementIds: ArrayList<Int64>)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func getInfo(): String
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func setInfo(info: String)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func getPropsInfo(): ArrayList<String>
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func addPropsInfo(info: String): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func notifyChanges()
-}
-
-@!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public abstract class ObservedObject <: ObservedComplexAbstract {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func addPublishVar(publishVar: ObservedPropertyAbstract)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func getPublishVar(): ArrayList<ObservedPropertyAbstract>
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func subscribeInner(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribeInner(observer: Observer): Unit
-}
-
-@!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public open class ObservedProperty<T> <: ObservedPropertyAbstract {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(info: String, initValue: T)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func get(): T
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func getInner(): T
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public open func set(newValue: T): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func subscribeEx(observer: Observer)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribeEx(observer: Observer)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func createProp(info: String): ObservedProperty<T>
-}
-
-@!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public abstract class ObservedPropertyAbstract <: Observable {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(info: String)
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func getInfo(): String
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func subscribeEx(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func unsubscribeEx(observer: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func notifyChanges()
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func purgeDependencyOnElmtId(rmElmtId: Int64): Unit
-}
-
-@!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public interface Observer {
-    func onStateUpdate(info: String, dependentElmtIds: ArrayList<Int64>): Unit
-    
-    func notifyRead(info: String): Unit
-    
-    func id(): Int64
-    
-    func aboutToBeDeleted(): Unit
-}
-
-@!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class PersistentStorage <: Observer {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onStateUpdate(_: String, _: ArrayList<Int64>): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func notifyRead(_: String): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func id(): Int64
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func aboutToBeDeleted(): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Makes an AppStorage property persistent across application sessions.
+ *
+ * @param { String } key - name of the property to persist
+ * @param { T } defaultValue - default value for the property if not already present
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func persistProp<T>(key: String, defaultValue: T): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Persist given AppStorage properties with given names.
+ * If a property does not exist in AppStorage, add it and initialize it with given value
+ * works as persistProp for multiple properties.
+ *
+ * @param { Array<(String, T)> } props - array of property name-value pairs to persist
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func persistProps<T>(props: Array<(String, T)>): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Reverse of persistProp.
+ *
+ * @param { String } key - no longer persist the property named key
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func deleteProp(key: String): Unit
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Return the array of all keys.
+ *
+ * @returns { Array<String> } the array of all keys
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public static func keys(): Array<String>
 }
-
-@!APILevel[
-    21,
-    atomicservice: true,
-    stagemodelonly: true,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public class SubscriberManager {
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func getInstance(): SubscriberManager
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func makeId(): Int64
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func has(id: Int64): Bool
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func get(id: Int64): Option<Observer>
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func delete(value: Observer): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func add(value: Observer): Bool
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func sizeOfManager(): Int64
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func dumpSubscriberInfo(): Unit
-}
-
-@!APILevel[
-    21,
-    syscap: "SystemCapability.ArkUI.ArkUI.Full"
-]
-public class ViewStackProcessor {
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func AllocateNewElmetIdForNextComponent(): Int64
-    
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func StartGetAccessRecordingFor(elmtId: Int64): Unit
-    
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func GetElmtIdToAccountFor(): Int64
-    
-    @!APILevel[
-        21,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func StopGetAccessRecording(): Unit
-    
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public static func ImplicitPopBeforeContinue(): Unit
-}
-

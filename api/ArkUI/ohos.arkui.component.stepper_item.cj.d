@@ -1,58 +1,108 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.stepper_item
+
 import ohos.arkui.component.common.*
 import ohos.base.*
 import ohos.labels.APILevel
 
-
+/**
+ * A component that represents a single step in a Stepper component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class StepperItem <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class StepperItem <: CommonMethodComponent<StepperItem> & StepperItemAttribute {
+/**
+ * Initializes a StepperItem component with child content.
+ *
+ * @param { () -> Unit } child - Builder function for StepperItem content.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(child: () -> Unit)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func prevLabel(value: String): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func nextLabel(value: String): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func status(status!: ItemState = ItemState.Normal): This
+
+/**
+ * The description text for the fallback text button at the bottom of the step navigator.
+ *
+ * @param { ?String } value - Text displayed on the previous step button.
+ * @returns { This } Returns the StepperItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func prevLabel(value: ?String): This
+
+/**
+ * The description text for the next step text button at the bottom of the step navigator.
+ *
+ * @param { ?String } value - Text displayed on the next step button.
+ * @returns { This } Returns the StepperItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func nextLabel(value: ?String): This
+
+/**
+ * Sets the display state of the Step Navigator nextLabel.
+ * Configures the status of the step item, which affects its appearance and behavior.
+ *
+ * @param { ?ItemState } [value] - Display state of the step item.
+ * @returns { This } Returns the StepperItem instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func status(value!: ?ItemState = None): This
 }
 
+/**
+ * Provides methods for configuring the appearance and behavior of the StepperItem component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface StepperItemAttribute <: CommonMethod<StepperItemAttribute> {
+/**
+ * The description text for the fallback text button at the bottom of the step navigator.
+ * Sets the label text for the previous step button.
+ *
+ * @param { ?String } value - Text displayed on the previous step button.
+ * @returns { StepperItemAttribute } Returns the stepper item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func prevLabel(value: ?String): StepperItemAttribute
+
+/**
+ * The description text for the next step text button at the bottom of the step navigator.
+ *
+ * @param { ?String } value - Text displayed on the next step button.
+ * @returns { StepperItemAttribute } Returns the stepper item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func nextLabel(value: ?String): StepperItemAttribute
+
+/**
+ * Configures the status of the step item, which affects its appearance and behavior.
+ *
+ * @param { ?ItemState } value - Display state of the step item.
+ * @returns { StepperItemAttribute } Returns the stepper item attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func status(value!: ?ItemState): StepperItemAttribute
+}

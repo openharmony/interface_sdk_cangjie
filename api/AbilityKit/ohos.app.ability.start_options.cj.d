@@ -13,56 +13,49 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.start_options
+
 import ohos.app.ability.ability_constant.*
-import ohos.app.ability.completion_handler.*
-import ohos.app.ability.context_constant.*
-import ohos.bundle.bundle_manager.SupportWindowMode
-import ohos.multimedia.image.PixelMap
 import ohos.labels.*
 
-
 /**
-* StartOptions is the basic communication component of the system.
-*
-* @relation export default class StartOptions
-*/
+ * StartOptions is the basic communication component of the system.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
 public open class StartOptions {
     /**
-    * The type of WindowMode
-    * WindowModeSplitPrimary and WindowModeSplitSecondary are
-    * valid only in intra-app redirection scenarios.
-    *
-    * @relation windowMode?: number
-    */
+     * The type of WindowMode
+     * WindowModeSplitPrimary and WindowModeSplitSecondary are
+     * valid only in intra-app redirection scenarios.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var windowMode: ?WindowMode
-    
+
     /**
-    * The type of displayId
-    *
-    * @relation displayId?: number
-    */
+     * The type of displayId
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public var displayId: Int32
-    
+
     /**
-    * StartOptions constructor.
-    */
+     * StartOptions constructor.
+     *
+     * @param { ?WindowMode } [windowMode] - The type of WindowMode. The default value is None.
+     * @param { Int32 } [displayId] - The type of displayId. The default value is 0.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public init(
@@ -70,5 +63,3 @@ public open class StartOptions {
         displayId!: Int32 = 0
     )
 }
-
-

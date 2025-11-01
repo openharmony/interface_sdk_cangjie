@@ -1,45 +1,65 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.stack
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.labels.APILevel
 
-
+/**
+ * A layout container that positions its child components relative to its edges.
+ * Child components are stacked on top of each other in the order they are added.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Stack <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(alignContent!: Alignment = Alignment.Center, child!: () -> Unit = {=>})
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func alignContent(value: Alignment): This
+public class Stack <: CommonMethodComponent<Stack> & StackAttribute {
+/**
+ * Defines the constructor of Stack.
+ * Initializes a Stack component with optional alignment and child content.
+ *
+ * @param { ?Alignment } [alignContent] - Alignment of child components within the stack.
+ * @param { ?() -> Unit } [child] - Builder function for Stack content.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(alignContent!: ?Alignment = None, child!: () -> Unit = {=>})
+
+/**
+ * Called when the alignment of items in the container is set.
+ * Configures how child components are aligned within the stack container.
+ *
+ * @param { ?Alignment } value - Alignment of child components within the stack.
+ * @returns { This } Returns the Stack instance.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func alignContent(value: ?Alignment): This
 }
 
+/**
+ * Defines the Stack attribute functions.
+ * Provides methods for configuring the appearance and behavior of the Stack component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface StackAttribute <: CommonMethod<StackAttribute> {
+/**
+ * Called when the alignment of items in the container is set.
+ * Configures how child components are aligned within the stack container.
+ *
+ * @param { ?Alignment } value - Alignment of child components within the stack.
+ * @returns { StackAttribute } Returns the stack attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func alignContent(value: ?Alignment): StackAttribute
+}

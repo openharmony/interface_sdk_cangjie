@@ -13,308 +13,430 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.request
-import std.collection.*
-import std.sync.*
-import ohos.business_exception.*
-import ohos.callback_invoke.*
-import ohos.base
-import ohos.ffi.*
-import ohos.labels.*
-import std.deriving.Derive
-import ohos.app.ability.ui_ability.{UIAbilityContext, getStageContext}
 
-import ohos.base.{NativeOptionCString, NativeOptionInt64, NativeOptionUInt32}
-import ohos.business_exception.BusinessException
+
+import ohos.app.ability.ui_ability.UIAbilityContext
+import ohos.callback_invoke.*
+import ohos.labels.APILevel
+import std.collection.HashMap
 
 /**
-* Event CallbackType.
-*/
-@Derive[ToString, Hashable, Equatable]
+ * Events to subscribe to or unsubscribe to.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum EventCallbackType {
     /**
-    * Progress
-    */
+     * Download progress events.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Progress |
+    Progress
+    |
     /**
-    * Completed
-    */
+     * Indicates a completed task which finish its data transfer.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Completed |
+    Completed
+    |
     /**
-    * Failed
-    */
+     * Indicates a failed task which interrupted by some error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Failed |
+    Failed
+    |
     /**
-    * Pause
-    */
+     * Indicates a paused task which tends to be resumed for continuous work.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Pause |
+    Pause
+    |
     /**
-    * Resume
-    */
+     * Task resume events.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Resume |
+    Resume
+    |
     /**
-    * Remove
-    */
+     * Indicates a removed task which can not be processed again.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Remove |
+    Remove
+    |
     /**
-    * Response
-    */
+     * Task response headers.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Response |
-    ...
+    Response
+    | ...
 }
 
-
-
-/**
-* The action options.
-*
-* @relation enum Action
-*/
-@Derive[ToString, Equatable]
-@!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
-]
-public enum Action {
+extend EventCallbackType <: ToString {
     /**
-    * Indicates download task.
-    *
-    * @relation DOWNLOAD = 0
-    */
+     * Converts the EventCallbackType to its string representation.
+     * @returns { String } A string representation of the EventCallbackType.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Download |
-    /**
-    * Indicates upload task.
-    *
-    * @relation UPLOAD = 1
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Upload |
-    ...
-}
-
-
-
-/**
-* The mode options.
-*
-* @relation enum Mode
-*/
-@Derive[ToString, Equatable]
-@!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
-]
-public enum Mode {
-    /**
-    * Indicates background task.
-    *
-    * @relation BACKGROUND = 0
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Background |
-    /**
-    * Indicates foreground task.
-    *
-    * @relation FOREGROUND = 1
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Foreground |
-    ...
-}
-
-
-
-/**
-* The network options.
-*
-* @relation enum Network
-*/
-@Derive[ToString, Equatable]
-@!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
-]
-public enum Network {
-    /**
-    * Indicates no restriction on network type.
-    *
-    * @relation ANY = 0
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    AnyType |
-    /**
-    * Indicates Wi-Fi only.
-    *
-    * @relation WIFI = 1
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Wifi |
-    /**
-    * Indicates cellular only.
-    *
-    * @relation CELLULAR = 2
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Cellular |
-    ...
-}
-
-
-
-/**
-* Broadcast events for the request.
-*
-* @relation enum BroadcastEvent
-*/
-@!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
-]
-public enum BroadcastEvent <: ToString {
-    /**
-    * Completion event for the task.
-    *
-    * @relation COMPLETE = 'ohos.request.event.COMPLETE'
-    */
-    @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
-    ]
-    Complete |
-    ...
-    /**
-    * Gets the corresponding mapping value.
-    */
-    @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func toString(): String
 }
 
+extend EventCallbackType <: Hashable {
+    /**
+     * Returns a hash code value for this EventCallbackType.
+     * @returns { Int64 } A hash code value for this .
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func hashCode(): Int64
+}
+
+extend EventCallbackType <: Equatable<EventCallbackType> {
+    /**
+     * Compares this EventCallbackType with another for equality.
+     * @param { EventCallbackType } other - The EventCallbackType to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func ==(other: EventCallbackType): Bool
+
+    /**
+     * Compares this EventCallbackType with another for inequality.
+     * @param { EventCallbackType } other - The EventCallbackType to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func !=(other: EventCallbackType): Bool
+}
 
 /**
-* The file information for a form item.
-*
-* @relation interface FileSpec
-*/
+ * The action options.
+ */
 @!APILevel[
-    22,
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent"
+]
+public enum Action {
+    /**
+     * Indicates download task.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Download
+    |
+    /**
+     * Indicates upload task.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Upload
+    | ...
+}
+
+extend Action <: ToString {
+    /**
+     * Converts the Action to its string representation.
+     * @returns { String } A string representation of the Action.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func toString(): String
+}
+
+extend Action <: Equatable<Action> {
+    /**
+     * Compares this Action with another for equality.
+     * @param { Action } other - The Action to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func ==(other: Action): Bool
+
+    /**
+     * Compares this Action with another for inequality.
+     * @param { Action } other - The Action to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func !=(other: Action): Bool
+}
+
+/**
+ * The mode options.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent"
+]
+public enum Mode {
+    /**
+     * Indicates background task.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Background
+    |
+    /**
+     * Indicates foreground task.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Foreground
+    | ...
+}
+
+extend Mode <: ToString {
+    /**
+     * Converts the Mode to its string representation.
+     * @returns { String } A string representation of the Mode.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func toString(): String
+}
+
+extend Mode <: Equatable<Mode> {
+    /**
+     * Compares this Mode with another for equality.
+     * @param { Mode } other - The Mode to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func ==(other: Mode): Bool
+
+    /**
+     * Compares this Mode with another for inequality.
+     * @param { Mode } other - The Mode to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func !=(other: Mode): Bool
+}
+
+/**
+ * The network options.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent"
+]
+public enum Network {
+    /**
+     * Indicates no restriction on network type.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    AnyType
+    |
+    /**
+     * Indicates Wi-Fi only.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Wifi
+    |
+    /**
+     * Indicates cellular only.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Cellular
+    | ...
+}
+
+extend Network <: ToString {
+    /**
+     * Converts the Network to its string representation.
+     * @returns { String } A string representation of the Network.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func toString(): String
+}
+
+extend Network <: Equatable<Network> {
+    /**
+     * Compares this Network with another for equality.
+     * @param { Network } other - The Network to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func ==(other: Network): Bool
+
+    /**
+     * Compares this Network with another for inequality.
+     * @param { Network } other - The Network to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public operator func !=(other: Network): Bool
+}
+
+/**
+ * Broadcast events for the request.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent"
+]
+public enum BroadcastEvent <: ToString {
+    /**
+     * Completion event for the task.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    Complete | ...
+
+    /**
+     * Gets the corresponding mapping value.
+     * @returns A string representation of the BroadcastEvent.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func toString(): String
+}
+
+/**
+ * The file information for a form item.
+ */
+@!APILevel[
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class FileSpec {
     /**
-    * The path to save the uploaded file.
-    * Currently support:
-    * 1: relative path, like "./xxx/yyy/zzz.html", "xxx/yyy/zzz.html", under caller's cache folder.
-    * 2: internal protocol path, starting with "internal://", like "internal://cache/path/to/file.txt".
-    * 3: application storage path, only the base directory and its subdirectories are supported, like "/data/storage/el1/base/path/to/file.txt".
-    * 4: file protocol path with self bundle name, only the base directory and its subdirectories are supported, like "file://com.example.test/data/storage/el2/base/file.txt".
-    * 5: user file url, like "file://media/Photo/path/to/file.png".
-    *
-    * @relation path: string
-    */
+     * The path to save the uploaded file.
+     * Currently support:
+     * 1: relative path, like "./xxx/yyy/zzz.html", "xxx/yyy/zzz.html", under caller's cache folder.
+     * 2: internal protocol path, starting with "internal://", like "internal://cache/path/to/file.txt".
+     * 3: application storage path, only the base directory and its subdirectories are supported, like
+     * "/data/storage/el1/base/path/to/file.txt".
+     * 4: file protocol path with self bundle name, only the base directory and its subdirectories are supported,
+     * like "file://com.example.test/data/storage/el2/base/file.txt".
+     * 5: user file url, like "file://media/Photo/path/to/file.png".
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var path: String
-    
+
     /*
-    * The MIME type of the file.
-    * The default is obtained by the suffix of the filename.
-    *
-    * @relation mimeType?: string
-    */
+     * The MIME type of the file.
+     * The default is obtained by the suffix of the filename.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var mimeType: ?String
-    
+
     /*
-    * The filename, the default is obtained by path.
-    *
-    * @relation filename?: string
-    */
+     * The filename, the default is obtained by path.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var filename: ?String
-    
+
     /*
-    * The extras for the file information.
-    *
-    * @relation extras?: object
-    */
+     * The extras for the file information.
+     * This parameter is not included in HTTP requests.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var extras: HashMap<String, String>
-    
+
     /**
-    * FileSpec constructor.
-    */
+     * FileSpec constructor.
+     *
+     * @param { String } path - The path to save the uploaded file.
+     * @param { ?String } [mimeType] - The MIME type of the file. The default is obtained by the suffix of the filename.
+     * @param { ?String } [filename] - The filename, the default is obtained by path.
+     * @param { HashMap<String, String> } [extras] - The extras for the file information.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(
@@ -325,1369 +447,1260 @@ public class FileSpec {
     )
 }
 
-
 /**
-* FormItem value
-*/
+ * Form item value.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum FormItemValue {
     /**
-    * String type FormItem value
-    */
+     * String type form item value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    StringItem(String) |
+    StringItem(String)
+    |
     /**
-    * FileSpec type FormItem value
-    */
+     * FileSpec type form item value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    FileItem(FileSpec) |
+    FileItem(FileSpec)
+    |
     /**
-    * Array<FileSpec> type FormItem value
-    */
+     * Array<FileSpec> type form item value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    FileItemArray(Array<FileSpec>) |
-    ...
+    FileItemArray(Array<FileSpec>)
+    | ...
 }
 
-
 /**
-* The form item information for a task.
-*
-* @relation interface FormItem
-*/
+ * The form item information for a task.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class FormItem {
     /*
-    * The item's name.
-    *
-    * @relation name: string
-    */
+     * The item's name.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var name: String
-    
+
     /*
-    * The item's value.
-    *
-    * @relation value: string | FileSpec | Array<FileSpec>
-    */
+     * The item's value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var value: FormItemValue
-    
+
     /**
-    * FormItem constructor.
-    */
+     * FormItem constructor.
+     *
+     * @param { String } name - The item's name.
+     * @param { FormItemValue } value - The item's value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(name: String, value: FormItemValue)
 }
 
-
 /**
-* Config data
-*/
+ * Config data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum ConfigData {
     /**
-    * String type Config data
-    */
+     * String type config data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    StringValue(String) |
+    StringValue(String)
+    |
     /**
-    * Array<FormItem> type Config data
-    */
+     * Array<FormItem> type config data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    FormItems(Array<FormItem>) |
-    ...
+    FormItems(Array<FormItem>)
+    | ...
 }
 
-
 /**
-* The configurations for a task.
-* Provides the configuration information of an upload or download task.
-* Using a flexible configuration for clear upload and download functions.
-* If without emphasis, an option is for any task.
-*
-* @relation interface Config
-*/
+ * The configurations for a task.
+ * Provides the configuration information of an upload or download task.
+ * Using a flexible configuration for clear upload and download functions.
+ * If without emphasis, an option is for any task.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Config {
     /**
-    * The Universal Resource Locator for a task.
-    * The maximum length is 2048 characters.
-    * Using raw `url` option, even url parameters in it.
-    *
-    * @relation action: Action
-    */
+     * The task action, upload or download.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var action: Action
-    
+
     /**
-    * The Universal Resource Locator for a task.
-    * The maximum length is 2048 characters.
-    * Using raw `url` option, even url parameters in it.
-    *
-    * @relation url: string
-    */
+     * The Universal Resource Locator for a task.
+     * The maximum length is 8192 characters.
+     * Using raw `url` option, even url parameters in it.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var url: String
-    
+
     /**
-    * The title for a task, give a meaningful title please.
-    * The maximum length is 256 characters.
-    * The default is upload or download, consistent with its action.
-    *
-    * @relation title?: string
-    */
+     * The title for a task, give a meaningful title please.
+     * The maximum length is 256 characters.
+     * The default is upload or download, consistent with its action.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var title: ?String
-    
+
     /**
-    * The details for a task.
-    * The maximum length is 1024 characters.
-    * The default is empty string.
-    *
-    * @relation description?: string
-    */
+     * The details for a task.
+     * The maximum length is 1024 characters.
+     * The default is empty string.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var description: String
-    
+
     /**
-    * Indicates task's mode.
-    * The default is Background.
-    * For frontend task, it has callbacks.
-    * For background task, it has notifications and fallback.
-    * The cross-platform default is Foreground.
-    *
-    * @relation mode?: Mode
-    */
+     * Indicates task's mode.
+     * The default is Background.
+     * For front-end task, it has callbacks.
+     * For background task, it has notifications and fallback.
+     * The cross-platform default is Foreground.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var mode: Mode
-    
+
     /**
-    * The solution choice when path already exists during download.
-    * The default is false.
-    * Currently support:
-    * true, rewrite the existed file;
-    * false, go to fail.
-    *
-    * @relation overwrite?: boolean
-    */
+     * The solution choice when path already exists during download.
+     * The default is false.
+     * Currently support:
+     * true, rewrite the existed file;
+     * false, go to fail.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var overwrite: Bool
-    
+
     /**
-    * The HTTP standard method for upload or download: GET/POST/PUT.
-    * Case insensitive.
-    * For upload, use PUT/POST, the default is PUT.
-    * For download, use GET/POST, the default is GET.
-    *
-    * @relation method?: string
-    */
+     * The HTTP standard method for upload or download: GET/POST/PUT.
+     * Case insensitive.
+     * For upload, use PUT/POST, the default is PUT.
+     * For download, use GET/POST, the default is GET.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var method: ?String
-    
+
     /**
-    * The HTTP headers.
-    * For upload request, the `Content-Type` is forced to `multipart/form-data`.
-    * For download request, the default `Content-Type` is `application/json`.
-    *
-    * @relation headers?: object
-    */
+     * The HTTP headers.
+     * For upload request, the `Content-Type` is forced to `multipart/form-data`.
+     * For download request, the default `Content-Type` is `application/json`.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var headers: HashMap<String, String>
-    
+
     /**
-    * The arguments, it can be any text, uses json usually.
-    * For download, it can be raw string, the default is empty string.
-    * For upload, it can be form items, the default is a empty form.
-    * There must be one `FileSpec` item at least or will be a parameter error.
-    *
-    * @relation data?: string | Array<FormItem>
-    */
+     * The arguments, it can be any text, uses json usually.
+     * For download, it can be raw string, the default is empty string.
+     * For upload, it can be form items, the default is a empty form.
+     * There must be one `FileSpec` item at least or will be a parameter error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var data: ?ConfigData
-    
+
     /**
-    * The path to save the downloaded file, the default is "./".
-    * Currently support:
-    * 1: relative path, like "./xxx/yyy/zzz.html", "xxx/yyy/zzz.html", under caller's cache folder.
-    * 2: internal protocol path, starting with "internal://", like "internal://cache/path/to/file.txt".
-    * 3: application storage path, only the base directory and its subdirectories are supported, like "/data/storage/el1/base/path/to/file.txt".
-    * 4: file protocol path with self bundle name, only the base directory and its subdirectories are supported, like "file://com.example.test/data/storage/el2/base/file.txt".
-    *
-    * @relation saveas?: string
-    */
+     * The path to save the downloaded file, the default is "./".
+     * Currently support:
+     * 1: relative path, like "./xxx/yyy/zzz.html", "xxx/yyy/zzz.html", under caller's cache folder.
+     * 2: internal protocol path, starting with "internal://", like "internal://cache/path/to/file.txt".
+     * 3: application storage path, only the base directory and its subdirectories are supported, like
+     * "/data/storage/el1/base/path/to/file.txt".
+     * 4: file protocol path with self bundle name, only the base directory and its subdirectories are supported,
+     * like "file://com.example.test/data/storage/el2/base/file.txt".
+     *
+     * @default ./
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var saveas: String
-    
+
     /**
-    * Network used for the task.
-    * The default value is Any (Wi-Fi or cellular).
-    *
-    * @relation network?: Network
-    */
+     * Network used for the task.
+     * The default value is AnyType (Wi-Fi or cellular).
+     *
+     * @default AnyType
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var network: Network
-    
+
     /**
-    * Allows work in metered network or not.
-    * The default is false
-    *
-    * @relation metered?: boolean
-    */
+     * Allows work in metered network or not.
+     * The default is false.
+     *
+     * @default false
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var metered: Bool
-    
+
     /**
-    * Allows work in roaming network or not.
-    * The default is true.
-    *
-    * @relation roaming?: boolean
-    */
+     * Allows work in roaming network or not.
+     * The default is true.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var roaming: Bool
-    
+
     /**
-    * Enable automatic retry or not for the background task.
-    * The frontend task is always fast-fail.
-    *
-    * @relation retry?: boolean
-    */
+     * Enable automatic retry or not for the background task.
+     * The front-end task is always fast-fail.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var retry: Bool
-    
+
     /**
-    * Allows redirect or not.
-    * The default is true.
-    *
-    * @relation redirect?: boolean
-    */
+     * Allows redirect or not.
+     * The default is true.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var redirect: Bool
-    
+
     /**
-    * The index of paths for a task.
-    * Usually used for a continuous job.
-    * The default is 0.
-    *
-    * @relation index?: number
-    */
+     * The index of paths for a task.
+     * Usually used for a continuous job.
+     * The default is 0.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var index: UInt32
-    
+
     /**
-    * The start point of a file.
-    * Usually used for a continuous job.
-    * It will set the "Range" header in download.
-    * It will start read at the point in upload.
-    * The default is 0.
-    *
-    * @relation begins?: number
-    */
+     * The start point of a file.
+     * Usually used for a continuous job.
+     * It will set the "Range" header in download.
+     * It will start read at the point in upload.
+     * The default is 0.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var begins: Int64
-    
+
     /**
-    * The end point of a file.
-    * Usually used for a continuous job.
-    * It will set The "Range" header in download.
-    * It will end read at the point in upload.
-    * The default is -1 indicating the end of the data for upload or download.
-    *
-    * @relation ends?: number
-    */
+     * The end point of a file.
+     * Usually used for a continuous job.
+     * It will set The "Range" header in download.
+     * It will end read at the point in upload.
+     * The default is -1 indicating the end of the data for upload or download.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var ends: Int64
-    
+
     /**
-    * The policy of the progress notification for background task.
-    * If false: only completed or failed notification, the default.
-    * If true, emits every progress, completed or failed notifications.
-    *
-    * @relation gauge?: boolean
-    */
+     * The policy of the progress notification for background task.
+     * If false: only completed or failed notification, the default.
+     * If true, emits every progress, completed or failed notifications.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var gauge: Bool
-    
+
     /**
-    * Breaks when fail to fetch filesize before upload/download or not.
-    * Uses filesize for a precise gauge.
-    * The default is false, set size as -1 indicating the case.
-    *
-    * @relation precise?: boolean
-    */
+     * Breaks when fail to fetch filesize before upload/download or not.
+     * Uses filesize for a precise gauge.
+     * The default is false, set size as -1 indicating the case.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var precise: Bool
-    
+
     /**
-    * For in-application layer isolation.
-    * If given:
-    *   the minimum is 8 bytes.
-    *   the maximum is 2048 bytes.
-    * Creates a task with token, then must provide it during normal query.
-    * So saves the token carefully, it can not be retrieved by query.
-    * Or leave it empty.
-    *
-    * @relation token?: string
-    */
+     * For in-application layer isolation.
+     * If given:
+     *   the minimum is 8 bytes.
+     *   the maximum is 2048 bytes.
+     * Creates a task with token, then must provide it during normal query.
+     * So saves the token carefully, it can not be retrieved by query.
+     * Or leave it empty.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var token: ?String
-    
+
     /**
-    * The priority of this task.
-    * Front-end tasks have higher priority than back-end tasks.
-    * In tasks of the same mode, the smaller the number, the higher the priority.
-    * The default is 0.
-    *
-    * @relation priority?: number
-    */
+     * The priority of this task.
+     * Front-end tasks have higher priority than back-end tasks.
+     * In tasks of the same mode, the smaller the number, the higher the priority.
+     * The default is 0.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var priority: UInt32
-    
+
     /**
-    * The extras for the configuration.
-    * This parameter is left empty by default.
-    *
-    * @relation extras?: object
-    */
+     * The extras for the configuration.
+     * This parameter is left empty by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var extras: HashMap<String, String>
-    
+
     /**
-    * Config constructor.
-    */
+     * Config constructor.
+     * @param { Action } action - The task action, upload or download.
+     * @param { String } url - The Universal Resource Locator for a task.
+     * @param { ?String } [title] - The title for a task, give a meaningful title please.
+     * @param { String } [description] - The details for a task.
+     * @param { Mode } [mode] - Indicates task's mode.
+     * @param { Bool } [overwrite] - The solution choice when path already exists during download.
+     * @param { ?String } [method] - The HTTP standard method for upload or download: GET/POST/PUT.
+     * @param { HashMap<String, String> } [headers] - The HTTP headers.
+     * @param { ?ConfigData } [data] - The arguments, it can be any text, uses json usually.
+     * @param { String } [saveas] - The path to save the downloaded file.
+     * @param { Network } [network] - Network used for the task.
+     * @param { Bool } [metered] - Allows download under metered connections.
+     * @param { Bool } [roaming] - Allows download under roaming connections.
+     * @param { Bool } [retry] - Retry task when transfer got a recoverable error.
+     * @param { Bool } [redirect] - Allows redirect.
+     * @param { UInt32 } [index] - The start index of the range.
+     * @param { Int64 } [begins] - The start position of the range.
+     * @param { Int64 } [ends] - The end position of the range.
+     * @param { Bool } [gauge] - Whether to show progress gauge in notification bar.
+     * @param { Bool } [precise] - Whether requires precise processing.
+     * @param { ?String } [token] - The token of the file.
+     * @param { UInt32 } [priority] - The priority of the task.
+     * @param { HashMap<String, String> } [extras] - The extras for the file information.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    public init(action: Action, url: String, title!: ?String = None, description!: String = "",
-        mode!: Mode = Mode.Background, overwrite!: Bool = false, method!: ?String = None,
-        headers!: HashMap<String, String> = HashMap<String, String>(), data!: ?ConfigData = None, saveas!: String = "./",
-        network!: Network = Network.AnyType, metered!: Bool = false, roaming!: Bool = true, retry!: Bool = true,
-        redirect!: Bool = true, index!: UInt32 = 0, begins!: Int64 = 0, ends!: Int64 = -1, gauge!: Bool = false,
-        precise!: Bool = false, token!: ?String = None, priority!: UInt32 = 0,extras!: HashMap<String, String> = HashMap<String, String>()
+    public init(
+        action: Action,
+        url: String,
+        title!: ?String = None,
+        description!: String = "",
+        mode!: Mode = Mode.Background,
+        overwrite!: Bool = false,
+        method!: ?String = None,
+        headers!: HashMap<String, String> = HashMap<String, String>(),
+        data!: ?ConfigData = None,
+        saveas!: String = "./",
+        network!: Network = Network.AnyType,
+        metered!: Bool = false,
+        roaming!: Bool = true,
+        retry!: Bool = true,
+        redirect!: Bool = true,
+        index!: UInt32 = 0,
+        begins!: Int64 = 0,
+        ends!: Int64 = -1,
+        gauge!: Bool = false,
+        precise!: Bool = false,
+        token!: ?String = None,
+        priority!: UInt32 = 0,
+        extras!: HashMap<String, String> = HashMap<String, String>()
     )
 }
 
-
 /**
-* Indicate the current state of the task.
-*
-* @relation enum State
-*/
-@Derive[ToString]
+ * Indicate the current state of the task.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum State {
     /**
-    * Indicates a task created by `new Task(Config)`.
-    *
-    * @relation INITIALIZED = 0x00
-    */
+     * Indicates a task created by `new Task(Config)`.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Initialized |
+    Initialized
+    |
     /**
-    * Indicates a task lack of resources or conditions to run or retry.
-    *
-    * @relation WAITING = 0x10
-    */
+     * Indicates a task lack of resources or conditions to run or retry.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Waiting |
+    Waiting
+    |
     /**
-    * Indicates a task in processing now.
-    *
-    * @relation RUNNING = 0x20
-    */
+     * Indicates a task in processing now.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Running |
+    Running
+    |
     /**
-    * Indicates a task failed once at least and in processing again now.
-    *
-    * @relation RETRYING = 0x21
-    */
+     * Indicates a task failed once at least and in processing again now.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Retrying |
+    Retrying
+    |
     /**
-    * Indicates a paused task which tends to be resumed for continuous work.
-    *
-    * @relation PAUSED = 0x30
-    */
+     * Indicates a paused task which tends to be resumed for continuous work.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Paused |
+    Paused
+    |
     /**
-    * Indicates a stopped task which must be started again.
-    *
-    * @relation STOPPED = 0x31
-    */
+     * Indicates a stopped task which must be started again.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Stopped |
+    Stopped
+    |
     /**
-    * Indicates a completed task which finish its data transfer.
-    *
-    * @relation COMPLETED = 0x40
-    */
+     * Indicates a completed task which finish its data transfer.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Completed |
+    Completed
+    |
     /**
-    * Indicates a failed task which interrupted by some error.
-    *
-    * @relation FAILED = 0x41
-    */
+     * Indicates a failed task which interrupted by some error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Failed |
+    Failed
+    |
     /**
-    * Indicates a removed task which can not be processed again.
-    *
-    * @relation REMOVED = 0x50
-    */
+     * Indicates a removed task which can not be processed again.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Removed |
-    ...
+    Removed
+    | ...
 }
 
-
+extend State <: ToString {
+    /**
+     * Converts the State to its string representation.
+     * @returns { String } A string representation of the State.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func toString(): String
+}
 
 /**
-* The progress data structure.
-* Upload allows multiple files per upload task.
-* Only one file in a download task.
-* So using a unified data structure for progress.
-* Generally:
-* 1: sum(sizes) is total files size of the task.
-* 2: float(processed)/sizes[counter] is the progress for the current processing file.
-* 3: float(sum(sizes[:index])+processed)/sum(sizes) is the summary progress for a task.
-* If fetch file size in failure, the size of the file in sizes will be set as -1.
-*
-* @relation interface Progress
-*/
+ * The progress data structure.
+ * Upload allows multiple files per upload task.
+ * Only one file in a download task.
+ * So using a unified data structure for progress.
+ * Generally:
+ * 1: sum(sizes) is total files size of the task.
+ * 2: float(processed)/sizes[counter] is the progress for the current processing file.
+ * 3: float(sum(sizes[:index])+processed)/sum(sizes) is the summary progress for a task.
+ * If fetch file size in failure, the size of the file in sizes will be set as -1.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Progress {
     /**
-    * The current state of the task.
-    *
-    * @relation readonly state: State
-    */
+     * The current state of the task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let state: State
-    
+
     /**
-    * The current processing file index in a task.
-    *
-    * @relation readonly index: number
-    */
+     * The current processing file index in a task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let index: UInt32
-    
+
     /**
-    * The processed data size for the current file in a task.
-    *
-    * @relation readonly processed: number
-    */
+     * The processed data size for the current file in a task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let processed: Int64
-    
+
     /**
-    * The sizes of files in a task, in bytes.
-    *
-    * @relation readonly sizes: Array<number>
-    */
+     * The sizes of files in a task, in bytes.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let sizes: Array<Int64>
-    
+
     /**
-    * The extras for an interaction.
-    * Such as headers and body of response from server.
-    * But when the Content-Disposition header responded, the body will be into the uri of its attachment only, the body here is empty.
-    * {"headers": {"key": v}, "body": "contents"}.
-    * The "body" field is not supported in cross-platform scenarios.
-    *
-    * @relation readonly extras?: object
-    */
+     * The extras for an interaction.
+     * Such as headers and body of response from server.
+     * But when the Content-Disposition header responded, the body will be into the uri of its attachment only, the
+     * body here is empty.
+     * {"headers": {"key": v}, "body": "contents"}.
+     * The "body" field is not supported in cross-platform scenarios.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let extras: HashMap<String, String>
 }
 
-
 /**
-* The HTTP response.
-* Describes the data structure of the task response header.
-*
-* @relation interface HttpResponse
-*/
+ * The HTTP response.
+ * Describes the data structure of the task response header.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class HttpResponse {
     /**
-    * The version of the HTTP response.
-    *
-    * @relation readonly version: string
-    */
+     * The version of the HTTP response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let version: String
-    
+
     /**
-    * The status code of the HTTP response.
-    *
-    * @relation readonly statusCode: number
-    */
+     * The status code of the HTTP response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let statusCode: Int32
-    
+
     /**
-    * The reason of the HTTP response.
-    *
-    * @relation readonly reason: string
-    */
+     * The reason of the HTTP response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let reason: String
-    
+
     /**
-    * The headers of the HTTP response.
-    *
-    * @relation readonly headers: Map<string, Array<string>>
-    */
+     * The headers of the HTTP response.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let headers: HashMap<String, Array<String>>
 }
 
-
 /**
-* Indicates the reason for the failure.
-*
-* @relation enum Faults
-*/
-@Derive[ToString]
+ * Indicates the reason for the failure.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public enum Faults {
     /**
-    * Indicates others failure.
-    *
-    * @relation OTHERS = 0xFF
-    */
+     * Indicates others failure.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Others |
+    Others
+    |
     /**
-    * Indicates network disconnection.
-    *
-    * @relation DISCONNECTED = 0x00
-    */
+     * Indicates network disconnection.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Disconnected |
+    Disconnected
+    |
     /**
-    * Indicates task timeout.
-    *
-    * @relation TIMEOUT = 0x10
-    */
+     * Indicates task timeout.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Timeout |
+    Timeout
+    |
     /**
-    * Indicates protocol error, such as 5xx response from server.
-    *
-    * @relation PROTOCOL = 0x20
-    */
+     * Indicates protocol error, such as 5xx response from server.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Protocol |
+    Protocol
+    |
     /**
-    * Indicates filesystem io error, such as open/seek/read/write/close.
-    *
-    * @relation FSIO = 0x40
-    */
+     * Indicates filesystem io error, such as open/seek/read/write/close.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    Fsio |
-    ...
+    Fsio
+    | ...
 }
 
-
+extend Faults <: ToString {
+    /**
+     * Converts the Faults to its string representation.
+     * @returns { String } A string representation of the Faults.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent"
+    ]
+    public func toString(): String
+}
 
 /**
-* The filter data structure.
-* Used for search, given fields works as **LOGICAL AND**.
-* Invalid value may cause a parameter error.
-*
-* @relation interface Filter
-*/
+ * The filter data structure.
+ * Used for search, given fields works as **LOGICAL AND**.
+ * Invalid value may cause a parameter error.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Filter {
     /**
-    * Specify the end Unix timestamp.
-    * The default is the moment of calling.
-    *
-    * @relation before?: number
-    */
+     * Specify the end Unix timestamp.
+     * The default is the moment of calling.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var before: ?Int64
-    
+
     /**
-    * Specify the start Unix timestamp.
-    * The default is "`before` - 24 hours".
-    *
-    * @relation after?: number
-    */
+     * Specify the start Unix timestamp.
+     * The default is "`before` - 24 hours".
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var after: ?Int64
-    
+
     /**
-    * Specify the state of tasks.
-    * The default is any state.
-    *
-    * @relation state?: State
-    */
+     * Specify the state of tasks.
+     * The default is any state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var state: ?State
-    
+
     /**
-    * Specify the action of tasks, "upload" or "download", case insensitive.
-    * The default is upload and download.
-    *
-    * @relation action?: Action
-    */
+     * Specify the action of tasks, "upload" or "download", case insensitive.
+     * The default is upload and download.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var action: ?Action
-    
+
     /**
-    * Specify task's mode.
-    * The default is Foreground and Background.
-    *
-    * @relation mode?: Mode
-    */
+     * Specify task's mode.
+     * The default is Foreground and Background.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var mode: ?Mode
-    
+
     /**
-    * Filter constructor.
-    */
+     * Filter constructor.
+     * @param { ?Int64 } [before] - Specify the end Unix timestamp.
+     * @param { ?Int64 } [after] - Specify the start Unix timestamp.
+     * @param { ?State } [state] - Specify the state of tasks.
+     * @param { ?Action } [action] - Specify the action of tasks, "upload" or "download", case insensitive.
+     * @param { ?Mode } [mode] - Specify task's mode.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
-    public init(before!: ?Int64 = None, after!: ?Int64 = None, state!: ?State = None,
-        action!: ?Action = None, mode!: ?Mode = None
+    public init(
+        before!: ?Int64 = None,
+        after!: ?Int64 = None,
+        state!: ?State = None,
+        action!: ?Action = None,
+        mode!: ?Mode = None
     )
 }
 
-
 /**
-* The task information data structure for query results.
-* Provides common query and advanced query, visible range of fields is different.
-*
-* @relation interface TaskInfo
-*/
+ * The task information data structure for query results.
+ * Provides common query and advanced query, visible range of fields is different.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class TaskInfo {
     /**
-    * The path to save the downloaded file.
-    *
-    * @relation readonly saveas?: string
-    */
+     * The path to save the downloaded file.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let saveas: String
-    
+
     /**
-    * The url of a task.
-    * For `${ show }` and `${ touch }`.
-    *
-    * @relation readonly url?: string
-    */
+     * The url of a task.
+     * For `${ show }` and `${ touch }`.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let url: String
-    
+
     /**
-    * The arguments.
-    * For `${ show }` and `${ touch }`.
-    *
-    * @relation readonly data?: string | Array<FormItem>
-    */
+     * The arguments.
+     * For `${ show }` and `${ touch }`.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let data: ConfigData
-    
+
     /**
-    * The task id.
-    *
-    * @relation readonly tid: string
-    */
+     * The task id.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let tid: String
-    
+
     /**
-    * The task title.
-    *
-    * @relation readonly title: string
-    */
+     * The task title.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let title: String
-    
+
     /**
-    * The task details.
-    *
-    * @relation readonly description: string
-    */
+     * The task details.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let description: String
-    
+
     /**
-    * The task action.
-    *
-    * @relation readonly action: Action
-    */
+     * The task action.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let action: Action
-    
+
     /**
-    * Specify task mode.
-    * The default is frontend
-    *
-    * @relation readonly mode: Mode
-    */
+     * Specify task mode.
+     * The default is front-end.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let mode: Mode
-    
+
     /**
-    * The priority of this task.
-    * Front-end tasks have higher priority than back-end tasks.
-    * In tasks of the same mode, the smaller the number, the higher the priority.
-    * The default is 0.
-    *
-    * @relation readonly priority: number
-    */
+     * The priority of this task.
+     * Front-end tasks have higher priority than back-end tasks.
+     * In tasks of the same mode, the smaller the number, the higher the priority.
+     * The default is 0.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let priority: UInt32
-    
+
     /**
-    * The MIME type in the configuration of the task.
-    *
-    * @relation readonly mimeType: string
-    */
+     * The MIME type in the configuration of the task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let mimeType: String
-    
+
     /**
-    * An instance of `Progress` for a task.
-    *
-    * @relation readonly progress: Progress
-    */
+     * An instance of `Progress` for a task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let progress: Progress
-    
+
     /**
-    * The progress notification policy of a background task.
-    *
-    * @relation readonly gauge: boolean
-    */
+     * The progress notification policy of a background task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let gauge: Bool
-    
+
     /**
-    * The creating date and time of a task in Unix timestamp.
-    * It is generated by system of current device.
-    *
-    * @relation readonly ctime: number
-    */
+     * The creating date and time of a task in Unix timestamp.
+     * It is generated by system of current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let ctime: UInt64
-    
+
     /**
-    * The modified date and time of a task in Unix timestamp.
-    * It is generated by system of current device.
-    *
-    * @relation readonly mtime: number
-    */
+     * The modified date and time of a task in Unix timestamp.
+     * It is generated by system of current device.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let mtime: UInt64
-    
+
     /**
-    * The retry switch of a task.
-    * Just for background, frontend always disable
-    *
-    * @relation readonly retry: boolean
-    */
+     * The retry switch of a task.
+     * Just for background, front-end always disable.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let retry: Bool
-    
+
     /**
-    * The tried times of a task.
-    *
-    * @relation readonly tries: number
-    */
+     * The tried times of a task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let tries: UInt32
-    
+
     /**
-    * The faults case of a task.
-    *
-    * @relation readonly faults: Faults
-    */
+     * The faults case of a task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let faults: Faults
-    
+
     /**
-    * The reason of a waiting/failed/stopped/paused task.
-    *
-    * @relation readonly reason: string
-    */
+     * The reason of a waiting/failed/stopped/paused task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let reason: String
-    
+
     /**
-    * The extras of a task.
-    * For frontend, nothing now.
-    *
-    * @relation readonly extras?: object
-    */
+     * The extras of a task.
+     * For front-end, nothing now.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let extras: HashMap<String, String>
 }
 
-
 /**
-* The task entry.
-* New task' status is "initialized" and enqueue.
-* Can `start` a initialized task.
-* Can `pause` a waiting/running/retrying background task.
-* Can `resume` a paused background task.
-* Can `stop` a running/waiting/retrying task and dequeue it.
-*
-* @relation interface Task
-*/
+ * The task entry.
+ * New task' status is "initialized" and enqueue.
+ * Can `start` a initialized task.
+ * Can `pause` a waiting/running/retrying background task.
+ * Can `resume` a paused background task.
+ * Can `stop` a running/waiting/retrying task and dequeue it.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Request.FileTransferAgent"
 ]
 public class Task {
     /**
-    * The task id, unique on system.
-    * Generated automatically by system.
-    *
-    * @relation readonly tid: string
-    */
+     * The task id, unique on system.
+     * Generated automatically by system.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public let tid: String
-    
+
     /**
-    * The configurations for the task.
-    *
-    * @relation config: Config
-    */
+     * The configurations for the task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public var config: Config
-    
+
     /**
-    * Task constructor.
-    */
+     * Task constructor.
+     *
+     * @param { String } tid - The task id, unique on system.
+     * @param { Config } config - The configurations for the task.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public init(tid: String, config: Config)
-    
+
     /**
-    * Enables the response callback.
-    * Subscribes to task response headers.
-    *
-    * @param { String } event - event types.
-    * @param { Callback1Argument<HttpResponse> } callback - callback function with an `HttpResponse` argument.
-    * @throws { BusinessException } 401 - Parameter verification failed.
-    * @relation on(event: 'response', callback: Callback<HttpResponse>): void
-    */
+     * Enables the response callback.
+     * Subscribes to task response headers.
+     *
+     * @param { EventCallbackType } event - event types.
+     * @param { Callback1Argument<HttpResponse> } callback - callback function with an `HttpResponse` argument.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func on(event: EventCallbackType, callback: Callback1Argument<HttpResponse>): Unit
-    
+
     /**
-    * Enables the specified callback.
-    * Subscribes to task progress changes, completion events, failure events, pause events, resume events or removal events.
-    *
-    * @param { String } event - event types.
-    * @param { Callback1Argument<Progress> } callback - callback function with a `Progress` argument.
-    * @throws { BusinessException } 401 - Parameter verification failed.
-    * @relation on(event: 'progress', callback: (progress: Progress) => void): void
-    * @relation on(event: 'completed', callback: (progress: Progress) => void): void
-    * @relation on(event: 'failed', callback: (progress: Progress) => void): void
-    * @relation on(event: 'pause', callback: (progress: Progress) => void): void
-    * @relation on(event: 'resume', callback: (progress: Progress) => void): void
-    * @relation on(event: 'remove', callback: (progress: Progress) => void): void
-    */
+     * Enables the specified callback.
+     * Subscribes to task progress changes, completion events, failure events, pause events, resume events or removal
+     * events.
+     *
+     * @param { EventCallbackType } event - event types.
+     * @param { Callback1Argument<Progress> } callback - callback function with a `Progress` argument.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func on(event: EventCallbackType, callback: Callback1Argument<Progress>): Unit
-    
+
     /**
-    * Disables the specified callback.
-    * Unsubscribes task progress changes, completion events, failure events, pause events, resume events or removal events.
-    *
-    * @param { String } event - event types.
-    * @param { CallbackObject } callback - callback function.
-    * @relation off(event: 'progress', callback?: (progress: Progress) => void): void
-    * @relation off(event: 'completed', callback?: (progress: Progress) => void): void
-    * @relation off(event: 'failed', callback?: (progress: Progress) => void): void
-    * @relation off(event: 'pause', callback?: (progress: Progress) => void): void
-    * @relation off(event: 'resume', callback?: (progress: Progress) => void): void
-    * @relation off(event: 'remove', callback?: (progress: Progress) => void): void
-    */
+     * Disables the specified callback.
+     * Unsubscribes task progress changes, completion events, failure events, pause events, resume events or removal
+     * events.
+     *
+     * @param { EventCallbackType } event - event types.
+     * @param { CallbackObject } [callback] - callback function.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Request.FileTransferAgent"
     ]
     public func off(event: EventCallbackType, callback!: ?CallbackObject = None): Unit
-    
+
     /**
-    * Starts the task. The following tasks can be started:
-    * 1. Tasks just created.
-    * 2. Download tasks that are stopped or become FAILED.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 13400003 - Task service ability error.
-    * @throws { BusinessException } 21900007 - Operation with wrong task state.
-    * @relation start(): Promise<void>
-    */
+     * Starts the task. The following tasks can be started:
+     * 1. Tasks just created.
+     * 2. Download tasks that are stopped or become FAILED.
+     *
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 13400003 - Task service ability error.
+     * @throws { BusinessException } 21900007 - Operation with wrong task state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.INTERNET",
-        syscap: "SystemCapability.Request.FileTransferAgent"
+        syscap: "SystemCapability.Request.FileTransferAgent",
+        throwexception: true,
+        workerthread: true
     ]
     public func start(): Unit
-    
+
     /**
-    * Pauses the background task.
-    *
-    * @throws { BusinessException } 13400003 - Task service ability error.
-    * @throws { BusinessException } 21900005 - Operation with wrong task mode.
-    * @throws { BusinessException } 21900007 - Operation with wrong task state.
-    * @relation pause(): Promise<void>
-    */
+     * Pauses the background task.
+     *
+     * @throws { BusinessException } 13400003 - Task service ability error.
+     * @throws { BusinessException } 21900007 - Operation with wrong task state.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
+        since: "22",
+        permission: "ohos.permission.INTERNET",
+        syscap: "SystemCapability.Request.FileTransferAgent",
+        throwexception: true,
+        workerthread: true
     ]
     public func pause(): Unit
-    
+
     /**
-    * Resumes the background task.
-    *
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 13400003 - Task service ability error.
-    * @throws { BusinessException } 21900005 - Operation with wrong task mode.
-    * @throws { BusinessException } 21900007 - Operation with wrong task state.
-    * @relation resume(): Promise<void>
-    */
+     * Resumes a paused task.
+     *
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 13400003 - Task service ability error.
+     * @throws { BusinessException } 21900007 - Operation with wrong task state.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.INTERNET",
-        syscap: "SystemCapability.Request.FileTransferAgent"
+        syscap: "SystemCapability.Request.FileTransferAgent",
+        throwexception: true,
+        workerthread: true
     ]
     public func resume(): Unit
-    
+
     /**
-    * Stop a running, waiting, or retrying task.
-    *
-    * @throws { BusinessException } 13400003 - Task service ability error.
-    * @throws { BusinessException } 21900007 - Operation with wrong task state.
-    * @relation stop(): Promise<void>
-    */
+     * Stop a running, waiting, or retrying task.
+     *
+     * @throws { BusinessException } 13400003 - Task service ability error.
+     * @throws { BusinessException } 21900007 - Operation with wrong task state.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Request.FileTransferAgent"
+        since: "22",
+        syscap: "SystemCapability.Request.FileTransferAgent",
+        throwexception: true,
+        workerthread: true
     ]
     public func stop(): Unit
 }
 
-
-
 /**
-* Creates a task for upload or download and enqueue it.
-* Only foreground application can create the frontend task.
-* It can deal only one frontend task at a time.
-* A in processing frontend task will be forced to stop when its application had switched to background.
-* A new frontend task will interrupt a existed in processing frontend task.
-* The background task is highly recommended.
-*
-* @param { UIAbilityContext } context - context of the caller.
-* @param { Config } config - configurations for a task.
-* @returns { Task } the upload or download task.
-* @throws { BusinessException } 201 - Permission denied.
-* @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Missing mandatory parameters.
-* 2. Incorrect parameter type. 3. Parameter verification failed.
-* @throws { BusinessException } 13400001 - Invalid file or file system error.
-* @throws { BusinessException } 13400003 - Task service ability error.
-* @throws { BusinessException } 21900004 - the application task queue is full.
-* @throws { BusinessException } 21900005 - Operation with wrong task mode.
-* @throws { IllegalArgumentException } - The context is invalid.
-*
-* @relation function create(context: BaseContext, config: Config): Promise<Task>
-*/
+ * Creates a task for upload or download and enqueue it.
+ * When an application enters the background, the frontend tasks associated.
+ * with it will gradually be paused until the application returns to the foreground.
+ *
+ * @param { UIAbilityContext } context - context of the caller.
+ * @param { Config } config - configurations for a task.
+ * @returns { Task } the upload or download task.
+ * @throws { BusinessException } 201 - Permission denied.
+ * @throws { BusinessException } 13400001 - Invalid file or file system error.
+ * @throws { BusinessException } 13400003 - Task service ability error.
+ * @throws { BusinessException } 13499999 - Other error.
+ * @throws { BusinessException } 21900004 - the application task queue is full.
+ * @throws { BusinessException } 21900005 - Operation with wrong task mode.
+ */
 @!APILevel[
-    22,
+    since: "22",
     permission: "ohos.permission.INTERNET",
-    syscap: "SystemCapability.Request.FileTransferAgent"
+    syscap: "SystemCapability.Request.FileTransferAgent",
+    throwexception: true,
+    workerthread: true
 ]
 public func create(context: UIAbilityContext, config: Config): Task
 
-
 /**
-* Removes specified task belongs to the caller.
-* The task will be forced to stop if in processing.
-*
-* @param { String } id - the task id.
-* @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Missing mandatory parameters.
-* 2. Incorrect parameter type.
-* @throws { BusinessException } 13400003 - Task service ability error.
-* @throws { BusinessException } 21900006 - Task removed or not found.
-* @relation function remove(id: string): Promise<void>
-*/
+ * Removes specified task belongs to the caller.
+ * The task will be forced to stop if in processing.
+ *
+ * @param { String } id - the task id.
+ * @throws { BusinessException } 13400003 - Task service ability error.
+ * @throws { BusinessException } 21900006 - Task removed or not found.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent",
+    throwexception: true,
+    workerthread: true
 ]
 public func remove(id: String): Unit
 
-
 /**
-* Gets the task with the specified id.
-* Obtains task information based on the task ID.
-*
-* @param { UIAbilityContext } context - context of the caller.
-* @param { String } id - the id of the task.
-* @param { String } token - the token of the task, length between 8 and 2048 bytes.
-* @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Missing mandatory parameters.
-* 2. Incorrect parameter type. 3. Parameter verification failed.
-* @throws { BusinessException } 13400003 - Task service ability error.
-* @throws { BusinessException } 21900006 - Task removed or not found.
-* @throws { IllegalArgumentException } - The context is invalid.
-*
-* @relation function getTask(context: BaseContext, id: string, token?: string): Promise<Task>
-*/
+ * Gets the task with the specified id.
+ * Obtains task information based on the task ID.
+ *
+ * @param { UIAbilityContext } context - context of the caller.
+ * @param { String } id - the id of the task.
+ * @param { String } [token] - the token of the task, length between 8 and 2048 bytes.
+ * @returns { Task } a new task returned by the function.
+ * @throws { BusinessException } 13400003 - Task service ability error.
+ * @throws { BusinessException } 13499999 - Other error.
+ * @throws { BusinessException } 21900006 - Task removed or not found.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent",
+    throwexception: true,
+    workerthread: true
 ]
 public func getTask(context: UIAbilityContext, id: String, token!: ?String = None): Task
 
-
 /**
-* Shows specified task details belongs to the caller.
-* Queries a task details based on the task ID.
-*
-* @param { String } id - the task id.
-* @returns { TaskInfo } a task info base on the task ID
-* @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Missing mandatory parameters.
-* 2. Incorrect parameter type.
-* @throws { BusinessException } 13400003 - Task service ability error.
-* @throws { BusinessException } 21900006 - Task removed or not found.
-* @relation function show(id: string): Promise<TaskInfo>
-*/
+ * Shows specified task details belongs to the caller.
+ * Queries a task details based on the task ID.
+ *
+ * @param { String } id - the task id.
+ * @returns { TaskInfo } a task info base on the task ID
+ * @throws { BusinessException } 13400003 - Task service ability error.
+ * @throws { BusinessException } 21900006 - Task removed or not found.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent",
+    throwexception: true,
+    workerthread: true
 ]
 public func show(id: String): TaskInfo
 
-
 /**
-* Touches specified task with token.
-* Queries the task details based on the task ID and token.
-*
-* @param { String } id - the task id.
-* @param { String } token - the in-application isolation key.
-* @returns { TaskInfo } a task info base on the task ID and token
-* @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Missing mandatory parameters.
-* 2. Incorrect parameter type.
-* @throws { BusinessException } 13400003 - Task service ability error.
-* @throws { BusinessException } 21900006 - Task removed or not found.
-* @relation function touch(id: string, token: string): Promise<TaskInfo>
-*/
+ * Touches specified task with token.
+ * Queries the task details based on the task ID and token.
+ *
+ * @param { String } id - the task id.
+ * @param { String } token - the in-application isolation key, length between 8 and 2048 bytes.
+ * @returns { TaskInfo } a task info base on the task ID and token
+ * @throws { BusinessException } 13400003 - Task service ability error.
+ * @throws { BusinessException } 21900006 - Task removed or not found.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent",
+    throwexception: true,
+    workerthread: true
 ]
 public func touch(id: String, token: String): TaskInfo
 
-
 /**
-* Searches tasks, for system.
-* Searches for task IDs based on Filter.
-*
-* @param { Filter } filter - an instance of `Filter`.
-* @returns { Array<String> } task ids which matches filter
-* @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Missing mandatory parameters.
-* 2. Incorrect parameter type.
-* @throws { BusinessException } 13400003 - Task service ability error.
-*
-* @relation function search(filter?: Filter): Promise<Array<string>>
-*/
+ * Searches tasks, for system.
+ * Searches for task IDs based on Filter.
+ *
+ * @param { Filter } [filter] - an instance of `Filter`.
+ * @returns { Array<String> } task ids which matches filter
+ * @throws { BusinessException } 13400003 - Task service ability error.
+ */
 @!APILevel[
-    22,
-    syscap: "SystemCapability.Request.FileTransferAgent"
+    since: "22",
+    syscap: "SystemCapability.Request.FileTransferAgent",
+    throwexception: true,
+    workerthread: true
 ]
 public func search(filter!: Filter = Filter()): Array<String>
-
-

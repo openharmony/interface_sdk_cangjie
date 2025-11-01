@@ -1,43 +1,43 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.scroll_bar
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.scroll.*
 import ohos.base.*
 import ohos.labels.APILevel
 
-
+/**
+ * Defines ScrollBar Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class ScrollBar <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class ScrollBar <: CommonMethodComponent<ScrollBar> & ScrollBarAttribute {
+/**
+ * Constructs a ScrollBar component with the provided parameters.
+ *
+ * @param { ?Scroller } scroller - Scroller controller for the scrollable component.
+ * @param { ?ScrollBarDirection } [direction] - Layout direction of the scroll bar.
+ * @param { ?BarState } [state] - Display state of the scroll bar.
+ * @param { () -> Unit } child - Child component contained in the scroll bar.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(
-        scroller!: Scroller,
-        direction!: ScrollBarDirection = ScrollBarDirection.Vertical,
-        state!: BarState  = BarState.Auto,
-        child!: () -> Unit = { => }
+        scroller!: ?Scroller,
+        direction!: ?ScrollBarDirection = None,
+        state!: ?BarState = None,
+        child!: () -> Unit
     )
 }
 
+/**
+ * Defines the ScrollBar attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface ScrollBarAttribute <: CommonMethod<ScrollBarAttribute> {}

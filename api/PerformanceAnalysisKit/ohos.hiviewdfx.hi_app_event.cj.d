@@ -13,711 +13,678 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.hiviewdfx.hi_app_event
-import ohos.ffi.*
-import ohos.labels.*
-import ohos.business_exception.BusinessException
-import std.collection.*
 
-import ohos.hilog.*
-import ohos.business_exception.*
+import ohos.labels.APILevel
+import std.collection.HashMap
 
 /**
 * Defines a subscription data holder for processing event information.
 *
-* @relation class AppEventPackageHolder
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
-public class AppEventPackageHolder <: RemoteDataLite {
+public class AppEventPackageHolder {
     /**
-    * Constructs an AppEventPackageHolder instance. You can call addWatcher to add an event watcher, and then 
-    * associate the AppEventPackageHolder instance with the watcher added in the application based on the watcher name.
-    *
-    * @relation constructor(watcherName: string)
-    */
+     * Constructs an AppEventPackageHolder instance. You can call addWatcher to add an event watcher, and then 
+     * associate the AppEventPackageHolder instance with the watcher added in the application based on the watcher name.
+     *
+     * @param { String } watcherName - Name of the event watcher added through addWatcher. If no watcher is added, no 
+     * data is displayed by default.
+     * @throws { BusinessException } 11105001 - Parameter error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public init(watcherName: String)
-    
+
     /**
-    * Sets the threshold for the data size of the event package obtained each time.
-    *
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 11104001 - Invalid size value.
-    * @relation setSize(size: number): void
-    */
+     * Sets the threshold for the data size of the event package obtained each time.
+     *
+     * @param { Int32 } size - Data size threshold, in bytes. The value range is [0, $2^{31}$-1]. If the value is out of 
+     * the range, an exception is thrown.
+     * @throws { BusinessException } 11104001 - Invalid size value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public func setSize(size: Int32): Unit
-    
+
     /**
-    * Obtains the subscription event.
-    * The system obtains the subscription event data based on the data size threshold specified by setSize or the 
-    * number of data records specified by setRow. By default, one subscription event data record is obtained. When all 
-    * subscription event data is obtained, null is returned.
-    * When setRow and setSize are called at the same time, only setRow takes effect.
-    *
-    * @relation takeNext(): AppEventPackage
-    */
+     * Obtains the subscription event.
+     * The system obtains the subscription event data based on the data size threshold specified by setSize or the 
+     * number of data records specified by setRow. By default, one subscription event data record is obtained. When all 
+     * subscription event data is obtained, null is returned.
+     * When setRow and setSize are called at the same time, only setRow takes effect.
+     *
+     * @returns { Option<AppEventPackage> } Event package object. If all subscription event data has been retrieved, None is 
+     * returned.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public func takeNext(): Option<AppEventPackage>
 }
 
-
 /**
 * Enumerates event types.
 *
-* @relation enum EventType
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public enum EventType {
     /**
-    * Fault event.
-    *
-    * @relation FAULT = 1
-    */
+     * Fault event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
-    Fault |
+    Fault
+    | 
     /**
-    * Statistic event.
-    *
-    * @relation STATISTIC = 2
-    */
+     * Statistic event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
-    Statistic |
+    Statistic
+    | 
     /**
-    * Security event.
-    *
-    * @relation SECURITY = 3
-    */
+     * Security event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
-    Security |
+    Security
+    | 
     /**
-    * Behavior event.
-    *
-    * @relation BEHAVIOR = 4
-    */
+     * Behavior event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
-    Behavior |
-    ...
+    Behavior
+    | ...
+
     /**
-    * get the corresponding mapping value.
-    */
+     * get the corresponding mapping value.
+     *
+     * @returns { UInt32 } return the corresponding mapping value.
+     * @throws { BusinessException } 11105001 - Parameter error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public func getValue(): UInt32
 }
-
 
 /**
 * Enumerates EventValueType types.
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public enum EventValueType <: ToString {
     /**
-    * IntValue event.
-    */
+     * IntValue event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    IntValue(Int32) |
+    ] 
+    IntValue(Int32)
+    | 
     /**
-    * FloatValue event.
-    */
+     * FloatValue event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    FloatValue(Float64) |
+    ] 
+    FloatValue(Float64)
+    | 
     /**
-    * StringValue event.
-    */
+     * StringValue event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    StringValue(String) |
+    ] 
+    StringValue(String)
+    | 
     /**
-    * BoolValue event.
-    */
+     * BoolValue event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    BoolValue(Bool) |
+    ] 
+    BoolValue(Bool)
+    | 
     /**
-    * ArrString event.
-    */
+     * ArrString event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    ArrString(Array<String>) |
+    ] 
+    ArrString(Array<String>)
+    | 
     /**
-    * ArrInt32 event.
-    */
+     * ArrInt32 event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    ArrInt32(Array<Int32>) |
+    ] 
+    ArrInt32(Array<Int32>)
+    | 
     /**
-    * ArrBool event.
-    */
+     * ArrBool event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    ArrBool(Array<Bool>) |
+    ] 
+    ArrBool(Array<Bool>)
+    | 
     /**
-    * ArrFloat64 event.
-    */
+     * ArrFloat64 event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    ArrFloat64(Array<Float64>) |
+    ] 
+    ArrFloat64(Array<Float64>)
+    | 
     /**
-    * Int64Value event.
-    */
+     * Int64Value event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    Int64Value(Int64) |
+    ] 
+    Int64Value(Int64)
+    | 
     /**
-    * ArrInt64 event.
-    */
+     * ArrInt64 event.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
-    ]
-    ArrInt64(Array<Int64>) |
-    ...
+    ] 
+    ArrInt64(Array<Int64>)
+    | ...
+
     /**
-    * get the corresponding mapping value.
-    */
+     * get the corresponding mapping value.
+     *
+     * @returns { String } return the corresponding mapping value.
+     * @throws { BusinessException } 11105001 - Parameter error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public func toString(): String
 }
 
-
 /**
 * Provides domain name constants.
-*
-* @relation namespace domain
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class Domain {
     /**
-    * System domain.
-    *
-    * @relation const OS: string
-    */
+     * System domain.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const OS = "OS"
 }
-
 
 /**
 * Provides event name constants, including system event name constants and application event name constants. 
 * The application event name constants are optional custom event names reserved when you call Write for 
 * application event logging.
 *
-* @relation namespace event
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class Event {
     /**
-    * User login event. This is a reserved application event name constant.
-    *
-    * @relation const USER_LOGIN: string
-    */
+     * User login event. This is a reserved application event name constant.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const USER_LOGIN = "hiappevent.user_login"
-    
+
     /**
-    * User logout event. This is a reserved application event name constant.
-    *
-    * @relation const USER_LOGOUT: string
-    */
+     * User logout event. This is a reserved application event name constant.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const USER_LOGOUT = "hiappevent.user_logout"
-    
+
     /**
-    * Distributed service startup event. This is a reserved application event name constant.
-    *
-    * @relation const DISTRIBUTED_SERVICE_START: string
-    */
+     * Distributed service startup event. This is a reserved application event name constant.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const DISTRIBUTED_SERVICE_START = "hiappevent.distributed_service_start"
-    
+
     /**
-    * Application crash event. This is a system event name constant.
-    *
-    * @relation const APP_CRASH: string
-    */
+     * Application crash event. This is a system event name constant.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const APP_CRASH = "APP_CRASH"
-    
+
     /**
-    * Application freeze event. This is a system event name constant.
-    *
-    * @relation const APP_FREEZE: string
-    */
+     * Application freeze event. This is a system event name constant.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const APP_FREEZE = "APP_FREEZE"
 }
 
-
 /**
 * Provides parameter name constants.
-*
-* @relation namespace param
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class Param {
     /**
-    * Custom user ID.
-    *
-    * @relation const USER_ID: string
-    */
+     * Custom user ID.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const USER_ID = "user_id"
-    
+
     /**
-    * Distributed service name.
-    *
-    * @relation const DISTRIBUTED_SERVICE_NAME: string
-    */
+     * Distributed service name.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const DISTRIBUTED_SERVICE_NAME = "ds_name"
-    
+
     /**
-    * Distributed service instance ID.
-    *
-    * @relation const DISTRIBUTED_SERVICE_INSTANCE_ID: string
-    */
+     * Distributed service instance ID.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static const DISTRIBUTED_SERVICE_INSTANCE_ID = "ds_instance_id"
 }
 
-
 /**
 * Defines parameters of the event information.
-*
-* @relation interface AppEventInfo
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class AppEventInfo {
     /**
-    * Event domain. The value is a string of up to 32 characters, including digits (0 to 9), letters (a to z), and 
-    * underscores (_). It must start with a letter and cannot end with an underscore (_).
-    *
-    * @relation domain: string
-    */
+     * Event domain. The value is a string of up to 32 characters, including digits (0 to 9), letters (a to z), and 
+     * underscores (_). It must start with a letter and cannot end with an underscore (_).
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var domain: String
-    
+
     /**
-    * Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters 
-    * (a to z), underscore (_), and dollar sign ($). It must start with a letter or dollar sign ($) and end with a 
-    * digit or letter.
-    *
-    * @relation name: string
-    */
+     * Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters 
+     * (a to z), underscore (_), and dollar sign ($). It must start with a letter or dollar sign ($) and end with a 
+     * digit or letter.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var name: String
-    
+
     /**
-    * Event type.
-    *
-    * @relation eventType: EventType
-    */
+     * Event type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var eventType: EventType
-    
+
     /**
-    * Event parameter object, which consists of a parameter name and a parameter value. In system events, the fields 
-    * contained in params are defined by system. For details about the fields, you can see the overviews of system 
-    * events, for example, Crash Event Overview. For application events, you need to define the parameters of the 
-    * Write API. The specifications are as follows:
-    * <br>- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters 
-    * (a to z), underscore (_), and dollar sign ($). It must start with a letter or dollar sign ($) and end with a 
-    * digit or letter. For example, testName and $123_name.
-    * <br>- The parameter value can be a string, number, boolean, or array. The string type parameter can contain a 
-    * maximum of 8 x 1024 characters. If the length exceeds the limit, the parameter and its name will be discarded. 
-    * The value of the number type parameter must be within the range of Number.MIN_SAFE_INTEGER to 
-    * Number.MAX_SAFE_INTEGER. If the value exceeds the range, an uncertain value may be generated. The element type 
-    * in the array type parameter can only be string, number, or boolean. The number of elements must be less than 
-    * 100. If this limit is exceeded, excess elements will be discarded.
-    * <br>- The maximum number of parameters is 32. If this limit is exceeded, excess parameters will be discarded.
-    *
-    *
-    * @relation params: object
-    */
+     * Event parameter object, which consists of a parameter name and a parameter value. In system events, the fields 
+     * contained in params are defined by system. For details about the fields, you can see the overviews of system 
+     * events, for example, Crash Event Overview. For application events, you need to define the parameters of the 
+     * Write API. The specifications are as follows:
+     * <br>- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters 
+     * (a to z), underscore (_), and dollar sign ($). It must start with a letter or dollar sign ($) and end with a 
+     * digit or letter. For example, testName and $123_name.
+     * <br>- The parameter value can be a string, number, boolean, or array. The string type parameter can contain a 
+     * maximum of 8 x 1024 characters. If the length exceeds the limit, the parameter and its name will be discarded. 
+     * The value of the number type parameter must be within the range of Number.MIN_SAFE_INTEGER to 
+     * Number.MAX_SAFE_INTEGER. If the value exceeds the range, an uncertain value may be generated. The element type 
+     * in the array type parameter can only be string, number, or boolean. The number of elements must be less than 
+     * 100. If this limit is exceeded, excess elements will be discarded.
+     * <br>- The maximum number of parameters is 32. If this limit is exceeded, excess parameters will be discarded.
+     *
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var params: HashMap<String, EventValueType>
-    
+
     /**
-    * AppEventInfo constructor.
-    */
+     * AppEventInfo constructor.
+     *
+     * @param { String } domain - Indicates the event domain.
+     * @param { String } name - Indicates the event name.
+     * @param { EventType } event - Indicates the event type.
+     * @param { HashMap<String, EventValueType> } params - Indicates the Event parameter object.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(domain: String, name: String, event: EventType, params: HashMap<String, EventValueType>)
 }
 
-
 /**
 * Provides configuration options for application event logging.
-*
-* @relation interface ConfigOption
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class ConfigOption {
     /**
-    * Whether to enable the event logging function. The default value is false. 
-    * If this parameter is set to true, the logging function is disabled. Otherwise, the logging function is 
-    * enabled.
-    *
-    * @relation disable?: boolean
-    */
+     * Whether to enable the event logging function. The default value is false. 
+     * If this parameter is set to true, the logging function is disabled. Otherwise, the logging function is 
+     * enabled.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var disable: Bool
-    
+
     /**
-    * Quota for the directory that stores event logging files. The default value is 10M. 
-    * <br>It is recommended that the quota be less than or equal to 10 MB. Otherwise, the API efficiency may be 
-    * affected. If the directory size exceeds the specified quota when application event logging is performed, event 
-    * logging files in the directory will be cleared one by one based on the generation time to ensure that directory 
-    * size does not exceed the quota.
-    * <br>The quota value must meet the following requirements:
-    * <br>- The quota value consists of only digits and a unit (which can be one of [b|k|kb|m|mb|g|gb|t|tb], which are 
-    * case insensitive.)
-    * <br>- The quota value must start with a digit. You can determine whether to pass the unit. If the unit is left 
-    * empty, b (that is, byte) is used by default.
-    *
-    * @relation maxStorage?: string
-    */
+     * Quota for the directory that stores event logging files. The default value is 10M. 
+     * <br>It is recommended that the quota be less than or equal to 10 MB. Otherwise, the API efficiency may be 
+     * affected. If the directory size exceeds the specified quota when application event logging is performed, event 
+     * logging files in the directory will be cleared one by one based on the generation time to ensure that directory 
+     * size does not exceed the quota.
+     * <br>The quota value must meet the following requirements:
+     * <br>- The quota value consists of only digits and a unit (which can be one of [b|k|kb|m|mb|g|gb|t|tb], which are 
+     * case insensitive.)
+     * <br>- The quota value must start with a digit. You can determine whether to pass the unit. If the unit is left 
+     * empty, b (that is, byte) is used by default.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var maxStorage: String
-    
+
     /**
-    * ConfigOption constructor.
-    */
+     * ConfigOption constructor.
+     *
+     * @param { Bool } [disable] - Indicates whether to enable the event logging function. The default value is false.
+     * @param { String } [maxStorage] - Indicates the quota for the directory that stores event logging files. 
+     *                                  The default value is "10M".
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(disable!: Bool = false, maxStorage!: String = "10M")
 }
 
-
 /**
 * Event description configuration that can be reported by the data processor.
-*
-* @relation interface AppEventReportConfig
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class AppEventReportConfig {
     /**
-    * Event domain. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters 
-    * (a to z), and underscore (_). It must start with a letter and cannot end with an underscore (_). The default 
-    * value is an empty string.
-    *
-    * @relation domain?: string
-    */
+     * Event domain. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters 
+     * (a to z), and underscore (_). It must start with a letter and cannot end with an underscore (_). The default 
+     * value is an empty string.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var domain: String
-    
+
     /**
-    * Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters 
-    * (a to z), underscore (_), and dollar sign ($). It must start with a letter or dollar sign ($) and end with a 
-    * digit or letter. The default value is an empty string.
-    *
-    * @relation name?: string
-    */
+     * Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters 
+     * (a to z), underscore (_), and dollar sign ($). It must start with a letter or dollar sign ($) and end with a 
+     * digit or letter. The default value is an empty string.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var name: String
-    
+
     /**
-    * Whether to report events in real time. The value true indicates that events are reported in real time, and the 
-    * value false indicates the opposite. The default value is false.
-    *
-    * @relation isRealTime?: boolean
-    */
+     * Whether to report events in real time. The value true indicates that events are reported in real time, and the 
+     * value false indicates the opposite. The default value is false.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var isRealTime: Bool
-    
+
     /**
-    * AppEventReportConfig constructor.
-    */
+     * AppEventReportConfig constructor.
+     *
+     * @param { String } [domain] - Indicates event domain. The default value is "".
+     * @param { String } [name] - Indicates the event name. The default value is "".
+     * @param { Bool } [isRealTime] - Indicates whether to report events in real time. The default value is false.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(domain!: String = "", name!: String = "", isRealTime!: Bool = false)
 }
 
-
 /**
 * Defines a data processor for reporting and managing events. You can customize processor configurations as required.
-*
-* @relation interface Processor
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class Processor {
     /**
-    * Name of a data processor. The value is string that contains a maximum of 256 characters, including digits (0 to 
-    * 9), letters (a to z), underscore (_), and dollar sign ($). It must not start with a digit.
-    *
-    * @relation name: string
-    */
+     * Name of a data processor. The value is string that contains a maximum of 256 characters, including digits (0 to 
+     * 9), letters (a to z), underscore (_), and dollar sign ($). It must not start with a digit.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var name: String
-    
+
     /**
-    * Whether to enable the debug mode. The default value is false. The value true means to enable the debugging mode, 
-    * and the value false means the opposite.
-    *
-    * @relation debugMode?: boolean
-    */
+     * Whether to enable the debug mode. The default value is false. The value true means to enable the debugging mode, 
+     * and the value false means the opposite.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var debugMode: Bool
-    
+
     /**
-    * Server location information. It is left empty by default. The length of the input string cannot exceed 8 KB. If 
-    * the length exceeds 8 KB, the default value is used.
-    *
-    * @relation routeInfo?: string
-    */
+     * Server location information. It is left empty by default. The length of the input string cannot exceed 8 KB. If 
+     * the length exceeds 8 KB, the default value is used.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var routeInfo: String
-    
+
     /**
-    * Application ID. It is left empty by default. The length of the input string cannot exceed 8 KB. If the length 
-    * exceeds 8 KB, the default value is used.
-    *
-    * @relation appId?: string
-    */
+     * Application ID. It is left empty by default. The length of the input string cannot exceed 8 KB. If the length 
+     * exceeds 8 KB, the default value is used.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var appId: String
-    
+
     /**
-    * Whether to report an event when the data processor starts. The default value is false. The value true means to 
-    * report events, and the value false means the opposite.
-    *
-    * @relation onStartReport?: boolean
-    */
+     * Whether to report an event when the data processor starts. The default value is false. The value true means to 
+     * report events, and the value false means the opposite.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var onStartReport: Bool
-    
+
     /**
-    * Whether to report an event when an application switches to the background. The default value is false. The value 
-    * true means to report events, and the value false means the opposite.
-    *
-    * @relation onBackgroundReport?: boolean
-    */
+     * Whether to report an event when an application switches to the background. The default value is false. The value 
+     * true means to report events, and the value false means the opposite.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var onBackgroundReport: Bool
-    
+
     /**
-    * Interval for event reporting, in seconds. The input value must be greater than or equal to 0. If the input value 
-    * is less than 0, the default value 0 is used and periodic reporting is not performed.
-    *
-    * @relation periodReport?: number
-    */
+     * Interval for event reporting, in seconds. The input value must be greater than or equal to 0. If the input value 
+     * is less than 0, the default value 0 is used and periodic reporting is not performed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var periodReport: Int32
-    
+
     /**
-    * Event reporting threshold. When the number of events reaches the threshold, an event is reported. The value must 
-    * be greater than 0 and less than 1000. If the value is not within the range, the default value 0 is used and no 
-    * events are reported.
-    *
-    * @relation batchReport?: number
-    */
+     * Event reporting threshold. When the number of events reaches the threshold, an event is reported. The value must 
+     * be greater than 0 and less than 1000. If the value is not within the range, the default value 0 is used and no 
+     * events are reported.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var batchReport: Int32
-    
+
     /**
-    * Name array of user IDs that can be reported by the data processor. name corresponds to the name parameter of the 
-    * setUserId API. The default value is an empty array.
-    *
-    * @relation userIds?: string[]
-    */
+     * Name array of user IDs that can be reported by the data processor. name corresponds to the name parameter of the 
+     * setUserId API. The default value is an empty array.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var userIds: Array<String>
-    
+
     /**
-    * Name array of user properties that can be reported by the data processor. name corresponds to the name parameter 
-    * of the setUserProperty API. The default value is an empty array.
-    *
-    * @relation userProperties?: string[]
-    */
+     * Name array of user properties that can be reported by the data processor. name corresponds to the name parameter 
+     * of the setUserProperty API. The default value is an empty array.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var userProperties: Array<String>
-    
+
     /**
-    * Event description configuration array that can be reported by the data processor. The default value is an empty 
-    * array.
-    *
-    * @relation eventConfigs?: AppEventReportConfig[]
-    */
+     * Event description configuration array that can be reported by the data processor. The default value is an empty 
+     * array.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var eventConfigs: Array<AppEventReportConfig>
-    
+
     /**
-    * Processor constructor.
-    */
+     * Processor constructor.
+     *
+     * @param { String } name - Indicates name of a data processor.
+     * @param { Bool } [debugMode] - Indicates whether to enable the debug mode. The default value is false.
+     * @param { String } [routeInfo] - Indicates server location information. The default value is "".
+     * @param { String } [appId] - Indicates Application ID. The default value is "".
+     * @param { Bool } [onStartReport] - Indicates whether to report an event when the data processor starts. The default
+     * value is false.
+     * @param { Bool } [onBackgroundReport] - Indicates whether to report an event when an application switches to the
+     * background. The default value is false.
+     * @param { Int32 } [periodReport] - Indicates interval for event reporting, in seconds. The default value is 0.
+     * @param { Int32 } [batchReport] - Indicates event reporting threshold. The default value is 0.
+     * @param { Array<String> } [userIds] - Indicates name array of user IDs that can be reported by the data processor.
+     * The default value is [].
+     * @param { Array<String> } [userProperties] - Indicates name array of user properties that can be reported by the
+     * data processor. The default value is [].
+     * @param { Array<AppEventReportConfig> } [eventConfigs] - Indicates event description configuration array that can
+     * be reported by the data processor. The default value is [].
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(name: String, debugMode!: Bool = false, routeInfo!: String = "", appId!: String = "",
@@ -726,298 +693,271 @@ public class Processor {
         eventConfigs!: Array<AppEventReportConfig> = [])
 }
 
-
 /**
 * Defines parameters of an AppEventPackage object. This API is used to obtain detail information about an event 
 * package, which is obtained using the takeNext API.
-*
-* @relation interface AppEventPackage
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class AppEventPackage {
     /**
-    * Event package ID, which is named from 0 in ascending order.
-    *
-    * @relation packageId: number
-    */
+     * Event package ID, which is named from 0 in ascending order.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var packageId: Int32
-    
+
     /**
-    * Number of events in the event package.
-    *
-    * @relation row: number
-    */
+     * Number of events in the event package.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var row: Int32
-    
+
     /**
-    * Event size of the event package, in bytes.
-    *
-    * @relation size: number
-    */
+     * Event size of the event package, in bytes.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var size: Int32
-    
+
     /**
-    * Event data in the event package.
-    *
-    * @relation data: string[]
-    */
+     * Event data in the event package.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var data: Array<String>
 }
 
-
 /**
 * Defines the triggering condition parameters of the onTrigger callback of a Watcher.
-*
-* @relation interface TriggerCondition
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class TriggerCondition {
     /**
-    * Total number of events that trigger callback. The value is a positive integer. The default value is 0, 
-    * indicating that no callback is triggered. If this parameter is set to a negative value, the default 
-    * value is used.
-    *
-    * @relation row?: number
-    */
+     * Total number of events that trigger callback. The value is a positive integer. The default value is 0, 
+     * indicating that no callback is triggered. If this parameter is set to a negative value, the default 
+     * value is used.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var row: Int32
-    
+
     /**
-    * Total size of events that trigger callback. The value is a positive integer, in bytes. The default value is 0, 
-    * indicating that no callback is triggered. If this parameter is set to a negative value, the default value is 
-    * used.
-    *
-    * @relation size?: number
-    */
+     * Total size of events that trigger callback. The value is a positive integer, in bytes. The default value is 0, 
+     * indicating that no callback is triggered. If this parameter is set to a negative value, the default value is 
+     * used.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var size: Int32
-    
+
     /**
-    * Timeout interval for triggering callback. The value is a positive integer, in unit of 30s. The default value is 
-    * 0, indicating that no callback is triggered. If this parameter is set to a negative value, the default value is 
-    * used.
-    *
-    * @relation timeOut?: number
-    */
+     * Timeout interval for triggering callback. The value is a positive integer, in unit of 30s. The default value is 
+     * 0, indicating that no callback is triggered. If this parameter is set to a negative value, the default value is 
+     * used.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var timeOut: Int32
-    
+
     /**
-    * TriggerCondition constructor
-    */
+     * TriggerCondition constructor.
+     *
+     * @param { Int32 } [row] - Indicates total number of events that trigger callback. The default value is 0.
+     * @param { Int32 } [size] - Indicates total size of events that trigger callback. The default value is 0.
+     * @param { Int32 } [timeOut] - Indicates timeout interval for triggering callback. The default value is 0.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(row!: Int32 = 0, size!: Int32 = 0, timeOut!: Int32 = 0)
 }
 
-
 /**
 * Defines parameters of subscription filtering conditions of a Watcher. This API is used to set event filtering 
 * conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed 
 * to.
-*
-* @relation interface AppEventFilter
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class AppEventFilter {
     /**
-    * Event domain, which can be the system event domain (hiAppEvent.domain.OS) or the event domain of the custom 
-    * event information (AppEventInfo) passed through the Write API.
-    *
-    * @relation domain: string
-    */
+     * Event domain, which can be the system event domain (hiAppEvent.domain.OS) or the event domain of the custom 
+     * event information (AppEventInfo) passed through the Write API.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var domain: String
-    
+
     /**
-    * Event types. If this parameter is not set, events are not filtered by default.
-    *
-    * @relation eventTypes?: EventType[]
-    */
+     * Event types. If this parameter is not set, events are not filtered by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var eventTypes: Array<EventType>
-    
+
     /**
-    * Names of the events to be subscribed. If this parameter is not set, events are not filtered by default.
-    *
-    * @relation names?: string[]
-    */
+     * Names of the events to be subscribed. If this parameter is not set, events are not filtered by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var names: Array<String>
-    
+
     /**
-    * AppEventFilter constructor
-    */
+     * AppEventFilter constructor.
+     *
+     * @param { String } domain - Indicates event domain.
+     * @param { Array<EventType> } [eventTypes] - Indicates event types. The default value is [].
+     * @param { Array<String> } [names] - Indicates names of the events to be subscribed. The default value is [].
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(domain: String, eventTypes!: Array<EventType> = [], names!: Array<String> = [])
 }
 
-
 /**
 * Defines parameters of the event group returned by a subscription. This API can be used to obtain detail 
 * information about an event group, which is often used in the onReceive callback of Watcher.
-*
-* @relation interface AppEventGroup
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class AppEventGroup {
     /**
-    * Event name.
-    *
-    * @relation name: string
-    */
+     * Event name.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var name: String
-    
+
     /**
-    * Event object group.
-    *
-    * @relation appEventInfos: Array<AppEventInfo>
-    */
+     * Event object group.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var appEventInfos: Array<AppEventInfo>
 }
 
-
 /**
-* Defines parameters for a Watcher object. This API is used to configure and manage event watchers to subscribe to 
-* and process specified events.
-*
-* @relation interface Watcher
-*/
+ * Defines parameters for a Watcher object. This API is used to configure and manage event watchers to subscribe to 
+ * and process specified events.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class Watcher {
     /**
-    * Unique name of a watcher. The value contains a maximum of 32 characters, including digits (0 to 9), letters 
-    * (a to z), underscore (_). It must start with a letter and end with a digit or letter. For example, testName1 
-    * and crash_Watcher.
-    *
-    * @relation name: string
-    */
+     * Unique name of a watcher. The value contains a maximum of 32 characters, including digits (0 to 9), letters 
+     * (a to z), underscore (_). It must start with a letter and end with a digit or letter. For example, testName1 
+     * and crash_Watcher.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var name: String
-    
+
     /**
-    * Subscription callback triggering condition. This parameter takes effect only when it is passed together with 
-    * onTrigger. If this parameter is not set, the onTrigger callback is not triggered by default.
-    *
-    * @relation triggerCondition?: TriggerCondition
-    */
+     * Subscription callback triggering condition. This parameter takes effect only when it is passed together with 
+     * onTrigger. If this parameter is not set, the onTrigger callback is not triggered by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var triggerCondition: TriggerCondition
-    
+
     /**
-    * Subscription filtering condition. This parameter is passed only when subscription events need to be filtered. 
-    * If this parameter is not set, events are not filtered by default.
-    *
-    * @relation appEventFilters?: AppEventFilter[]
-    */
+     * Subscription filtering condition. This parameter is passed only when subscription events need to be filtered. 
+     * If this parameter is not set, events are not filtered by default.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var appEventFilters: Array<AppEventFilter>
-    
+
     /**
-    * Subscription callback. This parameter takes effect only when it is passed together with triggerCondition. 
-    * The input arguments are described as follows: 
-    * <br>curRow: total number of subscription events when the callback is triggered.
-    * <br>curSize: total size of subscribed events when the callback is triggered, in bytes.
-    * <br>holder: subscription data holder, which can be used to process subscribed events.
-    *
-    * @relation onTrigger?: (curRow: number, curSize: number, holder: AppEventPackageHolder) => void
-    */
+     * Subscription callback. This parameter takes effect only when it is passed together with triggerCondition. 
+     * The input arguments are described as follows: 
+     * <br>curRow: total number of subscription events when the callback is triggered.
+     * <br>curSize: total size of subscribed events when the callback is triggered, in bytes.
+     * <br>holder: subscription data holder, which can be used to process subscribed events.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var onTrigger: Option<(Int32, Int32, AppEventPackageHolder) -> Unit>
-    
+
     /**
-    * Real-time subscription callback. Only this callback function is triggered if it is passed together with 
-    * onTrigger. The input arguments are described as follows: 
-    * <br>domain: domain name.
-    * <br>appEventGroups: event group.
-    *
-    * @relation onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
-    */
+     * Real-time subscription callback. Only this callback function is triggered if it is passed together with 
+     * onTrigger. The input arguments are described as follows: 
+     * <br>domain: domain name.
+     * <br>appEventGroups: event group.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public var onReceive: Option<(String, Array<AppEventGroup>) -> Unit>
-    
+
     /**
-    * Watcher constructor
-    */
+     * Watcher constructor.
+     *
+     * @param { String } name - Indicates unique name of a watcher.
+     * @param { TriggerCondition } [triggerCondition] - Indicates subscription callback triggering condition.
+     * @param { Array<AppEventFilter> } [appEventFilters] - Indicates subscription filtering condition. The default value
+     * is [].
+     * @param { Option<(Int32, Int32, AppEventPackageHolder) -> Unit> } [onTrigger] - Indicates subscription callback.
+     * The default value is None.
+     * @param { Option<(String, Array<AppEventGroup>) -> Unit> } [onReceive] - Indicates Real-time subscription callback.
+     * The default value is None.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public init(name: String, triggerCondition!: TriggerCondition = TriggerCondition(),
@@ -1026,155 +966,182 @@ public class Watcher {
         onReceive!: Option<(String, Array<AppEventGroup>) -> Unit> = None)
 }
 
-
 /**
-* Provides the event logging function for applications to log the fault, statistical, security,
-* and user behavior events reported during running. Based on event information,
-* you will be able to analyze the running status of applications.
-*
-* @relation declare namespace hiAppEvent
-*/
+ * Provides the event logging function for applications to log the fault, statistical, security,
+ * and user behavior events reported during running. Based on event information,
+ * you will be able to analyze the running status of applications.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiAppEvent"
 ]
 public class HiAppEvent {
     /**
-    * Writes events of the AppEventInfo type.The event 
-    * object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised 
-    * to write it to system events (system event name constants defined in Event). The events written by this API can be 
-    * subscribed to through (addWatcher).
-    *
-    * @relation function write(info: AppEventInfo): Promise<void>
-    */
+     * Writes events of the AppEventInfo type. The event object written by 
+     * calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to 
+     * system events (system event name constants defined in Event). The events written by this API can be subscribed to 
+     * through (addWatcher).
+     *
+     * @param { AppEventInfo } info - Application event object. You are advised to avoid the conflict between the custom 
+     * event name and the system event name constant defined in Event.
+     * @throws { BusinessException } 11100001 - Function is disabled. Possible caused by the param disable in ConfigOption is true.
+     * @throws { BusinessException } 11101001 - Invalid event domain.Possible causes: 1. Contain invalid characters;
+     * 2. Length is invalid.
+     * @throws { BusinessException } 11101002 - Invalid event name. Possible causes: 1. Contain invalid characters;
+     * 2. Length is invalid.
+     * @throws { BusinessException } 11101003 - Invalid number of event parameters. Possible caused by the number of parameters
+     * is over 32.
+     * @throws { BusinessException } 11101004 - Invalid string length of the event parameter.
+     * @throws { BusinessException } 11101005 - Invalid event parameter name. Possible causes: 1. Contain invalid characters;
+     * 2. Length is invalid.
+     * @throws { BusinessException } 11101006 - Invalid array length of a event parameter.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true,
+        workerthread: true
     ]
     public static func write(info: AppEventInfo): Unit
-    
+
     /**
-    * Configures the application event logging function, such as setting the logging switch and directory storage quota.
-    *
-    * @relation function configure(config: ConfigOption): void
-    */
+     * Configures the application event logging function, such as setting the logging switch and directory storage
+     * quota.
+     *
+     * @param { ConfigOption } config - Configuration items for application event logging.
+     * @throws { BusinessException } 11103001 - Invalid max storage quota value. Possible caused by incorrectly formatted.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public static func configure(config: ConfigOption): Unit
-    
+
     /**
-    * Adds a data processor to migrate event data to the cloud. You can preset the implementation of the processor on 
-    * the device and set its properties based on its constraints.
-    * <br>The configuration information of Processor must be provided by the data processor. Yet, as no data processor 
-    * is preset in the device for interaction for the moment, migrating events to the cloud is unavailable.
-    *
-    * @relation function addProcessor(processor: Processor): number
-    */
+     * Adds a data processor to migrate event data to the cloud. You can preset the implementation of the processor on 
+     * the device and set its properties based on its constraints.
+     * <br>The configuration information of Processor must be provided by the data processor. Yet, as no data processor 
+     * is preset in the device for interaction for the moment, migrating events to the cloud is unavailable.
+     *
+     * @param { Processor } processor - Data processor.
+     * @returns { Int64 } ID of the data processor of the reported event, which uniquely identifies the data processor 
+     * and can be used to remove the data processor. If the operation fails, -1 is returned. If the operation is 
+     * successful, a value greater than 0 is returned.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func addProcessor(processor: Processor): Int64
-    
+
     /**
-    * Removes the data processor of a reported event.
-    * @relation function removeProcessor(id: number): void
-    */
+     * Removes the data processor of a reported event.
+     *
+     * @param { Int64 } id - ID of a data processor. The value must be greater than 0. The value is obtained by calling 
+     * addProcessor.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func removeProcessor(id: Int64): Unit
-    
+
     /**
-    * Sets a user ID, which is used for association when a Processor is configured.
-    *
-    * @relation function setUserId(name: string, value: string): void
-    */
+     * Sets a user ID, which is used for association when a Processor is configured.
+     *
+     * @param { String } name - Key of a user ID. The value is string that contains a maximum of 256 characters, including 
+     * digits (0 to 9), letters (a to z), underscore (_), and dollar sign ($). It must not start with a digit.
+     * @param { String } value - Value of a user ID. It can contain a maximum of 256 characters. If the value is null or 
+     * left empty, the user ID is cleared.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func setUserId(name: String, value: String): Unit
-    
+
     /**
-    * Obtains the value set through setUserId.
-    *
-    * @relation function getUserId(name: string): string
-    */
+     * Obtains the value set through setUserId.
+     *
+     * @param { String } name - Key of a user ID. The value is string that contains a maximum of 256 characters, including 
+     * digits (0 to 9), letters (a to z), underscore (_), and dollar sign ($). It must not start with a digit.
+     * @returns { String } Value of a user ID. If no user ID is found, an empty string is returned.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func getUserId(name: String): String
-    
+
     /**
-    * Sets a user property, which is used for association when a Processor is configured.
-    *
-    * @relation function setUserProperty(name: string, value: string): void
-    */
+     * Sets a user property, which is used for association when a Processor is configured.
+     *
+     * @param { String } name - Key of a user property. The value is string that contains a maximum of 256 characters, 
+     * including digits (0 to 9), letters (a to z), underscore (_), and dollar sign ($). It must not start with a digit.
+     * @param { String } value - Value of a user property. It can contain a maximum of 1024 characters. If the value is 
+     * null or left empty, the user property is cleared.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func setUserProperty(name: String, value: String): Unit
-    
+
     /**
-    * Obtains the value set through setUserProperty.
-    *
-    * @relation function getUserProperty(name: string): string
-    */
+     * Obtains the value set through setUserProperty.
+     *
+     * @param { String } name - name Key of a user property. The value is string that contains a maximum of 256 characters, 
+     * including digits (0 to 9), letters (a to z), underscore (_), and dollar sign ($). It must not start with a digit.
+     * @returns { String } Value of a user property. If no user ID is found, an empty string is returned.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func getUserProperty(name: String): String
-    
+
     /**
-    * Clears local logging data of the application.
-    *
-    * @relation function clearData(): void
-    */
+     * Clears local logging data of the application.
+     *
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiAppEvent"
     ]
     public static func clearData(): Unit
-    
+
     /**
-    * Add event watcher.
-    *
-    * @param { Watcher } watcher Watcher object for monitoring events.
-    * @returns { AppEventPackageHolder } Holder object, which is used to read the monitoring data of the watcher.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 11102001 - Invalid watcher name.
-    * @throws { BusinessException } 11102002 - Invalid filtering event domain.
-    * @throws { BusinessException } 11102003 - Invalid row value.
-    * @throws { BusinessException } 11102004 - Invalid size value.
-    * @throws { BusinessException } 11102005 - Invalid timeout value.
-    * @relation function addWatcher(watcher: Watcher): AppEventPackageHolder
-    */
+     * Adds an event watcher. You can use the callback of the event watcher to subscribe to events.
+     *
+     * @param { Watcher } watcher - Event watcher.
+     * @returns { Option<AppEventPackageHolder> } Subscription data holder. If the subscription fails, Option<AppEventPackageHolder>.None is returned.
+     * @throws { BusinessException } 11102001 - Invalid watcher name. Possible causes: 1. Contain invalid characters;
+     * 2. Length is invalid.
+     * @throws { BusinessException } 11102002 - Invalid filtering event domain. Possible causes: 1. Contain invalid characters;
+     * 2. Length is invalid.
+     * @throws { BusinessException } 11102003 - Invalid row value. Possible caused by the row value is less than zero.
+     * @throws { BusinessException } 11102004 - Invalid size value. Possible caused by the size value is less than zero.
+     * @throws { BusinessException } 11102005 - Invalid timeout value. Possible caused by the timeout value is less than zero.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public static func addWatcher(watcher: Watcher): Option<AppEventPackageHolder>
-    
+
     /**
-    * Remove event watcher.
-    *
-    * @param { Watcher } watcher Watcher object for monitoring events.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 11102001 - Invalid watcher name.
-    * @relation function removeWatcher(watcher: Watcher): void
-    */
+     * Removes an event watcher.
+     *
+     * @param { Watcher } watcher - Event watcher.
+     * @throws { BusinessException } 11102001 - Invalid watcher name. Possible causes: 1. Contain invalid characters;
+     * 2. Length is invalid.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent"
+        since: "22",
+        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
+        throwexception: true
     ]
     public static func removeWatcher(watcher: Watcher): Unit
 }
-
-

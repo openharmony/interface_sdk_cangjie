@@ -1,161 +1,324 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.grid_col
+
 import ohos.arkui.component.common.*
 import ohos.base.*
 import ohos.labels.APILevel
 
-
+/**
+ * Defines the option in number unit of grid-container child component.
+ * This class represents the responsive grid column options that define how many columns
+ * a grid item should span on different screen sizes.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class GridColColumnOption {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var xs: Int32
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var sm: Int32
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var md: Int32
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var lg: Int32
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var xl: Int32
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var xxl: Int32
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class GridColOptions {
+/**
+ * Grid Col Column Option for extra small devices.
+ * Defines how many columns the grid item should span on extra small screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var xs: ?Int32
+
+/**
+ * Grid Col Column Option for small devices.
+ * Defines how many columns the grid item should span on small screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var sm: ?Int32
+
+/**
+ * Grid Col Column Option for medium devices.
+ * Defines how many columns the grid item should span on medium screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var md: ?Int32
+
+/**
+ * Grid Col Column Option for large devices.
+ * Defines how many columns the grid item should span on large screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var lg: ?Int32
+
+/**
+ * Grid Col Column Option for extra large devices.
+ * Defines how many columns the grid item should span on extra large screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var xl: ?Int32
+
+/**
+ * Grid Col Column Option for double extra large devices.
+ * Defines how many columns the grid item should span on double extra large screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var xxl: ?Int32
+
+/**
+ * Defines the constructor of GridColOptions.
+ * Creates a GridColOptions instance with specific values for different screen sizes.
+ *
+ * @param { ?Int32 } [xs] - Grid Col Column Option xs. Defines how many columns the grid item should span on extra small screens.
+ * @param { ?Int32 } [sm] - Grid Col Column Option sm. Defines how many columns the grid item should span on small screens.
+ * @param { ?Int32 } [md] - Grid Col Column Option md. Defines how many columns the grid item should span on medium screens.
+ * @param { ?Int32 } [lg] - Grid Col Column Option lg. Defines how many columns the grid item should span on large screens.
+ * @param { ?Int32 } [xl] - Grid Col Column Option xl. Defines how many columns the grid item should span on extra large screens.
+ * @param { ?Int32 } [xxl] - Grid Col Column Option xxl. Defines how many columns the grid item should span on double extra large screens.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(
-        xs!: Int32 = 12,
-        sm!: Int32 = 12,
-        md!: Int32 = 12,
-        lg!: Int32 = 12,
-        xl!: Int32 = 12,
-        xxl!: Int32 = 12
+        xs!: ?Int32 = None,
+        sm!: ?Int32 = None,
+        md!: ?Int32 = None,
+        lg!: ?Int32 = None,
+        xl!: ?Int32 = None,
+        xxl!: ?Int32 = None
     )
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(value: Int32)
+
+/**
+ * Defines the option in number unit of grid-container child component.
+ * Creates a GridColOptions instance with the same value for all screen sizes.
+ *
+ * @param { ?Int32 } value - The value to set for all grid column options. This value will be applied to xs, sm, md, lg, xl, and xxl.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(value: ?Int32)
 }
 
+/**
+ * Defines GridCol Component.
+ * GridCol is a component used within a GridContainer to define how many columns
+ * a grid item should span, its offset, and order in the grid layout.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class GridCol <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(span!: Int32 = 1, offset!: Int32 = 0, order!: Int32 = 0, child!: () -> Unit = {=>})
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+public class GridCol <: CommonMethodComponent<GridCol> & GridColAttribute {
+/**
+ * GridCol constructor.
+ * Creates a GridCol component with integer values for span, offset, and order.
+ *
+ * @param { ?Int32 } [span] - Sets the span of current grid-container item. Defines how many columns the item should span.
+ * @param { ?Int32 } [offset] - Sets the offset of current grid-container item. Defines how many columns to offset the item from its normal position.
+ * @param { ?Int32 } [order] - Sets the order of current grid-container item. Defines the display order of the item in the grid.
+ * @param { () -> Unit } [child] - The child component of GridCol. This is the content to be displayed within the grid item.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(span!: ?Int32 = None, offset!: ?Int32 = None, order!: ?Int32 = None, child!: () -> Unit = {=>})
+
+/**
+ * GridCol constructor.
+ * Creates a GridCol component with responsive GridColOptions for span, offset, and order.
+ *
+ * @param { ?GridColOptions } span - Sets the span of current grid-container item. Defines how many columns the item should span on different screen sizes.
+ * @param { ?GridColOptions } offset - Sets the offset of current grid-container item. Defines how many columns to offset the item from its normal position on different screen sizes.
+ * @param { ?GridColOptions } order - Sets the order of current grid-container item. Defines the display order of the item in the grid on different screen sizes.
+ * @param { () -> Unit } [child] - The child component of GridCol. This is the content to be displayed within the grid item.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(
-        span!: GridColColumnOption,
-        offset!: GridColColumnOption,
-        order!: GridColColumnOption,
+        span!: ?GridColOptions,
+        offset!: ?GridColOptions,
+        order!: ?GridColOptions,
         child!: () -> Unit = {=>}
     )
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func span(value: Int32): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func span(value: GridColColumnOption): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func gridColOffset(value: Int32): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func gridColOffset(value: GridColColumnOption): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func order(value: Int32): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func order(value: GridColColumnOption): This
+
+/**
+ * Sets the span of current grid-container item.
+ * Defines how many columns the grid item should span.
+ *
+ * @param { ?Int32 } value - The span value to set. This determines how many columns the grid item will occupy.
+ * @returns { This } Returns the component itself for chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func span(value: ?Int32): This
+
+/**
+ * Sets the span of current grid-container item.
+ * Defines how many columns the grid item should span on different screen sizes.
+ *
+ * @param { ?GridColOptions } value - The GridColOptions to set as span. This defines how many columns the grid item will occupy on different screen sizes.
+ * @returns { This } Returns the component itself for chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func span(value: ?GridColOptions): This
+
+/**
+ * Sets the offset of current grid-container item.
+ * Defines how many columns to offset the grid item from its normal position.
+ *
+ * @param { ?Int32 } value - The offset value to set. This determines how many columns the grid item will be offset from its normal position.
+ * @returns { This } Returns the component itself for chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func gridColOffset(value: ?Int32): This
+
+/**
+ * Sets the offset of current grid-container item.
+ * Defines how many columns to offset the grid item from its normal position on different screen sizes.
+ *
+ * @param { ?GridColOptions } value - The GridColOptions to set as offset. This defines how many columns the grid item will be offset from its normal position on different screen sizes.
+ * @returns { This } Returns the component itself for chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func gridColOffset(value: ?GridColOptions): This
+
+/**
+ * Sets the order of current grid-container item.
+ * Defines the display order of the grid item in the grid layout.
+ *
+ * @param { ?Int32 } value - The order value to set. Items with a lower order value are displayed before items with a higher order value.
+ * @returns { This } Returns the component itself for chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func order(value: ?Int32): This
+
+/**
+ * Sets the order of current grid-container item.
+ * Defines the display order of the grid item in the grid layout on different screen sizes.
+ *
+ * @param { ?GridColOptions } value - The GridColOptions to set as order. This defines the display order of the grid item on different screen sizes.
+ * @returns { This } Returns the component itself for chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func order(value: ?GridColOptions): This
 }
 
+/**
+ * Defines the GridCol attribute functions.
+ * This interface provides the attribute methods for the GridCol component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface GridColAttribute <: CommonMethod<GridColAttribute> {
+/**
+ * Sets the span of current grid-container item.
+ * Defines how many columns the grid item should span.
+ *
+ * @param { ?Int32 } value - The span value to set. This determines how many columns the grid item will occupy.
+ * @returns { GridColAttribute } Returns the attribute of GridCol.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func span(value: ?Int32): GridColAttribute
+
+/**
+ * Sets the span of current grid-container item.
+ * Defines how many columns the grid item should span on different screen sizes.
+ *
+ * @param { ?GridColOptions } value - The GridColOptions to set as span. This defines how many columns the grid item will occupy on different screen sizes.
+ * @returns { GridColAttribute } Returns the attribute of GridCol.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func span(value: ?GridColOptions): GridColAttribute
+
+/**
+ * Sets the offset of current grid-container item.
+ * Defines how many columns to offset the grid item from its normal position.
+ *
+ * @param { ?Int32 } value - The offset value to set. This determines how many columns the grid item will be offset from its normal position.
+ * @returns { GridColAttribute } Returns the attribute of GridCol.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func gridColOffset(value: ?Int32): GridColAttribute
+
+/**
+ * Sets the offset of current grid-container item.
+ * Defines how many columns to offset the grid item from its normal position on different screen sizes.
+ *
+ * @param { ?GridColOptions } value - The GridColOptions to set as offset. This defines how many columns the grid item will be offset from its normal position on different screen sizes.
+ * @returns { GridColAttribute } Returns the attribute of GridCol.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func gridColOffset(value: ?GridColOptions): GridColAttribute
+
+/**
+ * Sets the order of current grid-container item.
+ * Defines the display order of the grid item in the grid layout.
+ *
+ * @param { ?Int32 } value - The order value to set. Items with a lower order value are displayed before items with a higher order value.
+ * @returns { GridColAttribute } Returns the attribute of GridCol.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func order(value: ?Int32): GridColAttribute
+
+/**
+ * Sets the order of current grid-container item.
+ * Defines the display order of the grid item in the grid layout on different screen sizes.
+ *
+ * @param { ?GridColOptions } value - The GridColOptions to set as order. This defines the display order of the grid item on different screen sizes.
+ * @returns { GridColAttribute } Returns the attribute of GridCol.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func order(value: ?GridColOptions): GridColAttribute
+}

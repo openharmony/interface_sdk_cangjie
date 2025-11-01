@@ -1,13 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.collection.concurrent
 import std.sync.*
 import std.time.*
@@ -16,835 +6,945 @@ import std.collection.MapEntryView
 import std.collection.ArrayList
 
 /**
-* ArrayBlockingQueue is a concurrent queue with a blocking mechanism and supports a user-specified upper bound of capacity.
-* It is backed by an array.
-*/
-@!APILevel[since: "22"]
+ * @description A bounded blocking queue backed by an array. This queue orders elements FIFO (first-in-first-out).
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArrayBlockingQueue<E> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The capacity of this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let capacity: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an `ArrayBlockingQueue` with the given (fixed) capacity.
+     * @param capacity The capacity of this queue.
+     * @throws IllegalArgumentException if `capacity` is not greater than zero.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
-    @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an `ArrayBlockingQueue` with the given (fixed) capacity and initially containing the elements of the given collection.
+     * @param capacity The capacity of this queue.
+     * @param elements The collection of elements to initially contain.
+     * @throws IllegalArgumentException if `capacity` is less than the size of `elements`.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64, elements: Collection<E>)
     
     /**
-    * Returns the number of elements in the BlockingQueue.
-    *
-    * It ensures to return the accurate number of elements in the BlockingQueue in sequential.
-    * Note that getting 'size' prop is not atomic!
-    * So, if elements are added or removed during execution of getting 'size',
-    * the 'size' may be inaccurate.
-    */
-    @!APILevel[since: "22"]
+     * @description The number of elements in this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Blocking method to send the element @p element into the tail of the queue.
-    * If there is no free space in the queue, the thread calling such method will be blocked,
-    * and waiting for another thread calling 'dequeue' method to await.
-    *
-    * @param element: the element to send into the queue.
-    *
-    * A successful 'enqueue' will await the threads blocked by calling 'dequeue'.
-    */
-    @Deprecated[message: "Use member function `public func add(element: E): Unit` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue, waiting for space to become available if the queue is full.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func enqueue(element: E): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the tail of this queue, waiting for space to become available if the queue is full.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: E): Unit
     
     /**
-    * Blocking method to send the element @p element to the tail of the queue,
-    * waiting up to @p timeout if the ArrayBlockingQueue is full.
-    *
-    * @param element: the element to send into the queue.
-    * @param timeout: the waiting time.
-    *
-    * @return:
-    * - true: if @p element is successfully pushed at the tail of the queue.
-    * - false: if the waiting time exceeds @p timeout.
-    */
-    @Deprecated[message: "Use member function `public func add(element: E, timeout: Duration): Bool` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue, waiting up to the specified wait time for space to become available if the queue is full.
+     * @param element The element to add.
+     * @param timeout How long to wait before giving up.
+     * @returns `true` if successful, or `false` if the specified waiting time elapses before space is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func enqueue(element: E, timeout: Duration): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the tail of this queue, waiting up to the specified wait time for space to become available if the queue is full.
+     * @param element The element to add.
+     * @param timeout How long to wait before giving up.
+     * @returns `true` if successful, or `false` if the specified waiting time elapses before space is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: E, timeout: Duration): Bool
     
     /**
-    * Blocking method to get and remove the element at the head of the queue.
-    * If the queue is empty, the thread calling such method will be blocked,
-    * and waiting for another thread calling 'enqueue' method to await.
-    *
-    * A successful 'dequeue' will await blocked threads calling 'enqueue'.
-    */
-    @Deprecated[message: "Use member function `public func remove(): E` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue, waiting if necessary until an element becomes available.
+     * @returns The head of this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func dequeue(): E
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue, waiting if necessary until an element becomes available.
+     * @returns The head of this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(): E
     
     /**
-    * Blocking method to get and remove the head of the queue,
-    * waiting up to @p timeout if the ArrayBlockingQueue is empty.
-    *
-    * @param timeout: the waiting time.
-    *
-    * @return:
-    * - Some(v): if gets and removes the element at the head of the queue successfully.
-    * - None: if the waiting time exceeds @p timeout.
-    */
-    @Deprecated[message: "Use member function `public func remove(timeout: Duration): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue, waiting up to the specified wait time if necessary for an element to become available.
+     * @param timeout How long to wait before giving up.
+     * @returns An `Option` containing the head of this queue, or `None` if the specified waiting time elapses before an element is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func dequeue(timeout: Duration): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue, waiting up to the specified wait time if necessary for an element to become available.
+     * @param timeout How long to wait before giving up.
+     * @returns An `Option` containing the head of this queue, or `None` if the specified waiting time elapses before an element is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(timeout: Duration): Option<E>
     
     /**
-    * Gets the head of the queue, but does not remove it.
-    * Such method is non-blocking.
-    *
-    * @return:
-    * - Some(v): if we successfully gets the element at the head of the queue.
-    * - None: if the queue is empty, and we fails to get the head of the queue.
-    */
-    @Deprecated[message: "Use member function `public func peek(): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func head(): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func peek(): Option<E>
     
     /**
-    * Non-blocking method to send the element @p element to the tail of the queue.
-    * A successful 'tryEnqueue' will await blocked threads calling 'dequeue'.
-    *
-    * @param element: the element to send into the queue.
-    *
-    * @return:
-    * - true: if @p element is successfully pushed at the tail of the queue.
-    * - false: if the queue is full.
-    */
-    @Deprecated[message: "Use member function `public func tryAdd(element: E): Bool` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity.
+     * @param element The element to add.
+     * @returns `true` if the element was added to this queue, else `false`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryEnqueue(element: E): Bool
     
+    /**
+     * @description Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity.
+     * @param element The element to add.
+     * @returns `true` if the element was added to this queue, else `false`.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func tryAdd(element: E): Bool
     
     /**
-    * Non-blocking method to get and remove the head of the queue.
-    * A successful 'tryDequeue' will await blocked threads calling 'enqueue'.
-    *
-    * @return:
-    * - Some(v): if gets and removes the element at the head of the queue successfully.
-    * - None: if the queue is empty.
-    */
-    @Deprecated[message: "Use member function `public func tryRemove(): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue if it is possible to do so immediately.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryDequeue(): Option<E>
     
+    /**
+     * @description Retrieves and removes the head of this queue if it is possible to do so immediately.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func tryRemove(): Option<E>
 }
 
-@Deprecated[message: "Use LinkedBlockingQueue instead."]
+/**
+ * @description A type alias for `LinkedBlockingQueue`. Represents a thread-safe, optionally bounded, blocking queue.
+ */
+@!APILevel[
+    since: "22"
+]
 public type BlockingQueue<E> = LinkedBlockingQueue<E>
 
 /**
-* BlockingQueue is a concurrent queue with a blocking mechanism and supports a user-specified upper bound of capacity.
-*/
-@!APILevel[since: "22"]
+ * @description An optionally-bounded blocking queue based on linked nodes. This queue orders elements FIFO (first-in-first-out).
+ */
+@!APILevel[
+    since: "22"
+]
 public class LinkedBlockingQueue<E> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The capacity of this queue, or `Int64.max` if unbounded.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let capacity: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `LinkedBlockingQueue` with the given (fixed) capacity.
+     * @param capacity The capacity of this queue.
+     * @throws IllegalArgumentException if `capacity` is not greater than zero.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `LinkedBlockingQueue` with a capacity of `Int64.max`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `LinkedBlockingQueue` with the given capacity, initially containing the elements of the given array.
+     * @param capacity The capacity of this queue.
+     * @param elements The array of elements to initially contain.
+     * @throws IllegalArgumentException if `capacity` is less than the size of `elements`.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64, elements: Array<E>)
     
-    @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `LinkedBlockingQueue` with the given capacity, initially containing the elements of the given collection.
+     * @param capacity The capacity of this queue.
+     * @param elements The collection of elements to initially contain.
+     * @throws IllegalArgumentException if `capacity` is less than the size of `elements`.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64, elements: Collection<E>)
     
     /**
-    * Returns the number of elements in the BlockingQueue.
-    *
-    * It ensures to return the accurate number of elements in the BlockingQueue in sequential.
-    * Note that getting 'size' prop is not atomic!
-    * So, if elements are added or removed during execution of getting 'size',
-    * the 'size' may be inaccurate.
-    */
-    @!APILevel[since: "22"]
+     * @description The number of elements in this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Blocking method to send the element @p element into the tail of the queue.
-    * If there is no free space in the queue, the thread calling such method will be blocked,
-    * and waiting for another thread calling 'dequeue' method to await.
-    *
-    * @param element: the element to send into the queue.
-    *
-    * A successful 'enqueue' will await the threads blocked by calling 'dequeue'.
-    */
-    @Deprecated[message: "Use member function `public func add(element: E): Unit` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue, waiting for space to become available if the queue is full.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func enqueue(element: E): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the tail of this queue, waiting for space to become available if the queue is full.
+     * @param element The element to add.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: E): Unit
     
     /**
-    * Blocking method to send the element @p element to the tail of the queue,
-    * waiting up to @p timeout if the BlockingQueue is full.
-    *
-    * @param element: the element to send into the queue.
-    * @param timeout: the waiting time.
-    *
-    * @return:
-    * - true: if @p element is successfully pushed at the tail of the queue.
-    * - false: if the waiting time exceeds @p timeout.
-    */
-    @Deprecated[message: "Use member function `public func add(element: E, timeout: Duration): Bool` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue, waiting up to the specified wait time for space to become available if the queue is full.
+     * @param element The element to add.
+     * @param timeout How long to wait before giving up.
+     * @returns `true` if successful, or `false` if the specified waiting time elapses before space is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func enqueue(element: E, timeout: Duration): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the tail of this queue, waiting up to the specified wait time for space to become available if the queue is full.
+     * @param element The element to add.
+     * @param timeout How long to wait before giving up.
+     * @returns `true` if successful, or `false` if the specified waiting time elapses before space is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: E, timeout: Duration): Bool
     
     /**
-    * Blocking method to get and remove the element at the head of the queue.
-    * If the queue is empty, the thread calling such method will be blocked,
-    * and waiting for another thread calling 'enqueue' method to await.
-    *
-    * A successful 'dequeue' will await blocked threads calling 'enqueue'.
-    *
-    * @return:
-    * - e: e is the element at the head of the queue.
-    */
-    @Deprecated[message: "Use member function `public func remove(): E` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue, waiting if necessary until an element becomes available.
+     * @returns The head of this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func dequeue(): E
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue, waiting if necessary until an element becomes available.
+     * @returns The head of this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(): E
     
     /**
-    * Blocking method to get and remove the head of the queue,
-    * waiting up to @p timeout if the BlockingQueue is empty.
-    *
-    * @param timeout: the waiting time.
-    *
-    * @return:
-    * - Some(v): if gets and removes the element at the head of the queue successfully.
-    * - None: if the waiting time exceeds @p timeout.
-    */
-    @Deprecated[message: "Use member function `public func remove(timeout: Duration): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue, waiting up to the specified wait time if necessary for an element to become available.
+     * @param timeout How long to wait before giving up.
+     * @returns An `Option` containing the head of this queue, or `None` if the specified waiting time elapses before an element is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func dequeue(timeout: Duration): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue, waiting up to the specified wait time if necessary for an element to become available.
+     * @param timeout How long to wait before giving up.
+     * @returns An `Option` containing the head of this queue, or `None` if the specified waiting time elapses before an element is available.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(timeout: Duration): Option<E>
     
     /**
-    * Gets the head of the queue, but does not remove it.
-    * Such method is non-blocking.
-    *
-    * @return:
-    * - Some(v): if we successfully gets the element at the head of the queue.
-    * - None: if the queue is empty, and we fails to get the head of the queue.
-    */
-    @Deprecated[message: "Use member function `public func peek(): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func head(): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func peek(): Option<E>
     
     /**
-    * Non-blocking method to send the element @p element to the tail of the queue.
-    * A successful 'tryEnqueue' will await blocked threads calling 'dequeue'.
-    *
-    * @param element: the element to send into the queue.
-    *
-    * @return:
-    * - true: if @p element is successfully pushed at the tail of the queue.
-    * - false: if the queue is full.
-    */
-    @Deprecated[message: "Use member function `public func tryAdd(element: E): Bool` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity.
+     * @param element The element to add.
+     * @returns `true` if the element was added to this queue, else `false`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryEnqueue(element: E): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity.
+     * @param element The element to add.
+     * @returns `true` if the element was added to this queue, else `false`.
+     */
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func tryAdd(element: E): Bool
     
     /**
-    * Non-blocking method to get and remove the head of the queue.
-    * A successful 'tryDequeue' will await blocked threads calling 'enqueue'.
-    *
-    * @return:
-    * - Some(v): if gets and removes the element at the head of the queue successfully.
-    * - None: if the queue is empty.
-    */
-    @Deprecated[message: "Use member function `public func tryRemove(): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue if it is possible to do so immediately.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryDequeue(): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue if it is possible to do so immediately.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func tryRemove(): Option<E>
 }
 
 
 /**
-* The definition of the ConcurrentHashMap with load factor 1.
-* Load factor is 1, indicating that the number of buckets in the ConcurrentHashMap equals to
-* the number of key-value pairs usually.
-* And if the number of key-value pairs is greater than the number of buckets in the ConcurrentHashMap,
-* capacity expansion will occur.
-*/
-@!APILevel[since: "22"]
+ * @description A hash table supporting full concurrency of retrievals and high expected concurrency for updates.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ConcurrentHashMap<K, V> <: ConcurrentMap<K, V> & Collection<(K, V)> where K <: Hashable & Equatable<K> {
-    /************************ Public Methods *******************************//**
-    * Create a ConcurrentHashMap, whose initial capacity is DEFAULT_CAPACITY (=16) and
-    * concurrencyLevel is @p concurrencyLevel.
-    * The default concurrencyLevel is DEFAULT_CONCUR_LEVEL (=16).
-    *
-    * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new, empty map with a default initial capacity and concurrency level.
+     * @param concurrencyLevel The estimated number of concurrently updating threads.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
-    * Create a ConcurrentHashMap, whose initial capacity is @p capacity and
-    * concurrencyLevel is @p concurrencyLevel.
-    * The default concurrencyLevel is DEFAULT_CONCUR_LEVEL (=16).
-    *
-    * @param capacity: initial capacity of the ConcurrentHashMap;
-    * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
-    *
-    * @throws IllegalArgumentException if capacity is less than zero.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new, empty map with the specified initial capacity and concurrency level.
+     * @param capacity The initial capacity.
+     * @param concurrencyLevel The estimated number of concurrently updating threads.
+     * @throws IllegalArgumentException if the initial capacity is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64, concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
-    * Create a ConcurrentHashMap with an incoming list for initialization.
-    *
-    * @param elements: an incoming list is initialized;
-    * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new map with the same mappings as the given collection.
+     * @param elements The collection of key-value pairs.
+     * @param concurrencyLevel The estimated number of concurrently updating threads.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<(K, V)>, concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
-    * Create a ConcurrentHashMap with an incoming list for initialization.
-    *
-    * @param elements: an incoming list is initialized;
-    * @param concurrencyLevel: the number of reentrant mutexes for synchronization.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a new map with mappings returned by the initializer function.
+     * @param size The size of the map to create.
+     * @param initElement A function that returns a key-value pair for a given index.
+     * @param concurrencyLevel The estimated number of concurrently updating threads.
+     * @throws IllegalArgumentException if the size is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(size: Int64, initElement: (Int64) -> (K, V), concurrencyLevel!: Int64 = DEFAULT_CONCUR_LEVEL)
     
     /**
-    * Returns the value associated with @p key.
-    *
-    * @param key: transfer key to obtain the value.
-    * @return: the value corresponding to the return key is encapsulated with option.
-    */
+     * @description Returns the value to which the specified key is mapped, or `null` if this map contains no mapping for the key.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value, or `null` if the key is not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func get(key: K): ?V
     
     /**
-    * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
-    *
-    * @param key: transfers the key to be judged.
-    * @return: returns true if exists; otherwise, false.
-    */
+     * @description Tests if the specified object is a key in this table.
+     * @param key The key to search for.
+     * @returns `true` if and only if the specified object is a key in this table, as determined by the `equals` method; `false` otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(key: K): Bool
     
     /**
-    * Add a new key value to the map. If the key already exists,
-    * the value will be overwritten and the overwritten value will be returned.
-    *
-    * @param key: the key to put;
-    * @param value: the value to put.
-    *
-    * @return:
-    * - None: if @p key does not exist before putting;
-    * - Some(v): if @p key associated with v before putting.
-    */
-    @Deprecated[message: "Use member function `public func add(key: K, value: V): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Maps the specified key to the specified value in this table.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func put(key: K, value: V): ?V
     
+    /**
+     * @description Maps the specified key to the specified value in this table.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func add(key: K, value: V): ?V
     
     /**
-    * Associates the specified @p value with the specified @p key in this concurrent map,
-    * if @p key does not in the concurrent map, before calling this method.
-    * Otherwise, just returns the value that @p key maps to and does nothing.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key to put.
-    * @param value: the value to assign.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists before putting;
-    * - None: if @p key does not exist in the concurrent map.
-    */
-    @Deprecated[message: "Use member function `public func addIfAbsent(key: K, value: V): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description If the specified key is not already associated with a value, associate it with the given value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func putIfAbsent(key: K, value: V): ?V
     
+    /**
+     * @description If the specified key is not already associated with a value, associate it with the given value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func addIfAbsent(key: K, value: V): ?V
     
     /**
-    * Removes the key-value pair corresponding to @p key from this mapping, if one exists.
-    *
-    * @param key: pass in the key to be deleted.
-    *
-    * @return:
-    * - Some(v): where the pair of @p key and v is the removed element;
-    * - None: where @p key does not exist in the concurrent map.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the key (and its corresponding value) from this map.
+     * @param key The key that needs to be removed.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(key: K): ?V
     
     /**
-    * Removes the pair of @p key and value, where predicate(value) = true holds,
-    * from this concurrent map.
-    * Otherwise, just returns 'false' and does nothing.
-    *
-    * @param key: the key of the key-value pair to be deleted.
-    * @param predicate: the function justifies whether the pair of @p key and value should be removed.
-    *
-    * @return:
-    * - Some(v): if exists the pair of @p key and v in concurrent map;
-    * - None: if @p key does not in this concurrent map.
-    */
-    @Deprecated[message: "Use member function `public func entryView(K, (MapEntryView<K, V>) -> Unit)` instead."]
-    @!APILevel[since: "22"]
+     * @description Removes the entry for a key only if currently mapped to a given value.
+     * @param key The key with which the specified value is associated.
+     * @param predicate A predicate to test the value.
+     * @returns The previous value if the removal was successful, otherwise `null`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(key: K, predicate: (V) -> Bool): ?V
     
     /**
-    * Replaces the value associated with @p key to @p value,
-    * if there exists a pair of @p key and some value v in the concurrent hashmap.
-    * Otherwise, just returns 'Option<V>.None' and does nothing.
-    *
-    * @param key: the key of the key-value pair, whose value needs to be replaced.
-    * @param value: the value to be replaced.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in concurrent map before invoking this method.
-    * - None: if @p key is not in the concurrent map.
-    */
+     * @description Replaces the entry for a key only if currently mapped to some value.
+     * @param key The key with which the specified value is associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func replace(key: K, value: V): ?V
     
     /**
-    * Replaces the value associated with @p key to eval(v),
-    * if there exists a pair of @p key and v in the concurrent hashmap.
-    * Otherwise, just returns 'Option<V>.None' and does nothing.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key to put.
-    * @param eval: function to evaluate the value to put.
-    * @p eval evaluates the value according to the old value v.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in concurrent map before invoking this method.
-    * - None: if @p key is not in the concurrent map.
-    */
-    @Deprecated[message: "Use member function `public func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Replaces the entry for a key only if currently mapped to some value, and the new value is computed from the old one.
+     * @param key The key with which the specified value is associated.
+     * @param eval A function to compute the new value.
+     * @returns The new value, or `null` if no entry was found for the key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func replace(key: K, eval: (V) -> V): ?V
     
     /**
-    * Replaces the value associated with @p key to eval(v),
-    * if the pair of @p key and v in the concurrent map, and @p predicate(v) holds.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key of the key-value pair, whose value needs to be replaced.
-    * @param predicate: the function justifies whether @p key-v pair in the concurrent map should be replaced.
-    * @param eval: the function evaluates the new value to replace the old value.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in concurrent map before replacing;
-    * - None: if @p key does not exist in concurrent map.
-    */
-    @Deprecated[message: "Use member function `public func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Replaces the entry for a key only if it satisfies a predicate, and the new value is computed from the old one.
+     * @param key The key with which the specified value is associated.
+     * @param predicate A predicate to test the current value.
+     * @param eval A function to compute the new value.
+     * @returns The new value, or `null` if the replacement did not occur.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func replace(key: K, predicate: (V) -> Bool, eval: (V) -> V): ?V
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Provides a view of a map entry, allowing atomic operations on it.
+     * @param key The key of the entry.
+     * @param fn A function that operates on the `MapEntryView`.
+     * @returns The value associated with the key after the operation, or `null` if the key is not in the map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func entryView(key: K, fn: (MapEntryView<K, V>) -> Unit): ?V
     
     /**
-    * An exception is reported when the get operator is overloaded and the key does not exist.
-    *
-    * @param key: transfers the value for judgment.
-    * @return: the value corresponding to the key.
-    *
-    * @throws NoneValueException if @p key does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the value to which the specified key is mapped.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped.
+     * @throws NoneValueException if the key is not found in the map.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](key: K): V
     
     /**
-    * The operator overloads the set. If the key does not exist, an exception is reported.
-    *
-    * @param key: transfers the value for judgment.
-    * @param value: transfers the value to be set.
-    */
-    @!APILevel[since: "22"]
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func [](key: K, value!: V): Unit
     
     /**
-    * Returns sizes of key-value.
-    *
-    * @return: size of key-value.
-    */
-    @!APILevel[since: "22"]
+     * @description The number of key-value mappings in this map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
-    *
-    * @return: if yes, true is returned. Otherwise, false is returned.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this map contains no key-value mappings.
+     * @returns `true` if this map is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Returns iterator of Concurrent Hashmap.
-    *
-    * @return: iterator of Concurrent Hashmap.
-    */
+     * @description Returns an iterator over the key-value pairs in this map.
+     * @returns An iterator over the entries in this map.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): ConcurrentHashMapIterator<K, V>
 }
 
 /**
-* The Iterator of the ConcurrentHashMap.
-* It is not atomic and does not ensure to iterator a snapshot of the ConcurrentHashMap in concurrency.
-* The best way to iterate the ConcurrentHashMap is in the condition, where there is no other threads executing concurrently.
-*/
-@!APILevel[since: "22"]
+ * @description An iterator over a `ConcurrentHashMap`.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ConcurrentHashMapIterator<K, V> <: Iterator<(K, V)> where K <: Hashable & Equatable<K> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an iterator for the given `ConcurrentHashMap`.
+     * @param cmap The `ConcurrentHashMap` to iterate over.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(cmap: ConcurrentHashMap<K, V>)
     
     /**
-    * Returns the current element, and sets pointer to the next element.
-    * - Some(val): if the current element is val;
-    * - None: if there is no element in the collection.
-    */
+     * @description Returns the next key-value pair in the iteration.
+     * @returns An `Option` containing the next entry, or `None` if the iteration has no more elements.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func next(): Option<(K, V)>
 }
 
 /**
-* This interface is a key-value pair that does not guarantee the order of elements.
-* It declares the methods in a concurrent map that need to be atomic.
-*/
-@!APILevel[since: "22"]
+ * @description A `Map` providing thread-safe atomic operations.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ConcurrentMap<K, V> {
     /**
-    * Returns the value associated with @p key in ConcurrentMap
-    *
-    * @param key: transfer key to obtain the value
-    *
-    * @return:
-    * - Some(v): if @p key associates with v;
-    * - None: if @p key does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the value to which the specified key is mapped, or `null` if this map contains no mapping for the key.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value, or `null` if the key is not found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func get(key: K): ?V
     
     /**
-    * Checks whether the mapping relationship corresponding to the specified key exists in this mapping.
-    *
-    * @param key: transfer the key to be judged.
-    *
-    * @return:
-    * - true: if exists @p key in ConcurrentMap;
-    * - false: if @p key does not exist.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns `true` if this map contains a mapping for the specified key.
+     * @param key The key whose presence in this map is to be tested.
+     * @returns `true` if this map contains a mapping for the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func contains(key: K): Bool
     
     /**
-    * Add a new key value to the map. If the key already exists,
-    * the value will be overwritten and the overwritten value will be returned.
-    *
-    * @param key: the key to put;
-    * @param value: the value to put.
-    *
-    * @return:
-    * - None: if @p key does not exist before putting;
-    * - Some(v): if @p key associated with v before putting.
-    */
-    @Deprecated[message: "Use member function `func add(key: K, value: V): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Maps the specified key to the specified value in this table.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func put(key: K, value: V): ?V
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Maps the specified key to the specified value in this table.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func add(key: K, value: V): ?V
     
     /**
-    * Associates the specified @p value with the specified @p key in this concurrent map,
-    * if @p key does not in the concurrent map, before calling this method.
-    * Otherwise, just returns the value that @p key maps to and does nothing.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key to put.
-    * @param value: the value to assign.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists before putting;
-    * - None: if @p key does not exist in the concurrent map.
-    */
-    @Deprecated[message: "Use member function `func addIfAbsent(key: K, value: V): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description If the specified key is not already associated with a value, associate it with the given value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func putIfAbsent(key: K, value: V): ?V
     
-    @!APILevel[since: "22"]
+    /**
+     * @description If the specified key is not already associated with a value, associate it with the given value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func addIfAbsent(key: K, value: V): ?V
     
     /**
-    * Removes the key-value pair corresponding to @p key from this mapping, if one exists.
-    *
-    * @param key: pass in the key to be deleted.
-    *
-    * @return:
-    * - Some(v): where the pair of @p key and v is the removed element;
-    * - None: where @p key does not exist in the concurrent map.
-    */
-    @!APILevel[since: "22"]
+     * @description Removes the key (and its corresponding value) from this map.
+     * @param key The key that needs to be removed.
+     * @returns The previous value associated with `key`, or `null` if there was no mapping for `key`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(key: K): ?V
     
     /**
-    * Removes the pair of @p key and value, where predicate(value) = true holds,
-    * from this concurrent map;
-    * Otherwise, just returns 'false' and does nothing.
-    *
-    * @param key: the key of the key-value pair to be deleted.
-    * @param predicate: the function justifies whether the pair of @p key and value should be removed.
-    *
-    * @return:
-    * - Some(v): if exists the pair of @p key and v in concurrent map;
-    * - None: if @p key does not in this concurrent map.
-    */
-    @Deprecated[message: "Use member function `func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Removes the entry for a key only if currently mapped to a given value.
+     * @param key The key with which the specified value is associated.
+     * @param predicate A predicate to test the value.
+     * @returns The previous value if the removal was successful, otherwise `null`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func remove(key: K, predicate: (V) -> Bool): ?V
     
     /**
-    * Replaces the value associated with @p key to @p value,
-    * if there exists a pair of @p key and some value v in the concurrent hashmap.
-    * Otherwise, just returns 'Option<V>.None' and does nothing.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key of the key-value pair, whose value needs to be replaced.
-    * @param value: the value to be replaced.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in concurrent map before invoking this method.
-    * - None: if @p key is not in the concurrent map.
-    */
-    @!APILevel[since: "22"]
+     * @description Replaces the entry for a key only if currently mapped to some value.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     * @returns The previous value associated with the specified key, or `null` if there was no mapping for the key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func replace(key: K, value: V): ?V
     
     /**
-    * Replaces the value associated with @p key to eval(v),
-    * if there exists a pair of @p key and v in the concurrent hashmap.
-    * Otherwise, just returns 'Option<V>.None' and does nothing.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key to put.
-    * @param eval: function to evaluate the value to put.
-    * @p eval evaluates the value according to the old value v.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in concurrent map before invoking this method.
-    * - None: if @p key is not in the concurrent map.
-    */
-    @Deprecated[message: "Use member function `func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Replaces the entry for a key only if currently mapped to some value, and the new value is computed from the old one.
+     * @param key The key with which the specified value is to be associated.
+     * @param eval A function to compute the new value.
+     * @returns The new value, or `null` if no entry was found for the key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func replace(key: K, eval: (V) -> V): ?V
     
     /**
-    * Replaces the value associated with @p key to eval(v),
-    * if the pair of @p key and v in the concurrent map, and @p predicate(v) holds.
-    *
-    * Such method is atomic (linearizable) in concurrency.
-    *
-    * @param key: the key of the key-value pair, whose value needs to be replaced.
-    * @param predicate: the function justifies whether @p key-v pair in the concurrent map should be replaced.
-    * @param eval: the function evaluates the new value to replace the old value.
-    *
-    * @return:
-    * - Some(v): if the pair of @p key and v exists in concurrent map before replacing;
-    * - None: if @p key does not exist in concurrent map.
-    */
-    @Deprecated[message: "Use member function `func entryView(key: K, fn: (MapEntryView<K, V>)->Unit): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Replaces the entry for a key only if it satisfies a predicate, and the new value is computed from the old one.
+     * @param key The key with which the specified value is to be associated.
+     * @param predicate A predicate to test the current value.
+     * @param eval A function to compute the new value.
+     * @returns The new value, or `null` if the replacement did not occur.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func replace(key: K, predicate: (V) -> Bool, eval: (V) -> V): ?V
     
     /**
-    * Get the entryView according to @p key and process it according to @p fn,
-    * return the value associated with @p key after processing.
-    *
-    * @param key: the key of the key-value pair, whose value needs to be process.
-    * @param fn: the process function.
-    *
-    * @return:
-    * - Some(v): v is the value associated with @p key after processing.
-    * - None: the @p key does not exist in map after processing.
-    */
-    @!APILevel[since: "22"]
+     * @description Provides a view of a map entry, allowing atomic operations on it.
+     * @param key The key of the entry.
+     * @param fn A function that operates on the `MapEntryView`.
+     * @returns The value associated with the key after the operation, or `null` if the key is not in the map.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func entryView(key: K, fn: (MapEntryView<K, V>) -> Unit): ?V
     
     /**
-    * Returns the value associated with @p key in ConcurrentMap
-    *
-    * @param key: transfer key to obtain the value
-    *
-    * @return:
-    * - the value associated with @p key
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the value to which the specified key is mapped.
+     * @param key The key whose associated value is to be returned.
+     * @returns The value to which the specified key is mapped.
+     * @throws NoneValueException if the key is not found in the map.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     operator func [](key: K): V
     
     /**
-    * Set the value associated with @p key to value,
-    * if the key already exists in map, add the new key-value pair to the map.
-    *
-    * @param key: the key to put.
-    * @param value: the value to put.
-    */
-    @!APILevel[since: "22"]
+     * @description Associates the specified value with the specified key in this map.
+     * @param key The key with which the specified value is to be associated.
+     * @param value The value to be associated with the specified key.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     operator func [](key: K, value!: V): Unit
 }
 
-@Deprecated[message: "Use ConcurrentLinkedQueue instead."]
+/**
+ * @description A type alias for `ConcurrentLinkedQueue`. Represents a thread-safe, unbounded, non-blocking queue.
+ */
+@!APILevel[
+    since: "22"
+]
 public type NonBlockingQueue<E> = ConcurrentLinkedQueue<E>
 
 /**
-* NonBlockingQueue is an unbounded nonblocking concurrent queue.
-*/
-@!APILevel[since: "22"]
+ * @description An unbounded thread-safe queue based on linked nodes. This queue orders elements FIFO (first-in-first-out).
+ */
+@!APILevel[
+    since: "22"
+]
 public class ConcurrentLinkedQueue<E> <: Collection<E> {
     /**
-    * The default method to initialize the concurrent queue.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a `ConcurrentLinkedQueue` that is initially empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
     /**
-    * Initialize the queue by putting all the element in @p elements into the queue.
-    */
-    @Deprecated[message: "Use the other version of `init` instead."]
-    @!APILevel[since: "22"]
+     * @description Creates a `ConcurrentLinkedQueue` initially containing the elements of the given collection.
+     * @param elements The collection of elements to initially contain.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(elements: Collection<E>)
     
     /**
-    * Returns the number of elements in the NonBlockingQueue.
-    *
-    * It ensures to return the accurate number of elements in the NonBlockingQueue in sequential.
-    * Note that getting 'size' prop is not atomic!
-    * So, if elements are added or removed during execution of getting 'size',
-    * the 'size' may be inaccurate.
-    */
-    @!APILevel[since: "22"]
+     * @description The number of elements in this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Sends the element @p element to the tail of the queue.
-    *
-    * @param element: the element to send into the queue.
-    *
-    * @return:
-    * - true: if @p element is successfully pushed at the tail of the queue.
-    *
-    * Note that the NonBlockingQueue 'enqueue' will never return 'false'.
-    */
-    @Deprecated[message: "Use member function `func addIfAbsent(key: K, value: V): ?V` instead."]
-    @!APILevel[since: "22"]
+     * @description Inserts the specified element at the tail of this queue.
+     * @param element The element to add.
+     * @returns `true` if the element was added to this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func enqueue(element: E): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Inserts the specified element at the tail of this queue.
+     * @param element The element to add.
+     * @returns `true` if the element was added to this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(element: E): Bool
     
     /**
-    * Gets and removes the head of the queue.
-    *
-    * @return:
-    * - Some(v): if gets and removes the element at the head of the queue successfully.
-    * - None: if the queue is empty.
-    */
-    @Deprecated[message: "Use member function `public func remove(): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves and removes the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func dequeue(): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves and removes the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func remove(): Option<E>
     
     /**
-    * Gets the head of the queue, but does not remove it.
-    *
-    * @return:
-    * - Some(v): if gets the element at the head of the queue successfully.
-    * - None: the queue is empty, and fails to get the head of the queue.
-    *
-    * Note: calling 'head()' can still get the head of the queue.
-    */
-    @Deprecated[message: "Use member function `public func peek(): Option<E>` instead."]
-    @!APILevel[since: "22"]
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func head(): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Retrieves, but does not remove, the head of this queue.
+     * @returns An `Option` containing the head of this queue, or `None` if this queue is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func peek(): Option<E>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns `true` if this queue contains no elements.
+     * @returns `true` if this queue is empty, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an array containing all of the elements in this queue, in proper sequence.
+     * @returns An array containing all of the elements in this queue.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<E>
     
+    /**
+     * @description Returns an iterator over the elements in this queue in proper sequence.
+     * @returns An iterator over the elements in this queue.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<E>
 }
 

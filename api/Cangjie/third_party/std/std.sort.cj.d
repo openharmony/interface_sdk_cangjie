@@ -1,12 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package std.sort
 import std.collection.*
@@ -14,287 +5,315 @@ import std.collection.*
 import std.math.*
 
 /**
-* Sorting element T.
-*
-* @param data Array of elements to be sorted.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
+ * @description Sorts the elements in an array using default comparison strategy
+ * @param data - the array to be sorted
+ * @param stable - whether to use stable sorting algorithm (default: false) 
+ * @param descending - whether to sort in descending order (default: false)
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>
 
 /**
-* Sorting element T.
-*
-* @param data Array of elements to be sorted.
-* @param by Comparator.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
+ * @description Sorts the elements in an array using a custom comparator function
+ * @param data - the array to be sorted
+ * @param by - comparison function that returns Ordering (LT, EQ, GT)
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
-* Sorting element T.
-*
-* @param data Array of elements to be sorted.
-* @param lessThan Comparator.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in an array using a less-than comparison function
+ * @param data - the array to be sorted
+ * @param lessThan - function that returns true if first element is less than second
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: Array<T>, lessThan!: (T, T) -> Bool, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
-* Sorting element T.
-*
-* @param data Array of elements to be sorted.
-* @param key Mapping of elements T to K.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in an array by comparing keys extracted from elements
+ * @param data - the array to be sorted
+ * @param key - function that extracts a comparable key from each element
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T, K>(data: Array<T>, key!: (T) -> K, stable!: Bool = false, descending!: Bool = false): Unit where K <: Comparable<K>
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in a List using default comparison strategy
+ * @param data - the list to be sorted
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: List<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param by Comparator.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in a List using a custom comparator function
+ * @param data - the list to be sorted
+ * @param by - comparison function that returns Ordering (LT, EQ, GT)
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: List<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param lessThan Comparator.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in a List using a less-than comparison function
+ * @param data - the list to be sorted
+ * @param lessThan - function that returns true if first element is less than second
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: List<T>, lessThan!: (T, T) -> Bool, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param key Mapping of elements T to K.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in a List by comparing keys extracted from elements
+ * @param data - the list to be sorted
+ * @param key - function that extracts a comparable key from each element
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T, K>(data: List<T>, key!: (T) -> K, stable!: Bool = false, descending!: Bool = false): Unit where K <: Comparable<K>
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in an ArrayList using default comparison strategy
+ * @param data - the ArrayList to be sorted
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: ArrayList<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param by Comparator.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in an ArrayList using a custom comparator function
+ * @param data - the ArrayList to be sorted
+ * @param by - comparison function that returns Ordering (LT, EQ, GT)
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: ArrayList<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param lessThan Comparator.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in an ArrayList using a less-than comparison function
+ * @param data - the ArrayList to be sorted
+ * @param lessThan - function that returns true if first element is less than second
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T>(data: ArrayList<T>, lessThan!: (T, T) -> Bool, stable!: Bool = false, descending!: Bool = false): Unit
 
 /**
-* Sorting element T.
-*
-* @param data List of elements to be sorted.
-* @param key Mapping of elements T to K.
-* @param stable Whether to use stable sorting.
-* @param descending Indicates whether to use descending sorting.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Sorts the elements in an ArrayList by comparing keys extracted from elements
+ * @param data - the ArrayList to be sorted
+ * @param key - function that extracts a comparable key from each element
+ * @param stable - whether to use stable sorting algorithm (default: false)
+ * @param descending - whether to sort in descending order (default: false)
+ */
+@!APILevel[
+    since: "22"
+]
 public func sort<T, K>(data: ArrayList<T>, key!: (T) -> K, stable!: Bool = false, descending!: Bool = false): Unit where K <: Comparable<K>
 
-@Deprecated[message: "The interface is deprecated, no substitutions."]
-@!APILevel[since: "22"]
+/**
+ * @description An interface that provides sort-by-comparator functionality for collections
+ */
+@!APILevel[
+    since: "22"
+]
 public interface SortByExtension<T> {
     /**
-    * Incoming Sort by Condition.
-    *
-    * @param comparator transfer the condition to be judged.
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
+     * @description Sorts elements using a custom comparator function
+     * @param comparator - comparison function that returns Ordering (LT, EQ, GT)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func sortBy(comparator!: (T, T) -> Ordering): Unit
     
     /**
-    * Incoming Sort by Condition.
-    *
-    * @param comparator transfer the condition to be judged.
-    * @param stable Whether to use stable sorting
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
+     * @description Sorts elements using a custom comparator function with stability option
+     * @param stable - whether to use stable sorting algorithm
+     * @param comparator - comparison function that returns Ordering (LT, EQ, GT)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func sortBy(stable!: Bool, comparator!: (T, T) -> Ordering): Unit
 }
 
-@Deprecated[message: "The interface is deprecated, no substitutions."]
-@!APILevel[since: "22"]
+/**
+ * @description An interface that provides basic sorting functionality for collections
+ */
+@!APILevel[
+    since: "22"
+]
 public interface SortExtension {
     /**
-    * Sort data in ascending order.
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
+     * @description Sorts elements in ascending order using default comparison
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func sort(): Unit
     
     /**
-    * Sort data in ascending order.
-    *
-    * @param stable Whether to use stable sorting
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
+     * @description Sorts elements in ascending order with stability option
+     * @param stable - whether to use stable sorting algorithm
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func sort(stable!: Bool): Unit
     
-    /*
-    * Sort data in descending order.
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Sorts elements in descending order using default comparison
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func sortDescending(): Unit
     
-    /*
-    * Sort data in descending order.
-    *
-    * @param stable Whether to use stable sorting
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Sorts elements in descending order with stability option
+     * @param stable - whether to use stable sorting algorithm
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func sortDescending(stable!: Bool): Unit
 }
 
 extend<T> Array<T> <: SortByExtension<T> {
-    @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Sort array elements using a custom comparator
+     * @param comparator - comparison function that returns Ordering (LT, EQ, GT)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func sortBy(comparator!: (T, T) -> Ordering): Unit
     
-    @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Sort array elements using a custom comparator with stability option
+     * @param stable - whether to use stable sorting algorithm
+     * @param comparator - comparison function that returns Ordering (LT, EQ, GT)
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func sortBy(stable!: Bool, comparator!: (T, T) -> Ordering): Unit
 }
 
 extend<T> Array<T> <: SortExtension where T <: Comparable<T> {
-    @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Sort array elements in ascending order    
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func sort(): Unit
     
-    @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Sort array elements in ascending order with stability option
+     * @param stable - whether to use stable sorting algorithm
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func sort(stable!: Bool): Unit
     
-    @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Sort array elements in descending order    
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func sortDescending(): Unit
     
-    @Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Sort array elements in descending order with stability option
+     * @param stable - whether to use stable sorting algorithm
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func sortDescending(stable!: Bool): Unit
 }
 
 
-/*
-* Stable ascending sort
-*
-* @param data Array to be sorted.
-*
-* @since 0.27.3
-*/
-@Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-@!APILevel[since: "22"]
+
+/**
+ * @description A Function for stable sorting of arrays in ascending order
+ * @param data - the array to be sorted using stable algorithm
+ */
+@!APILevel[
+    since: "22"
+]
 public func stableSort<T>(data: Array<T>): Unit where T <: Comparable<T>
 
-/*
-* Stable sort
-*
-* @param data Array to be sorted.
-* @param comparator The sorted comparison strategy.
-*
-* @since 0.27.3
-*/
-@Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-@!APILevel[since: "22"]
+/**
+ * @description A Function for stable sorting of arrays using a custom comparator
+ * @param data - the array to be sorted using stable algorithm
+ * @param comparator - comparison function that returns Ordering (LT, EQ, GT)
+ */
+@!APILevel[
+    since: "22"
+]
 public func stableSort<T>(data: Array<T>, comparator: (T, T) -> Ordering): Unit
 
 
+
 /**
-* Unstable ascending sort
-*
-* @param data Array to be sorted.
-*
-* @since 0.27.3
-*/
-@Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, stable!: Bool = false, descending!: Bool = false): Unit where T <: Comparable<T>` instead."]
-@!APILevel[since: "22"]
+ * @description A Function for unstable sorting of arrays in ascending order
+ * @param data - the array to be sorted using unstable algorithm
+ */
+@!APILevel[
+    since: "22"
+]
 public func unstableSort<T>(data: Array<T>): Unit where T <: Comparable<T>
 
 /**
-* Unstable sort
-*
-* @param data Array to be sorted.
-* @param comparator The sorted comparison strategy.
-*
-* @since 0.27.3
-*/
-@Deprecated[message: "Use global function `public func sort<T>(data: Array<T>, by!: (T, T) -> Ordering, stable!: Bool = false, descending!: Bool = false): Unit` instead."]
-@!APILevel[since: "22"]
+ * @description A Function for unstable sorting of arrays using a custom comparator
+ * @param data - the array to be sorted using unstable algorithm
+ * @param comparator - comparison function that returns Ordering (LT, EQ, GT)
+ */
+@!APILevel[
+    since: "22"
+]
 public func unstableSort<T>(data: Array<T>, comparator: (T, T) -> Ordering): Unit
+
 
 

@@ -1,13 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.unittest
 import std.collection.ArrayList
 
@@ -76,144 +66,449 @@ import std.net.*
 import std.core.println as corePrintln
 import std.core.print as corePrint
 
-@!APILevel[since: "22"]
+/**
+ * @description Defines a test suite, which is a collection of test cases.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TestSuite {
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the test suite.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all tests in this suite.
+     * @returns Returns a `TestReport` containing the results of the test run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runTests(): TestReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all tests in this suite with the given configuration.
+     * @param configuration - The configuration to use for the test run.
+     * @returns Returns a `TestReport` containing the results of the test run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runTests(configuration: Configuration): TestReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all benchmarks in this suite.
+     * @returns Returns a `BenchReport` containing the results of the benchmark run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runBenchmarks(): BenchReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all benchmarks in this suite with the given configuration.
+     * @param configuration - The configuration to use for the benchmark run.
+     * @returns Returns a `BenchReport` containing the results of the benchmark run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runBenchmarks(configuration: Configuration): BenchReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `TestSuiteBuilder` with the given name.
+     * @param name - The name of the test suite.
+     * @returns Returns a new `TestSuiteBuilder` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func builder(name: String): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `TestSuiteBuilder` from an existing `TestSuite`.
+     * @param suite - The test suite to use as a template.
+     * @returns Returns a new `TestSuiteBuilder` instance initialized with the properties of the given suite.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func builder(suite: TestSuite): TestSuiteBuilder
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Defines a test group, which is a collection of test suites.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TestGroup {
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the test group.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all tests in this group.
+     * @returns Returns a `TestReport` containing the results of the test run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runTests(): TestReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all tests in this group with the given configuration.
+     * @param configuration - The configuration to use for the test run.
+     * @returns Returns a `TestReport` containing the results of the test run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runTests(configuration: Configuration): TestReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all benchmarks in this group.
+     * @returns Returns a `BenchReport` containing the results of the benchmark run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runBenchmarks(): BenchReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs all benchmarks in this group with the given configuration.
+     * @param configuration - The configuration to use for the benchmark run.
+     * @returns Returns a `BenchReport` containing the results of the benchmark run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func runBenchmarks(configuration: Configuration): BenchReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `TestGroupBuilder` with the given name.
+     * @param name - The name of the test group.
+     * @returns Returns a new `TestGroupBuilder` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func builder(name: String): TestGroupBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `TestGroupBuilder` from an existing `TestGroup`.
+     * @param group - The test group to use as a template.
+     * @returns Returns a new `TestGroupBuilder` instance initialized with the properties of the given group.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func builder(group: TestGroup): TestGroupBuilder
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A builder for creating `TestGroup` instances.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TestGroupBuilder {
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the name of the test group.
+     * @param name - The name to set.
+     * @returns Returns this `TestGroupBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func setName(name: String): TestGroupBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Configures the test group with the given configuration.
+     * @param configuration - The configuration to apply.
+     * @returns Returns this `TestGroupBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func configure(configuration: Configuration): TestGroupBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a `UnitTestCase` to the test group.
+     * @param test - The test case to add.
+     * @returns Returns this `TestGroupBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(test: UnitTestCase): TestGroupBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a `Benchmark` to the test group.
+     * @param benchmark - The benchmark to add.
+     * @returns Returns this `TestGroupBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(benchmark: Benchmark): TestGroupBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a `TestSuite` to the test group.
+     * @param suite - The test suite to add.
+     * @returns Returns this `TestGroupBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(suite: TestSuite): TestGroupBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Builds the `TestGroup`.
+     * @returns Returns the new `TestGroup` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func build(): TestGroup
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A builder for creating `TestSuite` instances.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TestSuiteBuilder {
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the name of the test suite.
+     * @param name - The name to set.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func setName(name: String): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Configures the test suite with the given configuration.
+     * @param configuration - The configuration to apply.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func configure(configuration: Configuration): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a function to be executed before each test case in the suite.
+     * @param body - The function to execute, which takes the test case name as a parameter.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func beforeEach(body: (String) -> Unit): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a function to be executed after each test case in the suite.
+     * @param body - The function to execute, which takes the test case name as a parameter.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func afterEach(body: (String) -> Unit): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a function to be executed before each test case in the suite.
+     * @param body - The function to execute.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func beforeEach(body: () -> Unit): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a function to be executed after each test case in the suite.
+     * @param body - The function to execute.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func afterEach(body: () -> Unit): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a function to be executed once before all test cases in the suite.
+     * @param body - The function to execute.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func beforeAll(body: () -> Unit): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a function to be executed once after all test cases in the suite.
+     * @param body - The function to execute.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func afterAll(body: () -> Unit): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a `UnitTestCase` to the test suite.
+     * @param test - The test case to add.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(test: UnitTestCase): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds a `Benchmark` to the test suite.
+     * @param benchmark - The benchmark to add.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func add(benchmark: Benchmark): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Uses another `TestSuite` as a template for this builder.
+     * @param template - The test suite to use as a template.
+     * @returns Returns this `TestSuiteBuilder` instance for chaining.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func template(template: TestSuite): TestSuiteBuilder
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Builds the `TestSuite`.
+     * @returns Returns the new `TestSuite` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func build(): TestSuite
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents a single unit test case.
+ */
+@!APILevel[
+    since: "22"
+]
 public class UnitTestCase {
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the test case.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs this test case.
+     * @returns Returns a `TestReport` containing the results of the test run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func run(): TestReport
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a parameterized test case with a data strategy.
+     * @param name - The name of the test case.
+     * @param strategy - The data strategy to use for providing test data.
+     * @param configuration - The configuration for the test case.
+     * @param body - The test case body, which takes a parameter of type `T`.
+     * @returns Returns a new `UnitTestCase` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func createParameterized<T>(name: String, strategy: DataStrategy<T>,
         configuration!: Configuration = Configuration(), body!: (T) -> Unit): UnitTestCase
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a parameterized test case with a data strategy processor.
+     * @param name - The name of the test case.
+     * @param strategy - The data strategy processor to use for providing test data.
+     * @param configuration - The configuration for the test case.
+     * @param body - The test case body, which takes a parameter of type `T`.
+     * @returns Returns a new `UnitTestCase` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func createParameterized<T>(name: String, strategy: DataStrategyProcessor<T>,
         configuration!: Configuration = Configuration(), body!: (T) -> Unit): UnitTestCase
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a simple test case.
+     * @param name - The name of the test case.
+     * @param configuration - The configuration for the test case.
+     * @param body - The test case body.
+     * @returns Returns a new `UnitTestCase` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func create(name: String, configuration!: Configuration = Configuration(), body!: () -> Unit): UnitTestCase
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents a single benchmark case.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Benchmark {
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the benchmark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Runs this benchmark.
+     * @returns Returns a `BenchReport` containing the results of the benchmark run.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func run(): BenchReport
     
-    // Creates parameterized benchmark with provided data strategy.//// Note: this api is inferior to @Bench macro because it uses lambda which can cause undesired overhead.// It should not be used for micro benchmarks.
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a parameterized benchmark with a data strategy.
+     * @param name - The name of the benchmark.
+     * @param strategy - The data strategy to use for providing benchmark data.
+     * @param configuration - The configuration for the benchmark.
+     * @param measurement - The measurement method to use.
+     * @param body - The benchmark body, which takes a parameter of type `T`.
+     * @returns Returns a new `Benchmark` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func createParameterized<T>(
         name: String,
         strategy: DataStrategy<T>,
@@ -222,8 +517,18 @@ public class Benchmark {
         body!: (T) -> Unit
     ): Benchmark
     
-    // Creates parameterized benchmark with provided data strategy processor.//// Note: this api is inferior to @Bench macro because it uses lambda which can cause undesired overhead.// It should not be used for micro benchmarks.
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a parameterized benchmark with a data strategy processor.
+     * @param name - The name of the benchmark.
+     * @param strategy - The data strategy processor to use for providing benchmark data.
+     * @param configuration - The configuration for the benchmark.
+     * @param measurement - The measurement method to use.
+     * @param body - The benchmark body, which takes a parameter of type `T`.
+     * @returns Returns a new `Benchmark` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func createParameterized<T>(
         name: String,
         strategy: DataStrategyProcessor<T>,
@@ -232,8 +537,17 @@ public class Benchmark {
         body!: (T) -> Unit
     ): Benchmark
     
-    // Creates parameterized benchmark from given lambda.//// Note: this api is inferior to @Bench macro because it uses lambda which can cause undesired overhead.// It should not be used for micro benchmarks.
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a simple benchmark.
+     * @param name - The name of the benchmark.
+     * @param configuration - The configuration for the benchmark.
+     * @param measurement - The measurement method to use.
+     * @param body - The benchmark body.
+     * @returns Returns a new `Benchmark` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func create(
         name: String,
         configuration!: Configuration = Configuration(),
@@ -242,586 +556,1446 @@ public class Benchmark {
     ): Benchmark
 }
 
+/**
+ * @description Provides information about a test case.
+ */
+@!APILevel[
+    since: "22"
+]
+public struct TestCaseInfo {
+}
+
+/**
+ * @description An abstract base class for test and benchmark reports.
+ */
+@!APILevel[
+    since: "22"
+]
 sealed abstract class Report {
-    @!APILevel[since: "22"]
+    /**
+     * @description The total number of errors.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop errorCount:   Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The total number of cases.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop caseCount:    Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The number of passed cases.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop passedCount:  Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The number of failed cases.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop failedCount:  Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The number of skipped cases.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop skippedCount: Int64
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A report for a test run.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TestReport <: Report {
-    @!APILevel[since: "22"]
+    /**
+     * @description Exports the report using the given reporter.
+     * @param reporter - The reporter to use for exporting the report.
+     * @returns Returns the exported report data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func reportTo<T>(reporter: Reporter<TestReport, T>): T
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A report for a benchmark run.
+ */
+@!APILevel[
+    since: "22"
+]
 public class BenchReport <: Report {
-    @!APILevel[since: "22"]
+    /**
+     * @description Exports the report using the given reporter.
+     * @param reporter - The reporter to use for exporting the report.
+     * @returns Returns the exported report data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func reportTo<T>(reporter: Reporter<BenchReport, T>): T
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An interface for classes that can be converted to a `TestSuite`.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface TestClass {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this object to a `TestSuite`.
+     * @returns Returns the `TestSuite` representation of this object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func asTestSuite(): TestSuite
 }
 
-// NOTE: this class is used internally by the compiler and is considered implementation details
-@!APILevel[since: "22"]
+/**
+ * @description Represents a package of tests, used internally by the compiler.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TestPackage {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new `TestPackage` with the given name.
+     * @param name - The name of the test package.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public TestPackage(
         let name: String
     )
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Registers a test case with the package.
+     * @param testCase - A function that returns the `UnitTestCase` to register.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func registerCase(testCase: () -> UnitTestCase): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Registers a test suite with the package.
+     * @param suite - A function that returns the `TestSuite` to register.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func registerSuite(suite: () -> TestSuite): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Registers a benchmark with the package.
+     * @param bench - A function that returns the `Benchmark` to register.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func registerBench(bench: () -> Benchmark): Unit
 }
 
 
-/**
-* Checks two values for equality and will throw an exception if the check fails.
-*
-* @param leftStr string representation of expected.
-* @param rightStr string representation of actual.
-* @param expected expected value.
-* @param actual actual value.
-* @param optParentCtx context where fail message is stored
-
-* @throws AssertException If <expected> and <actual> are not equal.
-*/
-@!APILevel[since: "22"]
-public func assertEqual<T>(leftStr: String, rightStr: String, expected: T, actual: T,
-    optParentCtx!: ?AssertionCtx = None): Unit where T <: Equatable<T>
 
 /**
-* Same as assertEqual but will not throw an exception immediately.
-*
-* @param leftStr string representation of expected.
-* @param rightStr string representation of actual.
-* @param expected expected value.
-* @param actual actual value.
-* @param optParentCtx context where fail message is stored
-*/
-@!APILevel[since: "22"]
-public func expectEqual<T>(leftStr: String, rightStr: String, expected: T, actual: T,
-    optParentCtx!: ?AssertionCtx = None): Unit where T <: Equatable<T>
+ * @description Asserts that two values are equal. 
+ * @param leftStr - A string representation of the expected value.
+ * @param rightStr - A string representation of the actual value.
+ * @param expected - The expected value.
+ * @param actual - The actual value.
+ * @param optParentCtx - An optional parent assertion context.
+ */
+@!APILevel[
+    since: "22"
+]
+public func assertEqual<T>(
+    leftStr: String,
+    rightStr: String,
+    expected: T,
+    actual: T,
+    optParentCtx!: ?AssertionCtx = None
+): Unit where T <: Equatable<T>
 
 /**
-* The AssertException.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Asserts that two values are equal.
+ * @param leftStr - A string representation of the expected value.
+ * @param rightStr - A string representation of the actual value.
+ * @param expected - The expected value.
+ * @param actual - The actual value.
+ * @param isDelta - A boolean indicating if this is a delta comparison.
+ * @param optParentCtx - An optional parent assertion context.
+ */
+@!APILevel[
+    since: "22"
+]
+public func assertEqual<T>(
+    leftStr: String,
+    rightStr: String,
+    expected: T,
+    actual: T,
+    isDelta!: Bool,
+    optParentCtx!: ?AssertionCtx = None
+): Unit where T <: Equatable<T>
+
+/**
+ * @description Expects that two values are equal. Does not throw an exception immediately on failure.
+ * @param leftStr - A string representation of the expected value.
+ * @param rightStr - A string representation of the actual value.
+ * @param expected - The expected value.
+ * @param actual - The actual value.
+ * @param optParentCtx - An optional parent assertion context.
+ */
+@!APILevel[
+    since: "22"
+]
+public func expectEqual<T>(
+    leftStr: String,
+    rightStr: String,
+    expected: T,
+    actual: T,
+    optParentCtx!: ?AssertionCtx = None
+): Unit where T <: Equatable<T>
+
+/**
+ * @description Expects that two values are equal. Does not throw an exception immediately on failure.
+ * @param leftStr - A string representation of the expected value.
+ * @param rightStr - A string representation of the actual value.
+ * @param expected - The expected value.
+ * @param actual - The actual value.
+ * @param isDelta - A boolean indicating if this is a delta comparison.
+ * @param optParentCtx - An optional parent assertion context.
+ */
+@!APILevel[
+    since: "22"
+]
+public func expectEqual<T>(
+    leftStr: String,
+    rightStr: String,
+    expected: T,
+    actual: T,
+    isDelta!: Bool,
+    optParentCtx!: ?AssertionCtx = None
+): Unit where T <: Equatable<T>
+
+/**
+ * @description An exception thrown when an assertion fails.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AssertException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new `AssertException`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new `AssertException` with a message.
+     * @param message - The exception message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* The AssertIntermediateException.
-*
-*/
-@!APILevel[since: "22"]
+ * @description An exception thrown for intermediate assertion failures, containing more context.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AssertIntermediateException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description The expression that failed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let expression: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The original exception that caused the failure.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let originalException: Exception
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the stack trace of the original exception.
+     * @returns Returns a string representation of the original stack trace.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getOriginalStackTrace(): String
 }
 
-// Marker interface to be able to detect BenchInputProvider<T> when we do not know `T`
-@!APILevel[since: "22"]
+/**
+ * @description A marker interface for benchmark input providers.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface BenchmarkInputMarker {
 }
 
-// Interface to handle benchmarks where some code needs to be executed before the benchmark// or input of the benchmark is mutated and has to be generated each time from scratch.
-@!APILevel[since: "22"]
+/**
+ * @description An interface for providing input data to benchmarks.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface BenchInputProvider<T> <: BenchmarkInputMarker {
-    // Called before benchmark measurements.// After this function was called, subsequent `get(i)` calls must success for `i` in `0..max`
     @Frozen
-    @!APILevel[since: "22"]
-    mut func reset(max: Int64): Unit
+    @!APILevel[
+        since: "22"
+    ]
+    mut func reset(max: Int64)
     
-    // Execution time of this function is included in benchmark measurements// and then it is excluded from results as part of framework overhead calculations
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     mut func get(idx: Int64): T
 }
 
-// Default and simplest input provider that just copies data for each invokation of the benchmark.
-@!APILevel[since: "22"]
+/**
+ * @description Provides an input that is created only once and reused for all benchmark iterations.
+ * This is useful for providing complex objects that are expensive to create.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct ImmutableInputProvider<T> <: BenchInputProvider<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an `ImmutableInputProvider` with the given data.
+     * @param data The data to be provided as input for the benchmark.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public ImmutableInputProvider(let data: T)
     
+    /**
+     * @description Gets the input data.
+     * @returns The input data.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public mut func get(_: Int64): T
     
+    /**
+     * @description Creates an `ImmutableInputProvider` if the argument is not already a provider.
+     * @param arg The input data.
+     * @param x An unused parameter for overload resolution.
+     * @returns A new `ImmutableInputProvider` instance.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func createOrExisting(arg: T, x!: Int64 = 0): ImmutableInputProvider<T>
     
+    /**
+     * @description Returns the existing provider if the argument is already a `BenchInputProvider`.
+     * @param arg The input provider.
+     * @returns The given input provider.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func createOrExisting<U>(arg: U): U where U <: BenchInputProvider<T>
 }
 
-// Input provider that generates input for the whole benchmark batch in a buffer before executing it
-@!APILevel[since: "22"]
+/**
+ * @description Provides input data in batches for benchmarks. A new batch is created for each benchmark trial.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct BatchInputProvider<T> <: BenchInputProvider<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `BatchInputProvider` with a builder function.
+     * @param builder A function that builds the input data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public BatchInputProvider(let builder: () -> T)
     
+    /**
+     * @description Resets the provider. This implementation is empty.
+     * @param max The maximum number of inputs.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public mut func reset(max: Int64): Unit
+    @!APILevel[
+        since: "22"
+    ]
+    public mut func reset(max: Int64)
     
+    /**
+     * @description Gets the input data for the given index.
+     * @param idx The index of the input.
+     * @returns The input data.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public mut func get(idx: Int64): T
 }
 
-// Benchmark input provider that generates input right before each execution of benchmark.// The difference with `GenerateEachInputProvider` is that when batch size is 1 we can measure// each benchmark invocation independently so input generation is never included in the measurements.// Should be used if `GenerateEachInputProvider` gives poor quality results.
-@!APILevel[since: "22"]
+/**
+ * @description Provides input data for benchmarks with a batch size of one.
+ */
+    @!APILevel[
+        since: "22"
+    ]
 public struct BatchSizeOneInputProvider<T> <: BenchInputProvider<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `BatchSizeOneInputProvider` with a builder function.
+     * @param builder A function that builds the input data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public BatchSizeOneInputProvider(let builder: () -> T)
     
+    /**
+     * @description Resets the provider.
+     * @param max The maximum number of inputs.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public mut func reset(max: Int64)
     
+    /**
+     * @description Gets the input data.
+     * @returns The input data.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public mut func get(_: Int64): T
 }
 
-// Benchmark input provider that generates input right before each execution of benchmark.// Generation time is included in benchmark measurements// and then later it is excluded from results as part of framework overhead calculations.
-@!APILevel[since: "22"]
+/**
+ * @description Provides input data by generating a new value for each request.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct GenerateEachInputProvider<T> <: BenchInputProvider<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `GenerateEachInputProvider` with a builder function.
+     * @param builder A function that builds the input data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public GenerateEachInputProvider(let builder: () -> T)
     
+    /**
+     * @description Resets the provider. This implementation is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public mut func reset(_: Int64)
     
+    /**
+     * @description Gets the input data by invoking the builder function.
+     * @returns The newly generated input data.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public mut func get(_: Int64): T
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Defines the configuration for benchmarks.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface BenchmarkConfig {
-    // Corresponds to the batchSize parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the batch size for the benchmark.
+     * @param b The batch size.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func batchSize(b: Int64): Unit
     
-    // Corresponds to the batchSize parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets a range of batch sizes for the benchmark to iterate over.
+     * @param x The range of batch sizes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func batchSize(x: Range<Int64>): Unit
     
-    // Corresponds to the warmup parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the number of warmup iterations.
+     * @param x The number of warmup iterations.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func warmup(x: Int64): Unit
     
-    // Corresponds to the warmup parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the duration for warmup.
+     * @param x The duration of the warmup phase.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func warmup(x: Duration): Unit
     
-    // Corresponds to the minDuration parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the minimum duration for the benchmark measurement phase.
+     * @param x The minimum duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func minDuration(x: Duration): Unit
     
-    // Corresponds to the explicitGC parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Configures explicit garbage collection during the benchmark.
+     * @param x The type of explicit garbage collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func explicitGC(x: ExplicitGcType): Unit
     
-    // Corresponds to the batchSize parameter of @Configure macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the minimum number of batches to execute.
+     * @param x The minimum number of batches.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func minBatches(x: Int64): Unit
 }
 
 extend Configuration <: BenchmarkConfig {
-    @!APILevel[since: "22"]
-    public func batchSize(b: Int64): Unit
-    
-    @!APILevel[since: "22"]
-    public func batchSize(x: Range<Int64>): Unit
-    
-    @!APILevel[since: "22"]
-    public func warmup(x: Int64): Unit
-    
-    @!APILevel[since: "22"]
-    public func warmup(x: Duration): Unit
-    
-    @!APILevel[since: "22"]
-    public func minDuration(x: Duration): Unit
-    
-    @!APILevel[since: "22"]
-    public func explicitGC(x: ExplicitGcType): Unit
-    
-    @!APILevel[since: "22"]
-    public func minBatches(x: Int64): Unit
-}
-
-/**
-* Interface for all kinds of data that can be collected and analyzed during benchmarking.
-*/
-@!APILevel[since: "22"]
-public interface Measurement {
-    @!APILevel[since: "22"]
-    func setup(): Unit
+    /**
+     * @description Sets the batch size for the benchmark.
+     * @param b The batch size.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func batchSize(b: Int64)
     
     /**
-    * @return representation of the measurement data that will be used for statistical analisys
-    * and should be suitable for substraction.
-    */
+     * @description Sets a range of batch sizes for the benchmark to iterate over.
+     * @param x The range of batch sizes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func batchSize(x: Range<Int64>)
+    
+    /**
+     * @description Sets the number of warmup iterations.
+     * @param x The number of warmup iterations.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func warmup(x: Int64)
+    
+    /**
+     * @description Sets the duration for warmup.
+     * @param x The duration of the warmup phase.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func warmup(x: Duration)
+    
+    /**
+     * @description Sets the minimum duration for the benchmark measurement phase.
+     * @param x The minimum duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func minDuration(x: Duration)
+    
+    /**
+     * @description Configures explicit garbage collection during the benchmark.
+     * @param x The type of explicit garbage collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func explicitGC(x: ExplicitGcType)
+    
+    /**
+     * @description Sets the minimum number of batches to execute.
+     * @param x The minimum number of batches.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func minBatches(x: Int64)
+}
+
+
+
+/**
+ * @description Represents a measurement to be performed during a benchmark.
+ */
+@!APILevel[
+    since: "22"
+]
+public interface Measurement {
+    /**
+     * @description Sets up the measurement. This is called before the measurement starts.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    func setup()
+    
+    /**
+     * @description Performs the measurement.
+     * @returns The result of the measurement.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     func measure(): Float64
     
     /**
-    * Conversion table for measured values, contains value multipliers mapped to measurement unit representation.
-    */
-    @!APILevel[since: "22"]
+     * @description A table for converting measurement units.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop conversionTable: MeasurementUnitTable
     
     /**
-    * Name for this type of measurement. Helps to distinguish between different types of Measurement.
-    */
-    @!APILevel[since: "22"]
+     * @description The name of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop name: String
     
     /**
-    * Simple description of the measurement to be displayed in some reports
-    */
-    @!APILevel[since: "22"]
+     * @description A textual description of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop textDescription: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Additional information about the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop info: MeasurementInfo
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Provides additional information about a measurement. This is currently a placeholder.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct MeasurementInfo {
+    /**
+     * @description A table for converting measurement units.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public conversionTable: MeasurementUnitTable
+
+    /**
+     * @description The name of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public name: String
+
+    /**
+     * @description A textual description of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public textDescription: String
 }
 
+/**
+ * @description A type alias for a table that defines conversions between measurement units.
+ * It is an array of tuples, where each tuple contains a conversion factor and a unit name.
+ */
+@!APILevel[
+    since: "22"
+]
 public type MeasurementUnitTable = Array<(Float64, String)>
 
 
-
 /**
-* Measures how much time takes to execute a function.
-*/
-@!APILevel[since: "22"]
+ * @description A measurement that captures the current time.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct TimeNow <: Measurement {
     /**
-    * @param unit Allows to specify a unit of time that will be used for printing results.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a `TimeNow` measurement with a specific time unit.
+     * @param unit The time unit to use for the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(unit: ?TimeUnit)
     
     /**
-    * Chooses output precision automatically for each case.
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a `TimeNow` measurement with the default time unit.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
+    /**
+     * @description Measures the current time.
+     * @returns The current time as a `Float64`.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func measure(): Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The conversion table for time units.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop conversionTable: MeasurementUnitTable
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the measurement, which is "Time".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description A description of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop textDescription: String
 }
 
 /**
-* Used to explicitly specify the time unit used when `TimeNow` prints time.
-*/
-@!APILevel[since: "22"]
+ * @description Represents time units for measurements.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum TimeUnit <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Nanoseconds.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Nanos |
-    @!APILevel[since: "22"]
+    /**
+     * @description Microseconds.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Micros |
-    @!APILevel[since: "22"]
+    /**
+     * @description Milliseconds.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Millis |
-    @!APILevel[since: "22"]
+    /**
+     * @description Seconds.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Seconds
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the time unit to a string.
+     * @returns The string representation of the time unit.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Used to specify what type of GC is invoked by the test framework in benchmarks.
-* See std.runtime.GC(heavy: bool) for details about types of GC invokations
-*/
-@!APILevel[since: "22"]
+ * @description Specifies the type of explicit garbage collection to be performed during a benchmark.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum ExplicitGcType <: ToString {
-    @!APILevel[since: "22"]
-    // GC is not invoked explicitly
+    /**
+     * @description Garbage collection is disabled.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Disabled |
-    @!APILevel[since: "22"]
-    // GC(heavy: false) is invoked after each batch
+    /**
+     * @description A light garbage collection cycle is performed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Light |
-    @!APILevel[since: "22"]
-    // GC(heavy: true) is invoked after each batch
+    /**
+     * @description A heavy (full) garbage collection cycle is performed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Heavy
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the GC type to a string.
+     * @returns The string representation of the GC type.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-// corresponds to HW_REF_CPU_CYCLES Perf measurements
-@!APILevel[since: "22"]
+/**
+ * @description A measurement that captures CPU cycles.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct CpuCycles <: Measurement {
+    /**
+     * @description Measures the CPU cycles.
+     * @returns The number of CPU cycles.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func measure(): Float64
     
-    @!APILevel[since: "22"]
-    public func setup(): Unit
+    /**
+     * @description Sets up the CPU cycle measurement. This implementation is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func setup()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The conversion table for CPU cycles.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop conversionTable: MeasurementUnitTable
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the measurement, which is "CPU Cycles".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description A description of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop textDescription: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A measurement that uses performance counters.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct Perf <: Measurement {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `Perf` measurement with a specific performance counter.
+     * @param counter The performance counter to use.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public Perf(var counter: PerfCounter)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `Perf` measurement with the default performance counter.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
-    public func setup():Unit
+    /**
+     * @description Sets up the performance counter measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func setup()
     
+    /**
+     * @description Performs the measurement using the performance counter.
+     * @returns The result of the measurement.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func measure(): Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The conversion table for the performance counter.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop conversionTable: MeasurementUnitTable
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description A description of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop textDescription: String
 }
 
-// Detailed cache counters are not supported yet
-@!APILevel[since: "22"]
+/**
+ * @description Represents hardware and software performance counters.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum PerfCounter <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware CPU cycles.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_CPU_CYCLES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware instructions.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_INSTRUCTIONS |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware cache references.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_CACHE_REFERENCES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware cache misses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_CACHE_MISSES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware branch instructions.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_BRANCH_INSTRUCTIONS |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware branch misses.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_BRANCH_MISSES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware bus cycles.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_BUS_CYCLES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware stalled cycles in the frontend.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_STALLED_CYCLES_FRONTEND |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware stalled cycles in the backend.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_STALLED_CYCLES_BACKEND |
-    @!APILevel[since: "22"]
+    /**
+     * @description Hardware reference CPU cycles.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     HW_REF_CPU_CYCLES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software CPU clock.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_CPU_CLOCK |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software task clock.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_TASK_CLOCK |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software page faults.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_PAGE_FAULTS |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software context switches.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_CONTEXT_SWITCHES |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software CPU migrations.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_CPU_MIGRATIONS |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software minor page faults.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_PAGE_FAULTS_MIN |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software major page faults.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_PAGE_FAULTS_MAJ |
-    @!APILevel[since: "22"]
+    /**
+     * @description Software emulation faults.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     SW_EMULATION_FAULTS
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the performance counter to a string.
+     * @returns The string representation of the performance counter.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 /**
-* Assertion context base class
-*
-* If user wants to create custom assertion he must:
-* 1. Annotate function with @CustomAssertion
-* 2. Provide `AssertionCtx` as it's FIRST parameter in function parameters list
-*/
-@!APILevel[since: "22"]
+ * @description Provides context for custom assertions.
+ */
+@!APILevel[
+    since: "22"
+]
 public class AssertionCtx {
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the caller of the assertion.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop caller: String
     
     /**
-    * Says whether any error occured during run of assertion
-    */
-    @!APILevel[since: "22"]
+     * @description Indicates whether there have been any errors in the assertion context.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasErrors: Bool
     
     /**
-    * Unresolved passed arguments getter
-    *
-    * @param key: String - if matches with value of argument identifier in function declaration, return unresolved argument
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the value of an argument by its key.
+     * @param key The key of the argument.
+     * @returns The value of the argument.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func arg(key: String): String
     
     /**
-    * Comma-separated string of arguments
-    */
-    @!APILevel[since: "22"]
+     * @description The arguments passed to the assertion.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop args: String
     
     /**
-    * Specifies names for accessing unresolved values
-    *
-    * @param aliases: Array<String> - String aliases for each argument in function declaration.
-    *                                 Length of provided array should match with size of paramenter list
-    */
-    @!APILevel[since: "22"]
-    public func setArgsAliases(aliases: Array<String>): Unit
+     * @description Sets aliases for the arguments.
+     * @param aliases An array of aliases.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func setArgsAliases(aliases: Array<String>)
     
     /**
-    * Stores FailCheckResult in local stacktrace
-    *
-    * @throws AssertException
-    */
-    @!APILevel[since: "22"]
+     * @description Fails the assertion with a message.
+     * @param message The failure message.
+     * @returns This function does not return.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func fail(message: String): Nothing
     
     /**
-    * Stores CustomCheckResult in local stacktrace
-    *
-    * @throws AssertException
-    */
-    @!APILevel[since: "22"]
+     * @description Fails the assertion with a pretty-printable object.
+     * @param pt The pretty-printable object.
+     * @returns This function does not return.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func fail<PP>(pt: PP): Nothing where PP <: PrettyPrintable
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Records an expected failure with a message.
+     * @param message The failure message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func failExpect(message: String): Unit
     
     /**
-    * Stores CustomCheckResult in local stacktrace
-    */
-    @!APILevel[since: "22"]
+     * @description Records an expected failure with a pretty-printable object.
+     * @param pt The pretty-printable object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func failExpect<PP>(pt: PP): Unit where PP <: PrettyPrintable
 }
 
 /**
-* Runs custom assertion specified by @Assert[caller](passedArgs) inside of @Test/@TestCase functions
-*
-* Used by framework and not considered to be called by end user
-*
-* @param passedArgs:   Array<String>       - unresolved passed arguments
-* @param caller:       String              - name of called custom assertion with generic parameters if such specified
-* @param assert:       (AssertionCtx) -> T - capture of invocation of assertion with right arguments
-* @param optParentCtx: ?AssertionCtx       - first argument of @CustomAssertion function
-*
-* @throws AssertException if any occured in nested checks
-*/
-@!APILevel[since: "22"]
-public func invokeCustomAssert<T>(passedArgs: Array<String>, caller: String, assert: (AssertionCtx) -> T,
-    optParentCtx!: ?AssertionCtx = None): T
+ * @description Invokes a custom assertion.
+ * @param passedArgs The arguments passed to the assertion.
+ * @param caller The name of the caller.
+ * @param assert The assertion function to invoke.
+ * @param optParentCtx An optional parent assertion context.
+ * @returns The result of the assertion function.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
+public func invokeCustomAssert<T>(
+    passedArgs: Array<String>,
+    caller: String,
+    assert: (AssertionCtx) -> T,
+    optParentCtx!: ?AssertionCtx = None
+): T
 
 /**
-* Runs custom assertion specified by @Assert[caller](passedArgs) inside of @Test/@TestCase functions
-*
-* Used by framework and not considered to be called by end user
-*
-* @param passedArgs:   Array<String>         - unresolved passed arguments
-* @param caller:       String                - name of called custom assertion with generic parameters if such specified
-* @param expect:       (AssertionCtx) -> Any - capture of invocation of assertion with right arguments
-* @param optParentCtx: ?AssertionCtx         - first argument of @CustomAssertion function
-*/
-@!APILevel[since: "22"]
-public func invokeCustomExpect(passedArgs: Array<String>, caller: String, expect: (AssertionCtx) -> Any,
-    optParentCtx!: ?AssertionCtx = None): Unit
+ * @description Invokes a custom expectation.
+ * @param passedArgs The arguments passed to the expectation.
+ * @param caller The name of the caller.
+ * @param expect The expectation function to invoke.
+ * @param optParentCtx An optional parent assertion context.
+ */
+@!APILevel[
+    since: "22"
+]
+public func invokeCustomExpect(
+    passedArgs: Array<String>,
+    caller: String,
+    expect: (AssertionCtx) -> Any,
+    optParentCtx!: ?AssertionCtx = None
+): Unit
 
 /**
-* Create default configuration by reading command-line arguments.
-* Any command-line argument given to the test will be turned into a field in configuration according to the rules:
-* - kebab-case arguments such as --random-seed are turned into camelCase parameters: randomSeed
-* - arguments with no values are turned into bool values: --no-color becomes noColor of type Bool and value true
-* - the rest are converted according to the following rules, in this order:
-*    - `true` and `false` values are Bool: --feel-good=true becomes field feelGood of type Bool and value true
-*    - integer number literals are Int64: --random-seed=3 becomes field randomSeed of type Int64 and value 3
-*    - float number literals are Float64: --value-pi=3.14 becomes field valuePi of type Float64 and value 3.14
-*    - any other values are considered Strings
-*/
-@!APILevel[since: "22"]
+ * @description Creates a default configuration for the unittest framework.
+ * @returns A `Configuration` object with default settings.
+ */
+@!APILevel[
+    since: "22"
+]
 public func defaultConfiguration(): Configuration
 
 
-@!APILevel[since: "22"]
-public func entryMain(testPackage: TestPackage): Int64
+/**
+ * @description An interface for types that can be compared for near-equality.
+ */
+@!APILevel[
+    since: "22"
+]
+public interface NearEquatable<CT, D> {
+    /**
+     * @description Checks if this object is nearly equal to another object within a given delta.
+     * @param obj The object to compare with.
+     * @param delta The allowed difference.
+     * @returns `true` if the objects are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    func isNear(obj: CT, delta!: D): Bool
+}
 
-/*
-* Fails the test case.
-*/
-@!APILevel[since: "22"]
+/**
+ * @description Represents a relative delta for near-equality comparisons, consisting of an absolute and a relative part.
+ */
+@!APILevel[
+    since: "22"
+]
+public struct RelativeDelta<T> {
+    /**
+     * @description Creates a `RelativeDelta`.
+     * @param absolute The absolute delta.
+     * @param relative The relative delta.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public RelativeDelta(let absolute!: T, let relative!: T)
+}
+
+/**
+ * @description Expands the near-equality comparison for types that are both `NearEquatable` and `Comparable`.
+ * @param l The left-hand side operand.
+ * @param r The right-hand side operand.
+ * @param delta The allowed difference.
+ * @param cmpType The type of comparison.
+ * @returns `true` if the operands are nearly equal, `false` otherwise.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
+public func isNearExpansion<CT, D>(l: CT, r: CT, delta!: D, cmpType!: String): Bool where CT <: NearEquatable<CT, D> & Comparable<CT>
+
+/**
+ * @description Expands the near-equality comparison for types that are `NearEquatable`.
+ * @param l The left-hand side operand.
+ * @param r The right-hand side operand.
+ * @param delta The allowed difference.
+ * @param cmpType The type of comparison.
+ * @param overloadHack An unused parameter for overload resolution.
+ * @returns `true` if the operands are nearly equal, `false` otherwise.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
+public func isNearExpansion<CT, D>(l: CT, r: CT, delta!: D, cmpType!: String, overloadHack!: Bool = true): Bool where CT <: NearEquatable<CT, D>
+
+extend Float16 <: NearEquatable<Float16, Float16> & NearEquatable<Float16, RelativeDelta<Float16>> {
+    /**
+     * @description Checks if this `Float16` is nearly equal to another `Float16` within an absolute delta.
+     * @param obj The `Float16` to compare with.
+     * @param delta The absolute delta.
+     * @returns `true` if the values are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isNear(obj: Float16, delta!: Float16): Bool
+    
+    /**
+     * @description Checks if this `Float16` is nearly equal to another `Float16` within a relative delta.
+     * @param obj The `Float16` to compare with.
+     * @param delta The relative delta.
+     * @returns `true` if the values are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isNear(obj: Float16, delta!: RelativeDelta<Float16>): Bool
+}
+
+extend Float32 <: NearEquatable<Float32, Float32> & NearEquatable<Float32, RelativeDelta<Float32>> {
+    /**
+     * @description Checks if this `Float32` is nearly equal to another `Float32` within an absolute delta.
+     * @param obj The `Float32` to compare with.
+     * @param delta The absolute delta.
+     * @returns `true` if the values are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isNear(obj: Float32, delta!: Float32): Bool
+    
+    /**
+     * @description Checks if this `Float32` is nearly equal to another `Float32` within a relative delta.
+     * @param obj The `Float32` to compare with.
+     * @param delta The relative delta.
+     * @returns `true` if the values are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isNear(obj: Float32, delta!: RelativeDelta<Float32>): Bool
+}
+
+extend Float64 <: NearEquatable<Float64, Float64> & NearEquatable<Float64, RelativeDelta<Float64>> {
+    /**
+     * @description Checks if this `Float64` is nearly equal to another `Float64` within an absolute delta.
+     * @param obj The `Float64` to compare with.
+     * @param delta The absolute delta.
+     * @returns `true` if the values are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isNear(obj: Float64, delta!: Float64): Bool
+    
+    /**
+     * @description Checks if this `Float64` is nearly equal to another `Float64` within a relative delta.
+     * @param obj The `Float64` to compare with.
+     * @param delta The relative delta.
+     * @returns `true` if the values are nearly equal, `false` otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isNear(obj: Float64, delta!: RelativeDelta<Float64>): Bool
+}
+
+
+/**
+ * @description The main entry point for running tests.
+ * @param testPackage The test package to run.
+ * @returns The exit code of the test run.
+ */
+@!APILevel[
+    since: "22"
+]
+public func entryMain(testPackage: TestPackage): Int64
+/**
+ * @description Records an expected failure with a message. This function is used within a test case to indicate that a failure is expected at this point, but the test execution should continue. It does not throw an exception itself but contributes to the overall test result.
+ * @param message The failure message to be recorded.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func failExpect(message: String): Unit
 
-/*
-* Immediately fails the test case.
-*/
-@!APILevel[since: "22"]
+/**
+ * @param message The message detailing the reason for the failure.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func fail(message: String): Nothing
 
-/*
-* Immediately fails the test with message that was caught exception differs from expeted.
-*/
-@!APILevel[since: "22"]
+/**
+ * @description Asserts that an unexpected exception was caught. This function is used in exception testing to fail a test when an exception is caught that was not in the list of expected exceptions.
+ * @param message A descriptive message for the assertion failure.
+ * @param expectedExceptions A string representing the set of expected exception types.
+ * @param caughtException A string representing the type of the exception that was actually caught.
+ * @param optParentCtx An optional parent assertion context for nested assertions.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func assertCaughtUnexpectedE(
     message: String,
     expectedExceptions: String,
@@ -829,10 +2003,17 @@ public func assertCaughtUnexpectedE(
     optParentCtx!: ?AssertionCtx = None
 ): Nothing
 
-/*
-* Fails the test with message that was caught exception differs from expeted.
-*/
-@!APILevel[since: "22"]
+/**
+ * @description Records an expected failure when an unexpected exception is caught. Similar to `assertCaughtUnexpectedE`, but it records the failure without stopping the test execution.
+ * @param message A descriptive message for the expectation failure.
+ * @param expectedExceptions A string representing the set of expected exception types.
+ * @param caughtException A string representing the type of the exception that was actually caught.
+ * @param optParentCtx An optional parent assertion context for nested expectations.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func expectCaughtUnexpectedE(
     message: String,
     expectedExceptions: String,
@@ -841,711 +2022,1955 @@ public func expectCaughtUnexpectedE(
 ): Unit
 
 
-
 extend UInt8 <: Torcable<UInt8> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random entry from a list of recently used value pairs for property-based testing.
+     * @returns A tuple containing a pair of recently used `UInt8` values, or `None` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentEntry(): ?(UInt8, UInt8)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random value that was recently compared to the given value.
+     * @param value The value to find a recent comparison for.
+     * @returns A recently used `UInt8` value, or `None` if no such value is found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentValueComparedTo(value: UInt8): ?UInt8
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates the next random `UInt8` value from a random source.
+     * @param random The random number generator to use.
+     * @returns A new random `UInt8` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nextFrom(random: Random): UInt8
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates a "suggested" `UInt8` value from a set of interesting or edge-case values.
+     * @param random The random number generator to use for selection.
+     * @returns A suggested `UInt8` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func suggestedFrom(random: Random): UInt8
     
-    @!APILevel[since: "22"]
-    public func isZero(): Bool
+    /**
+     * @description Checks if the value is zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isZero()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Flips the bit at the specified position.
+     * @param at The index of the bit to flip (0-7).
+     * @returns A new `UInt8` value with the specified bit flipped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func bitFlip(at: UInt8): UInt8
 }
 
 extend UInt16 <: Torcable<UInt16> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random entry from a list of recently used value pairs for property-based testing.
+     * @returns A tuple containing a pair of recently used `UInt16` values, or `None` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentEntry(): ?(UInt16, UInt16)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random value that was recently compared to the given value.
+     * @param value The value to find a recent comparison for.
+     * @returns A recently used `UInt16` value, or `None` if no such value is found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentValueComparedTo(value: UInt16): ?UInt16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates the next random `UInt16` value from a random source.
+     * @param random The random number generator to use.
+     * @returns A new random `UInt16` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nextFrom(random: Random): UInt16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates a "suggested" `UInt16` value from a set of interesting or edge-case values.
+     * @param random The random number generator to use for selection.
+     * @returns A suggested `UInt16` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func suggestedFrom(random: Random): UInt16
     
-    @!APILevel[since: "22"]
-    public func isZero(): Bool
+    /**
+     * @description Checks if the value is zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isZero()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Flips the bit at the specified position.
+     * @param at The index of the bit to flip (0-15).
+     * @returns A new `UInt16` value with the specified bit flipped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func bitFlip(at: UInt8): UInt16
     
+    /**
+     * @description Adds a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to add.
+     * @returns The result of the addition.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func+(arg: UInt8): UInt16
     
+    /**
+     * @description Subtracts a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to subtract.
+     * @returns The result of the subtraction.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func-(arg: UInt8): UInt16
 }
 
 extend UInt32 <: Torcable<UInt32> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random entry from a list of recently used value pairs for property-based testing.
+     * @returns A tuple containing a pair of recently used `UInt32` values, or `None` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentEntry(): ?(UInt32, UInt32)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random value that was recently compared to the given value.
+     * @param value The value to find a recent comparison for.
+     * @returns A recently used `UInt32` value, or `None` if no such value is found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentValueComparedTo(value: UInt32): ?UInt32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates the next random `UInt32` value from a random source.
+     * @param random The random number generator to use.
+     * @returns A new random `UInt32` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nextFrom(random: Random): UInt32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates a "suggested" `UInt32` value from a set of interesting or edge-case values.
+     * @param random The random number generator to use for selection.
+     * @returns A suggested `UInt32` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func suggestedFrom(random: Random): UInt32
     
-    @!APILevel[since: "22"]
-    public func isZero(): Bool
+    /**
+     * @description Checks if the value is zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isZero()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Flips the bit at the specified position.
+     * @param at The index of the bit to flip (0-31).
+     * @returns A new `UInt32` value with the specified bit flipped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func bitFlip(at: UInt8): UInt32
     
+    /**
+     * @description Adds a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to add.
+     * @returns The result of the addition.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func+(arg: UInt8): UInt32
     
+    /**
+     * @description Subtracts a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to subtract.
+     * @returns The result of the subtraction.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func-(arg: UInt8): UInt32
 }
 
 extend UInt64 <: Torcable<UInt64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random entry from a list of recently used value pairs for property-based testing.
+     * @returns A tuple containing a pair of recently used `UInt64` values, or `None` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentEntry(): ?(UInt64, UInt64)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random value that was recently compared to the given value.
+     * @param value The value to find a recent comparison for.
+     * @returns A recently used `UInt64` value, or `None` if no such value is found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentValueComparedTo(value: UInt64): ?UInt64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates the next random `UInt64` value from a random source.
+     * @param random The random number generator to use.
+     * @returns A new random `UInt64` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nextFrom(random: Random): UInt64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates a "suggested" `UInt64` value from a set of interesting or edge-case values.
+     * @param random The random number generator to use for selection.
+     * @returns A suggested `UInt64` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func suggestedFrom(random: Random): UInt64
     
-    @!APILevel[since: "22"]
-    public func isZero(): Bool
+    /**
+     * @description Checks if the value is zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isZero()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Flips the bit at the specified position.
+     * @param at The index of the bit to flip (0-63).
+     * @returns A new `UInt64` value with the specified bit flipped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func bitFlip(at: UInt8): UInt64
     
+    /**
+     * @description Adds a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to add.
+     * @returns The result of the addition.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func+(arg: UInt8): UInt64
     
+    /**
+     * @description Subtracts a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to subtract.
+     * @returns The result of the subtraction.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func-(arg: UInt8): UInt64
 }
 
 extend Float32 <: Torcable<Float32> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random entry from a list of recently used value pairs for property-based testing.
+     * @returns A tuple containing a pair of recently used `Float32` values, or `None` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentEntry(): ?(Float32, Float32)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random value that was recently compared to the given value.
+     * @param value The value to find a recent comparison for.
+     * @returns A recently used `Float32` value, or `None` if no such value is found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentValueComparedTo(value: Float32): ?Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates the next random `Float32` value from a random source.
+     * @param random The random number generator to use.
+     * @returns A new random `Float32` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nextFrom(random: Random): Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates a "suggested" `Float32` value from a set of interesting or edge-case values.
+     * @param random The random number generator to use for selection.
+     * @returns A suggested `Float32` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func suggestedFrom(random: Random): Float32
     
-    @!APILevel[since: "22"]
-    public func isZero(): Bool
+    /**
+     * @description Checks if the value is zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isZero()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Flips the bit at the specified position.
+     * @param at The index of the bit to flip (0-31).
+     * @returns A new `Float32` value with the specified bit flipped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func bitFlip(at: UInt8): Float32
     
+    /**
+     * @description Adds a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to add.
+     * @returns The result of the addition.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func+(arg: UInt8): Float32
     
+    /**
+     * @description Subtracts a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to subtract.
+     * @returns The result of the subtraction.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func-(arg: UInt8): Float32
 }
 
 extend Float64 <: Torcable<Float64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random entry from a list of recently used value pairs for property-based testing.
+     * @returns A tuple containing a pair of recently used `Float64` values, or `None` if the list is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentEntry(): ?(Float64, Float64)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets a random value that was recently compared to the given value.
+     * @param value The value to find a recent comparison for.
+     * @returns A recently used `Float64` value, or `None` if no such value is found.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func randomRecentValueComparedTo(value: Float64): ?Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates the next random `Float64` value from a random source.
+     * @param random The random number generator to use.
+     * @returns A new random `Float64` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func nextFrom(random: Random): Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Generates a "suggested" `Float64` value from a set of interesting or edge-case values.
+     * @param random The random number generator to use for selection.
+     * @returns A suggested `Float64` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func suggestedFrom(random: Random): Float64
     
-    @!APILevel[since: "22"]
-    public func isZero(): Bool
+    /**
+     * @description Checks if the value is zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func isZero()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Flips the bit at the specified position.
+     * @param at The index of the bit to flip (0-63).
+     * @returns A new `Float64` value with the specified bit flipped.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func bitFlip(at: UInt8): Float64
     
+    /**
+     * @description Adds a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to add.
+     * @returns The result of the addition.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func+(arg: UInt8): Float64
     
+    /**
+     * @description Subtracts a `UInt8` value, with overflow wrapping around.
+     * @param arg The `UInt8` value to subtract.
+     * @returns The result of the subtraction.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator func-(arg: UInt8): Float64
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'help' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyHelp <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyHelp`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop help: KeyHelp
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--help".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'no-color' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyNoColor <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyNoColor`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop noColor: KeyNoColor
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--no-color".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key indicating if the test is run from the top level, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyFromTopLevel <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyFromTopLevel`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop fromTopLevel: KeyFromTopLevel
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "fromTopLevel".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'random-seed' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyRandomSeed <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyRandomSeed`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop randomSeed: KeyRandomSeed
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--random-seed".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'warmup' option, which can be an `Int64` or a `Duration`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyWarmup <: KeyFor<Int64> & KeyFor<Duration> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyWarmup`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop warmup: KeyWarmup
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--warmup".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'min-duration' option, which is a `Duration`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyMinDuration <: KeyFor<Duration> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyMinDuration`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop minDuration: KeyMinDuration
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--min-duration".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'explicit-gc' option, which is an `ExplicitGcType`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyExplicitGC <: KeyFor<ExplicitGcType> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyExplicitGC`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop explicitGC: KeyExplicitGC
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--explicit-gc".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'min-batches' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyMinBatches <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyMinBatches`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop minBatches: KeyMinBatches
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--min-batches".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'batch-size' option, which can be an `Int64` or a `Range<Int64>`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyBatchSize <: KeyFor<Int64> & KeyFor<Range<Int64>> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyBatchSize`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop batchSize: KeyBatchSize
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--batch-size".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'parallel' option, which can be a `Bool`, `String`, or `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyParallel <: KeyFor<Bool> & KeyFor<String> & KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyParallel`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop parallel: KeyParallel
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--parallel".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'generation-steps' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyGenerationSteps <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyGenerationSteps`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop generationSteps: KeyGenerationSteps
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--generation-steps".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'reduction-steps' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyReductionSteps <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyReductionSteps`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop reductionSteps: KeyReductionSteps
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--reduction-steps".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'skip' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeySkip <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeySkip`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop skip: KeySkip
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "skip".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'coverage-guided' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCoverageGuided <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCoverageGuided`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop coverageGuided: KeyCoverageGuided
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--coverage-guided".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'coverage-guided-initial-seeds' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCoverageGuidedInitialSeeds <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCoverageGuidedInitialSeeds`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop coverageGuidedInitialSeeds: KeyCoverageGuidedInitialSeeds
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--coverage-guided-initial-seeds".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'coverage-guided-max-candidates' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCoverageGuidedMaxCandidates <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCoverageGuidedMaxCandidates`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop coverageGuidedMaxCandidates: KeyCoverageGuidedMaxCandidates
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--coverage-guided-max-candidates".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'coverage-guided-baseline-score' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCoverageGuidedBaselineScore <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCoverageGuidedBaselineScore`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop coverageGuidedBaselineScore: KeyCoverageGuidedBaselineScore
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--coverage-guided-baseline-score".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'coverage-guided-new-coverage-score' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCoverageGuidedNewCoverageScore <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCoverageGuidedNewCoverageScore`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop coverageGuidedNewCoverageScore: KeyCoverageGuidedNewCoverageScore
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--coverage-guided-new-coverage-score".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'coverage-guided-new-coverage-bonus' option, which is an `Int64`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCoverageGuidedNewCoverageBonus <: KeyFor<Int64> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCoverageGuidedNewCoverageBonus`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop coverageGuidedNewCoverageBonus: KeyCoverageGuidedNewCoverageBonus
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--coverage-guided-new-coverage-bonus".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'bench' option, which is a boolean flag to enable benchmark tests.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyBench <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyBench`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop bench: KeyBench
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--bench".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'timeout' option, which is a `Duration`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyTimeout <: KeyFor<Duration> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyTimeout`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop timeout: KeyTimeout
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "timeout".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'timeout-each' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyTimeoutEach <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyTimeoutEach`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop timeoutEach: KeyTimeoutEach
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "timeout-each".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'timeout-handler' option, which is a function that handles timeouts.
+ */
+@!APILevel[
+    since: "22"
+]
+public struct KeyTimeoutHandler <: KeyFor<(TestCaseInfo) -> Unit> {
+    /**
+     * @description The singleton instance of `KeyTimeoutHandler`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static prop timeoutHandler: KeyTimeoutHandler
+    
+    /**
+     * @description The name of the configuration key, "timeout-handler".
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop name: String
+}
+
+/**
+ * @description A configuration key for the 'capture-output' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyCaptureOutput <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyCaptureOutput`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop captureOutput: KeyCaptureOutput
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "capture-output".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'no-capture-output' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyNoCaptureOutput <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyNoCaptureOutput`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop noCaptureOutput: KeyNoCaptureOutput
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--no-capture-output".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'show-all-output' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyShowAllOutput <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyShowAllOutput`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop showAllOutput: KeyShowAllOutput
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--show-all-output".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'verbose' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyVerbose <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyVerbose`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop verbose: KeyVerbose
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--verbose".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'measurement' option, which is a `Measurement`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyMeasurement <: KeyFor<Measurement> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyMeasurement`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop measurement: KeyMeasurement
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "measurement".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'measurement-info' option, which is a `MeasurementInfo`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyMeasurementInfo <: KeyFor<MeasurementInfo> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyMeasurementInfo`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop measurementInfo: KeyMeasurementInfo
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "measurement-info".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the internal test runner input path, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyInternalTestrunnerInputPath <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyInternalTestrunnerInputPath`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop internalTestrunnerInputPath: KeyInternalTestrunnerInputPath
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "internal-testrunner-input-path".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'death-aware' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyDeathAware <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyDeathAware`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop deathAware: KeyDeathAware
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "death-aware".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'baseline' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyBaseline <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyBaseline`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop baseline: KeyBaseline
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--baseline".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'filter' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyFilter <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyFilter`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop filter: KeyFilter
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--filter".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'include-tags' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyIncludeTags <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyIncludeTags`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop includeTags: KeyIncludeTags
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--include-tags".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'exclude-tags' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyExcludeTags <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyExcludeTags`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop excludeTags: KeyExcludeTags
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--exclude-tags".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'report-path' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyReportPath <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyReportPath`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop reportPath: KeyReportPath
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--report-path".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'report-format' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyReportFormat <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyReportFormat`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop reportFormat: KeyReportFormat
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--report-format".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'baseline-path' option, which is a `String`.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyBaselinePath <: KeyFor<String> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyBaselinePath`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop baselinePath: KeyBaselinePath
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--baseline-path".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A configuration key for the 'dry-run' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct KeyDryRun <: KeyFor<Bool> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The singleton instance of `KeyDryRun`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop dryRun: KeyDryRun
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the configuration key, "--dry-run".
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public prop name: String
+}
+
+/**
+ * @description A configuration key for the 'show-tags' option, which is a boolean flag.
+ */
+@!APILevel[
+    since: "22"
+]
+public struct KeyShowTags <: KeyFor<Bool> {
+    /**
+     * @description The singleton instance of `KeyShowTags`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static prop showTags: KeyShowTags
+    
+    /**
+     * @description The name of the configuration key, "--show-tags".
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop name: String
 }
 
 
-@!APILevel[since: "22"]
+
+/**
+ * @description A utility for building power-assert diagrams, which visualize the values of sub-expressions within a failed assertion.
+ */
+@!APILevel[
+    since: "22"
+]
 public class PowerAssertDiagramBuilder {
-    @!APILevel[since: "22"]
+    /**
+     * @description Initializes a new `PowerAssertDiagramBuilder` with the source code of the asserted expression.
+     * @param expression The string representation of the expression being asserted.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(expression: String)
     
-    // Below are shortcuts to reduce the size of generated code by power assertion macro
-    @!APILevel[since: "22"]
+    /**
+     * @description Records the value of a sub-expression during a power-assert evaluation.
+     * @param value The value of the sub-expression.
+     * @param exprAsText The text of the sub-expression.
+     * @param position The starting position of the sub-expression in the original expression string.
+     * @returns The original `value` passed in.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func r<T>(value: T, exprAsText: String, position: Int64): T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Records the value of a `Rune` sub-expression during a power-assert evaluation.
+     * @param value The value of the sub-expression.
+     * @param exprAsText The text of the sub-expression.
+     * @param position The starting position of the sub-expression in the original expression string.
+     * @returns The original `value` passed in.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func r(value: Rune, exprAsText: String, position: Int64): Rune
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Records the value of a `String` sub-expression during a power-assert evaluation.
+     * @param value The value of the sub-expression.
+     * @param exprAsText The text of the sub-expression.
+     * @param position The starting position of the sub-expression in the original expression string.
+     * @returns The original `value` passed in.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func r(value: String, exprAsText: String, position: Int64): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Handles an exception that occurred during the evaluation of a sub-expression.
+     * @param exception The exception that was caught.
+     * @param exprAsText The text of the sub-expression that threw the exception.
+     * @param position The starting position of the sub-expression.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func h(exception: Exception, exprAsText: String, position: Int64): Nothing
     
-    @!APILevel[since: "22"]
+    /**
+     * @param passed A boolean indicating whether the assertion passed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func w(passed: Bool): Unit
 }
 
-
-
-
-
-
-
+/**
+ * @description A sealed interface representing a reporter for test or benchmark results.
+ */
+@!APILevel[
+    since: "22"
+]
 sealed interface Reporter<TReport, TReturn> {
 }
 
-// NOTE: our predefined reporters
-@!APILevel[since: "22"]
+/**
+ * @description A reporter that outputs benchmark results to a CSV file.
+ */
+@!APILevel[
+    since: "22"
+]
 public class CsvReporter <: Reporter<BenchReport, Unit> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `CsvReporter`.
+     * @param directory The path to the directory where the CSV report will be saved.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public CsvReporter(let directory: Path)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A reporter that outputs raw benchmark results to a CSV file.
+ */
+@!APILevel[
+    since: "22"
+]
 public class CsvRawReporter <: Reporter<BenchReport, Unit> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `CsvRawReporter`.
+     * @param directory The path to the directory where the raw CSV report will be saved.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public CsvRawReporter(let directory: Path)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A reporter that outputs test results to an XML file in a standard format (e.g., JUnit XML).
+ */
+@!APILevel[
+    since: "22"
+]
 public class XmlReporter <: Reporter<TestReport, Unit> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates an `XmlReporter`.
+     * @param directory The path to the directory where the XML report will be saved.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public XmlReporter(let directory: Path)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A reporter that prints test and benchmark results to the console.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ConsoleReporter <: Reporter<TestReport, Unit> & Reporter<BenchReport, Unit> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `ConsoleReporter`.
+     * @param colored A boolean indicating whether to use colored output. Defaults to `true`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public ConsoleReporter(let colored!: Bool = true)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A generic reporter that formats test and benchmark reports into a textual representation using a `PrettyPrinter`.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TextReporter<PP> <: Reporter<TestReport, PP> & Reporter<BenchReport, PP>
         where PP <: PrettyPrinter {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `TextReporter`.
+     * @param into The `PrettyPrinter` to which the report will be written.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public TextReporter(let into!: PP)
 }
 
 extend <PP> TextReporter<PP> <: TextReporterBase<PP> where PP <: PrettyPrinter {
-    @!APILevel[since: "22"]
+    /**
+     * @description Prints the given report using the configured `PrettyPrinter`.
+     * @param report The report to be printed.
+     * @returns The `PrettyPrinter` instance used for printing.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func printReport(report: Report): PP
 }
 
 extend ConsoleReporter <: TextReporterBase<Unit> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Prints the given report to the console.
+     * @param report The report to be printed.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func printReport(report: Report): Unit
 }
 
-// NOTE: for our internal benchmarks
-@!APILevel[since: "22"]
+/**
+ * @description A reporter that collects raw statistics from benchmark reports.
+ * It aggregates benchmark results into a map where the key is the benchmark name
+ * and the value is a tuple containing the mean and standard deviation of execution times.
+ */
+@!APILevel[
+    since: "22"
+]
 public class RawStatsReporter <: Reporter<BenchReport, HashMap<String, (Float64, Float64)>> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a new `RawStatsReporter`.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public RawStatsReporter()
 }
 
-
-
-
 extend LStep <: Serializable<LStep> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Serializes the `LStep` object into a `DataModel`.
+     * @returns The serialized `DataModel` representation of the object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func serializeInternal(): DataModel
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Deserializes a `DataModel` into an `LStep` object.
+     * @param dm The `DataModel` to deserialize.
+     * @returns The deserialized `LStep` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func deserialize(dm: DataModel): LStep
 }
 
 extend StepKind <: Serializable<StepKind> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Serializes the `StepKind` enum into a `DataModel`.
+     * @returns The serialized `DataModel` representation of the enum.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func serializeInternal(): DataModel
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Deserializes a `DataModel` into a `StepKind` enum.
+     * @param dm The `DataModel` to deserialize.
+     * @returns The deserialized `StepKind` enum.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func deserialize(dm: DataModel): StepKind
 }
 
 extend StepInfo <: Serializable<StepInfo> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Serializes the `StepInfo` object into a `DataModel`.
+     * @returns The serialized `DataModel` representation of the object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func serializeInternal(): DataModel
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Deserializes a `DataModel` into a `StepInfo` object.
+     * @param dm The `DataModel` to deserialize.
+     * @returns The deserialized `StepInfo` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func deserialize(dm: DataModel): StepInfo
 }
 
-
-
-extend RenderOptions <: Serializable<RenderOptions> {
-    @!APILevel[since: "22"]
+extend TestCaseReportInfo <: Serializable<TestCaseReportInfo> {
+    /**
+     * @description Serializes the `TestCaseReportInfo` object into a `DataModel`.
+     * @returns The serialized `DataModel` representation of the object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func serializeInternal(): DataModel
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Deserializes a `DataModel` into a `TestCaseReportInfo` object.
+     * @param dm The `DataModel` to deserialize.
+     * @returns The deserialized `TestCaseReportInfo` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static func deserialize(dm: DataModel): TestCaseReportInfo
+}
+
+extend TestSuiteReportInfo <: Serializable<TestSuiteReportInfo> {
+    /**
+     * @description Serializes the `TestSuiteReportInfo` object into a `DataModel`.
+     * @returns The serialized `DataModel` representation of the object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func serializeInternal(): DataModel
+    
+    /**
+     * @description Deserializes a `DataModel` into a `TestSuiteReportInfo` object.
+     * @param dm The `DataModel` to deserialize.
+     * @returns The deserialized `TestSuiteReportInfo` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public static func deserialize(dm: DataModel): TestSuiteReportInfo
+}
+
+extend RenderOptions <: Serializable<RenderOptions> {
+    /**
+     * @description Serializes the `RenderOptions` object into a `DataModel`.
+     * @returns The serialized `DataModel` representation of the object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func serializeInternal(): DataModel
+    
+    /**
+     * @description Deserializes a `DataModel` into a `RenderOptions` object.
+     * @param dm The `DataModel` to deserialize.
+     * @returns The deserialized `RenderOptions` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func deserialize(dm: DataModel): RenderOptions
 }
 
 extend Float64 <: AsFloat {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the `Float64` value itself.
+     * @returns The `Float64` value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func asFloat(): Float64
 }
 
-
-
-@!APILevel[since: "22"]
+/**
+ * @description A data strategy processor that applies a flat-map operation to transform data from one type to another.
+ */
+@!APILevel[
+    since: "22"
+]
 public class FlatMapProcessor<T, R> <: DataStrategyProcessor<R> {
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A data strategy processor that applies a flat-map operation using a data strategy to transform data.
+ */
+@!APILevel[
+    since: "22"
+]
 public class FlatMapStrategyProcessor<T, R> <: DataStrategyProcessor<R> {
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A data strategy processor that applies a mapping function to transform data from one type to another.
+ */
+@!APILevel[
+    since: "22"
+]
 public class MapProcessor<T, R> <: DataStrategyProcessor<R> {
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A data strategy processor that computes the Cartesian product of two data strategy processors.
+ */
+@!APILevel[
+    since: "22"
+]
 public class CartesianProductProcessor<T0, T1> <: DataStrategyProcessor<(T0, T1)> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `CartesianProductProcessor`.
+     * @param left The left-hand side data strategy processor.
+     * @param right The right-hand side data strategy processor.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public CartesianProductProcessor(let left: DataStrategyProcessor<T0>, let right: DataStrategyProcessor<T1>)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A simple data strategy processor that wraps a data strategy.
+ */
+@!APILevel[
+    since: "22"
+]
 public class SimpleProcessor<T> <: DataStrategyProcessor<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a `SimpleProcessor`.
+     * @param buildDelegate A function that builds the data strategy.
+     * @param name The name of the processor.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public SimpleProcessor(let buildDelegate: () -> DataStrategy<T>, let name: String)
 }
 
-// Intrusive cyclic doubly linked list// Used to advance type-erased internal lazy iterators one after another in a cycle//// Public only due to protected sealed functions being implicitly public
-@!APILevel[since: "22"]
+/**
+ * @description A base class for nodes in a lazily evaluated, potentially cyclic graph structure.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class LazyCyclicNode {
 }
 
-// public only due to protected sealed functions being implicitly public
-@!APILevel[since: "22"]
+/**
+ * @description Represents an input parameter for a test case, typically used in parameterized tests.
+ */
+@!APILevel[
+    since: "22"
+]
 public class InputParameter {
 }
 
-
 /**
-* Base class for all combinators of `DataStategy`es.
-*/
+ * @description An abstract base class for processing data strategies in parameterized tests.
+ */
+@!APILevel[
+    since: "22"
+]
 sealed abstract class DataStrategyProcessor<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the data strategy into a benchmark test.
+     * @param caseName The name of the benchmark case.
+     * @param configuration The configuration for the benchmark.
+     * @param doRun The function to execute for each benchmark run.
+     * @returns A `Benchmark` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func intoBenchmark(
         caseName!: String,
         configuration!: Configuration,
         doRun!: (T, Int64, Int64) -> Float64
     ): Benchmark
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the data strategy into a unit test case.
+     * @param caseName The name of the test case.
+     * @param configuration The configuration for the test.
+     * @param doRun The function to execute for the test.
+     * @returns A `UnitTestCase` object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func intoUnitTestCase(
         caseName!: String,
         configuration!: Configuration,
         doRun!: (T) -> Unit
     ): UnitTestCase
     
-    /** Starting point for combinding/mapping `DataStategy`es.
-    *
-    *  @param s DataStrategy to wrap
-    *  @param name Name of the corresponding parameter in testing report
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Starts a processing pipeline with a given data strategy.
+     * @param s The initial data strategy.
+     * @param name The name for this processing stage.
+     * @returns A `SimpleProcessor` to continue building the pipeline.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func start(s: DataStrategy<T>, name: String): SimpleProcessor<T>
     
-    // Overload used for type checking and lazy creation inside macro generated code
-    @!APILevel[since: "22"]
+    /**
+     * @description Starts a processing pipeline with a function that provides a data strategy for benchmark input.
+     * @param f A function that returns a data strategy.
+     * @param name The name for this processing stage.
+     * @returns A `DataStrategyProcessor` for the benchmark input.
+     * @throws UnittestOptionValidationException if a configuration option is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func start<U>(f: () -> DataStrategy<U>, name: String): DataStrategyProcessor<U>
         where U <: BenchInputProvider<T>
    
-    
-    // Overload used for type checking and lazy creation inside macro generated code
-    @!APILevel[since: "22"]
+    /**
+     * @description Starts a processing pipeline with a function that provides a data strategy.
+     * @param f A function that returns a data strategy.
+     * @param name The name for this processing stage.
+     * @param x An unused parameter for overload resolution.
+     * @returns A `SimpleProcessor` to continue building the pipeline.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func start(f: () -> DataStrategy<T>, name: String, x!: Int64 = 0): SimpleProcessor<T>
     
-    // Overload used for type checking and lazy creation inside macro generated code
-    @!APILevel[since: "22"]
+    /**
+     * @description Starts a processing pipeline with a function that provides a data strategy processor.
+     * @param f A function that returns a data strategy processor.
+     * @param _ The name for this processing stage (unused).
+     * @returns The `DataStrategyProcessor` returned by the function.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func start(f: () -> DataStrategyProcessor<T>, _: String): DataStrategyProcessor<T>
     
-    // Overload used for type checking and lazy creation inside macro generated code
-    @!APILevel[since: "22"]
+    /**
+     * @description Starts a processing pipeline with a function that provides a data strategy processor for benchmark input.
+     * @param f A function that returns a data strategy processor.
+     * @param _ The name for this processing stage (unused).
+     * @param x An unused parameter for overload resolution.
+     * @returns The `DataStrategyProcessor` for the benchmark input.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func start<U>(f: () -> DataStrategyProcessor<U>, _: String, x!: Int64 = 0): DataStrategyProcessor<U>
         where U <: BenchInputProvider<T>
    
@@ -1553,100 +3978,188 @@ sealed abstract class DataStrategyProcessor<T> {
 
 extend<T> DataStrategyProcessor<T> {
     /**
-    * "map" combinator that simply applies `f` to every item of original data strategy.
-    * Shrinking also happens on original input and then mapped.
-    */
-    @!APILevel[since: "22"]
+     * @description Applies a mapping function to the data strategy.
+     * @param f The function to apply to each element.
+     * @returns A `MapProcessor` representing the mapped strategy.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func map<R>(f: (T) -> R): MapProcessor<T, R>
     
     /**
-    * "map" combinator with access to current `Configuration` that simply applies `f` to every item of original data strategy.
-    * Shrinking also happens on original input and then flat mapped.
-    */
-    @!APILevel[since: "22"]
+     * @description Applies a mapping function that also takes the test configuration.
+     * @param f The function to apply to each element, which also receives the configuration.
+     * @returns A `MapProcessor` representing the mapped strategy.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func mapWithConfig<R>(f: (T, Configuration) -> R): MapProcessor<T, R>
     
     /**
-    * "flat map" combinator that simply applies `f` to every item of original data strategy.
-    * Shrinking also happens on original input and then flat mapped.
-    */
-    @!APILevel[since: "22"]
+     * @description Applies a flat-map function that returns a `DataProvider`.
+     * @param f The function to apply to each element.
+     * @returns A `FlatMapProcessor` representing the flat-mapped strategy.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func flatMap<R>(f: (T) -> DataProvider<R>): FlatMapProcessor<T, R>
     
     /**
-    * "flat map" combinator that simply applies `f` to every item of original data strategy.
-    * However shrinking is done by returned strategy rather than original input.
-    */
-    @!APILevel[since: "22"]
+     * @description Applies a flat-map function that returns a `DataStrategy`.
+     * @param f The function to apply to each element.
+     * @returns A `FlatMapStrategyProcessor` representing the flat-mapped strategy.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func flatMapStrategy<R>(f: (T) -> DataStrategy<R>): FlatMapStrategyProcessor<T, R>
     
     /**
-    * Cartesian product combinator. Creates data strategy that contains all possible permutations of elements in original strategies.
-    * Shrinking happens on each element of the original strategy independently and uniformly.
-    */
-    @!APILevel[since: "22"]
+     * @description Computes the Cartesian product with another data strategy processor.
+     * @param p The other data strategy processor.
+     * @returns A `CartesianProductProcessor` representing the product.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func product<R>(p: DataStrategyProcessor<R>): CartesianProductProcessor<T, R>
     
     /**
-    * Convenience adapter for `DataStrategyProcessor.product` when second strategy only does side effects.
-    * Intended to be used from code generated by `@Test` macro to help with type inference.
-    */
-    @!APILevel[since: "22"]
+     * @description Computes the product with a unit data strategy processor.
+     * @param p The unit data strategy processor.
+     * @returns A `MapProcessor` that effectively pairs the original data with a unit value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func productWithUnit<P>(p: P): MapProcessor<(T, Unit), T> where P <: DataStrategyProcessor<Unit>
 }
 
-
 extend JsonValue <: IntoJson {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this `JsonValue` to a `JsonValue` (identity conversion).
+     * @returns The `JsonValue` itself.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func json(): JsonValue
 }
 
 extend String <: IntoJson {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this `String` to a `JsonValue`.
+     * @returns A `JsonValue` representing the string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func json(): JsonValue
 }
 
 extend Int64 <: IntoJson {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this `Int64` to a `JsonValue`.
+     * @returns A `JsonValue` representing the number.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func json(): JsonValue
 }
 
 extend<T> Option<T> <: IntoJson where T <: IntoJson {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this `Option` to a `JsonValue`. `Some` is converted to the inner JSON value, and `None` is converted to JSON null.
+     * @returns A `JsonValue` representing the option.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func json(): JsonValue
 }
 
 extend<T> Array<T> <: IntoJson where T <: IntoJson {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this `Array` to a `JsonValue` (JSON array).
+     * @returns A `JsonValue` representing the array.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func json(): JsonValue
 }
 
 extend<T> ArrayList<T> <: IntoJson where T <: IntoJson {
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this `ArrayList` to a `JsonValue` (JSON array).
+     * @returns A `JsonValue` representing the array.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func json(): JsonValue
 }
 
-
-/**
-* None of these configuration parameters are intended as public API for now.
-*/
-
 extend CheckResult <: PrettyPrintable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Pretty-prints the check result with a "FAILED" prefix if the check failed.
+     * @param pp The `PrettyPrinter` to use for printing.
+     * @returns The `PrettyPrinter` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func pprintWithFailedPrefix(pp: PrettyPrinter): PrettyPrinter
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Pretty-prints the check result.
+     * @param pp The `PrettyPrinter` to use for printing.
+     * @returns The `PrettyPrinter` instance.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func pprint(pp: PrettyPrinter): PrettyPrinter
 }
 
-
-@!APILevel[since: "22"]
+/**
+ * @description A base class for exceptions specific to the unittest framework.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class UnittestException <: Exception {
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An exception thrown when a test case exceeds its specified timeout.
+ */
+@!APILevel[
+    since: "22"
+]
+public class UnittestTimeoutException <: Exception {
+}
+
+/**
+ * @description An exception thrown when command-line options for the unittest framework are malformed.
+ */
+@!APILevel[
+    since: "22"
+]
 public class UnittestCliOptionsFormatException <: UnittestException {
 }
+
+
+
+
+
+
+
+
 
 
 

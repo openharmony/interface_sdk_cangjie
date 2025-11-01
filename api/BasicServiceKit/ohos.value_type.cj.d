@@ -13,112 +13,118 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.value_type
-import ohos.ffi.safeMalloc
-import ohos.business_exception.{BusinessException, ERR_PARAMETER_ERROR}
-import std.collection.HashMap
+
 
 import ohos.labels.APILevel
 
 /**
-* The value of the parameters in a common event.
-*/
+ * The value of the parameters in a common event.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Notification.CommonEvent"
 ]
 public enum ValueType {
     /**
-    * Int32 type value
-    */
+     * Int32 type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    Int32Value(Int32) |
+    Int32Value(Int32)
+    |
     /**
-    * Float64 type value
-    */
+     * Float64 type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    Float64Value(Float64) |
+    Float64Value(Float64)
+    |
     /**
-    * String type value
-    */
+     * String type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    StringValue(String) |
+    StringValue(String)
+    |
     /**
-    * Bool type value
-    */
+     * Bool type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    BoolValue(Bool) |
+    BoolValue(Bool)
+    |
     /**
-    * FD type value
-    */
+     * FD type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    Fd(Int32) |
+    Fd(Int32)
+    |
     /**
-    * String array type value
-    */
+     * String array type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    ArrayString(Array<String>) |
+    ArrayString(Array<String>)
+    |
     /**
-    * Int32 array type value
-    */
+     * Int32 array type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    ArrayInt32(Array<Int32>) |
+    ArrayInt32(Array<Int32>)
+    |
     /**
-    * Int64 array type value
-    */
+     * Int64 array type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    ArrayInt64(Array<Int64>) |
+    ArrayInt64(Array<Int64>)
+    |
     /**
-    * Bool array type value
-    */
+     * Bool array type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    ArrayBool(Array<Bool>) |
+    ArrayBool(Array<Bool>)
+    |
     /**
-    * Float64 array type value
-    */
+     * Float64 array type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    ArrayFloat64(Array<Float64>) |
+    ArrayFloat64(Array<Float64>)
+    |
     /**
-    * FD array type value
-    */
+     * FD array type value
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Notification.CommonEvent"
     ]
-    ArrayFd(Array<Int32>) |
-    ...
+    ArrayFd(Array<Int32>)
+    | ...
 }
-
-

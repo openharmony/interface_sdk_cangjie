@@ -13,218 +13,223 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.want
-import std.collection.HashMap
-import ohos.base.{ VectorStringHandle, FFIVectorString}
-import ohos.element_name.ElementName
-import ohos.encoding.json.*
+
 import ohos.labels.*
-
 import std.collection.*
-
-
+import std.collection.HashMap
 
 /**
-* Want is a carrier for information transfer between objects (application components).
-* Want can be used as a parameter of startAbility to specify a startup target and information that needs to be carried
-* during startup, for example, bundleName and abilityName, which respectively indicate the bundle name of the target
-* ability and the ability name in the bundle.
-* When UIAbilityA needs to start UIAbilityB and transfer some data to UIAbilityB, it can use Want a carrier to
-* transfer the data.
-*
-* @relation export default class Want
-*/
+ * Want is a carrier for information transfer between objects (application components).
+ * Want can be used as a parameter of startAbility to specify a startup target and information that needs to be carried
+ * during startup, for example, bundleName and abilityName, which respectively indicate the bundle name of the target
+ * ability and the ability name in the bundle.
+ * When UIAbilityA needs to start UIAbilityB and transfer some data to UIAbilityB, it can use Want a carrier to
+ * transfer the data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public class Want {
     /**
-    * ID of the device running the ability.
-    * If this field is unspecified, the local device is used.
-    *
-    * @relation deviceId?: string
-    */
+     * ID of the device running the ability.
+     * 
+     * <p>**NOTE**:
+     * <br>If this field is unspecified, the local device is used.
+     * </p>
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var deviceId: String
-    
+
     /**
-    * Bundle name of the ability.
-    *
-    * @relation bundleName?: string
-    */
+     * Bundle name of the ability.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var bundleName: String
-    
+
     /**
     * Name of the ability.
     * If both bundleName and abilityName are specified in a Want object, the Want object can match a specific ability.
-    * The value of abilityName must be unique in an application.
     * 
-    * @relation abilityName?: string
-    */
+    * <p>**NOTE**:
+    * <br>The value of abilityName must be unique in an application.
+    * </p>
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var abilityName: String
-    
+
     /**
-    * Name of the module to which the ability belongs.
-    * If the ability belongs to a HAR module, moduleName must be set to the name of the HAP or HSP module that
-    * depends on this HAR.
-    *
-    * @relation moduleName?: string
-    */
+     * Name of the module to which the ability belongs.
+     * 
+     * <p>**NOTE**:
+     * <br>If the ability belongs to a HAR module, moduleName must be set to the name of the HAP or HSP module that
+     * depends on this HAR.
+     * </p>
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var moduleName: String
-    
+
     /**
-    * How the Want object will be handled. By default, a number is passed in.
-    * For example, wantConstant.Flags.FLAG_ABILITY_CONTINUATION specifies whether to start the ability in cross-device
-    * migration scenarios.
-    *
-    * @relation flags?: number
-    */
+     * How the Want object will be handled. By default, a number is passed in.
+     * For example, wantConstant.Flags.FLAG_ABILITY_CONTINUATION specifies whether to start the ability in cross-device
+     * migration scenarios.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var flags: UInt32
-    
+
     /**
-    * Data carried.
-    * This field is used together with type to specify the data type.
-    * If uri is specified in a Want, the Want will match the specified URI information, including scheme,
-    * schemeSpecificPart, authority, and path.
-    *
-    * @relation uri?: string
-    */
+     * Data carried.
+     * This field is used together with type to specify the data type.
+     * If uri is specified in a Want, the Want will match the specified URI information, including scheme,
+     * schemeSpecificPart, authority, and path.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var uri: String
-    
+
     /**
-    * Action to take, such as viewing and sharing application details.
-    * In implicit Want, you can define this field and use it together with uri or parameters to specify the operation
-    * to be performed on the data.
-    *
-    * @relation action?: string
-    */
+     * Action to take, such as viewing and sharing application details.
+     * In implicit Want, you can define this field and use it together with uri or parameters to specify the operation
+     * to be performed on the data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var action: String
-    
+
     /**
-    * Additional category information (such as browser and video player) of the ability.
-    * It is a supplement to the action field for implicit Want. and is used to filter ability types.
-    *
-    * @relation entities?: Array<string>
-    */
+     * Additional category information (such as browser and video player) of the ability.
+     * It is a supplement to the action field for implicit Want. and is used to filter ability types.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var entities: Array<String>
-    
+
     /**
-    * MIME type, that is, the type of the file to open.
-    *
-    * @relation type?: string
-    */
+     * MIME type, that is, the type of the file to open, for example, 'text/xml'.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var wantType: String
-    
+
     /**
-    * List of parameters in the Want object.
-    * 
-    * 1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the
-    * system automatically changes the values to the actual values during data transfer.
-    * -ohos.aafwk.param.callerPid: PID of the caller. The value is a string.
-    * -ohos.aafwk.param.callerBundleName: bundle name of the caller. The value is a string.
-    * -ohos.aafwk.param.callerAbilityName: ability name of the caller. The value is a string.
-    * -ohos.aafwk.param.callerNativeName: process name of the caller when the native method is called. The value is
-    * a string.
-    * -ohos.aafwk.param.callerAppId: appId of the caller. The value is a string.
-    * -ohos.aafwk.param.callerAppIdentifier: appIdentifier of the caller. The value is a string.
-    * -ohos.aafwk.param.callerToken: token of the caller. The value is a string.
-    * -ohos.aafwk.param.callerUid: UID in BundleInfo, that is, the application's UID in the bundle information. The
-    * value is a number.
-    * -ohos.param.callerAppCloneIndex: clone index of the caller. The value is of the numeric type.
-    * -component.startup.newRules: enabled status of the new control rule. The value is of the Boolean type.
-    * -moduleName: module name of the caller. The value is a string.
-    * -ability.params.backToOtherMissionStack: support for redirection back across mission stacks. The value is of
-    * the Boolean type.
-    * -ohos.ability.params.abilityRecoveryRestart: support for ability restart upon fault recovery. The value is of
-    * the Boolean type.
-    * -ohos.extra.param.key.contentTitle: title that can be shared by the atomic service. The value is a string.
-    * -ohos.extra.param.key.shareAbstract: content that can be shared by the atomic service. The value is a string.
-    * -ohos.extra.param.key.shareUrl: URL of the content that can be shared by the atomic service. The value is
-    * a string.
-    * -ohos.extra.param.key.supportContinuePageStack: support for migration of page stack information during
-    * cross-device migration. The value is of the Boolean type. The default value is true, indicating that page stack
-    * information is automatically migrated.
-    * -ohos.extra.param.key.supportContinueSourceExit: support for application exit on the source device during
-    * cross-device migration. The value is of the Boolean type. The default value is true, indicating that the
-    * application on the source device automatically exits.
-    * -ohos.extra.param.key.showMode: mode to show the atomic service startup. The value is an enumerated value of
-    * wantConstant.ShowMode.
-    * -ohos.dlp.params.sandbox: available only for DLP files. This key is involved only in system applications.
-    * -ohos.dlp.params.bundleName: bundle name of DLP. The value is a string. This key is involved only in system
-    * applications.
-    * -ohos.dlp.params.moduleName: module name of DLP. The value is a string. This key is involved only in system
-    * applications.
-    * -ohos.dlp.params.abilityName: ability name of DLP. The value is a string. This key is involved only in system
-    * applications.
-    * -ohos.dlp.params.index: DLP index. The value is a number. This key is involved only in system applications.
-    * -ohos.ability.params.asssertFaultSessionId: session ID of the fault assertion. The value is a string. This key
-    * is involved only in system applications.
-    * 
-    * 2. The following keys are defined by the system, and their values need to be manually assigned.
-    * -ability.params.stream: File URIs to be authorized to the target ability. The value is a file URI array of the
-    * string type.
-    * -ohos.extra.param.key.appCloneIndex: index of the application clone.
-    * 
-    * 3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
-    * 
-    * For details about the constants of Params in want, see wantConstant.
-    * Note that a maximum of 200 KB data that can be transferred by using WantParams. If the data volume exceeds
-    * 200 KB, transfer data in WriteRawDataBuffer or uri mode.
-    * The values of parameters must be of the following basic data types: String, Number, Boolean, Object,
-    * undefined, and null. Functions in an object cannot be transferred.
-    *
-    * @relation parameters?: Record<string, Object>
-    */
+     * List of parameters in the Want object.
+     * 
+     * <p>**NOTE**:
+     * <br>1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the
+     * system automatically changes the values to the actual values during data transfer.
+     * -ohos.aafwk.param.callerPid: PID of the caller. The value is a string.
+     * -ohos.aafwk.param.callerBundleName: bundle name of the caller. The value is a string.
+     * -ohos.aafwk.param.callerAbilityName: ability name of the caller. The value is a string.
+     * -ohos.aafwk.param.callerNativeName: process name of the caller when the native method is called. The value is
+     * a string.
+     * -ohos.aafwk.param.callerAppId: appId of the caller. The value is a string.
+     * -ohos.aafwk.param.callerAppIdentifier: appIdentifier of the caller. The value is a string.
+     * -ohos.aafwk.param.callerToken: token of the caller. The value is a string.
+     * -ohos.aafwk.param.callerUid: UID in BundleInfo, that is, the application's UID in the bundle information. The
+     * value is a number.
+     * -ohos.param.callerAppCloneIndex: clone index of the caller. The value is of the numeric type.
+     * -component.startup.newRules: enabled status of the new control rule. The value is of the Boolean type.
+     * -moduleName: module name of the caller. The value is a string.
+     * -ability.params.backToOtherMissionStack: support for redirection back across mission stacks. The value is of
+     * the Boolean type.
+     * -ohos.ability.params.abilityRecoveryRestart: support for ability restart upon fault recovery. The value is of
+     * the Boolean type.
+     * -ohos.extra.param.key.contentTitle: title that can be shared. The value is a string.
+     * -ohos.extra.param.key.shareAbstract: content that can be shared. The value is a string.
+     * -ohos.extra.param.key.shareUrl: URL of the content that can be shared. The value is
+     * a string.
+     * -ohos.extra.param.key.supportContinuePageStack: support for migration of page stack information during
+     * cross-device migration. The value is of the Boolean type. The default value is true, indicating that page stack
+     * information is automatically migrated.
+     * -ohos.extra.param.key.supportContinueSourceExit: support for application exit on the source device during
+     * cross-device migration. The value is of the Boolean type. The default value is true, indicating that the
+     * application on the source device automatically exits.
+     * -ohos.extra.param.key.showMode: mode to show the atomic service startup. The value is an enumerated value of
+     * wantConstant.ShowMode.
+     * -ohos.dlp.params.sandbox: available only for DLP files. This key is involved only in system applications.
+     * -ohos.dlp.params.bundleName: bundle name of DLP. The value is a string. This key is involved only in system
+     * applications.
+     * -ohos.dlp.params.moduleName: module name of DLP. The value is a string. This key is involved only in system
+     * applications.
+     * -ohos.dlp.params.abilityName: ability name of DLP. The value is a string. This key is involved only in system
+     * applications.
+     * -ohos.dlp.params.index: DLP index. The value is a number. This key is involved only in system applications.
+     * -ohos.ability.params.asssertFaultSessionId: session ID of the fault assertion. The value is a string. This key
+     * is involved only in system applications.
+     * 
+     * <br>2. The following keys are defined by the system, and their values need to be manually assigned.
+     * -ability.params.stream: File URIs to be authorized to the target ability. The value is a file URI array of the
+     * string type.
+     * -ohos.extra.param.key.appCloneIndex: index of the application clone.
+     * 
+     * <br>3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
+     * </p>
+     * 
+     * <p>**NOTE**:
+     * <br>For details about the constants of Params in want, see wantConstant.
+     * <br>Note that a maximum of 200 KB data that can be transferred by using WantParams. If the data volume exceeds
+     * 200 KB, transfer data in WriteRawDataBuffer or uri mode.
+     * <br>The values of parameters must be of the following basic data types: String, Number, Boolean, Object,
+     * undefined, and null. Functions in an object cannot be transferred.
+     * </p>
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var parameters: HashMap<String, WantValueType>
-    
+
     /**
-    * Want constructor.
-    */
+     * Want constructor.
+     *
+     * @param { String } [deviceId] - ID of the device running the ability. The default value is "".
+     * @param { String } [bundleName] - Bundle name of the ability. The default value is "".
+     * @param { String } [abilityName] - Name of the ability. The default value is "".
+     * @param { String } [moduleName] - Name of the module to which the ability belongs. The default value is "".
+     * @param { UInt32 } [flags] - How the Want object will be handled. By default, a number is passed in. The default
+     * value is 0.
+     * @param { String } [uri] - Data carried. The default value is "".
+     * @param { String } [action] - Action to take, such as viewing and sharing application details. The default value is
+     * "".
+     * @param { Array<String> } [entities] - Additional category information (such as browser and video player) of the
+     * ability. The default value is an empty array.
+     * @param { String } [wantType] - MIME type, that is, the type of the file to open. The default value is "".
+     * @param { HashMap<String, WantValueType> } [parameters] - Map of parameters in the Want object. The default value
+     * is an empty map.
+     * @param { HashMap<String, Int32> } [fds] - Want file descriptor (FD), which is used to identify the Want file
+     * opened. Not supported yet. The default value is an empty map.
+     * @throws { BusinessException } 16000050 - Internal error.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityBase"
+        since: "22",
+        syscap: "SystemCapability.Ability.AbilityBase",
+        throwexception: true
     ]
     public init(
         deviceId!: String = "",
@@ -241,64 +246,66 @@ public class Want {
     )
 }
 
-
 /**
-* Want value type.
-*/
+ * Want value type.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public enum WantValueType {
     /**
-    * Int64 value type.
-    */
+     * Int64 value type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
-    ]
-    Int64Value(Int64) |
+    ] 
+    Int64Value(Int64)
+    | 
     /**
-    * Float64 value type.
-    */
+     * Float64 value type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
-    ]
-    Float64Value(Float64) |
+    ] 
+    Float64Value(Float64)
+    | 
     /**
-    * String value type.
-    */
+     * String value type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
-    ]
-    StringValue(String) |
+    ] 
+    StringValue(String)
+    | 
     /**
-    * Bool value type.
-    */
+     * Bool value type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
-    ]
-    BoolValue(Bool) |
+    ] 
+    BoolValue(Bool)
+    | 
     /**
-    * Array value type.
-    */
+     * Array value type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
-    ]
-    ArrayValue(Array<WantValueType>) |
+    ] 
+    ArrayValue(Array<WantValueType>)
+    | 
     /**
-    * HashMap value type.
-    */
+     * HashMap value type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
-    ]
-    HashMapValue(HashMap<String, WantValueType>) |
-    ...
+    ] 
+    HashMapValue(HashMap<String, WantValueType>)
+    | ...
 }
-
-

@@ -1,21 +1,5 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.checkbox_group
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.native_struct.*
 import ohos.arkui.component.util.*
@@ -24,72 +8,152 @@ import ohos.ffi.*
 import ohos.labels.APILevel
 import std.collection.ArrayList
 
-
+/**
+ * Defines a CheckboxGroup callback when onChange.
+ *
+ * @param { CheckboxGroupResult } value - checkbox group result.
+ */
 public type OnCheckboxGroupChangeCallback = (CheckboxGroupResult) -> Unit
 
+/**
+ * Defines the options of CheckboxGroupResult.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class CheckboxGroupResult {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public var status: SelectStatus
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Checkbox name.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public var name: Array<String>
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Set the group of status.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public var status: SelectStatus
+
+
+/**
+ * CheckboxGroupResult constructor.
+ * @param { SelectStatus } status - The selection status of the checkbox group.
+ * @param { Array<String> } name - The names of the selected checkboxes.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init(
         status: SelectStatus,
         name: Array<String>
     )
 }
 
+/**
+ * Defines CheckboxGroup Component.
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class CheckboxGroup <: ViewBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(group!: String = "")
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selectAll(value: Bool): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func selectedColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func onChange(callback: OnCheckboxGroupChangeCallback): This
+public class CheckboxGroup <: CommonMethodComponent<CheckboxGroup> & CheckboxGroupAttribute {
+/**
+ * CheckboxGroup Constructor.
+ *
+ * @param { ?String } [group] - The group name of the checkbox group.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(group!: ?String = None)
+
+/**
+ * Set whether all checkbox is selected.
+ *
+ * @param { ?Bool } isAllSelected - Whether to select all checkboxes.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selectAll(isAllSelected: ?Bool): This
+
+/**
+ * Set the display color of checkbox.
+ *
+ * @param { ?ResourceColor } value - The color to display when checkboxes are selected.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func selectedColor(value: ?ResourceColor): This
+
+/**
+ * Called when the selection status changes.
+ *
+ * @param { ?OnCheckboxGroupChangeCallback } callback - The callback function triggered when the selection status changes, with the new selection result as parameter.
+ * @returns { This } The instance of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func onChange(callback: ?OnCheckboxGroupChangeCallback): This
 }
 
+/**
+ * Defines the CheckboxGroup component attributes.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface CheckboxGroupAttribute <: CommonMethod<CheckboxGroupAttribute> {
+/**
+ * Set whether all checkbox is selected.
+ *
+ * @param { ?Bool } isAllSelected - Whether to select all checkboxes.
+ * @returns { CheckboxGroupAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selectAll(isAllSelected: ?Bool): CheckboxGroupAttribute
+
+/**
+ * Set the display color of checkbox.
+ *
+ * @param { ?ResourceColor } value - The color to display when checkboxes are selected.
+ * @returns { CheckboxGroupAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func selectedColor(value: ?ResourceColor): CheckboxGroupAttribute
+
+/**
+ * Called when the selection status changes.
+ *
+ * @param { ?OnCheckboxGroupChangeCallback } callback - The callback function triggered when the selection status changes, with the new selection result as parameter.
+ * @returns { CheckboxGroupAttribute } The attribute of the component.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func onChange(callback: ?OnCheckboxGroupChangeCallback): CheckboxGroupAttribute
+}

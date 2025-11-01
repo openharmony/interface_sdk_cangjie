@@ -13,1265 +13,1286 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.net.http
+
 import ohos.business_exception.*
 import ohos.callback_invoke.*
-import ohos.ffi.*
-import ohos.hilog.*
-import std.collection.*
 import ohos.labels.*
-
 import ohos.net.connection.HttpProxy
-import std.deriving.Derive
-import ohos.net.connection.CHttpProxy
+import std.collection.*
 
 /**
-* Creates an HTTP request task.
-* @returns { HttpRequest } the HttpRequest of the createHttp.
-* @relation createHttp(): HttpRequest
-*/
+ * Creates an HTTP request task.
+ * @returns { HttpRequest } the HttpRequest of the createHttp.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public func createHttp(): HttpRequest
 
-
 /**
-* Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests.
-* @param { UInt32 } cacheSize - the size of cache(max value is 10MB), default is 10*1024*1024(10MB).
-* @returns { HttpResponseCache } the HttpResponseCache of the createHttpResponseCache.
-* @relation createHttpResponseCache(cacheSize?: number): HttpResponseCache
-*/
+ * Creates a default HttpResponseCache object to store the responses of HTTP access requests.
+ * @param { UInt32 } [cacheSize] - the size of cache(max value is 10MB), default is 10*1024*1024(10MB).
+ * @returns { HttpResponseCache } the HttpResponseCache of the createHttpResponseCache.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public func createHttpResponseCache(cacheSize!: UInt32 = MAX_CACHE_SIZE): HttpResponseCache
 
-
 /**
-* Defines an HTTP request task. Before invoking APIs provided by HttpRequest,
-* you must call createHttp() to create an HttpRequestTask object.
-* @relation export interface HttpRequest
-*/
+ * Defines an HTTP request task. Before invoking APIs provided by HttpRequest,
+ * you must call createHttp() to create an HttpRequestTask object.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpRequest {
     /**
-    * Initiates an HTTP request to a given URL.
-    * @permission ohos.permission.INTERNET
-    * @param { String } url - URL for initiating an HTTP request.
-    * @param { HttpRequestOptions } options - Optional parameters {@link HttpRequestOptions}.
-    * @param { HttpResponse } callback - the callback of request.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 2300001 - Unsupported protocol.
-    * @throws { BusinessException } 2300003 - URL using bad/illegal format or missing URL.
-    * @throws { BusinessException } 2300005 - Couldn't resolve proxy name.
-    * @throws { BusinessException } 2300006 - Couldn't resolve host name.
-    * @throws { BusinessException } 2300007 - Couldn't connect to server.
-    * @throws { BusinessException } 2300008 - Weird server reply.
-    * @throws { BusinessException } 2300009 - Access denied to remote resource.
-    * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
-    * @throws { BusinessException } 2300018 - Transferred a partial file.
-    * @throws { BusinessException } 2300023 - Failed writing received data to disk/application.
-    * @throws { BusinessException } 2300025 - Upload failed.
-    * @throws { BusinessException } 2300026 - Failed to open/read local data from file/application.
-    * @throws { BusinessException } 2300027 - Out of memory.
-    * @throws { BusinessException } 2300028 - Timeout was reached.
-    * @throws { BusinessException } 2300047 - Number of redirects hit maximum amount.
-    * @throws { BusinessException } 2300052 - Server returned nothing (no headers, no data).
-    * @throws { BusinessException } 2300055 - Failed sending data to the peer.
-    * @throws { BusinessException } 2300056 - Failure when receiving data from the peer.
-    * @throws { BusinessException } 2300058 - Problem with the local SSL certificate.
-    * @throws { BusinessException } 2300059 - Couldn't use specified SSL cipher.
-    * @throws { BusinessException } 2300060 - SSL peer certificate or SSH remote key was not OK.
-    * @throws { BusinessException } 2300061 - Unrecognized or bad HTTP Content or Transfer-Encoding.
-    * @throws { BusinessException } 2300063 - Maximum file size exceeded.
-    * @throws { BusinessException } 2300070 - Disk full or allocation exceeded.
-    * @throws { BusinessException } 2300073 - Remote file already exists.
-    * @throws { BusinessException } 2300077 - Problem with the SSL CA cert (path? access rights?).
-    * @throws { BusinessException } 2300078 - Remote file not found.
-    * @throws { BusinessException } 2300094 - An authentication function returned an error.
-    * @throws { BusinessException } 2300999 - Unknown Other Error.
-    * @relation request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
-    */
+     * Initiates an HTTP request to a given URL.
+     * @permission ohos.permission.INTERNET
+     * @param { String } url - URL for initiating an HTTP request.
+     * @param { HttpRequestOptions } options - Optional parameters HttpRequestOptions.
+     * @param { AsyncCallback<HttpResponse> } callback - the callback of request.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 2300001 - Unsupported protocol.
+     * @throws { BusinessException } 2300003 - Invalid URL format or missing URL.
+     * @throws { BusinessException } 2300005 - Failed to resolve the proxy name.
+     * @throws { BusinessException } 2300006 - Failed to resolve the host name.
+     * @throws { BusinessException } 2300007 - Failed to connect to the server.
+     * @throws { BusinessException } 2300008 - Invalid server response.
+     * @throws { BusinessException } 2300009 - Access to the remote resource denied.
+     * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
+     * @throws { BusinessException } 2300018 - Transferred a partial file.
+     * @throws { BusinessException } 2300023 - Failed to write the received data to the disk or application.
+     * @throws { BusinessException } 2300025 - Upload failed.
+     * @throws { BusinessException } 2300026 - Failed to open or read local data from the file or application.
+     * @throws { BusinessException } 2300027 - Out of memory.
+     * @throws { BusinessException } 2300028 - Operation timeout.
+     * @throws { BusinessException } 2300047 - The number of redirections reaches the maximum allowed.
+     * @throws { BusinessException } 2300052 - The server returned nothing (no header or data).
+     * @throws { BusinessException } 2300055 - Failed to send data to the peer.
+     * @throws { BusinessException } 2300056 - Failed to receive data from the peer.
+     * @throws { BusinessException } 2300058 - Local SSL certificate error.
+     * @throws { BusinessException } 2300059 - The specified SSL cipher cannot be used.
+     * @throws { BusinessException } 2300060 - Invalid SSL peer certificate or SSH remote key.
+     * @throws { BusinessException } 2300061 - Invalid HTTP encoding format.
+     * @throws { BusinessException } 2300063 - Maximum file size exceeded.
+     * @throws { BusinessException } 2300070 - Remote disk full.
+     * @throws { BusinessException } 2300073 - Remote file already exists.
+     * @throws { BusinessException } 2300077 - The SSL CA certificate does not exist or is inaccessible.
+     * @throws { BusinessException } 2300078 - Remote file not found.
+     * @throws { BusinessException } 2300094 - Authentication error.
+     * @throws { BusinessException } 2300997 - Cleartext traffic not permitted.
+     * @throws { BusinessException } 2300998 - It is not allowed to access this domain.
+     * @throws { BusinessException } 2300999 - Internal error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.INTERNET",
-        syscap: "SystemCapability.Communication.NetStack"
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func request(url: String, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): Unit
-    
+
     /**
-    * Initiates an HTTP request to a given URL.
-    * @permission ohos.permission.INTERNET
-    * @param { String } url - URL for initiating an HTTP request.
-    * @param { HttpRequestOptions } options - Optional parameters {@link HttpRequestOptions}.
-    * @param { HttpResponse } callback - the callback of request.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 2300001 - Unsupported protocol.
-    * @throws { BusinessException } 2300003 - URL using bad/illegal format or missing URL.
-    * @throws { BusinessException } 2300005 - Couldn't resolve proxy name.
-    * @throws { BusinessException } 2300006 - Couldn't resolve host name.
-    * @throws { BusinessException } 2300007 - Couldn't connect to server.
-    * @throws { BusinessException } 2300008 - Weird server reply.
-    * @throws { BusinessException } 2300009 - Access denied to remote resource.
-    * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
-    * @throws { BusinessException } 2300018 - Transferred a partial file.
-    * @throws { BusinessException } 2300023 - Failed writing received data to disk/application.
-    * @throws { BusinessException } 2300025 - Upload failed.
-    * @throws { BusinessException } 2300026 - Failed to open/read local data from file/application.
-    * @throws { BusinessException } 2300027 - Out of memory.
-    * @throws { BusinessException } 2300028 - Timeout was reached.
-    * @throws { BusinessException } 2300047 - Number of redirects hit maximum amount.
-    * @throws { BusinessException } 2300052 - Server returned nothing (no headers, no data).
-    * @throws { BusinessException } 2300055 - Failed sending data to the peer.
-    * @throws { BusinessException } 2300056 - Failure when receiving data from the peer.
-    * @throws { BusinessException } 2300058 - Problem with the local SSL certificate.
-    * @throws { BusinessException } 2300059 - Couldn't use specified SSL cipher.
-    * @throws { BusinessException } 2300060 - SSL peer certificate or SSH remote key was not OK.
-    * @throws { BusinessException } 2300061 - Unrecognized or bad HTTP Content or Transfer-Encoding.
-    * @throws { BusinessException } 2300063 - Maximum file size exceeded.
-    * @throws { BusinessException } 2300070 - Disk full or allocation exceeded.
-    * @throws { BusinessException } 2300073 - Remote file already exists.
-    * @throws { BusinessException } 2300077 - Problem with the SSL CA cert (path? access rights?).
-    * @throws { BusinessException } 2300078 - Remote file not found.
-    * @throws { BusinessException } 2300094 - An authentication function returned an error.
-    * @throws { BusinessException } 2300999 - Unknown Other Error.
-    * @relation request(url: string, callback: AsyncCallback<HttpResponse>): void
-    */
+     * Initiates an HTTP request to a given URL.
+     * @permission ohos.permission.INTERNET
+     * @param { String } url - URL for initiating an HTTP request.
+     * @param { AsyncCallback<HttpResponse> } callback - the callback of request.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 2300001 - Unsupported protocol.
+     * @throws { BusinessException } 2300003 - Invalid URL format or missing URL.
+     * @throws { BusinessException } 2300005 - Failed to resolve the proxy name.
+     * @throws { BusinessException } 2300006 - Failed to resolve the host name.
+     * @throws { BusinessException } 2300007 - Failed to connect to the server.
+     * @throws { BusinessException } 2300008 - Invalid server response.
+     * @throws { BusinessException } 2300009 - Access to the remote resource denied.
+     * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
+     * @throws { BusinessException } 2300018 - Transferred a partial file.
+     * @throws { BusinessException } 2300023 - Failed to write the received data to the disk or application.
+     * @throws { BusinessException } 2300025 - Upload failed.
+     * @throws { BusinessException } 2300026 - Failed to open or read local data from the file or application.
+     * @throws { BusinessException } 2300027 - Out of memory.
+     * @throws { BusinessException } 2300028 - Operation timeout.
+     * @throws { BusinessException } 2300047 - The number of redirections reaches the maximum allowed.
+     * @throws { BusinessException } 2300052 - The server returned nothing (no header or data).
+     * @throws { BusinessException } 2300055 - Failed to send data to the peer.
+     * @throws { BusinessException } 2300056 - Failed to receive data from the peer.
+     * @throws { BusinessException } 2300058 - Local SSL certificate error.
+     * @throws { BusinessException } 2300059 - The specified SSL cipher cannot be used.
+     * @throws { BusinessException } 2300060 - Invalid SSL peer certificate or SSH remote key.
+     * @throws { BusinessException } 2300061 - Invalid HTTP encoding format.
+     * @throws { BusinessException } 2300063 - Maximum file size exceeded.
+     * @throws { BusinessException } 2300070 - Remote disk full.
+     * @throws { BusinessException } 2300073 - Remote file already exists.
+     * @throws { BusinessException } 2300077 - The SSL CA certificate does not exist or is inaccessible.
+     * @throws { BusinessException } 2300078 - Remote file not found.
+     * @throws { BusinessException } 2300094 - Authentication error.
+     * @throws { BusinessException } 2300997 - Cleartext traffic not permitted.
+     * @throws { BusinessException } 2300998 - It is not allowed to access this domain.
+     * @throws { BusinessException } 2300999 - Internal error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.INTERNET",
-        syscap: "SystemCapability.Communication.NetStack"
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func request(url: String, callback: AsyncCallback<HttpResponse>): Unit
-    
+
     /**
-    * Destroys an HTTP request.
-    * @relation destroy(): void
-    */
+     * Destroys an HTTP request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public func destroy(): Unit
-    
+
     /**
-    * Initiates an HTTP request to a given URL, applicable to scenarios where http response supports streaming.
-    * @permission ohos.permission.INTERNET
-    * @param { String } url - URL for initiating an HTTP request.
-    * @param { HttpRequestOptions } options - Optional parameters {@link HttpRequestOptions}.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 2300001 - Unsupported protocol.
-    * @throws { BusinessException } 2300003 - URL using bad/illegal format or missing URL.
-    * @throws { BusinessException } 2300005 - Couldn't resolve proxy name.
-    * @throws { BusinessException } 2300006 - Couldn't resolve host name.
-    * @throws { BusinessException } 2300007 - Couldn't connect to server.
-    * @throws { BusinessException } 2300008 - Weird server reply.
-    * @throws { BusinessException } 2300009 - Access denied to remote resource.
-    * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
-    * @throws { BusinessException } 2300018 - Transferred a partial file.
-    * @throws { BusinessException } 2300023 - Failed writing received data to disk/application.
-    * @throws { BusinessException } 2300025 - Upload failed.
-    * @throws { BusinessException } 2300026 - Failed to open/read local data from file/application.
-    * @throws { BusinessException } 2300027 - Out of memory.
-    * @throws { BusinessException } 2300028 - Timeout was reached.
-    * @throws { BusinessException } 2300047 - Number of redirects hit maximum amount.
-    * @throws { BusinessException } 2300052 - Server returned nothing (no headers, no data).
-    * @throws { BusinessException } 2300055 - Failed sending data to the peer.
-    * @throws { BusinessException } 2300056 - Failure when receiving data from the peer.
-    * @throws { BusinessException } 2300058 - Problem with the local SSL certificate.
-    * @throws { BusinessException } 2300059 - Couldn't use specified SSL cipher.
-    * @throws { BusinessException } 2300060 - SSL peer certificate or SSH remote key was not OK.
-    * @throws { BusinessException } 2300061 - Unrecognized or bad HTTP Content or Transfer-Encoding.
-    * @throws { BusinessException } 2300063 - Maximum file size exceeded.
-    * @throws { BusinessException } 2300070 - Disk full or allocation exceeded.
-    * @throws { BusinessException } 2300073 - Remote file already exists.
-    * @throws { BusinessException } 2300077 - Problem with the SSL CA cert (path? access rights?).
-    * @throws { BusinessException } 2300078 - Remote file not found.
-    * @throws { BusinessException } 2300094 - An authentication function returned an error.
-    * @throws { BusinessException } 2300999 - Unknown Other Error.
-    * @relation requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
-    */
+     * Initiates an HTTP request to a given URL, applicable to scenarios where http response supports streaming.
+     * @permission ohos.permission.INTERNET
+     * @param { String } url - URL for initiating an HTTP request.
+     * @param { HttpRequestOptions } options - Optional parameters {@link HttpRequestOptions}.
+     * @param { AsyncCallback<UInt32> } callback - the callback of requestInStream.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 2300001 - Unsupported protocol.
+     * @throws { BusinessException } 2300003 - Invalid URL format or missing URL.
+     * @throws { BusinessException } 2300005 - Failed to resolve the proxy name.
+     * @throws { BusinessException } 2300006 - Failed to resolve the host name.
+     * @throws { BusinessException } 2300007 - Failed to connect to the server.
+     * @throws { BusinessException } 2300008 - Invalid server response.
+     * @throws { BusinessException } 2300009 - Access to the remote resource denied.
+     * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
+     * @throws { BusinessException } 2300018 - Transferred a partial file.
+     * @throws { BusinessException } 2300023 - Failed to write the received data to the disk or application.
+     * @throws { BusinessException } 2300025 - Upload failed.
+     * @throws { BusinessException } 2300026 - Failed to open or read local data from the file or application.
+     * @throws { BusinessException } 2300027 - Out of memory.
+     * @throws { BusinessException } 2300028 - Operation timeout.
+     * @throws { BusinessException } 2300047 - The number of redirections reaches the maximum allowed.
+     * @throws { BusinessException } 2300052 - The server returned nothing (no header or data).
+     * @throws { BusinessException } 2300055 - Failed to send data to the peer.
+     * @throws { BusinessException } 2300056 - Failed to receive data from the peer.
+     * @throws { BusinessException } 2300058 - Local SSL certificate error.
+     * @throws { BusinessException } 2300059 - The specified SSL cipher cannot be used.
+     * @throws { BusinessException } 2300060 - Invalid SSL peer certificate or SSH remote key.
+     * @throws { BusinessException } 2300061 - Invalid HTTP encoding format.
+     * @throws { BusinessException } 2300063 - Maximum file size exceeded.
+     * @throws { BusinessException } 2300070 - Remote disk full.
+     * @throws { BusinessException } 2300073 - Remote file already exists.
+     * @throws { BusinessException } 2300077 - The SSL CA certificate does not exist or is inaccessible.
+     * @throws { BusinessException } 2300078 - Remote file not found.
+     * @throws { BusinessException } 2300094 - Authentication error.
+     * @throws { BusinessException } 2300997 - Cleartext traffic not permitted.
+     * @throws { BusinessException } 2300998 - It is not allowed to access this domain.
+     * @throws { BusinessException } 2300999 - Internal error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.INTERNET",
-        syscap: "SystemCapability.Communication.NetStack"
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func requestInStream(url: String, options: HttpRequestOptions, callback: AsyncCallback<UInt32>): Unit
-    
+
     /**
-    * Initiates an HTTP request to a given URL, applicable to scenarios where http response supports streaming.
-    * @permission ohos.permission.INTERNET
-    * @param { String } url - URL for initiating an HTTP request.
-    * @param { HttpRequestOptions } options - Optional parameters {@link HttpRequestOptions}.
-    * @throws { BusinessException } 401 - Parameter error.
-    * @throws { BusinessException } 201 - Permission denied.
-    * @throws { BusinessException } 2300001 - Unsupported protocol.
-    * @throws { BusinessException } 2300003 - URL using bad/illegal format or missing URL.
-    * @throws { BusinessException } 2300005 - Couldn't resolve proxy name.
-    * @throws { BusinessException } 2300006 - Couldn't resolve host name.
-    * @throws { BusinessException } 2300007 - Couldn't connect to server.
-    * @throws { BusinessException } 2300008 - Weird server reply.
-    * @throws { BusinessException } 2300009 - Access denied to remote resource.
-    * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
-    * @throws { BusinessException } 2300018 - Transferred a partial file.
-    * @throws { BusinessException } 2300023 - Failed writing received data to disk/application.
-    * @throws { BusinessException } 2300025 - Upload failed.
-    * @throws { BusinessException } 2300026 - Failed to open/read local data from file/application.
-    * @throws { BusinessException } 2300027 - Out of memory.
-    * @throws { BusinessException } 2300028 - Timeout was reached.
-    * @throws { BusinessException } 2300047 - Number of redirects hit maximum amount.
-    * @throws { BusinessException } 2300052 - Server returned nothing (no headers, no data).
-    * @throws { BusinessException } 2300055 - Failed sending data to the peer.
-    * @throws { BusinessException } 2300056 - Failure when receiving data from the peer.
-    * @throws { BusinessException } 2300058 - Problem with the local SSL certificate.
-    * @throws { BusinessException } 2300059 - Couldn't use specified SSL cipher.
-    * @throws { BusinessException } 2300060 - SSL peer certificate or SSH remote key was not OK.
-    * @throws { BusinessException } 2300061 - Unrecognized or bad HTTP Content or Transfer-Encoding.
-    * @throws { BusinessException } 2300063 - Maximum file size exceeded.
-    * @throws { BusinessException } 2300070 - Disk full or allocation exceeded.
-    * @throws { BusinessException } 2300073 - Remote file already exists.
-    * @throws { BusinessException } 2300077 - Problem with the SSL CA cert (path? access rights?).
-    * @throws { BusinessException } 2300078 - Remote file not found.
-    * @throws { BusinessException } 2300094 - An authentication function returned an error.
-    * @throws { BusinessException } 2300999 - Unknown Other Error.
-    * @relation requestInStream(url: string, callback: AsyncCallback<number>): void
-    */
+     * Initiates an HTTP request to a given URL, applicable to scenarios where http response supports streaming.
+     * @permission ohos.permission.INTERNET
+     * @param { String } url - URL for initiating an HTTP request.
+     * @param { AsyncCallback<UInt32> } callback - Returns the callback of requestInStream ResponseCode,
+     *     should use on_headersReceive and on_dataReceive to get http response.
+     * @throws { BusinessException } 201 - Permission denied.
+     * @throws { BusinessException } 2300001 - Unsupported protocol.
+     * @throws { BusinessException } 2300003 - Invalid URL format or missing URL.
+     * @throws { BusinessException } 2300005 - Failed to resolve the proxy name.
+     * @throws { BusinessException } 2300006 - Failed to resolve the host name.
+     * @throws { BusinessException } 2300007 - Failed to connect to the server.
+     * @throws { BusinessException } 2300008 - Invalid server response.
+     * @throws { BusinessException } 2300009 - Access to the remote resource denied.
+     * @throws { BusinessException } 2300016 - Error in the HTTP2 framing layer.
+     * @throws { BusinessException } 2300018 - Transferred a partial file.
+     * @throws { BusinessException } 2300023 - Failed to write the received data to the disk or application.
+     * @throws { BusinessException } 2300025 - Upload failed.
+     * @throws { BusinessException } 2300026 - Failed to open or read local data from the file or application.
+     * @throws { BusinessException } 2300027 - Out of memory.
+     * @throws { BusinessException } 2300028 - Operation timeout.
+     * @throws { BusinessException } 2300047 - The number of redirections reaches the maximum allowed.
+     * @throws { BusinessException } 2300052 - The server returned nothing (no header or data).
+     * @throws { BusinessException } 2300055 - Failed to send data to the peer.
+     * @throws { BusinessException } 2300056 - Failed to receive data from the peer.
+     * @throws { BusinessException } 2300058 - Local SSL certificate error.
+     * @throws { BusinessException } 2300059 - The specified SSL cipher cannot be used.
+     * @throws { BusinessException } 2300060 - Invalid SSL peer certificate or SSH remote key.
+     * @throws { BusinessException } 2300061 - Invalid HTTP encoding format.
+     * @throws { BusinessException } 2300063 - Maximum file size exceeded.
+     * @throws { BusinessException } 2300070 - Remote disk full.
+     * @throws { BusinessException } 2300073 - Remote file already exists.
+     * @throws { BusinessException } 2300077 - The SSL CA certificate does not exist or is inaccessible.
+     * @throws { BusinessException } 2300078 - Remote file not found.
+     * @throws { BusinessException } 2300094 - Authentication error.
+     * @throws { BusinessException } 2300997 - Cleartext traffic not permitted.
+     * @throws { BusinessException } 2300998 - It is not allowed to access this domain.
+     * @throws { BusinessException } 2300999 - Internal error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         permission: "ohos.permission.INTERNET",
-        syscap: "SystemCapability.Communication.NetStack"
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func requestInStream(url: String, callback: AsyncCallback<UInt32>): Unit
-    
+
     /**
-    * Registers an observer for HTTP Response Header events.
-    * @param { (HashMap<String, String>) -> Unit } callback - the callback used to return the result.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation on(type: "headersReceive", callback: Callback<Object>): void
-    */
+     * Registers an observer for HTTP Response Header events.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { Callback1Argument<HashMap<String, String>> } callback - the callback used to return the result.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<HashMap<String, String>>): Unit
-    
+
     /**
-    * Registers a one-time observer for HTTP Response Header events.
-    * @param { (HashMap<String, String>) -> Unit } callback - the callback used to return the result.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation once(type: "headersReceive", callback: Callback<Object>): void
-    */
+     * Registers a one-time observer for HTTP Response Header events.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { Callback1Argument<HashMap<String, String>> } callback - the callback used to return the result.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func once(event: HttpRequestEvent, callback: Callback1Argument<HashMap<String, String>>): Unit
-    
+
     /**
-    * Registers an observer for receiving HTTP Response data events continuously.
-    * @param { callback: (Array<Byte>) -> Unit } callback - the callback used to return the result.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
-    */
+     * Registers an observer for receiving HTTP Response data events continuously.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { Callback1Argument<Array<Byte>> } callback - the callback used to return the result.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<Array<Byte>>): Unit
-    
+
     /**
-    * Registers an observer for receiving HTTP Response data ends events.
-    * @param { () -> Unit } callback - the callback used to return the result.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation on(type: "dataEnd", callback: Callback<void>): void
-    */
+     * Registers an observer for receiving HTTP Response data ends events.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { Callback0Argument } callback - the callback used to return the result.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func on(event: HttpRequestEvent, callback: Callback0Argument): Unit
-    
+
     /**
-    * Registers an observer for progress of receiving HTTP Response data events.
-    * @param { (DataReceiveProgressInfo) -> Unit } callback - the callback used to return the result.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
-    */
+     * Registers an observer for progress of receiving HTTP Response data events.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { Callback1Argument<DataReceiveProgressInfo> } callback - the callback used to return the result.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<DataReceiveProgressInfo>): Unit
-    
+
     /**
-    * Registers an observer for progress of sendSize HTTP Response data events.
-    * @param { (DataSendProgressInfo) -> Unit } callback - the callback of on.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
-    */
+     * Registers an observer for progress of sendSize HTTP Response data events.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { Callback1Argument<DataSendProgressInfo> } callback - the callback of on.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func on(event: HttpRequestEvent, callback: Callback1Argument<DataSendProgressInfo>): Unit
-    
+
     /**
-    * Unregisters the observer for HttpRequest.
-    * @throws { IllegalArgumentException } The parameter check failed.
-    * @relation off(type: "headersReceive", callback?: Callback<Object>): void
-    */
+     * Unregisters the observer for HttpRequest.
+     * @param { HttpRequestEvent } event - Indicates Event type.
+     * @param { ?CallbackObject } [callback] - the callback used to return the result.
+     * @throws { BusinessException } 2100001 - Invalid parameter value.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        throwexception: true
     ]
     public func off(event: HttpRequestEvent, callback!: ?CallbackObject = None): Unit
 }
 
-
 /**
-* Defines an object that stores the response to an HTTP request.
-* @relation export interface HttpResponseCache
-*/
+ * Defines an object that stores the response to an HTTP request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpResponseCache {
     /**
-    * Writes data in the cache to the file system so that all the cached data can be accessed in the next HTTP request.
-    * @returns { Unit } The promise returned by the flush.
-    * @relation flush(callback: AsyncCallback<void>): void
-    */
+     * Writes data in the cache to the file system so that all the cached data can be accessed in the next HTTP request.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        workerthread: true
     ]
     public func flush(): Unit
-    
+
     /**
-    * Disables a cache and deletes the data in it.
-    * @returns { Unit } The promise returned by the delete.
-    * @relation delete(): Promise<void>
-    */
+     * Disables a cache and deletes the data in it.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Communication.NetStack"
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack",
+        workerthread: true
     ]
     public func delete(): Unit
 }
 
-
 /**
-* http request event type.
-*/
-@Derive[Equatable, Hashable]
+ * HTTP request event type.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpRequestEvent {
+    
     /**
-    * headersReceive
-    */
+     * HeadersReceive enum value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    HeadersReceive |
+    HeadersReceive
+    | 
+    
     /**
-    * dataReceive
-    */
+     * DataReceive enum value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    DataReceive |
+    DataReceive
+    | 
+    
     /**
-    * dataEnd
-    */
+     * DataEnd enum value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    DataEnd |
+    DataEnd
+    | 
+    
     /**
-    * dataReceiveProgress
-    */
+     * DataReceiveProgress enum value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    DataReceiveProgress |
+    DataReceiveProgress
+    | 
+
     /**
-    * dataSendProgress
-    */
+     * DataSendProgress enum value.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    DataSendProgress |
-    ...
+    DataSendProgress
+    | ...
 }
 
 
+extend HttpRequestEvent <: Equatable<HttpRequestEvent> {
+    
+    /**
+     * Compares this HttpRequestEvent with another for equality.
+     * @param { HttpRequestEvent } other - The HttpRequestEvent to compare with.
+     * @returns { Bool } True if both modes are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack"
+    ]
+    public operator func ==(other: HttpRequestEvent): Bool
+    
+    /**
+     * Compares this HttpRequestEvent with another for inequality.
+     * @param { HttpRequestEvent } other - The HttpRequestEvent to compare with.
+     * @returns { Bool } True if both modes are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack"
+    ]
+    public operator func !=(other: HttpRequestEvent): Bool
+}
+
+
+extend HttpRequestEvent <: Hashable {
+    
+    /**
+     * Returns a hash code value for this HttpRequestEvent.
+     * @returns { Int64 } A hash code value for this .
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.Communication.NetStack"
+    ]
+    public func hashCode(): Int64
+}
 
 /**
-* Defines an HTTP request method.
-* @relation export enum RequestMethod
-*/
+ * Defines an HTTP request method.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum RequestMethod {
     /**
-    * OPTIONS method.
-    * @relation OPTIONS = "OPTIONS"
-    */
+     * OPTIONS method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Options |
+    Options
+    | 
     /**
-    * GET method.
-    * @relation GET = "GET"
-    */
+     * GET method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Get |
+    Get
+    | 
     /**
-    * HEAD method.
-    * @relation HEAD = "HEAD"
-    */
+     * HEAD method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Head |
+    Head
+    | 
     /**
-    * POST method.
-    * @relation POST = "POST"
-    */
+     * POST method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Post |
+    Post
+    | 
     /**
-    * PUT method.
-    * @relation PUT = "PUT"
-    */
+     * PUT method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Put |
+    Put
+    | 
     /**
-    * DELETE method.
-    * @relation DELETE = "DELETE"
-    */
+     * DELETE method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Delete |
+    Delete
+    | 
     /**
-    * TRACE method.
-    * @relation TRACE = "TRACE"
-    */
+     * TRACE method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Trace |
+    Trace
+    | 
     /**
-    * CONNECT method.
-    * @relation CONNECT = "CONNECT"
-    */
+     * CONNECT method.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Connect |
-    ...
+    Connect
+    | ...
 }
 
-
 /**
-* Supported protocols.
-* @relation export enum HttpProtocol
-*/
+ * Supported protocols.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpProtocol {
     /**
-    * Protocol http1.1
-    * @relation HTTP1_1
-    */
+     * Protocol http1.1
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Http1_1 |
+    Http1_1
+    | 
     /**
-    * Protocol http2
-    * @relation HTTP2
-    */
+     * Protocol http2
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Http2 |
+    Http2
+    | 
     /**
-    * Protocol http3 for https only.
-    * @relation HTTP3
-    */
+     * Protocol http3 for https only.
+     * Cause error if using http only or not supporting http3 on this device.
+     * Fallback to http2 or http1.1 if needed.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Http3 |
-    ...
+    Http3
+    | ...
 }
 
-
 /**
-* Indicates the type of the returned data.
-* @relation export enum HttpDataType
-*/
+ * Indicates the type of the HTTP data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpDataType {
     /**
-    * The returned type is string.
-    * @relation STRING
-    */
+     * The returned type is string.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    StringValue |
+    StringValue
+    | 
     /**
-    * The returned type is ArrayBuffer.
-    * @relation ARRAY_BUFFER
-    */
+     * The returned type is ArrayBuffer.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    ArrayBuffer |
-    ...
+    ArrayBuffer
+    | ...
 }
 
-
 /**
-* Indicates the type of http data.
-*/
+ * Indicates the form of http data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum HttpData {
     /**
-    * The returned type is string.
-    */
+     * String form.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
-    ]
-    StringData(String) |
+    ] 
+    StringData(String)
+    | 
+    /**
+     * Byte array form.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
-    ]
-    ArrayData(Array<Byte>) |
-    ...
+    ] 
+    ArrayData(Array<Byte>)
+    | ...
 }
 
-
 /**
-* Enum for proxy using
-*/
+ * Enum for proxy using
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum UsingProxy {
+    /**
+     * not use HttpProxy
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    NotUse |
+    NotUse
+    | 
+    /**
+     * use default HttpProxy
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    UseDefault |
+    UseDefault
+    | 
+    /**
+     * use HttpProxy
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
-    ]
-    UseSpecified(HttpProxy) |
-    ...
+    ] 
+    UseSpecified(HttpProxy)
+    | ...
 }
 
-
 /**
-* Enum for certificate types
-* @relation export enum CertType
-*/
+ * Enum for certificate types
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public enum CertType {
     /**
-    * PEM format certificate
-    * @relation PEM
-    */
+     * PEM format certificate
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Pem |
+    Pem
+    | 
     /**
-    * DER format certificate
-    * @relation DER
-    */
+     * DER format certificate
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    Der |
+    Der
+    | 
     /**
-    * P12 format certificate
-    * @relation P12
-    */
+     * P12 format certificate
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    P12 |
-    ...
+    P12
+    | ...
 }
 
-
 /**
-* Specifies the type and value range of the optional parameters in the HTTP request.
-* @relation export interface HttpRequestOptions
-*/
+ * Specifies the type and value range of the optional parameters in the HTTP request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpRequestOptions {
     /**
-    * Request method,default is GET.
-    * @relation method?: RequestMethod
-    */
+     * Request method,default is GET.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var method: RequestMethod
-    
+
     /**
-    * Additional data of the request.
-    * extraData can be a string or an Object (API 6) or an ArrayBuffer(API 8).
-    * @relation extraData?: string | Object | ArrayBuffer
-    */
+     * Additional data of the request.
+     * extraData can be a string or byte array.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var extraData: HttpData
-    
+
     /**
-    * Data type to be returned. If this parameter is set, the system preferentially returns the specified type.
-    * @relation expectDataType?: HttpDataType
-    */
+     * Data type to be returned. If this parameter is set, the system preferentially returns the specified type.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var expectDataType: ?HttpDataType
-    
+
     /**
-    * default is true
-    * @relation usingCache?: boolean
-    */
+     * default is true
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var usingCache: Bool
-    
+
     /**
-    * [1, 1000], default is 1.
-    * @relation priority?: number
-    */
+     * [1, 1000], default is 1.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var priority: UInt32
-    
+
     /**
-    * HTTP request header. default is 'content-type': 'application/json'
-    * @relation header?: Object
-    */
+     * HTTP request header. default is 'content-type': 'application/json'
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var header: HashMap<String, String>
-    
+
     /**
-    * Read timeout period. The default value is 60,000, in ms.
-    * @relation readTimeout?: number
-    */
+     * Read timeout period. The default value is 60,000, in ms.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var readTimeout: UInt32
-    
+
     /**
-    * Connection timeout interval. The default value is 60,000, in ms.
-    * @relation connectTimeout?: number
-    */
+     * Connection timeout interval. The default value is 60,000, in ms.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var connectTimeout: UInt32
-    
+
     /**
-    * default is automatically specified by the system.
-    * @relation usingProtocol?: HttpProtocol
-    */
+     * default is automatically specified by the system.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var usingProtocol: ?HttpProtocol
-    
+
     /**
-    * If this parameter is set as type of boolean, the system will use default proxy or not use proxy.
-    * If this parameter is set as type of HttpProxy, the system will use the specified HttpProxy.
-    * @relation usingProxy?: boolean | HttpProxy
-    */
+     * If this parameter is set as NotUse, the system will not use proxy.
+     * If this parameter is set as UseDefault, the system will use default proxy.
+     * If this parameter is set as UseSpecified, the system will use the specified HttpProxy.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var usingProxy: UsingProxy
-    
+
     /**
-    * If this parameter is set, the system will use ca path specified by user, or else use preset ca by the system.
-    * @relation caPath?: string
-    */
+     * If this parameter is set, the system will use ca path specified by user, or else use preset ca by the system.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var caPath: String
-    
+
     /**
-    * Used to set to uploading or downloading the start bytes. The default value is 0.
-    * HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests.
-    * For HTTP PUT uploads this option should not be used, since it may conflict with other options.
-    * @relation resumeFrom?: number
-    */
+     * Used to set to uploading or downloading the start bytes. The default value is 0.
+     * HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests.
+     * For HTTP PUT uploads this option should not be used, since it may conflict with other options.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var resumeFrom: Int64
-    
+
     /**
-    * Used to set to uploading or downloading the end bytes. Translate to the end if not set.
-    * HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests.
-    * For HTTP PUT uploads this option should not be used, since it may conflict with other options.
-    * @relation resumeTo?: number
-    */
+     * Used to set to uploading or downloading the end bytes. Translate to the end if not set.
+     * HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests.
+     * For HTTP PUT uploads this option should not be used, since it may conflict with other options.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var resumeTo: Int64
-    
+
     /**
-    * Support the application to pass in client certificates, allowing the server to verify the client's identity.
-    * @relation clientCert?: ClientCert
-    */
+     * Support the application to pass in client certificates, allowing the server to verify the client's identity.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var clientCert: ClientCert
-    
+
     /**
-    * If this parameter is set, incoming DNS resolution server URL for the DoH server to use for name resolving.
-    * The parameter must be URL-encoded in the following format: "https://host:port/path".
-    * It MUST specify an HTTPS URL.
-    * @relation dnsOverHttps?: string
-    */
+     * If this parameter is set, incoming DNS resolution server URL for the DoH server to use for name resolving.
+     * The parameter must be URL-encoded in the following format: "https://host:port/path".
+     * It MUST specify an HTTPS URL.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var dnsOverHttps: String
-    
+
     /**
-    * If this parameter is set, use the specified DNS server for DNS resolution.
-    * Multiple DNS resolution servers can be set up, with a maximum of 3 servers.
-    * Only take the first three if there are more than three.
-    * @relation dnsServers?: Array<string>
-    */
+     * If this parameter is set, use the specified DNS server for DNS resolution.
+     * Multiple DNS resolution servers can be set up, with a maximum of 3 servers.
+     * Only take the first three if there are more than three.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var dnsServers: Array<String>
-    
+
     /**
-    * The maximum limit of the response body. The default value is 5 * 1024 * 1024, in Byte.
-    * The maximum value is 100 * 1024 *1024, in Byte.
-    * @relation maxLimit?: number
-    */
+     * The maximum limit of the response body. The default value is 5 * 1024 * 1024, in Byte.
+     * The maximum value is 100 * 1024 *1024, in Byte.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var maxLimit: UInt32
-    
+
     /**
-    * The data fields which is supported by the HTTP protocol to post
-    * forms and by the SMTP and IMAP protocols to provide
-    * the email data to send/upload.
-    * @relation multiFormDataList?: Array<MultiFormData>
-    */
+     * The data fields which is supported by the HTTP protocol to post
+     * forms and by the SMTP and IMAP protocols to provide
+     * the email data to send/upload.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var multiFormDataList: Array<MultiFormData>
-    
+
     /**
-    * init the HttpRequestOptions
-    */
+     * HttpRequestOptions constructor
+     *
+     * @param { RequestMethod } [method] - Indicates the request method,default is GET.
+     * @param { HttpData } [extraData] - Indicates the additional data of the request.
+     * @param { HttpDataType } [expectDataType] - Indicates the data type to be returned.
+     * @param { Bool } [usingCache] - Indicates the default is true.
+     * @param { UInt32 } [priority] - Indicates the [1, 1000], default is 1.
+     * @param { HashMap<String, String> } [header] - Indicates the HTTP request header. default is 'content-type': 'application/json'.
+     * @param { UInt32 } [readTimeout] - Indicates the read timeout period. The default value is 60,000, in ms.
+     * @param { UInt32 } [connectTimeout] - Indicates the connection timeout interval. The default value is 60,000, in ms.
+     * @param { HttpProtocol } [usingProtocol] - Indicates the default is automatically specified by the system.
+     * @param { UsingProxy } [usingProxy] - Indicates this parameter is set as UseDefault, the system will use default proxy.
+     * @param { String } [caPath] - Indicates the system will use ca path specified by user, or else use preset ca by the system.
+     * @param { Int64 } [resumeFrom] - Indicates the used to set to uploading or downloading the start bytes. The default value is 0.
+     * @param { Int64 } [resumeTo] - Indicates the used to set to uploading or downloading the end bytes.
+     * @param { ClientCert } [clientCert] - Indicates the support the application to pass in client certificates, allowing the server to verify the client's identity.
+     * @param { String } [dnsOverHttps] - Indicates the incoming DNS resolution server URL for the DoH server to use for name resolving.
+     * @param { Array<String> } [dnsServers] - Indicates use the specified DNS server for DNS resolution. 
+     *                                         Multiple DNS resolution servers can be set up, with a maximum of 3 servers.
+     *                                         Only take the first three if there are more than three.
+     * @param { UInt32 } [maxLimit] - Indicates the maximum limit of the response body. The default value is 5 * 1024 * 1024, in Byte.
+     *                                the maximum value is 100 * 1024 *1024, in Byte.
+     * @param { Array<MultiFormData> } [multiFormDataList] - Indicates the data fields which is supported by the HTTP protocol to post
+     *                                the maximum value is 100 * 1024 *1024, in Byte.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public init(method!: RequestMethod = RequestMethod.Get, extraData!: HttpData = HttpData.StringData(""),
-        expectDataType!: ?HttpDataType = None, usingCache!: Bool = true, priority!: UInt32 = 1, 
-        header!: HashMap<String, String> = HashMap<String, String>(), readTimeout!: UInt32 = 60000, 
+        expectDataType!: ?HttpDataType = None, usingCache!: Bool = true, priority!: UInt32 = 1,
+        header!: HashMap<String, String> = HashMap<String, String>(), readTimeout!: UInt32 = 60000,
         connectTimeout!: UInt32 = 60000, usingProtocol!: ?HttpProtocol = None,
-        usingProxy!: UsingProxy = UsingProxy.UseDefault, caPath!: String = "", resumeFrom!: Int64 = 0, 
-        resumeTo!: Int64 = 0, clientCert!: ClientCert = ClientCert("",""), dnsOverHttps!: String = "",
-        dnsServers!: Array<String> = Array<String>(), maxLimit!: UInt32 = 5 * 1024 * 1024, 
+        usingProxy!: UsingProxy = UsingProxy.UseDefault, caPath!: String = "", resumeFrom!: Int64 = 0,
+        resumeTo!: Int64 = 0, clientCert!: ClientCert = ClientCert("", ""), dnsOverHttps!: String = "",
+        dnsServers!: Array<String> = Array<String>(), maxLimit!: UInt32 = 5 * 1024 * 1024,
         multiFormDataList!: Array<MultiFormData> = Array<MultiFormData>())
 }
 
-
 /**
-* Defines the response to an HTTP request.
-* @relation export interface HttpResponse 
-*/
+ * Defines the response to an HTTP request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class HttpResponse {
     /**
-    * result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.
-    * @relation result: string | Object | ArrayBuffer
-    */
+     * result can be a string or byte array.
+     * If {@link HttpRequestOptions#expectDataType} is set, the system preferentially returns this parameter.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var result: HttpData
-    
+
     /**
-    * If the resultType is string, you can get result directly.
-    * If the resultType is Object, you can get result such as this: result['key'].
-    * If the resultType is ArrayBuffer, you can use ArrayBuffer to create the binary objects.
-    * @relation resultType: HttpDataType
-    */
+     * If the resultType is string, you can get result directly.
+     * If the resultType is ArrayBuffer, you can use ArrayBuffer to create the binary objects.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var resultType: HttpDataType
-    
+
     /**
-    * Server status code.
-    * @relation responseCode: ResponseCode | number
-    */
+     * Server status code.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var responseCode: UInt32
-    
+
     /**
-    * All headers in the response from the server.
-    * @relation header: Object
-    */
+     * All headers in the response from the server.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var header: HashMap<String, String>
-    
+
     /**
-    * Cookies returned by the server.
-    * @relation cookies: string
-    */
+     * Cookies returned by the server.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var cookies: String
-    
+
     /**
-    * The time taken of various stages of HTTP request.
-    * @relation performanceTiming: PerformanceTiming
-    */
+     * The time taken of various stages of HTTP request.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var performanceTiming: PerformanceTiming
 }
 
-
 /**
-* Counting the time taken of various stages of HTTP request.
-* @relation export interface PerformanceTiming
-*/
+ * Counting the time taken of various stages of HTTP request.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class PerformanceTiming {
     /**
-    * Time taken from startup to DNS resolution completion, in milliseconds.
-    * @relation dnsTiming: number
-    */
+     * Time taken from startup to DNS resolution completion, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var dnsTiming: Float64
-    
+
     /**
-    * Time taken from startup to TCP connection completion, in milliseconds.
-    * @relation tcpTiming: number
-    */
+     * Time taken from startup to TCP connection completion, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var tcpTiming: Float64
-    
+
     /**
-    * Time taken from startup to TLS connection completion, in milliseconds.
-    * @relation tlsTiming: number
-    */
+     * Time taken from startup to TLS connection completion, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var tlsTiming: Float64
-    
+
     /**
-    * Time taken from startup to start sending the first byte, in milliseconds.
-    * @relation firstSendTiming: number
-    */
+     * Time taken from startup to start sending the first byte, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var firstSendTiming: Float64
-    
+
     /**
-    * Time taken from startup to receiving the first byte, in milliseconds.
-    * @relation firstReceiveTiming: number
-    */
+     * Time taken from startup to receiving the first byte, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var firstReceiveTiming: Float64
-    
+
     /**
-    * Time taken from startup to the completion of the request, in milliseconds.
-    * @relation totalFinishTiming: number
-    */
+     * Time taken from startup to the completion of the request, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalFinishTiming: Float64
-    
+
     /**
-    * Time taken from startup to completion of all redirection steps, in milliseconds.
-    * @relation redirectTiming: number
-    */
+     * Time taken from startup to completion of all redirection steps, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var redirectTiming: Float64
-    
+
     /**
-    * Time taken from HTTP request to header completion, in milliseconds.
-    * @relation responseHeaderTiming: number
-    */
+     * Time taken from HTTP request to header completion, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var responseHeaderTiming: Float64
-    
+
     /**
-    * Time taken from HTTP Request to body completion, in milliseconds.
-    * @relation responseBodyTiming: number
-    */
+     * Time taken from HTTP Request to body completion, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var responseBodyTiming: Float64
-    
+
     /**
-    * Time taken from HTTP Request to callback to the application, in milliseconds.
-    * @relation totalTiming: number
-    */
+     * Time taken from HTTP Request to callback to the application, in milliseconds.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalTiming: Float64
 }
 
-
 /**
-* This interface is used to obtain the progress information of file upload or download.
-* @relation export interface DataReceiveProgressInfo
-*/
+ * This interface is used to obtain the progress information of file upload or download.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class DataReceiveProgressInfo {
     /**
-    * Number of data bytes received.
-    * @relation receiveSize: number
-    */
+     * Number of data bytes received.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var receiveSize: Int64
-    
+
     /**
-    * Total number of bytes to receive.
-    * @relation totalSize: number
-    */
+     * Total number of bytes to receive.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalSize: Int64
 }
 
-
 /**
-* This interface is used to monitor the progress of sending data.
-* @relation export interface DataSendProgressInfo
-*/
+ * This interface is used to monitor the progress of sending data.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class DataSendProgressInfo {
     /**
-    * Used to specify the data size to be sent.
-    * @relation sendSize: number
-    */
+     * Used to specify the data size to be sent.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var sendSize: Int64
-    
+
     /**
-    * Total number of bytes to receive.
-    * @relation totalSize: number
-    */
+     * Total number of bytes to receive.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var totalSize: Int64
 }
 
-
 /**
-* The clientCert field of the client certificate, which includes 4 attributes:
-* client certificate (cert), client certificate type (certType), certificate private key (key), and passphrase (keyPassword).
-* @relation export interface ClientCert
-*/
+ * The clientCert field of the client certificate, which includes 4 attributes:
+ * client certificate (cert), client certificate type (certType), certificate private key (key), and passphrase
+ * (keyPassword).
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class ClientCert {
     /**
-    * The path to the client certificate file.
-    * @relation certPath: string
-    */
+     * The path to the client certificate file.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var certPath: String
-    
+
     /**
-    * The path of the client certificate private key file.
-    * @relation keyPath: string
-    */
+     * The path of the client certificate private key file.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var keyPath: String
-    
+
     /**
-    * The type of the client certificate.
-    * @relation certType?: CertType
-    */
+     * The type of the client certificate.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var certType: CertType
-    
+
     /**
-    * Password required to use the client certificate private key.
-    * @relation keyPassword?: string
-    */
+     * Password required to use the client certificate private key.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var keyPassword: String
-    
+
     /**
-    * init the ClientCert
-    */
+     * ClientCert constructor
+     *
+     * @param { String } certPath - Indicates the path to the client certificate file.
+     * @param { String } keyPath - Indicates the path of the client certificate private key file.
+     * @param { CertType } [certType] - Indicates the type of the client certificate.
+     * @param { String } [keyPassword] - Indicates the password required to use the client certificate private key.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public init(certPath: String, keyPath: String, certType!: CertType = CertType.Pem, keyPassword!: String = "")
 }
 
-
 /**
-* Represents the properties of a form object.
-* @relation export interface MultiFormData
-*/
+ * Represents the properties of a form object.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Communication.NetStack"
 ]
 public class MultiFormData {
     /**
-    * MIME name for the data field.
-    * @relation name: string
-    */
+     * MIME name for the data field.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var name: String
-    
+
     /**
-    * Content type of the data field.
-    * @relation contentType: string
-    */
+     * Content type of the data field.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var contentType: String
-    
+
     /**
-    * Remote file name for the data field.
-    * @relation remoteFileName?: string
-    */
+     * Remote file name for the data field.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var remoteFileName: String
-    
+
     /**
-    * This parameter sets a mime part's body content from memory data.
-    * @relation data?: string | Object | ArrayBuffer
-    */
+     * This parameter sets a mime part's body content from memory data.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var data: HttpData
-    
+
     /**
-    * This parameter sets a mime part's body content from the file's contents.
-    * This is an alternative to curl_mime_data for setting data to a mime part.
-    * If data is empty, filePath must be set.
-    * If data has a value, filePath does not take effect.
-    * @relation filePath?: string
-    */
+     * This parameter sets a mime part's body content from the file's contents.
+     * This is an alternative to curl_mime_data for setting data to a mime part.
+     * If data is empty, filePath must be set.
+     * If data has a value, filePath does not take effect.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
     public var filePath: String
-    
+
     /**
-    * init the MultiFormData
-    */
+     * MultiFormData constructor
+     *
+     * @param { String } name - MIME name for the data field.
+     * @param { String } contentType - Content type of the data field.
+     * @param { String } [remoteFileName] - Remote file name for the data field.
+     * @param { HttpData } [data] - This parameter sets a mime part's body content from memory data.
+     * @param { String } [filePath] - Indicates the parameter sets a mime part's body content from the file's contents.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Communication.NetStack"
     ]
-    public init(name: String, contentType: String,  remoteFileName!: String = "",
+    public init(name: String, contentType: String, remoteFileName!: String = "",
         data!: HttpData = HttpData.StringData(""), filePath!: String = "")
 }
-
-

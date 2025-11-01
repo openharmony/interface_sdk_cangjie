@@ -13,54 +13,54 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.hi_trace_meter
-import ohos.labels.*
 
+import ohos.labels.APILevel
 
 /**
-* Provides interfaces to trace a task for performance measure, the logs can be capture by the
-* bytrace cmdline available on the device.
-*
-* This interfaces trace the start, end, and value changes of key processes that last for at least 3 ms.
-*
-* @relation declare namespace hiTraceMeter
-*/
+ * Provides interfaces to trace a task for performance measure, the logs can be capture by the
+ * bytrace cmdline available on the device.
+ *
+ * This interfaces trace the start, end, and value changes of key processes that last for at least 3 ms.
+ *
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.HiviewDFX.HiTrace"
 ]
 public class HiTraceMeter {
     /**
-    * Records a trace marking it as the start of a task, can with the expected completion time between
-    * startTrace and finishTrace.
-    *
-    * This method is invoked at the start of a transaction to indicate that a task has started, whose name
-    * is specified by name, and the taskId is used to distinguish the tasks. It must be followed by
-    * finishTrace, the name and taskId need to be the same.
-    *
-    * @relation function startTrace(name: string, taskId: number): void
-    */
+     * Records a trace marking it as the start of a task, can with the expected completion time between
+     * startTrace and finishTrace.
+     *
+     * This method is invoked at the start of a transaction to indicate that a task has started, whose name
+     * is specified by name, and the taskId is used to distinguish the tasks. It must be followed by
+     * finishTrace, the name and taskId need to be the same.
+     *
+     * @param { String } name - Indicates the task name.
+     * @param { Int32 } taskId - The unique id used to distinguish the tasks and match with the id in follow finishTrace.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiTrace"
     ]
     public static func startTrace(name: String, taskId: Int32): Unit
-    
+
     /**
-    * Records a trace and marks it as the end of a task.
-    *
-    * This method is invoked at the end of a transaction to indicate that a task has ended, whose name
-    * is specified by name. This method must be invoked after startTrace.
-    *
-    * @relation function finishTrace(name: string, taskId: number): void
-    */
+     * Records a trace and marks it as the end of a task.
+     *
+     * This method is invoked at the end of a transaction to indicate that a task has ended, whose name
+     * is specified by name. This method must be invoked after startTrace.
+     *
+     * @param { String } name - Indicates the task name. It must be the same with the name of startTrace.
+     * @param { Int32 } taskId - The unique id used to distinguish the tasks and must be the same with the
+     * taskId of startTrace.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.HiviewDFX.HiTrace"
     ]
     public static func finishTrace(name: String, taskId: Int32): Unit
 }
-
-

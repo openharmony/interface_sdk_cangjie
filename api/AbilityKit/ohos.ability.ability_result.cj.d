@@ -13,55 +13,50 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.ability.ability_result
-import ohos.labels.*
-import ohos.app.ability.want.*
 
+import ohos.app.ability.want.*
+import ohos.labels.*
 
 /**
-* AbilityResult
-*
-* @relation export interface AbilityResult
-*/
+ * AbilityResult
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityBase"
 ]
 public class AbilityResult {
     /**
-    * Indicates the result code returned after the ability is destroyed. You can define the result
-    * code to identify an error.
-    *
-    * @relation resultCode: number
-    */
+     * Indicates the result code returned after the ability is destroyed. You can define the result
+     * code to identify an error.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var resultCode: Int32
-    
+
     /**
-    * Indicates the data returned after the ability is destroyed. You can define the data returned.
-    * This parameter can be null.
-    *
-    * @relation want?: Want
-    */
+     * Indicates the data returned after the ability is destroyed. You can define the data returned.
+     * This parameter can be null.
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public var want: Want
-    
+
     /**
-    * AbilityResult constructor.
-    */
+     * AbilityResult constructor.
+     *
+     * @param { Int32 } resultCode - Indicates the result code returned after the ability is destroyed.
+     * @param { Want } [want] - Indicates the data returned after the ability is destroyed. The default value is Want().
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityBase"
     ]
     public init(resultCode: Int32, want!: Want = Want())
 }
-
-

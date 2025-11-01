@@ -1,3583 +1,7556 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2025. All rights reserved.
- * This source file is part of the Cangjie project, licensed under Apache-2.0
- * with Runtime Library Exception.
- *
- * See https://cangjie-lang.cn/pages/LICENSE for license information.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package std.core
 
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents the kind of annotation in the Cangjie language.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum AnnotationKind {
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a type.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Type |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a parameter.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Parameter |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to an initializer.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Init |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a member property.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     MemberProperty |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a member function.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     MemberFunction |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a member variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     MemberVariable |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to an enum constructor.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     EnumConstructor |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a global function.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     GlobalFunction |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to a global variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     GlobalVariable |
-    @!APILevel[since: "22"]
+    /**
+     * @description Annotation applied to an extension.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Extension |
+    /**
+     * @description Represents other kinds of annotations not explicitly listed.
+     */
     ...
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when an arithmetic operation overflows or underflows.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class ArithmeticException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new ArithmeticException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new ArithmeticException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 @ConstSafe
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public struct Array<T> {
+    /**
+     * @description Constructs an empty Array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public const init()
     
+    /**
+     * @description Constructs an Array with the specified size, with all elements initialized to the given value.
+     * @param size The size of the array.
+     * @param repeat The value to initialize all elements with.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(size: Int64, repeat!: T)
     
+    /**
+     * @description Constructs an Array with the specified size, with elements initialized using the provided function.
+     * @param size The size of the array.
+     * @param initElement A function that takes an index and returns the value to initialize the element at that index.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(size: Int64, initElement: (Int64) -> T)
     
+    /**
+     * @description Gets the first element of the array as an Option.
+     * @returns Some(value) if the array is not empty, None otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop first: Option<T>
     
+    /**
+     * @description Gets the last element of the array as an Option.
+     * @returns Some(value) if the array is not empty, None otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop last: Option<T>
     
     /**
-    * @return slice of this Array
-    * @throws IndexOutOfBoundsException if `start` is negative, or `len` is negative,
-    *         or `start + len` is greater than the size of array.
-    */
+     * @description Returns a slice of this array.
+     * @param start The starting index of the slice.
+     * @param len The length of the slice.
+     * @returns A new Array containing the specified slice.
+     * @throws IndexOutOfBoundsException if start is negative, or len is negative, or start + len is greater than the size of array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func slice(start: Int64, len: Int64): Array<T>
     
+    /**
+     * @description Gets the element at the specified index as an Option.
+     * @param index The index of the element to get.
+     * @returns Some(value) if the index is valid, None otherwise.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func get(index: Int64): Option<T>
     
     /**
-    * @throws IndexOutOfBoundsException if `index` is negative or
-    *         greater than or equal to the size of array.
-    */
+     * @description Gets the element at the specified index.
+     * @param index The index of the element to get.
+     * @returns The element at the specified index.
+     * @throws IndexOutOfBoundsException if index is negative or greater than or equal to the size of array.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](index: Int64): T
     
     /**
-    * @throws IndexOutOfBoundsException if `index` is negative or
-    *         greater than or equal to the size of array.
-    */
+     * @description Sets the element at the specified index.
+     * @param index The index of the element to set.
+     * @param value The value to set.
+     * @throws IndexOutOfBoundsException if index is negative or greater than or equal to the size of array.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](index: Int64, value!: T): Unit
     
     /**
-    * @throws IllegalArgumentException if the `step` of `range` is not equal to 1.
-    * @throws IndexOutOfBoundsException if the `range` is invalid for this array.
-    */
+     * @description Gets a slice of this array based on the specified range.
+     * @param range The range to slice.
+     * @returns A new Array containing the specified slice.
+     * @throws IllegalArgumentException if the step of range is not equal to 1.
+     * @throws IndexOutOfBoundsException if the range is invalid for this array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](range: Range<Int64>): Array<T>
     
+    /**
+     * @description Fills the entire array with the specified value.
+     * @param value The value to fill the array with.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fill(value: T): Unit
     
     /**
-    * @throws IllegalArgumentException if the `step` of `range` is not equal to 1,
-    *         or the size of `value` is not equal to the length of `range`.
-    * @throws IndexOutOfBoundsException if `range` is invalid for this array.
-    */
+     * @description Sets the elements in the specified range to the values from another array.
+     * @param range The range to set values for.
+     * @param value The array containing the values to set.
+     * @throws IllegalArgumentException if the step of range is not equal to 1, or the size of value is not equal to the length of range.
+     * @throws IndexOutOfBoundsException if range is invalid for this array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func [](range: Range<Int64>, value!: Array<T>): Unit
     
-    /** Reverse array elements in place. */
+    /**
+     * @description Reverses the elements of the array in place.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func reverse(): Unit
     
-    /** Dummy function, used for function overloading check. */
+    /**
+     * @description Creates a copy of the array.
+     * @returns A new Array that is a copy of this array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): Array<T>
     
-    /*
-    * @throws IndexOutOfBoundsException if the `range` is invalid for this array.
-    */
+    /**
+     * @description Creates a copy of a specified range of the array.
+     * @param range The range of elements to clone.
+     * @returns A new array containing the elements in the specified range.
+     * @throws IndexOutOfBoundsException if the range is invalid for this array.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func clone(range: Range<Int64>): Array<T>
     
-    /*
-    * @throws IllegalArgumentException if `copyLen` is negative.
-    * @throws IndexOutOfBoundsException if `srcStart` or `dstStart` is negative, or `srcStart` is
-    *         greater or equal to the size of this array, or `dstStart` is greater or equal to
-    *         the size of `dst`, or `copyLen` is out of bounds.
-    */
+    /**
+     * @description Copies elements from this array to another array.
+     * @param dst The destination array.
+     * @param srcStart The starting index in this array.
+     * @param dstStart The starting index in the destination array.
+     * @param copyLen The number of elements to copy.
+     * @throws IllegalArgumentException if copyLen is negative.
+     * @throws IndexOutOfBoundsException if srcStart or dstStart is negative, or srcStart + copyLen is greater than the size of this array, or dstStart + copyLen is greater than the size of dst.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func copyTo(dst: Array<T>, srcStart: Int64, dstStart: Int64, copyLen: Int64): Unit
     
+    /**
+     * @description Copies all elements from this array to another array.
+     * @param dst The destination array.
+     * @throws IllegalArgumentException if the size of dst is not equal to the size of this array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func copyTo(dst: Array<T>): Unit
     
-    /*
-    * Returns a new Array concat this and that
-    *
-    * `other` will be copied to the new array
-    *
-    * returns a new array, size is `this.size + that.size`
-    */
+    /**
+     * @description Concatenates this array with another array.
+     * @param other The array to concatenate with.
+     * @returns A new Array containing the elements of this array followed by the elements of other.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func concat(other: Array<T>): Array<T>
     
+    /**
+     * @description Swaps the elements at the specified indices.
+     * @param index1 The first index.
+     * @param index2 The second index.
+     * @throws IllegalArgumentException if index1 or index2 is negative, or index1 or index2 is greater than or equal to the size of array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func swap(index1: Int64, index2: Int64): Unit
     
+    /**
+     * @description Splits the array into two arrays at the specified index.
+     * @param mid The index to split at.
+     * @returns A tuple containing the first half and the second half of the array.
+     * @throws IllegalArgumentException if mid is negative, or mid is greater than the size of array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func splitAt(mid: Int64): (Array<T>, Array<T>)
     
+    /**
+     * @description Repeats the elements of the array n times.
+     * @param n The number of times to repeat the elements.
+     * @returns A new Array containing the elements of this array repeated n times.
+     * @throws IllegalArgumentException if n is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func repeat(n: Int64): Array<T>
     
+    /**
+     * @description Applies a transformation function to each element of the array.
+     * @param transform The transformation function.
+     * @returns A new Array containing the transformed elements.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func map<R>(transform: (T) -> R): Array<R>
 }
 
 extend<T> Array<Array<T>> {
+    /**
+     * @description Flattens a 2D array into a 1D array.
+     * @returns A new Array containing all the elements of the 2D array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func flatten(): Array<T>
 }
 
 extend<T> Array<T> <: Collection<T> {
-    /** Returns an iterator over the elements in this Array in proper sequence. */
+    /**
+     * @description Returns an iterator over the elements of the array.
+     * @returns An iterator over the elements of the array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
     /**
-    * Call 'size' on array type variable will be processed by compiler.
-    * Only call based on 'Collection' type will use this function.
-    */
+     * @description Gets the size of the array.
+     * @returns The number of elements in the array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
-    /** Returns true if this Array contains no elements. */
+    /**
+     * @description Checks if the array is empty.
+     * @returns true if the array is empty, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
+    /**
+     * @description Converts the array to a new array.
+     * @returns A new Array containing the same elements as this array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<T>
 }
 
 extend<T> Array<T> <: ToString where T <: ToString {
+    /**
+     * @description Converts the array to a string.
+     * @returns A string representation of the array.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 @ConstSafe
 extend<T> Array<T> <: Equatable<Array<T>> where T <: Equatable<T> {
+    /**
+     * @description Checks if this array is equal to another array.
+     * @param other The array to compare with.
+     * @returns true if the arrays are equal, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator const func ==(that: Array<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator const func ==(other: Array<T>): Bool
     
+    /**
+     * @description Checks if this array is not equal to another array.
+     * @param other The array to compare with.
+     * @returns true if the arrays are not equal, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator const func !=(that: Array<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator const func !=(other: Array<T>): Bool
     
+    /**
+     * @description Checks if the array contains a specific element.
+     * @param element The element to check for.
+     * @returns true if the element is found, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(element: T): Bool
     
     /**
-    * Returns the index of the first occurrence of the element in the src Array.
-    *
-    * @params element - The target element.
-    *
-    * @return Index of the first occurrence of the element in the Array, or None if the the element does not occur.
-    * @throws IllegalArgumentException - If the start less than 0.
-    */
+     * @description Finds the index of the first occurrence of a specific element.
+     * @param element The element to find.
+     * @returns The index of the first occurrence of the element, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(element: T): Option<Int64>
     
     /**
-    * Returns the index of the first occurrence of the element after fromIndex in the src Array.
-    *
-    * @params element - The target element.
-    * @params fromIndex - The start index, default 0.
-    *
-    * @return Index of the first occurrence of the element in the Array, or None if the the element does not occur.
-    * @throws IllegalArgumentException - If the start less than 0.
-    */
+     * @description Finds the index of the first occurrence of a specific element starting from a given index.
+     * @param element The element to find.
+     * @param fromIndex The index to start searching from.
+     * @returns The index of the first occurrence of the element, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(element: T, fromIndex: Int64): Option<Int64>
     
     /**
-    * Returns the index of the first occurrence of the elements in the src Array.
-    *
-    * @params element - The target element.
-    *
-    * @return Index of the first occurrence of the element in the Array, or None if the the element does not occur.
-    * @throws IllegalArgumentException - If the start less than 0.
-    */
+     * @description Finds the index of the first occurrence of a specific subarray.
+     * @param elements The subarray to find.
+     * @returns The index of the first occurrence of the subarray, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(elements: Array<T>): Option<Int64>
     
     /**
-    * Returns the index of the first occurrence of the elements in the src Array.
-    *
-    * @params element - The target element.
-    *
-    * @return Index of the first occurrence of the element in the Array, or None if the the element does not occur.
-    * @throws IllegalArgumentException - If the start less than 0.
-    */
+     * @description Finds the index of the first occurrence of a specific subarray starting from a given index.
+     * @param elements The subarray to find.
+     * @param fromIndex The index to start searching from.
+     * @returns The index of the first occurrence of the subarray, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(elements: Array<T>, fromIndex: Int64): Option<Int64>
     
+    /**
+     * @description Finds the index of the last occurrence of a specific element.
+     * @param element The element to find.
+     * @returns The index of the last occurrence of the element, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(element: T): Option<Int64>
     
+    /**
+     * @description Finds the index of the last occurrence of a specific element starting from a given index.
+     * @param element The element to find.
+     * @param fromIndex The index to start searching from.
+     * @returns The index of the last occurrence of the element, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(element: T, fromIndex: Int64): Option<Int64>
     
+    /**
+     * @description Finds the index of the last occurrence of a specific subarray.
+     * @param elements The subarray to find.
+     * @returns The index of the last occurrence of the subarray, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(elements: Array<T>): Option<Int64>
     
+    /**
+     * @description Finds the index of the last occurrence of a specific subarray starting from a given index.
+     * @param elements The subarray to find.
+     * @param fromIndex The index to start searching from.
+     * @returns The index of the last occurrence of the subarray, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(elements: Array<T>, fromIndex: Int64): Option<Int64>
     
     /**
-    * Returns a slice that dones not contain elements from the start.
-    *
-    * @param set - The target elements to trim.
-    *
-    * @return The slice of the src.
-    */
+     * @description Removes leading elements that are in the specified set.
+     * @param set The set of elements to remove.
+     * @returns A new Array with the leading elements removed.
+     * @throws IllegalArgumentException if set is empty.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func trimStart(set: Array<T>): Array<T>
     
     /**
-    * Returns a slice that dones not contain elements from the end.
-    *
-    * @param set - The target elements to trim.
-    *
-    * @return The slice of the src.
-    */
+     * @description Removes trailing elements that are in the specified set.
+     * @param set The set of elements to remove.
+     * @returns A new Array with the trailing elements removed.
+     * @throws IllegalArgumentException if set is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func trimEnd(set: Array<T>): Array<T>
     
     /**
-    * Returns a slice that dones not contain elements from the start.
-    *
-    * @param predicate - the elements satisfy the predicate should be trimmed.
-    *
-    * @return The slice of the src.
-    */
+     * @description Removes leading elements that satisfy the specified predicate.
+     * @param predicate The predicate to apply.
+     * @returns A new Array with the leading elements removed.
+     * @throws IllegalArgumentException if predicate is null.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func trimStart(predicate: (T) -> Bool): Array<T>
     
     /**
-    * Returns a slice that dones not contain elements from the end.
-    *
-    * @param predicate - the elements satisfy the predicate should be trimmed.
-    *
-    * @return The slice of the src.
-    */
+     * @description Removes trailing elements that satisfy the specified predicate.
+     * @param predicate The predicate to apply.
+     * @returns A new Array with the trailing elements removed.
+     * @throws IllegalArgumentException if predicate is null.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func trimEnd(predicate: (T) -> Bool): Array<T>
     
+    /**
+     * @description Removes the specified prefix from the array.
+     * @param prefix The prefix to remove.
+     * @returns A new Array with the prefix removed.
+     * @throws IllegalArgumentException if prefix is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removePrefix(prefix: Array<T>): Array<T>
     
+    /**
+     * @description Removes the specified suffix from the array.
+     * @param suffix The suffix to remove.
+     * @returns A new Array with the suffix removed.
+     * @throws IllegalArgumentException if suffix is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func removeSuffix(suffix: Array<T>): Array<T>
 }
 
 /**
-* Array-based Iterator.
-*/
-@!APILevel[since: "22"]
+ * @description An iterator over the elements of an Array.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ArrayIterator<T> <: Iterator<T> {
+    /**
+     * @description Constructs an ArrayIterator with the specified array data.
+     * @param data The array to iterate over.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(data: Array<T>)
     
-    /** Returns the next element in the iteration. */
+    /**
+     * @description Gets the next element of the iterator.
+     * @returns The next element, or None if there are no more elements.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func next(): Option<T>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A handle for C pointer and array data.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct CPointerHandle<T> where T <: CType {
-    @!APILevel[since: "22"]
+    /**
+     * @description The C pointer.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let pointer: CPointer<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The array data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let array: Array<T>
     
-    @Deprecated[message: "Use global function `public unsafe func acquireArrayRawData<T>(arr: Array<T>): CPointerHandle<T> where T <: CType` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs an empty CPointerHandle.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @Deprecated[message: "Use global function `public unsafe func acquireArrayRawData<T>(arr: Array<T>): CPointerHandle<T> where T <: CType` instead."]
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a CPointerHandle with the specified C pointer and array data. 
+     * @param ptr The C pointer.
+     * @param arr The array data.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(ptr: CPointer<T>, arr: Array<T>)
 }
 
 /**
-* Caution: any behavior that may allocate memory in cangjie heap or
-* trigger garbage collection between func acquireArrayRawData<T>(arr: Array<T>)
-* and func releaseArrayRawData<T>(handle: CPointerHandle<T>)
-* is permitted in case of dead lock
-*/
+ * @description Acquires raw data from an array as a C pointer handle.
+ * @param arr The array to acquire raw data from.
+ * @returns A CPointerHandle containing the raw data.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public unsafe func acquireArrayRawData<T>(arr: Array<T>): CPointerHandle<T> where T <: CType
 
+/**
+ * @description Releases a C pointer handle.
+ * @param handle The handle to release.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public unsafe func releaseArrayRawData<T>(handle: CPointerHandle<T>): Unit where T <: CType
 
-@!APILevel[since: "22"]
+/**
+ * @description A container for a value that provides reference semantics.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Box<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The boxed value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public var value: T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a Box with the specified value.
+     * @param v The value to box.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(v: T)
 }
 
 extend<T> Box<T> <: Hashable where T <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the boxed object.
+     * @returns A hash code value for this object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 extend<T> Box<T> <: Comparable<Box<T>> where T <: Comparable<T> {
-    @!APILevel[since: "22"]
-    public operator func ==(that: Box<T>): Bool
-    
-    @!APILevel[since: "22"]
-    public operator func !=(that: Box<T>): Bool
-    
-    @!APILevel[since: "22"]
-    public operator func >(that: Box<T>): Bool
-    
-    @!APILevel[since: "22"]
-    public operator func <(that: Box<T>): Bool
-    
-    @!APILevel[since: "22"]
-    public operator func >=(that: Box<T>): Bool
-    
-    @!APILevel[since: "22"]
-    public operator func <=(that: Box<T>): Bool
+    /**
+     * @description Indicates whether some other boxed object is "equal to" this one.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is the same as the that argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Box<T>): Bool
     
     /**
-    * Compare the relationship between two instance of Box<T>.
-    *
-    * @param that Instance of Box<T> compared with this.
-    * @return Value indicating the relationship between two instance of Box<T>.
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
-    public func compare(that: Box<T>): Ordering
+     * @description Indicates whether some other boxed object is "not equal to" this one.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is not the same as the that argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Box<T>): Bool
+    
+    /**
+     * @description Indicates whether this boxed object is "greater than" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is greater than the that argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Box<T>): Bool
+    
+    /**
+     * @description Indicates whether this boxed object is "less than" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is less than the that argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Box<T>): Bool
+    
+    /**
+     * @description Indicates whether this boxed object is "greater than or equal to" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is greater than or equal to the that argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Box<T>): Bool
+    
+    /**
+     * @description Indicates whether this boxed object is "less than or equal to" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is less than or equal to the that argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Box<T>): Bool
+    
+    /**
+     * @description Compares this boxed object with the specified boxed object for order.
+     * @param other The boxed object to be compared.
+     * @returns An Ordering value indicating the relative order of the two objects.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Box<T>): Ordering
 }
 
 extend<T> Box<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of the boxed value.
+     * @returns A string representation of the boxed value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Byte {
     /**
-    * Returns true if this Byte is in Ascii letter range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII letter.
+     * @returns true if this byte is an ASCII letter, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiLetter(): Bool
     
     /**
-    * Returns true if this this Byte is in Ascii number range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII number.
+     * @returns true if this byte is an ASCII number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiNumber(): Bool
     
     /**
-    * Returns true if this this Byte is in Ascii hexadecimal range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII hexadecimal digit.
+     * @returns true if this byte is an ASCII hexadecimal digit, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiHex(): Bool
     
     /**
-    * Returns true if this Byte is in ASCII octal digit range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII octal digit.
+     * @returns true if this byte is an ASCII octal digit, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiOct(): Bool
     
     /**
-    * Return true if this Byte is in ASCII punctuation range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII punctuation character.
+     * @returns true if this byte is an ASCII punctuation character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiPunctuation(): Bool
     
     /**
-    * Return true if this Byte is in ASCII graphic character range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII graphic character.
+     * @returns true if this byte is an ASCII graphic character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiGraphic(): Bool
     
     /**
-    * Return true if this Byte is in ASCII control character range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII control character.
+     * @returns true if this byte is an ASCII control character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiControl(): Bool
     
     /**
-    * Return true if this Byte is in ASCII number or letter range.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this byte is an ASCII letter or number.
+     * @returns true if this byte is an ASCII letter or number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiNumberOrLetter(): Bool
     
-    /** Returns true if this Byte is in Lowercase Ascii letter range. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this byte is an ASCII lowercase letter.
+     * @returns true if this byte is an ASCII lowercase letter, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiLowerCase(): Bool
     
-    /** Returns true if this Byte is in Uppercase Ascii letter range. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this byte is an ASCII uppercase letter.
+     * @returns true if this byte is an ASCII uppercase letter, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiUpperCase(): Bool
     
-    /** Returns true if this Byte is in Ascii range. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this byte is an ASCII character.
+     * @returns true if this byte is an ASCII character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAscii(): Bool
     
-    /** 
-    * Returns true if this Byte is whitespace.
-    * whitespace include HT, LF, VT, FF, CR, SP
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this byte is an ASCII whitespace character.
+     * @returns true if this byte is an ASCII whitespace character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiWhiteSpace(): Bool
     
-    /** Returns the uppercase of this Byte. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this ASCII byte to uppercase.
+     * @returns The uppercase version of this ASCII byte.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiUpperCase(): Byte
     
-    /** Returns the lowercase of this Byte. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this ASCII byte to lowercase.
+     * @returns The lowercase version of this ASCII byte.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiLowerCase(): Byte
 }
 
 extend<T> CPointer<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this pointer is null.
+     * @returns true if this pointer is null, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNull(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this pointer is not null.
+     * @returns true if this pointer is not null, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNotNull(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this pointer to a UIntNative value.
+     * @returns The UIntNative representation of this pointer.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toUIntNative(): UIntNative
     
+    /**
+     * @description Reads the value pointed to by this pointer.
+     * @returns The value pointed to by this pointer.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe func read(): T
     
+    /**
+     * @description Writes a value to the location pointed to by this pointer.
+     * @param value The value to write.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe func write(value: T): Unit
     
     /**
-    * This interface does not check the correctness of the pointer.
-    * If the pointer is invalid, an undefined error occurs.
-    */
+     * @description Reads the value at the specified index from this pointer.
+     * @param idx The index to read from.
+     * @returns The value at the specified index.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe func read(idx: Int64): T
     
     /**
-    * This interface does not check the correctness of the pointer.
-    * If the pointer is invalid, an undefined error occurs.
-    */
+     * @description Writes a value at the specified index from this pointer.
+     * @param idx The index to write to.
+     * @param value The value to write.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe func write(idx: Int64, value: T): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Adds an offset to this pointer.
+     * @param offset The offset to add.
+     * @returns A new pointer with the offset added.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe operator func +(offset: Int64): CPointer<T>
     
+    /**
+     * @description Subtracts an offset from this pointer.
+     * @param offset The offset to subtract.
+     * @returns A new pointer with the offset subtracted.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe operator func -(offset: Int64): CPointer<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this pointer to a resource.
+     * @returns A CPointerResource wrapping this pointer.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func asResource(): CPointerResource<T>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A resource wrapper for a C pointer.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct CPointerResource<T> <: Resource where T <: CType {
-    @!APILevel[since: "22"]
+    /**
+     * @description The wrapped pointer value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let value: CPointer<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this resource is closed.
+     * @returns true if this resource is closed, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isClosed(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Closes this resource.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func close(): Unit
+}
+
+/**
+ * @description A marker interface for C types. This interface has no members.
+ */
+@!APILevel[
+    since: "22"
+]
+sealed interface CType {
 }
 
 extend CString <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the characters of this C string as a C pointer.
+     * @returns A C pointer to the characters of this C string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getChars(): CPointer<UInt8>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this C string is null.
+     * @returns true if this C string is null, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNull(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the size of this C string.
+     * @returns The size of this C string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func size(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this C string is empty.
+     * @returns true if this C string is empty, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this C string is not empty.
+     * @returns true if this C string is not empty, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNotEmpty(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this C string starts with the specified prefix.
+     * @param prefix The prefix to check for.
+     * @returns true if this C string starts with the prefix, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func startsWith(prefix: CString): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this C string ends with the specified suffix.
+     * @param suffix The suffix to check for.
+     * @returns true if this C string ends with the suffix, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func endsWith(suffix: CString): Bool
     
-    @!APILevel[since: "22"]
-    public func equals(rhs: CString): Bool
-    
-    @!APILevel[since: "22"]
-    public func equalsLower(rhs: CString): Bool
+    /**
+     * @description Checks if this C string equals the specified C string.
+     * @param other The C string to compare with.
+     * @returns true if this C string equals the rhs argument, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func equals(other: CString): Bool
     
     /**
-    * @throws IndexOutOfBoundsException if beginIndex is greater than the size of string.
-    * @throws IllegalMemoryException if memory malloc or memcpy_s fails.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this C string equals the specified C string ignoring case.
+     * @param other The C string to compare with.
+     * @returns true if this C string equals the rhs argument ignoring case, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func equalsLower(other: CString): Bool
+    
+    /**
+     * @description Creates a substring from this C string starting at the specified index.
+     * @param beginIndex The starting index.
+     * @returns A new C string containing the substring.
+     * @throws IllegalArgumentException if beginIndex is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func subCString(beginIndex: UIntNative): CString
     
-    /*
-    * @throws IndexOutOfBoundsException if beginIndex is greater than the size of string.
-    * @throws IllegalMemoryException if memory malloc or memcpy_s fails.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Creates a substring from this C string with the specified starting index and length.
+     * @param beginIndex The starting index.
+     * @param subLen The length of the substring.
+     * @returns A new C string containing the substring.
+     * @throws IllegalArgumentException if beginIndex or subLen is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func subCString(beginIndex: UIntNative, subLen: UIntNative): CString
     
-    /*
-    * @throws Exception if self is null or str is null
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Compares this C string with the specified C string.
+     * @param str The C string to compare with.
+     * @returns An Int32 indicating the result of the comparison.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func compare(str: CString): Int32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this C string to a String.
+     * @returns A String representation of this C string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this C string to a resource.
+     * @returns A CStringResource wrapping this C string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func asResource(): CStringResource
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A resource wrapper for a C string.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct CStringResource <: Resource {
-    @!APILevel[since: "22"]
+    /**
+     * @description The wrapped C string value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let value: CString
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this resource is closed.
+     * @returns true if this resource is closed, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isClosed(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Closes this resource.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func close(): Unit
 }
 
-// All types which can be used in C FFI implicitly implement the interface,// including Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, IntNative, UIntNative,// Float32, Float64, Bool, Unit, and all @C-modified structs.
+@!APILevel[
+    since: "22"
+]
 sealed interface CType {
 }
 
 extend Rune {
     /**
-    * Returns true if this Unicode character is an Ascii letter.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII letter.
+     * @returns true if this rune is an ASCII letter, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiLetter(): Bool
     
     /**
-    * Returns true if this Unicode character is an Ascii number.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII number.
+     * @returns true if this rune is an ASCII number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiNumber(): Bool
     
     /**
-    * Returns true if this this Rune is an Ascii hexadecimal number.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII hexadecimal digit.
+     * @returns true if this rune is an ASCII hexadecimal digit, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiHex(): Bool
     
     /**
-    * Returns true if this Rune is an ASCII octal number.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII octal digit.
+     * @returns true if this rune is an ASCII octal digit, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiOct(): Bool
     
     /**
-    * Return true if this Rune is an ASCII punctuation.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII punctuation character.
+     * @returns true if this rune is an ASCII punctuation character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiPunctuation(): Bool
     
     /**
-    * Return true if this Rune is an ASCII graphic character.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII graphic character.
+     * @returns true if this rune is an ASCII graphic character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiGraphic(): Bool
     
     /**
-    * Return true if this Rune is an ASCII control character.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII control character.
+     * @returns true if this rune is an ASCII control character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiControl(): Bool
     
     /**
-    * Return true if this Rune is an ASCII number or ASCII letter.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this rune is an ASCII letter or number.
+     * @returns true if this rune is an ASCII letter or number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiNumberOrLetter(): Bool
     
-    /** Returns true if this Unicode character is Lowercase. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this rune is an ASCII lowercase letter.
+     * @returns true if this rune is an ASCII lowercase letter, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiLowerCase(): Bool
     
-    /** Returns true if this Unicode character is Uppercase. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this rune is an ASCII uppercase letter.
+     * @returns true if this rune is an ASCII uppercase letter, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiUpperCase(): Bool
     
-    /** Returns true if this Unicode character is an Ascii code. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this rune is an ASCII character.
+     * @returns true if this rune is an ASCII character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAscii(): Bool
     
-    /** Returns true if this Unicode character is whitespace. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if this rune is an ASCII whitespace character.
+     * @returns true if this rune is an ASCII whitespace character, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiWhiteSpace(): Bool
     
-    /** Returns the uppercase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this ASCII rune to uppercase.
+     * @returns The uppercase version of this ASCII rune.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiUpperCase(): Rune
     
-    /** Returns the lowercase of this Unicode character. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts this ASCII rune to lowercase.
+     * @returns The lowercase version of this ASCII rune.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiLowerCase(): Rune
     
-    /*
-    * @throws IllegalArgumentException if `arr[index]` is an invalid utf8 leading code or
-    *         there is no valid utf8 code among `arr[0] ~ arr[index - 1]`.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the UTF-8 size of a rune in an array at the specified index.
+     * @param arr The array containing UTF-8 data.
+     * @param index The index in the array.
+     * @returns The UTF-8 size of the rune.
+     * @throws IllegalArgumentException if the UTF-8 data is invalid.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func utf8Size(arr: Array<UInt8>, index: Int64): Int64
     
+    /**
+     * @description Gets the UTF-8 size of the specified rune.
+     * @param c The rune.
+     * @returns The UTF-8 size of the rune.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func utf8Size(c: Rune): Int64
     
-    /*
-    * @throws IllegalArgumentException if arr[index] is an invalid utf8 code or
-    * there is no valid utf8 code among arr[0] ~ arr[index - 1].
-    */
+    /**
+     * @description Creates a rune from UTF-8 data in an array at the specified index.
+     * @param arr The array containing UTF-8 data.
+     * @param index The index in the array.
+     * @returns A tuple containing the rune and the number of bytes consumed.
+     * @throws IllegalArgumentException if the UTF-8 data is invalid.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func fromUtf8(arr: Array<UInt8>, index: Int64): (Rune, Int64)
     
-    /*
-    * @throws IllegalArgumentException if there is no valid utf8 code
-    *         among `arr[0] ~ arr[index - 1]`.
-    */
+    /**
+     * @description Gets the previous rune from UTF-8 data in an array at the specified index.
+     * @param arr The array containing UTF-8 data.
+     * @param index The index in the array.
+     * @returns A tuple containing the rune and the number of bytes consumed.
+     * @throws IllegalArgumentException if the UTF-8 data is invalid.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func getPreviousFromUtf8(arr: Array<UInt8>, index: Int64): (Rune, Int64)
     
-    /*
-    * @throws IllegalArgumentException if the character occupies a position beyond the array range
-    */
+    /**
+     * @description Converts a rune to UTF-8 data in an array at the specified index.
+     * @param c The rune to convert.
+     * @param arr The array to store the UTF-8 data.
+     * @param index The index in the array.
+     * @returns The number of bytes written.
+     * @throws IllegalArgumentException if index is invalid.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func intoUtf8Array(c: Rune, arr: Array<UInt8>, index: Int64): Int64
 }
 
 extend Rune <: Comparable<Rune> {
     /**
-    * Compare the relationship between two instance of Rune.
-    *
-    * @param rhs Instance of Rune compared with this.
-    * @return Value indicating the relationship between two instance of Rune.
-    *
-    * @since 0.27.3
-    */
-    @!APILevel[since: "22"]
-    public func compare(rhs: Rune): Ordering
+     * @description Compares this rune with the specified rune for order.
+     * @param other The rune to be compared.
+     * @returns An Ordering value indicating the relative order of the two runes.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Rune): Ordering
 }
 
 /**
-The root interface in the collection hierarchy.
-A collection represents a group of objects, known as its elements.
-Some collections allow duplicate elements and others do not.
-Some are ordered and others unordered.
-This interface is typically used to pass collections around and manipulate them where maximum generality is desired.
-*/
-@!APILevel[since: "22"]
+ * @description A collection of elements.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Collection<T> <: Iterable<T> {
-    // Returns the number of elements in this collection.
-    @!APILevel[since: "22"]
+    /**
+     * @description The size of the collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     prop size: Int64
     
-    // Returns true if this collection contains no elements.
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if the collection is empty.
+     * @returns true if the collection is empty, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isEmpty(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Converts the collection to an array.
+     * @returns An array containing the elements of the collection.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toArray(): Array<T>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description The ordering of two values.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum Ordering {
-    @!APILevel[since: "22"]
+    /**
+     * @description Less than.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     LT |
-    @!APILevel[since: "22"]
+    /**
+     * @description Greater than.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     GT |
-    @!APILevel[since: "22"]
+    /**
+     * @description Equal.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     EQ
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that can be compared with the less-than operator.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Less<T> {
-    @!APILevel[since: "22"]
-    operator func <(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "less than" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is less than the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func <(other: T): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that can be compared with the greater-than operator.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Greater<T> {
-    @!APILevel[since: "22"]
-    operator func >(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "greater than" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is greater than the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func >(other: T): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that can be compared with the less-than-or-equal operator.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface LessOrEqual<T> {
-    @!APILevel[since: "22"]
-    operator func <=(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "less than or equal to" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is less than or equal to the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func <=(other: T): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that can be compared with the greater-than-or-equal operator.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface GreaterOrEqual<T> {
-    @!APILevel[since: "22"]
-    operator func >=(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "greater than or equal to" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is greater than or equal to the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func >=(other: T): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that can be compared with ordering operations.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Comparable<T> <: Equatable<T> & Less<T> & Greater<T> & LessOrEqual<T> & GreaterOrEqual<T> {
-    @!APILevel[since: "22"]
-    func compare(that: T): Ordering
+    /**
+     * @description Compares this object with the specified object for order.
+     * @param other The object to be compared.
+     * @returns An Ordering value indicating the relative order of the two objects.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    func compare(other: T): Ordering
     
-    @!APILevel[since: "22"]
-    operator func ==(rhs: T): Bool
+    /**
+     * @description Indicates whether some other object is "equal to" this one.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is the same as the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func ==(other: T): Bool
     
-    @!APILevel[since: "22"]
-    operator func <(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "less than" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is less than the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func <(other: T): Bool
     
-    @!APILevel[since: "22"]
-    operator func >(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "greater than" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is greater than the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func >(other: T): Bool
     
-    @!APILevel[since: "22"]
-    operator func <=(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "less than or equal to" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is less than or equal to the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func <=(other: T): Bool
     
-    @!APILevel[since: "22"]
-    operator func >=(rhs: T): Bool
+    /**
+     * @description Indicates whether this object is "greater than or equal to" the specified object.
+     * @param other The reference object with which to compare.
+     * @returns True if this object is greater than or equal to the rhs argument; false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func >=(other: T): Bool
 }
 
 extend Ordering <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Ordering.
+     * @returns A string representation of this Ordering.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
-/**
-* The relationship between Orderings is: Ordering.LT < Ordering.EQ < Ordering.GT
-*/
 extend Ordering <: Comparable<Ordering> {
-    @!APILevel[since: "22"]
-    public func compare(that: Ordering): Ordering
+    /**
+     * @description Compares this Ordering with the specified Ordering for order.
+     * @param other The Ordering to be compared.
+     * @returns An Ordering value indicating the relative order of the two Ordering values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Ordering): Ordering
 }
 
 extend IntNative <: Comparable<IntNative> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: IntNative): Ordering
+    /**
+     * @description Compares this IntNative with the specified IntNative for order.
+     * @param other The IntNative to be compared.
+     * @returns An Ordering value indicating the relative order of the two IntNative values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: IntNative): Ordering
 }
 
 extend Int64 <: Comparable<Int64> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Int64): Ordering
+    /**
+     * @description Compares this Int64 with the specified Int64 for order.
+     * @param other The Int64 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Int64 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Int64): Ordering
     
+    /**
+     * @description Indicates whether this Int64 is "less than" the specified Int64.
+     * @param other The reference Int64 with which to compare.
+     * @returns True if this Int64 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Int64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Int64): Bool
     
+    /**
+     * @description Indicates whether this Int64 is "greater than" the specified Int64.
+     * @param other The reference Int64 with which to compare.
+     * @returns True if this Int64 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Int64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Int64): Bool
     
+    /**
+     * @description Indicates whether this Int64 is "less than or equal to" the specified Int64.
+     * @param other The reference Int64 with which to compare.
+     * @returns True if this Int64 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Int64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Int64): Bool
     
+    /**
+     * @description Indicates whether this Int64 is "greater than or equal to" the specified Int64.
+     * @param other The reference Int64 with which to compare.
+     * @returns True if this Int64 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Int64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Int64): Bool
     
+    /**
+     * @description Indicates whether some other Int64 is "equal to" this one.
+     * @param other The reference Int64 with which to compare.
+     * @returns True if this Int64 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Int64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Int64): Bool
     
+    /**
+     * @description Indicates whether some other Int64 is "not equal to" this one.
+     * @param other The reference Int64 with which to compare.
+     * @returns True if this Int64 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Int64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Int64): Bool
 }
 
 extend Int32 <: Comparable<Int32> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Int32): Ordering
+    /**
+     * @description Compares this Int32 with the specified Int32 for order.
+     * @param other The Int32 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Int32 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Int32): Ordering
     
+    /**
+     * @description Indicates whether this Int32 is "less than" the specified Int32.
+     * @param other The reference Int32 with which to compare.
+     * @returns True if this Int32 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Int32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Int32): Bool
     
+    /**
+     * @description Indicates whether this Int32 is "greater than" the specified Int32.
+     * @param other The reference Int32 with which to compare.
+     * @returns True if this Int32 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Int32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Int32): Bool
     
+    /**
+     * @description Indicates whether this Int32 is "less than or equal to" the specified Int32.
+     * @param other The reference Int32 with which to compare.
+     * @returns True if this Int32 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Int32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Int32): Bool
     
+    /**
+     * @description Indicates whether this Int32 is "greater than or equal to" the specified Int32.
+     * @param other The reference Int32 with which to compare.
+     * @returns True if this Int32 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Int32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Int32): Bool
     
+    /**
+     * @description Indicates whether some other Int32 is "equal to" this one.
+     * @param other The reference Int32 with which to compare.
+     * @returns True if this Int32 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Int32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Int32): Bool
     
+    /**
+     * @description Indicates whether some other Int32 is "not equal to" this one.
+     * @param other The reference Int32 with which to compare.
+     * @returns True if this Int32 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Int32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Int32): Bool
 }
 
 extend Int16 <: Comparable<Int16> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Int16): Ordering
+    /**
+     * @description Compares this Int16 with the specified Int16 for order.
+     * @param other The Int16 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Int16 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Int16): Ordering
     
+    /**
+     * @description Indicates whether this Int16 is "less than" the specified Int16.
+     * @param other The reference Int16 with which to compare.
+     * @returns True if this Int16 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Int16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Int16): Bool
     
+    /**
+     * @description Indicates whether this Int16 is "greater than" the specified Int16.
+     * @param other The reference Int16 with which to compare.
+     * @returns True if this Int16 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Int16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Int16): Bool
     
+    /**
+     * @description Indicates whether this Int16 is "less than or equal to" the specified Int16.
+     * @param other The reference Int16 with which to compare.
+     * @returns True if this Int16 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Int16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Int16): Bool
     
+    /**
+     * @description Indicates whether this Int16 is "greater than or equal to" the specified Int16.
+     * @param other The reference Int16 with which to compare.
+     * @returns True if this Int16 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Int16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Int16): Bool
     
+    /**
+     * @description Indicates whether some other Int16 is "equal to" this one.
+     * @param other The reference Int16 with which to compare.
+     * @returns True if this Int16 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Int16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Int16): Bool
     
+    /**
+     * @description Indicates whether some other Int16 is "not equal to" this one.
+     * @param other The reference Int16 with which to compare.
+     * @returns True if this Int16 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Int16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Int16): Bool
 }
 
 extend Int8 <: Comparable<Int8> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Int8): Ordering
+    /**
+     * @description Compares this Int8 with the specified Int8 for order.
+     * @param other The Int8 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Int8 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Int8): Ordering
     
+    /**
+     * @description Indicates whether this Int8 is "less than" the specified Int8.
+     * @param other The reference Int8 with which to compare.
+     * @returns True if this Int8 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Int8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Int8): Bool
     
+    /**
+     * @description Indicates whether this Int8 is "greater than" the specified Int8.
+     * @param other The reference Int8 with which to compare.
+     * @returns True if this Int8 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Int8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Int8): Bool
     
+    /**
+     * @description Indicates whether this Int8 is "less than or equal to" the specified Int8.
+     * @param other The reference Int8 with which to compare.
+     * @returns True if this Int8 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Int8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Int8): Bool
     
+    /**
+     * @description Indicates whether this Int8 is "greater than or equal to" the specified Int8.
+     * @param other The reference Int8 with which to compare.
+     * @returns True if this Int8 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Int8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Int8): Bool
     
+    /**
+     * @description Indicates whether some other Int8 is "equal to" this one.
+     * @param other The reference Int8 with which to compare.
+     * @returns True if this Int8 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Int8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Int8): Bool
     
+    /**
+     * @description Indicates whether some other Int8 is "not equal to" this one.
+     * @param other The reference Int8 with which to compare.
+     * @returns True if this Int8 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Int8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Int8): Bool
 }
 
 extend UIntNative <: Comparable<UIntNative> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: UIntNative): Ordering
+    /**
+     * @description Compares this UIntNative with the specified UIntNative for order.
+     * @param other The UIntNative to be compared.
+     * @returns An Ordering value indicating the relative order of the two UIntNative values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: UIntNative): Ordering
 }
 
 extend UInt64 <: Comparable<UInt64> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: UInt64): Ordering
+    /**
+     * @description Compares this UInt64 with the specified UInt64 for order.
+     * @param other The UInt64 to be compared.
+     * @returns An Ordering value indicating the relative order of the two UInt64 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: UInt64): Ordering
     
+    /**
+     * @description Indicates whether this UInt64 is "less than" the specified UInt64.
+     * @param other The reference UInt64 with which to compare.
+     * @returns True if this UInt64 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: UInt64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: UInt64): Bool
     
+    /**
+     * @description Indicates whether this UInt64 is "greater than" the specified UInt64.
+     * @param other The reference UInt64 with which to compare.
+     * @returns True if this UInt64 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: UInt64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: UInt64): Bool
     
+    /**
+     * @description Indicates whether this UInt64 is "less than or equal to" the specified UInt64.
+     * @param other The reference UInt64 with which to compare.
+     * @returns True if this UInt64 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: UInt64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: UInt64): Bool
     
+    /**
+     * @description Indicates whether this UInt64 is "greater than or equal to" the specified UInt64.
+     * @param other The reference UInt64 with which to compare.
+     * @returns True if this UInt64 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: UInt64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: UInt64): Bool
     
+    /**
+     * @description Indicates whether some other UInt64 is "equal to" this one.
+     * @param other The reference UInt64 with which to compare.
+     * @returns True if this UInt64 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: UInt64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: UInt64): Bool
     
+    /**
+     * @description Indicates whether some other UInt64 is "not equal to" this one.
+     * @param other The reference UInt64 with which to compare.
+     * @returns True if this UInt64 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: UInt64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: UInt64): Bool
 }
 
 extend UInt32 <: Comparable<UInt32> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: UInt32): Ordering
+    /**
+     * @description Compares this UInt32 with the specified UInt32 for order.
+     * @param other The UInt32 to be compared.
+     * @returns An Ordering value indicating the relative order of the two UInt32 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: UInt32): Ordering
     
+    /**
+     * @description Indicates whether this UInt32 is "less than" the specified UInt32.
+     * @param other The reference UInt32 with which to compare.
+     * @returns True if this UInt32 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: UInt32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: UInt32): Bool
     
+    /**
+     * @description Indicates whether this UInt32 is "greater than" the specified UInt32.
+     * @param other The reference UInt32 with which to compare.
+     * @returns True if this UInt32 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: UInt32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: UInt32): Bool
     
+    /**
+     * @description Indicates whether this UInt32 is "less than or equal to" the specified UInt32.
+     * @param other The reference UInt32 with which to compare.
+     * @returns True if this UInt32 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: UInt32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: UInt32): Bool
     
+    /**
+     * @description Indicates whether this UInt32 is "greater than or equal to" the specified UInt32.
+     * @param other The reference UInt32 with which to compare.
+     * @returns True if this UInt32 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: UInt32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: UInt32): Bool
     
+    /**
+     * @description Indicates whether some other UInt32 is "equal to" this one.
+     * @param other The reference UInt32 with which to compare.
+     * @returns True if this UInt32 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: UInt32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: UInt32): Bool
     
+    /**
+     * @description Indicates whether some other UInt32 is "not equal to" this one.
+     * @param other The reference UInt32 with which to compare.
+     * @returns True if this UInt32 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: UInt32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: UInt32): Bool
 }
 
 extend UInt16 <: Comparable<UInt16> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: UInt16): Ordering
+    /**
+     * @description Compares this UInt16 with the specified UInt16 for order.
+     * @param other The UInt16 to be compared.
+     * @returns An Ordering value indicating the relative order of the two UInt16 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: UInt16): Ordering
     
+    /**
+     * @description Indicates whether this UInt16 is "less than" the specified UInt16.
+     * @param other The reference UInt16 with which to compare.
+     * @returns True if this UInt16 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: UInt16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: UInt16): Bool
     
+    /**
+     * @description Indicates whether this UInt16 is "greater than" the specified UInt16.
+     * @param other The reference UInt16 with which to compare.
+     * @returns True if this UInt16 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: UInt16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: UInt16): Bool
     
+    /**
+     * @description Indicates whether this UInt16 is "less than or equal to" the specified UInt16.
+     * @param other The reference UInt16 with which to compare.
+     * @returns True if this UInt16 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: UInt16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: UInt16): Bool
     
+    /**
+     * @description Indicates whether this UInt16 is "greater than or equal to" the specified UInt16.
+     * @param other The reference UInt16 with which to compare.
+     * @returns True if this UInt16 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: UInt16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: UInt16): Bool
     
+    /**
+     * @description Indicates whether some other UInt16 is "equal to" this one.
+     * @param other The reference UInt16 with which to compare.
+     * @returns True if this UInt16 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: UInt16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: UInt16): Bool
     
+    /**
+     * @description Indicates whether some other UInt16 is "not equal to" this one.
+     * @param other The reference UInt16 with which to compare.
+     * @returns True if this UInt16 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: UInt16): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: UInt16): Bool
 }
 
 extend UInt8 <: Comparable<UInt8> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: UInt8): Ordering
+    /**
+     * @description Compares this UInt8 with the specified UInt8 for order.
+     * @param other The UInt8 to be compared.
+     * @returns An Ordering value indicating the relative order of the two UInt8 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: UInt8): Ordering
     
+    /**
+     * @description Indicates whether this UInt8 is "less than" the specified UInt8.
+     * @param other The reference UInt8 with which to compare.
+     * @returns True if this UInt8 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: UInt8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: UInt8): Bool
     
+    /**
+     * @description Indicates whether this UInt8 is "greater than" the specified UInt8.
+     * @param other The reference UInt8 with which to compare.
+     * @returns True if this UInt8 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: UInt8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: UInt8): Bool
     
+    /**
+     * @description Indicates whether this UInt8 is "less than or equal to" the specified UInt8.
+     * @param other The reference UInt8 with which to compare.
+     * @returns True if this UInt8 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: UInt8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: UInt8): Bool
     
+    /**
+     * @description Indicates whether this UInt8 is "greater than or equal to" the specified UInt8.
+     * @param other The reference UInt8 with which to compare.
+     * @returns True if this UInt8 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: UInt8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: UInt8): Bool
     
+    /**
+     * @description Indicates whether some other UInt8 is "equal to" this one.
+     * @param other The reference UInt8 with which to compare.
+     * @returns True if this UInt8 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: UInt8): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: UInt8): Bool
     
+    /**
+     * @description Indicates whether some other UInt8 is "not equal to" this one.
+     * @param other The reference UInt8 with which to compare.
+     * @returns True if this UInt8 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: UInt8): Bool
-}
-
-extend Float16 <: Comparable<Float16> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Float16): Ordering
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Float16): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Float16): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Float16): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Float16): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Float16): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Float16): Bool
-}
-
-extend Float32 <: Comparable<Float32> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Float32): Ordering
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Float32): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Float32): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Float32): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Float32): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Float32): Bool
-    
-    @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Float32): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: UInt8): Bool
 }
 
 extend Float64 <: Comparable<Float64> {
-    @!APILevel[since: "22"]
-    public func compare(rhs: Float64): Ordering
+    /**
+     * @description Compares this Float64 with the specified Float64 for order.
+     * @param other The Float64 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Float64 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Float64): Ordering
     
+    /**
+     * @description Indicates whether this Float64 is "less than" the specified Float64.
+     * @param other The reference Float64 with which to compare.
+     * @returns True if this Float64 is less than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <(rhs: Float64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Float64): Bool
     
+    /**
+     * @description Indicates whether this Float64 is "greater than" the specified Float64.
+     * @param other The reference Float64 with which to compare.
+     * @returns True if this Float64 is greater than the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >(rhs: Float64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Float64): Bool
     
+    /**
+     * @description Indicates whether this Float64 is "less than or equal to" the specified Float64.
+     * @param other The reference Float64 with which to compare.
+     * @returns True if this Float64 is less than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func <=(rhs: Float64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Float64): Bool
     
+    /**
+     * @description Indicates whether this Float64 is "greater than or equal to" the specified Float64.
+     * @param other The reference Float64 with which to compare.
+     * @returns True if this Float64 is greater than or equal to the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func >=(rhs: Float64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Float64): Bool
     
+    /**
+     * @description Indicates whether some other Float64 is "equal to" this one.
+     * @param other The reference Float64 with which to compare.
+     * @returns True if this Float64 is the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(rhs: Float64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Float64): Bool
     
+    /**
+     * @description Indicates whether some other Float64 is "not equal to" this one.
+     * @param other The reference Float64 with which to compare.
+     * @returns True if this Float64 is not the same as the rhs argument; false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(rhs: Float64): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Float64): Bool
 }
 
+extend Float32 <: Comparable<Float32> {
+    /**
+     * @description Compares this Float32 with the specified Float32 for order.
+     * @param other The Float32 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Float32 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Float32): Ordering
+    
+    /**
+     * @description Indicates whether this Float32 is "less than" the specified Float32.
+     * @param other The reference Float32 with which to compare.
+     * @returns True if this Float32 is less than the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Float32): Bool
+    
+    /**
+     * @description Indicates whether this Float32 is "greater than" the specified Float32.
+     * @param other The reference Float32 with which to compare.
+     * @returns True if this Float32 is greater than the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Float32): Bool
+    
+    /**
+     * @description Indicates whether this Float32 is "less than or equal to" the specified Float32.
+     * @param other The reference Float32 with which to compare.
+     * @returns True if this Float32 is less than or equal to the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Float32): Bool
+    
+    /**
+     * @description Indicates whether this Float32 is "greater than or equal to" the specified Float32.
+     * @param other The reference Float32 with which to compare.
+     * @returns True if this Float32 is greater than or equal to the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Float32): Bool
+    
+    /**
+     * @description Indicates whether some other Float32 is "equal to" this one.
+     * @param other The reference Float32 with which to compare.
+     * @returns True if this Float32 is the same as the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Float32): Bool
+    
+    /**
+     * @description Indicates whether some other Float32 is "not equal to" this one.
+     * @param other The reference Float32 with which to compare.
+     * @returns True if this Float32 is not the same as the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Float32): Bool
+}
+
+extend Float16 <: Comparable<Float16> {
+    /**
+     * @description Compares this Float16 with the specified Float16 for order.
+     * @param other The Float16 to be compared.
+     * @returns An Ordering value indicating the relative order of the two Float16 values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Float16): Ordering
+    
+    /**
+     * @description Indicates whether this Float16 is "less than" the specified Float16.
+     * @param other The reference Float16 with which to compare.
+     * @returns True if this Float16 is less than the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <(other: Float16): Bool
+    
+    /**
+     * @description Indicates whether this Float16 is "greater than" the specified Float16.
+     * @param other The reference Float16 with which to compare.
+     * @returns True if this Float16 is greater than the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >(other: Float16): Bool
+    
+    /**
+     * @description Indicates whether this Float16 is "less than or equal to" the specified Float16.
+     * @param other The reference Float16 with which to compare.
+     * @returns True if this Float16 is less than or equal to the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func <=(other: Float16): Bool
+    
+    /**
+     * @description Indicates whether this Float16 is "greater than or equal to" the specified Float16.
+     * @param other The reference Float16 with which to compare.
+     * @returns True if this Float16 is greater than or equal to the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func >=(other: Float16): Bool
+    
+    /**
+     * @description Indicates whether some other Float16 is "equal to" this one.
+     * @param other The reference Float16 with which to compare.
+     * @returns True if this Float16 is the same as the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Float16): Bool
+    
+    /**
+     * @description Indicates whether some other Float16 is "not equal to" this one.
+     * @param other The reference Float16 with which to compare.
+     * @returns True if this Float16 is not the same as the rhs argument; false otherwise.
+     */
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Float16): Bool
+}
+
+/**
+ * @description Returns the maximum of the given values.
+ * @param a The first value.
+ * @param b The second value.
+ * @param others Additional values to compare.
+ * @returns The maximum value among all the given values.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func max<T>(a: T, b: T, others: Array<T>): T where T <: Comparable<T>
 
+/**
+ * @description Returns the minimum of the given values.
+ * @param a The first value.
+ * @param b The second value.
+ * @param others Additional values to compare.
+ * @returns The minimum value among all the given values.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func min<T>(a: T, b: T, others: Array<T>): T where T <: Comparable<T>
 
 /**
-* Countable interface
-*/
-@!APILevel[since: "22"]
+ * @description Interface for types that can be counted.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Countable<T> {
-    /** Returns the sum of two instances of type T. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func next(right: Int64): T
     
-    /** Returns the Int64 type of the instance. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func position(): Int64
 }
 
 extend IntNative <: Countable<IntNative> {
-    @OverflowWrapping
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next IntNative value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next IntNative value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): IntNative
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend Int64 <: Countable<Int64> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next Int64 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next Int64 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): Int64
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend Int32 <: Countable<Int32> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next Int32 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next Int32 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): Int32
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend Int16 <: Countable<Int16> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next Int16 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next Int16 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): Int16
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend Int8 <: Countable<Int8> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next Int8 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next Int8 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): Int8
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend UIntNative <: Countable<UIntNative> {
-    @OverflowWrapping
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next UIntNative value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next UIntNative value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): UIntNative
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend UInt64 <: Countable<UInt64> {
-    @OverflowWrapping
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next UInt64 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next UInt64 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): UInt64
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend UInt32 <: Countable<UInt32> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next UInt32 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next UInt32 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): UInt32
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend UInt16 <: Countable<UInt16> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next UInt16 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next UInt16 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): UInt16
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend UInt8 <: Countable<UInt8> {
-    @!APILevel[since: "22"]
-    public func position(): Int64
-    
-    @OverflowWrapping
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the next UInt8 value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next UInt8 value in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): UInt8
+    
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func position(): Int64
 }
 
 extend Rune <: Countable<Rune> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the current position in the sequence.
+     * @returns The current position in the sequence.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func position(): Int64
     
+    /**
+     * @description Gets the next Rune value in the sequence.
+     * @param right The right bound of the sequence.
+     * @returns The next Rune value in the sequence.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func next(right: Int64): Rune
 }
 
 /**
-* Duration is used to represent a time interval with a minimum precision of nanoseconds.
-* Duration can be expressed in the range of Duration.Min to Duration.Max.( [-2^63, 2^63-1) in seconds)
-* Duration provides some common related methods, including static member instances of some common time intervals,
-* calculation and comparison methods of time intervals, and the like.
-*/
-@!APILevel[since: "22"]
+ * @description Represents a duration of time with nanosecond precision.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct Duration <: ToString & Hashable & Comparable<Duration> {
-    /*
-    * Duration for 1 nanosecond.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one nanosecond.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const nanosecond: Duration = Duration(0, 1)
     
-    /*
-    * Duration for 1 microsecond.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one microsecond.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const microsecond: Duration = Duration(0, 1000u32)
     
-    /*
-    * Duration for 1 millisecond.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one millisecond.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const millisecond: Duration = Duration(0, 1000000u32)
     
-    /*
-    * Duration for 1 second.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one second.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const second: Duration = Duration(1, 0)
     
-    /*
-    * Duration for 1 minute.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one minute.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const minute: Duration = Duration(SECS_PER_MINUTE, 0)
     
-    /*
-    * Duration for 1 hour.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one hour.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const hour: Duration = Duration(SECS_PER_HOUR, 0)
     
-    /*
-    * Duration for 1 day.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of one day.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const day: Duration = Duration(SECS_PER_DAY, 0)
     
-    /*
-    * Duration for 0 nanosecond.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description A duration of zero.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const Zero: Duration = Duration(0, 0)
     
-    /*
-    * Duration for 2^63-1 seconds with 999,999,999 nanoseconds.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const Max: Duration = Duration(MAX_INT64, MAX_NANOSECOND)
     
-    /*
-    * Duration for -2^63 seconds.
-    */
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const Min: Duration = Duration(MIN_INT64, 0)
     
     /**
-    * Obtain the integer size of the current Duration instance in nanoseconds.
-    *
-    * @return Int64 - Integer size in nanoseconds, rounded up to the smaller absolute value.
-    *
-    * @throws ArithmeticException - if the duration in nanosecond exceeds the range of 'Int64'.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to nanoseconds.
+     * @returns The number of nanoseconds in this duration.
+     * @throws ArithmeticException if the conversion would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toNanoseconds(): Int64
     
     /**
-    * Obtain the integer size of the current Duration instance in microseconds.
-    *
-    * @return Int64 - Integer size in microseconds, rounded up to the smaller absolute value.
-    *
-    * @throws ArithmeticException - if the duration in microsecond exceeds the range of 'Int64'.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to microseconds.
+     * @returns The number of microseconds in this duration.
+     * @throws ArithmeticException if the conversion would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toMicroseconds(): Int64
     
     /**
-    * Obtain the integer size of the current Duration instance in milliseconds.
-    *
-    * @return Int64 - Integer size in milliseconds, rounded up to the smaller absolute value.
-    *
-    * @throws ArithmeticException - if the duration in millisecond exceeds the range of 'Int64'.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to milliseconds.
+     * @returns The number of milliseconds in this duration.
+     * @throws ArithmeticException if the conversion would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func toMilliseconds(): Int64
     
     /**
-    * Obtain the integer size of the current Duration instance in seconds.
-    *
-    * @return Int64 - Integer size in seconds, rounded up to the smaller absolute value.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to seconds.
+     * @returns The number of seconds in this duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toSeconds(): Int64
     
     /**
-    * Obtain the integer size of the current Duration instance in minutes.
-    *
-    * @return Int64 - Integer size in minutes, rounded up to the smaller absolute value.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to minutes.
+     * @returns The number of minutes in this duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toMinutes(): Int64
     
     /**
-    * Obtain the integer size of the current Duration instance in hours.
-    *
-    * @return Int64 - Integer size in hours, rounded up to the smaller absolute value.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to hours.
+     * @returns The number of hours in this duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toHours(): Int64
     
     /**
-    * Obtain the integer size of the current Duration instance in days.
-    *
-    * @return Int64 - Integer size in days, rounded up to the smaller absolute value.
-    */
-    @!APILevel[since: "22"]
+     * @description Converts this duration to days.
+     * @returns The number of days in this duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toDays(): Int64
     
     /**
-    * Obtain the string representation of the current Duration instance.
-    *
-    * @return String - The string representation of Duration
-    *
-    * The format is as follows: "1d2h3m4s5ms6us7ns".
-    * If the value of a unit is 0, this item is omitted.
-    * when the value of all units is 0, "0s" is returned.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a string representation of this duration.
+     * @returns A string representation of this duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
     /**
-    * Obtain the hash value of the current Duration instance.
-    *
-    * @return Int64 - Hash value of the current Duration instance.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns a hash code value for this duration.
+     * @returns A hash code value for this duration.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
     /**
-    * Obtain the duration instance for the absolute value of the interval of the current duration instance.
-    *
-    * @return Duration - The duration instance for the absolute value of the interval of the current instance.
-    *
-    * @throws ArithmeticException - If the absolute value is out of range for 'Duration'.
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the absolute value of this duration.
+     * @returns The absolute value of this duration.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func abs(): Duration
     
     /**
-    * Add with another duration.
-    *
-    * @param r - Another duration.
-    * @return Duration - New duration instance after addition.
-    *
-    * @throws ArithmeticException - If the sum in nanoseconds is out of range for 'Duration'.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Adds another duration to this duration.
+     * @param r The duration to add.
+     * @returns The sum of the two durations.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func +(r: Duration): Duration
     
     /**
-    * Subtract another duration.
-    *
-    * @param r - Another duration.
-    * @return Duration - New duration instance after subtraction.
-    *
-    * @throws ArithmeticException - If the subtracted Value in nanoseconds is out of range for 'Duration'.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Subtracts another duration from this duration.
+     * @param r The duration to subtract.
+     * @returns The difference of the two durations.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func -(r: Duration): Duration
     
     /**
-    * Multiply by the specified 'Int64' value.
-    *
-    * @param r - The specified 'Int64' value to multiply.
-    * @return Duration - New duration instance after multiplication.
-    *
-    * @throws ArithmeticException If the multiplied value in nanoseconds is out of range for 'Duration'.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Multiplies this duration by an integer.
+     * @param r The integer to multiply by.
+     * @returns The product of this duration and the integer.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func *(r: Int64): Duration
     
     /**
-    * Multiply by the specified 'Float64' value.
-    *
-    * @param r - The specified 'Float64' value to multiply.
-    * @return Duration - New duration instance after multiplication.
-    *
-    * @throws IllegalArgumentException - If the value of @p r is NaN(not a number).
-    * @throws ArithmeticException - If the multiplied value in nanoseconds is out of range for 'Duration'.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Multiplies this duration by a Float64.
+     * @param r The Float64 to multiply by.
+     * @returns The product of this duration and the Float64.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func *(r: Float64): Duration
     
     /**
-    * Divide by the specified 'Int64' value.
-    *
-    * @param r - the specified 'Int64' value.
-    * @return Duration - New instance after division.
-    *
-    * @throws IllegalArgumentException - If the value of @p r is 0.
-    * @throws ArithmeticException - If the divided value in nanoseconds is out of range for 'Duration'.
-    */
-    @!APILevel[since: "22"]
+     * @description Divides this duration by an integer.
+     * @param r The integer to divide by.
+     * @returns The quotient of this duration and the integer.
+     * @throws ArithmeticException if the operation would overflow.
+     * @throws IllegalArgumentException if the divisor is zero.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func /(r: Int64): Duration
     
     /**
-    * Divide by the specified 'Float64' value.
-    *
-    * @param r - the specified 'Float64' value.
-    * @return Duration - New instance after division.
-    *
-    * @throws IllegalArgumentException - If the value of @p r is 0 or NaN(not a number).
-    * @throws ArithmeticException - If the divided value in nanoseconds is out of the range for 'Duration'.
-    */
-    @!APILevel[since: "22"]
+     * @description Divides this duration by a Float64.
+     * @param r The Float64 to divide by.
+     * @returns The quotient of this duration and the Float64.
+     * @throws ArithmeticException if the operation would overflow.
+     * @throws IllegalArgumentException if the divisor is zero.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func /(r: Float64): Duration
     
     /**
-    * Divide by another duration.
-    *
-    * @param r - Another duration.
-    * @return Float64 - The divided 'Float64' value.
-    *
-    * @throws IllegalArgumentException - If @p r is Duration.Zero.
-    */
-    @!APILevel[since: "22"]
+     * @description Divides this duration by another duration.
+     * @param r The duration to divide by.
+     * @returns The quotient of the two durations.
+     * @throws IllegalArgumentException if the divisor is zero.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func /(r: Duration): Float64
     
     /**
-    * Report whether it is equal to another Duration.
-    *
-    * @param r another duration.
-    * @return true if equal @p r, otherwise false.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this duration is equal to another duration.
+     * @param r The duration to compare with.
+     * @returns true if the durations are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func ==(r: Duration): Bool
     
     /**
-    * Report whether it is not equal to another Duration.
-    *
-    * @param r another duration.
-    * @return true if not equal @p r, otherwise false.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this duration is not equal to another duration.
+     * @param r The duration to compare with.
+     * @returns true if the durations are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func !=(r: Duration): Bool
     
     /**
-    * Report whether it is greater than or equal to another Duration.
-    *
-    * @param r another duration.
-    * @return true if greater than or equal to @p r, otherwise false.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this duration is greater than or equal to another duration.
+     * @param r The duration to compare with.
+     * @returns true if this duration is greater than or equal to the other duration, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func >=(r: Duration): Bool
     
     /**
-    * Report whether it is greater than another Duration.
-    *
-    * @param r another duration.
-    * @return true if greater than @p r, otherwise false.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this duration is greater than another duration.
+     * @param r The duration to compare with.
+     * @returns true if this duration is greater than the other duration, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func >(r: Duration): Bool
     
     /**
-    * Report whether it is less than or equal to another Duration.
-    *
-    * @param r another duration.
-    * @return true if less than or equal to @p r, otherwise false.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this duration is less than or equal to another duration.
+     * @param r The duration to compare with.
+     * @returns true if this duration is less than or equal to the other duration, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func <=(r: Duration): Bool
     
     /**
-    * Report whether it is less than another Duration.
-    *
-    * @param r another duration.
-    * @return true if less than @p r, otherwise false.
-    *
-    * @since 0.18.2
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this duration is less than another duration.
+     * @param r The duration to compare with.
+     * @returns true if this duration is less than the other duration, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public operator func <(r: Duration): Bool
     
     /**
-    * Compare the relationship between the current duration instance and another duration instance.
-    *
-    * @param rhs - Another duration instance for comparison
-    * @return Ordering - Indicating the relationship between two duration instances.
-    */
-    @!APILevel[since: "22"]
-    public func compare(rhs: Duration): Ordering
+     * @description Compares this duration with another duration for order.
+     * @param other The duration to be compared.
+     * @returns An Ordering value indicating the relative order of the two durations.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public func compare(other: Duration): Ordering
 }
 
 extend Int64 {
     /**
-    * Multiply by a duration Instance.
-    *
-    * @param r - a duration Instance.
-    * @return Duration - New duration instance after multiplication.
-    *
-    * @throws ArithmeticException - If the multiplied value in nanoseconds is out of range for 'Duration'.
-    */
-    @!APILevel[since: "22"]
+     * @description Multiplies this Int64 by a Duration.
+     * @param r The Duration to multiply by.
+     * @returns The product of this Int64 and the Duration.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func *(r: Duration): Duration
 }
 
 extend Float64 {
     /**
-    * Multiply by a duration Instance.
-    *
-    * @param r - a duration Instance.
-    * @return Duration - New duration instance after multiplication.
-    *
-    * @throws ArithmeticException - If the multiplied value in nanoseconds is out of range for 'Duration'.
-    */
-    @!APILevel[since: "22"]
+     * @description Multiplies this Float64 by a Duration.
+     * @param r The Duration to multiply by.
+     * @returns The product of this Float64 and the Duration.
+     * @throws ArithmeticException if the operation would overflow.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator func *(r: Duration): Duration
 }
-
 
 
 /**
-* Endianness, also known as byte order.
-*
-*/
-@!APILevel[since: "22"]
+ * @description Represents the endianness of data representation.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum Endian {
-    @!APILevel[since: "22"]
-    Big |
-    @!APILevel[since: "22"]
-    Little
     /**
-    * Get the endianness of the current running platform.
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Big endian - most significant byte first.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    Big |
+    /**
+     * @description Little endian - least significant byte first.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    Little
+    
+    /**
+     * @description The endianness of the current platform.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Platform: Endian
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that support equality comparison.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Equal<T> {
-    @!APILevel[since: "22"]
-    operator func ==(rhs: T): Bool
+    /**
+     * @description Checks if this object is equal to another object.
+     * @param other The object to compare with.
+     * @returns true if the objects are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func ==(other: T): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that support inequality comparison.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface NotEqual<T> {
-    @!APILevel[since: "22"]
-    operator func !=(rhs: T): Bool
+    /**
+     * @description Checks if this object is not equal to another object.
+     * @param other The object to compare with.
+     * @returns true if the objects are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func !=(other: T): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that support both equality and inequality comparison.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Equatable<T> <: Equal<T> & NotEqual<T> {
-    @!APILevel[since: "22"]
-    operator func !=(rhs: T): Bool
+    /**
+     * @description Checks if this object is not equal to another object.
+     * @param other The object to compare with.
+     * @returns true if the objects are not equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    operator func !=(other: T): Bool
 }
+
 
 
 extend<T> Range<T> <: Equatable<Range<T>> where T <: Countable<T> & Comparable<T> & Equatable<T> {
-    @!APILevel[since: "22"]
-    public operator func ==(that: Range<T>): Bool
+    /**
+     * @description Checks if this range is equal to another range.
+     * @param other The range to compare with.
+     * @returns true if the ranges are equal, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Range<T>): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description The base class for all error types.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class Error <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description The error message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open prop message: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this error.
+     * @returns A string representation of this error.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open func toString(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Prints the stack trace of this error to the standard error stream.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open func printStackTrace(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the stack trace message of this error.
+     * @returns The stack trace message of this error.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open func getStackTraceMessage(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the stack trace elements of this error.
+     * @returns An array of stack trace elements.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getStackTrace(): Array<StackTraceElement>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description The base class for all exception types.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class Exception <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new Exception with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new Exception with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The exception message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open prop message: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this exception.
+     * @returns A string representation of this exception.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public open func toString(): String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Prints the stack trace of this exception to the standard error stream.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func printStackTrace(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the stack trace elements of this exception.
+     * @returns An array of stack trace elements.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func getStackTrace(): Array<StackTraceElement>
 }
 
 extend Float64 {
     /**
-    * @brief Convert from IEEE 754 binary value to Float64 value
-    * @param bits, IEEE 754 binary representation of value
-    * @return Float64 value
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a Float64 from its bit representation.
+     * @param bits The bit representation.
+     * @returns A Float64 with the specified bit representation.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromBits(bits: UInt64): Float64
     
     /**
-    * @brief Convert a Float64 value to an IEEE 754 binary representation
-    *
-    * @return UInt64 The value represented by the IEEE 754 binary bit representation
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the bit representation of this Float64.
+     * @returns The bit representation of this Float64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toBits(): UInt64
 }
 
 extend Float32 {
     /**
-    * @brief Convert from IEEE 754 binary value to Float32 value
-    * @param bits, IEEE 754 binary representation of value
-    * @return Float32 value
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a Float32 from its bit representation.
+     * @param bits The bit representation.
+     * @returns A Float32 with the specified bit representation.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromBits(bits: UInt32): Float32
     
     /**
-    * @brief Convert a Float32 value to an IEEE 754 binary representation
-    *
-    * @return UInt64 The value represented by the IEEE 754 binary bit representation
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the bit representation of this Float32.
+     * @returns The bit representation of this Float32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toBits(): UInt32
 }
 
 extend Float16 {
     /**
-    * @brief Convert from IEEE 754 binary value to Float16 value
-    * @param bits, IEEE 754 binary representation of value
-    * @return Float16 value
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Creates a Float16 from its bit representation.
+     * @param bits The bit representation.
+     * @returns A Float16 with the specified bit representation.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromBits(bits: UInt16): Float16
     
     /**
-    * @brief Convert a Float16 value to an IEEE 754 binary representation
-    *
-    * @return UInt64 The value represented by the IEEE 754 binary bit representation
-    *
-    */
-    @!APILevel[since: "22"]
+     * @description Returns the bit representation of this Float16.
+     * @returns The bit representation of this Float16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toBits(): UInt16
 }
 
 
 
 
-@!APILevel[since: "22"]
+
+
+
+/**
+ * @description Represents the result of an asynchronous computation. This class provides methods to check if the computation is complete, to wait for its completion, and to retrieve the result of the computation.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Future<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The thread on which this future is running.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop thread: Thread
     
     /**
-    * Blocking the current thread,
-    * waiting for the result of the thread corresponding to this Future<T> object.
-    * @throws Exception or Error if an exception occurs in the corresponding thread.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the result of the computation, blocking if necessary.
+     * @returns The result of the computation.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func get(): T
     
     /**
-    * Non-blocking method that immediately returns None if thread has not finished execution.
-    * Returns the computed result otherwise.
-    * @throws Exception or Error if an exception occurs in the corresponding thread.
-    */
-    @!APILevel[since: "22"]
+     * @description Attempts to get the result of the computation without blocking.
+     * @returns Some(value) if the computation is complete, None otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func tryGet(): Option<T>
     
     /**
-    * Blocking the current thread,
-    * waiting for the result of the thread corresponding to this Future<T> object.
-    * If the corresponding thread has not completed execution within `ns` nanoseconds,
-    * the method will return `Option<T>.None`.
-    * If `ns <= 0`, same as `get()`.
-    * @throws Exception or Error if an exception occurs in the corresponding thread.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the result of the computation, waiting up to the specified timeout.
+     * @param timeout The maximum time to wait.
+     * @returns The result of the computation.
+     * @throws TimeoutException if the timeout expires before the computation completes.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func get(timeout: Duration): T
     
     /**
-    * Mark the current future as cancelled.
-    * Send a termination request to its executing thread.
-    */
-    @!APILevel[since: "22"]
+     * @description Cancels the computation.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func cancel(): Unit
 }
 
 /**
-* The optional argument type of the `spawn` expression.
-* Specific derived types of `ThreadContext` could affect the behavior of the thread at runtime.
-* Only for `MainThreadContext` by now.
-*/
-@!APILevel[since: "22"]
+ * @description Represents the context of a thread.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ThreadContext {
-    @!APILevel[since: "22"]
+    /**
+     * @description Ends the thread context.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func end(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if the thread context has ended.
+     * @returns true if the thread context has ended, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func hasEnded(): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that can be hashed.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the object.
+     * @returns A hash code value for this object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func hashCode(): Int64
 }
 
-/**
-* The hashcode is defined as: 3 for Ordering.GT, 2 for Ordering.EQ, 1 for Ordering.LT
-*/
 extend Ordering <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Ordering value.
+     * @returns A hash code value for this Ordering value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 extend Unit <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Unit value.
+     * @returns A hash code value for this Unit value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 extend Bool <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Bool value.
+     * @returns A hash code value for this Bool value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 extend Rune <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Rune value.
+     * @returns A hash code value for this Rune value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 extend IntNative <: Hashable {
+    /**
+     * @description Returns a hash code value for the IntNative value.
+     * @returns A hash code value for this IntNative value.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of IntNative.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: IntNative
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of IntNative.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: IntNative
 }
 
 extend Int64 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Int64 value.
+     * @returns A hash code value for this Int64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of Int64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of Int64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Int64
 }
 
 extend Int32 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Int32 value.
+     * @returns A hash code value for this Int32 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of Int32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Int32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of Int32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Int32
 }
 
 extend Int16 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Int16 value.
+     * @returns A hash code value for this Int16 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of Int16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Int16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of Int16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Int16
 }
 
 extend Int8 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Int8 value.
+     * @returns A hash code value for this Int8 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of Int8.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Int8
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of Int8.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Int8
 }
 
 extend UIntNative <: Hashable {
+    /**
+     * @description Returns a hash code value for the UIntNative value.
+     * @returns A hash code value for this UIntNative value.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of UIntNative.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: UIntNative
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of UIntNative.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: UIntNative
 }
 
 extend UInt64 <: Hashable {
+    /**
+     * @description Returns a hash code value for the UInt64 value.
+     * @returns A hash code value for this UInt64 value.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of UInt64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: UInt64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of UInt64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: UInt64
 }
 
 extend UInt32 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the UInt32 value.
+     * @returns A hash code value for this UInt32 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of UInt32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: UInt32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of UInt32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: UInt32
 }
 
 extend UInt16 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the UInt16 value.
+     * @returns A hash code value for this UInt16 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of UInt16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: UInt16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of UInt16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: UInt16
 }
 
 extend UInt8 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the UInt8 value.
+     * @returns A hash code value for this UInt8 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum value of UInt8.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: UInt8
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum value of UInt8.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: UInt8
 }
 
 extend Float64 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Float64 value.
+     * @returns A hash code value for this Float64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Represents a "Not a Number" value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop NaN: Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Represents positive infinity.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Inf: Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum finite value of Float64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum finite value of Float64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum positive denormalized value of Float64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop MinDenormal: Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum positive normalized value of Float64.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop MinNormal: Float64
     
     /**
-    * If the value of @p Float64 is Positive Infinity or Negative Infinity,
-    * true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float64 is Positive Infinity or Negative Infinity.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float64 is positive or negative infinity.
+     * @returns true if this Float64 is positive or negative infinity, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isInf(): Bool
     
     /**
-    * If the value of @p Float64 is nan, true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float64 is nan.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float64 is NaN (Not a Number).
+     * @returns true if this Float64 is NaN, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNaN(): Bool
     
     /**
-    * If the value of @p Float64 is a normal floating-point number,
-    * true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float64 is a normal floating-point number.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float64 is a normal number (not NaN, infinity, or zero).
+     * @returns true if this Float64 is a normal number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNormal(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the maximum of the given Float64 values.
+     * @param a The first value.
+     * @param b The second value.
+     * @param others Additional values to compare.
+     * @returns The maximum value among all the given values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func max(a: Float64, b: Float64, others: Array<Float64>): Float64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the minimum of the given Float64 values.
+     * @param a The first value.
+     * @param b The second value.
+     * @param others Additional values to compare.
+     * @returns The minimum value among all the given values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func min(a: Float64, b: Float64, others: Array<Float64>): Float64
 }
 
 extend Float32 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Float32 value.
+     * @returns A hash code value for this Float32 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Represents a "Not a Number" value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop NaN: Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Represents positive infinity.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Inf: Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum finite value of Float32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum finite value of Float32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum positive denormalized value of Float32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop MinDenormal: Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum positive normalized value of Float32.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop MinNormal: Float32
     
     /**
-    * If the value of @p Float32 is Positive Infinity or Negative Infinity,
-    * true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float32 is Positive Infinity or Negative Infinity.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float32 is positive or negative infinity.
+     * @returns true if this Float32 is positive or negative infinity, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isInf(): Bool
     
     /**
-    * If the value of @p Float32 is nan, true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float32 is nan.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float32 is NaN (Not a Number).
+     * @returns true if this Float32 is NaN, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNaN(): Bool
     
     /**
-    * If the value of @p Float32 is a normal floating-point number,
-    * true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float32 is a normal floating-point number.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float32 is a normal number (not NaN, infinity, or zero).
+     * @returns true if this Float32 is a normal number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNormal(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the maximum of the given Float32 values.
+     * @param a The first value.
+     * @param b The second value.
+     * @param others Additional values to compare.
+     * @returns The maximum value among all the given values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func max(a: Float32, b: Float32, others: Array<Float32>): Float32
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the minimum of the given Float32 values.
+     * @param a The first value.
+     * @param b The second value.
+     * @param others Additional values to compare.
+     * @returns The minimum value among all the given values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func min(a: Float32, b: Float32, others: Array<Float32>): Float32
 }
 
 extend Float16 <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Float16 value.
+     * @returns A hash code value for this Float16 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Represents a "Not a Number" value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop NaN: Float16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Represents positive infinity.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Inf: Float16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The maximum finite value of Float16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Max: Float16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum finite value of Float16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop Min: Float16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum positive denormalized value of Float16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop MinDenormal: Float16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The minimum positive normalized value of Float16.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop MinNormal: Float16
     
     /**
-    * If the value of @p Float16 is Positive Infinity or Negative Infinity,
-    * true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float16 is Positive Infinity or Negative Infinity.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float16 is positive or negative infinity.
+     * @returns true if this Float16 is positive or negative infinity, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isInf(): Bool
     
     /**
-    * If the value of Float16 is nan, true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float16 is nan.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float16 is NaN (Not a Number).
+     * @returns true if this Float16 is NaN, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNaN(): Bool
     
     /**
-    * If the value of @p Float16 is a normal floating-point number,
-    * true is returned. Otherwise, false is returned.
-    *
-    * @return true if @p Float16 is a normal floating-point number.
-    *
-    * @since 0.17.4
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this Float16 is a normal number (not NaN, infinity, or zero).
+     * @returns true if this Float16 is a normal number, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func isNormal(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the maximum of the given Float16 values.
+     * @param a The first value.
+     * @param b The second value.
+     * @param others Additional values to compare.
+     * @returns The maximum value among all the given values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func max(a: Float16, b: Float16, others: Array<Float16>): Float16
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the minimum of the given Float16 values.
+     * @param a The first value.
+     * @param b The second value.
+     * @param others Additional values to compare.
+     * @returns The minimum value among all the given values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func min(a: Float16, b: Float16, others: Array<Float16>): Float16
 }
 
 extend<T> Range<T> <: Hashable where T <: Hashable & Countable<T> & Comparable<T> & Equatable<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for the Range.
+     * @returns A hash code value for this Range.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Provides a universal interface for hash algorithms. Implementations of this interface can be used to compute hash values for data.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Hasher {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the final hash value.
+     * @returns The final hash value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func finish(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Resets the hasher to its initial state.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func reset(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Bool value to the hasher.
+     * @param value The Bool value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Bool): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Rune value to the hasher.
+     * @param value The Rune value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Rune): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int8 value to the hasher.
+     * @param value The Int8 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Int8): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int16 value to the hasher.
+     * @param value The Int16 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Int16): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int32 value to the hasher.
+     * @param value The Int32 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Int32): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int64 value to the hasher.
+     * @param value The Int64 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Int64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt8 value to the hasher.
+     * @param value The UInt8 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: UInt8): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt16 value to the hasher.
+     * @param value The UInt16 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: UInt16): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt32 value to the hasher.
+     * @param value The UInt32 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: UInt32): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt64 value to the hasher.
+     * @param value The UInt64 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: UInt64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Float16 value to the hasher.
+     * @param value The Float16 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Float16): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Float32 value to the hasher.
+     * @param value The Float32 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Float32): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Float64 value to the hasher.
+     * @param value The Float64 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: Float64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a String value to the hasher.
+     * @param value The String value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     mut func write(value: String): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A default implementation of the Hasher interface.
+ */
+@!APILevel[
+    since: "22"
+]
 public struct DefaultHasher <: Hasher {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the final hash value.
+     * @returns The final hash value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func finish(): Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Resets the hasher to its initial state.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func reset(): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Bool value to the hasher.
+     * @param value The Bool value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Bool): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Rune value to the hasher.
+     * @param value The Rune value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Rune): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int8 value to the hasher.
+     * @param value The Int8 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Int8): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int16 value to the hasher.
+     * @param value The Int16 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Int16): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int32 value to the hasher.
+     * @param value The Int32 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Int32): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes an Int64 value to the hasher.
+     * @param value The Int64 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Int64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt8 value to the hasher.
+     * @param value The UInt8 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: UInt8): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt16 value to the hasher.
+     * @param value The UInt16 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: UInt16): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt32 value to the hasher.
+     * @param value The UInt32 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: UInt32): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a UInt64 value to the hasher.
+     * @param value The UInt64 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: UInt64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Float16 value to the hasher.
+     * @param value The Float16 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Float16): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Float32 value to the hasher.
+     * @param value The Float32 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Float32): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a Float64 value to the hasher.
+     * @param value The Float64 value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: Float64): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Writes a String value to the hasher.
+     * @param value The String value to write.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut func write(value: String): Unit
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a DefaultHasher with the specified initial result value.
+     * @param res The initial result value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(res!: Int64 = 0)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when an illegal argument is passed to a method.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class IllegalArgumentException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new IllegalArgumentException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public open class IllegalFormatException <: IllegalArgumentException {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class IllegalMemoryException <: Exception {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class IllegalStateException <: Exception {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class IncompatiblePackageException <: Exception {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
-    public init(message: String)
-}
-
-@!APILevel[since: "22"]
-public class IndexOutOfBoundsException <: Exception {
-    @!APILevel[since: "22"]
-    public init()
-    
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new IllegalArgumentException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* Implementing this interface allows an object to be the target of the "for-in loop" expression.
-*/
-@!APILevel[since: "22"]
+ * @description Exception thrown when an illegal format is encountered.
+ */
+@!APILevel[
+    since: "22"
+]
+public open class IllegalFormatException <: IllegalArgumentException {
+    /**
+     * @description Constructs a new IllegalFormatException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs a new IllegalFormatException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Exception thrown when an illegal memory access occurs.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IllegalMemoryException <: Exception {
+    /**
+     * @description Constructs a new IllegalMemoryException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs a new IllegalMemoryException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Exception thrown when an illegal state is encountered.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IllegalStateException <: Exception {
+    /**
+     * @description Constructs a new IllegalStateException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs a new IllegalStateException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Exception thrown when an incompatible package is encountered.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IncompatiblePackageException <: Exception {
+    /**
+     * @description Constructs a new IncompatiblePackageException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs a new IncompatiblePackageException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+/**
+ * @description Exception thrown when an index is out of bounds.
+ */
+@!APILevel[
+    since: "22"
+]
+public class IndexOutOfBoundsException <: Exception {
+    /**
+     * @description Constructs a new IndexOutOfBoundsException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    
+    /**
+     * @description Constructs a new IndexOutOfBoundsException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(message: String)
+}
+
+@!APILevel[
+    since: "22"
+]
 public interface Iterable<E> {
-    /* Returns an iterator over elements of type E. */
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns an iterator over the elements of type E.
+     * @returns An iterator.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func iterator(): Iterator<E>
 }
 
 /**
-* An iterator over a collection.
-*/
-@!APILevel[since: "22"]
+ * @description An iterator over a sequence of values.
+ */
+@!APILevel[
+    since: "22"
+]
 public abstract class Iterator<T> <: Iterable<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the next value in the iteration.
+     * @returns The next value in the iteration, or None if there are no more values.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func next(): Option<T>
     
+    /**
+     * @description Constructs a new Iterator.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    /*
-    * Iterator.
-    *
-    * @return Iterator<T> Return Iterator<T>.
-    */
+    /**
+     * @description Returns this iterator.
+     * @returns This iterator.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
 }
 
 extend<T> Iterator<T> where T <: Equatable<T> {
+    /**
+     * @description Checks if the iterator contains the specified element.
+     * @param element The element to check for.
+     * @returns true if the element is found, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(element: T): Bool
 }
 
 extend<T> Iterator<T> where T <: Comparable<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the maximum value in the iterator.
+     * @returns The maximum value, or None if the iterator is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func max(): Option<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns the minimum value in the iterator.
+     * @returns The minimum value, or None if the iterator is empty.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func min(): Option<T>
 }
 
 extend<T> Iterator<T> {
+    /**
+     * @description Combines this iterator with another iterator to create an iterator of pairs.
+     * @param it The other iterator.
+     * @returns An iterator of pairs.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func zip<R>(it: Iterator<R>): Iterator<(T, R)>
     
+    /**
+     * @description Creates an iterator that yields pairs of indices and values.
+     * @returns An iterator of pairs of indices and values.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func enumerate(): Iterator<(Int64, T)>
     
+    /**
+     * @description Creates an iterator that filters values based on a predicate.
+     * @param predicate The predicate to apply.
+     * @returns An iterator that yields only values for which the predicate returns true.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func filter(predicate: (T) -> Bool): Iterator<T>
     
+    /**
+     * @description Creates an iterator that applies a transformation function and filters out None values.
+     * @param transform The transformation function to apply.
+     * @returns An iterator that yields values transformed by the function, excluding None values.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func filterMap<R>(transform: (T) -> Option<R>): Iterator<R>
     
+    /**
+     * @description Creates an iterator that applies a transformation function to each value.
+     * @param transform The transformation function to apply.
+     * @returns An iterator that yields transformed values.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func map<R>(transform: (T) -> R): Iterator<R>
     
+    /**
+     * @description Creates an iterator that skips values by a specified step count.
+     * @param count The step count.
+     * @returns An iterator that yields every nth value.     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func step(count: Int64): Iterator<T>
     
+    /**
+     * @description Creates an iterator that skips the first n values.
+     * @param count The number of values to skip.
+     * @returns An iterator that yields values after skipping the first n values.     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func skip(count: Int64): Iterator<T>
     
+    /**
+     * @description Creates an iterator that takes the first n values.
+     * @param count The number of values to take.
+     * @returns An iterator that yields only the first n values.     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func take(count: Int64): Iterator<T>
     
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func concat(other: Iterator<T>): Iterator<T>
     
+    /**
+     * @description Creates an iterator that performs an action on each value.
+     * @param action The action to perform.
+     * @returns An iterator that performs the action on each value.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func inspect(action: (T) -> Unit): Iterator<T>
     
+    /**
+     * @description Creates an iterator that applies a transformation function and flattens the result.
+     * @param transform The transformation function to apply.
+     * @returns An iterator that yields values from the transformed iterators.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func flatMap<R>(transform: (T) -> Iterator<R>): Iterator<R>
     
+    /**
+     * @description Creates an iterator that inserts a separator between each value.
+     * @param separator The separator to insert.
+     * @returns An iterator that inserts the separator between each value.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func intersperse(separator: T): Iterator<T>
     
+    /**
+     * @description Checks if all values in the iterator satisfy a predicate.
+     * @param predicate The predicate to apply.
+     * @returns true if all values satisfy the predicate, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func all(predicate: (T) -> Bool): Bool
     
+    /**
+     * @description Checks if any value in the iterator satisfies a predicate.
+     * @param predicate The predicate to apply.
+     * @returns true if any value satisfies the predicate, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func any(predicate: (T) -> Bool): Bool
     
+    /**
+     * @description Checks if no values in the iterator satisfy a predicate.
+     * @param predicate The predicate to apply.
+     * @returns true if no values satisfy the predicate, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func none(predicate: (T) -> Bool): Bool
     
+    /**
+     * @description Checks if the iterator is empty.
+     * @returns true if the iterator is empty, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
+    /**
+     * @description Returns the number of values in the iterator.
+     * @returns The number of values in the iterator.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func count(): Int64
     
+    /**
+     * @description Performs an action for each value in the iterator.
+     * @param action The action to perform.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func forEach(action: (T) -> Unit): Unit
     
+    /**
+     * @description Returns the first value in the iterator.
+     * @returns The first value, or None if the iterator is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func first(): Option<T>
     
+    /**
+     * @description Returns the last value in the iterator.
+     * @returns The last value, or None if the iterator is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func last(): Option<T>
     
+    /**
+     * @description Returns the value at the specified index in the iterator.
+     * @param n The index of the value to return.
+     * @returns The value at the specified index, or None if the index is out of bounds.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func at(n: Int64): Option<T>
     
+    /**
+     * @description Reduces the iterator to a single value using the specified operation.
+     * @param operation The reduction operation.
+     * @returns The reduced value, or None if the iterator is empty.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func reduce(operation: (T, T) -> T): Option<T>
     
+    /**
+     * @description Folds the iterator into a single value using the specified initial value and operation.
+     * @param initial The initial value.
+     * @param operation The folding operation.
+     * @returns The folded value.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func fold<R>(initial: R, operation: (R, T) -> R): R
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Returns the size of a C type.
+ * @returns The size of the C type.
+ */
+@!APILevel[
+    since: "22"
+]
 public func sizeOf<T>(): UIntNative where T <: CType
 
-@!APILevel[since: "22"]
+/**
+ * @description Returns the alignment of a C type.
+ * @returns The alignment of the C type.
+ */
+@!APILevel[
+    since: "22"
+]
 public func alignOf<T>(): UIntNative where T <: CType
 
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public struct LibC {
-    @!APILevel[since: "22"]
+    /**
+     * @description Allocates memory for a C type.
+     * @param count The number of elements to allocate.
+     * @returns A C pointer to the allocated memory.
+     * @throws IllegalArgumentException if count is negative.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func malloc<T>(count!: Int64 = 1): CPointer<T> where T <: CType
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Frees memory allocated for a C type.
+     * @param p The C pointer to free.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe static func free<T>(p: CPointer<T>): Unit where T <: CType
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Allocates memory for a C string.
+     * @param str The string to allocate memory for.
+     * @returns A C string.
+     * @throws IllegalMemoryException if memory is issufficient.
+     */
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public unsafe static func mallocCString(str: String): CString
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Frees memory allocated for a C string.
+     * @param cstr The C string to free.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe static func free(cstr: CString): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when a negative array size is used.
+ */
+@!APILevel[
+    since: "22"
+]
 public class NegativeArraySizeException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new NegativeArraySizeException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new NegativeArraySizeException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
-@!APILevel[since: "22"]
-public class NoneValueException <: Exception {
-    @!APILevel[since: "22"]
+/**
+ * @description Exception thrown when a None value is encountered where a value is expected.
+ */
+@!APILevel[
+    since: "22"
+]
+    /**
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description The root of the Cangjie class hierarchy.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Any {
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description The root class of the Cangjie class hierarchy.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class Object <: Any {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new Object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public const init()
 }
 
 /**
-* Check whether two Objects are referencing to the same memory block
-*
-* @return true means they are the same Object.
-*
-* @since 0.21.4
-*/
-@!APILevel[since: "22"]
+ * @description Checks if two objects are the same instance.
+ * @param a The first object.
+ * @param b The second object.
+ * @returns true if the objects are the same instance, false otherwise.
+ */
+@!APILevel[
+    since: "22"
+]
 public func refEq(a: Object, b: Object): Bool
 
-// This function is only used by ArrayList type, and it is not intended to be documented in users' guide
+/**
+ * @description Returns the zero value for a given type.
+ * @returns The zero value for the given type.
+ */
 @Intrinsic
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public unsafe func zeroValue<T>(): T
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents an optional value that may or may not be present.
+ */
+@!APILevel[
+    since: "22"
+]
 public enum Option<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Some value of type T.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     Some(T) |
-    @!APILevel[since: "22"]
+    /**
+     * @description No value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     None
-    /*
-    * @throws NoneValueException if the value of Option is None
-    */
+    
+    /**
+     * @description Returns the value if present, otherwise throws a NoneValueException.
+     * @returns The value if present.
+     * @throws NoneValueException if the Option is None.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func getOrThrow(): T
     
-    /*
-    * @throws input Exception if the value of Option is None
-    */
+    /**
+     * @description Returns the value if present, otherwise throws the specified exception.
+     * @param exception A function that returns the exception to throw.
+     * @returns The value if present.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func getOrThrow(exception: () -> Exception): T
     
+    /**
+     * @description Returns the value if present, otherwise returns the result of the specified function.
+     * @param other A function that returns the default value.
+     * @returns The value if present, otherwise the default value.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func getOrDefault(other: () -> T): T
     
+    /**
+     * @description Checks if the Option is None.
+     * @returns true if the Option is None, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isNone(): Bool
     
+    /**
+     * @description Checks if the Option is Some.
+     * @returns true if the Option is Some, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isSome(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Maps the value if present using the specified transformation function.
+     * @param transform The transformation function to apply.
+     * @returns An Option containing the transformed value if present, otherwise None.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func map<R>(transform: (T) -> R): Option<R>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Filters the value if present using the specified predicate.
+     * @param predicate The predicate to apply.
+     * @returns Some(value) if the value is present and satisfies the predicate, otherwise None.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func filter(predicate: (T) -> Bool): Option<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Maps the value if present using the specified transformation function and flattens the result.
+     * @param transform The transformation function to apply.
+     * @returns The result of the transformation function if the value is present, otherwise None.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func flatMap<R>(transform: (T) -> Option<R>): Option<R>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Performs an action if the Option is Some.
+ * @param o The Option to check.
+ * @param action The action to perform.
+ */
+@!APILevel[
+    since: "22"
+]
 public func ifSome<T>(o: Option<T>, action: (T) -> Unit): Unit
 
-@!APILevel[since: "22"]
+/**
+ * @description Performs an action if the Option is None.
+ * @param o The Option to check.
+ * @param action The action to perform.
+ */
+@!APILevel[
+    since: "22"
+]
 public func ifNone<T>(o: Option<T>, action: () -> Unit): Unit
 
 extend<T> Option<T> <: Equatable<Option<T>> where T <: Equatable<T> {
+    /**
+     * @description Checks if this Option is equal to another Option.
+     * @param other The Option to compare with.
+     * @returns true if the Options are equal, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func ==(that: Option<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func ==(other: Option<T>): Bool
     
+    /**
+     * @description Checks if this Option is not equal to another Option.
+     * @param other The Option to compare with.
+     * @returns true if the Options are not equal, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
-    public operator func !=(that: Option<T>): Bool
+    @!APILevel[
+        since: "22"
+    ]
+    public operator func !=(other: Option<T>): Bool
 }
 
 extend<T> Option<T> <: ToString where T <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Option.
+     * @returns A string representation of this Option.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend<T> Option<T> <: Hashable where T <: Hashable {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a hash code value for this Option.
+     * @returns A hash code value for this Option.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
 }
 
 extend<T> Option<Option<T>> {
-    @!APILevel[since: "22"]
+    /**
+     * @description Flattens a nested Option.
+     * @returns The inner Option if the outer Option is Some, otherwise None.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func flatten(): Option<T>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Error thrown when there is not enough memory to perform an operation.
+ */
+@!APILevel[
+    since: "22"
+]
 public class OutOfMemoryError <: Error {
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when an arithmetic operation overflows.
+ */
+@!APILevel[
+    since: "22"
+]
 public class OverflowException <: ArithmeticException {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new OverflowException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new OverflowException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
+/**
+ * @description Prints a string to the standard output.
+ * @param str The string to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func print(str: String, flush!: Bool = false): Unit
 
+/**
+ * @description Prints a newline to the standard output.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(): Unit
 
+/**
+ * @description Prints a string followed by a newline to the standard output.
+ * @param str The string to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func println(str: String): Unit
 
-// The `eprint` is used to print error message, such as exception throwing.// The message will be printed to standard error text stream rather than standard output.
+/**
+ * @description Prints a string to the standard error stream.
+ * @param str The string to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func eprint(str: String, flush!: Bool = true): Unit
 
-// The `eprintln` is used to print error message, such as exception throwing.// The message will be printed to standard error text stream rather than standard output.
+/**
+ * @description Prints a string followed by a newline to the standard error stream.
+ * @param str The string to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func eprintln(str: String): Unit
 
+/**
+ * @description Prints the string representation of an object to the standard error stream.
+ * @param arg The object to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func eprint<T>(arg: T, flush!: Bool = false): Unit where T <: ToString
 
+/**
+ * @description Prints the string representation of an object followed by a newline to the standard error stream.
+ * @param arg The object to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func eprintln<T>(arg: T): Unit where T <: ToString
 
+/**
+ * @description Prints the string representation of an object to the standard output.
+ * @param arg The object to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func print<T>(arg: T, flush!: Bool = false): Unit where T <: ToString
 
+/**
+ * @description Prints the string representation of an object followed by a newline to the standard output.
+ * @param arg The object to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func println<T>(arg: T): Unit where T <: ToString
 
-@!APILevel[since: "22"]
+/**
+ * @description Reads a line from the standard input.
+ * @returns The line read from the standard input.
+ */
+ @!APILevel[
+    since: "22"
+]
 public func readln(): String
 
 /**
-* overload primitive types for performance optimization
-* For example, when using `Bool` type as the argument of `print` function, there are two steps:
-* 1. call `toString()` method to create a String
-* 2. call `print(String)` function to do the printing
-* A few temporary objects like `Array<UInt8>` and `String` are created in above process.
-* If we provide a few overloaded `print` function below, these temporary objects can be avoided.
-*/
+ * @description Prints a boolean value to the standard output.
+ * @param b The boolean value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(b: Bool, flush!: Bool = false): Unit
 
+/**
+ * @description Prints a boolean value followed by a newline to the standard output.
+ * @param b The boolean value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(b: Bool): Unit
 
+/**
+ * @description Prints a rune to the standard output.
+ * @param c The rune to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(c: Rune, flush!: Bool = false): Unit
 
+/**
+ * @description Prints a rune followed by a newline to the standard output.
+ * @param c The rune to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(c: Rune): Unit
 
+/**
+ * @description Prints a Float16 value to the standard output.
+ * @param f The Float16 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(f: Float16, flush!: Bool = false): Unit
 
+/**
+ * @description Prints a Float16 value followed by a newline to the standard output.
+ * @param f The Float16 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(f: Float16): Unit
 
+/**
+ * @description Prints a Float32 value to the standard output.
+ * @param f The Float32 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(f: Float32, flush!: Bool = false): Unit
 
+/**
+ * @description Prints a Float32 value followed by a newline to the standard output.
+ * @param f The Float32 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(f: Float32): Unit
 
+/**
+ * @description Prints a Float64 value to the standard output.
+ * @param f The Float64 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(f: Float64, flush!: Bool = false): Unit
 
+/**
+ * @description Prints a Float64 value followed by a newline to the standard output.
+ * @param f The Float64 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(f: Float64): Unit
 
+/**
+ * @description Prints an Int8 value to the standard output.
+ * @param i The Int8 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(i: Int8, flush!: Bool = false): Unit
 
+/**
+ * @description Prints an Int16 value to the standard output.
+ * @param i The Int16 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(i: Int16, flush!: Bool = false): Unit
 
+/**
+ * @description Prints an Int32 value to the standard output.
+ * @param i The Int32 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(i: Int32, flush!: Bool = false): Unit
 
+/**
+ * @description Prints an Int64 value to the standard output.
+ * @param i The Int64 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func print(i: Int64, flush!: Bool = false): Unit
 
+/**
+ * @description Prints an Int8 value followed by a newline to the standard output.
+ * @param i The Int8 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
-public func print(i: UInt8, flush!: Bool = false): Unit
-
-@Frozen
-@!APILevel[since: "22"]
-public func print(i: UInt16, flush!: Bool = false): Unit
-
-@Frozen
-@!APILevel[since: "22"]
-public func print(i: UInt32, flush!: Bool = false): Unit
-
-@Frozen
-@!APILevel[since: "22"]
-public func print(i: UInt64, flush!: Bool = false): Unit
-
-@Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: Int8): Unit
 
+/**
+ * @description Prints an Int16 value followed by a newline to the standard output.
+ * @param i The Int16 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: Int16): Unit
 
+/**
+ * @description Prints an Int32 value followed by a newline to the standard output.
+ * @param i The Int32 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: Int32): Unit
 
+/**
+ * @description Prints an Int64 value followed by a newline to the standard output.
+ * @param i The Int64 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: Int64): Unit
 
+/**
+ * @description Prints a UInt8 value to the standard output.
+ * @param i The UInt8 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
+public func print(i: UInt8, flush!: Bool = false): Unit
+
+/**
+ * @description Prints a UInt16 value to the standard output.
+ * @param i The UInt16 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
+@Frozen
+@!APILevel[
+    since: "22"
+]
+public func print(i: UInt16, flush!: Bool = false): Unit
+
+/**
+ * @description Prints a UInt32 value to the standard output.
+ * @param i The UInt32 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
+@Frozen
+@!APILevel[
+    since: "22"
+]
+public func print(i: UInt32, flush!: Bool = false): Unit
+
+/**
+ * @description Prints a UInt64 value to the standard output.
+ * @param i The UInt64 value to print.
+ * @param flush Whether to flush the output stream after printing.
+ */
+@Frozen
+@!APILevel[
+    since: "22"
+]
+public func print(i: UInt64, flush!: Bool = false): Unit
+
+/**
+ * @description Prints a UInt8 value followed by a newline to the standard output.
+ * @param i The UInt8 value to print.
+ */
+@Frozen
+@!APILevel[
+    since: "22"
+]
 public func println(i: UInt8): Unit
 
+/**
+ * @description Prints a UInt16 value followed by a newline to the standard output.
+ * @param i The UInt16 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: UInt16): Unit
 
+/**
+ * @description Prints a UInt32 value followed by a newline to the standard output.
+ * @param i The UInt32 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: UInt32): Unit
 
+/**
+ * @description Prints a UInt64 value followed by a newline to the standard output.
+ * @param i The UInt64 value to print.
+ */
 @Frozen
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public func println(i: UInt64): Unit
 
+/**
+ * @description Range representation.
+ */
 @ConstSafe
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public struct Range<T> <: Iterable<T> where T <: Countable<T> & Comparable<T> & Equatable<T> {
-    @!APILevel[since: "22"]
+    /**
+     * @description The start value of the range.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let start: T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The end value of the range.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let end: T
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The step value of the range.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let step: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Whether the range has a start value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let hasStart: Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Whether the range has an end value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let hasEnd: Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Whether the range is closed (includes the end value).
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let isClosed: Bool
     
-    /*
-    * @throws IllegalArgumentException if the value of the step is equal to zero
-    */
+    /**
+     * @description Constructs a Range with the specified parameters.
+     * @param start The start value of the range.
+     * @param end The end value of the range.
+     * @param step The step value of the range.
+     * @param hasStart Whether the range has a start value.
+     * @param hasEnd Whether the range has an end value.
+     * @param isClosed Whether the range is closed (includes the end value).
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public const init(start: T, end: T, step: Int64, hasStart: Bool, hasEnd: Bool, isClosed: Bool)
     
+    /**
+     * @description Returns an iterator over the values in the range.
+     * @returns An iterator over the values in the range.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<T>
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if the range is empty.
+     * @returns true if the range is empty, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public const func isEmpty(): Bool
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description An iterator over the values in a Range.
+ */
+@!APILevel[
+    since: "22"
+]
 public class RangeIterator<T> <: Iterator<T> where T <: Countable<T> & Comparable<T> & Equatable<T> {
+    /**
+     * @description Returns the next value in the iteration.
+     * @returns The next value in the iteration, or None if there are no more values.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func next(): Option<T>
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Interface for types that represent a resource that can be closed.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface Resource {
-    @!APILevel[since: "22"]
+    /**
+     * @description Checks if the resource is closed.
+     * @returns true if the resource is closed, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func isClosed(): Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Closes the resource.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func close(): Unit
 }
 
 /**
-* Sleep current thread for @p dur interval.
-* If @p dur is less than or equal to Duration.Zero, current thread will relinquish the run right.
-*
-* @param dur Sleeping duration.
-*/
-@!APILevel[since: "22"]
+ * @description Suspends the current thread for the specified duration.
+ * @param dur The duration to sleep.
+ * @throws ArithmeticException if the duration is negative.
+ */
+@!APILevel[
+    since: "22",
+    throwexception: true
+]
 public func sleep(dur: Duration): Unit
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when a spawn operation fails.
+ */
+@!APILevel[
+    since: "22"
+]
 public class SpawnException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new SpawnException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new SpawnException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Error thrown when the stack overflows.
+ */
+@!APILevel[
+    since: "22"
+]
 public class StackOverflowError <: Error {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new StackOverflowError.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init()
+    /**
+     * @description Prints the stack trace to the standard error stream.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public override func printStackTrace(): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents an element in a stack trace.
+ */
+@!APILevel[
+    since: "22"
+]
 public open class StackTraceElement {
-    @!APILevel[since: "22"]
+    /**
+     * @description The fully qualified name of the class containing the execution point represented by this stack trace element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let declaringClass: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the method containing the execution point represented by this stack trace element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let methodName: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The name of the file containing the execution point represented by this stack trace element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let fileName: String
     
-    @!APILevel[since: "22"]
+    /**
+     * @description The line number of the source line containing the execution point represented by this stack trace element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public let lineNumber: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new StackTraceElement.
+     * @param declaringClass The fully qualified name of the class containing the execution point represented by this stack trace element.
+     * @param methodName The name of the method containing the execution point represented by this stack trace element.
+     * @param fileName The name of the file containing the execution point represented by this stack trace element.
+     * @param lineNumber The line number of the source line containing the execution point represented by this stack trace element.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(declaringClass: String, methodName: String, fileName: String, lineNumber: Int64)
 }
 
+/**
+ * @description Represents a string of characters.
+ */
 @ConstSafe
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public struct String <: Collection<Byte> & Comparable<String> & Hashable & ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description An empty string.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static const empty: String = String()
     
     /**
-    * Constructors
-    */// Create an empty string which is an empty sequence of character.
+     * @description Constructs an empty string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public const init()
     
+    /**
+     * @description Constructs a string from an array of runes.
+     * @param value The array of runes.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public init(value: Array<Rune>)
     
+    /**
+     * @description Constructs a string from a collection of runes.
+     * @param value The collection of runes.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public init(value: Collection<Rune>)
     
-    // Returns the byte at the specified index.
+    /**
+     * @description Gets the byte at the specified index.
+     * @param index The index of the byte to get.
+     * @returns The byte at the specified index, or None if the index is out of bounds.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func get(index: Int64): Option<Byte>
     
     /**
-    * Returns the sequence of characters in this string in the form of an array of characters.
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `this.myData`.
-    */
+     * @description Converts this string to an array of runes.
+     * @returns An array of runes.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func toRuneArray(): Array<Rune>
     
+    /**
+     * @description Converts this string to an array of bytes.
+     * @returns An array of bytes.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toArray(): Array<Byte>
     
+    /**
+     * @description Returns this string.
+     * @returns This string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
+    /**
+     * @description Returns an iterator over the bytes of this string.
+     * @returns An iterator over the bytes of this string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func iterator(): Iterator<Byte>
     
+    /**
+     * @description Returns an iterator over the runes of this string.
+     * @returns An iterator over the runes of this string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func runes(): Iterator<Rune>
     
+    /**
+     * @description Returns an iterator over the lines of this string.
+     * @returns An iterator over the lines of this string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lines(): Iterator<String>
     
-    // Returns the byte counts of this string.
+    /**
+     * @description Gets the size of this string in bytes.
+     * @returns The size of this string in bytes.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
-    // Returns true if and only if this string is an empty string.
+    /**
+     * @description Checks if this string is empty.
+     * @returns true if this string is empty, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isEmpty(): Bool
     
     /**
-    * Determine if the string is an Ascii string,
-    * return true if there are no characters other than Ascii in the string,
-    * return true if the string is empty.
-    */
+     * @description Checks if this string consists only of ASCII characters.
+     * @returns true if this string consists only of ASCII characters, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isAscii(): Bool
     
+    /**
+     * @description Checks if this string consists only of ASCII whitespace characters.
+     * @returns true if this string consists only of ASCII whitespace characters, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func isAsciiBlank(): Bool
     
+    /**
+     * @description Creates a copy of this string.
+     * @returns A copy of this string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func clone(): String
     
     /**
-    * Use wyhash to generate a hash value for a string.
-    */
+     * @description Returns a hash code value for this string.
+     * @returns A hash code value for this string.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func hashCode(): Int64
     
     /**
-    * Construct a string from a utf8-compliant bytecode sequence
-    * @Param utf8Data - UTF8 bytecode sequence
-    * @throws IllegalArgumentException If the array is an invalid UTF8 sequence
-    * @return a String
-    */
+     * @description Creates a string from UTF-8 data.
+     * @param utf8Data The UTF-8 data.
+     * @returns A string created from the UTF-8 data.
+     * @throws IllegalArgumentException if the input parameter does not conform to the utf-8 sequence rules, 
+     *         or when attempting to construct a string with a length exceeding the maximum value of UInt32.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func fromUtf8(utf8Data: Array<UInt8>): String
     
+    /**
+     * @description Gets the raw data of this string.
+     * @returns The raw data of this string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public unsafe func rawData(): Array<Byte>
     
+    /**
+     * @description Creates a string from UTF-8 data without checking validity.
+     * @param utf8Data The UTF-8 data.
+     * @returns A string created from the UTF-8 data.
+     * @throws IllegalArgumentException if there is an illegal argument.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public unsafe static func fromUtf8Unchecked(utf8Data: Array<UInt8>): String
     
-    // Returns the index of the first occurrence of the specified byte.// Return `Option<Int64>.None` if the specified byte is absent.
+    /**
+     * @description Finds the first occurrence of a byte in this string.
+     * @param b The byte to find.
+     * @returns The index of the first occurrence of the byte, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(b: Byte): Option<Int64>
     
-    // Returns the index of the first occurrence of the specified byte at or after the specified index.// Returns `Option<Int64>.None` if the specified byte is absent at or after the specified index.
+    /**
+     * @description Finds the first occurrence of a byte in this string starting from a specified index.
+     * @param b The byte to find.
+     * @param fromIndex The index to start searching from.
+     * @returns The index of the first occurrence of the byte, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(b: Byte, fromIndex: Int64): Option<Int64>
     
-    // Returns the index of the first occurrence of the specified substring `str`.// Return `Option<Int64>.None` if `str` is absent.
+    /**
+     * @description Finds the first occurrence of a substring in this string.
+     * @param str The substring to find.
+     * @returns The index of the first occurrence of the substring, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(str: String): Option<Int64>
     
-    // Returns the index of the first occurrence of the specified substring `str` at or after the specified index.// Return `Option<Int64>.None` if the specified string is absent at or after the specified index.
+    /**
+     * @description Finds the first occurrence of a substring in this string starting from a specified index.
+     * @param str The substring to find.
+     * @param fromIndex The index to start searching from.
+     * @returns The index of the first occurrence of the substring, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func indexOf(str: String, fromIndex: Int64): Option<Int64>
     
-    // Returns the index of the last occurrence of the specified byte.// Return `Option<Int64>.None` if specified byte is absent.
+    /**
+     * @description Finds the last occurrence of a byte in this string.
+     * @param b The byte to find.
+     * @returns The index of the last occurrence of the byte, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(b: Byte): Option<Int64>
     
-    // Returns the index of the last occurrence of the specified byte at or after the specified index.// Return `Option<Int64>.None` if specified byte is absent at or after the specified index.
+    /**
+     * @description Finds the last occurrence of a byte in this string up to a specified index.
+     * @param b The byte to find.
+     * @param fromIndex The index to stop searching at.
+     * @returns The index of the last occurrence of the byte, or None if not found.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(b: Byte, fromIndex: Int64): Option<Int64>
     
-    // Returns the index of the last occurrence of the specified substring `str`.// Return `Option<Int64>.None` if specified substring is absent.
+    /**
+     * @description Finds the last occurrence of a substring in this string.
+     * @param str The substring to find.
+     * @returns The index of the last occurrence of the substring, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(str: String): Option<Int64>
     
-    // Returns the index of the last occurrence of the specified substring `str` at or after the specified index.// Return `Option<Int64>.None` if specified substring is absent at or after the specified index.// Search last substring from the beginning when 'fromIndex' is less than 0.
+    /**
+     * @description Finds the last occurrence of a substring in this string up to a specified index.
+     * @param str The substring to find.
+     * @param fromIndex The index to stop searching at.
+     * @returns The index of the last occurrence of the substring, or None if not found.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lastIndexOf(str: String, fromIndex: Int64): Option<Int64>
     
-    // Returns the number of non-overlapping occurrences of the given substring `str` in the string.// If `str` is an empty string, returns the number of Unicode code points in this string + 1.
+    /**
+     * @description Counts the number of occurrences of a substring in this string.
+     * @param str The substring to count.
+     * @returns The number of occurrences of the substring.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func count(str: String): Int64
     
     /**
-    * @return an array of strings which are the result of separating this string using the specified
-    *         separator. If the separator is not empty and is absent in this string, returns an array
-    *         which only contains this string. If the separator is empty, split after each character.
-    *         If both this string and separator are empty, returns an empty array.
-    * @throws OutOfMemoryError if failed to call `this.splitOfString`.
-    */
+     * @description Splits this string into an array of substrings using a delimiter.
+     * @param str The delimiter.
+     * @param removeEmpty Whether to remove empty substrings.
+     * @returns An array of substrings.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func split(str: String, removeEmpty!: Bool = false): Array<String>
     
     /**
-    * @return an array of strings which are the result of separating this string using the specified
-    *         separator with maximum split number `maxSplits`.
-    * @throws OutOfMemoryError if failed to call `this.splitOfString`.
-    */
+     * @description Splits this string into an array of substrings using a delimiter with a maximum number of splits.
+     * @param str The delimiter.
+     * @param maxSplits The maximum number of splits.
+     * @param removeEmpty Whether to remove empty substrings.
+     * @returns An array of substrings.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func split(str: String, maxSplits: Int64, removeEmpty!: Bool = false): Array<String>
     
+    /**
+     * @description Returns an iterator that lazily splits this string using a delimiter.
+     * @param str The delimiter.
+     * @param removeEmpty Whether to remove empty substrings.
+     * @returns An iterator over the substrings.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lazySplit(str: String, removeEmpty!: Bool = false): Iterator<String>
     
+    /**
+     * @description Returns an iterator that lazily splits this string using a delimiter with a maximum number of splits.
+     * @param str The delimiter.
+     * @param maxSplits The maximum number of splits.
+     * @param removeEmpty Whether to remove empty substrings.
+     * @returns An iterator over the substrings.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func lazySplit(str: String, maxSplits: Int64, removeEmpty!: Bool = false): Iterator<String>
     
+    /**
+     * @description Replaces all occurrences of a substring with another substring.
+     * @param old The substring to replace.
+     * @param new The replacement substring.
+     * @returns A new string with the replacements made.
+     * @throws OutOfMemoryError if there is not enough memory.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func replace(old: String, new: String): String
     
+    /**
+     * @description Converts all ASCII letters in this string to lowercase.
+     * @returns A new string with ASCII letters converted to lowercase.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiLower(): String
     
+    /**
+     * @description Converts all ASCII letters in this string to uppercase.
+     * @returns A new string with ASCII letters converted to uppercase.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiUpper(): String
     
+    /**
+     * @description Converts the first ASCII letter in each word to uppercase and the rest to lowercase.
+     * @returns A new string with ASCII letters converted to title case.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func toAsciiTitle(): String
     
+    /**
+     * @description Removes leading and trailing ASCII whitespace from this string.
+     * @returns A new string with leading and trailing ASCII whitespace removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func trimAscii(): String
     
+    /**
+     * @description Removes leading ASCII whitespace from this string.
+     * @returns A new string with leading ASCII whitespace removed.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func trimAsciiStart(): String
     
+    /**
+     * @description Removes trailing ASCII whitespace from this string.
+     * @returns A new string with trailing ASCII whitespace removed.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func trimAsciiEnd(): String
     
+    /**
+     * @description Removes leading characters from this string that are present in the specified array.
+     * @param set The array of characters to remove.
+     * @returns A new string with leading characters removed.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func trimStart(set: Array<Rune>): String
     
+    /**
+     * @description Removes trailing characters from this string that are present in the specified array.
+     * @param set The array of characters to remove.
+     * @returns A new string with trailing characters removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func trimEnd(set: Array<Rune>): String
     
+    /**
+     * @description Removes leading characters from this string that are present in the specified string.
+     * @param set The string of characters to remove.
+     * @returns A new string with leading characters removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func trimStart(set: String): String
     
+    /**
+     * @description Removes trailing characters from this string that are present in the specified string.
+     * @param set The string of characters to remove.
+     * @returns A new string with trailing characters removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func trimEnd(set: String): String
     
+    /**
+     * @description Removes leading characters from this string that satisfy the specified predicate.
+     * @param predicate The predicate to apply.
+     * @returns A new string with leading characters removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func trimStart(predicate: (Rune) -> Bool): String
     
+    /**
+     * @description Removes trailing characters from this string that satisfy the specified predicate.
+     * @param predicate The predicate to apply.
+     * @returns A new string with trailing characters removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func trimEnd(predicate: (Rune) -> Bool): String
     
+    /**
+     * @description Removes the specified prefix from this string if it exists.
+     * @param prefix The prefix to remove.
+     * @returns A new string with the prefix removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func removePrefix(prefix: String): String
     
+    /**
+     * @description Removes the specified suffix from this string if it exists.
+     * @param suffix The suffix to remove.
+     * @returns A new string with the suffix removed.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func removeSuffix(suffix: String): String
     
+    /**
+     * @description Checks if this string contains the specified substring.
+     * @param str The substring to check for.
+     * @returns true if this string contains the substring, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func contains(str: String): Bool
     
-    // Returns true if and only if this string starts with the given `prefix`.
+    /**
+     * @description Checks if this string starts with the specified prefix.
+     * @param prefix The prefix to check for.
+     * @returns true if this string starts with the prefix, false otherwise.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func startsWith(prefix: String): Bool
     
-    // Returns true if and only if this string ends with the given `suffix`.
+    /**
+     * @description Checks if this string ends with the specified suffix.
+     * @param suffix The suffix to check for.
+     * @returns true if this string ends with the suffix, false otherwise.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public func endsWith(suffix: String): Bool
     
     /**
-    * @return a new string which is the result of padding zero or more `padding` to this string on the left.
-    * @throws IllegalArgumentException if `totalWidth` < 0.
-    */
+     * @description Pads the start of this string to the specified width with the specified padding string.
+     * @param totalWidth The total width of the resulting string.
+     * @param padding The string to pad with.
+     * @returns A new string padded to the specified width.
+     * @throws IllegalArgumentException if totalWidth is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func padStart(totalWidth: Int64, padding!: String = " "): String
     
     /**
-    * @return a new string which is the result of padding zero or more `padding` to this string on the right.
-    * @throws IllegalArgumentException if `totalWidth` < 0.
-    */
+     * @description Pads the end of this string to the specified width with the specified padding string.
+     * @param totalWidth The total width of the resulting string.
+     * @param padding The string to pad with.
+     * @returns A new string padded to the specified width.
+     * @throws IllegalArgumentException if totalWidth is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func padEnd(totalWidth: Int64, padding!: String = " "): String
     
+    /**
+     * @description Checks if this string is equal to another string, ignoring ASCII case.
+     * @param other The string to compare with.
+     * @returns true if the strings are equal ignoring ASCII case, false otherwise.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
-    public func equalsIgnoreAsciiCase(that: String): Bool
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
+    public func equalsIgnoreAsciiCase(other: String): Bool
     
     /**
-    * Compare the relationship between two instance of String, lexically byte-wise.
-    *
-    * @param str Instance of String compared with this.
-    * @return Value indicating the relationship between two instance of String.
-    *
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array `arr1` or `arr2`.
-    *
-    * @since 0.27.3
-    */
+     * @description Compares this string with another string for order.
+     * @param str The string to compare with.
+     * @returns An Ordering value indicating the relative order of the two strings.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func compare(str: String): Ordering
     
-    // Return a string which is the result of concatenating `left` and `right`.
+    /**
+     * @description Concatenates this string with another string.
+     * @param right The string to concatenate with.
+     * @returns The concatenated string.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func +(right: String): String
     
+    /**
+     * @description Repeats this string the specified number of times.
+     * @param count The number of times to repeat.
+     * @returns The repeated string.
+     * @throws IllegalArgumentException if attempting to construct a string with a length exceeding the maximum value of UInt32.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator const func *(count: Int64): String
     
-    // Returns true if and only if string `left` is less than `right` with the lexicographical order.
+    /**
+     * @description Checks if this string is less than another string.
+     * @param right The string to compare with.
+     * @returns true if this string is less than the other string, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func <(right: String): Bool
     
-    // Returns true if and only if string `left` is less than or equal to `right` with the lexicographical order.
+    /**
+     * @description Checks if this string is less than or equal to another string.
+     * @param right The string to compare with.
+     * @returns true if this string is less than or equal to the other string, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func <=(right: String): Bool
     
-    // Returns true if and only if string `left` is greater than `right` with the lexicographical order.
+    /**
+     * @description Checks if this string is greater than another string.
+     * @param right The string to compare with.
+     * @returns true if this string is greater than the other string, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func >(right: String): Bool
     
-    // Returns true if and only if string `left` is greater than or equal to `right` with the lexicographical order.
+    /**
+     * @description Checks if this string is greater than or equal to another string.
+     * @param right The string to compare with.
+     * @returns true if this string is greater than or equal to the other string, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func >=(right: String): Bool
     
-    // Returns true if and only if the two string are identical.
+    /**
+     * @description Checks if this string is equal to another string.
+     * @param right The string to compare with.
+     * @returns true if the strings are equal, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func ==(right: String): Bool
     
-    // Returns true if and only if the two string are not identical.
+    /**
+     * @description Checks if this string is not equal to another string.
+     * @param right The string to compare with.
+     * @returns true if the strings are not equal, false otherwise.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public operator const func !=(right: String): Bool
     
     /**
-    * @return the `Byte` value at the specified index.
-    * @throws IndexOutOfBoundsException if `index` is out of bounds.
-    */
+     * @description Gets the byte at the specified index.
+     * @param index The index of the byte to get.
+     * @returns The byte at the specified index.
+     * @throws IndexOutOfBoundsException if the index is out of bounds.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator const func [](index: Int64): Byte
     
     /**
-    * @return the `String` value at the specified range.
-    * @throws IllegalArgumentException if `step` is not equal to one.
-    * @throws IndexOutOfBoundsException if `range` is out of bounds.
-    * @throws IllegalArgumentException if the start or end point of the range is not the code point boundary.
-    */
+     * @description Gets a substring using the specified range.
+     * @param range The range to use.
+     * @returns The substring.
+     * @throws IndexOutOfBoundsException if there is an index error.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public operator const func [](range: Range<Int64>): String
     
+    /**
+     * @description Joins an array of strings using the specified delimiter.
+     * @param strArray The array of strings to join.
+     * @param delimiter The delimiter to use.
+     * @returns The joined string.
+     * @throws IllegalArgumentException if attempting to construct a string with a length exceeding the maximum value of UInt32.
+     */
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @OverflowWrapping
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func join(strArray: Array<String>, delimiter!: String = String.empty): String
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description A mutable sequence of characters.
+ */
+@!APILevel[
+    since: "22"
+]
 public class StringBuilder <: ToString {
     /**
-    * Constructors
-    */
+     * @description Constructs an empty StringBuilder.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
+    /**
+     * @description Constructs a StringBuilder with the specified string.
+     * @param str The initial string.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(str: String)
     
+    /**
+     * @description Constructs a StringBuilder with the specified rune repeated n times.
+     * @param r The rune to repeat.
+     * @param n The number of times to repeat.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(r: Rune, n: Int64)
     
+    /**
+     * @description Constructs a StringBuilder with the specified array of runes.
+     * @param value The array of runes.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init(value: Array<Rune>)
     
+    /**
+     * @description Constructs a StringBuilder with the specified capacity.
+     * @param capacity The initial capacity.
+     * @throws IllegalArgumentException if capacity is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public init(capacity: Int64)
     
     /**
-    * Get UTF-8 code unit size.
-    */
+     * @description Gets the size of this StringBuilder.
+     * @returns The size of this StringBuilder.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop size: Int64
     
     /**
-    * Get capacity of this instance.
-    */
+     * @description Gets the capacity of this StringBuilder.
+     * @returns The capacity of this StringBuilder.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop capacity: Int64
     
     /**
-    * Return a String managed by StringBuilder.
-    *
-    * @return a String managed by StringBuilder.
-    */
+     * @description Returns a string representation of this StringBuilder.
+     * @returns A string representation of this StringBuilder.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
     
     /**
-    * @throws IllegalMemoryException if there are some system errors.
-    */
+     * @description Resets this StringBuilder to its initial state.
+     * @param capacity The new capacity, or None to keep the current capacity.
+     * @throws IllegalArgumentException if capacity is negative.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reset(capacity!: Option<Int64> = None): Unit
     
+    /**
+     * @description Appends a rune to this StringBuilder.
+     * @param r The rune to append.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func append(r: Rune): Unit
     
+    /**
+     * @description Appends a string to this StringBuilder.
+     * @param str The string to append.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func append(str: String): Unit
     
+    /**
+     * @description Appends another StringBuilder to this StringBuilder.
+     * @param sb The StringBuilder to append.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func append(sb: StringBuilder): Unit
     
-    /*
-    * @throws IllegalArgumentException if there is an invalid utf8 leading code
-    *         in array "arr[i]".
-    */
+    /**
+     * @description Appends UTF-8 data to this StringBuilder.
+     * @param arr The array of bytes to append.
+     * @throws IllegalArgumentException if the byte array does not conform to the utf8 encoding rules.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func appendFromUtf8(arr: Array<Byte>): Unit
     
+    /**
+     * @description Appends UTF-8 data to this StringBuilder without checking validity.
+     * @param arr The array of bytes to append.
+     * @throws IllegalArgumentException if the byte array does not conform to the utf8 encoding rules.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public unsafe func appendFromUtf8Unchecked(arr: Array<Byte>): Unit
     
+    /**
+     * @description Appends an array of runes to this StringBuilder.
+     * @param runeArr The array of runes to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(runeArr: Array<Rune>): Unit
     
+    /**
+     * @description Appends a C string to this StringBuilder.
+     * @param cstr The C string to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(cstr: CString): Unit
     
+    /**
+     * @description Appends the string representation of an object to this StringBuilder.
+     * @param v The object to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append<T>(v: T): Unit where T <: ToString
     
+    /**
+     * @description Appends the string representations of an array of objects to this StringBuilder.
+     * @param val The array of objects to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append<T>(val: Array<T>): Unit where T <: ToString
     
+    /**
+     * @description Appends a boolean value to this StringBuilder.
+     * @param b The boolean value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(b: Bool): Unit
     
+    /**
+     * @description Appends an Int64 value to this StringBuilder.
+     * @param n The Int64 value to append.
+     */
+    @OverflowWrapping
     @Frozen
-@OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Int64): Unit
     
+    /**
+     * @description Appends an Int32 value to this StringBuilder.
+     * @param n The Int32 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Int32): Unit
     
+    /**
+     * @description Appends an Int16 value to this StringBuilder.
+     * @param n The Int16 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Int16): Unit
     
+    /**
+     * @description Appends an Int8 value to this StringBuilder.
+     * @param n The Int8 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Int8): Unit
     
+    /**
+     * @description Appends a UInt64 value to this StringBuilder.
+     * @param n The UInt64 value to append.
+     */
     @OverflowWrapping
-@Frozen
-    @!APILevel[since: "22"]
+    @Frozen
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: UInt64): Unit
     
+    /**
+     * @description Appends a UInt32 value to this StringBuilder.
+     * @param n The UInt32 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: UInt32): Unit
     
+    /**
+     * @description Appends a UInt16 value to this StringBuilder.
+     * @param n The UInt16 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: UInt16): Unit
     
+    /**
+     * @description Appends a UInt8 value to this StringBuilder.
+     * @param n The UInt8 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: UInt8): Unit
     
+    /**
+     * @description Appends a Float64 value to this StringBuilder.
+     * @param n The Float64 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Float64): Unit
     
+    /**
+     * @description Appends a Float32 value to this StringBuilder.
+     * @param n The Float32 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Float32): Unit
     
+    /**
+     * @description Appends a Float16 value to this StringBuilder.
+     * @param n The Float16 value to append.
+     */
     @Frozen
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func append(n: Float16): Unit
     
+    /**
+     * @description Reserves additional capacity for this StringBuilder.
+     * @param additional The additional capacity to reserve.
+     */
     @Frozen
-@OverflowThrowing
-    @!APILevel[since: "22"]
+    @OverflowThrowing
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public func reserve(additional: Int64): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Represents a thread of execution.
+ */
+@!APILevel[
+    since: "22"
+]
 public class Thread {
-    // If a Cangjie thread is created without a Future object,// its Thread object will be lazy-constructed.
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the current thread.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static prop currentThread: Thread
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets the ID of this thread.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop id: Int64
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Gets or sets the name of this thread.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public mut prop name: String
     
     /**
-    * Check whether the current Cangjie thread has termination requests,
-    * i.e., whether its future has been marked as cancelled.
-    */
-    @!APILevel[since: "22"]
+     * @description Checks if this thread has a pending cancellation.
+     * @returns true if this thread has a pending cancellation, false otherwise.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public prop hasPendingCancellation: Bool
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Sets the uncaught exception handler for all threads.
+     * @param exHandler The exception handler.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public static func handleUncaughtExceptionBy(exHandler: (Thread, Exception) -> Unit): Unit
 }
 
 /**
-* ThreadLocal is used to provide thread-local variables.
-*/
-@!APILevel[since: "22"]
+ * @description Provides thread-local variables.
+ */
+@!APILevel[
+    since: "22"
+]
 public class ThreadLocal<T> {
     /**
-    * Return the value of this thread-local variable in the current thread.
-    */
-    @!APILevel[since: "22"]
+     * @description Gets the value of this thread-local variable.
+     * @returns The value of this thread-local variable.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func get(): ?T
     
     /**
-    * Set the current thread's thread-local variable with the value parameter.
-    * If None is passed as the parameter, the value of this thread-local variable
-    * will be removed from the current thread.
-    */
-    @!APILevel[since: "22"]
+     * @description Sets the value of this thread-local variable.
+     * @param value The value to set.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func set(value: ?T): Unit
 }
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when an operation times out.
+ */
+@!APILevel[
+    since: "22"
+]
 public class TimeoutException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new TimeoutException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new TimeoutException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
 
 /**
-* This file introduces 'ToString' interface, which has a 'toString' function declaration.
-* 'toString' function is used to provide string representation for various types.
-* For primitive types, we provide standard toString implementation. For composite types
-* or user-defined types, they have to to implement toString function by themselves.
-*/
-@!APILevel[since: "22"]
+ * @description Interface for types that can be converted to a string.
+ */
+@!APILevel[
+    since: "22"
+]
 public interface ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this object.
+     * @returns A string representation of this object.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     func toString(): String
 }
 
 extend Int64 <: ToString {
+    /**
+     * @description Returns a string representation of this Int64 value.
+     * @returns A string representation of this Int64 value.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend IntNative <: ToString {
+    /**
+     * @description Returns a string representation of this IntNative value.
+     * @returns A string representation of this IntNative value.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Int32 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Int32 value.
+     * @returns A string representation of this Int32 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Int16 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Int16 value.
+     * @returns A string representation of this Int16 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Int8 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Int8 value.
+     * @returns A string representation of this Int8 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend UInt64 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this UInt64 value.
+     * @returns A string representation of this UInt64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend UIntNative <: ToString {
+    /**
+     * @description Returns a string representation of this UIntNative value.
+     * @returns A string representation of this UIntNative value.
+     */
     @OverflowWrapping
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend UInt32 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this UInt32 value.
+     * @returns A string representation of this UInt32 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend UInt16 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this UInt16 value.
+     * @returns A string representation of this UInt16 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend UInt8 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this UInt8 value.
+     * @returns A string representation of this UInt8 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Float64 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Float64 value.
+     * @returns A string representation of this Float64 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Float32 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Float32 value.
+     * @returns A string representation of this Float32 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Float16 <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Float16 value.
+     * @returns A string representation of this Float16 value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Bool <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Bool value.
+     * @returns A string representation of this Bool value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Rune <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Rune value.
+     * @returns A string representation of this Rune value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
 extend Unit <: ToString {
-    @!APILevel[since: "22"]
+    /**
+     * @description Returns a string representation of this Unit value.
+     * @returns A string representation of this Unit value.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public func toString(): String
 }
 
+/**
+ * @description A type alias for UInt8.
+ */
+@!APILevel[
+    since: "22"
+]
 public type Byte = UInt8
 
+/**
+ * @description A type alias for Int64.
+ */
+@!APILevel[
+    since: "22"
+]
 public type Int = Int64
 
+/**
+ * @description A type alias for UInt64.
+ */
+@!APILevel[
+    since: "22"
+]
 public type UInt = UInt64
 
-@!APILevel[since: "22"]
+/**
+ * @description Exception thrown when an unsupported operation is attempted.
+ */
+@!APILevel[
+    since: "22"
+]
 public class UnsupportedException <: Exception {
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new UnsupportedException with no detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init()
     
-    @!APILevel[since: "22"]
+    /**
+     * @description Constructs a new UnsupportedException with the specified detail message.
+     * @param message The detail message.
+     */
+    @!APILevel[
+        since: "22"
+    ]
     public init(message: String)
 }
-

@@ -1,191 +1,499 @@
-/*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.arkui.component.text
+
 import ohos.arkui.component.common.*
 import ohos.arkui.component.native_struct.*
 import ohos.arkui.component.util.*
 import ohos.base.*
 import ohos.ffi.*
-import ohos.resource.*
 import ohos.labels.APILevel
+import ohos.resource.*
 
-
-
-
+/**
+ * Defines the controller of Text.
+ *
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
 public class TextController <: RemoteDataLite {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+/**
+ * Defines the TextController constructor.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public init()
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
+
+/**
+ * Close the select menu when menu is on.
+ *
+ * @returns { Unit }
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
     public func closeSelectionMenu(): Unit
 }
 
+/**
+ * Provides a class for writing texts.
+ *
+ */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-public class Text <: ContainerBase {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(content: ResourceStr, controller!: TextController = TextController())
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(content: ResourceStr, controller!: TextController = TextController(), chid!: () -> Unit)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(controller!: TextController = TextController(), chid!: () -> Unit)
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public init(controller!: TextController = TextController())
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func lineSpacing(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontSize(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func maxFontSize(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func minFontSize(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontColor(value: ResourceColor): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontStyle(value: FontStyle): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontWeight(value: FontWeight): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func fontFamily(value: ResourceStr): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func textAlign(value: TextAlign): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func textOverflow(value: TextOverflow): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func maxLines(value: Int32): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func lineHeight(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func decoration(decorationType!: TextDecorationType, color!: ResourceColor,
-        decorationStyle!: TextDecorationStyle = TextDecorationStyle.Solid): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func baselineOffset(value: Length): This
-    
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.ArkUI.ArkUI.Full"
-    ]
-    public func textCase(value: TextCase): This
+public class Text <: CommonMethodComponent<Text> & TextAttribute {
+/**
+ * Called when writing text.
+ *
+ * @param { ?ResourceStr } content - The text content.
+ * @param { ?TextController } [controller] - The text controller.
+ * @param { () -> Unit } [child] - The child component builder.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(content: ?ResourceStr, controller!: ?TextController = None, child!: () -> Unit = {=>})
+
+/**
+ * Called when writing text.
+ *
+ * @param { ?TextController } [controller] - The text controller.
+ * @param { () -> Unit } child - The child component builder.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(controller!: ?TextController = None, child!: () -> Unit)
+
+/**
+ * Called when writing text.
+ *
+ * @param { ?TextController } [controller] - The text controller.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public init(controller!: ?TextController = None)
+
+/**
+ * Set font line spacing.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>If the value specified is less than or equal to 0, the default value 0 is used.
+ * </p>
+ *
+ * @param { ?Length } value - The line spacing value.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func lineSpacing(value: ?Length): This
+
+/**
+ * Set the size of a font.
+ *
+ * @param { ?Length } value - The font size. The default value is 16.fp (wearable devices is 15.fp).
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontSize(value: ?Length): This
+
+/**
+ * Called when the maximum font size of the font is set.
+ *
+ * @param { ?Length } value - The maximum font size.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func maxFontSize(value: ?Length): This
+
+/**
+ * Called when the minimum font size of the font is set.
+ *
+ * @param { ?Length } value - The minimum font size.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func minFontSize(value: ?Length): This
+
+/**
+ * Called when the font color is set.
+ *
+ * @param { ?ResourceColor } value - The font color.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontColor(value: ?ResourceColor): This
+
+/**
+ * Called when the font style of a font is set.
+ *
+ * @param { ?FontStyle } value - The font style. Default value is FontStyle.Normal.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontStyle(value: ?FontStyle): This
+
+/**
+ * Called when the font weight is set.
+ *
+ * @param { ?FontWeight } weight - The font weight.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontWeight(weight: ?FontWeight): This
+
+/**
+ * Called when the font list of text is set.
+ *
+ * @param { ?ResourceStr } value - The font family.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func fontFamily(value: ?ResourceStr): This
+
+/**
+ * Called when the horizontal center mode of the font is set.
+ *
+ * @param { ?TextAlign } value - The text alignment.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func textAlign(value: ?TextAlign): This
+
+/**
+ * Called when the overflow mode of the font is set.
+ *
+ * @param { ?TextOverflow } value - Text overflow options.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func textOverflow(value: ?TextOverflow): This
+
+/**
+ * Called when the maximum number of lines of text is set.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>By default, text is automatically folded.
+ * <br>If this attribute is specified, the text will not exceed the specified number of lines.
+ * <br>If there is extra text, you can use textOverflow to specify how it is displayed.
+ * </p>
+ *
+ * @param { ?Int32 } value - The maximum number of lines.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func maxLines(value: ?Int32): This
+
+/**
+ * Called when the vertical center mode of the font is set.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>If the value is less than or equal to 0, the line height is not limited and the font size is adaptive.
+ * <br>If the value is of the number type, the unit fp is used.
+ * <br>For the string type, numeric string values with optional units, for example, 10 or 10.fp, are supported.
+ * </p>
+ *
+ * @param { ?Length } value - The line height.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func lineHeight(value: ?Length): This
+
+/**
+ * Called when the text decoration of the text is set.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>The style parameter cannot be used in widgets.
+ * </p>
+ *
+ * @param { ?TextDecorationType } decorationType - The type value of the decoration property object.
+ * @param { ?ResourceColor } color - The color value of the decoration property object.
+ * @param { ?TextDecorationStyle } [decorationStyle] - The style value of the decoration property object.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func decoration(decorationType!: ?TextDecorationType, color!: ?ResourceColor,
+        decorationStyle!: ?TextDecorationStyle = None): This
+
+/**
+ * Called when the baseline offset is set.
+ *
+ * @param { ?Length } value - The baseline offset.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func baselineOffset(value: ?Length): This
+
+/**
+ * Called when the type of letter in the text font is set.
+ *
+ * @param { ?TextCase } value - The text case. Default value is TextCase.Normal.
+ * @returns { This } Returns itself to allow method chaining.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    public func textCase(value: ?TextCase): This
 }
 
+/**
+ * Defines the Text attribute functions.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+sealed interface TextAttribute <: CommonMethod<TextAttribute> {
+/**
+ * Set font line spacing.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>If the value specified is less than or equal to 0, the default value 0 is used.
+ * </p>
+ *
+ * @param { ?Length } value - The line spacing value.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func lineSpacing(value: ?Length): TextAttribute
+
+/**
+ * Set the size of a font.
+ *
+ * @param { ?Length } value - The font size. The default value is 16.fp.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func fontSize(value: ?Length): TextAttribute
+
+/**
+ * Called when the maximum font size of the font is set.
+ *
+ * @param { ?Length } value - The maximum font size.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func maxFontSize(value: ?Length): TextAttribute
+
+/**
+ * Called when the minimum font size of the font is set.
+ *
+ * @param { ?Length } value - The minimum font size.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func minFontSize(value: ?Length): TextAttribute
+
+/**
+ * Called when the font color is set.
+ *
+ * @param { ?ResourceColor } value - The font color. The default value is 0xe6182431. The default value on wearable devices is 0xc5ffffff.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func fontColor(value: ?ResourceColor): TextAttribute
+
+/**
+ * Called when the font style of a font is set.
+ *
+ * @param { ?FontStyle } value - The font style. The default value is FontStyle.Normal.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func fontStyle(value: ?FontStyle): TextAttribute
+
+/**
+ * Called when the font weight is set.
+ *
+ * @param { ?FontWeight } weight - The font weight.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func fontWeight(weight: ?FontWeight): TextAttribute
+
+/**
+ * Called when the font list of text is set.
+ *
+ * @param { ?ResourceStr } value - The font family.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func fontFamily(value: ?ResourceStr): TextAttribute
+
+/**
+ * Called when the horizontal center mode of the font is set.
+ *
+ * @param { ?TextAlign } value - The text alignment. The default value is TextAlign.Start.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func textAlign(value: ?TextAlign): TextAttribute
+
+/**
+ * Called when the overflow mode of the font is set.
+ *
+ * @param { ?TextOverflow } value - Text overflow options.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func textOverflow(value: ?TextOverflow): TextAttribute
+
+/**
+ * Called when the maximum number of lines of text is set.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>By default, text is automatically folded.
+ * <br>If this attribute is specified, the text will not exceed the specified number of lines.
+ * <br>If there is extra text, you can use textOverflow to specify how it is displayed.
+ * <p>
+ *
+ * @param { ?Int32 } value - The maximum number of lines.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func maxLines(value: ?Int32): TextAttribute
+
+/**
+ * Called when the vertical center mode of the font is set.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>If the value is less than or equal to 0, the line height is not limited and the font size is adaptive.
+ * <br>If the value is of the number type, the unit fp is used.
+ * <br>For the string type, numeric string values with optional units, for example, 10 or 10.fp, are supported.
+ * </p>
+ *
+ * @param { ?Length } value - The line height.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func lineHeight(value: ?Length): TextAttribute
+
+/**
+ * Called when the text decoration of the text is set.
+ *
+ * <p><strong>NOTE</strong>:
+ * <br>The style parameter cannot be used in widgets.
+ * </p>
+ *
+ * @param { ?TextDecorationType } decorationType - The type value of the decoration property object.
+ * @param { ?ResourceColor } color - The color value of the decoration property object.
+ * @param { ?TextDecorationStyle } decorationStyle - The style value of the decoration property object.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func decoration(decorationType!: ?TextDecorationType, color!: ?ResourceColor, decorationStyle!: ?TextDecorationStyle): TextAttribute
+
+/**
+ * Called when the baseline offset is set.
+ *
+ * @param { ?Length } value - The baseline offset.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func baselineOffset(value: ?Length): TextAttribute
+
+/**
+ * Called when the type of letter in the text font is set.
+ *
+ * @param { ?TextCase } value - The text case. The default value is TextCase.Normal.
+ * @returns { TextAttribute } Returns the text attribute.
+ */
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.ArkUI.ArkUI.Full"
+]
+    func textCase(value: ?TextCase): TextAttribute
+}

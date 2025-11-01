@@ -13,64 +13,45 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
 package ohos.app.ability.ability_stage
-import std.collection.*
-import ohos.ffi.*
-import ohos.labels.*
-import ohos.app.ability.configuration.*
-import ohos.app.ability.want.*
+
 import ohos.app.ability.ui_ability.*
-import ohos.business_exception.BusinessException
-
-import ohos.hilog.*
-
+import ohos.labels.*
 
 /**
-* AbilityStage is a runtime class for HAP files.
-* AbilityStage notifies you of when you can perform HAP initialization such as resource pre-loading and thread
-* creation during the HAP loading.
-*
-* @relation declare class AbilityStage
-*/
+ * AbilityStage is a runtime class for HAP files.
+ * AbilityStage notifies you of when you can perform HAP initialization such as resource pre-loading and thread
+ * creation during the HAP loading.
+ */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.Ability.AbilityRuntime.Core"
 ]
-public open class AbilityStage <: FFIData {
+public open class AbilityStage {
     /**
-    * register AbilityStage
-    */
+     * Defines the context of AbilityStage.
+     * The context is obtained in the callback invoked when initialization is performed during ability startup.
+     *
+     * @returns { AbilityStageContext } Returns the context of AbilityStageContext.
+     */
     @!APILevel[
-        22,
-        syscap: "SystemCapability.Ability.AbilityRuntime.Core"
-    ]
-    public static func registerCreator(moduleName: String, creator: () -> AbilityStage): Unit
-    
-    /**
-    * Defines the context of AbilityStage.
-    * The context is obtained in the callback invoked when initialization is performed during ability startup.
-    *
-    * @relation context: AbilityStageContext
-    */
-    @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public mut prop context: AbilityStageContext
-    
+
     /**
-    * Called when the application is created.
-    * This API returns the result synchronously and does not support asynchronous callbacks.
-    *
-    * @relation onCreate(): void
-    */
+     * Called when the application is created.
+     * 
+     * <p>**NOTE**:
+     * <br>This API returns the result synchronously and does not support asynchronous callbacks.
+     * </p>
+     */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.Ability.AbilityRuntime.Core"
     ]
     public open func onCreate(): Unit
 }
-
-
