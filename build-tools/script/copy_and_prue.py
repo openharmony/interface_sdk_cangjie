@@ -53,12 +53,10 @@ def main():
 
     if os.path.exists(args.destination):
         shutil.rmtree(args.destination)
-        print(f"Removed existing destination directory: {args.destination}")
     os.makedirs(os.path.dirname(args.destination), exist_ok=True)
 
     if os.path.exists(args.source):
-        shutil.copytree(args.source, args.destination)
-        print(f"Copied from {args.source} to {args.destination}")
+        shutil.copytree(args.source, args.destination, symlinks=True, dirs_exist_ok=True)
     else:
         print(f"Source directory does not exist: {args.source}")
         return 1
