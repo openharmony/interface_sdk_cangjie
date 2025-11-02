@@ -191,9 +191,6 @@ public class ArrayBlockingQueue<E> {
 /**
  * @description A type alias for `LinkedBlockingQueue`. Represents a thread-safe, optionally bounded, blocking queue.
  */
-@!APILevel[
-    since: "22"
-]
 public type BlockingQueue<E> = LinkedBlockingQueue<E>
 
 /**
@@ -826,9 +823,6 @@ public interface ConcurrentMap<K, V> {
 /**
  * @description A type alias for `ConcurrentLinkedQueue`. Represents a thread-safe, unbounded, non-blocking queue.
  */
-@!APILevel[
-    since: "22"
-]
 public type NonBlockingQueue<E> = ConcurrentLinkedQueue<E>
 
 /**
