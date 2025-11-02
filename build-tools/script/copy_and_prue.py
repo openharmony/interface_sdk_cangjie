@@ -44,6 +44,33 @@ def move_directory_safely(source_dir, dest_dir):
         shutil.move(source_dir, dest_dir)
 
 
+def remove_specific_files(base_dir, patterns):
+    """
+    删除指定目录下的特定文件
+    :param base_dir: 基础目录路径
+    :param patterns: 要删除的文件模式列表
+    """
+    if os.path.exists(base_dir):
+        for pattern in patterns:
+            full_pattern = os.path.join(base_dir, pattern)
+            remove_files_safely(full_pattern)
+
+
+def remove_files_in_subdirs(base_dir, patterns):
+    """
+    在指定目录的子目录中删除匹配模式的文件
+    :param base_dir: 根目录
+    :param patterns: 文件模式列表
+    """
+    if os.path.exists(base_dir):
+        for root, dirs, files in os.walk(base_dir):
+            # 跳过根目录本身，只处理子目录
+            if root != base_dir:
+                for pattern in patterns:
+                    full_pattern = os.path.join(root, pattern)
+                    remove_files_safely(full_pattern)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, help="Source directory")
@@ -66,30 +93,36 @@ def main():
     remove_directory_safely(include_dir)
 
     # 删除cangjie/lib/linux_ohos_aarch64_cjnative 和 cangjie/lib/linux_ohos_x86_64_cjnative/目录下
-    # libcangjie-std*.a
-    aarch64_lib_dir = os.path.join(args.destination, "lib", "linux_ohos_aarch64_cjnative")
-    if os.path.exists(aarch64_lib_dir):
-        std_pattern = os.path.join(aarch64_lib_dir, "libcangjie-std*.a")
-        remove_files_safely(std_pattern)
+    # libcangjie-std*.a 和 libboundscheck-static.a
+    arch_dirs = [
+        os.path.join(args.destination, "lib", "linux_ohos_aarch64_cjnative"),
+        os.path.join(args.destination, "lib", "linux_ohos_x86_64_cjnative")
+    ]
+    file_patterns = [
+        "libcangjie-std*.a",
+        "libboundscheck-static.a"
+    ]
     
-    x86_64_lib_dir = os.path.join(args.destination, "lib", "linux_ohos_x86_64_cjnative")
-    if os.path.exists(x86_64_lib_dir):
-        std_pattern = os.path.join(x86_64_lib_dir, "libcangjie-std*.a")
-        remove_files_safely(std_pattern)
+    for arch_dir in arch_dirs:
+        remove_specific_files(arch_dir, file_patterns)
 
-    # 删除cangjie/lib 目录及其目录下的特定文件
+    # 删除cangjie/lib 子目录下的特定文件
     lib_dir = os.path.join(args.destination, "lib")
-    if os.path.exists(lib_dir):
-        lib_patterns = [
-            "libcangjie-dynamicLoader-opensslFFI.a",
-            "libcangjie-ast-support.a",
-            "libcangjie-aio.a",
-            "libboundscheck.so",
-            "libboundscheck-static.a"
-        ]
-        for pattern in lib_patterns:
-            full_pattern = os.path.join(lib_dir, pattern)
-            remove_files_safely(full_pattern)
+    lib_patterns = [
+        "libcangjie-dynamicLoader-opensslFFI.a",
+        "libcangjie-ast-support.a",
+        "libcangjie-aio.a",
+        "libboundscheck.so",
+    ]
+    remove_files_in_subdirs(lib_dir, lib_patterns)
+
+    # 删除cangjie/runtime/lib 子目录下的特定文件
+    runtime_lib_dir = os.path.join(args.destination, "runtime/lib")
+    runtime_lib_patterns = [
+        "libcangjie-dynamicLoader-opensslFFI*",
+        "libcangjie-demangle.a",
+    ]
+    remove_files_in_subdirs(runtime_lib_dir, runtime_lib_patterns)
 
     # 如果存在cangjie/tools/dtsparser，则将其移动到cangjie/tools/config
     dtsparser_dir = os.path.join(args.destination, "tools", "dtsparser")
