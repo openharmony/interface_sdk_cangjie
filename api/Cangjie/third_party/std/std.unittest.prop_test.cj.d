@@ -301,23 +301,6 @@ extend Ordering <: Arbitrary<Ordering> {
     public static func arbitrary(random: RandomSource): Generator<Ordering>
 }
 
-/**
- * @description A wrapper for a zero-argument function, used for property-based testing of functions.
- */
-@!APILevel[
-    since: "22"
-]
-public class Function0Wrapper<R> {
-    /**
-     * @description Creates a `Function0Wrapper`.
-     * @param f The zero-argument function to wrap.
-     */
-    @!APILevel[
-        since: "22"
-    ]
-    public init(let f: () -> R)
-}
-
 extend<R> Function0Wrapper<R> <: Arbitrary<Function0Wrapper<R>> where R <: Arbitrary<R> {
     /**
      * @description Creates a generator for `Function0Wrapper<R>`, which wraps a function that returns an arbitrary value of type `R`.
@@ -328,23 +311,6 @@ extend<R> Function0Wrapper<R> <: Arbitrary<Function0Wrapper<R>> where R <: Arbit
         since: "22"
     ]
     public static func arbitrary(random: RandomSource): Generator<Function0Wrapper<R>>
-}
-
-/**
- * @description A wrapper for a 2-element tuple, used for property-based testing of tuples.
- */
-@!APILevel[
-    since: "22"
-]
-public class TupleWrapper2<T0, T1> {
-    /**
-     * @description Creates a `TupleWrapper2`.
-     * @param t The 2-element tuple to wrap.
-     */
-    @!APILevel[
-        since: "22"
-    ]
-    public init(let t: (T0, T1))
 }
 
 extend<T0, T1> TupleWrapper2<T0, T1> <: Arbitrary<TupleWrapper2<T0, T1>>
@@ -359,23 +325,6 @@ extend<T0, T1> TupleWrapper2<T0, T1> <: Arbitrary<TupleWrapper2<T0, T1>>
         since: "22"
     ]
     public static func arbitrary(random: RandomSource): Generator<TupleWrapper2<T0, T1>>
-}
-
-/**
- * @description A wrapper for a 3-element tuple, used for property-based testing of tuples.
- */
-@!APILevel[
-    since: "22"
-]
-public class TupleWrapper3<T0, T1, T2> {
-    /**
-     * @description Creates a `TupleWrapper3`.
-     * @param t The 3-element tuple to wrap.
-     */
-    @!APILevel[
-        since: "22"
-    ]
-    public init(let t: (T0, T1, T2))
 }
 
 extend<T0, T1, T2> TupleWrapper3<T0, T1, T2> <: Arbitrary<TupleWrapper3<T0, T1, T2>>
@@ -393,23 +342,6 @@ extend<T0, T1, T2> TupleWrapper3<T0, T1, T2> <: Arbitrary<TupleWrapper3<T0, T1, 
     public static func arbitrary(random: RandomSource): Generator<TupleWrapper3<T0, T1, T2>>
 }
 
-/**
- * @description A wrapper for a 4-element tuple, used for property-based testing of tuples.
- */
-@!APILevel[
-    since: "22"
-]
-public class TupleWrapper4<T0, T1, T2, T3> {
-    /**
-     * @description Creates a `TupleWrapper4`.
-     * @param t The 4-element tuple to wrap.
-     */
-    @!APILevel[
-        since: "22"
-    ]
-    public init(let t: (T0, T1, T2, T3))
-}
-
 extend<T0, T1, T2, T3> TupleWrapper4<T0, T1, T2, T3> <: Arbitrary<TupleWrapper4<T0, T1, T2, T3>>
         where T0 <: Arbitrary<T0>,
               T1 <: Arbitrary<T1>,
@@ -424,23 +356,6 @@ extend<T0, T1, T2, T3> TupleWrapper4<T0, T1, T2, T3> <: Arbitrary<TupleWrapper4<
         since: "22"
     ]
     public static func arbitrary(random: RandomSource): Generator<TupleWrapper4<T0, T1, T2, T3>>
-}
-
-/**
- * @description A wrapper for a 5-element tuple, used for property-based testing of tuples.
- */
-@!APILevel[
-    since: "22"
-]
-public class TupleWrapper5<T0, T1, T2, T3, T4> {
-    /**
-     * @description Creates a `TupleWrapper5`.
-     * @param t The 5-element tuple to wrap.
-     */
-    @!APILevel[
-        since: "22"
-    ]
-    public init(let t: (T0, T1, T2, T3, T4))
 }
 
 extend<T0, T1, T2, T3, T4> TupleWrapper5<T0, T1, T2, T3, T4> <: Arbitrary<TupleWrapper5<T0, T1, T2, T3, T4>>
