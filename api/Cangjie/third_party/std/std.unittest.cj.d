@@ -1275,9 +1275,6 @@ public struct MeasurementInfo {
  * @description A type alias for a table that defines conversions between measurement units.
  * It is an array of tuples, where each tuple contains a conversion factor and a unit name.
  */
-@!APILevel[
-    since: "22"
-]
 public type MeasurementUnitTable = Array<(Float64, String)>
 
 
