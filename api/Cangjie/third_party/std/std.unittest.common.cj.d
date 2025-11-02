@@ -439,7 +439,7 @@ public struct OptionInfo {
     @!APILevel[
         since: "22"
     ]
-    public let types!: HashMap<String, ?String> = HashMap()
+    public let types: HashMap<String, ?String> = HashMap()
 }
 
 /**
