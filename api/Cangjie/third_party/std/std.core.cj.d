@@ -5204,7 +5204,9 @@ public class NegativeArraySizeException <: Exception {
 @!APILevel[
     since: "22"
 ]
+public class NoneValueException <: Exception {
     /**
+     * @description Constructs a new NoneValueException with no detail message.
      */
     @!APILevel[
         since: "22"
