@@ -1247,12 +1247,23 @@ public interface Measurement {
 ]
 public struct MeasurementInfo {
     /**
+     * @description Creates a measurement
+     * @param conversionTable A table for converting measurement units.
+     * @param name The name of the measurement.
+     * @param textDescription A textual description of the measurement.
+     */
+    @!APILevel[
+        since: "22"
+    ]
+    public init(conversionTable: MeasurementUnitTable, name: String, textDescription: String)
+    
+    /**
      * @description A table for converting measurement units.
      */
     @!APILevel[
         since: "22"
     ]
-    public conversionTable: MeasurementUnitTable
+    public let conversionTable: MeasurementUnitTable
 
     /**
      * @description The name of the measurement.
@@ -1260,7 +1271,7 @@ public struct MeasurementInfo {
     @!APILevel[
         since: "22"
     ]
-    public name: String
+    public let name: String
 
     /**
      * @description A textual description of the measurement.
@@ -1268,7 +1279,7 @@ public struct MeasurementInfo {
     @!APILevel[
         since: "22"
     ]
-    public textDescription: String
+    public let textDescription: String
 }
 
 /**
