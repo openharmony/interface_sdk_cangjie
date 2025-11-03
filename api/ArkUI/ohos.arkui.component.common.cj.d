@@ -10656,7 +10656,7 @@ public class DragInfo {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var extraParams: ?String
+    public var extraParams: String
 
 /**
  * Current position of the drag operation.
@@ -10665,7 +10665,7 @@ public class DragInfo {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var touchPoint: ?Position
+    public var touchPoint: Position
 }
 
 /**
@@ -13277,7 +13277,7 @@ public class DismissSheetAction {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var reason: ?DismissReason
+    public var reason: DismissReason
 
 /**
  * Defines sheet dismiss function.
