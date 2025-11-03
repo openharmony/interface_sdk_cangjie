@@ -5204,7 +5204,9 @@ public class NegativeArraySizeException <: Exception {
 @!APILevel[
     since: "22"
 ]
+public class NoneValueException <: Exception {
     /**
+     * @description Constructs a new NoneValueException with no detail message.
      */
     @!APILevel[
         since: "22"
@@ -7509,25 +7511,16 @@ extend Unit <: ToString {
 /**
  * @description A type alias for UInt8.
  */
-@!APILevel[
-    since: "22"
-]
 public type Byte = UInt8
 
 /**
  * @description A type alias for Int64.
  */
-@!APILevel[
-    since: "22"
-]
 public type Int = Int64
 
 /**
  * @description A type alias for UInt64.
  */
-@!APILevel[
-    since: "22"
-]
 public type UInt = UInt64
 
 /**

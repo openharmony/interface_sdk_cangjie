@@ -395,13 +395,6 @@ public enum OptionValidity {
 }
 
 /**
- * @description A type alias for a function that validates a test configuration option's value.
- */
-@!APILevel[
-    since: "22"
-]
-type Validator = (Any) -> OptionValidity
-/**
  * @description A flag indicating whether the unittest options registry is closed for new registrations.
  */
 @!APILevel[
@@ -446,7 +439,7 @@ public struct OptionInfo {
     @!APILevel[
         since: "22"
     ]
-    public let types!: HashMap<String, ?String>
+    public let types: HashMap<String, ?String> = HashMap()
 }
 
 /**
@@ -466,7 +459,7 @@ public let optionsInfo: HashMap<String, OptionInfo> = HashMap()
     since: "22",
     throwexception: true
 ]
-public func registerOptionValidator(name: String, validator: Validator): Unit
+public func registerOptionValidator(name: String, validator: (Any) -> OptionValidity): Unit
 
 /**
  * @description Sets descriptive information for a test configuration option.

@@ -2309,9 +2309,6 @@ sealed abstract class TypeInfo <: Equatable<TypeInfo> & Hashable & ToString {
 /**
  * @description A type alias representing an annotation. All annotation types must be subtypes of `Object`.
  */
-@!APILevel[
-    since: "22"
-]
 public type Annotation = Object
 
 /**
