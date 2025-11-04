@@ -112,7 +112,7 @@ def main():
         "libcangjie-dynamicLoader-opensslFFI.a",
         "libcangjie-ast-support.a",
         "libcangjie-aio.a",
-        "libboundscheck.so",
+        "libboundscheck.*",
     ]
     remove_files_in_subdirs(lib_dir, lib_patterns)
 
