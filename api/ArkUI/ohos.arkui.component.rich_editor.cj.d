@@ -70,7 +70,7 @@ public class RichEditorInsertValue {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var insertOffset: ?Int32
+    public var insertOffset: Int32
 
 /**
  * The inserted value.
@@ -79,7 +79,7 @@ public class RichEditorInsertValue {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var insertValue: ?String
+    public var insertValue: String
 
 /**
  * Constructor.
@@ -438,7 +438,7 @@ public class RichEditorSelection {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var selection: ?(Int32, Int32)
+    public var selection: (Int32, Int32)
 
 /**
  * The selected text content.
@@ -447,7 +447,7 @@ public class RichEditorSelection {
     since: "22",
     syscap: "SystemCapability.ArkUI.ArkUI.Full"
 ]
-    public var spans: ?ArrayList<RichEditorSpanResult>
+    public var spans: ArrayList<RichEditorSpanResult>
 
 /**
  * RichEditorSelection constructor
