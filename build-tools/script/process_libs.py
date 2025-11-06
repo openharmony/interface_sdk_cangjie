@@ -27,7 +27,7 @@ def convert_cjo_to_json(flatc, input, output_path, fbs):
         raise Exception("failed to flatc -t --raw-binary -o [output-path] [fbs] -- [input]")
 
 def convert_json_to_cjo(flatc, input, output_path, fbs):
-    child = subprocess.Popen([flatc, "-b", "-o", output_path, fbs, input], stdout=subprocess.PIPE)
+    child = subprocess.Popen([flatc, "--no-warnings", "-b", "-o", output_path, fbs, input], stdout=subprocess.PIPE)
     code = child.wait()
     if code != 0:
         raise Exception("failed to flatc -b -o [output-path] [fbs] [input]")
