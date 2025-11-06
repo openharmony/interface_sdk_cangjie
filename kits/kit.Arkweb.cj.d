@@ -15,7 +15,7 @@
 
 // The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
-package kit.ArkWeb
-public import ohos.web.webview.*
+package kit.Arkweb
+public import ohos.webview.*
 
 
