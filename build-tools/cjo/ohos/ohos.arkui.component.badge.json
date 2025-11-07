@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.arkui.component.badge",
-  pkgDepInfo: "{\"package\":\"ohos.arkui.component.badge\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_badge.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_badge.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_badge.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_badge.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"cj_badge.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":27}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.badge\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"badge.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":58}},{\"file\":\"badge.cj\",\"begin\":{\"line\":20,\"column\":60},\"end\":{\"line\":20,\"column\":70}},{\"file\":\"badge_attr.cj\",\"begin\":{\"line\":18,\"column\":37},\"end\":{\"line\":18,\"column\":49}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"badge.cj\",\"begin\":{\"line\":21,\"column\":35},\"end\":{\"line\":21,\"column\":59}},{\"file\":\"badge.cj\",\"begin\":{\"line\":21,\"column\":61},\"end\":{\"line\":21,\"column\":92}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"badge.cj\",\"begin\":{\"line\":22,\"column\":19},\"end\":{\"line\":22,\"column\":32}},{\"file\":\"badge.cj\",\"begin\":{\"line\":22,\"column\":34},\"end\":{\"line\":22,\"column\":40}},{\"file\":\"badge.cj\",\"begin\":{\"line\":22,\"column\":42},\"end\":{\"line\":22,\"column\":47}},{\"file\":\"badge.cj\",\"begin\":{\"line\":22,\"column\":49},\"end\":{\"line\":22,\"column\":59}}]},{\"package\":\"ohos.business_exception\",\"isStd\":false,\"imports\":[{\"file\":\"badge.cj\",\"begin\":{\"line\":25,\"column\":1},\"end\":{\"line\":25,\"column\":49}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"badge.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}},{\"file\":\"badge_attr.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]},{\"package\":\"std.deriving\",\"isStd\":true,\"imports\":[{\"file\":\"badge.cj\",\"begin\":{\"line\":24,\"column\":1},\"end\":{\"line\":24,\"column\":27}}]}],\"features\":[]}",
   imports: [
     "ohos.arkui.component.badge",
     "std.core",
@@ -14,7 +14,8 @@
     "ohos.arkui.component.common"
   ],
   allFiles: [
-    "ohos.arkui.component.badge/cj_badge.cj"
+    "ohos.arkui.component.badge/badge.cj",
+    "ohos.arkui.component.badge/badge_attr.cj"
   ],
   allFileImports: [
     {
@@ -23,15 +24,15 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 1,
+            line: 20,
+            column: 37,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 37,
+            line: 20,
+            column: 58,
             ignore: false
           },
           prefixPaths: [
@@ -40,22 +41,46 @@
             "component",
             "common"
           ],
-          identifier: "*",
+          identifier: "CommonMethodComponent",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 19,
-            column: 1,
+            line: 20,
+            column: 60,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 19,
+            line: 20,
+            column: 70,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "FontWeight",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
             column: 35,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 59,
             ignore: false
           },
           prefixPaths: [
@@ -64,43 +89,133 @@
             "component",
             "util"
           ],
-          identifier: "*",
+          identifier: "transAppResourceToLength",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 20,
-            column: 1,
+            line: 21,
+            column: 61,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 20,
+            line: 21,
+            column: 92,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "transAppResourceToResourceColor",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
             column: 19,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 32,
             ignore: false
           },
           prefixPaths: [
             "ohos",
             "base"
           ],
-          identifier: "*",
+          identifier: "ResourceColor",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 21,
+            line: 22,
+            column: 34,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 40,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "Length",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 42,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 47,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "Color",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 49,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 59,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "LengthProp",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 21,
+            line: 23,
             column: 28,
             ignore: false
           },
@@ -115,14 +230,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 22,
+            line: 24,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 22,
+            line: 24,
             column: 27,
             ignore: false
           },
@@ -137,12 +252,106 @@
           begin: {
             file: 1,
             pkgId: 0,
+            line: 25,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 25,
+            column: 49,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "business_exception"
+          ],
+          identifier: "BusinessException",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
             line: 0,
             column: 0,
             ignore: false
           },
           end: {
             file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 49,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CommonMethod",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
             pkgId: 0,
             line: 0,
             column: 0,
@@ -221,6 +430,19 @@
       }
     },
     {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
       kind: "Func",
       typeArgs: [
 
@@ -250,7 +472,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 11
+        retType: 12
       }
     },
     {
@@ -270,6 +492,19 @@
       }
     },
     {
+      kind: "Enum",
+      typeArgs: [
+        15
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
       kind: "Interface",
       typeArgs: [
 
@@ -279,6 +514,19 @@
         declPtr: {
           pkgId: 2,
           decl: "_CN9ohos.base13ResourceColorE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        17
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
         }
       }
     },
@@ -298,6 +546,19 @@
     {
       kind: "Enum",
       typeArgs: [
+        19
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
 
       ],
       info_type: "CompositeTyInfo",
@@ -311,17 +572,17 @@
     {
       kind: "Func",
       typeArgs: [
-        13,
         14,
+        16,
+        16,
         14,
-        13,
-        15,
-        13,
-        14
+        18,
+        14,
+        16
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 12
+        retType: 13
       }
     },
     {
@@ -331,82 +592,82 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 13
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        13
-      ],
-      info_type: "FuncTyInfo",
-      info: {
         retType: 14
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        13,
         14
       ],
       info_type: "FuncTyInfo",
       info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14,
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14,
+        16,
+        16
+      ],
+      info_type: "FuncTyInfo",
+      info: {
         retType: 14
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        13,
         14,
+        16,
+        16,
         14
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 13
+        retType: 18
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        13,
         14,
+        16,
+        16,
         14,
-        13
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 15
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        13,
-        14,
-        14,
-        13,
-        15
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 13
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        13,
-        14,
-        14,
-        13,
-        15,
-        13
+        18
       ],
       info_type: "FuncTyInfo",
       info: {
         retType: 14
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        14,
+        16,
+        16,
+        14,
+        18,
+        14
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 16
       }
     },
     {
@@ -431,13 +692,13 @@
     {
       kind: "Func",
       typeArgs: [
-        25,
-        26,
-        26,
-        25,
-        25,
-        25,
-        26,
+        29,
+        30,
+        30,
+        29,
+        29,
+        29,
+        30,
         2
       ],
       info_type: "FuncTyInfo",
@@ -462,14 +723,53 @@
       kind: "Func",
       typeArgs: [
         2,
-        12,
-        7,
-        2,
-        30
+        34,
+        35,
+        36,
+        37
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 28
+        retType: 32
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        13
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        7
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        2
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -486,72 +786,85 @@
       kind: "Func",
       typeArgs: [
         2,
-        12
+        34
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 7
+        retType: 35
       }
     },
     {
       kind: "Func",
       typeArgs: [
         2,
-        12,
-        7
+        34,
+        35
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 2
+        retType: 36
       }
     },
     {
       kind: "Func",
       typeArgs: [
+        8,
         34,
-        12,
-        7,
-        30
+        35,
+        37
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 28
-      }
-    },
-    {
-      kind: "Struct",
-      typeArgs: [
-
-      ],
-      info_type: "CompositeTyInfo",
-      info: {
-        declPtr: {
-          pkgId: 1,
-          decl: "_CNat6StringE"
-        }
+        retType: 32
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        34,
-        12
+        8,
+        34
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 7
+        retType: 35
       }
     },
     {
       kind: "Class",
       typeArgs: [
-
+        32
       ],
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
           pkgId: 3,
-          decl: "_CN27ohos.arkui.component.common13ContainerBaseE"
+          decl: "_CN27ohos.arkui.component.common21CommonMethodComponentIG_E"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 104
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        43
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common12CommonMethodIG_E"
         }
       }
     }
@@ -568,14 +881,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 119,
         ignore: false
       },
@@ -583,7 +896,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 10,
         ignore: false
       },
@@ -639,14 +952,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 201,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 242,
+        line: 212,
         column: 2,
         ignore: false
       },
@@ -654,7 +967,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 231,
+        line: 201,
         column: 8,
         ignore: false
       },
@@ -674,7 +987,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 10474287441897005386
+        bodyHash: 12230921249717903680
       },
       info_type: "StructInfo",
       info: {
@@ -700,14 +1013,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 43,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 55,
         ignore: false
       },
@@ -715,7 +1028,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 43,
         ignore: false
       },
@@ -747,14 +1060,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 57,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 78,
         ignore: false
       },
@@ -762,7 +1075,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 57,
         ignore: false
       },
@@ -794,14 +1107,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 80,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 95,
         ignore: false
       },
@@ -809,7 +1122,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 80,
         ignore: false
       },
@@ -841,14 +1154,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 97,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 112,
         ignore: false
       },
@@ -856,7 +1169,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 28,
         column: 97,
         ignore: false
       },
@@ -893,14 +1206,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 108,
         ignore: false
       },
@@ -908,7 +1221,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 10,
         ignore: false
       },
@@ -957,14 +1270,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 47,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 61,
         ignore: false
       },
@@ -972,7 +1285,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 47,
         ignore: false
       },
@@ -1004,14 +1317,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 63,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 84,
         ignore: false
       },
@@ -1019,7 +1332,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 63,
         ignore: false
       },
@@ -1051,14 +1364,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 86,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 101,
         ignore: false
       },
@@ -1066,7 +1379,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 30,
         column: 86,
         ignore: false
       },
@@ -1103,7 +1416,7 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 39,
+        line: 40,
         column: 11,
         ignore: false
       },
@@ -1118,7 +1431,7 @@
       identifierPos: {
         file: 0,
         pkgId: 1,
-        line: 39,
+        line: 40,
         column: 23,
         ignore: false
       },
@@ -1132,7 +1445,7 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
@@ -1151,7 +1464,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 14590409003260472527
+        bodyHash: 10170531791935375168
       },
       info_type: "EnumInfo",
       info: {
@@ -1168,8 +1481,8 @@
         ellipsisPos: {
           file: 1,
           pkgId: 0,
-          line: 35,
-          column: 693,
+          line: 36,
+          column: 695,
           ignore: false
         }
       }
@@ -1209,16 +1522,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 3
             },
             {
-              name: "stagemodelonly",
-              expr: 4
-            },
-            {
               name: "syscap",
-              expr: 5
+              expr: 4
             }
           ]
         }
@@ -1232,7 +1541,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 1273861709373161920,
-        bodyHash: 17523381249315607982
+        bodyHash: 10170531791935375168
       },
       info_type: "VarInfo",
       info: {
@@ -1273,12 +1582,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 6
+              name: "since",
+              expr: 5
             },
             {
               name: "syscap",
-              expr: 7
+              expr: 6
             }
           ]
         }
@@ -1292,7 +1601,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 1273861709373161920,
-        bodyHash: 14590409003260472527
+        bodyHash: 10170531791935375168
       },
       info_type: "VarInfo",
       info: {
@@ -1333,12 +1642,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 8
+              name: "since",
+              expr: 7
             },
             {
               name: "syscap",
-              expr: 9
+              expr: 8
             }
           ]
         }
@@ -1352,7 +1661,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 1273861709373161920,
-        bodyHash: 14590409003260472527
+        bodyHash: 10170531791935375168
       },
       info_type: "VarInfo",
       info: {
@@ -1394,7 +1703,7 @@
       annotations: [
 
       ],
-      type: 8,
+      type: 9,
       mangledName: "_CN26ohos.arkui.component.badge13BadgePosition8getValueHv",
       exportId: "_CN26ohos.arkui.component.badge13BadgePosition8getValueHv",
       mangledBeforeSema: "26ohos.arkui.component.badge13BadgePositionU8getValueF$$i",
@@ -1403,7 +1712,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 7201259208513793003
+        bodyHash: 13081398846900309955
       },
       info_type: "FuncInfo",
       info: {
@@ -1453,7 +1762,7 @@
         ignore: false
       },
       attributes: [
-        144678412907185168,
+        144678412907185200,
         0
       ],
       annotations: [
@@ -1461,19 +1770,19 @@
       ],
       type: 7,
       mangledName: "",
-      exportId: "_CN26ohos.arkui.component.badgeXNNY_13BadgePositionEUcj_badge$K_E",
+      exportId: "_CN26ohos.arkui.component.badgeXNNY_13BadgePositionEUbadge$K_E",
       mangledBeforeSema: "13BadgePosition<:9Equatable<13BadgePosition>X",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 13978265520390496012
+        bodyHash: 11219634810075212638
       },
       info_type: "ExtendInfo",
       info: {
         inheritedTypes: [
-          9
+          10
         ],
         body: [
           17,
@@ -1517,7 +1826,7 @@
       annotations: [
 
       ],
-      type: 10,
+      type: 11,
       mangledName: "_CN26ohos.arkui.component.badgeXNNY_13BadgePositionEeqHY1_",
       exportId: "_CN26ohos.arkui.component.badgeXNNY_13BadgePositionEeqHY1_",
       mangledBeforeSema: "26ohos.arkui.component.badge7Extend!13BadgePosition<:9Equatable<13BadgePosition>X2==F13BadgePosition$$b",
@@ -1526,7 +1835,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 6233193055937795072
+        bodyHash: 546670323001790784
       },
       info_type: "FuncInfo",
       info: {
@@ -1541,7 +1850,7 @@
               ]
             }
           ],
-          retType: 11
+          retType: 12
         },
         op: "Equal"
       }
@@ -1629,7 +1938,7 @@
       annotations: [
 
       ],
-      type: 10,
+      type: 11,
       mangledName: "_CN26ohos.arkui.component.badgeXNNY_13BadgePositionEneHY1_",
       exportId: "_CN26ohos.arkui.component.badgeXNNY_13BadgePositionEneHY1_",
       mangledBeforeSema: "26ohos.arkui.component.badge7Extend!13BadgePosition<:9Equatable<13BadgePosition>X2!=F13BadgePosition$$b",
@@ -1638,7 +1947,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 2885817270251187507
+        bodyHash: 3495431016922068787
       },
       info_type: "FuncInfo",
       info: {
@@ -1653,7 +1962,7 @@
               ]
             }
           ],
-          retType: 11
+          retType: 12
         },
         op: "NotEqual"
       }
@@ -1716,14 +2025,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 91,
+        line: 85,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 228,
+        line: 198,
         column: 2,
         ignore: false
       },
@@ -1731,7 +2040,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 91,
+        line: 85,
         column: 14,
         ignore: false
       },
@@ -1745,31 +2054,31 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 10
+              name: "since",
+              expr: 9
             },
             {
               name: "syscap",
-              expr: 11
+              expr: 10
             }
           ]
         }
       ],
-      type: 12,
+      type: 13,
       mangledName: "_CN26ohos.arkui.component.badge10BadgeStyleE",
       exportId: "_CN26ohos.arkui.component.badge10BadgeStyleE",
       mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC",
       hash: {
-        instVar: 15217870909036362375,
+        instVar: 2009087258121362923,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 17122056318846602568
+        bodyHash: 10272158749408885551
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          24
+          28
         ],
         body: [
           22,
@@ -1789,22 +2098,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 104,
+        line: 94,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 104,
-        column: 36,
+        line: 94,
+        column: 37,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 104,
+        line: 94,
         column: 16,
         ignore: false
       },
@@ -1818,11 +2127,68 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 12
+              name: "since",
+              expr: 11
             },
             {
-              name: "stagemodelonly",
+              name: "syscap",
+              expr: 12
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle5colorK_E",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC5colorV$$O1_13ResourceColor",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 10272158749408885551
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 33,
+        ignore: false
+      },
+      identifier: "fontSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 109,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
               expr: 13
             },
             {
@@ -1832,81 +2198,16 @@
           ]
         }
       ],
-      type: 13,
-      mangledName: "",
-      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle5colorK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC5colorV$$13ResourceColor",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
-      },
-      info_type: "VarInfo",
-      info: {
-        isVar: true
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 124,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 124,
-        column: 32,
-        ignore: false
-      },
-      identifier: "fontSize",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 124,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 15
-            },
-            {
-              name: "stagemodelonly",
-              expr: 16
-            },
-            {
-              name: "syscap",
-              expr: 17
-            }
-          ]
-        }
-      ],
-      type: 14,
+      type: 16,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge10BadgeStyle8fontSizeK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC8fontSizeV$$6Length",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC8fontSizeV$$O1_6Length",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
+        bodyHash: 10272158749408885551
       },
       info_type: "VarInfo",
       info: {
@@ -1919,22 +2220,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 145,
+        line: 125,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 145,
-        column: 33,
+        line: 125,
+        column: 34,
         ignore: false
       },
       identifier: "badgeSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 145,
+        line: 125,
         column: 16,
         ignore: false
       },
@@ -1948,11 +2249,129 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 18
+              name: "since",
+              expr: 15
             },
             {
-              name: "stagemodelonly",
+              name: "syscap",
+              expr: 16
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "",
+      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle9badgeSizeK_E",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC9badgeSizeV$$O1_6Length",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 10272158749408885551
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 42,
+        ignore: false
+      },
+      identifier: "badgeColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 134,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 17
+            },
+            {
+              name: "syscap",
+              expr: 18
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "",
+      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle10badgeColorK_E",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC10badgeColorV$$O1_13ResourceColor",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 10272158749408885551
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 39,
+        ignore: false
+      },
+      identifier: "fontWeight",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 150,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
               expr: 19
             },
             {
@@ -1962,146 +2381,16 @@
           ]
         }
       ],
-      type: 14,
-      mangledName: "",
-      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle9badgeSizeK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC9badgeSizeV$$6Length",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
-      },
-      info_type: "VarInfo",
-      info: {
-        isVar: true
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 158,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 158,
-        column: 41,
-        ignore: false
-      },
-      identifier: "badgeColor",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 158,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 21
-            },
-            {
-              name: "stagemodelonly",
-              expr: 22
-            },
-            {
-              name: "syscap",
-              expr: 23
-            }
-          ]
-        }
-      ],
-      type: 13,
-      mangledName: "",
-      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle10badgeColorK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC10badgeColorV$$13ResourceColor",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
-      },
-      info_type: "VarInfo",
-      info: {
-        isVar: true
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 177,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 177,
-        column: 38,
-        ignore: false
-      },
-      identifier: "fontWeight",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 177,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 24
-            },
-            {
-              name: "stagemodelonly",
-              expr: 25
-            },
-            {
-              name: "syscap",
-              expr: 26
-            }
-          ]
-        }
-      ],
-      type: 15,
+      type: 18,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge10BadgeStyle10fontWeightK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC10fontWeightV$$10FontWeight",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC10fontWeightV$$O1_10FontWeight",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
+        bodyHash: 10272158749408885551
       },
       info_type: "VarInfo",
       info: {
@@ -2114,22 +2403,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 190,
+        line: 159,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 190,
-        column: 42,
+        line: 159,
+        column: 43,
         ignore: false
       },
       identifier: "borderColor",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 190,
+        line: 159,
         column: 16,
         ignore: false
       },
@@ -2143,30 +2432,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 27
-            },
-            {
-              name: "stagemodelonly",
-              expr: 28
+              name: "since",
+              expr: 21
             },
             {
               name: "syscap",
-              expr: 29
+              expr: 22
             }
           ]
         }
       ],
-      type: 13,
+      type: 14,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge10BadgeStyle11borderColorK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC11borderColorV$$13ResourceColor",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC11borderColorV$$O1_13ResourceColor",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
+        bodyHash: 10272158749408885551
       },
       info_type: "VarInfo",
       info: {
@@ -2179,22 +2464,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 205,
+        line: 169,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 205,
-        column: 35,
+        line: 169,
+        column: 36,
         ignore: false
       },
       identifier: "borderWidth",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 205,
+        line: 169,
         column: 16,
         ignore: false
       },
@@ -2208,30 +2493,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 30
-            },
-            {
-              name: "stagemodelonly",
-              expr: 31
+              name: "since",
+              expr: 23
             },
             {
               name: "syscap",
-              expr: 32
+              expr: 24
             }
           ]
         }
       ],
-      type: 14,
+      type: 16,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge10BadgeStyle11borderWidthK_E",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC11borderWidthV$$6Length",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC11borderWidthV$$O1_6Length",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 17327286262165285715,
-        bodyHash: 11893097501693740523
+        bodyHash: 10272158749408885551
       },
       info_type: "VarInfo",
       info: {
@@ -2248,14 +2529,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 227,
+        line: 197,
         column: 6,
         ignore: false
       },
@@ -2263,7 +2544,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 12,
         ignore: false
       },
@@ -2277,30 +2558,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 33
-            },
-            {
-              name: "stagemodelonly",
-              expr: 34
+              name: "since",
+              expr: 25
             },
             {
               name: "syscap",
-              expr: 35
+              expr: 26
             }
           ]
         }
       ],
-      type: 16,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle6<init>HCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_",
-      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle6<init>HCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_",
-      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC6<init>F13ResourceColor!5color=6Length!8fontSize=6Length!9badgeSize=13ResourceColor!10badgeColor=10FontWeight!10fontWeight=13ResourceColor!11borderColor=6Length!11borderWidth=$$",
+      type: 20,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle6<init>HNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_",
+      exportId: "_CN26ohos.arkui.component.badge10BadgeStyle6<init>HNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_",
+      mangledBeforeSema: "26ohos.arkui.component.badge10BadgeStyleC6<init>FO1_13ResourceColor!5color=O1_6Length!8fontSize=O1_6Length!9badgeSize=O1_13ResourceColor!10badgeColor=O1_10FontWeight!10fontWeight=O1_13ResourceColor!11borderColor=O1_6Length!11borderWidth=$$",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 12031638305981106867
+        bodyHash: 13088694532657184494
       },
       info_type: "FuncInfo",
       info: {
@@ -2327,7 +2604,7 @@
               ]
             }
           ],
-          retType: 12
+          retType: 13
         }
       }
     },
@@ -2337,22 +2614,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
@@ -2363,8 +2640,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E5colorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2389,15 +2666,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 41,
+        line: 186,
+        column: 42,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color.0",
@@ -2415,8 +2692,8 @@
       annotations: [
 
       ],
-      type: 17,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E5colorHv",
+      type: 21,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E5colorHv",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2439,7 +2716,7 @@
               ]
             }
           ],
-          retType: 13
+          retType: 14
         }
       }
     },
@@ -2449,23 +2726,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 79,
+        line: 186,
+        column: 73,
         ignore: false
       },
       identifier: "fontSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       attributes: [
@@ -2475,8 +2752,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E8fontSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E8fontSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2501,15 +2778,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 74,
+        line: 186,
+        column: 69,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 79,
+        line: 186,
+        column: 73,
         ignore: false
       },
       identifier: "fontSize.1",
@@ -2527,8 +2804,8 @@
       annotations: [
 
       ],
-      type: 18,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E8fontSizeHY3_",
+      type: 22,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E8fontSizeHY3_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2551,7 +2828,7 @@
               ]
             }
           ],
-          retType: 14
+          retType: 16
         }
       }
     },
@@ -2561,22 +2838,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
@@ -2587,8 +2864,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E10fontSize.1HY3_E5colorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E10fontSize.1HY3_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2608,23 +2885,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 107,
+        line: 186,
+        column: 101,
         ignore: false
       },
       identifier: "badgeSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       attributes: [
@@ -2634,8 +2911,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E9badgeSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E9badgeSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2660,15 +2937,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 102,
+        line: 186,
+        column: 97,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 107,
+        line: 186,
+        column: 101,
         ignore: false
       },
       identifier: "badgeSize.2",
@@ -2686,8 +2963,8 @@
       annotations: [
 
       ],
-      type: 19,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E9badgeSizeHY3_Y6_",
+      type: 23,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E9badgeSizeHY3_Y9_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2712,7 +2989,7 @@
               ]
             }
           ],
-          retType: 14
+          retType: 16
         }
       }
     },
@@ -2722,70 +2999,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E11badgeSize.2HY3_Y6_E5colorE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 215,
-        column: 54,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 215,
-        column: 79,
-        ignore: false
-      },
-      identifier: "fontSize",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 215,
-        column: 54,
         ignore: false
       },
       attributes: [
@@ -2796,7 +3026,7 @@
 
       ],
       type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E11badgeSize.2HY3_Y6_E8fontSizeE",
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E11badgeSize.2HY3_Y9_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2816,22 +3046,69 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
+        line: 186,
+        column: 48,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 73,
+        ignore: false
+      },
+      identifier: "fontSize",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 186,
+        column: 48,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E11badgeSize.2HY3_Y9_E8fontSizeIYA_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 47,
+        line: 187,
+        column: 43,
         ignore: false
       },
       identifier: "badgeColor",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 216,
+        line: 187,
         column: 9,
         ignore: false
       },
@@ -2842,8 +3119,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E10badgeColorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E10badgeColorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2868,15 +3145,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 38,
+        line: 187,
+        column: 39,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 47,
+        line: 187,
+        column: 43,
         ignore: false
       },
       identifier: "badgeColor.3",
@@ -2894,8 +3171,8 @@
       annotations: [
 
       ],
-      type: 20,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E10badgeColorHY3_Y6_Y6_",
+      type: 24,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E10badgeColorHY3_Y9_Y9_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2922,7 +3199,7 @@
               ]
             }
           ],
-          retType: 13
+          retType: 14
         }
       }
     },
@@ -2932,22 +3209,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
@@ -2958,8 +3235,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12badgeColor.3HY3_Y6_Y6_E5colorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12badgeColor.3HY3_Y9_Y9_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2979,23 +3256,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 79,
+        line: 186,
+        column: 73,
         ignore: false
       },
       identifier: "fontSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       attributes: [
@@ -3005,8 +3282,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12badgeColor.3HY3_Y6_Y6_E8fontSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12badgeColor.3HY3_Y9_Y9_E8fontSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3026,23 +3303,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 107,
+        line: 186,
+        column: 101,
         ignore: false
       },
       identifier: "badgeSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       attributes: [
@@ -3052,8 +3329,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12badgeColor.3HY3_Y6_Y6_E9badgeSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12badgeColor.3HY3_Y9_Y9_E9badgeSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3073,23 +3350,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 49,
+        line: 187,
+        column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 92,
+        line: 187,
+        column: 76,
         ignore: false
       },
       identifier: "fontWeight",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 49,
+        line: 187,
+        column: 45,
         ignore: false
       },
       attributes: [
@@ -3099,8 +3376,8 @@
       annotations: [
 
       ],
-      type: 15,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E10fontWeightE",
+      type: 18,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E10fontWeightIYD_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3125,15 +3402,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 75,
+        line: 187,
+        column: 72,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 92,
+        line: 187,
+        column: 76,
         ignore: false
       },
       identifier: "fontWeight.4",
@@ -3151,8 +3428,8 @@
       annotations: [
 
       ],
-      type: 21,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E10fontWeightHY3_Y6_Y6_Y3_",
+      type: 25,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E10fontWeightHY3_Y9_Y9_Y3_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3181,7 +3458,7 @@
               ]
             }
           ],
-          retType: 15
+          retType: 18
         }
       }
     },
@@ -3191,22 +3468,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
@@ -3217,8 +3494,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12fontWeight.4HY3_Y6_Y6_Y3_E5colorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12fontWeight.4HY3_Y9_Y9_Y3_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3238,23 +3515,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 79,
+        line: 186,
+        column: 73,
         ignore: false
       },
       identifier: "fontSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       attributes: [
@@ -3264,8 +3541,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12fontWeight.4HY3_Y6_Y6_Y3_E8fontSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12fontWeight.4HY3_Y9_Y9_Y3_E8fontSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3285,23 +3562,70 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 107,
+        line: 186,
+        column: 101,
         ignore: false
       },
       identifier: "badgeSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12fontWeight.4HY3_Y9_Y9_Y3_E9badgeSizeIYA_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 43,
+        ignore: false
+      },
+      identifier: "badgeColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
         ignore: false
       },
       attributes: [
@@ -3312,7 +3636,7 @@
 
       ],
       type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12fontWeight.4HY3_Y6_Y6_Y3_E9badgeSizeE",
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E12fontWeight.4HY3_Y9_Y9_Y3_E10badgeColorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3332,69 +3656,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
+        line: 188,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 47,
-        ignore: false
-      },
-      identifier: "badgeColor",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E12fontWeight.4HY3_Y6_Y6_Y3_E10badgeColorE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 217,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 217,
-        column: 48,
+        line: 188,
+        column: 44,
         ignore: false
       },
       identifier: "borderColor",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 217,
+        line: 188,
         column: 9,
         ignore: false
       },
@@ -3405,8 +3682,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E11borderColorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E11borderColorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3431,15 +3708,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 39,
+        line: 188,
+        column: 40,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 48,
+        line: 188,
+        column: 44,
         ignore: false
       },
       identifier: "borderColor.5",
@@ -3457,8 +3734,8 @@
       annotations: [
 
       ],
-      type: 22,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E11borderColorHY3_Y6_Y6_Y3_Y8_",
+      type: 26,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E11borderColorHY3_Y9_Y9_Y3_YC_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3489,7 +3766,7 @@
               ]
             }
           ],
-          retType: 13
+          retType: 14
         }
       }
     },
@@ -3499,22 +3776,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
@@ -3525,8 +3802,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderColor.5HY3_Y6_Y6_Y3_Y8_E5colorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderColor.5HY3_Y9_Y9_Y3_YC_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3546,23 +3823,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 79,
+        line: 186,
+        column: 73,
         ignore: false
       },
       identifier: "fontSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       attributes: [
@@ -3572,8 +3849,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderColor.5HY3_Y6_Y6_Y3_Y8_E8fontSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderColor.5HY3_Y9_Y9_Y3_YC_E8fontSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3593,23 +3870,70 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 107,
+        line: 186,
+        column: 101,
         ignore: false
       },
       identifier: "badgeSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderColor.5HY3_Y9_Y9_Y3_YC_E9badgeSizeIYA_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 43,
+        ignore: false
+      },
+      identifier: "badgeColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
         ignore: false
       },
       attributes: [
@@ -3620,7 +3944,7 @@
 
       ],
       type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderColor.5HY3_Y6_Y6_Y3_Y8_E9badgeSizeE",
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderColor.5HY3_Y9_Y9_Y3_YC_E10badgeColorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3640,70 +3964,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 9,
+        line: 187,
+        column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 47,
-        ignore: false
-      },
-      identifier: "badgeColor",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderColor.5HY3_Y6_Y6_Y3_Y8_E10badgeColorE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 49,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 92,
+        line: 187,
+        column: 76,
         ignore: false
       },
       identifier: "fontWeight",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 49,
+        line: 187,
+        column: 45,
         ignore: false
       },
       attributes: [
@@ -3713,8 +3990,8 @@
       annotations: [
 
       ],
-      type: 15,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderColor.5HY3_Y6_Y6_Y3_Y8_E10fontWeightE",
+      type: 18,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderColor.5HY3_Y9_Y9_Y3_YC_E10fontWeightIYD_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3734,23 +4011,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 50,
+        line: 188,
+        column: 46,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 77,
+        line: 188,
+        column: 74,
         ignore: false
       },
       identifier: "borderWidth",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 50,
+        line: 188,
+        column: 46,
         ignore: false
       },
       attributes: [
@@ -3760,8 +4037,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E11borderWidthE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E11borderWidthIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3786,15 +4063,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 73,
+        line: 188,
+        column: 70,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 77,
+        line: 188,
+        column: 74,
         ignore: false
       },
       identifier: "borderWidth.6",
@@ -3812,8 +4089,8 @@
       annotations: [
 
       ],
-      type: 23,
-      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E11borderWidthHY3_Y6_Y6_Y3_Y8_Y3_",
+      type: 27,
+      mangledName: "_CPI26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E11borderWidthHY3_Y9_Y9_Y3_YC_Y3_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3846,7 +4123,7 @@
               ]
             }
           ],
-          retType: 14
+          retType: 16
         }
       }
     },
@@ -3856,22 +4133,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 52,
+        line: 186,
+        column: 46,
         ignore: false
       },
       identifier: "color",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
+        line: 186,
         column: 17,
         ignore: false
       },
@@ -3882,8 +4159,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderWidth.6HY3_Y6_Y6_Y3_Y8_Y3_E5colorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderWidth.6HY3_Y9_Y9_Y3_YC_Y3_E5colorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3903,23 +4180,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 79,
+        line: 186,
+        column: 73,
         ignore: false
       },
       identifier: "fontSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 54,
+        line: 186,
+        column: 48,
         ignore: false
       },
       attributes: [
@@ -3929,8 +4206,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderWidth.6HY3_Y6_Y6_Y3_Y8_Y3_E8fontSizeE",
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderWidth.6HY3_Y9_Y9_Y3_YC_Y3_E8fontSizeIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3950,23 +4227,70 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 107,
+        line: 186,
+        column: 101,
         ignore: false
       },
       identifier: "badgeSize",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 215,
-        column: 81,
+        line: 186,
+        column: 75,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderWidth.6HY3_Y9_Y9_Y3_YC_Y3_E9badgeSizeIYA_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 43,
+        ignore: false
+      },
+      identifier: "badgeColor",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 187,
+        column: 9,
         ignore: false
       },
       attributes: [
@@ -3977,7 +4301,7 @@
 
       ],
       type: 14,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderWidth.6HY3_Y6_Y6_Y3_Y8_Y3_E9badgeSizeE",
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderWidth.6HY3_Y9_Y9_Y3_YC_Y3_E10badgeColorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3997,70 +4321,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 9,
+        line: 187,
+        column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 47,
-        ignore: false
-      },
-      identifier: "badgeColor",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderWidth.6HY3_Y6_Y6_Y3_Y8_Y3_E10badgeColorE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 49,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 92,
+        line: 187,
+        column: 76,
         ignore: false
       },
       identifier: "fontWeight",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 216,
-        column: 49,
+        line: 187,
+        column: 45,
         ignore: false
       },
       attributes: [
@@ -4070,8 +4347,8 @@
       annotations: [
 
       ],
-      type: 15,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderWidth.6HY3_Y6_Y6_Y3_Y8_Y3_E10fontWeightE",
+      type: 18,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderWidth.6HY3_Y9_Y9_Y3_YC_Y3_E10fontWeightIYD_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4091,22 +4368,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 217,
+        line: 188,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 217,
-        column: 48,
+        line: 188,
+        column: 44,
         ignore: false
       },
       identifier: "borderColor",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 217,
+        line: 188,
         column: 9,
         ignore: false
       },
@@ -4117,8 +4394,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHCN9ohos.base13ResourceColorECNY4_6LengthEY6_Y3_NN27ohos.arkui.component.common10FontWeightEY3_Y6_E13borderWidth.6HY3_Y6_Y6_Y3_Y8_Y3_E11borderColorE",
+      type: 14,
+      mangledName: "_CN26ohos.arkui.component.badge10BadgeStyle4initHNNat6OptionICN9ohos.base13ResourceColorEENNatY5_ICNY7_6LengthEEY9_Y3_NNatY5_INN27ohos.arkui.component.common10FontWeightEEY3_Y9_E13borderWidth.6HY3_Y9_Y9_Y3_YC_Y3_E11borderColorIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4138,14 +4415,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 233,
+        line: 203,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 233,
+        line: 203,
         column: 26,
         ignore: false
       },
@@ -4153,7 +4430,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 233,
+        line: 203,
         column: 13,
         ignore: false
       },
@@ -4164,7 +4441,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV25colorK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S5color$$j",
@@ -4186,14 +4463,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 204,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 204,
         column: 30,
         ignore: false
       },
@@ -4201,7 +4478,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 204,
         column: 13,
         ignore: false
       },
@@ -4212,7 +4489,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 30,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV28fontSizeK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S8fontSize$$d",
@@ -4234,14 +4511,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 235,
+        line: 205,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 235,
+        line: 205,
         column: 31,
         ignore: false
       },
@@ -4249,7 +4526,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 235,
+        line: 205,
         column: 13,
         ignore: false
       },
@@ -4260,7 +4537,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 30,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV29badgeSizeK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S9badgeSize$$d",
@@ -4282,14 +4559,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 206,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 206,
         column: 31,
         ignore: false
       },
@@ -4297,7 +4574,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 206,
         column: 13,
         ignore: false
       },
@@ -4308,7 +4585,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV210badgeColorK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S10badgeColor$$j",
@@ -4330,14 +4607,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 237,
+        line: 207,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 237,
+        line: 207,
         column: 31,
         ignore: false
       },
@@ -4345,7 +4622,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 237,
+        line: 207,
         column: 13,
         ignore: false
       },
@@ -4356,7 +4633,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV210fontWeightK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S10fontWeight$$j",
@@ -4378,14 +4655,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 238,
+        line: 208,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 238,
+        line: 208,
         column: 32,
         ignore: false
       },
@@ -4393,7 +4670,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 238,
+        line: 208,
         column: 13,
         ignore: false
       },
@@ -4404,7 +4681,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV211borderColorK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S11borderColor$$j",
@@ -4426,14 +4703,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 209,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 209,
         column: 33,
         ignore: false
       },
@@ -4441,7 +4718,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 209,
         column: 13,
         ignore: false
       },
@@ -4452,7 +4729,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 30,
       mangledName: "",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV211borderWidthK_E",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S11borderWidth$$d",
@@ -4474,14 +4751,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 210,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 210,
         column: 35,
         ignore: false
       },
@@ -4489,7 +4766,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 210,
         column: 13,
         ignore: false
       },
@@ -4526,14 +4803,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 232,
+        line: 202,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 241,
+        line: 211,
         column: 9,
         ignore: false
       },
@@ -4541,7 +4818,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 232,
+        line: 202,
         column: 5,
         ignore: false
       },
@@ -4552,7 +4829,7 @@
       annotations: [
 
       ],
-      type: 27,
+      type: 31,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV26<init>Hjddjjjdi",
       exportId: "_CN26ohos.arkui.component.badge14CJBadgeStyleV26<init>Hjddjjjdi",
       mangledBeforeSema: "26ohos.arkui.component.badge14CJBadgeStyleV2S14CJBadgeStyleV2Yj!L5colord!L8fontSized!L9badgeSizej!L10badgeColorj!L10fontWeightj!L11borderColord!L11borderWidthi!L15borderWidthUnit",
@@ -4600,14 +4877,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 233,
+        line: 203,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 233,
+        line: 203,
         column: 26,
         ignore: false
       },
@@ -4615,7 +4892,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 233,
+        line: 203,
         column: 13,
         ignore: false
       },
@@ -4626,7 +4903,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE5colorE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4648,14 +4925,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 204,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 204,
         column: 30,
         ignore: false
       },
@@ -4663,7 +4940,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 204,
         column: 13,
         ignore: false
       },
@@ -4674,7 +4951,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 30,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE8fontSizeE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4696,14 +4973,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 235,
+        line: 205,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 235,
+        line: 205,
         column: 31,
         ignore: false
       },
@@ -4711,7 +4988,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 235,
+        line: 205,
         column: 13,
         ignore: false
       },
@@ -4722,7 +4999,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 30,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE9badgeSizeE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4744,14 +5021,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 206,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 206,
         column: 31,
         ignore: false
       },
@@ -4759,7 +5036,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 236,
+        line: 206,
         column: 13,
         ignore: false
       },
@@ -4770,7 +5047,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE10badgeColorE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4792,14 +5069,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 237,
+        line: 207,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 237,
+        line: 207,
         column: 31,
         ignore: false
       },
@@ -4807,7 +5084,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 237,
+        line: 207,
         column: 13,
         ignore: false
       },
@@ -4818,7 +5095,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE10fontWeightE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4840,14 +5117,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 238,
+        line: 208,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 238,
+        line: 208,
         column: 32,
         ignore: false
       },
@@ -4855,7 +5132,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 238,
+        line: 208,
         column: 13,
         ignore: false
       },
@@ -4866,7 +5143,7 @@
       annotations: [
 
       ],
-      type: 25,
+      type: 29,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE11borderColorE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4888,14 +5165,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 209,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 209,
         column: 33,
         ignore: false
       },
@@ -4903,7 +5180,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 239,
+        line: 209,
         column: 13,
         ignore: false
       },
@@ -4914,7 +5191,7 @@
       annotations: [
 
       ],
-      type: 26,
+      type: 30,
       mangledName: "_CN26ohos.arkui.component.badge14CJBadgeStyleV24initHjddjjjdiE11borderWidthE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4936,14 +5213,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 210,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 210,
         column: 35,
         ignore: false
       },
@@ -4951,7 +5228,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 240,
+        line: 210,
         column: 13,
         ignore: false
       },
@@ -4989,14 +5266,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 252,
+        line: 221,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 316,
+        line: 289,
         column: 2,
         ignore: false
       },
@@ -5004,7 +5281,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 252,
+        line: 221,
         column: 14,
         ignore: false
       },
@@ -5018,35 +5295,32 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 36
-            },
-            {
-              name: "stagemodelonly",
-              expr: 37
+              name: "since",
+              expr: 27
             },
             {
               name: "syscap",
-              expr: 38
+              expr: 28
             }
           ]
         }
       ],
-      type: 28,
+      type: 32,
       mangledName: "_CN26ohos.arkui.component.badge5BadgeE",
       exportId: "_CN26ohos.arkui.component.badge5BadgeE",
       mangledBeforeSema: "26ohos.arkui.component.badge5BadgeC",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 6438789364046432450,
+        sig: 11486555336129324730,
         srcUse: 0,
-        bodyHash: 11893097501693740523
+        bodyHash: 10272158749408885551
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          36
+          42,
+          43
         ],
         body: [
           83,
@@ -5064,14 +5338,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 284,
+        line: 254,
         column: 6,
         ignore: false
       },
@@ -5079,7 +5353,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 12,
         ignore: false
       },
@@ -5093,30 +5367,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 39
-            },
-            {
-              name: "stagemodelonly",
-              expr: 40
+              name: "since",
+              expr: 29
             },
             {
               name: "syscap",
-              expr: 41
+              expr: 30
             }
           ]
         }
       ],
-      type: 29,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge6<init>HiCNY_10BadgeStyleENNY_13BadgePositionEiF0uE",
-      exportId: "_CN26ohos.arkui.component.badge5Badge6<init>HiCNY_10BadgeStyleENNY_13BadgePositionEiF0uE",
-      mangledBeforeSema: "26ohos.arkui.component.badge5BadgeC6<init>Fi!5count10BadgeStyle!5style13BadgePosition!8position=i!8maxCount=Fu!5child$$",
+      type: 33,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge6<init>HiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uE",
+      exportId: "_CN26ohos.arkui.component.badge5Badge6<init>HiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uE",
+      mangledBeforeSema: "26ohos.arkui.component.badge5BadgeC6<init>Fi!5countO1_10BadgeStyle!5styleO1_13BadgePosition!8position=O1_i!8maxCount=Fu!5child$$",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 11577910045167659360
+        bodyHash: 11182315653905152443
       },
       info_type: "FuncInfo",
       info: {
@@ -5139,7 +5409,7 @@
               ]
             }
           ],
-          retType: 28
+          retType: 32
         }
       }
     },
@@ -5149,14 +5419,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 30,
         ignore: false
       },
@@ -5164,7 +5434,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 17,
         ignore: false
       },
@@ -5176,7 +5446,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE5countE",
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE5countE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5197,22 +5467,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 32,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 50,
+        line: 239,
+        column: 51,
         ignore: false
       },
       identifier: "style",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 32,
         ignore: false
       },
@@ -5223,8 +5493,8 @@
       annotations: [
 
       ],
-      type: 12,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE5styleE",
+      type: 34,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE5styleIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5245,23 +5515,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 52,
+        line: 239,
+        column: 53,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 101,
+        line: 239,
+        column: 85,
         ignore: false
       },
       identifier: "position",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 52,
+        line: 239,
+        column: 53,
         ignore: false
       },
       attributes: [
@@ -5271,8 +5541,8 @@
       annotations: [
 
       ],
-      type: 7,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE8positionE",
+      type: 35,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE8positionIY9_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5297,15 +5567,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 79,
+        line: 239,
+        column: 81,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 101,
+        line: 239,
+        column: 85,
         ignore: false
       },
       identifier: "position.2",
@@ -5323,8 +5593,8 @@
       annotations: [
 
       ],
-      type: 31,
-      mangledName: "_CPI26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE8positionHiY3_",
+      type: 38,
+      mangledName: "_CPI26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE8positionHiY3_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5349,7 +5619,7 @@
               ]
             }
           ],
-          retType: 7
+          retType: 35
         }
       }
     },
@@ -5359,14 +5629,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 30,
         ignore: false
       },
@@ -5374,7 +5644,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 17,
         ignore: false
       },
@@ -5386,7 +5656,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE10position.2HiY3_E5countE",
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE10position.2HiY3_E5countE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5406,22 +5676,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 32,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 50,
+        line: 239,
+        column: 51,
         ignore: false
       },
       identifier: "style",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 32,
         ignore: false
       },
@@ -5432,8 +5702,8 @@
       annotations: [
 
       ],
-      type: 12,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE10position.2HiY3_E5styleE",
+      type: 34,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE10position.2HiY3_E5styleIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5453,22 +5723,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 272,
+        line: 240,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 272,
-        column: 30,
+        line: 240,
+        column: 33,
         ignore: false
       },
       identifier: "maxCount",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 272,
+        line: 240,
         column: 9,
         ignore: false
       },
@@ -5479,8 +5749,8 @@
       annotations: [
 
       ],
-      type: 2,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE8maxCountE",
+      type: 36,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE8maxCountIiE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5492,8 +5762,7 @@
       },
       info_type: "ParamInfo",
       info: {
-        isNamedParam: true,
-        defaultVal: 42
+        isNamedParam: true
       }
     },
     {
@@ -5506,15 +5775,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 272,
-        column: 28,
+        line: 240,
+        column: 29,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 272,
-        column: 30,
+        line: 240,
+        column: 33,
         ignore: false
       },
       identifier: "maxCount.3",
@@ -5532,8 +5801,8 @@
       annotations: [
 
       ],
-      type: 32,
-      mangledName: "_CPI26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE8maxCountHiY3_Y5_",
+      type: 39,
+      mangledName: "_CPI26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE8maxCountHiY3_Y8_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5560,7 +5829,7 @@
               ]
             }
           ],
-          retType: 2
+          retType: 36
         }
       }
     },
@@ -5570,14 +5839,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 30,
         ignore: false
       },
@@ -5585,7 +5854,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 17,
         ignore: false
       },
@@ -5597,7 +5866,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE10maxCount.3HiY3_Y5_E5countE",
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE10maxCount.3HiY3_Y8_E5countE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5617,22 +5886,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 32,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 50,
+        line: 239,
+        column: 51,
         ignore: false
       },
       identifier: "style",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
+        line: 239,
         column: 32,
         ignore: false
       },
@@ -5643,8 +5912,8 @@
       annotations: [
 
       ],
-      type: 12,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE10maxCount.3HiY3_Y5_E5styleE",
+      type: 34,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE10maxCount.3HiY3_Y8_E5styleIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5664,23 +5933,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 52,
+        line: 239,
+        column: 53,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 101,
+        line: 239,
+        column: 85,
         ignore: false
       },
       identifier: "position",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 271,
-        column: 52,
+        line: 239,
+        column: 53,
         ignore: false
       },
       attributes: [
@@ -5690,8 +5959,8 @@
       annotations: [
 
       ],
-      type: 7,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE10maxCount.3HiY3_Y5_E8positionE",
+      type: 35,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE10maxCount.3HiY3_Y8_E8positionIY9_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5711,23 +5980,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 272,
-        column: 32,
+        line: 240,
+        column: 35,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 272,
-        column: 50,
+        line: 240,
+        column: 53,
         ignore: false
       },
       identifier: "child",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 272,
-        column: 32,
+        line: 240,
+        column: 35,
         ignore: false
       },
       attributes: [
@@ -5737,8 +6006,8 @@
       annotations: [
 
       ],
-      type: 30,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiCNY_10BadgeStyleENNY_13BadgePositionEiF0uEE5childE",
+      type: 37,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHiNNat6OptionICNY_10BadgeStyleEENNatY5_INNY_13BadgePositionEENNatY5_IiEF0uEE5childE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5763,14 +6032,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 315,
+        line: 288,
         column: 6,
         ignore: false
       },
@@ -5778,7 +6047,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 12,
         ignore: false
       },
@@ -5792,30 +6061,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 43
-            },
-            {
-              name: "stagemodelonly",
-              expr: 44
+              name: "since",
+              expr: 31
             },
             {
               name: "syscap",
-              expr: 45
+              expr: 32
             }
           ]
         }
       ],
-      type: 33,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge6<init>HRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uE",
-      exportId: "_CN26ohos.arkui.component.badge5Badge6<init>HRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uE",
-      mangledBeforeSema: "26ohos.arkui.component.badge5BadgeC6<init>F6String!5value10BadgeStyle!5style13BadgePosition!8position=Fu!5child$$",
+      type: 40,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge6<init>HRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uE",
+      exportId: "_CN26ohos.arkui.component.badge5Badge6<init>HRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uE",
+      mangledBeforeSema: "26ohos.arkui.component.badge5BadgeC6<init>F6String!5valueO1_10BadgeStyle!5styleO1_13BadgePosition!8position=Fu!5child$$",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 3473050875310318354
+        bodyHash: 9964471530935364115
       },
       info_type: "FuncInfo",
       info: {
@@ -5836,7 +6101,7 @@
               ]
             }
           ],
-          retType: 28
+          retType: 32
         }
       }
     },
@@ -5846,14 +6111,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 31,
         ignore: false
       },
@@ -5861,8 +6126,56 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 52,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 33,
         ignore: false
       },
       attributes: [
@@ -5873,7 +6186,7 @@
 
       ],
       type: 34,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE5valueE",
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE5styleIY8_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5894,71 +6207,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 33,
+        line: 271,
+        column: 54,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 51,
-        ignore: false
-      },
-      identifier: "style",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 302,
-        column: 33,
-        ignore: false
-      },
-      attributes: [
-        562949953421344,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 12,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE5styleE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-        isNamedParam: true
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 302,
-        column: 53,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 302,
-        column: 102,
+        line: 271,
+        column: 86,
         ignore: false
       },
       identifier: "position",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 53,
+        line: 271,
+        column: 54,
         ignore: false
       },
       attributes: [
@@ -5968,8 +6233,8 @@
       annotations: [
 
       ],
-      type: 7,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE8positionE",
+      type: 35,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE8positionIYB_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5994,15 +6259,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 80,
+        line: 271,
+        column: 82,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 102,
+        line: 271,
+        column: 86,
         ignore: false
       },
       identifier: "position.2",
@@ -6020,8 +6285,8 @@
       annotations: [
 
       ],
-      type: 35,
-      mangledName: "_CPI26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE8positionHY3_Y6_",
+      type: 41,
+      mangledName: "_CPI26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE8positionHY3_Y6_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -6046,7 +6311,7 @@
               ]
             }
           ],
-          retType: 7
+          retType: 35
         }
       }
     },
@@ -6056,14 +6321,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 31,
         ignore: false
       },
@@ -6071,8 +6336,55 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 302,
+        line: 271,
         column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 8,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE10position.2HY3_Y6_E5valueE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.badge",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 52,
+        ignore: false
+      },
+      identifier: "style",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 271,
+        column: 33,
         ignore: false
       },
       attributes: [
@@ -6083,7 +6395,7 @@
 
       ],
       type: 34,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE10position.2HY3_Y6_E5valueE",
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE10position.2HY3_Y6_E5styleIY8_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -6103,70 +6415,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 33,
+        line: 271,
+        column: 88,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 51,
-        ignore: false
-      },
-      identifier: "style",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 302,
-        column: 33,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 12,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE10position.2HY3_Y6_E5styleE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.badge",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 302,
-        column: 104,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 302,
-        column: 122,
+        line: 271,
+        column: 106,
         ignore: false
       },
       identifier: "child",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 302,
-        column: 104,
+        line: 271,
+        column: 88,
         ignore: false
       },
       attributes: [
@@ -6176,8 +6441,8 @@
       annotations: [
 
       ],
-      type: 30,
-      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringECNY_10BadgeStyleENNY_13BadgePositionEF0uEE5childE",
+      type: 37,
+      mangledName: "_CN26ohos.arkui.component.badge5Badge4initHRNat6StringENNat6OptionICNY_10BadgeStyleEENNatY7_INNY_13BadgePositionEEF0uEE5childE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -6191,6 +6456,77 @@
       info: {
         isNamedParam: true
       }
+    },
+    {
+      kind: "InterfaceDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.badge",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 67,
+        ignore: false
+      },
+      identifier: "BadgeAttribute",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144678412907971632,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 33
+            },
+            {
+              name: "syscap",
+              expr: 34
+            }
+          ]
+        }
+      ],
+      type: 43,
+      mangledName: "_CN26ohos.arkui.component.badge14BadgeAttributeE",
+      exportId: "_CN26ohos.arkui.component.badge14BadgeAttributeE",
+      mangledBeforeSema: "26ohos.arkui.component.badge14BadgeAttributeI",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 12903222496677691826,
+        srcUse: 5532835001352326160,
+        bodyHash: 10272158749408885551
+      },
+      info_type: "InterfaceInfo",
+      info: {
+        inheritedTypes: [
+          44
+        ],
+        body: [
+
+        ]
+      }
     }
   ],
   allExprs: [
@@ -6199,20 +6535,22 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 36,
-        column: 11,
+        line: 37,
+        column: 18,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 36,
-        column: 13,
+        line: 37,
+        column: 22,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6220,17 +6558,18 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 37,
+        line: 38,
         column: 19,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
-        line: 37,
+        line: 38,
         column: 54,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6242,42 +6581,22 @@
       begin: {
         file: 0,
         pkgId: 1,
-        line: 42,
-        column: 15,
-        ignore: false
-      },
-      end: {
-        file: 0,
-        pkgId: 1,
-        line: 42,
-        column: 17,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 0,
-        pkgId: 1,
         line: 43,
-        column: 31,
+        column: 22,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
         line: 43,
-        column: 35,
+        column: 26,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6286,16 +6605,17 @@
         file: 0,
         pkgId: 1,
         line: 44,
-        column: 24,
+        column: 23,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
         line: 44,
-        column: 59,
+        column: 58,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6308,19 +6628,21 @@
         file: 0,
         pkgId: 1,
         line: 49,
-        column: 16,
+        column: 23,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
         line: 49,
-        column: 18,
+        column: 27,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6339,6 +6661,7 @@
         column: 59,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6351,19 +6674,21 @@
         file: 0,
         pkgId: 1,
         line: 55,
-        column: 16,
+        column: 23,
         ignore: false
       },
       end: {
         file: 0,
         pkgId: 1,
         line: 55,
-        column: 18,
+        column: 27,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6382,6 +6707,7 @@
         column: 59,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6393,20 +6719,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 88,
-        column: 5,
+        line: 82,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 88,
-        column: 7,
+        line: 82,
+        column: 16,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6414,17 +6742,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 89,
+        line: 83,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 89,
+        line: 83,
         column: 48,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6436,20 +6765,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 100,
-        column: 9,
+        line: 91,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 100,
-        column: 11,
+        line: 91,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6457,39 +6788,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 101,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 101,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 102,
+        line: 92,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 102,
+        line: 92,
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6501,20 +6811,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 120,
-        column: 9,
+        line: 106,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 120,
-        column: 11,
+        line: 106,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6522,21 +6834,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 121,
-        column: 25,
+        line: 107,
+        column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 121,
-        column: 29,
+        line: 107,
+        column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
       }
     },
     {
@@ -6545,19 +6858,20 @@
         file: 1,
         pkgId: 0,
         line: 122,
-        column: 17,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 122,
-        column: 52,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        strValue: "22",
         constKind: "String"
       }
     },
@@ -6566,60 +6880,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 141,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 141,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 142,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 142,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 143,
+        line: 123,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 143,
+        line: 123,
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6631,20 +6903,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 154,
-        column: 9,
+        line: 131,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 154,
-        column: 11,
+        line: 131,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6652,21 +6926,68 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 155,
-        column: 25,
+        line: 132,
+        column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 155,
-        column: 29,
+        line: 132,
+        column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 147,
+        column: 20,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 148,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 148,
+        column: 52,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
       }
     },
     {
@@ -6675,19 +6996,20 @@
         file: 1,
         pkgId: 0,
         line: 156,
-        column: 17,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 156,
-        column: 52,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        strValue: "22",
         constKind: "String"
       }
     },
@@ -6696,60 +7018,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 173,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 173,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 174,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 174,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 175,
+        line: 157,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 175,
+        line: 157,
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6761,20 +7041,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 186,
-        column: 9,
+        line: 166,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 186,
-        column: 11,
+        line: 166,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6782,39 +7064,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 187,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 187,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 188,
+        line: 167,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 188,
+        line: 167,
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6826,20 +7087,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 201,
-        column: 9,
+        line: 183,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 201,
-        column: 11,
+        line: 183,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -6847,39 +7110,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 202,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 202,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 203,
+        line: 184,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 203,
+        line: 184,
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -6891,63 +7133,21 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 211,
-        column: 9,
+        line: 218,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 211,
-        column: 11,
+        line: 218,
+        column: 16,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 212,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 212,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 213,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 213,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        strValue: "22",
         constKind: "String"
       }
     },
@@ -6956,60 +7156,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 248,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 248,
-        column: 7,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 249,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 249,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 250,
+        line: 219,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 250,
+        line: 219,
         column: 48,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -7021,20 +7179,45 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 267,
-        column: 9,
+        line: 236,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 267,
-        column: 11,
+        line: 236,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 237,
+        column: 52,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
       }
     },
     {
@@ -7043,20 +7226,21 @@
         file: 1,
         pkgId: 0,
         line: 268,
-        column: 25,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 268,
-        column: 29,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -7075,6 +7259,7 @@
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -7084,84 +7269,43 @@
     {
       kind: "LitConstExpr",
       begin: {
-        file: 1,
+        file: 2,
         pkgId: 0,
-        line: 272,
-        column: 28,
+        line: 25,
+        column: 12,
         ignore: false
       },
       end: {
-        file: 1,
+        file: 2,
         pkgId: 0,
-        line: 272,
-        column: 30,
+        line: 25,
+        column: 16,
         ignore: false
       },
-      type: 2,
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "99"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
       kind: "LitConstExpr",
       begin: {
-        file: 1,
+        file: 2,
         pkgId: 0,
-        line: 298,
-        column: 9,
+        line: 26,
+        column: 13,
         ignore: false
       },
       end: {
-        file: 1,
+        file: 2,
         pkgId: 0,
-        line: 298,
-        column: 11,
+        line: 26,
+        column: 48,
         ignore: false
       },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 299,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 299,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 300,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 300,
-        column: 52,
-        ignore: false
-      },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",

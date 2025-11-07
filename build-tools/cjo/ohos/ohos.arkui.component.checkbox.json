@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.arkui.component.checkbox",
-  pkgDepInfo: "{\"package\":\"ohos.arkui.component.checkbox\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.native_struct\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":44}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":35}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":19}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"cj_checkbox.cj\",\"begin\":{\"line\":23,\"column\":1},\"end\":{\"line\":23,\"column\":28}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.checkbox\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"checkbox.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":58}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":20,\"column\":60},\"end\":{\"line\":20,\"column\":73}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":20,\"column\":75},\"end\":{\"line\":20,\"column\":88}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":20,\"column\":90},\"end\":{\"line\":20,\"column\":99}},{\"file\":\"checkbox_attr.cj\",\"begin\":{\"line\":18,\"column\":37},\"end\":{\"line\":18,\"column\":49}},{\"file\":\"checkbox_attr.cj\",\"begin\":{\"line\":18,\"column\":51},\"end\":{\"line\":18,\"column\":64}}]},{\"package\":\"ohos.arkui.component.native_struct\",\"isStd\":false,\"imports\":[{\"file\":\"checkbox.cj\",\"begin\":{\"line\":21,\"column\":44},\"end\":{\"line\":21,\"column\":71}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":21,\"column\":73},\"end\":{\"line\":21,\"column\":89}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":21,\"column\":91},\"end\":{\"line\":21,\"column\":97}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":21,\"column\":99},\"end\":{\"line\":21,\"column\":123}}]},{\"package\":\"ohos.arkui.component.util\",\"isStd\":false,\"imports\":[{\"file\":\"checkbox.cj\",\"begin\":{\"line\":22,\"column\":35},\"end\":{\"line\":22,\"column\":66}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":22,\"column\":68},\"end\":{\"line\":22,\"column\":92}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"checkbox.cj\",\"begin\":{\"line\":23,\"column\":19},\"end\":{\"line\":23,\"column\":32}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":23,\"column\":34},\"end\":{\"line\":23,\"column\":40}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":23,\"column\":42},\"end\":{\"line\":23,\"column\":50}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":23,\"column\":52},\"end\":{\"line\":23,\"column\":62}},{\"file\":\"checkbox_attr.cj\",\"begin\":{\"line\":20,\"column\":19},\"end\":{\"line\":20,\"column\":32}}]},{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"checkbox.cj\",\"begin\":{\"line\":24,\"column\":18},\"end\":{\"line\":24,\"column\":32}},{\"file\":\"checkbox.cj\",\"begin\":{\"line\":24,\"column\":34},\"end\":{\"line\":24,\"column\":48}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"checkbox.cj\",\"begin\":{\"line\":25,\"column\":1},\"end\":{\"line\":25,\"column\":28}},{\"file\":\"checkbox_attr.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}],\"features\":[]}",
   imports: [
     "ohos.arkui.component.native_struct",
     "std.core",
@@ -14,7 +14,8 @@
     "ohos.arkui.component.common"
   ],
   allFiles: [
-    "ohos.arkui.component.checkbox/cj_checkbox.cj"
+    "ohos.arkui.component.checkbox/checkbox.cj",
+    "ohos.arkui.component.checkbox/checkbox_attr.cj"
   ],
   allFileImports: [
     {
@@ -23,15 +24,15 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 1,
+            line: 20,
+            column: 37,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 37,
+            line: 20,
+            column: 58,
             ignore: false
           },
           prefixPaths: [
@@ -40,22 +41,94 @@
             "component",
             "common"
           ],
-          identifier: "*",
+          identifier: "CommonMethodComponent",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 19,
-            column: 1,
+            line: 20,
+            column: 60,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 19,
+            line: 20,
+            column: 73,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CustomBuilder",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 75,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 88,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CheckBoxShape",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 90,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 99,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "Rectangle",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
             column: 44,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 71,
             ignore: false
           },
           prefixPaths: [
@@ -64,22 +137,94 @@
             "component",
             "native_struct"
           ],
-          identifier: "*",
+          identifier: "VectorNativeRectangleHandle",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 20,
-            column: 1,
+            line: 21,
+            column: 73,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 20,
+            line: 21,
+            column: 89,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "native_struct"
+          ],
+          identifier: "CJResponseRegion",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 91,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 97,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "native_struct"
+          ],
+          identifier: "CJEdge",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 99,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 123,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "native_struct"
+          ],
+          identifier: "FFIVectorNativeRectangle",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
             column: 35,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 22,
+            column: 66,
             ignore: false
           },
           prefixPaths: [
@@ -88,65 +233,177 @@
             "component",
             "util"
           ],
-          identifier: "*",
+          identifier: "transAppResourceToResourceColor",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 21,
-            column: 1,
+            line: 22,
+            column: 68,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 21,
+            line: 22,
+            column: 92,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "util"
+          ],
+          identifier: "transAppResourceToLength",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
             column: 19,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 32,
             ignore: false
           },
           prefixPaths: [
             "ohos",
             "base"
           ],
-          identifier: "*",
+          identifier: "ResourceColor",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 22,
-            column: 1,
+            line: 23,
+            column: 34,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 22,
+            line: 23,
+            column: 40,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "Length",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 42,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 50,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "BASE_LOG",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 52,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 23,
+            column: 62,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "LengthProp",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
             column: 18,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 32,
             ignore: false
           },
           prefixPaths: [
             "ohos",
             "ffi"
           ],
-          identifier: "*",
+          identifier: "Callback0Param",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 23,
+            line: 24,
+            column: 34,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 24,
+            column: 48,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "ffi"
+          ],
+          identifier: "Callback1Param",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 25,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 23,
+            line: 25,
             column: 28,
             ignore: false
           },
@@ -167,6 +424,124 @@
           },
           end: {
             file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 49,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CommonMethod",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 51,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 64,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CheckBoxShape",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 19,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 20,
+            column: 32,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "base"
+          ],
+          identifier: "ResourceColor",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
             pkgId: 0,
             line: 0,
             column: 0,
@@ -377,6 +752,17 @@
       }
     },
     {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4,
+        isC: true
+      }
+    },
+    {
       kind: "Type",
       typeArgs: [
 
@@ -385,7 +771,7 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 45
+          index: 47
         }
       }
     },
@@ -408,20 +794,8 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 46
+          index: 48
         }
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        27,
-        27,
-        28
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 25
       }
     },
     {
@@ -438,9 +812,34 @@
       }
     },
     {
+      kind: "Func",
+      typeArgs: [
+        29,
+        29,
+        30
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 26
+      }
+    },
+    {
       kind: "Enum",
       typeArgs: [
-        29
+        27
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        31
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -467,38 +866,51 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 27
+        retType: 29
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        27
+        29
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 27
+        retType: 29
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        27,
-        27
+        29,
+        29
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 28
+        retType: 30
       }
     },
     {
       kind: "Func",
+      typeArgs: [
+        36
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
       typeArgs: [
         6
       ],
-      info_type: "FuncTyInfo",
+      info_type: "CompositeTyInfo",
       info: {
-        retType: 34
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -510,7 +922,7 @@
       info: {
         declPtr: {
           pkgId: -2,
-          index: 46
+          index: 48
         },
         isThisTy: true
       }
@@ -518,11 +930,24 @@
     {
       kind: "Func",
       typeArgs: [
-        36
+        39
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        40
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -541,11 +966,24 @@
     {
       kind: "Func",
       typeArgs: [
-        38
+        42
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        43
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -564,45 +1002,71 @@
     {
       kind: "Func",
       typeArgs: [
-        38,
-        38
+        42,
+        42
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        38,
-        38,
-        38,
-        38
+        42,
+        42,
+        42,
+        42
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        24
+        47
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        25
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        43
+        49
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        50
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -621,11 +1085,24 @@
     {
       kind: "Func",
       typeArgs: [
-        45
+        52
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        53
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -644,17 +1121,30 @@
     {
       kind: "Func",
       typeArgs: [
-        47
+        55
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 34
+        retType: 37
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        56
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
       kind: "Struct",
       typeArgs: [
-        45
+        53
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -667,13 +1157,79 @@
     {
       kind: "Class",
       typeArgs: [
-
+        26
       ],
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
           pkgId: 3,
-          decl: "_CN27ohos.arkui.component.common8ViewBaseE"
+          decl: "_CN27ohos.arkui.component.common21CommonMethodComponentIG_E"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 85
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        36
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 58
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        39
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 58
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        47
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 58
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        49
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 58
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        58
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 3,
+          decl: "_CN27ohos.arkui.component.common12CommonMethodIG_E"
         }
       }
     }
@@ -686,14 +1242,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 31,
         ignore: false
       },
@@ -701,7 +1257,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 7,
         ignore: false
       },
@@ -721,7 +1277,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 12820464909098194885,
-        bodyHash: 5802383543981547235
+        bodyHash: 4946359348486168817
       },
       info_type: "VarInfo",
       info: {
@@ -740,14 +1296,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 80,
         ignore: false
       },
@@ -755,7 +1311,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 10,
         ignore: false
       },
@@ -802,14 +1358,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 44,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 57,
         ignore: false
       },
@@ -817,7 +1373,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 44,
         ignore: false
       },
@@ -849,14 +1405,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 59,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 73,
         ignore: false
       },
@@ -864,7 +1420,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 59,
         ignore: false
       },
@@ -901,14 +1457,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 32,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 32,
         column: 62,
         ignore: false
       },
@@ -916,7 +1472,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 32,
         column: 10,
         ignore: false
       },
@@ -961,14 +1517,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 32,
         column: 44,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 32,
         column: 55,
         ignore: false
       },
@@ -976,7 +1532,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 32,
         column: 44,
         ignore: false
       },
@@ -1013,14 +1569,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 34,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 34,
         column: 74,
         ignore: false
       },
@@ -1028,7 +1584,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 34,
         column: 10,
         ignore: false
       },
@@ -1073,14 +1629,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 34,
         column: 54,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 34,
         column: 67,
         ignore: false
       },
@@ -1088,7 +1644,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 34,
         column: 54,
         ignore: false
       },
@@ -1125,14 +1681,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 80,
         ignore: false
       },
@@ -1140,7 +1696,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 10,
         ignore: false
       },
@@ -1187,14 +1743,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 46,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 60,
         ignore: false
       },
@@ -1202,7 +1758,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 46,
         ignore: false
       },
@@ -1234,14 +1790,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 62,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 73,
         ignore: false
       },
@@ -1249,7 +1805,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 34,
+        line: 36,
         column: 62,
         ignore: false
       },
@@ -1286,14 +1842,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 81,
         ignore: false
       },
@@ -1301,7 +1857,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 10,
         ignore: false
       },
@@ -1348,14 +1904,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 47,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 61,
         ignore: false
       },
@@ -1363,7 +1919,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 47,
         ignore: false
       },
@@ -1395,14 +1951,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 63,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 74,
         ignore: false
       },
@@ -1410,7 +1966,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 38,
         column: 63,
         ignore: false
       },
@@ -1447,14 +2003,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 120,
         ignore: false
       },
@@ -1462,7 +2018,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 10,
         ignore: false
       },
@@ -1513,14 +2069,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 59,
         ignore: false
       },
@@ -1528,7 +2084,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 45,
         ignore: false
       },
@@ -1560,14 +2116,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 61,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 77,
         ignore: false
       },
@@ -1575,7 +2131,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 61,
         ignore: false
       },
@@ -1607,14 +2163,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 79,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 94,
         ignore: false
       },
@@ -1622,7 +2178,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 79,
         ignore: false
       },
@@ -1654,14 +2210,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 96,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 113,
         ignore: false
       },
@@ -1669,7 +2225,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 40,
         column: 96,
         ignore: false
       },
@@ -1706,14 +2262,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 82,
         ignore: false
       },
@@ -1721,7 +2277,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 10,
         ignore: false
       },
@@ -1768,14 +2324,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 62,
         ignore: false
       },
@@ -1783,7 +2339,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 48,
         ignore: false
       },
@@ -1815,14 +2371,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 64,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 75,
         ignore: false
       },
@@ -1830,7 +2386,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 42,
         column: 64,
         ignore: false
       },
@@ -1867,14 +2423,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 44,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 44,
         column: 70,
         ignore: false
       },
@@ -1882,7 +2438,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 44,
         column: 10,
         ignore: false
       },
@@ -1927,14 +2483,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 44,
         column: 49,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 44,
         column: 63,
         ignore: false
       },
@@ -1942,7 +2498,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 44,
         column: 49,
         ignore: false
       },
@@ -1979,14 +2535,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 46,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 46,
         column: 71,
         ignore: false
       },
@@ -1994,7 +2550,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 46,
         column: 10,
         ignore: false
       },
@@ -2039,14 +2595,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 46,
         column: 49,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 46,
         column: 64,
         ignore: false
       },
@@ -2054,7 +2610,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 46,
         column: 49,
         ignore: false
       },
@@ -2091,14 +2647,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 48,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 48,
         column: 81,
         ignore: false
       },
@@ -2106,7 +2662,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 48,
         column: 10,
         ignore: false
       },
@@ -2151,14 +2707,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 48,
         column: 54,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 48,
         column: 74,
         ignore: false
       },
@@ -2166,7 +2722,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 48,
         column: 54,
         ignore: false
       },
@@ -2203,14 +2759,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 50,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 50,
         column: 85,
         ignore: false
       },
@@ -2218,7 +2774,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 50,
         column: 10,
         ignore: false
       },
@@ -2263,14 +2819,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 50,
         column: 44,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 50,
         column: 78,
         ignore: false
       },
@@ -2278,7 +2834,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 50,
         column: 44,
         ignore: false
       },
@@ -2315,14 +2871,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 52,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 52,
         column: 69,
         ignore: false
       },
@@ -2330,7 +2886,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 52,
         column: 10,
         ignore: false
       },
@@ -2375,14 +2931,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 52,
         column: 39,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 52,
         column: 62,
         ignore: false
       },
@@ -2390,7 +2946,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 52,
         column: 39,
         ignore: false
       },
@@ -2427,14 +2983,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 102,
         ignore: false
       },
@@ -2442,7 +2998,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 10,
         ignore: false
       },
@@ -2491,14 +3047,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 41,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 54,
         ignore: false
       },
@@ -2506,7 +3062,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 41,
         ignore: false
       },
@@ -2538,14 +3094,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 56,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 70,
         ignore: false
       },
@@ -2553,7 +3109,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 56,
         ignore: false
       },
@@ -2585,14 +3141,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 72,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 95,
         ignore: false
       },
@@ -2600,7 +3156,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 72,
         ignore: false
       },
@@ -2637,14 +3193,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 57,
         ignore: false
       },
@@ -2652,7 +3208,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 10,
         ignore: false
       },
@@ -2697,14 +3253,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 37,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 50,
         ignore: false
       },
@@ -2712,7 +3268,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 56,
         column: 37,
         ignore: false
       },
@@ -2749,14 +3305,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 59,
         column: 38,
         ignore: false
       },
@@ -2764,7 +3320,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 10,
         ignore: false
       },
@@ -2817,14 +3373,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 31,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 50,
         ignore: false
       },
@@ -2832,7 +3388,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 31,
         ignore: false
       },
@@ -2864,14 +3420,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 52,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 65,
         ignore: false
       },
@@ -2879,7 +3435,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 52,
         ignore: false
       },
@@ -2911,14 +3467,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 67,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 82,
         ignore: false
       },
@@ -2926,7 +3482,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 67,
         ignore: false
       },
@@ -2958,14 +3514,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 84,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 104,
         ignore: false
       },
@@ -2973,7 +3529,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 58,
         column: 84,
         ignore: false
       },
@@ -3005,14 +3561,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 59,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 59,
         column: 31,
         ignore: false
       },
@@ -3020,7 +3576,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 59,
         column: 9,
         ignore: false
       },
@@ -3047,20 +3603,150 @@
       }
     },
     {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 38,
+        ignore: false
+      },
+      identifier: "FFISetWidthWithEmpty",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 61,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FFISetWidthWithEmpty",
+      exportId: "FFISetWidthWithEmpty",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox20FFISetWidthWithEmptyF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 39,
+        ignore: false
+      },
+      identifier: "FFISetHeightWithEmpty",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 63,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144968409101123632,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 23,
+      mangledName: "FFISetHeightWithEmpty",
+      exportId: "FFISetHeightWithEmpty",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox21FFISetHeightWithEmptyF$$u",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 7222278799635774413,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
+      }
+    },
+    {
       kind: "TypeAliasDecl",
       isTopLevel: true,
       fullPkgName: "ohos.arkui.component.checkbox",
       begin: {
         file: 1,
         pkgId: 0,
-        line: 68,
+        line: 71,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 68,
+        line: 71,
         column: 54,
         ignore: false
       },
@@ -3068,7 +3754,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 68,
+        line: 71,
         column: 13,
         ignore: false
       },
@@ -3079,7 +3765,7 @@
       annotations: [
 
       ],
-      type: 23,
+      type: 24,
       mangledName: "",
       exportId: "_CN29ohos.arkui.component.checkbox24OnCheckboxChangeCallbackE",
       mangledBeforeSema: "29ohos.arkui.component.checkbox24OnCheckboxChangeCallbackT",
@@ -3092,7 +3778,7 @@
       },
       info_type: "AliasInfo",
       info: {
-        aliasedTy: 24
+        aliasedTy: 25
       }
     },
     {
@@ -3113,7 +3799,7 @@
       end: {
         file: 1,
         pkgId: 0,
-        line: 276,
+        line: 284,
         column: 2,
         ignore: false
       },
@@ -3135,49 +3821,46 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 2
             },
             {
-              name: "stagemodelonly",
-              expr: 3
-            },
-            {
               name: "syscap",
-              expr: 4
+              expr: 3
             }
           ]
         }
       ],
-      type: 25,
+      type: 26,
       mangledName: "_CN29ohos.arkui.component.checkbox8CheckboxE",
       exportId: "_CN29ohos.arkui.component.checkbox8CheckboxE",
       mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 1260918797365511318,
+        sig: 8691118565526189780,
         srcUse: 0,
-        bodyHash: 8974310320496524259
+        bodyHash: 2640537017748250393
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          48
+          57,
+          58
         ],
         body: [
-          47,
-          57,
+          49,
           59,
           61,
           63,
           65,
-          68,
+          67,
           70,
-          75,
+          72,
           77,
           79,
-          81
+          81,
+          83
         ]
       }
     },
@@ -3191,14 +3874,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 96,
+        line: 93,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 107,
+        line: 104,
         column: 6,
         ignore: false
       },
@@ -3206,7 +3889,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 96,
+        line: 93,
         column: 12,
         ignore: false
       },
@@ -3220,30 +3903,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 5
-            },
-            {
-              name: "stagemodelonly",
-              expr: 6
+              name: "since",
+              expr: 4
             },
             {
               name: "syscap",
-              expr: 7
+              expr: 5
             }
           ]
         }
       ],
-      type: 26,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox6<init>HRNat6StringEY3_NNat6OptionIF0uEE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox6<init>HRNat6StringEY3_NNat6OptionIF0uEE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC6<init>F6String!4name=6String!5group=O1_13CustomBuilder!16indicatorBuilder=$$",
+      type: 28,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox6<init>HNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox6<init>HNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC6<init>FO1_6String!4name=O1_6String!5group=O1_13CustomBuilder!16indicatorBuilder=$$",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 10190577033029658288
+        bodyHash: 16729291677645097104
       },
       info_type: "FuncInfo",
       info: {
@@ -3251,18 +3930,18 @@
           paramLists: [
             {
               params: [
-                48,
                 50,
-                53
+                52,
+                55
               ],
               desugars: [
-                49,
                 51,
-                54
+                53,
+                56
               ]
             }
           ],
-          retType: 25
+          retType: 26
         }
       }
     },
@@ -3272,22 +3951,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 96,
+        line: 93,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 35,
+        line: 93,
+        column: 38,
         ignore: false
       },
       identifier: "name",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 96,
+        line: 93,
         column: 17,
         ignore: false
       },
@@ -3298,281 +3977,8 @@
       annotations: [
 
       ],
-      type: 27,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE4nameE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-        isNamedParam: true,
-        defaultVal: 8
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 33,
-        ignore: true
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 35,
-        ignore: false
-      },
-      identifier: "name.0",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 0,
-        column: 0,
-        ignore: false
-      },
-      attributes: [
-        1301540292310075968,
-        2
-      ],
-      annotations: [
-
-      ],
-      type: 30,
-      mangledName: "_CPI29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE4nameHv",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-
-              ],
-              desugars: [
-
-              ]
-            }
-          ],
-          retType: 27
-        }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 37,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 56,
-        ignore: false
-      },
-      identifier: "group",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 37,
-        ignore: false
-      },
-      attributes: [
-        5066549580791840,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 27,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE5groupE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-        isNamedParam: true,
-        defaultVal: 9
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 54,
-        ignore: true
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 56,
-        ignore: false
-      },
-      identifier: "group.1",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 0,
-        column: 0,
-        ignore: false
-      },
-      attributes: [
-        1301540292310075968,
-        2
-      ],
-      annotations: [
-
-      ],
-      type: 31,
-      mangledName: "_CPI29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE5groupHY3_",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-                52
-              ],
-              desugars: [
-                0
-              ]
-            }
-          ],
-          retType: 27
-        }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 35,
-        ignore: false
-      },
-      identifier: "name",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 27,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE7group.1HY3_E4nameE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 58,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 98,
-        ignore: false
-      },
-      identifier: "indicatorBuilder",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 58,
-        ignore: false
-      },
-      attributes: [
-        5066549580791840,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 28,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE16indicatorBuilderIY8_E",
+      type: 29,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE4nameIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3597,15 +4003,286 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 94,
+        line: 93,
+        column: 34,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 98,
+        line: 93,
+        column: 38,
+        ignore: false
+      },
+      identifier: "name.0",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 32,
+      mangledName: "_CPI29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE4nameHv",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 40,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 62,
+        ignore: false
+      },
+      identifier: "group",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 40,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE5groupIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 58,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 62,
+        ignore: false
+      },
+      identifier: "group.1",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 33,
+      mangledName: "_CPI29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE5groupHY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                54
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 29
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 38,
+        ignore: false
+      },
+      identifier: "name",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 29,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE7group.1HY3_E4nameIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 64,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 104,
+        ignore: false
+      },
+      identifier: "indicatorBuilder",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 64,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 30,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE16indicatorBuilderIY9_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 100,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 93,
+        column: 104,
         ignore: false
       },
       identifier: "indicatorBuilder.2",
@@ -3623,8 +4300,8 @@
       annotations: [
 
       ],
-      type: 32,
-      mangledName: "_CPI29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE16indicatorBuilderHY3_Y3_",
+      type: 34,
+      mangledName: "_CPI29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE16indicatorBuilderHY3_Y3_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3640,8 +4317,8 @@
           paramLists: [
             {
               params: [
-                55,
-                56
+                57,
+                58
               ],
               desugars: [
                 0,
@@ -3649,7 +4326,7 @@
               ]
             }
           ],
-          retType: 28
+          retType: 30
         }
       }
     },
@@ -3659,22 +4336,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 96,
+        line: 93,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 35,
+        line: 93,
+        column: 38,
         ignore: false
       },
       identifier: "name",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 96,
+        line: 93,
         column: 17,
         ignore: false
       },
@@ -3685,8 +4362,8 @@
       annotations: [
 
       ],
-      type: 27,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE18indicatorBuilder.2HY3_Y3_E4nameE",
+      type: 29,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE18indicatorBuilder.2HY3_Y3_E4nameIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3706,23 +4383,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 37,
+        line: 93,
+        column: 40,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 56,
+        line: 93,
+        column: 62,
         ignore: false
       },
       identifier: "group",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 37,
+        line: 93,
+        column: 40,
         ignore: false
       },
       attributes: [
@@ -3732,8 +4409,8 @@
       annotations: [
 
       ],
-      type: 27,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHRNat6StringEY3_NNat6OptionIF0uEEE18indicatorBuilder.2HY3_Y3_E5groupE",
+      type: 29,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox4initHNNat6OptionIRNat6StringEEY3_NNatY5_IF0uEEE18indicatorBuilder.2HY3_Y3_E5groupIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -3757,14 +4434,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 121,
+        line: 117,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 126,
+        line: 123,
         column: 6,
         ignore: false
       },
@@ -3772,13 +4449,13 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 121,
+        line: 117,
         column: 17,
         ignore: false
       },
       attributes: [
         144678138297713696,
-        0
+        16
       ],
       annotations: [
         {
@@ -3786,158 +4463,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 10
-            },
-            {
-              name: "stagemodelonly",
-              expr: 11
+              name: "since",
+              expr: 6
             },
             {
               name: "syscap",
-              expr: 12
-            }
-          ]
-        }
-      ],
-      type: 33,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox6selectHb",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox6selectHb",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC6selectFb$$H",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 0,
-        bodyHash: 437296466939820144
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-                58
-              ],
-              desugars: [
-                0
-              ]
-            }
-          ],
-          retType: 34
-        }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 121,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 121,
-        column: 35,
-        ignore: false
-      },
-      identifier: "value",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 121,
-        column: 24,
-        ignore: false
-      },
-      attributes: [
-        562949953421344,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 6,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox6selectHbE5valueE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 140,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 145,
-        column: 6,
-        ignore: false
-      },
-      identifier: "selectedColor",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 140,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 13
-            },
-            {
-              name: "stagemodelonly",
-              expr: 14
-            },
-            {
-              name: "syscap",
-              expr: 15
+              expr: 7
             }
           ]
         }
       ],
       type: 35,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox13selectedColorHCN9ohos.base13ResourceColorE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox13selectedColorHCN9ohos.base13ResourceColorE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC13selectedColorF13ResourceColor$$H",
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox6selectHNNat6OptionIbE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox6selectHNNat6OptionIbE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC6selectFO1_b$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 5178662854795664917
+        bodyHash: 9550842229145560242
       },
       info_type: "FuncInfo",
       info: {
@@ -3952,7 +4497,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -3962,23 +4507,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 140,
-        column: 31,
+        line: 117,
+        column: 24,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 140,
-        column: 51,
+        line: 117,
+        column: 36,
         ignore: false
       },
       identifier: "value",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 140,
-        column: 31,
+        line: 117,
+        column: 24,
         ignore: false
       },
       attributes: [
@@ -3989,7 +4534,7 @@
 
       ],
       type: 36,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox13selectedColorHCN9ohos.base13ResourceColorEE5valueE",
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox6selectHNNat6OptionIbEE5valueIbE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4013,42 +4558,55 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 147,
+        line: 135,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 153,
+        line: 142,
         column: 6,
         ignore: false
       },
-      identifier: "widthInner",
+      identifier: "selectedColor",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 147,
-        column: 29,
+        line: 135,
+        column: 17,
         ignore: false
       },
       attributes: [
-        144678138297749536,
-        0
+        144678138297713696,
+        16
       ],
       annotations: [
-
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 8
+            },
+            {
+              name: "syscap",
+              expr: 9
+            }
+          ]
+        }
       ],
-      type: 37,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox10widthInnerHCN9ohos.base6LengthE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox10widthInnerHCN9ohos.base6LengthE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC10widthInnerF6Length$$H",
+      type: 38,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox13selectedColorHNNat6OptionICN9ohos.base13ResourceColorEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox13selectedColorHNNat6OptionICN9ohos.base13ResourceColorEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC13selectedColorFO1_13ResourceColor$$H",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 2687969717096398320,
+        sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 12401786815406061515
+        bodyHash: 11667719146322536613
       },
       info_type: "FuncInfo",
       info: {
@@ -4063,7 +4621,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -4073,23 +4631,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 147,
-        column: 40,
+        line: 135,
+        column: 31,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 147,
-        column: 53,
+        line: 135,
+        column: 52,
         ignore: false
       },
       identifier: "value",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 147,
-        column: 40,
+        line: 135,
+        column: 31,
         ignore: false
       },
       attributes: [
@@ -4099,8 +4657,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox10widthInnerHCN9ohos.base6LengthEE5valueE",
+      type: 39,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox13selectedColorHNNat6OptionICN9ohos.base13ResourceColorEEE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4124,22 +4682,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 155,
+        line: 144,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 161,
+        line: 154,
         column: 6,
         ignore: false
       },
-      identifier: "heightInner",
+      identifier: "widthInner",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 155,
+        line: 144,
         column: 29,
         ignore: false
       },
@@ -4150,16 +4708,16 @@
       annotations: [
 
       ],
-      type: 37,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox11heightInnerHCN9ohos.base6LengthE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox11heightInnerHCN9ohos.base6LengthE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC11heightInnerF6Length$$H",
+      type: 41,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox10widthInnerHNNat6OptionICN9ohos.base6LengthEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox10widthInnerHNNat6OptionICN9ohos.base6LengthEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC10widthInnerFO1_6Length$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 3717387404363986291
+        bodyHash: 7609729176759863923
       },
       info_type: "FuncInfo",
       info: {
@@ -4174,7 +4732,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -4184,14 +4742,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 155,
-        column: 41,
+        line: 144,
+        column: 40,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 155,
+        line: 144,
         column: 54,
         ignore: false
       },
@@ -4199,8 +4757,8 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 155,
-        column: 41,
+        line: 144,
+        column: 40,
         ignore: false
       },
       attributes: [
@@ -4210,8 +4768,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox11heightInnerHCN9ohos.base6LengthEE5valueE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox10widthInnerHNNat6OptionICN9ohos.base6LengthEEE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4235,14 +4793,125 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 163,
+        line: 156,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 171,
+        line: 166,
+        column: 6,
+        ignore: false
+      },
+      identifier: "heightInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 41,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox11heightInnerHNNat6OptionICN9ohos.base6LengthEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox11heightInnerHNNat6OptionICN9ohos.base6LengthEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC11heightInnerFO1_6Length$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 12858082742252519602
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                66
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 41,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 55,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 156,
+        column: 41,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox11heightInnerHNNat6OptionICN9ohos.base6LengthEEE5valueIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 168,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 181,
         column: 6,
         ignore: false
       },
@@ -4250,7 +4919,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 163,
+        line: 168,
         column: 29,
         ignore: false
       },
@@ -4261,16 +4930,16 @@
       annotations: [
 
       ],
-      type: 39,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHCN9ohos.base6LengthEY3_",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHCN9ohos.base6LengthEY3_",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC9sizeInnerF6Length6Length$$H",
+      type: 44,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHNNat6OptionICN9ohos.base6LengthEEY3_",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHNNat6OptionICN9ohos.base6LengthEEY3_",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC9sizeInnerFO1_6LengthO1_6Length$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 93861749033007977
+        bodyHash: 16696011427271311969
       },
       info_type: "FuncInfo",
       info: {
@@ -4278,8 +4947,8 @@
           paramLists: [
             {
               params: [
-                66,
-                67
+                68,
+                69
               ],
               desugars: [
                 0,
@@ -4287,7 +4956,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -4297,22 +4966,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 163,
+        line: 168,
         column: 39,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 163,
-        column: 52,
+        line: 168,
+        column: 53,
         ignore: false
       },
       identifier: "width",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 163,
+        line: 168,
         column: 39,
         ignore: false
       },
@@ -4323,8 +4992,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHCN9ohos.base6LengthEY3_E5widthE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHNNat6OptionICN9ohos.base6LengthEEY3_E5widthIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4344,23 +5013,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 163,
-        column: 54,
+        line: 168,
+        column: 55,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 163,
-        column: 68,
+        line: 168,
+        column: 70,
         ignore: false
       },
       identifier: "height",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 163,
-        column: 54,
+        line: 168,
+        column: 55,
         ignore: false
       },
       attributes: [
@@ -4370,8 +5039,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHCN9ohos.base6LengthEY3_E6heightE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox9sizeInnerHNNat6OptionICN9ohos.base6LengthEEY3_E6heightIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4395,14 +5064,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 173,
+        line: 183,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 179,
+        line: 189,
         column: 6,
         ignore: false
       },
@@ -4410,7 +5079,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 173,
+        line: 183,
         column: 29,
         ignore: false
       },
@@ -4421,16 +5090,16 @@
       annotations: [
 
       ],
-      type: 37,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC12paddingInnerF6Length$$H",
+      type: 41,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC12paddingInnerFO1_6Length$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 11615175932091159696
+        bodyHash: 513264677023966345
       },
       info_type: "FuncInfo",
       info: {
@@ -4438,14 +5107,14 @@
           paramLists: [
             {
               params: [
-                69
+                71
               ],
               desugars: [
                 0
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -4455,22 +5124,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 173,
+        line: 183,
         column: 42,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 173,
-        column: 55,
+        line: 183,
+        column: 56,
         ignore: false
       },
       identifier: "value",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 173,
+        line: 183,
         column: 42,
         ignore: false
       },
@@ -4481,8 +5150,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEE5valueE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4506,14 +5175,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 181,
+        line: 191,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 201,
+        line: 211,
         column: 6,
         ignore: false
       },
@@ -4521,7 +5190,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 181,
+        line: 191,
         column: 29,
         ignore: false
       },
@@ -4532,16 +5201,16 @@
       annotations: [
 
       ],
-      type: 40,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC12paddingInnerF6Length6Length6Length6Length$$H",
+      type: 45,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEY3_Y3_Y3_",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEY3_Y3_Y3_",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC12paddingInnerFO1_6LengthO1_6LengthO1_6LengthO1_6Length$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 14019207946930436424
+        bodyHash: 7868098953759047237
       },
       info_type: "FuncInfo",
       info: {
@@ -4549,10 +5218,10 @@
           paramLists: [
             {
               params: [
-                71,
-                72,
                 73,
-                74
+                74,
+                75,
+                76
               ],
               desugars: [
                 0,
@@ -4562,7 +5231,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -4572,22 +5241,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 181,
+        line: 191,
         column: 42,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 53,
+        line: 191,
+        column: 54,
         ignore: false
       },
       identifier: "top",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 181,
+        line: 191,
         column: 42,
         ignore: false
       },
@@ -4598,8 +5267,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E3topE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEY3_Y3_Y3_E3topIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4619,23 +5288,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 55,
+        line: 191,
+        column: 56,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 68,
+        line: 191,
+        column: 70,
         ignore: false
       },
       identifier: "right",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 55,
+        line: 191,
+        column: 56,
         ignore: false
       },
       attributes: [
@@ -4645,8 +5314,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E5rightE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEY3_Y3_Y3_E5rightIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4666,23 +5335,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 70,
+        line: 191,
+        column: 72,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 84,
+        line: 191,
+        column: 87,
         ignore: false
       },
       identifier: "bottom",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 70,
+        line: 191,
+        column: 72,
         ignore: false
       },
       attributes: [
@@ -4692,8 +5361,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E6bottomE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEY3_Y3_Y3_E6bottomIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4713,23 +5382,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 86,
+        line: 191,
+        column: 89,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 98,
+        line: 191,
+        column: 102,
         ignore: false
       },
       identifier: "left",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 181,
-        column: 86,
+        line: 191,
+        column: 89,
         ignore: false
       },
       attributes: [
@@ -4739,8 +5408,8 @@
       annotations: [
 
       ],
-      type: 38,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHCN9ohos.base6LengthEY3_Y3_Y3_E4leftE",
+      type: 42,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox12paddingInnerHNNat6OptionICN9ohos.base6LengthEEY3_Y3_Y3_E4leftIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -4764,14 +5433,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 216,
+        line: 223,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 222,
+        line: 230,
         column: 6,
         ignore: false
       },
@@ -4779,13 +5448,13 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 216,
+        line: 223,
         column: 17,
         ignore: false
       },
       attributes: [
         144678138297713696,
-        0
+        16
       ],
       annotations: [
         {
@@ -4793,158 +5462,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 16
-            },
-            {
-              name: "stagemodelonly",
-              expr: 17
+              name: "since",
+              expr: 10
             },
             {
               name: "syscap",
-              expr: 18
+              expr: 11
             }
           ]
         }
       ],
-      type: 41,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox8onChangeHF0ubE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox8onChangeHF0ubE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC8onChangeF24OnCheckboxChangeCallback$$H",
+      type: 46,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox8onChangeHNNat6OptionIF0ubEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox8onChangeHNNat6OptionIF0ubEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC8onChangeFO1_24OnCheckboxChangeCallback$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 3075914619151910336
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-                76
-              ],
-              desugars: [
-                0
-              ]
-            }
-          ],
-          retType: 34
-        }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 26,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 60,
-        ignore: false
-      },
-      identifier: "callback",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 216,
-        column: 26,
-        ignore: false
-      },
-      attributes: [
-        562949953421344,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 24,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox8onChangeHF0ubEE8callbackE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.arkui.component.checkbox",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 236,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 241,
-        column: 6,
-        ignore: false
-      },
-      identifier: "shape",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 236,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 19
-            },
-            {
-              name: "stagemodelonly",
-              expr: 20
-            },
-            {
-              name: "syscap",
-              expr: 21
-            }
-          ]
-        }
-      ],
-      type: 42,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox5shapeHNN27ohos.arkui.component.common13CheckBoxShapeE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox5shapeHNN27ohos.arkui.component.common13CheckBoxShapeE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC5shapeF13CheckBoxShape$$H",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 0,
-        bodyHash: 3025590384551686114
+        bodyHash: 7505474761551979974
       },
       info_type: "FuncInfo",
       info: {
@@ -4959,7 +5496,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -4969,23 +5506,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 236,
-        column: 23,
+        line: 223,
+        column: 26,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 236,
-        column: 43,
+        line: 223,
+        column: 61,
         ignore: false
       },
-      identifier: "value",
+      identifier: "callback",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 236,
-        column: 23,
+        line: 223,
+        column: 26,
         ignore: false
       },
       attributes: [
@@ -4995,8 +5532,8 @@
       annotations: [
 
       ],
-      type: 43,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox5shapeHNN27ohos.arkui.component.common13CheckBoxShapeEE5valueE",
+      type: 47,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox8onChangeHNNat6OptionIF0ubEEE8callbackIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5020,42 +5557,55 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 243,
+        line: 242,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 260,
+        line: 248,
         column: 6,
         ignore: false
       },
-      identifier: "responseRegionInner",
+      identifier: "shape",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 243,
-        column: 29,
+        line: 242,
+        column: 17,
         ignore: false
       },
       attributes: [
-        144678138297749536,
-        0
+        144678138297713696,
+        16
       ],
       annotations: [
-
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 12
+            },
+            {
+              name: "syscap",
+              expr: 13
+            }
+          ]
+        }
       ],
-      type: 44,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHCN27ohos.arkui.component.common9RectangleE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHCN27ohos.arkui.component.common9RectangleE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC19responseRegionInnerF9Rectangle$$H",
+      type: 48,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox5shapeHNNat6OptionINN27ohos.arkui.component.common13CheckBoxShapeEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox5shapeHNNat6OptionINN27ohos.arkui.component.common13CheckBoxShapeEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC5shapeFO1_13CheckBoxShape$$H",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 2687969717096398320,
+        sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 12190663611914848883
+        bodyHash: 13919494973093547773
       },
       info_type: "FuncInfo",
       info: {
@@ -5070,7 +5620,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -5080,23 +5630,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 243,
-        column: 49,
+        line: 242,
+        column: 23,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 243,
-        column: 64,
+        line: 242,
+        column: 44,
         ignore: false
       },
-      identifier: "rect",
+      identifier: "value",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 243,
-        column: 49,
+        line: 242,
+        column: 23,
         ignore: false
       },
       attributes: [
@@ -5106,8 +5656,8 @@
       annotations: [
 
       ],
-      type: 45,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHCN27ohos.arkui.component.common9RectangleEE4rectE",
+      type: 49,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox5shapeHNNat6OptionINN27ohos.arkui.component.common13CheckBoxShapeEEE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5131,14 +5681,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 262,
+        line: 250,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 275,
+        line: 267,
         column: 6,
         ignore: false
       },
@@ -5146,7 +5696,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 262,
+        line: 250,
         column: 29,
         ignore: false
       },
@@ -5157,16 +5707,16 @@
       annotations: [
 
       ],
-      type: 46,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHRNat5ArrayICN27ohos.arkui.component.common9RectangleEE",
-      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHRNat5ArrayICN27ohos.arkui.component.common9RectangleEE",
-      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC19responseRegionInnerF5Array<9Rectangle>$$H",
+      type: 51,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHNNat6OptionICN27ohos.arkui.component.common9RectangleEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHNNat6OptionICN27ohos.arkui.component.common9RectangleEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC19responseRegionInnerFO1_9Rectangle$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 5329321463956249974
+        bodyHash: 1639452201578657907
       },
       info_type: "FuncInfo",
       info: {
@@ -5181,7 +5731,7 @@
               ]
             }
           ],
-          retType: 34
+          retType: 37
         }
       }
     },
@@ -5191,22 +5741,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 262,
+        line: 250,
         column: 49,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 262,
-        column: 72,
+        line: 250,
+        column: 65,
         ignore: false
       },
-      identifier: "array",
+      identifier: "rect",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 262,
+        line: 250,
         column: 49,
         ignore: false
       },
@@ -5217,8 +5767,689 @@
       annotations: [
 
       ],
+      type: 52,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHNNat6OptionICN27ohos.arkui.component.common9RectangleEEE4rectIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 283,
+        column: 6,
+        ignore: false
+      },
+      identifier: "responseRegionInner",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 54,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHNNat6OptionIRNat5ArrayICN27ohos.arkui.component.common9RectangleEEE",
+      exportId: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHNNat6OptionIRNat5ArrayICN27ohos.arkui.component.common9RectangleEEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox8CheckboxC19responseRegionInnerFO1_5Array<9Rectangle>$$H",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 15347851933648397985
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                84
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 37
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 49,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 73,
+        ignore: false
+      },
+      identifier: "array",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 269,
+        column: 49,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 55,
+      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHNNat6OptionIRNat5ArrayICN27ohos.arkui.component.common9RectangleEEEE5arrayIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "InterfaceDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 78,
+        column: 2,
+        ignore: false
+      },
+      identifier: "CheckboxAttribute",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 29,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144678412907971632,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 14
+            },
+            {
+              name: "syscap",
+              expr: 15
+            }
+          ]
+        }
+      ],
+      type: 58,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttributeE",
+      exportId: "_CN29ohos.arkui.component.checkbox17CheckboxAttributeE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox17CheckboxAttributeI",
+      hash: {
+        instVar: 0,
+        virt: 13310269027579913295,
+        sig: 17690287123292198973,
+        srcUse: 5532835001352326160,
+        bodyHash: 10272158749408885551
+      },
+      info_type: "InterfaceInfo",
+      info: {
+        inheritedTypes: [
+          63
+        ],
+        body: [
+          86,
+          88,
+          90,
+          92
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 49,
+        ignore: false
+      },
+      identifier: "select",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 16
+            },
+            {
+              name: "syscap",
+              expr: 17
+            }
+          ]
+        }
+      ],
+      type: 59,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute6selectHNNat6OptionIbE",
+      exportId: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute6selectHNNat6OptionIbE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox17CheckboxAttributeI6selectFO1_b$$17CheckboxAttribute",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6374120015398027502
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                87
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 58
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 29,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 41,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 36,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute6selectHNNat6OptionIbEE5valueIbE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 65,
+        ignore: false
+      },
+      identifier: "selectedColor",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 18
+            },
+            {
+              name: "syscap",
+              expr: 19
+            }
+          ]
+        }
+      ],
+      type: 60,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute13selectedColorHNNat6OptionICN9ohos.base13ResourceColorEE",
+      exportId: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute13selectedColorHNNat6OptionICN9ohos.base13ResourceColorEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox17CheckboxAttributeI13selectedColorFO1_13ResourceColor$$17CheckboxAttribute",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6374120015398027502
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                89
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 58
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 24,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 45,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 53,
+        column: 24,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 39,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute13selectedColorHNNat6OptionICN9ohos.base13ResourceColorEEE5valueIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 74,
+        ignore: false
+      },
+      identifier: "onChange",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 20
+            },
+            {
+              name: "syscap",
+              expr: 21
+            }
+          ]
+        }
+      ],
+      type: 61,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute8onChangeHNNat6OptionIF0ubEE",
+      exportId: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute8onChangeHNNat6OptionIF0ubEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox17CheckboxAttributeI8onChangeFO1_24OnCheckboxChangeCallback$$17CheckboxAttribute",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 5245570957996566882
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                91
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 58
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 19,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 54,
+        ignore: false
+      },
+      identifier: "callback",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 65,
+        column: 19,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
       type: 47,
-      mangledName: "_CN29ohos.arkui.component.checkbox8Checkbox19responseRegionInnerHRNat5ArrayICN27ohos.arkui.component.common9RectangleEEE5arrayIY6_E",
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute8onChangeHNNat6OptionIF0ubEEE8callbackIY6_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 57,
+        ignore: false
+      },
+      identifier: "shape",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 22
+            },
+            {
+              name: "syscap",
+              expr: 23
+            }
+          ]
+        }
+      ],
+      type: 62,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute5shapeHNNat6OptionINN27ohos.arkui.component.common13CheckBoxShapeEE",
+      exportId: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute5shapeHNNat6OptionINN27ohos.arkui.component.common13CheckBoxShapeEE",
+      mangledBeforeSema: "29ohos.arkui.component.checkbox17CheckboxAttributeI5shapeFO1_13CheckBoxShape$$17CheckboxAttribute",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6374120015398027502
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                93
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 58
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.checkbox",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 37,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 77,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 49,
+      mangledName: "_CN29ohos.arkui.component.checkbox17CheckboxAttribute5shapeHNNat6OptionINN27ohos.arkui.component.common13CheckBoxShapeEEE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5239,14 +6470,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 29,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 31,
         ignore: false
       },
@@ -5261,42 +6492,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 76,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 76,
-        column: 7,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
         line: 77,
-        column: 21,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 77,
-        column: 25,
+        column: 16,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -5315,6 +6526,7 @@
         column: 48,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -5326,86 +6538,21 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 92,
-        column: 9,
+        line: 90,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 92,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 93,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 93,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 94,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 94,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 33,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 35,
+        line: 90,
+        column: 20,
         ignore: false
       },
       type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "",
+        strValue: "22",
         constKind: "String"
       }
     },
@@ -5414,21 +6561,21 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 54,
+        line: 91,
+        column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 96,
-        column: 56,
+        line: 91,
+        column: 52,
         ignore: false
       },
       type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "",
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
         constKind: "String"
       }
     },
@@ -5437,20 +6584,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 117,
-        column: 9,
+        line: 114,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 117,
-        column: 11,
+        line: 114,
+        column: 20,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -5458,39 +6607,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 118,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 118,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 119,
+        line: 115,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 119,
+        line: 115,
         column: 52,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -5502,20 +6630,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 136,
-        column: 9,
+        line: 132,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 136,
-        column: 11,
+        line: 132,
+        column: 20,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -5523,39 +6653,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 137,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 137,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 138,
+        line: 133,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 138,
+        line: 133,
         column: 52,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -5567,20 +6676,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 212,
-        column: 9,
+        line: 220,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 212,
-        column: 11,
+        line: 220,
+        column: 20,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -5588,39 +6699,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 213,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 213,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 214,
+        line: 221,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 214,
+        line: 221,
         column: 52,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -5632,20 +6722,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 232,
-        column: 9,
+        line: 239,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 232,
-        column: 11,
+        line: 239,
+        column: 20,
         ignore: false
       },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -5653,39 +6745,248 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 233,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 233,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 234,
+        line: 240,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 234,
+        line: 240,
         column: 52,
         ignore: false
       },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 16,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 27,
+        column: 48,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 38,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 38,
+        column: 20,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 52,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 50,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 50,
+        column: 20,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 51,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 51,
+        column: 52,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 62,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 62,
+        column: 20,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 63,
+        column: 52,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 74,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 74,
+        column: 20,
+        ignore: false
+      },
+      type: 27,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 75,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 75,
+        column: 52,
+        ignore: false
+      },
+      type: 27,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
