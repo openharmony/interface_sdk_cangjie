@@ -1773,19 +1773,6 @@ public enum ApplicationType {
     ]
     Email
     | ...
-
-    /**
-     * Get the application type value.
-     *
-     * @returns { String } Returns the string representation of the application type.
-     * @throws { BusinessException } 17700101 - Bundle manager service exception.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.BundleManager.BundleFramework.DefaultApp",
-        throwexception: true
-    ]
-    public func getValue(): String
 }
 
 /**
@@ -1799,7 +1786,7 @@ public class DefaultAppManager {
     /**
      * Query whether the caller is default application based on type.
      *
-     * @param { String } appType - Application type or a file type that conforms to media type format.
+     * @param { ApplicationType } appType - Application type or a file type that conforms to media type format.
      * @returns { Bool } Return true if caller is default application; return false otherwise.
      * @throws { BusinessException } 801 - Capability not supported.
      */
@@ -1809,7 +1796,7 @@ public class DefaultAppManager {
         throwexception: true,
         workerthread: true
     ]
-    public static func isDefaultApplication(appType: String): Bool
+    public static func isDefaultApplication(appType: ApplicationType): Bool
 }
 
 /**
