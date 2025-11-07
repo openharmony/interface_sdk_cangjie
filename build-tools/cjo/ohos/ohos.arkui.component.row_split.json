@@ -1,17 +1,19 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.arkui.component.row_split",
-  pkgDepInfo: "{\"package\":\"ohos.arkui.component.row_split\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"row_split.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"row_split.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":19}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"row_split.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.row_split\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"row_split.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":58}},{\"file\":\"row_split_attr.cj\",\"begin\":{\"line\":18,\"column\":37},\"end\":{\"line\":18,\"column\":49}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"row_split.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}},{\"file\":\"row_split_attr.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}],\"features\":[]}",
   imports: [
+    "std.core",
     "ohos.arkui.component.common"
   ],
   allFiles: [
-    "ohos.arkui.component.row_split/row_split.cj"
+    "ohos.arkui.component.row_split/row_split.cj",
+    "ohos.arkui.component.row_split/row_split_attr.cj"
   ],
   allFileImports: [
     {
@@ -20,15 +22,15 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 1,
+            line: 20,
+            column: 37,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 37,
+            line: 20,
+            column: 58,
             ignore: false
           },
           prefixPaths: [
@@ -37,43 +39,21 @@
             "component",
             "common"
           ],
-          identifier: "*",
+          identifier: "CommonMethodComponent",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 19,
+            line: 21,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 19,
-            column: 19,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "base"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 20,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 20,
+            line: 21,
             column: 28,
             ignore: false
           },
@@ -94,6 +74,78 @@
           },
           end: {
             file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 49,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CommonMethod",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
             pkgId: 0,
             line: 0,
             column: 0,
@@ -165,9 +217,21 @@
       }
     },
     {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
       kind: "Func",
       typeArgs: [
-        9
+        10
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -187,11 +251,23 @@
     {
       kind: "Func",
       typeArgs: [
-        4
+        12
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 11
+        retType: 13
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        4
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -211,12 +287,49 @@
     {
       kind: "Class",
       typeArgs: [
+        7
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN27ohos.arkui.component.common21CommonMethodComponentIG_E"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
 
       ],
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
-          decl: "_CN27ohos.arkui.component.common13ContainerBaseE"
+          pkgId: -2,
+          index: 13
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 15
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        15
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CN27ohos.arkui.component.common12CommonMethodIG_E"
         }
       }
     }
@@ -233,14 +346,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 24,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 24,
         column: 51,
         ignore: false
       },
@@ -248,7 +361,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 24,
         column: 10,
         ignore: false
       },
@@ -298,14 +411,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 26,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 26,
         column: 66,
         ignore: false
       },
@@ -313,7 +426,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 26,
         column: 10,
         ignore: false
       },
@@ -358,14 +471,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 26,
         column: 48,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 26,
         column: 59,
         ignore: false
       },
@@ -373,7 +486,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 26,
         column: 48,
         ignore: false
       },
@@ -410,14 +523,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 28,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 28,
         column: 61,
         ignore: false
       },
@@ -425,7 +538,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 28,
         column: 10,
         ignore: false
       },
@@ -470,14 +583,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 28,
         column: 42,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 28,
         column: 54,
         ignore: false
       },
@@ -485,7 +598,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 27,
+        line: 28,
         column: 42,
         ignore: false
       },
@@ -522,14 +635,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 30,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 30,
         column: 70,
         ignore: false
       },
@@ -537,7 +650,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 30,
         column: 10,
         ignore: false
       },
@@ -582,14 +695,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 30,
         column: 49,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 30,
         column: 63,
         ignore: false
       },
@@ -597,7 +710,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 30,
         column: 49,
         ignore: false
       },
@@ -634,14 +747,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 40,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 80,
+        line: 74,
         column: 2,
         ignore: false
       },
@@ -649,7 +762,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 40,
         column: 14,
         ignore: false
       },
@@ -663,16 +776,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
-              name: "stagemodelonly",
-              expr: 2
-            },
-            {
               name: "syscap",
-              expr: 3
+              expr: 2
             }
           ]
         }
@@ -684,14 +793,15 @@
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 6438789364046432450,
+        sig: 4924023410165804175,
         srcUse: 0,
-        bodyHash: 1040547795805574761
+        bodyHash: 12226294816782266872
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          12
+          14,
+          15
         ],
         body: [
           9,
@@ -709,14 +819,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 60,
+        line: 55,
         column: 6,
         ignore: false
       },
@@ -724,7 +834,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 12,
         ignore: false
       },
@@ -738,21 +848,17 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 4
-            },
-            {
-              name: "stagemodelonly",
-              expr: 5
+              name: "since",
+              expr: 3
             },
             {
               name: "syscap",
-              expr: 6
+              expr: 4
             }
           ]
         }
       ],
-      type: 8,
+      type: 9,
       mangledName: "_CN30ohos.arkui.component.row_split8RowSplit6<init>HF0uE",
       exportId: "_CN30ohos.arkui.component.row_split8RowSplit6<init>HF0uE",
       mangledBeforeSema: "30ohos.arkui.component.row_split8RowSplitC6<init>FFu$$",
@@ -761,7 +867,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 13607836440225977205
+        bodyHash: 797428056300526912
       },
       info_type: "FuncInfo",
       info: {
@@ -786,14 +892,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 34,
         ignore: false
       },
@@ -801,7 +907,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 17,
         ignore: false
       },
@@ -812,7 +918,7 @@
       annotations: [
 
       ],
-      type: 9,
+      type: 10,
       mangledName: "_CN30ohos.arkui.component.row_split8RowSplit4initHF0uEE5childE",
       exportId: "",
       mangledBeforeSema: "",
@@ -837,14 +943,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 68,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 79,
+        line: 73,
         column: 6,
         ignore: false
       },
@@ -852,13 +958,13 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 68,
         column: 17,
         ignore: false
       },
       attributes: [
         144678138297713696,
-        0
+        16
       ],
       annotations: [
         {
@@ -866,30 +972,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 7
-            },
-            {
-              name: "stagemodelonly",
-              expr: 8
+              name: "since",
+              expr: 5
             },
             {
               name: "syscap",
-              expr: 9
+              expr: 6
             }
           ]
         }
       ],
-      type: 10,
-      mangledName: "_CN30ohos.arkui.component.row_split8RowSplit10resizeableHb",
-      exportId: "_CN30ohos.arkui.component.row_split8RowSplit10resizeableHb",
-      mangledBeforeSema: "30ohos.arkui.component.row_split8RowSplitC10resizeableFb$$H",
+      type: 11,
+      mangledName: "_CN30ohos.arkui.component.row_split8RowSplit10resizeableHNNat6OptionIbE",
+      exportId: "_CN30ohos.arkui.component.row_split8RowSplit10resizeableHNNat6OptionIbE",
+      mangledBeforeSema: "30ohos.arkui.component.row_split8RowSplitC10resizeableFO1_b$$H",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 3776618550296589986
+        bodyHash: 16609321582139904975
       },
       info_type: "FuncInfo",
       info: {
@@ -904,7 +1006,7 @@
               ]
             }
           ],
-          retType: 11
+          retType: 13
         }
       }
     },
@@ -914,22 +1016,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 68,
         column: 28,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 74,
-        column: 39,
+        line: 68,
+        column: 40,
         ignore: false
       },
       identifier: "value",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 68,
         column: 28,
         ignore: false
       },
@@ -940,8 +1042,203 @@
       annotations: [
 
       ],
-      type: 4,
-      mangledName: "_CN30ohos.arkui.component.row_split8RowSplit10resizeableHbE5valueE",
+      type: 12,
+      mangledName: "_CN30ohos.arkui.component.row_split8RowSplit10resizeableHNNat6OptionIbEE5valueIbE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "InterfaceDecl",
+      isTopLevel: true,
+      fullPkgName: "ohos.arkui.component.row_split",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 1,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 40,
+        column: 2,
+        ignore: false
+      },
+      identifier: "RowSplitAttribute",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 18,
+        ignore: false
+      },
+      attributes: [
+        144678412907971632,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 7
+            },
+            {
+              name: "syscap",
+              expr: 8
+            }
+          ]
+        }
+      ],
+      type: 15,
+      mangledName: "_CN30ohos.arkui.component.row_split17RowSplitAttributeE",
+      exportId: "_CN30ohos.arkui.component.row_split17RowSplitAttributeE",
+      mangledBeforeSema: "30ohos.arkui.component.row_split17RowSplitAttributeI",
+      hash: {
+        instVar: 0,
+        virt: 14041637182607391620,
+        sig: 912049053444768420,
+        srcUse: 5532835001352326160,
+        bodyHash: 10272158749408885551
+      },
+      info_type: "InterfaceInfo",
+      info: {
+        inheritedTypes: [
+          17
+        ],
+        body: [
+          14
+        ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.row_split",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 53,
+        ignore: false
+      },
+      identifier: "resizeable",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 10,
+        ignore: false
+      },
+      attributes: [
+        144678138298369056,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 9
+            },
+            {
+              name: "syscap",
+              expr: 10
+            }
+          ]
+        }
+      ],
+      type: 16,
+      mangledName: "_CN30ohos.arkui.component.row_split17RowSplitAttribute10resizeableHNNat6OptionIbE",
+      exportId: "_CN30ohos.arkui.component.row_split17RowSplitAttribute10resizeableHNNat6OptionIbE",
+      mangledBeforeSema: "30ohos.arkui.component.row_split17RowSplitAttributeI10resizeableFO1_b$$17RowSplitAttribute",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 6374120015398027502
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                15
+              ],
+              desugars: [
+                0
+              ]
+            }
+          ],
+          retType: 15
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.row_split",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 21,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 33,
+        ignore: false
+      },
+      identifier: "value",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 39,
+        column: 21,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN30ohos.arkui.component.row_split17RowSplitAttribute10resizeableHNNat6OptionIbEE5valueIbE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -962,20 +1259,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
-        column: 5,
+        line: 37,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
-        column: 7,
+        line: 37,
+        column: 16,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -983,39 +1282,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 39,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 39,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 40,
+        line: 38,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 38,
         column: 48,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -1027,20 +1305,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 51,
-        column: 9,
+        line: 47,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 51,
-        column: 11,
+        line: 47,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1048,39 +1328,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 52,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 53,
+        line: 48,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 53,
+        line: 48,
         column: 52,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -1092,20 +1351,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 70,
-        column: 9,
+        line: 65,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 70,
-        column: 11,
+        line: 65,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1113,39 +1374,110 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 71,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 71,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 72,
+        line: 66,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 72,
+        line: 66,
         column: 52,
         ignore: false
       },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 16,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 48,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 36,
+        column: 20,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 37,
+        column: 52,
+        ignore: false
+      },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",

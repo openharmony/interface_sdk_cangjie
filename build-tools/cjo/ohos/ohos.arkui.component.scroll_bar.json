@@ -1,18 +1,20 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.arkui.component.scroll_bar",
-  pkgDepInfo: "{\"package\":\"ohos.arkui.component.scroll_bar\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.arkui.component.scroll\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":37}}]},{\"package\":\"ohos.base\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":19}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.scroll_bar\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":58}},{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":20,\"column\":60},\"end\":{\"line\":20,\"column\":78}},{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":20,\"column\":80},\"end\":{\"line\":20,\"column\":88}},{\"file\":\"scroll_bar_attr.cj\",\"begin\":{\"line\":18,\"column\":37},\"end\":{\"line\":18,\"column\":49}}]},{\"package\":\"ohos.arkui.component.scroll\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":21,\"column\":37},\"end\":{\"line\":21,\"column\":45}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"scroll_bar.cj\",\"begin\":{\"line\":22,\"column\":1},\"end\":{\"line\":22,\"column\":28}},{\"file\":\"scroll_bar_attr.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}],\"features\":[]}",
   imports: [
+    "std.core",
     "ohos.arkui.component.scroll",
     "ohos.arkui.component.common"
   ],
   allFiles: [
-    "ohos.arkui.component.scroll_bar/scroll_bar.cj"
+    "ohos.arkui.component.scroll_bar/scroll_bar.cj",
+    "ohos.arkui.component.scroll_bar/scroll_bar_attr.cj"
   ],
   allFileImports: [
     {
@@ -21,15 +23,15 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 1,
+            line: 20,
+            column: 37,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 37,
+            line: 20,
+            column: 58,
             ignore: false
           },
           prefixPaths: [
@@ -38,22 +40,70 @@
             "component",
             "common"
           ],
-          identifier: "*",
+          identifier: "CommonMethodComponent",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 19,
-            column: 1,
+            line: 20,
+            column: 60,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 19,
+            line: 20,
+            column: 78,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "ScrollBarDirection",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 80,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 20,
+            column: 88,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "BarState",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
             column: 37,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 45,
             ignore: false
           },
           prefixPaths: [
@@ -62,43 +112,21 @@
             "component",
             "scroll"
           ],
-          identifier: "*",
+          identifier: "Scroller",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 20,
+            line: 22,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 20,
-            column: 19,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "base"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 21,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 21,
+            line: 22,
             column: 28,
             ignore: false
           },
@@ -119,6 +147,78 @@
           },
           end: {
             file: 1,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          prefixPaths: [
+            "std",
+            "core"
+          ],
+          identifier: "*",
+          asIdentifier: ""
+        }
+      ]
+    },
+    {
+      importSpecs: [
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 37,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 18,
+            column: 49,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "arkui",
+            "component",
+            "common"
+          ],
+          identifier: "CommonMethod",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 1,
+            ignore: false
+          },
+          end: {
+            file: 2,
+            pkgId: 0,
+            line: 19,
+            column: 28,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 2,
+            pkgId: 0,
+            line: 0,
+            column: 0,
+            ignore: false
+          },
+          end: {
+            file: 2,
             pkgId: 0,
             line: 0,
             column: 0,
@@ -184,16 +284,40 @@
       }
     },
     {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
       kind: "Func",
       typeArgs: [
-        9,
         10,
-        11,
-        12
+        12,
+        14,
+        16
       ],
       info_type: "FuncTyInfo",
       info: {
         retType: 7
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        11
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
       }
     },
     {
@@ -204,6 +328,7 @@
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
+          pkgId: 1,
           decl: "_CN27ohos.arkui.component.scroll8ScrollerE"
         }
       }
@@ -211,13 +336,12 @@
     {
       kind: "Enum",
       typeArgs: [
-
+        13
       ],
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
-          pkgId: 1,
-          decl: "_CN27ohos.arkui.component.common18ScrollBarDirectionE"
+          decl: "_CNat6OptionIG_E"
         }
       }
     },
@@ -229,7 +353,32 @@
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
-          pkgId: 1,
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common18ScrollBarDirectionE"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        15
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
           decl: "_CN27ohos.arkui.component.common8BarStateE"
         }
       }
@@ -247,30 +396,7 @@
     {
       kind: "Func",
       typeArgs: [
-        9
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 10
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        9,
         10
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 11
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        9,
-        10,
-        11
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -278,15 +404,52 @@
       }
     },
     {
+      kind: "Func",
+      typeArgs: [
+        10,
+        12
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 14
+      }
+    },
+    {
       kind: "Class",
+      typeArgs: [
+        7
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common21CommonMethodComponentIG_E"
+        }
+      }
+    },
+    {
+      kind: "Interface",
       typeArgs: [
 
       ],
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
-          pkgId: 1,
-          decl: "_CN27ohos.arkui.component.common13ContainerBaseE"
+          pkgId: -2,
+          index: 18
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+        20
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 2,
+          decl: "_CN27ohos.arkui.component.common12CommonMethodIG_E"
         }
       }
     }
@@ -303,14 +466,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 99,
         ignore: false
       },
@@ -318,7 +481,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 10,
         ignore: false
       },
@@ -367,14 +530,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 60,
         ignore: false
       },
@@ -382,7 +545,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 45,
         ignore: false
       },
@@ -414,14 +577,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 62,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 78,
         ignore: false
       },
@@ -429,7 +592,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 62,
         ignore: false
       },
@@ -461,14 +624,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 80,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 92,
         ignore: false
       },
@@ -476,7 +639,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 25,
         column: 80,
         ignore: false
       },
@@ -513,14 +676,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 27,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 27,
         column: 69,
         ignore: false
       },
@@ -528,7 +691,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 27,
         column: 10,
         ignore: false
       },
@@ -573,14 +736,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 27,
         column: 51,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 27,
         column: 62,
         ignore: false
       },
@@ -588,7 +751,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 27,
         column: 51,
         ignore: false
       },
@@ -625,14 +788,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 36,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 65,
+        line: 63,
         column: 2,
         ignore: false
       },
@@ -640,7 +803,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 36,
         column: 14,
         ignore: false
       },
@@ -654,16 +817,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
-              name: "stagemodelonly",
-              expr: 2
-            },
-            {
               name: "syscap",
-              expr: 3
+              expr: 2
             }
           ]
         }
@@ -675,14 +834,15 @@
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 6438789364046432450,
+        sig: 11699859434258808662,
         srcUse: 0,
-        bodyHash: 11893097501693740523
+        bodyHash: 10272158749408885551
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          16
+          19,
+          20
         ],
         body: [
           8
@@ -699,14 +859,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 49,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 64,
+        line: 62,
         column: 6,
         ignore: false
       },
@@ -714,7 +874,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 54,
+        line: 49,
         column: 12,
         ignore: false
       },
@@ -728,30 +888,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 4
-            },
-            {
-              name: "stagemodelonly",
-              expr: 5
+              name: "since",
+              expr: 3
             },
             {
               name: "syscap",
-              expr: 6
+              expr: 4
             }
           ]
         }
       ],
-      type: 8,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar6<init>HCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uE",
-      exportId: "_CN31ohos.arkui.component.scroll_bar9ScrollBar6<init>HCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uE",
-      mangledBeforeSema: "31ohos.arkui.component.scroll_bar9ScrollBarC6<init>F8Scroller!8scroller18ScrollBarDirection!9direction=8BarState!5state=Fu!5child=$$",
+      type: 9,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar6<init>HNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uE",
+      exportId: "_CN31ohos.arkui.component.scroll_bar9ScrollBar6<init>HNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uE",
+      mangledBeforeSema: "31ohos.arkui.component.scroll_bar9ScrollBarC6<init>FO1_8Scroller!8scrollerO1_18ScrollBarDirection!9direction=O1_8BarState!5state=Fu!5child$$",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16933942205926119206
+        bodyHash: 222102230480409712
       },
       info_type: "FuncInfo",
       info: {
@@ -768,7 +924,7 @@
                 0,
                 11,
                 14,
-                18
+                0
               ]
             }
           ],
@@ -782,22 +938,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 55,
-        column: 28,
+        line: 50,
+        column: 29,
         ignore: false
       },
       identifier: "scroller",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 9,
         ignore: false
       },
@@ -808,8 +964,8 @@
       annotations: [
 
       ],
-      type: 9,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE8scrollerE",
+      type: 10,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE8scrollerIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -830,22 +986,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 51,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 56,
-        column: 69,
+        line: 51,
+        column: 47,
         ignore: false
       },
       identifier: "direction",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 56,
+        line: 51,
         column: 9,
         ignore: false
       },
@@ -856,8 +1012,8 @@
       annotations: [
 
       ],
-      type: 10,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE9directionE",
+      type: 12,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE9directionIYA_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -882,15 +1038,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 56,
-        column: 42,
+        line: 51,
+        column: 43,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 56,
-        column: 69,
+        line: 51,
+        column: 47,
         ignore: false
       },
       identifier: "direction.1",
@@ -908,8 +1064,8 @@
       annotations: [
 
       ],
-      type: 13,
-      mangledName: "_CPI31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE9directionHY3_",
+      type: 17,
+      mangledName: "_CPI31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE9directionHY3_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -932,7 +1088,7 @@
               ]
             }
           ],
-          retType: 10
+          retType: 12
         }
       }
     },
@@ -942,22 +1098,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 55,
-        column: 28,
+        line: 50,
+        column: 29,
         ignore: false
       },
       identifier: "scroller",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 9,
         ignore: false
       },
@@ -968,8 +1124,8 @@
       annotations: [
 
       ],
-      type: 9,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE11direction.1HY3_E8scrollerE",
+      type: 10,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE11direction.1HY3_E8scrollerIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -989,22 +1145,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 52,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 57,
-        column: 42,
+        line: 52,
+        column: 33,
         ignore: false
       },
       identifier: "state",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 52,
         column: 9,
         ignore: false
       },
@@ -1015,8 +1171,8 @@
       annotations: [
 
       ],
-      type: 11,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE5stateE",
+      type: 14,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE5stateIYE_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1041,15 +1197,15 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 52,
         column: 29,
         ignore: true
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 57,
-        column: 42,
+        line: 52,
+        column: 33,
         ignore: false
       },
       identifier: "state.2",
@@ -1067,8 +1223,8 @@
       annotations: [
 
       ],
-      type: 14,
-      mangledName: "_CPI31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE5stateHY3_Y6_",
+      type: 18,
+      mangledName: "_CPI31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE5stateHY3_Y9_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1093,7 +1249,7 @@
               ]
             }
           ],
-          retType: 11
+          retType: 14
         }
       }
     },
@@ -1103,69 +1259,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
+        line: 50,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 55,
-        column: 28,
+        line: 50,
+        column: 29,
         ignore: false
       },
       identifier: "scroller",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 55,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 9,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE7state.2HY3_Y6_E8scrollerE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.scroll_bar",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 69,
-        ignore: false
-      },
-      identifier: "direction",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
+        line: 50,
         column: 9,
         ignore: false
       },
@@ -1177,7 +1286,7 @@
 
       ],
       type: 10,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE7state.2HY3_Y6_E9directionE",
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE7state.2HY3_Y9_E8scrollerIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1197,34 +1306,81 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 58,
+        line: 51,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 58,
-        column: 36,
+        line: 51,
+        column: 47,
         ignore: false
       },
-      identifier: "child",
+      identifier: "direction",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 58,
+        line: 51,
         column: 9,
         ignore: false
       },
       attributes: [
-        5066549580791840,
+        64,
         0
       ],
       annotations: [
 
       ],
       type: 12,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE5childE",
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE7state.2HY3_Y9_E9directionIYA_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.arkui.component.scroll_bar",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 9,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 27,
+        ignore: false
+      },
+      identifier: "child",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 53,
+        column: 9,
+        ignore: false
+      },
+      attributes: [
+        562949953421344,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 16,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHNNat6OptionICN27ohos.arkui.component.scroll8ScrollerEENNatY5_INN27ohos.arkui.component.common18ScrollBarDirectionEENNatY5_INNYB_8BarStateEEF0uEE5childE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1240,212 +1396,74 @@
       }
     },
     {
-      kind: "FuncDecl",
+      kind: "InterfaceDecl",
+      isTopLevel: true,
       fullPkgName: "ohos.arkui.component.scroll_bar",
       genericDecl: {
         pkgId: -1,
         decl: ""
       },
       begin: {
-        file: 1,
+        file: 2,
         pkgId: 0,
-        line: 58,
-        column: 30,
-        ignore: true
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 58,
-        column: 36,
+        line: 28,
+        column: 1,
         ignore: false
       },
-      identifier: "child.3",
-      identifierPos: {
-        file: 1,
+      end: {
+        file: 2,
         pkgId: 0,
-        line: 0,
-        column: 0,
+        line: 28,
+        column: 75,
+        ignore: false
+      },
+      identifier: "ScrollBarAttribute",
+      identifierPos: {
+        file: 2,
+        pkgId: 0,
+        line: 28,
+        column: 18,
         ignore: false
       },
       attributes: [
-        1301540292310075968,
-        2
+        144678412907971632,
+        0
       ],
       annotations: [
-
-      ],
-      type: 15,
-      mangledName: "_CPI31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE5childHY3_Y6_Y9_",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
             {
-              params: [
-                19,
-                20,
-                21
-              ],
-              desugars: [
-                0,
-                0,
-                0
-              ]
+              name: "since",
+              expr: 5
+            },
+            {
+              name: "syscap",
+              expr: 6
             }
-          ],
-          retType: 12
+          ]
         }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.scroll_bar",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 28,
-        ignore: false
-      },
-      identifier: "scroller",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
       ],
-      annotations: [
-
-      ],
-      type: 9,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE7child.3HY3_Y6_Y9_E8scrollerE",
-      exportId: "",
-      mangledBeforeSema: "",
+      type: 20,
+      mangledName: "_CN31ohos.arkui.component.scroll_bar18ScrollBarAttributeE",
+      exportId: "_CN31ohos.arkui.component.scroll_bar18ScrollBarAttributeE",
+      mangledBeforeSema: "31ohos.arkui.component.scroll_bar18ScrollBarAttributeI",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
+        sig: 13212682041003206474,
+        srcUse: 5532835001352326160,
+        bodyHash: 10272158749408885551
       },
-      info_type: "ParamInfo",
+      info_type: "InterfaceInfo",
       info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.scroll_bar",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 69,
-        ignore: false
-      },
-      identifier: "direction",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
+        inheritedTypes: [
+          21
+        ],
+        body: [
 
-      ],
-      type: 10,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE7child.3HY3_Y6_Y9_E9directionE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.arkui.component.scroll_bar",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 57,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 57,
-        column: 42,
-        ignore: false
-      },
-      identifier: "state",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 57,
-        column: 9,
-        ignore: false
-      },
-      attributes: [
-        64,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 11,
-      mangledName: "_CN31ohos.arkui.component.scroll_bar9ScrollBar4initHCN27ohos.arkui.component.scroll8ScrollerENN27ohos.arkui.component.common18ScrollBarDirectionENNY7_8BarStateEF0uEE7child.3HY3_Y6_Y9_E5stateE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
+        ]
       }
     }
   ],
@@ -1455,20 +1473,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 34,
-        column: 5,
+        line: 33,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 34,
-        column: 7,
+        line: 33,
+        column: 16,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1476,39 +1496,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 35,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 35,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 36,
+        line: 34,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 36,
+        line: 34,
         column: 48,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -1520,20 +1519,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 50,
-        column: 9,
+        line: 46,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 50,
-        column: 11,
+        line: 46,
+        column: 20,
         ignore: false
       },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1541,39 +1542,64 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 51,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 51,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 52,
+        line: 47,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 47,
         column: 52,
         ignore: false
       },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 12,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 25,
+        column: 16,
+        ignore: false
+      },
+      type: 8,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 13,
+        ignore: false
+      },
+      end: {
+        file: 2,
+        pkgId: 0,
+        line: 26,
+        column: 48,
+        ignore: false
+      },
+      type: 8,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",

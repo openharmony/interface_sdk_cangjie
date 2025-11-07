@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.arkui.component.focus_control",
-  pkgDepInfo: "{\"package\":\"ohos.arkui.component.focus_control\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"focus_control.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":28}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.focus_control\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"focus_control.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}],\"features\":[]}",
   imports: [
     "std.core"
   ],
@@ -20,14 +20,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
+            line: 20,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
+            line: 20,
             column: 28,
             ignore: false
           },
@@ -95,6 +95,18 @@
       }
     },
     {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
       kind: "Func",
       typeArgs: [
 
@@ -107,7 +119,7 @@
     {
       kind: "Func",
       typeArgs: [
-        7
+        8
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -115,14 +127,14 @@
       }
     },
     {
-      kind: "Struct",
+      kind: "Enum",
       typeArgs: [
-
+        5
       ],
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
-          decl: "_CNat6StringE"
+          decl: "_CNat6OptionIG_E"
         }
       }
     },
@@ -151,14 +163,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 20,
+        line: 22,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 20,
+        line: 22,
         column: 74,
         ignore: false
       },
@@ -166,7 +178,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 20,
+        line: 22,
         column: 14,
         ignore: false
       },
@@ -211,14 +223,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 20,
+        line: 22,
         column: 46,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 20,
+        line: 22,
         column: 67,
         ignore: false
       },
@@ -226,7 +238,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 20,
+        line: 22,
         column: 46,
         ignore: false
       },
@@ -263,14 +275,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 31,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 59,
+        line: 57,
         column: 2,
         ignore: false
       },
@@ -278,7 +290,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 32,
+        line: 31,
         column: 14,
         ignore: false
       },
@@ -292,16 +304,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
-              name: "stagemodelonly",
-              expr: 2
-            },
-            {
               name: "syscap",
-              expr: 3
+              expr: 2
             }
           ]
         }
@@ -315,18 +323,82 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 400290413222935077
+        bodyHash: 10078881573460883067
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          8
+          9
         ],
         body: [
           4,
           5,
-          7
+          6
         ]
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.arkui.component.focus_control",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 14,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 32,
+        column: 5,
+        ignore: false
+      },
+      attributes: [
+        144678140445212704,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 6,
+      mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl6<init>Hv",
+      exportId: "_CN34ohos.arkui.component.focus_control12FocusControl6<init>Hv",
+      mangledBeforeSema: "34ohos.arkui.component.focus_control12FocusControlC6<init>F$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 520285295869893810,
+        srcUse: 0,
+        bodyHash: 4334994256847686443
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 4
+        }
       }
     },
     {
@@ -365,7 +437,7 @@
       annotations: [
 
       ],
-      type: 5,
+      type: 6,
       mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl18getFocusControllerHv",
       exportId: "_CN34ohos.arkui.component.focus_control12FocusControl18getFocusControllerHv",
       mangledBeforeSema: "34ohos.arkui.component.focus_control12FocusControlC18getFocusControllerF$$12FocusControl",
@@ -374,7 +446,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 8035971499611947038,
-        bodyHash: 5857555504451061858
+        bodyHash: 1018640340315640763
       },
       info_type: "FuncInfo",
       info: {
@@ -403,14 +475,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 48,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 58,
+        line: 56,
         column: 6,
         ignore: false
       },
@@ -418,7 +490,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 48,
         column: 24,
         ignore: false
       },
@@ -432,30 +504,26 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 4
-            },
-            {
-              name: "stagemodelonly",
-              expr: 5
+              name: "since",
+              expr: 3
             },
             {
               name: "syscap",
-              expr: 6
+              expr: 4
             }
           ]
         }
       ],
-      type: 6,
-      mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl12requestFocusHRNat6StringE",
-      exportId: "_CN34ohos.arkui.component.focus_control12FocusControl12requestFocusHRNat6StringE",
-      mangledBeforeSema: "34ohos.arkui.component.focus_control12FocusControlC12requestFocusF6String$$b",
+      type: 7,
+      mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl12requestFocusHNNat6OptionIRNat6StringEE",
+      exportId: "_CN34ohos.arkui.component.focus_control12FocusControl12requestFocusHNNat6OptionIRNat6StringEE",
+      mangledBeforeSema: "34ohos.arkui.component.focus_control12FocusControlC12requestFocusFO1_6String$$b",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 8304421828142695480
+        bodyHash: 17665020564661217529
       },
       info_type: "FuncInfo",
       info: {
@@ -463,7 +531,7 @@
           paramLists: [
             {
               params: [
-                6
+                7
               ],
               desugars: [
                 0
@@ -480,22 +548,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 48,
         column: 37,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 50,
-        column: 50,
+        line: 48,
+        column: 51,
         ignore: false
       },
       identifier: "value",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 50,
+        line: 48,
         column: 37,
         ignore: false
       },
@@ -506,8 +574,8 @@
       annotations: [
 
       ],
-      type: 7,
-      mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl12requestFocusHRNat6StringEE5valueE",
+      type: 8,
+      mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl12requestFocusHNNat6OptionIRNat6StringEEE5valueIY6_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -520,70 +588,6 @@
       info_type: "ParamInfo",
       info: {
       }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.arkui.component.focus_control",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 32,
-        column: 14,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 32,
-        column: 26,
-        ignore: false
-      },
-      identifier: "init",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 0,
-        column: 0,
-        ignore: false
-      },
-      attributes: [
-        1297599645052044384,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 5,
-      mangledName: "_CN34ohos.arkui.component.focus_control12FocusControl6<init>Hv",
-      exportId: "_CN34ohos.arkui.component.focus_control12FocusControl6<init>Hv",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-
-              ],
-              desugars: [
-
-              ]
-            }
-          ],
-          retType: 4
-        }
-      }
     }
   ],
   allExprs: [
@@ -593,19 +597,21 @@
         file: 1,
         pkgId: 0,
         line: 28,
-        column: 5,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 28,
-        column: 7,
+        column: 16,
         ignore: false
       },
+      type: 5,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -614,38 +620,17 @@
         file: 1,
         pkgId: 0,
         line: 29,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 29,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 30,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 30,
+        line: 29,
         column: 48,
         ignore: false
       },
+      type: 5,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -657,20 +642,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 46,
-        column: 9,
+        line: 45,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 46,
-        column: 11,
+        line: 45,
+        column: 20,
         ignore: false
       },
+      type: 5,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -678,39 +665,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 47,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 47,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 48,
+        line: 46,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 48,
+        line: 46,
         column: 52,
         ignore: false
       },
+      type: 5,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
