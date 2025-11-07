@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.hi_trace_meter",
-  pkgDepInfo: "{\"package\":\"ohos.hi_trace_meter\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"hi_trace_meter.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":21}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.hi_trace_meter\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"hi_trace_meter.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}],\"features\":[]}",
   imports: [
     "std.core"
   ],
@@ -20,22 +20,22 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
+            line: 20,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 21,
+            line: 20,
+            column: 28,
             ignore: false
           },
           prefixPaths: [
             "ohos",
             "labels"
           ],
-          identifier: "*",
+          identifier: "APILevel",
           asIdentifier: ""
         },
         {
@@ -98,17 +98,6 @@
       }
     },
     {
-      kind: "Func",
-      typeArgs: [
-        7,
-        3
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 4
-      }
-    },
-    {
       kind: "Struct",
       typeArgs: [
 
@@ -118,6 +107,17 @@
         declPtr: {
           decl: "_CNat6StringE"
         }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        6,
+        3
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 4
       }
     },
     {
@@ -155,14 +155,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 75,
         ignore: false
       },
@@ -170,7 +170,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 10,
         ignore: false
       },
@@ -217,14 +217,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 40,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 53,
         ignore: false
       },
@@ -232,7 +232,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 40,
         ignore: false
       },
@@ -264,14 +264,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 55,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 68,
         ignore: false
       },
@@ -279,7 +279,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 55,
         ignore: false
       },
@@ -316,14 +316,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 76,
         ignore: false
       },
@@ -331,7 +331,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 10,
         ignore: false
       },
@@ -378,14 +378,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 41,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 54,
         ignore: false
       },
@@ -393,7 +393,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 41,
         ignore: false
       },
@@ -425,14 +425,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 56,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 69,
         ignore: false
       },
@@ -440,7 +440,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 56,
         ignore: false
       },
@@ -506,16 +506,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
-              name: "stagemodelonly",
-              expr: 2
-            },
-            {
               name: "syscap",
-              expr: 3
+              expr: 2
             }
           ]
         }
@@ -529,7 +525,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16979810359688402845
+        bodyHash: 9270536552758517965
       },
       info_type: "ClassInfo",
       info: {
@@ -582,21 +578,17 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 4
-            },
-            {
-              name: "stagemodelonly",
-              expr: 5
+              name: "since",
+              expr: 3
             },
             {
               name: "syscap",
-              expr: 6
+              expr: 4
             }
           ]
         }
       ],
-      type: 6,
+      type: 7,
       mangledName: "_CN19ohos.hi_trace_meter12HiTraceMeter10startTraceHRNat6StringEi",
       exportId: "_CN19ohos.hi_trace_meter12HiTraceMeter10startTraceHRNat6StringEi",
       mangledBeforeSema: "19ohos.hi_trace_meter12HiTraceMeterC10startTraceF6Stringi$$u",
@@ -605,7 +597,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 4732904762016357260
+        bodyHash: 15557410309378827078
       },
       info_type: "FuncInfo",
       info: {
@@ -658,7 +650,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 6,
       mangledName: "_CN19ohos.hi_trace_meter12HiTraceMeter10startTraceHRNat6StringEiE4nameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -759,21 +751,17 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 7
-            },
-            {
-              name: "stagemodelonly",
-              expr: 8
+              name: "since",
+              expr: 5
             },
             {
               name: "syscap",
-              expr: 9
+              expr: 6
             }
           ]
         }
       ],
-      type: 6,
+      type: 7,
       mangledName: "_CN19ohos.hi_trace_meter12HiTraceMeter11finishTraceHRNat6StringEi",
       exportId: "_CN19ohos.hi_trace_meter12HiTraceMeter11finishTraceHRNat6StringEi",
       mangledBeforeSema: "19ohos.hi_trace_meter12HiTraceMeterC11finishTraceF6Stringi$$u",
@@ -782,7 +770,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 4191084653432867912
+        bodyHash: 16535000393930703750
       },
       info_type: "FuncInfo",
       info: {
@@ -835,7 +823,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 6,
       mangledName: "_CN19ohos.hi_trace_meter12HiTraceMeter11finishTraceHRNat6StringEiE4nameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -968,42 +956,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 35,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 35,
-        column: 7,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
         line: 36,
-        column: 21,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 36,
-        column: 25,
+        column: 16,
         ignore: false
       },
+      type: 6,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1022,6 +990,7 @@
         column: 49,
         ignore: false
       },
+      type: 6,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.HiviewDFX.HiTrace",
@@ -1033,42 +1002,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 51,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 51,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
         line: 52,
-        column: 25,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 52,
-        column: 29,
+        column: 20,
         ignore: false
       },
+      type: 6,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1087,6 +1036,7 @@
         column: 53,
         ignore: false
       },
+      type: 6,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.HiviewDFX.HiTrace",
@@ -1098,42 +1048,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 72,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 72,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
         line: 73,
-        column: 25,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 73,
-        column: 29,
+        column: 20,
         ignore: false
       },
+      type: 6,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1152,6 +1082,7 @@
         column: 53,
         ignore: false
       },
+      type: 6,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.HiviewDFX.HiTrace",

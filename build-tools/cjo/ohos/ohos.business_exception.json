@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.business_exception",
-  pkgDepInfo: "{\"package\":\"ohos.business_exception\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"business_exception.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"business_exception.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":30}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.business_exception\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"business_exception.cj\",\"begin\":{\"line\":21,\"column\":1},\"end\":{\"line\":21,\"column\":28}}]},{\"package\":\"std.collection\",\"isStd\":true,\"imports\":[{\"file\":\"business_exception.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":30}}]}],\"features\":[]}",
   imports: [
     "std.collection",
     "std.core"
@@ -21,14 +21,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
+            line: 20,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
+            line: 20,
             column: 30,
             ignore: false
           },
@@ -43,14 +43,14 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 19,
+            line: 21,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 19,
+            line: 21,
             column: 28,
             ignore: false
           },
@@ -153,6 +153,80 @@
       }
     },
     {
+      kind: "Enum",
+      typeArgs: [
+        8
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Interface",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat3AnyE"
+        }
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 10
+      }
+    },
+    {
+      kind: "Enum",
+      typeArgs: [
+        11
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          pkgId: 1,
+          decl: "_CNat6OptionIG_E"
+        }
+      }
+    },
+    {
+      kind: "Generic",
+      info_type: "GenericTyInfo",
+      info: {
+        declPtr: {
+          pkgId: -2,
+          index: 12
+        },
+        upperBounds: [
+
+        ]
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        1,
+        3,
+        7
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 6
+      }
+    },
+    {
       kind: "Func",
       typeArgs: [
         1,
@@ -160,7 +234,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 6
+        retType: 7
       }
     },
     {
@@ -187,47 +261,9 @@
       }
     },
     {
-      kind: "Class",
-      typeArgs: [
-        11
-      ],
-      info_type: "CompositeTyInfo",
-      info: {
-        declPtr: {
-          pkgId: -2,
-          index: 15
-        }
-      }
-    },
-    {
-      kind: "Generic",
-      info_type: "GenericTyInfo",
-      info: {
-        declPtr: {
-          pkgId: -2,
-          index: 16
-        },
-        upperBounds: [
-
-        ]
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        11,
-        1,
-        3
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 10
-      }
-    },
-    {
       kind: "Type",
       typeArgs: [
-        14
+        17
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -253,12 +289,12 @@
     {
       kind: "Func",
       typeArgs: [
-        16,
-        17
+        19,
+        20
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 18
+        retType: 21
       }
     },
     {
@@ -277,7 +313,7 @@
     {
       kind: "Enum",
       typeArgs: [
-        14
+        17
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -298,14 +334,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 47,
         ignore: false
       },
@@ -313,7 +349,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 17,
         ignore: false
       },
@@ -333,7 +369,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 12820464909098194885,
-        bodyHash: 9563285091316502393
+        bodyHash: 16884951522027018301
       },
       info_type: "VarInfo",
       info: {
@@ -348,14 +384,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 48,
         ignore: false
       },
@@ -363,7 +399,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 17,
         ignore: false
       },
@@ -383,7 +419,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 12820464909098194885,
-        bodyHash: 8891064454617890113
+        bodyHash: 12807110334813786090
       },
       info_type: "VarInfo",
       info: {
@@ -398,14 +434,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 49,
         ignore: false
       },
@@ -413,7 +449,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 17,
         ignore: false
       },
@@ -433,7 +469,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 12820464909098194885,
-        bodyHash: 7679443023017918210
+        bodyHash: 14545295607862393776
       },
       info_type: "VarInfo",
       info: {
@@ -448,14 +484,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 48,
         ignore: false
       },
@@ -463,7 +499,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 17,
         ignore: false
       },
@@ -483,7 +519,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 12820464909098194885,
-        bodyHash: 1451613365064946841
+        bodyHash: 9111719244658519233
       },
       info_type: "VarInfo",
       info: {
@@ -498,14 +534,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 33,
+        line: 35,
         column: 2,
         ignore: false
       },
@@ -513,7 +549,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 25,
+        line: 27,
         column: 15,
         ignore: false
       },
@@ -533,7 +569,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 1273861709373161920,
-        bodyHash: 6580597045558526358
+        bodyHash: 1784000321786201988
       },
       info_type: "VarInfo",
       info: {
@@ -550,14 +586,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 35,
+        line: 37,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 37,
+        line: 39,
         column: 2,
         ignore: false
       },
@@ -565,7 +601,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 35,
+        line: 37,
         column: 16,
         ignore: false
       },
@@ -585,7 +621,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 17553698024090262772
+        bodyHash: 5169636889770612203
       },
       info_type: "FuncInfo",
       info: {
@@ -610,14 +646,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 35,
+        line: 37,
         column: 37,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 35,
+        line: 37,
         column: 48,
         ignore: false
       },
@@ -625,7 +661,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 35,
+        line: 37,
         column: 37,
         ignore: false
       },
@@ -662,14 +698,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 47,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 84,
+        line: 98,
         column: 2,
         ignore: false
       },
@@ -677,12 +713,12 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 46,
-        column: 19,
+        line: 47,
+        column: 14,
         ignore: false
       },
       attributes: [
-        144678412907709488,
+        144678412907185200,
         0
       ],
       annotations: [
@@ -691,24 +727,8 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 5
-            },
-            {
-              name: "atomicservice",
-              expr: 6
-            },
-            {
-              name: "crossplatform",
-              expr: 7
-            },
-            {
-              name: "stagemodelonly",
-              expr: 8
-            },
-            {
-              name: "syscap",
-              expr: 9
             }
           ]
         }
@@ -718,22 +738,24 @@
       exportId: "_CN23ohos.business_exception17BusinessExceptionE",
       mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC",
       hash: {
-        instVar: 14617840779137203355,
-        virt: 17800183217838754165,
+        instVar: 11689893909939873459,
+        virt: 0,
         sig: 7404851541745845588,
-        srcUse: 6029406924600920868,
-        bodyHash: 9677206183712558114
+        srcUse: 0,
+        bodyHash: 15706993430683289266
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          9
+          15
         ],
         body: [
           9,
           10,
+          11,
           13,
-          14
+          20,
+          21
         ]
       }
     },
@@ -743,14 +765,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 27,
         ignore: false
       },
@@ -758,7 +780,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 52,
+        line: 54,
         column: 16,
         ignore: false
       },
@@ -772,16 +794,8 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 10
-            },
-            {
-              name: "stagemodelonly",
-              expr: 11
-            },
-            {
-              name: "syscap",
-              expr: 12
+              name: "since",
+              expr: 6
             }
           ]
         }
@@ -795,459 +809,10 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 1273861709373161920,
-        bodyHash: 11893097501693740523
+        bodyHash: 5551734256808454872
       },
       info_type: "VarInfo",
       info: {
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.business_exception",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 63,
-        column: 6,
-        ignore: false
-      },
-      identifier: "init",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 12,
-        ignore: false
-      },
-      attributes: [
-        144678140445197344,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 13
-            },
-            {
-              name: "atomicservice",
-              expr: 14
-            },
-            {
-              name: "crossplatform",
-              expr: 15
-            },
-            {
-              name: "stagemodelonly",
-              expr: 16
-            },
-            {
-              name: "syscap",
-              expr: 17
-            }
-          ]
-        }
-      ],
-      type: 7,
-      mangledName: "_CN23ohos.business_exception17BusinessException6<init>HiRNat6StringE",
-      exportId: "_CN23ohos.business_exception17BusinessException6<init>HiRNat6StringE",
-      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC6<init>Fi6String$$",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 0,
-        bodyHash: 14321540401432512217
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-                11,
-                12
-              ],
-              desugars: [
-                0,
-                0
-              ]
-            }
-          ],
-          retType: 6
-        }
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.business_exception",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 28,
-        ignore: false
-      },
-      identifier: "code",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 17,
-        ignore: false
-      },
-      attributes: [
-        562949953421344,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 1,
-      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringEE4codeE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncParam",
-      fullPkgName: "ohos.business_exception",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 30,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 41,
-        ignore: false
-      },
-      identifier: "msg",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 30,
-        ignore: false
-      },
-      attributes: [
-        562949953421344,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 3,
-      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringEE3msgE",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ParamInfo",
-      info: {
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.business_exception",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 65,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 67,
-        column: 6,
-        ignore: false
-      },
-      identifier: "getClassName",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 65,
-        column: 29,
-        ignore: false
-      },
-      attributes: [
-        144678138297749536,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 8,
-      mangledName: "_CN23ohos.business_exception17BusinessException12getClassNameHv",
-      exportId: "_CN23ohos.business_exception17BusinessException12getClassNameHv",
-      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC12getClassNameF$$6String",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 2687969717096398320,
-        srcUse: 0,
-        bodyHash: 2887344401182816874
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-
-              ],
-              desugars: [
-
-              ]
-            }
-          ],
-          retType: 3
-        }
-      }
-    },
-    {
-      kind: "FuncDecl",
-      fullPkgName: "ohos.business_exception",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 76,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 83,
-        column: 6,
-        ignore: false
-      },
-      identifier: "toString",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 76,
-        column: 22,
-        ignore: false
-      },
-      attributes: [
-        144678138298237984,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 18
-            },
-            {
-              name: "atomicservice",
-              expr: 19
-            },
-            {
-              name: "crossplatform",
-              expr: 20
-            },
-            {
-              name: "stagemodelonly",
-              expr: 21
-            },
-            {
-              name: "syscap",
-              expr: 22
-            }
-          ]
-        }
-      ],
-      type: 8,
-      mangledName: "_CN23ohos.business_exception17BusinessException8toStringHv",
-      exportId: "_CN23ohos.business_exception17BusinessException8toStringHv",
-      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC8toStringF$$6String",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 6029406924600920868,
-        bodyHash: 14414936788031155504
-      },
-      info_type: "FuncInfo",
-      info: {
-        funcBody: {
-          paramLists: [
-            {
-              params: [
-
-              ],
-              desugars: [
-
-              ]
-            }
-          ],
-          retType: 3
-        }
-      }
-    },
-    {
-      kind: "ClassDecl",
-      isTopLevel: true,
-      fullPkgName: "ohos.business_exception",
-      genericDecl: {
-        pkgId: -1,
-        decl: ""
-      },
-      generic: {
-        typeParameters: [
-          16
-        ],
-        constraints: [
-
-        ]
-      },
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 1,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 93,
-        column: 2,
-        ignore: false
-      },
-      identifier: "BusinessError",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 14,
-        ignore: false
-      },
-      attributes: [
-        144678138029278384,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 10,
-      mangledName: "",
-      exportId: "_CN23ohos.business_exception13BusinessErrorIG_E",
-      mangledBeforeSema: "23ohos.business_exception13BusinessError<1>C",
-      hash: {
-        instVar: 7189943927890429962,
-        virt: 0,
-        sig: 4508850525094917908,
-        srcUse: 0,
-        bodyHash: 0
-      },
-      info_type: "ClassInfo",
-      info: {
-        inheritedTypes: [
-          6
-        ],
-        body: [
-          17,
-          18
-        ]
-      }
-    },
-    {
-      kind: "GenericParamDecl",
-      fullPkgName: "ohos.business_exception",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 28,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 29,
-        ignore: false
-      },
-      identifier: "T",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 28,
-        ignore: false
-      },
-      attributes: [
-        0,
-        0
-      ],
-      annotations: [
-
-      ],
-      type: 11,
-      mangledName: "",
-      exportId: "",
-      mangledBeforeSema: "",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 0,
-        srcUse: 0,
-        bodyHash: 0
       }
     },
     {
@@ -1256,40 +821,40 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 87,
+        line: 56,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 87,
-        column: 23,
+        line: 56,
+        column: 30,
         ignore: false
       },
-      identifier: "data",
+      identifier: "errData",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 87,
-        column: 16,
+        line: 56,
+        column: 17,
         ignore: false
       },
       attributes: [
-        144678138297713696,
+        144678138297714720,
         0
       ],
       annotations: [
 
       ],
-      type: 11,
+      type: 7,
       mangledName: "",
-      exportId: "_CN23ohos.business_exception13BusinessErrorIG_E4dataK_E",
-      mangledBeforeSema: "23ohos.business_exception13BusinessError<1>C4dataV$$1T",
+      exportId: "_CN23ohos.business_exception17BusinessException7errDataK_E",
+      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC7errDataV$$O1_3Any",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 13785781977040174648,
         srcUse: 17327286262165285715,
         bodyHash: 0
       },
@@ -1305,45 +870,62 @@
         pkgId: -1,
         decl: ""
       },
+      generic: {
+        typeParameters: [
+          12
+        ],
+        constraints: [
+
+        ]
+      },
       begin: {
         file: 1,
         pkgId: 0,
-        line: 89,
+        line: 66,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 92,
+        line: 72,
         column: 6,
         ignore: false
       },
-      identifier: "init",
+      identifier: "getData",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 12,
+        line: 66,
+        column: 17,
         ignore: false
       },
       attributes: [
-        144678140445197344,
+        144678138297713824,
         0
       ],
       annotations: [
-
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 7
+            }
+          ]
+        }
       ],
-      type: 12,
+      type: 9,
       mangledName: "",
-      exportId: "_CN23ohos.business_exception13BusinessErrorIG_E6<init>HG_iRNat6StringE",
-      mangledBeforeSema: "23ohos.business_exception13BusinessError<1>C6<init>F1Ti6String$$",
+      exportId: "_CN23ohos.business_exception17BusinessException7getDataIG_Hv",
+      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC7getData<1T>F$$O1_1T",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 15583462374580778610,
         srcUse: 0,
-        bodyHash: 8359319591127825550
+        bodyHash: 11218987079212099002
       },
       info_type: "FuncInfo",
       info: {
@@ -1351,14 +933,10 @@
           paramLists: [
             {
               params: [
-                19,
-                20,
-                21
+
               ],
               desugars: [
-                0,
-                0,
-                0
+
               ]
             }
           ],
@@ -1367,32 +945,32 @@
       }
     },
     {
-      kind: "FuncParam",
+      kind: "GenericParamDecl",
       fullPkgName: "ohos.business_exception",
       begin: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 18,
+        line: 66,
+        column: 25,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 25,
+        line: 66,
+        column: 26,
         ignore: false
       },
-      identifier: "data",
+      identifier: "T",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 18,
+        line: 66,
+        column: 25,
         ignore: false
       },
       attributes: [
-        562949953421344,
+        562949953421312,
         0
       ],
       annotations: [
@@ -1408,9 +986,74 @@
         sig: 0,
         srcUse: 0,
         bodyHash: 0
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.business_exception",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
       },
-      info_type: "ParamInfo",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 78,
+        column: 6,
+        ignore: false
+      },
+      identifier: "init",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 15,
+        ignore: false
+      },
+      attributes: [
+        144678140445200416,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 12,
+      mangledName: "_CN23ohos.business_exception17BusinessException6<init>HiRNat6StringENNat6OptionICNat3AnyEE",
+      exportId: "_CN23ohos.business_exception17BusinessException6<init>HiRNat6StringENNat6OptionICNat3AnyEE",
+      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC6<init>Fi6StringO1_3Any!4data=$$",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 5329902400144584686
+      },
+      info_type: "FuncInfo",
       info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                14,
+                15,
+                16
+              ],
+              desugars: [
+                0,
+                0,
+                17
+              ]
+            }
+          ],
+          retType: 6
+        }
       }
     },
     {
@@ -1419,23 +1062,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 27,
+        line: 74,
+        column: 20,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 38,
+        line: 74,
+        column: 31,
         ignore: false
       },
       identifier: "code",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 27,
+        line: 74,
+        column: 20,
         ignore: false
       },
       attributes: [
@@ -1446,7 +1089,7 @@
 
       ],
       type: 1,
-      mangledName: "",
+      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringENNat6OptionICNat3AnyEEE4codeE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1466,23 +1109,23 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 40,
+        line: 74,
+        column: 33,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 51,
+        line: 74,
+        column: 44,
         ignore: false
       },
       identifier: "msg",
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 40,
+        line: 74,
+        column: 33,
         ignore: false
       },
       attributes: [
@@ -1493,7 +1136,7 @@
 
       ],
       type: 3,
-      mangledName: "",
+      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringENNat6OptionICNat3AnyEEE3msgE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1505,6 +1148,351 @@
       },
       info_type: "ParamInfo",
       info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.business_exception",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 46,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 64,
+        ignore: false
+      },
+      identifier: "data",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 46,
+        ignore: false
+      },
+      attributes: [
+        5066549580791840,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 7,
+      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringENNat6OptionICNat3AnyEEE4dataIY8_E",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+        isNamedParam: true
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.business_exception",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 60,
+        ignore: true
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 64,
+        ignore: false
+      },
+      identifier: "data.2",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 0,
+        column: 0,
+        ignore: false
+      },
+      attributes: [
+        1301540292310075968,
+        2
+      ],
+      annotations: [
+
+      ],
+      type: 13,
+      mangledName: "_CPI23ohos.business_exception17BusinessException4initHiRNat6StringENNat6OptionICNat3AnyEEE4dataHiY3_",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+                18,
+                19
+              ],
+              desugars: [
+                0,
+                0
+              ]
+            }
+          ],
+          retType: 7
+        }
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.business_exception",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 20,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 31,
+        ignore: false
+      },
+      identifier: "code",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 20,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 1,
+      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringENNat6OptionICNat3AnyEEE6data.2HiY3_E4codeE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncParam",
+      fullPkgName: "ohos.business_exception",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 33,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 44,
+        ignore: false
+      },
+      identifier: "msg",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 74,
+        column: 33,
+        ignore: false
+      },
+      attributes: [
+        64,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 3,
+      mangledName: "_CN23ohos.business_exception17BusinessException4initHiRNat6StringENNat6OptionICNat3AnyEEE6data.2HiY3_E3msgE",
+      exportId: "",
+      mangledBeforeSema: "",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 0,
+        srcUse: 0,
+        bodyHash: 0
+      },
+      info_type: "ParamInfo",
+      info: {
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.business_exception",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 82,
+        column: 6,
+        ignore: false
+      },
+      identifier: "getClassName",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 80,
+        column: 29,
+        ignore: false
+      },
+      attributes: [
+        144678138297749536,
+        0
+      ],
+      annotations: [
+
+      ],
+      type: 14,
+      mangledName: "_CN23ohos.business_exception17BusinessException12getClassNameHv",
+      exportId: "_CN23ohos.business_exception17BusinessException12getClassNameHv",
+      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC12getClassNameF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 2687969717096398320,
+        srcUse: 0,
+        bodyHash: 18122869631303892810
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
+      }
+    },
+    {
+      kind: "FuncDecl",
+      fullPkgName: "ohos.business_exception",
+      genericDecl: {
+        pkgId: -1,
+        decl: ""
+      },
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 97,
+        column: 6,
+        ignore: false
+      },
+      identifier: "toString",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 90,
+        column: 17,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
+              expr: 8
+            }
+          ]
+        }
+      ],
+      type: 14,
+      mangledName: "_CN23ohos.business_exception17BusinessException8toStringHv",
+      exportId: "_CN23ohos.business_exception17BusinessException8toStringHv",
+      mangledBeforeSema: "23ohos.business_exception17BusinessExceptionC8toStringF$$6String",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 0,
+        bodyHash: 12832115293364225226
+      },
+      info_type: "FuncInfo",
+      info: {
+        funcBody: {
+          paramLists: [
+            {
+              params: [
+
+              ],
+              desugars: [
+
+              ]
+            }
+          ],
+          retType: 3
+        }
       }
     },
     {
@@ -1522,14 +1510,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 95,
+        line: 103,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 95,
+        line: 103,
         column: 78,
         ignore: false
       },
@@ -1537,7 +1525,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 95,
+        line: 103,
         column: 13,
         ignore: false
       },
@@ -1548,20 +1536,20 @@
       annotations: [
 
       ],
-      type: 13,
+      type: 16,
       mangledName: "",
       exportId: "_CN23ohos.business_exception13AsyncCallbackIG_E",
       mangledBeforeSema: "23ohos.business_exception13AsyncCallback<1>T",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 3027576644905930115,
+        sig: 17293356712035122664,
         srcUse: 0,
         bodyHash: 0
       },
       info_type: "AliasInfo",
       info: {
-        aliasedTy: 15
+        aliasedTy: 18
       }
     },
     {
@@ -1570,14 +1558,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 95,
+        line: 103,
         column: 27,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 95,
+        line: 103,
         column: 28,
         ignore: false
       },
@@ -1585,7 +1573,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 95,
+        line: 103,
         column: 27,
         ignore: false
       },
@@ -1596,7 +1584,7 @@
       annotations: [
 
       ],
-      type: 14,
+      type: 17,
       mangledName: "",
       exportId: "",
       mangledBeforeSema: "",
@@ -1615,14 +1603,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 44,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 21,
+        line: 23,
         column: 47,
         ignore: false
       },
@@ -1637,14 +1625,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 48,
         ignore: false
       },
@@ -1659,14 +1647,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 46,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 23,
+        line: 25,
         column: 49,
         ignore: false
       },
@@ -1681,14 +1669,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 45,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 48,
         ignore: false
       },
@@ -1703,20 +1691,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 40,
-        column: 5,
+        line: 45,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
-        column: 7,
+        line: 45,
+        column: 16,
         ignore: false
       },
+      type: 3,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1724,21 +1714,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 41,
+        line: 52,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 52,
         column: 20,
         ignore: false
       },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 41,
-        column: 24,
-        ignore: false
-      },
+      type: 3,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1746,64 +1737,21 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 64,
+        column: 16,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 64,
         column: 20,
         ignore: false
       },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 42,
-        column: 24,
-        ignore: false
-      },
+      type: 3,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 43,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 43,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 44,
-        column: 13,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 44,
-        column: 48,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        strValue: "22",
         constKind: "String"
       }
     },
@@ -1812,281 +1760,21 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 48,
-        column: 9,
+        line: 88,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 48,
-        column: 11,
+        line: 88,
+        column: 20,
         ignore: false
       },
+      type: 3,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 49,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 49,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 50,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 50,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 54,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 54,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 57,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 57,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 58,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 58,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 70,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 70,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 71,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 71,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 72,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 72,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 73,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 73,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 74,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 74,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        strValue: "22",
         constKind: "String"
       }
     }

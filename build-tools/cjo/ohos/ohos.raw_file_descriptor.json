@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.raw_file_descriptor",
-  pkgDepInfo: "{\"package\":\"ohos.raw_file_descriptor\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.ffi\",\"isStd\":false,\"imports\":[{\"file\":\"raw_file_descriptor.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":18}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"raw_file_descriptor.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":21}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.raw_file_descriptor\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"raw_file_descriptor.cj\",\"begin\":{\"line\":20,\"column\":1},\"end\":{\"line\":20,\"column\":28}}]}],\"features\":[]}",
   imports: [
     "std.core"
   ],
@@ -20,44 +20,22 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
+            line: 20,
             column: 1,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 18,
-            ignore: false
-          },
-          prefixPaths: [
-            "ohos",
-            "ffi"
-          ],
-          identifier: "*",
-          asIdentifier: ""
-        },
-        {
-          begin: {
-            file: 1,
-            pkgId: 0,
-            line: 19,
-            column: 1,
-            ignore: false
-          },
-          end: {
-            file: 1,
-            pkgId: 0,
-            line: 19,
-            column: 21,
+            line: 20,
+            column: 28,
             ignore: false
           },
           prefixPaths: [
             "ohos",
             "labels"
           ],
-          identifier: "*",
+          identifier: "APILevel",
           asIdentifier: ""
         },
         {
@@ -100,6 +78,18 @@
       }
     },
     {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
       kind: "Int32"
     },
     {
@@ -108,7 +98,7 @@
     {
       kind: "Func",
       typeArgs: [
-        5
+        6
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -143,13 +133,13 @@
     {
       kind: "Func",
       typeArgs: [
-        2,
         3,
-        3
+        4,
+        4
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 5
+        retType: 6
       }
     }
   ],
@@ -165,14 +155,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 31,
+        line: 29,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 71,
+        line: 60,
         column: 2,
         ignore: false
       },
@@ -180,7 +170,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 31,
+        line: 29,
         column: 14,
         ignore: false
       },
@@ -194,16 +184,12 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
-              name: "stagemodelonly",
-              expr: 2
-            },
-            {
               name: "syscap",
-              expr: 3
+              expr: 2
             }
           ]
         }
@@ -213,16 +199,16 @@
       exportId: "_CN24ohos.raw_file_descriptor17RawFileDescriptorE",
       mangledBeforeSema: "24ohos.raw_file_descriptor17RawFileDescriptorC",
       hash: {
-        instVar: 14096944571223270783,
+        instVar: 944698164557513342,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 16996955696003618554
+        bodyHash: 3398103193391904605
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          6
+          7
         ],
         body: [
           2,
@@ -238,14 +224,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 37,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 37,
         column: 25,
         ignore: false
       },
@@ -253,7 +239,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 42,
+        line: 37,
         column: 16,
         ignore: false
       },
@@ -267,11 +253,68 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 4
+              name: "since",
+              expr: 3
             },
             {
-              name: "stagemodelonly",
+              name: "syscap",
+              expr: 4
+            }
+          ]
+        }
+      ],
+      type: 3,
+      mangledName: "",
+      exportId: "_CN24ohos.raw_file_descriptor17RawFileDescriptor2fdK_E",
+      mangledBeforeSema: "24ohos.raw_file_descriptor17RawFileDescriptorC2fdV$$i",
+      hash: {
+        instVar: 0,
+        virt: 0,
+        sig: 14151301873218655650,
+        srcUse: 17327286262165285715,
+        bodyHash: 3398103193391904605
+      },
+      info_type: "VarInfo",
+      info: {
+        isVar: true
+      }
+    },
+    {
+      kind: "VarDecl",
+      fullPkgName: "ohos.raw_file_descriptor",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 5,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 29,
+        ignore: false
+      },
+      identifier: "offset",
+      identifierPos: {
+        file: 1,
+        pkgId: 0,
+        line: 45,
+        column: 16,
+        ignore: false
+      },
+      attributes: [
+        144678138297713696,
+        0
+      ],
+      annotations: [
+        {
+          kind: "Custom",
+          identifier: "APILevel",
+          args: [
+            {
+              name: "since",
               expr: 5
             },
             {
@@ -281,71 +324,7 @@
           ]
         }
       ],
-      type: 2,
-      mangledName: "",
-      exportId: "_CN24ohos.raw_file_descriptor17RawFileDescriptor2fdK_E",
-      mangledBeforeSema: "24ohos.raw_file_descriptor17RawFileDescriptorC2fdV$$i",
-      hash: {
-        instVar: 0,
-        virt: 0,
-        sig: 14151301873218655650,
-        srcUse: 1273861709373161920,
-        bodyHash: 16996955696003618554
-      },
-      info_type: "VarInfo",
-      info: {
-      }
-    },
-    {
-      kind: "VarDecl",
-      fullPkgName: "ohos.raw_file_descriptor",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 53,
-        column: 5,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 53,
-        column: 29,
-        ignore: false
-      },
-      identifier: "offset",
-      identifierPos: {
-        file: 1,
-        pkgId: 0,
-        line: 53,
-        column: 16,
-        ignore: false
-      },
-      attributes: [
-        144678138297713696,
-        0
-      ],
-      annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 7
-            },
-            {
-              name: "stagemodelonly",
-              expr: 8
-            },
-            {
-              name: "syscap",
-              expr: 9
-            }
-          ]
-        }
-      ],
-      type: 3,
+      type: 4,
       mangledName: "",
       exportId: "_CN24ohos.raw_file_descriptor17RawFileDescriptor6offsetK_E",
       mangledBeforeSema: "24ohos.raw_file_descriptor17RawFileDescriptorC6offsetV$$l",
@@ -353,11 +332,12 @@
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
-        srcUse: 1273861709373161920,
-        bodyHash: 16996955696003618554
+        srcUse: 17327286262165285715,
+        bodyHash: 3398103193391904605
       },
       info_type: "VarInfo",
       info: {
+        isVar: true
       }
     },
     {
@@ -366,14 +346,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 64,
+        line: 53,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 64,
+        line: 53,
         column: 29,
         ignore: false
       },
@@ -381,7 +361,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 64,
+        line: 53,
         column: 16,
         ignore: false
       },
@@ -395,21 +375,17 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 10
-            },
-            {
-              name: "stagemodelonly",
-              expr: 11
+              name: "since",
+              expr: 7
             },
             {
               name: "syscap",
-              expr: 12
+              expr: 8
             }
           ]
         }
       ],
-      type: 3,
+      type: 4,
       mangledName: "",
       exportId: "_CN24ohos.raw_file_descriptor17RawFileDescriptor6lengthK_E",
       mangledBeforeSema: "24ohos.raw_file_descriptor17RawFileDescriptorC6lengthV$$l",
@@ -417,11 +393,12 @@
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
-        srcUse: 1273861709373161920,
-        bodyHash: 16996955696003618554
+        srcUse: 17327286262165285715,
+        bodyHash: 3398103193391904605
       },
       info_type: "VarInfo",
       info: {
+        isVar: true
       }
     },
     {
@@ -434,14 +411,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 66,
+        line: 55,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 70,
+        line: 59,
         column: 6,
         ignore: false
       },
@@ -449,7 +426,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 66,
+        line: 55,
         column: 15,
         ignore: false
       },
@@ -460,7 +437,7 @@
       annotations: [
 
       ],
-      type: 4,
+      type: 5,
       mangledName: "_CN24ohos.raw_file_descriptor17RawFileDescriptor6<init>HRNY_24RetDataRawFileDescriptorE",
       exportId: "_CN24ohos.raw_file_descriptor17RawFileDescriptor6<init>HRNY_24RetDataRawFileDescriptorE",
       mangledBeforeSema: "24ohos.raw_file_descriptor17RawFileDescriptorC6<init>F24RetDataRawFileDescriptor$$",
@@ -469,7 +446,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 8639343482200928859
+        bodyHash: 10071453302656383662
       },
       info_type: "FuncInfo",
       info: {
@@ -499,14 +476,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 63,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 80,
+        line: 69,
         column: 2,
         ignore: false
       },
@@ -514,7 +491,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 74,
+        line: 63,
         column: 18,
         ignore: false
       },
@@ -525,7 +502,7 @@
       annotations: [
 
       ],
-      type: 5,
+      type: 6,
       mangledName: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptorE",
       exportId: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptorE",
       mangledBeforeSema: "24ohos.raw_file_descriptor24RetDataRawFileDescriptorS",
@@ -534,7 +511,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 10474287441897005386
+        bodyHash: 12230921249717903680
       },
       info_type: "StructInfo",
       info: {
@@ -555,14 +532,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 66,
+        line: 55,
         column: 20,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 66,
+        line: 55,
         column: 49,
         ignore: false
       },
@@ -570,7 +547,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 66,
+        line: 55,
         column: 20,
         ignore: false
       },
@@ -581,7 +558,7 @@
       annotations: [
 
       ],
-      type: 5,
+      type: 6,
       mangledName: "_CN24ohos.raw_file_descriptor17RawFileDescriptor4initHRNY_24RetDataRawFileDescriptorEE3rawE",
       exportId: "",
       mangledBeforeSema: "",
@@ -602,14 +579,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 76,
+        line: 65,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 76,
+        line: 65,
         column: 32,
         ignore: false
       },
@@ -617,7 +594,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 76,
+        line: 65,
         column: 23,
         ignore: false
       },
@@ -628,7 +605,7 @@
       annotations: [
 
       ],
-      type: 2,
+      type: 3,
       mangledName: "",
       exportId: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor2fdK_E",
       mangledBeforeSema: "24ohos.raw_file_descriptor24RetDataRawFileDescriptorS2fd$$i",
@@ -650,14 +627,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 66,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 66,
         column: 36,
         ignore: false
       },
@@ -665,7 +642,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 66,
         column: 23,
         ignore: false
       },
@@ -676,7 +653,7 @@
       annotations: [
 
       ],
-      type: 3,
+      type: 4,
       mangledName: "",
       exportId: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor6offsetK_E",
       mangledBeforeSema: "24ohos.raw_file_descriptor24RetDataRawFileDescriptorS6offset$$l",
@@ -698,14 +675,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 78,
+        line: 67,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 78,
+        line: 67,
         column: 36,
         ignore: false
       },
@@ -713,7 +690,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 78,
+        line: 67,
         column: 23,
         ignore: false
       },
@@ -724,7 +701,7 @@
       annotations: [
 
       ],
-      type: 3,
+      type: 4,
       mangledName: "",
       exportId: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor6lengthK_E",
       mangledBeforeSema: "24ohos.raw_file_descriptor24RetDataRawFileDescriptorS6length$$l",
@@ -750,14 +727,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 75,
+        line: 64,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 79,
+        line: 68,
         column: 9,
         ignore: false
       },
@@ -765,7 +742,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 75,
+        line: 64,
         column: 15,
         ignore: false
       },
@@ -776,7 +753,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 8,
       mangledName: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor6<init>Hill",
       exportId: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor6<init>Hill",
       mangledBeforeSema: "24ohos.raw_file_descriptor24RetDataRawFileDescriptorS24RetDataRawFileDescriptorYi!RL2fdl!RL6offsetl!RL6length",
@@ -804,7 +781,7 @@
               ]
             }
           ],
-          retType: 5
+          retType: 6
         }
       }
     },
@@ -814,14 +791,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 76,
+        line: 65,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 76,
+        line: 65,
         column: 32,
         ignore: false
       },
@@ -829,7 +806,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 76,
+        line: 65,
         column: 23,
         ignore: false
       },
@@ -840,7 +817,7 @@
       annotations: [
 
       ],
-      type: 2,
+      type: 3,
       mangledName: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor4initHillE2fdE",
       exportId: "",
       mangledBeforeSema: "",
@@ -862,14 +839,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 66,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 66,
         column: 36,
         ignore: false
       },
@@ -877,7 +854,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 66,
         column: 23,
         ignore: false
       },
@@ -888,7 +865,7 @@
       annotations: [
 
       ],
-      type: 3,
+      type: 4,
       mangledName: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor4initHillE6offsetE",
       exportId: "",
       mangledBeforeSema: "",
@@ -910,14 +887,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 78,
+        line: 67,
         column: 9,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 78,
+        line: 67,
         column: 36,
         ignore: false
       },
@@ -925,7 +902,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 78,
+        line: 67,
         column: 23,
         ignore: false
       },
@@ -936,7 +913,7 @@
       annotations: [
 
       ],
-      type: 3,
+      type: 4,
       mangledName: "_CN24ohos.raw_file_descriptor24RetDataRawFileDescriptor4initHillE6lengthE",
       exportId: "",
       mangledBeforeSema: "",
@@ -959,20 +936,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 27,
-        column: 5,
+        line: 26,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 27,
-        column: 7,
+        line: 26,
+        column: 16,
         ignore: false
       },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -980,39 +959,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 28,
-        column: 21,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 28,
-        column: 25,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 29,
+        line: 27,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 29,
+        line: 27,
         column: 54,
         ignore: false
       },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.Global.ResourceManager",
@@ -1024,20 +982,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
-        column: 9,
+        line: 34,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
-        column: 11,
+        line: 34,
+        column: 20,
         ignore: false
       },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1045,39 +1005,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 39,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 39,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 40,
+        line: 35,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 40,
+        line: 35,
         column: 58,
         ignore: false
       },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.Global.ResourceManager",
@@ -1089,20 +1028,45 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 49,
-        column: 9,
+        line: 42,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 49,
-        column: 11,
+        line: 42,
+        column: 20,
         ignore: false
       },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
+      }
+    },
+    {
+      kind: "LitConstExpr",
+      begin: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 17,
+        ignore: false
+      },
+      end: {
+        file: 1,
+        pkgId: 0,
+        line: 43,
+        column: 58,
+        ignore: false
+      },
+      type: 2,
+      info_type: "LitConstInfo",
+      info: {
+        strValue: "SystemCapability.Global.ResourceManager",
+        constKind: "String"
       }
     },
     {
@@ -1111,20 +1075,21 @@
         file: 1,
         pkgId: 0,
         line: 50,
-        column: 25,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 50,
-        column: 29,
+        column: 20,
         ignore: false
       },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
-        strValue: "true",
-        constKind: "Bool"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1143,71 +1108,7 @@
         column: 58,
         ignore: false
       },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.Global.ResourceManager",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 60,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 61,
-        column: 25,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 61,
-        column: 29,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 62,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 62,
-        column: 58,
-        ignore: false
-      },
+      type: 2,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.Global.ResourceManager",

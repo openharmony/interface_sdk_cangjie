@@ -1,12 +1,12 @@
 {
-  version: "1.0.0",
+  version: "1.0.5",
   cjoVersion: {
     major_num: 0,
     minor_num: 1,
     patch_num: 0
   },
   fullPkgName: "ohos.arkui.component.ifcomponent",
-  pkgDepInfo: "{\"package\":\"ohos.arkui.component.ifcomponent\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"if.cj\",\"begin\":{\"line\":18,\"column\":1},\"end\":{\"line\":18,\"column\":37}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"if.cj\",\"begin\":{\"line\":19,\"column\":1},\"end\":{\"line\":19,\"column\":28}}]}]}",
+  pkgDepInfo: "{\"package\":\"ohos.arkui.component.ifcomponent\",\"isMacro\":false,\"accessLevel\":\"public\",\"dependencies\":[{\"package\":\"ohos.arkui.component.common\",\"isStd\":false,\"imports\":[{\"file\":\"if.cj\",\"begin\":{\"line\":20,\"column\":37},\"end\":{\"line\":20,\"column\":47}}]},{\"package\":\"ohos.labels\",\"isStd\":false,\"imports\":[{\"file\":\"if.cj\",\"begin\":{\"line\":21,\"column\":21},\"end\":{\"line\":21,\"column\":29}},{\"file\":\"if.cj\",\"begin\":{\"line\":21,\"column\":31},\"end\":{\"line\":21,\"column\":35}}]}],\"features\":[]}",
   imports: [
     "std.core",
     "ohos.arkui.component.common"
@@ -21,15 +21,15 @@
           begin: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 1,
+            line: 20,
+            column: 37,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 18,
-            column: 37,
+            line: 20,
+            column: 47,
             ignore: false
           },
           prefixPaths: [
@@ -38,22 +38,22 @@
             "component",
             "common"
           ],
-          identifier: "*",
+          identifier: "UINodeBase",
           asIdentifier: ""
         },
         {
           begin: {
             file: 1,
             pkgId: 0,
-            line: 19,
-            column: 1,
+            line: 21,
+            column: 21,
             ignore: false
           },
           end: {
             file: 1,
             pkgId: 0,
-            line: 19,
-            column: 28,
+            line: 21,
+            column: 29,
             ignore: false
           },
           prefixPaths: [
@@ -61,6 +61,28 @@
             "labels"
           ],
           identifier: "APILevel",
+          asIdentifier: ""
+        },
+        {
+          begin: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 31,
+            ignore: false
+          },
+          end: {
+            file: 1,
+            pkgId: 0,
+            line: 21,
+            column: 35,
+            ignore: false
+          },
+          prefixPaths: [
+            "ohos",
+            "labels"
+          ],
+          identifier: "Hide",
           asIdentifier: ""
         },
         {
@@ -141,6 +163,18 @@
       }
     },
     {
+      kind: "Struct",
+      typeArgs: [
+
+      ],
+      info_type: "CompositeTyInfo",
+      info: {
+        declPtr: {
+          decl: "_CNat6StringE"
+        }
+      }
+    },
+    {
       kind: "Func",
       typeArgs: [
 
@@ -153,7 +187,7 @@
     {
       kind: "Func",
       typeArgs: [
-        7
+        8
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -188,18 +222,6 @@
       info_type: "CompositeTyInfo",
       info: {
         declPtr: {
-          decl: "_CNat6ObjectE"
-        }
-      }
-    },
-    {
-      kind: "Interface",
-      typeArgs: [
-
-      ],
-      info_type: "CompositeTyInfo",
-      info: {
-        declPtr: {
           pkgId: 1,
           decl: "_CN27ohos.arkui.component.common10UINodeBaseE"
         }
@@ -218,14 +240,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 49,
         ignore: false
       },
@@ -233,7 +255,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 22,
+        line: 24,
         column: 10,
         ignore: false
       },
@@ -283,14 +305,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 46,
         ignore: false
       },
@@ -298,7 +320,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 24,
+        line: 26,
         column: 10,
         ignore: false
       },
@@ -348,14 +370,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 28,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 28,
         column: 66,
         ignore: false
       },
@@ -363,7 +385,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 28,
         column: 10,
         ignore: false
       },
@@ -408,14 +430,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 28,
         column: 47,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 28,
         column: 59,
         ignore: false
       },
@@ -423,7 +445,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 26,
+        line: 28,
         column: 47,
         ignore: false
       },
@@ -460,14 +482,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 55,
         ignore: false
       },
@@ -475,7 +497,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 28,
+        line: 30,
         column: 10,
         ignore: false
       },
@@ -525,14 +547,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 37,
+        line: 42,
         column: 1,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 108,
+        line: 116,
         column: 2,
         ignore: false
       },
@@ -540,7 +562,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 37,
+        line: 42,
         column: 14,
         ignore: false
       },
@@ -554,21 +576,20 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
+              name: "since",
               expr: 1
             },
             {
-              name: "atomicservice",
-              expr: 2
-            },
-            {
-              name: "crossplatform",
-              expr: 3
-            },
-            {
               name: "syscap",
-              expr: 4
+              expr: 2
             }
+          ]
+        },
+        {
+          kind: "Custom",
+          identifier: "Hide",
+          args: [
+
           ]
         }
       ],
@@ -581,12 +602,11 @@
         virt: 0,
         sig: 13565129441025548363,
         srcUse: 0,
-        bodyHash: 3335800740298031353
+        bodyHash: 5594277493232700537
       },
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          11,
           12
         ],
         body: [
@@ -607,14 +627,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 43,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 43,
         column: 33,
         ignore: false
       },
@@ -622,7 +642,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 38,
+        line: 43,
         column: 9,
         ignore: false
       },
@@ -633,7 +653,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 8,
       mangledName: "",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If5childK_E",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC5childV$$Fu",
@@ -642,7 +662,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 17327286262165285715,
-        bodyHash: 15192822120308425051
+        bodyHash: 7222248317658692935
       },
       info_type: "VarInfo",
       info: {
@@ -659,14 +679,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 56,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 51,
+        line: 61,
         column: 6,
         ignore: false
       },
@@ -674,7 +694,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 56,
         column: 12,
         ignore: false
       },
@@ -688,25 +708,24 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 5
-            },
-            {
-              name: "atomicservice",
-              expr: 6
-            },
-            {
-              name: "crossplatform",
-              expr: 7
+              name: "since",
+              expr: 3
             },
             {
               name: "syscap",
-              expr: 8
+              expr: 4
             }
+          ]
+        },
+        {
+          kind: "Custom",
+          identifier: "Hide",
+          args: [
+
           ]
         }
       ],
-      type: 8,
+      type: 9,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If6<init>HF0uE",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If6<init>HF0uE",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC6<init>FFu$$",
@@ -715,7 +734,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 11624256207637062655
+        bodyHash: 14516064857369065150
       },
       info_type: "FuncInfo",
       info: {
@@ -740,14 +759,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 56,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 56,
         column: 41,
         ignore: false
       },
@@ -755,7 +774,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 46,
+        line: 56,
         column: 17,
         ignore: false
       },
@@ -766,7 +785,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 8,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If4initHF0uEE12subcomponentE",
       exportId: "",
       mangledBeforeSema: "",
@@ -791,14 +810,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 59,
+        line: 75,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 63,
+        line: 79,
         column: 6,
         ignore: false
       },
@@ -806,7 +825,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 59,
+        line: 75,
         column: 24,
         ignore: false
       },
@@ -820,25 +839,24 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 9
-            },
-            {
-              name: "atomicservice",
-              expr: 10
-            },
-            {
-              name: "crossplatform",
-              expr: 11
+              name: "since",
+              expr: 5
             },
             {
               name: "syscap",
-              expr: 12
+              expr: 6
             }
+          ]
+        },
+        {
+          kind: "Custom",
+          identifier: "Hide",
+          args: [
+
           ]
         }
       ],
-      type: 9,
+      type: 10,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If8branchIdHi",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If8branchIdHi",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC8branchIdFi$$u",
@@ -847,7 +865,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 2597934765166850262
+        bodyHash: 8705593410862765087
       },
       info_type: "FuncInfo",
       info: {
@@ -872,14 +890,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 59,
+        line: 75,
         column: 33,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 59,
+        line: 75,
         column: 45,
         ignore: false
       },
@@ -887,7 +905,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 59,
+        line: 75,
         column: 33,
         ignore: false
       },
@@ -923,14 +941,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 71,
+        line: 91,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 75,
+        line: 95,
         column: 6,
         ignore: false
       },
@@ -938,7 +956,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 71,
+        line: 91,
         column: 24,
         ignore: false
       },
@@ -952,25 +970,24 @@
           identifier: "APILevel",
           args: [
             {
-              name: "",
-              expr: 13
-            },
-            {
-              name: "atomicservice",
-              expr: 14
-            },
-            {
-              name: "crossplatform",
-              expr: 15
+              name: "since",
+              expr: 7
             },
             {
               name: "syscap",
-              expr: 16
+              expr: 8
             }
+          ]
+        },
+        {
+          kind: "Custom",
+          identifier: "Hide",
+          args: [
+
           ]
         }
       ],
-      type: 10,
+      type: 11,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If11getBranchIdHv",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If11getBranchIdHv",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC11getBranchIdF$$i",
@@ -979,7 +996,7 @@
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 8035971499611947038,
-        bodyHash: 2896634545373784668
+        bodyHash: 9738382399514773231
       },
       info_type: "FuncInfo",
       info: {
@@ -1008,14 +1025,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 97,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 81,
+        line: 101,
         column: 6,
         ignore: false
       },
@@ -1023,7 +1040,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 77,
+        line: 97,
         column: 10,
         ignore: false
       },
@@ -1034,7 +1051,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 8,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If3popHv",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If3popHv",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC3popF$$u",
@@ -1043,7 +1060,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 5420451349067740389
+        bodyHash: 16593406472990137324
       },
       info_type: "FuncInfo",
       info: {
@@ -1072,14 +1089,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 89,
+        line: 103,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 92,
+        line: 106,
         column: 6,
         ignore: false
       },
@@ -1087,48 +1104,27 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 89,
-        column: 17,
+        line: 103,
+        column: 20,
         ignore: false
       },
       attributes: [
-        144678138297713696,
-        16
+        144678138297716768,
+        0
       ],
       annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 17
-            },
-            {
-              name: "atomicservice",
-              expr: 18
-            },
-            {
-              name: "crossplatform",
-              expr: 19
-            },
-            {
-              name: "syscap",
-              expr: 20
-            }
-          ]
-        }
+
       ],
-      type: 7,
+      type: 8,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If7initialHv",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If7initialHv",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC7initialF$$u",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 7887614106359316629
+        bodyHash: 15103333660334130285
       },
       info_type: "FuncInfo",
       info: {
@@ -1157,14 +1153,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 100,
+        line: 108,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 103,
+        line: 111,
         column: 6,
         ignore: false
       },
@@ -1172,48 +1168,27 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 100,
-        column: 17,
+        line: 108,
+        column: 20,
         ignore: false
       },
       attributes: [
-        144678138297713696,
-        16
+        144678138297716768,
+        0
       ],
       annotations: [
-        {
-          kind: "Custom",
-          identifier: "APILevel",
-          args: [
-            {
-              name: "",
-              expr: 21
-            },
-            {
-              name: "atomicservice",
-              expr: 22
-            },
-            {
-              name: "crossplatform",
-              expr: 23
-            },
-            {
-              name: "syscap",
-              expr: 24
-            }
-          ]
-        }
+
       ],
-      type: 7,
+      type: 8,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If6updateHv",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If6updateHv",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC6updateF$$u",
       hash: {
         instVar: 0,
         virt: 0,
-        sig: 14151301873218655650,
+        sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 2899404531354276008
+        bodyHash: 15989718831753744998
       },
       info_type: "FuncInfo",
       info: {
@@ -1242,14 +1217,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 105,
+        line: 113,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 107,
+        line: 115,
         column: 6,
         ignore: false
       },
@@ -1257,7 +1232,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 105,
+        line: 113,
         column: 10,
         ignore: false
       },
@@ -1268,7 +1243,7 @@
       annotations: [
 
       ],
-      type: 7,
+      type: 8,
       mangledName: "_CN32ohos.arkui.component.ifcomponent2If8genChildHv",
       exportId: "_CN32ohos.arkui.component.ifcomponent2If8genChildHv",
       mangledBeforeSema: "32ohos.arkui.component.ifcomponent2IfC8genChildF$$u",
@@ -1277,7 +1252,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 0,
-        bodyHash: 8378556222719630695
+        bodyHash: 5967979894524804035
       },
       info_type: "FuncInfo",
       info: {
@@ -1303,20 +1278,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 32,
-        column: 5,
+        line: 38,
+        column: 12,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 32,
-        column: 7,
+        line: 38,
+        column: 16,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1324,61 +1301,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 33,
-        column: 20,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 33,
-        column: 24,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 34,
-        column: 20,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 34,
-        column: 24,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 35,
+        line: 39,
         column: 13,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 35,
+        line: 39,
         column: 48,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -1390,20 +1324,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 41,
-        column: 9,
+        line: 52,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 41,
-        column: 11,
+        line: 52,
+        column: 20,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1411,61 +1347,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 42,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 42,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 43,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 43,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 44,
+        line: 53,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 44,
+        line: 53,
         column: 52,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
@@ -1477,20 +1370,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 54,
-        column: 9,
+        line: 71,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 54,
-        column: 11,
+        line: 71,
+        column: 20,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
-        strValue: "21"
+        strValue: "22",
+        constKind: "String"
       }
     },
     {
@@ -1498,217 +1393,22 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 55,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 55,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 56,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 57,
+        line: 72,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 57,
+        line: 72,
         column: 52,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
         constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 66,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 66,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 67,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 67,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 68,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 68,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 69,
-        column: 17,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 69,
-        column: 52,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
-        constKind: "String"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 84,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 84,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 85,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 85,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 86,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
       }
     },
     {
@@ -1717,19 +1417,20 @@
         file: 1,
         pkgId: 0,
         line: 87,
-        column: 17,
+        column: 16,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
         line: 87,
-        column: 52,
+        column: 20,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
-        strValue: "SystemCapability.ArkUI.ArkUI.Full",
+        strValue: "22",
         constKind: "String"
       }
     },
@@ -1738,82 +1439,18 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 95,
-        column: 9,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 95,
-        column: 11,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "21"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 96,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 97,
-        column: 24,
-        ignore: false
-      },
-      end: {
-        file: 1,
-        pkgId: 0,
-        line: 97,
-        column: 28,
-        ignore: false
-      },
-      info_type: "LitConstInfo",
-      info: {
-        strValue: "true",
-        constKind: "Bool"
-      }
-    },
-    {
-      kind: "LitConstExpr",
-      begin: {
-        file: 1,
-        pkgId: 0,
-        line: 98,
+        line: 88,
         column: 17,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 98,
+        line: 88,
         column: 52,
         ignore: false
       },
+      type: 7,
       info_type: "LitConstInfo",
       info: {
         strValue: "SystemCapability.ArkUI.ArkUI.Full",
