@@ -120,19 +120,6 @@ public enum EventType {
     ]
     Behavior
     | ...
-
-    /**
-     * get the corresponding mapping value.
-     *
-     * @returns { UInt32 } return the corresponding mapping value.
-     * @throws { BusinessException } 11105001 - Parameter error.
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.HiviewDFX.HiAppEvent",
-        throwexception: true
-    ]
-    public func getValue(): UInt32
 }
 
 /**
