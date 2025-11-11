@@ -16,15 +16,17 @@
 // The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
 
 package ohos.callback_invoke
-import ohos.business_exception.*
+import ohos.business_exception.BusinessException
 import ohos.labels.APILevel
 
-
+/**
+ * Callback type.
+ */
 public type Callback<T> = (arg: T) -> Unit
 
 /**
-* The callback wrapper base class.
-*/
+ * The callback wrapper base class.
+ */
 @!APILevel[
     since: "22"
 ]
@@ -33,17 +35,17 @@ public abstract class CallbackObject {
 
 
 /**
-* The wrapper of callback without argument and returns.
-*/
+ * The wrapper of callback without argument and returns.
+ */
 @!APILevel[
     since: "22"
 ]
 public abstract class Callback0Argument <: CallbackObject {
     /**
-    * invoker mainly for C
-    *
-    * @param { ?BusinessException } err - indicates the callback params information.
-    */
+     * invoker mainly for C.
+     *
+     * @param { ?BusinessException } err - indicates the callback params information.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -52,18 +54,18 @@ public abstract class Callback0Argument <: CallbackObject {
 
 
 /**
-* The wrapper of callback with one argument and no returns.
-*/
+ * The wrapper of callback with one argument and no returns.
+ */
 @!APILevel[
     since: "22"
 ]
 public abstract class Callback1Argument<A> <: CallbackObject {
     /**
-    * invoker mainly for C
-    *
-    * @param { ?BusinessException } err - indicates the BusinessException error information.
-    * @param { A } arg - indicates the callback params information A.
-    */
+     * invoker mainly for C.
+     *
+     * @param { ?BusinessException } err - indicates the BusinessException error information.
+     * @param { A } arg - indicates the callback params information A.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -72,19 +74,19 @@ public abstract class Callback1Argument<A> <: CallbackObject {
 
 
 /**
-* The wrapper of callback with 2 arguments and no returns.
-*/
+ * The wrapper of callback with 2 arguments and no returns.
+ */
 @!APILevel[
     since: "22"
 ]
 public abstract class Callback2Argument<A, B> <: CallbackObject {
     /**
-    * invoker mainly for C
-    *
-    * @param { ?BusinessException } err - indicates the BusinessException error information.
-    * @param { A } arg1 - indicates the callback params information A.
-    * @param { B } arg2 - indicates the callback params information B.
-    */
+     * invoker mainly for C.
+     *
+     * @param { ?BusinessException } err - indicates the BusinessException error information.
+     * @param { A } arg1 - indicates the callback params information A.
+     * @param { B } arg2 - indicates the callback params information B.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -93,21 +95,21 @@ public abstract class Callback2Argument<A, B> <: CallbackObject {
 
 
 /**
-* The wrapper of callback with 3 arguments.
-*/
+ * The wrapper of callback with 3 arguments.
+ */
 @!APILevel[
     since: "22"
 ]
 public abstract class Callback3ArgumentWithReturn<A, B, C, D> <: CallbackObject {
     /**
-    * invoker mainly for C
-    *
-    * @param { ?BusinessException } err - indicates the BusinessException error information.
-    * @param { A } arg1 - indicates the callback params information A.
-    * @param { B } arg2 - indicates the callback params information B.
-    * @param { C } arg3 - indicates the callback params information C.
-    * @returns { D } the representation of the callback result.
-    */
+     * invoker mainly for C.
+     *
+     * @param { ?BusinessException } err - indicates the BusinessException error information.
+     * @param { A } arg1 - indicates the callback params information A.
+     * @param { B } arg2 - indicates the callback params information B.
+     * @param { C } arg3 - indicates the callback params information C.
+     * @returns { D } the representation of the callback result.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -116,19 +118,19 @@ public abstract class Callback3ArgumentWithReturn<A, B, C, D> <: CallbackObject 
 
 
 /**
-* The wrapper of callback with 2 arguments and returns.
-*/
+ * The wrapper of callback with 2 arguments and returns.
+ */
 @!APILevel[
     since: "22"
 ]
 public abstract class Callback1ArgumentWithReturn<A, B> <: CallbackObject {
     /**
-    * invoker mainly for C
-    *
-    * @param { ?BusinessException } err - indicates the BusinessException error information.
-    * @param { A } arg1 - indicates the callback params information A.
-    * @returns { B } the representation of the callback result.
-    */
+     * invoker mainly for C.
+     *
+     * @param { ?BusinessException } err - indicates the BusinessException error information.
+     * @param { A } arg1 - indicates the callback params information A.
+     * @returns { B } the representation of the callback result.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -137,18 +139,18 @@ public abstract class Callback1ArgumentWithReturn<A, B> <: CallbackObject {
 
 
 /**
-* The wrapper of callback without argument and returns.
-*/
+ * The wrapper of callback without argument and returns.
+ */
 @!APILevel[
     since: "22"
 ]
 public abstract class CallbackWithReturn<A> <: CallbackObject {
     /**
-    * invoker mainly for C
-    *
-    * @param { ?BusinessException } err - indicates the BusinessException error information.
-    * @returns { A } the representation of the callback result.
-    */
+     * invoker mainly for C.
+     *
+     * @param { ?BusinessException } err - indicates the BusinessException error information.
+     * @returns { A } the representation of the callback result.
+     */
     @!APILevel[
         since: "22"
     ]
