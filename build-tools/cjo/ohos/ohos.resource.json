@@ -543,9 +543,12 @@
       }
     },
     {
+      kind: "UInt32"
+    },
+    {
       kind: "Enum",
       typeArgs: [
-        5
+        6
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -557,7 +560,7 @@
     {
       kind: "Struct",
       typeArgs: [
-        6
+        7
       ],
       info_type: "CompositeTyInfo",
       info: {
@@ -595,9 +598,9 @@
       typeArgs: [
         2,
         2,
-        1,
         4,
-        7
+        5,
+        8
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -609,30 +612,30 @@
       typeArgs: [
         2,
         2,
-        1
-      ],
-      info_type: "FuncTyInfo",
-      info: {
-        retType: 4
-      }
-    },
-    {
-      kind: "Func",
-      typeArgs: [
-        2,
-        2,
-        1,
         4
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 7
+        retType: 5
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        12
+        2,
+        2,
+        4,
+        5
+      ],
+      info_type: "FuncTyInfo",
+      info: {
+        retType: 8
+      }
+    },
+    {
+      kind: "Func",
+      typeArgs: [
+        13
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -707,16 +710,13 @@
       kind: "CString"
     },
     {
-      kind: "UInt32"
-    },
-    {
       kind: "Func",
       typeArgs: [
         3
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 12
+        retType: 13
       }
     },
     {
@@ -774,11 +774,11 @@
     {
       kind: "Func",
       typeArgs: [
-        17,
-        17,
+        18,
+        18,
         1,
         1,
-        17
+        18
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -816,7 +816,7 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 18,
+        retType: 4,
         isC: true
       }
     },
@@ -924,13 +924,13 @@
       ],
       info_type: "FuncTyInfo",
       info: {
-        retType: 14
+        retType: 15
       }
     },
     {
       kind: "Func",
       typeArgs: [
-        4
+        5
       ],
       info_type: "FuncTyInfo",
       info: {
@@ -943,9 +943,9 @@
         2,
         2,
         2,
-        1,
+        4,
         2,
-        5,
+        6,
         1
       ],
       info_type: "FuncTyInfo",
@@ -962,14 +962,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 180,
+        line: 87,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 180,
+        line: 87,
         column: 34,
         ignore: false
       },
@@ -977,7 +977,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 180,
+        line: 87,
         column: 7,
         ignore: false
       },
@@ -997,7 +997,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 12820464909098194885,
-        bodyHash: 12928798702185439809
+        bodyHash: 6804256523493196816
       },
       info_type: "VarInfo",
       info: {
@@ -1012,14 +1012,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 181,
+        line: 88,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 181,
+        line: 88,
         column: 23,
         ignore: false
       },
@@ -1027,7 +1027,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 181,
+        line: 88,
         column: 7,
         ignore: false
       },
@@ -1047,7 +1047,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 12820464909098194885,
-        bodyHash: 4120362852784087112
+        bodyHash: 11728042842489925124
       },
       info_type: "VarInfo",
       info: {
@@ -1062,14 +1062,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 182,
+        line: 89,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 182,
+        line: 89,
         column: 59,
         ignore: false
       },
@@ -1077,7 +1077,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 182,
+        line: 89,
         column: 7,
         ignore: false
       },
@@ -1097,7 +1097,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 12820464909098194885,
-        bodyHash: 5559818980938820419
+        bodyHash: 17774469597129217630
       },
       info_type: "VarInfo",
       info: {
@@ -1112,14 +1112,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 183,
+        line: 90,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 183,
+        line: 90,
         column: 59,
         ignore: false
       },
@@ -1127,7 +1127,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 183,
+        line: 90,
         column: 7,
         ignore: false
       },
@@ -1147,7 +1147,7 @@
         virt: 0,
         sig: 520285295869893810,
         srcUse: 12820464909098194885,
-        bodyHash: 3831776464962047760
+        bodyHash: 7629212746259422393
       },
       info_type: "VarInfo",
       info: {
@@ -1210,7 +1210,7 @@
       exportId: "_CN13ohos.resource11AppResourceE",
       mangledBeforeSema: "13ohos.resource11AppResourceC",
       hash: {
-        instVar: 18343284130018451941,
+        instVar: 2842778159040819773,
         virt: 0,
         sig: 17369388289288067469,
         srcUse: 0,
@@ -1219,10 +1219,10 @@
       info_type: "ClassInfo",
       info: {
         inheritedTypes: [
-          13,
           14,
           15,
-          16
+          16,
+          17
         ],
         body: [
           6,
@@ -1371,7 +1371,7 @@
         file: 1,
         pkgId: 0,
         line: 55,
-        column: 25,
+        column: 26,
         ignore: false
       },
       identifier: "id",
@@ -1402,10 +1402,10 @@
           ]
         }
       ],
-      type: 1,
+      type: 4,
       mangledName: "",
       exportId: "_CN13ohos.resource11AppResource2idK_E",
-      mangledBeforeSema: "13ohos.resource11AppResourceC2idV$$i",
+      mangledBeforeSema: "13ohos.resource11AppResourceC2idV$$j",
       hash: {
         instVar: 0,
         virt: 0,
@@ -1463,7 +1463,7 @@
           ]
         }
       ],
-      type: 4,
+      type: 5,
       mangledName: "",
       exportId: "_CN13ohos.resource11AppResource6paramsK_E",
       mangledBeforeSema: "13ohos.resource11AppResourceC6paramsV$$O1_5Array<3Any>",
@@ -1524,7 +1524,7 @@
           ]
         }
       ],
-      type: 7,
+      type: 8,
       mangledName: "",
       exportId: "_CN13ohos.resource11AppResource7resTypeK_E",
       mangledBeforeSema: "13ohos.resource11AppResourceC7resTypeV$$O1_i",
@@ -1589,10 +1589,10 @@
           ]
         }
       ],
-      type: 8,
-      mangledName: "_CN13ohos.resource11AppResource6<init>HRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiE",
-      exportId: "_CN13ohos.resource11AppResource6<init>HRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiE",
-      mangledBeforeSema: "13ohos.resource11AppResourceC6<init>F6String6StringiO1_5Array<3Any>!6params=O1_i!7resType=$$",
+      type: 9,
+      mangledName: "_CN13ohos.resource11AppResource6<init>HRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiE",
+      exportId: "_CN13ohos.resource11AppResource6<init>HRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiE",
+      mangledBeforeSema: "13ohos.resource11AppResourceC6<init>F6String6StringjO1_5Array<3Any>!6params=O1_i!7resType=$$",
       hash: {
         instVar: 0,
         virt: 0,
@@ -1658,7 +1658,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE10bundleNameE",
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE10bundleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1705,7 +1705,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE10moduleNameE",
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE10moduleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1733,7 +1733,7 @@
         file: 1,
         pkgId: 0,
         line: 89,
-        column: 18,
+        column: 19,
         ignore: false
       },
       identifier: "id",
@@ -1751,8 +1751,8 @@
       annotations: [
 
       ],
-      type: 1,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE2idE",
+      type: 4,
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE2idE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1798,8 +1798,8 @@
       annotations: [
 
       ],
-      type: 4,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE6paramsIY8_E",
+      type: 5,
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE6paramsIY8_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1850,8 +1850,8 @@
       annotations: [
 
       ],
-      type: 9,
-      mangledName: "_CPI13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE6paramsHY3_Y3_i",
+      type: 10,
+      mangledName: "_CPI13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE6paramsHY3_Y3_j",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1878,7 +1878,7 @@
               ]
             }
           ],
-          retType: 4
+          retType: 5
         }
       }
     },
@@ -1915,7 +1915,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE8params.3HY3_Y3_iE10bundleNameE",
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE8params.3HY3_Y3_jE10bundleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1962,7 +1962,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE8params.3HY3_Y3_iE10moduleNameE",
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE8params.3HY3_Y3_jE10moduleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -1990,7 +1990,7 @@
         file: 1,
         pkgId: 0,
         line: 89,
-        column: 18,
+        column: 19,
         ignore: false
       },
       identifier: "id",
@@ -2008,8 +2008,8 @@
       annotations: [
 
       ],
-      type: 1,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE8params.3HY3_Y3_iE2idE",
+      type: 4,
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE8params.3HY3_Y3_jE2idE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2055,8 +2055,8 @@
       annotations: [
 
       ],
-      type: 7,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE7resTypeIiE",
+      type: 8,
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE7resTypeIiE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2107,8 +2107,8 @@
       annotations: [
 
       ],
-      type: 10,
-      mangledName: "_CPI13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE7resTypeHY3_Y3_iY6_",
+      type: 11,
+      mangledName: "_CPI13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE7resTypeHY3_Y3_jY6_",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2137,7 +2137,7 @@
               ]
             }
           ],
-          retType: 7
+          retType: 8
         }
       }
     },
@@ -2174,7 +2174,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_iY6_E10bundleNameE",
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_jY6_E10bundleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2221,7 +2221,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_iY6_E10moduleNameE",
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_jY6_E10moduleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2249,7 +2249,7 @@
         file: 1,
         pkgId: 0,
         line: 89,
-        column: 18,
+        column: 19,
         ignore: false
       },
       identifier: "id",
@@ -2267,8 +2267,8 @@
       annotations: [
 
       ],
-      type: 1,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_iY6_E2idE",
+      type: 4,
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_jY6_E2idE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2314,8 +2314,8 @@
       annotations: [
 
       ],
-      type: 4,
-      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_iNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_iY6_E6paramsIY8_E",
+      type: 5,
+      mangledName: "_CN13ohos.resource11AppResource4initHRNat6StringEY3_jNNat6OptionIRNat5ArrayICNat3AnyEEENNatY7_IiEE9resType.4HY3_Y3_jY6_E6paramsIY8_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -2365,7 +2365,7 @@
       annotations: [
 
       ],
-      type: 11,
+      type: 12,
       mangledName: "_CN13ohos.resource11AppResource6<init>HRNY_9CResourceE",
       exportId: "_CN13ohos.resource11AppResource6<init>HRNY_9CResourceE",
       mangledBeforeSema: "13ohos.resource11AppResourceC6<init>F9CResource$$",
@@ -2374,7 +2374,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 11073832274063685740
+        bodyHash: 347950111015705114
       },
       info_type: "FuncInfo",
       info: {
@@ -2411,7 +2411,7 @@
       end: {
         file: 1,
         pkgId: 0,
-        line: 138,
+        line: 134,
         column: 2,
         ignore: false
       },
@@ -2430,7 +2430,7 @@
       annotations: [
 
       ],
-      type: 12,
+      type: 13,
       mangledName: "_CN13ohos.resource9CResourceE",
       exportId: "_CN13ohos.resource9CResourceE",
       mangledBeforeSema: "13ohos.resource9CResourceS",
@@ -2487,7 +2487,7 @@
       annotations: [
 
       ],
-      type: 12,
+      type: 13,
       mangledName: "_CN13ohos.resource11AppResource4initHRNY_9CResourceEE3retE",
       exportId: "",
       mangledBeforeSema: "",
@@ -2534,7 +2534,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "",
       exportId: "_CN13ohos.resource9CResource10bundleNameK_E",
       mangledBeforeSema: "13ohos.resource9CResourceS10bundleNameV$$7CString",
@@ -2581,7 +2581,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "",
       exportId: "_CN13ohos.resource9CResource10moduleNameK_E",
       mangledBeforeSema: "13ohos.resource9CResourceS10moduleNameV$$7CString",
@@ -2628,7 +2628,7 @@
       annotations: [
 
       ],
-      type: 18,
+      type: 4,
       mangledName: "",
       exportId: "_CN13ohos.resource9CResource5resIdK_E",
       mangledBeforeSema: "13ohos.resource9CResourceS5resIdV$$j",
@@ -2660,7 +2660,7 @@
       end: {
         file: 1,
         pkgId: 0,
-        line: 130,
+        line: 126,
         column: 6,
         ignore: false
       },
@@ -2688,7 +2688,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 9887676664596477669
+        bodyHash: 10801829005926130309
       },
       info_type: "FuncInfo",
       info: {
@@ -2703,7 +2703,7 @@
               ]
             }
           ],
-          retType: 12
+          retType: 13
         }
       }
     },
@@ -2764,14 +2764,14 @@
       begin: {
         file: 1,
         pkgId: 0,
-        line: 132,
+        line: 128,
         column: 5,
         ignore: false
       },
       end: {
         file: 1,
         pkgId: 0,
-        line: 137,
+        line: 133,
         column: 6,
         ignore: false
       },
@@ -2779,7 +2779,7 @@
       identifierPos: {
         file: 1,
         pkgId: 0,
-        line: 132,
+        line: 128,
         column: 20,
         ignore: false
       },
@@ -2799,7 +2799,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 8057161774081486823
+        bodyHash: 15445976552308251730
       },
       info_type: "FuncInfo",
       info: {
@@ -3229,7 +3229,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "",
       exportId: "_CN13ohos.resource20NativeResourceObject10bundleNameK_E",
       mangledBeforeSema: "13ohos.resource20NativeResourceObjectS10bundleNameV$$7CString",
@@ -3277,7 +3277,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "",
       exportId: "_CN13ohos.resource20NativeResourceObject10moduleNameK_E",
       mangledBeforeSema: "13ohos.resource20NativeResourceObjectS10moduleNameV$$7CString",
@@ -3421,7 +3421,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "",
       exportId: "_CN13ohos.resource20NativeResourceObject13paramsJsonStrK_E",
       mangledBeforeSema: "13ohos.resource20NativeResourceObjectS13paramsJsonStrV$$7CString",
@@ -3541,7 +3541,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "_CN13ohos.resource20NativeResourceObject4initHkkiikE10bundleNameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -3588,7 +3588,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "_CN13ohos.resource20NativeResourceObject4initHkkiikE10moduleNameE",
       exportId: "",
       mangledBeforeSema: "",
@@ -3729,7 +3729,7 @@
       annotations: [
 
       ],
-      type: 17,
+      type: 18,
       mangledName: "_CN13ohos.resource20NativeResourceObject4initHkkiikE13paramsJsonStrE",
       exportId: "",
       mangledBeforeSema: "",
@@ -4029,7 +4029,7 @@
               ]
             }
           ],
-          retType: 18
+          retType: 4
         }
       }
     },
@@ -4365,7 +4365,7 @@
               ]
             }
           ],
-          retType: 18
+          retType: 4
         }
       }
     },
@@ -4925,7 +4925,7 @@
               ]
             }
           ],
-          retType: 18
+          retType: 4
         }
       }
     },
@@ -5035,14 +5035,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 88,
+        line: 92,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 102,
+        line: 110,
         column: 2,
         ignore: false
       },
@@ -5050,7 +5050,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 88,
+        line: 92,
         column: 16,
         ignore: false
       },
@@ -5070,7 +5070,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 4962482310496655646
+        bodyHash: 7575062981919758565
       },
       info_type: "FuncInfo",
       info: {
@@ -5095,14 +5095,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 88,
+        line: 92,
         column: 34,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 88,
+        line: 92,
         column: 50,
         ignore: false
       },
@@ -5110,7 +5110,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 88,
+        line: 92,
         column: 34,
         ignore: false
       },
@@ -5147,14 +5147,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 104,
+        line: 112,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 118,
+        line: 130,
         column: 2,
         ignore: false
       },
@@ -5162,7 +5162,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 104,
+        line: 112,
         column: 16,
         ignore: false
       },
@@ -5182,7 +5182,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 9084413115094717596
+        bodyHash: 1333432357568939345
       },
       info_type: "FuncInfo",
       info: {
@@ -5207,14 +5207,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 104,
+        line: 112,
         column: 33,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 104,
+        line: 112,
         column: 49,
         ignore: false
       },
@@ -5222,7 +5222,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 104,
+        line: 112,
         column: 33,
         ignore: false
       },
@@ -5259,14 +5259,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 120,
+        line: 132,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 133,
+        line: 150,
         column: 2,
         ignore: false
       },
@@ -5274,7 +5274,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 120,
+        line: 132,
         column: 16,
         ignore: false
       },
@@ -5294,7 +5294,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 6148186816758370141
+        bodyHash: 8449217197608455172
       },
       info_type: "FuncInfo",
       info: {
@@ -5319,14 +5319,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 120,
+        line: 132,
         column: 33,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 120,
+        line: 132,
         column: 49,
         ignore: false
       },
@@ -5334,7 +5334,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 120,
+        line: 132,
         column: 33,
         ignore: false
       },
@@ -5371,14 +5371,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 135,
+        line: 152,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 158,
+        line: 180,
         column: 2,
         ignore: false
       },
@@ -5386,7 +5386,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 135,
+        line: 152,
         column: 16,
         ignore: false
       },
@@ -5406,7 +5406,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 2796509935048936383
+        bodyHash: 8107323092196887221
       },
       info_type: "FuncInfo",
       info: {
@@ -5421,7 +5421,7 @@
               ]
             }
           ],
-          retType: 14
+          retType: 15
         }
       }
     },
@@ -5431,14 +5431,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 135,
+        line: 152,
         column: 34,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 135,
+        line: 152,
         column: 50,
         ignore: false
       },
@@ -5446,7 +5446,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 135,
+        line: 152,
         column: 34,
         ignore: false
       },
@@ -5483,14 +5483,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 163,
+        line: 185,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 178,
+        line: 200,
         column: 2,
         ignore: false
       },
@@ -5498,7 +5498,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 163,
+        line: 185,
         column: 16,
         ignore: false
       },
@@ -5518,7 +5518,7 @@
         virt: 0,
         sig: 2687969717096398320,
         srcUse: 0,
-        bodyHash: 1141735920038463259
+        bodyHash: 12733984918600691017
       },
       info_type: "FuncInfo",
       info: {
@@ -5543,14 +5543,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 163,
+        line: 185,
         column: 36,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 163,
+        line: 185,
         column: 58,
         ignore: false
       },
@@ -5558,7 +5558,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 163,
+        line: 185,
         column: 36,
         ignore: false
       },
@@ -5569,7 +5569,7 @@
       annotations: [
 
       ],
-      type: 4,
+      type: 5,
       mangledName: "_CN13ohos.resource19parseResourceParamsHNNat6OptionIRNat5ArrayICNat3AnyEEEE9paramsOptIY5_E",
       exportId: "",
       mangledBeforeSema: "",
@@ -5595,14 +5595,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 186,
+        line: 203,
         column: 1,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 210,
+        line: 227,
         column: 2,
         ignore: false
       },
@@ -5610,7 +5610,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 186,
+        line: 203,
         column: 13,
         ignore: false
       },
@@ -5628,15 +5628,15 @@
         }
       ],
       type: 42,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEi",
-      exportId: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEi",
-      mangledBeforeSema: "13ohos.resource20__GenerateResource__F6String6String6Stringi6String5Array<3Any>i$$11AppResource",
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEi",
+      exportId: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEi",
+      mangledBeforeSema: "13ohos.resource20__GenerateResource__F6String6String6Stringj6String5Array<3Any>i$$11AppResource",
       hash: {
         instVar: 0,
         virt: 0,
         sig: 14151301873218655650,
         srcUse: 0,
-        bodyHash: 1843996924998645230
+        bodyHash: 14319011120801382027
       },
       info_type: "FuncInfo",
       info: {
@@ -5673,14 +5673,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 187,
+        line: 204,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 187,
+        line: 204,
         column: 23,
         ignore: false
       },
@@ -5688,7 +5688,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 187,
+        line: 204,
         column: 5,
         ignore: false
       },
@@ -5700,7 +5700,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE10bundleNameE",
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE10bundleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5720,14 +5720,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 188,
+        line: 205,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 188,
+        line: 205,
         column: 23,
         ignore: false
       },
@@ -5735,7 +5735,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 188,
+        line: 205,
         column: 5,
         ignore: false
       },
@@ -5747,7 +5747,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE10moduleTypeE",
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE10moduleTypeE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5767,14 +5767,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 189,
+        line: 206,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 189,
+        line: 206,
         column: 23,
         ignore: false
       },
@@ -5782,7 +5782,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 189,
+        line: 206,
         column: 5,
         ignore: false
       },
@@ -5794,7 +5794,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE10moduleNameE",
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE10moduleNameE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5814,22 +5814,22 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 190,
+        line: 207,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 190,
-        column: 17,
+        line: 207,
+        column: 18,
         ignore: false
       },
       identifier: "resId",
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 190,
+        line: 207,
         column: 5,
         ignore: false
       },
@@ -5840,8 +5840,8 @@
       annotations: [
 
       ],
-      type: 1,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE5resIdE",
+      type: 4,
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE5resIdE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5861,14 +5861,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 191,
+        line: 208,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 191,
+        line: 208,
         column: 19,
         ignore: false
       },
@@ -5876,7 +5876,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 191,
+        line: 208,
         column: 5,
         ignore: false
       },
@@ -5888,7 +5888,7 @@
 
       ],
       type: 2,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE6resStrE",
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE6resStrE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5908,14 +5908,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 192,
+        line: 209,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 192,
+        line: 209,
         column: 23,
         ignore: false
       },
@@ -5923,7 +5923,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 192,
+        line: 209,
         column: 5,
         ignore: false
       },
@@ -5934,8 +5934,8 @@
       annotations: [
 
       ],
-      type: 5,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE6paramsIY7_E",
+      type: 6,
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE6paramsIY7_E",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -5955,14 +5955,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 193,
+        line: 210,
         column: 5,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 193,
+        line: 210,
         column: 19,
         ignore: false
       },
@@ -5970,7 +5970,7 @@
       identifierPos: {
         file: 2,
         pkgId: 0,
-        line: 193,
+        line: 210,
         column: 5,
         ignore: false
       },
@@ -5982,7 +5982,7 @@
 
       ],
       type: 1,
-      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_iY2_RNat5ArrayICNat3AnyEEiE7resTypeE",
+      mangledName: "_CN13ohos.resource20__GenerateResource__HRNat6StringEY2_Y2_jY2_RNat5ArrayICNat3AnyEEiE7resTypeE",
       exportId: "",
       mangledBeforeSema: "",
       hash: {
@@ -6003,14 +6003,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 180,
+        line: 87,
         column: 29,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 180,
+        line: 87,
         column: 34,
         ignore: false
       },
@@ -6025,14 +6025,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 181,
+        line: 88,
         column: 18,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 181,
+        line: 88,
         column: 23,
         ignore: false
       },
@@ -6048,14 +6048,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 182,
+        line: 89,
         column: 33,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 182,
+        line: 89,
         column: 59,
         ignore: false
       },
@@ -6071,14 +6071,14 @@
       begin: {
         file: 2,
         pkgId: 0,
-        line: 183,
+        line: 90,
         column: 33,
         ignore: false
       },
       end: {
         file: 2,
         pkgId: 0,
-        line: 183,
+        line: 90,
         column: 59,
         ignore: false
       },
