@@ -14,16 +14,18 @@
  */
 
 package ohos.ark_interop
+internal import ohos.labels.APILevel
 
-import ohos.business_exception.*
-internal import ohos.labels.*
-import std.collection.*
+internal import std.math.numeric.BigInt
+import ohos.business_exception.BusinessException
+import std.collection.{HashMap, EquatableCollection}
+import std.collection.HashMap
+import std.collection.{HashMap, ArrayList}
+import std.convert.Parsable
+import std.sync.{Mutex, AtomicInt8}
 import std.collection.ArrayList
-import std.convert.*
-internal import std.math.numeric.*
-import std.sync.*
-import std.sync.AtomicInt64
 import std.sync.Mutex
+import std.sync.AtomicInt64
 
 /**
  * Alias for function which is `(CPointer<Byte>) -> Unit`.
@@ -31,7 +33,7 @@ import std.sync.Mutex
 public type JSBufferFinalizer = (CPointer<Byte>) -> Unit
 
 /**
- * ArrayBuffer relative operation class, interop ArrayBuffer, DataView and TypedArrays	
+ * ArrayBuffer relative operation class, interop ArrayBuffer, DataView and TypedArrays.
  */
 @!APILevel[
     since: "22"
@@ -473,8 +475,8 @@ public class JSClass <: JSHeapObject {
      * Define a pair of getter and setter for the ArkTS class.
      *
      * @param { JSKeyable } key - Property key.
-     * @param { ?JSFunction } [getter] - Getter implementation. The default value is None.
-     * @param { ?JSFunction } [setter] - Setter implementation. The default value is None.
+     * @param { ?JSFunction } [ getter ] - Getter implementation. The default value is None.
+     * @param { ?JSFunction } [ setter ] - Setter implementation. The default value is None.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -489,8 +491,8 @@ public class JSClass <: JSHeapObject {
      * Define a pair of getter and setter for the ArkTS class.
      *
      * @param { JSKeyable } key - Property key.
-     * @param { ?JSLambda } [getter] - Getter implementation. The default value is None.
-     * @param { ?JSLambda } [setter] - Setter implementation. The default value is None.
+     * @param { ?JSLambda } [ getter ] - Getter implementation. The default value is None.
+     * @param { ?JSLambda } [ setter ] - Setter implementation. The default value is None.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -554,7 +556,7 @@ public open class SharedObject {
     @!APILevel[
         since: "22"
     ]
-    public prop nativeID: Int64
+    public prop nativeId: Int64
 }
 
 /**
@@ -657,7 +659,7 @@ public class JSFunction <: JSHeapObject {
     /**
      * An ArkTS function call with None argument.
      *
-     * @param { JSValue } [thisArg] - The `this` pointer. The default value is Undefined.
+     * @param { JSValue } [ thisArg ] - The `this` pointer. The default value is Undefined.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -673,7 +675,7 @@ public class JSFunction <: JSHeapObject {
      * An ArkTS function call with one argument.
      *
      * @param { JSValue } arg - ArkTS function call parameter.
-     * @param { JSValue } [thisArg] - ArkTS function call `this` pointer. The default value is Undefined.
+     * @param { JSValue } [ thisArg ] - ArkTS function call `this` pointer. The default value is Undefined.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -689,7 +691,7 @@ public class JSFunction <: JSHeapObject {
      * An ArkTS function call with multiple arguments.
      *
      * @param { Array<JSValue> } args - Parameter list.
-     * @param { JSValue } [thisArg] - The `this` pointer. The default value is Undefined.
+     * @param { JSValue } [ thisArg ] - The `this` pointer. The default value is Undefined.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -814,7 +816,7 @@ public class JSStringEx <: JSInteropType<JSStringEx> & Equatable<JSStringEx> & T
     public static func fromJSValue(context: JSContext, input: JSValue): JSStringEx
 
     /**
-     * Get corresponding ArkTS type name of JSStringEx.
+     * Get ArkTS type name of JSStringEx.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -997,7 +999,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     public static func fromJSValue(context: JSContext, input: JSValue): JSArrayEx<T>
 
     /**
-     * Get corresponding ArkTS type name of JSArrayEx<T>.
+     * Get ArkTS type name of JSArrayEx<T>.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1013,8 +1015,8 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
 @!APILevel[
     since: "22"
 ]
-public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JSKeyable & Hashable & Equatable<K> & JSInteropType<K>,
-    V <: JSInteropType<V> {
+public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JSKeyable & Hashable & Equatable<K> &
+    JSInteropType<K>, V <: JSInteropType<V> {
     /**
      * Init JSHashMapEx<K, V>.
      *
@@ -1060,7 +1062,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     public func clear(): Unit
 
     /**
-     * Clone JSHashMapEx<K, V>. A deep copy of JSHashMapEx<K, V> data will be peformed. 
+     * Clone JSHashMapEx<K, V>. A deep copy of JSHashMapEx<K, V> data will be peformed.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -1087,7 +1089,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     public func containsAll(keys: Collection<K>): Bool
 
     /**
-     * Check whether the size if empty. If yes, true is returned. Otherwise, false is returned.
+     * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -1305,7 +1307,7 @@ public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JS
     public static func fromJSValue(context: JSContext, input: JSValue): JSHashMapEx<K, V>
 
     /**
-     * Get corresponding ArkTS type name of JSHashMapEx<K, V>.
+     * Get ArkTS type name of JSHashMapEx<K, V>.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1408,7 +1410,7 @@ extend Int8 <: JSInteropType<Int8> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Int8.
+     * Get ArkTS type name of Int8.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1457,7 +1459,7 @@ extend Int16 <: JSInteropType<Int16> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Int16.
+     * Get ArkTS type name of Int16.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1506,7 +1508,7 @@ extend Int32 <: JSInteropType<Int32> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Int32.
+     * Get ArkTS type name of Int32.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1556,7 +1558,7 @@ extend Int64 <: JSInteropType<Int64> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Int64.
+     * Get ArkTS type name of Int64.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1605,7 +1607,7 @@ extend UInt8 <: JSInteropType<UInt8> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of UInt8.
+     * Get ArkTS type name of UInt8.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1654,7 +1656,7 @@ extend UInt16 <: JSInteropType<UInt16> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of UInt16.
+     * Get ArkTS type name of UInt16.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1705,7 +1707,7 @@ extend UInt32 <: JSInteropType<UInt32> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of UInt32.
+     * Get ArkTS type name of UInt32.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1755,7 +1757,7 @@ extend UInt64 <: JSInteropType<UInt64> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of UInt64.
+     * Get ArkTS type name of UInt64.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1803,7 +1805,7 @@ extend Float16 <: JSInteropType<Float16> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Float16.
+     * Get ArkTS type name of Float16.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1851,7 +1853,7 @@ extend Float32 <: JSInteropType<Float32> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Float32.
+     * Get ArkTS type name of Float32.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1899,7 +1901,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Float64.
+     * Get ArkTS type name of Float64.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1947,7 +1949,7 @@ extend Bool <: JSInteropType<Bool> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Bool.
+     * Get ArkTS type name of Bool.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -1981,7 +1983,7 @@ extend String <: JSInteropType<String> {
     public static func fromJSValue(_: JSContext, input: JSValue): String
 
     /**
-     * Get corresponding ArkTS type name of String.
+     * Get ArkTS type name of String.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -2015,7 +2017,7 @@ extend JSString <: JSInteropType<JSString> {
     public static func fromJSValue(_: JSContext, input: JSValue): JSString
 
     /**
-     * Get corresponding ArkTS type name of JSString.
+     * Get ArkTS type name of JSString.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -2059,7 +2061,7 @@ extend Unit <: JSInteropType<Unit> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Unit.
+     * Get ArkTS type name of Unit.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -2106,7 +2108,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Option<T>.
+     * Get ArkTS type name of Option<T>.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -2124,7 +2126,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
 ]
 extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     /**
-     * Init Int8 from JSValue.
+     * Convert JSValue to Array<T>.
      *
      * @param { JSContext } _ - ArkTS interoperability context.
      * @param { JSValue } input - The ArkTS unified type.
@@ -2156,7 +2158,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Get corresponding ArkTS type name of Array.
+     * Get ArkTS type name of Array.
      *
      * @returns { String } Converted ArkTS type name.
      */
@@ -2248,7 +2250,7 @@ public class JSPromise <: JSHeapObject {
      * Register result processing callback function.
      *
      * @param { JSFunction } onFulfilled - Result handling callback.
-     * @param { ?JSFunction } [onRejected] - Exception handling callback. The default value is None.
+     * @param { ?JSFunction } [ onRejected ] - Exception handling callback. The default value is None.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
@@ -2733,18 +2735,18 @@ public class JSValue {
     public func toString(): String
 
     /**
-     * Convert JSValue to UTF16String.
+     * Convert JSValue to Utf16String.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
-     * @returns { UTF16String } Returns An Cangjie UTF16String.
+     * @returns { Utf16String } Returns An Cangjie Utf16String.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func toUTF16String(): UTF16String
+    public func toUtf16String(): Utf16String
 
     /**
      * Convert JSValue to JSString. If the failure occurs, Exception will be throwed.
@@ -2789,7 +2791,7 @@ public class JSValue {
     public func asFunction(): JSFunction
 
     /**
-     * Conert JSValue to JSArray. If the failure occurs, Exception will be throwed.
+     * Convert JSValue to JSArray. If the failure occurs, Exception will be throwed.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3021,7 +3023,7 @@ public class JSValue {
 }
 
 /**
- * The ArkTS runtime created by Cangjie. 
+ * The ArkTS runtime created by Cangjie.
  */
 @!APILevel[
     since: "22"
@@ -3193,6 +3195,9 @@ public struct JSType {
 
     /**
      * Return true if and only if the two JSType are identical.
+     *
+     * @param { JSType } target - Target type for comparison.
+     * @returns { Bool } Returns true when the two types are equal.
      */
     @!APILevel[
         since: "22"
@@ -3201,6 +3206,9 @@ public struct JSType {
 
     /**
      * Return true if and only if the two JSType are not identical.
+     *
+     * @param { JSType } target - Target type for comparison.
+     * @returns { Bool } Returns true when the two types are not equal.
      */
     @!APILevel[
         since: "22"
@@ -3240,9 +3248,11 @@ public class JSArray <: JSHeapObject {
     /**
      * Get the element at index.
      *
+     * @param { Int64 } index - Input index, safe range: [0, input count).
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } - ArkTS unified type.
      */
     @!APILevel[
         since: "22",
@@ -3253,6 +3263,8 @@ public class JSArray <: JSHeapObject {
     /**
      * Set the element at index.
      *
+     * @param { Int64 } index - Write index.
+     * @param { JSValue } value - Value to write.
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3266,6 +3278,8 @@ public class JSArray <: JSHeapObject {
     /**
      * Set the element at index.
      *
+     * @param { Int64 } index - Write index.
+     * @param { JSHeapObject } [value] - Value to write.
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3428,7 +3442,7 @@ public class JSContext {
     /**
      * Create an ArkTS string.
      *
-     * @param { UTF16String } value - Cangjie UTF16 string.
+     * @param { Utf16String } value - Cangjie UTF16 string.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3438,7 +3452,7 @@ public class JSContext {
         since: "22",
         throwexception: true
     ]
-    public func string(value: UTF16String): JSString
+    public func string(value: Utf16String): JSString
 
     /**
      * Create an empty ArkTS object reference.
@@ -3457,7 +3471,7 @@ public class JSContext {
     /**
      * Create an ArkTS function.
      *
-     * @param { JSLambda } lambda - Cangjie lambda.
+     * @param { JSLambda } lambda - Cangjie function.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3488,8 +3502,8 @@ public class JSContext {
     /**
      * Create an ArkTS class.
      *
-     * @param { JSLambda } ctor - Cangjie function serving as the class.
-     * @param { ?JSClass } [superClass] - Named parameter. Parent class of the ArkTS class. The default value is None.
+     * @param { JSLambda } ctor - Cangjie function serving as the class constructor.
+     * @param { ?JSClass } [ superClass ] - Named parameter. Parent class of the ArkTS class. The default value is None.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3522,7 +3536,7 @@ public class JSContext {
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
-     * @returns { JSPromiseCapability } Returns Native reference to the ArkTS.
+     * @returns { JSPromiseCapability } Returns Native reference to the ArkTS promise.
      */
     @!APILevel[
         since: "22",
@@ -3532,7 +3546,7 @@ public class JSContext {
 
     /**
      * Create an ArkTS ArrayBuffer.
-	 *
+     *
      * @param { Int32 } length - Size of the memory block.
      * @throws { BusinessException } 34300001 - The arrayBuffer length is invalid.
      * @throws { BusinessException } 34300002 - Outside error occurred.
@@ -3698,7 +3712,7 @@ public class JSContext {
 
     /**
      * Create an ArkTS ArrayBuffer.
-	 *
+     *
      * @param { CPointer<Byte> } rawData - Memory block address.
      * @param { Int32 } length - Size of the memory block.
      * @param { JSBufferFinalizer } finalizer - Memory block cleanup function.
@@ -3717,7 +3731,7 @@ public class JSContext {
     /**
      * Create an ArkTS symbol.
      *
-     * @param { String } [description] - Named parameter. Description of the symbol. The default value is "".
+     * @param { String } [ description ] - Named parameter. Description of the symbol. The default value is "".
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3761,7 +3775,7 @@ public class JSContext {
 
     /**
      * Create a task to be executed in ArkTS thread.
-     * @param { () -> Unit } callback - Cangjie lambda.
+     * @param { () -> Unit } callback - Task to be executed on the ArkTS thread.
      */
     @!APILevel[
         since: "22"
@@ -3772,7 +3786,7 @@ public class JSContext {
      * Load the built-in ArkTS napi module of the system.
      *
      * @param { String } moduleName - Registered name of the ArkTS napi module.
-     * @param { ?String } [prefix] - Named parameter. Archive directory of the ArkTS napi module. Can be omitted if under /system/lib64/module; otherwise, specify the subdirectory name. The default value is None.
+     * @param { ?String } [ prefix ] - Named parameter. Archive directory of the ArkTS napi module. Can be omitted if under /system/lib64/module; otherwise, specify the subdirectory name. The default value is None.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3793,7 +3807,7 @@ public class JSContext {
 ]
 abstract sealed class JSObjectBase <: JSHeapObject {
     /**
-     * Check whether the current object is an instance of the target ArkTS class. 
+     * Check whether the current object is an instance of the target ArkTS class.
      *
      * @param { JSClass } clazz - Target ArkTS class.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
@@ -3807,7 +3821,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func instanceOf(clazz: JSClass): Bool
 
     /**
-     * Check whether the current object has the target property. 
+     * Check whether the current object has the target property.
      *
      * @param { JSKeyable } key - Target key.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
@@ -3821,7 +3835,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func hasProperty(key: JSKeyable): Bool
 
     /**
-     * Get the property value of the current object. 
+     * Get the property value of the current object.
      *
      * @param { JSKeyable } key - The property key, which can be a String, JSString, or JSSymbol.
      * @throws { BusinessException } 34300002 - Outside error occurred.
@@ -3836,11 +3850,13 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func getProperty(key: JSKeyable): JSValue
 
     /**
-     * Get the property value of the current object. 
+     * Get the property value of the current object.
      *
+     * @param { JSKeyable } key - Target key.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } Retrieved value.
      */
     @!APILevel[
         since: "22",
@@ -3850,7 +3866,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
 
     /**
      * Call method corressponding to the key of the JSObject.
-	 *
+     *
      * @param { JSKeyable } key - Target method name.
      * @param { Array<JSValue> } args - Argument list for the call.
      * @throws { BusinessException } 34300002 - Outside error occurred.
@@ -3880,8 +3896,10 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func setProperty(key: JSKeyable, setValue: JSValue): Unit
 
     /**
-     * Set property to the current object. 
+     * Set property to the current object.
      *
+     * @param { JSKeyable } key - Target key.
+     * @param { JSValue } value - Target value.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3893,13 +3911,13 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public operator func [](key: JSKeyable, value!: JSValue): Unit
 
     /**
-     * Define property on the current object. 
+     * Define property on the current object.
      *
      * @param { JSKeyable } key - Target key.
      * @param { JSValue } setValue - Target value.
-     * @param { Bool } [isWritable] - Named parameter. Whether writable. The default value is True.
-     * @param { Bool } [isEnumerable] - Named parameter. Whether enumerable. The default value is True.
-     * @param { Bool } [isConfigurable] - Named parameter. Whether redefinable. The default value is True.
+     * @param { Bool } [ isWritable ] - Named parameter. Whether writable. The default value is True.
+     * @param { Bool } [ isEnumerable ] - Named parameter. Whether enumerable. The default value is True.
+     * @param { Bool } [ isConfigurable ] - Named parameter. Whether redefinable. The default value is True.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3913,13 +3931,13 @@ abstract sealed class JSObjectBase <: JSHeapObject {
         isEnumerable!: Bool = true, isConfigurable!: Bool = true): Bool
 
     /**
-     * Define accessor on the current object. 
+     * Define accessor on the current object.
      *
      * @param { JSKeyable } key - Target key.
-     * @param { ?JSFunction } [getter] - Named parameter. Getter implementation.  The default value is None.
-     * @param { ?JSFunction } [setter] - Named parameter. Setter implementation. The default value is None.
-     * @param { Bool } [isEnumerable] - Named parameter. Whether enumerable. The default value is False.
-     * @param { Bool } [isConfigurable] - Named parameter. Whether redefinable. The default value is False.
+     * @param { ?JSFunction } [ getter ] - Named parameter. Getter implementation.  The default value is None.
+     * @param { ?JSFunction } [ setter ] - Named parameter. Setter implementation. The default value is None.
+     * @param { Bool } [ isEnumerable ] - Named parameter. Whether enumerable. The default value is False.
+     * @param { Bool } [ isConfigurable ] - Named parameter. Whether redefinable. The default value is False.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3933,13 +3951,13 @@ abstract sealed class JSObjectBase <: JSHeapObject {
         isEnumerable!: Bool = false, isConfigurable!: Bool = false): Bool
 
     /**
-     * Define accessor on the current object. 
+     * Define accessor on the current object.
      *
      * @param { JSKeyable } key - Target key.
-     * @param { ?JSLambda } [getter] - Named parameter. Getter implementation. The default value is None.
-     * @param { ?JSLambda } [setter] - Named parameter. Setter implementation. The default value is None.
-     * @param { Bool } [isEnumerable] - Named parameter. Whether enumerable. The default value is False.
-     * @param { Bool } [isConfigurable] - Named parameter. Whether redefinable. The default value is False.
+     * @param { ?JSLambda } [ getter ] - Named parameter. Getter implementation. The default value is None.
+     * @param { ?JSLambda } [ setter ] - Named parameter. Setter implementation. The default value is None.
+     * @param { Bool } [ isEnumerable ] - Named parameter. Whether enumerable. The default value is False.
+     * @param { Bool } [ isConfigurable ] - Named parameter. Whether redefinable. The default value is False.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3953,7 +3971,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
         isEnumerable!: Bool = false, isConfigurable!: Bool = false): Bool
 
     /**
-     * Get all property names of the current object. 
+     * Get all property names of the current object.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -3966,7 +3984,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func keys(): Array<String>
 
     /**
-     * Attach target JSExternal to the current object. 
+     * Attach target JSExternal to the current object.
      *
      * @param { JSExternal } target - ArkTS reference to the Cangjie object.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
@@ -3979,7 +3997,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func attachCJObject(target: JSExternal): Unit
 
     /**
-     * Get the target JSExternal attached to the current object. 
+     * Get the target JSExternal attached to the current object.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
@@ -4007,6 +4025,12 @@ public class JSObject <: JSObjectBase {}
     since: "22"
 ]
 public interface ToJSValue {
+    /**
+     * Converts Cangjie type data to JSValue.
+     *
+     * @param { JSContext } context - ArkTS interoperation context.
+     * @returns { JSValue } ArkTS unified type.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -4046,7 +4070,7 @@ extend String <: JSKeyable {
 
 /**
  * The JSString object is used to represent a secure reference to the ArkTS string.
- * It can be converted to Cangjie String and UTF16String.
+ * It can be converted to Cangjie String and Utf16String.
  */
 @!APILevel[
     since: "22"
@@ -4080,17 +4104,17 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
     public func toString(): String
 
     /**
-     * Convert JSString to UTF16String.
+     * Convert JSString to Utf16String.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
-     * @returns { UTF16String } Cangjie UTF16 String.
+     * @returns { Utf16String } Cangjie UTF16 String.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func toUTF16String(): UTF16String
+    public func toUtf16String(): Utf16String
 }
 
 /**
@@ -4099,17 +4123,17 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
 @!APILevel[
     since: "22"
 ]
-public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKeyable & JSInteropType<UTF16String> {
+public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKeyable & JSInteropType<Utf16String> {
     /**
      * Empty String.
      */
     @!APILevel[
         since: "22"
     ]
-    public static let EMPTY: Utf16String = UTF16String(unsafe { CJUTF16StringCreateEmpty() })
+    public static let EMPTY: Utf16String = Utf16String(unsafe { CJUtf16StringCreateEmpty() })
 
     /**
-     * Init UTF16String.
+     * Init Utf16String.
      *
      * @param { String } src - Cangjie String.
      * @throws { BusinessException } 34300002 - Outside error occurred.
@@ -4139,7 +4163,7 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
     public prop accessible: Bool
 
     /**
-     * Convert UTF16String to String.
+     * Convert Utf16String to String.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { String } Cangjie String.
@@ -4151,9 +4175,9 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
     public func toString(): String
 
     /**
-     * Compare the relationship between this UTF16String and another UTF16String.
+     * Compare the relationship between this Utf16String and another Utf16String.
      *
-     * @param { UTF16String } target - The Utf16String object to compare.
+     * @param { Utf16String } target - The Utf16String object to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Ordering } The comparison result.
      */
@@ -4161,21 +4185,23 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func compare(target: UTF16String): Ordering
+    public func compare(target: Utf16String): Ordering
 
     /**
-     * Check whether the current UTF16String is euqal to `target`.
+     * Check whether the current Utf16String is euqal to `target`.
      *
+     * @param { Utf16String } target - Target string to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Bool } Returns true if the strings are equal, otherwise false.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func ==(target: UTF16String): Bool
+    public operator func ==(target: Utf16String): Bool
 
     /**
-     * Get the hash value of the current UTF16String.
+     * Get the hash value of the current Utf16String.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Int64 } Hash Code.
@@ -4209,7 +4235,7 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
     public prop totalChars: Int64
 
     /**
-     * Check whether the size if empty. If yes, true is returned. Otherwise, false is returned.
+     * Check whether the size is empty. If yes, true is returned. Otherwise, false is returned.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Bool } Check if is Empty.
@@ -4232,63 +4258,75 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
     /**
      * Return true if and only if the two string are not identical.
      *
+     * @param { Utf16String } target - Target string to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Bool } Returns true if the strings are not equal, otherwise false.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func !=(target: UTF16String): Bool
+    public operator func !=(target: Utf16String): Bool
 
     /**
      * Return true if and only if the current string is greater than the target string.
      *
+     * @param { Utf16String } target - Target string to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Bool } Returns true if the string is greater than the target string, otherwise false.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func >(target: UTF16String): Bool
+    public operator func >(target: Utf16String): Bool
 
     /**
      * Return true if and only if the current string is greater than or equal to the target string.
      *
+     * @param { Utf16String } target - Target string to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Bool } Returns true if the string is greater than or equal to the target string, otherwise false.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func >=(target: UTF16String): Bool
+    public operator func >=(target: Utf16String): Bool
 
     /**
      * Return true if and only if the current string is less than the target string.
      *
+     * @param { Utf16String } target - Target string to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Bool } Returns true if the string is less than the target string, otherwise false.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func <(target: UTF16String): Bool
+    public operator func <(target: Utf16String): Bool
 
     /**
      * Return true if and only if the current string is less than or equal to the target string.
      *
+     * @param { Utf16String } target - Target string to compare.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Bool } Returns true if the string is less than or equal to the target string, otherwise false.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func <=(target: UTF16String): Bool
+    public operator func <=(target: Utf16String): Bool
 
     /**
      * Get the element at index.
      *
+     * @param { Int64 } index - Index.
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { UInt16 } Retrieved character.
      */
     @!APILevel[
         since: "22",
@@ -4299,14 +4337,16 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
     /**
      * Get the string at the specified range.
      *
+     * @param { Range<Int64> } range - Range to extract.
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Utf16String } Extracted Utf16String substring.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func [](range: Range<Int64>): UTF16String
+    public operator func [](range: Range<Int64>): Utf16String
 
     /**
      * Return rune iterator of the string.
@@ -4324,18 +4364,18 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
      * Return line Iterator of the string.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
-     * @returns { Iterator<UTF16String> } An iterator of lines.
+     * @returns { Iterator<Utf16String> } An iterator of lines.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func lines(): Iterator<UTF16String>
+    public func lines(): Iterator<Utf16String>
 
     /**
      * Search backward for the position of the target string.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { ?Int64 } Returns the index of the first occurrence of the target string, or None if not found.
      */
@@ -4343,12 +4383,12 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func indexOf(target: UTF16String): ?Int64
+    public func indexOf(target: Utf16String): ?Int64
 
     /**
      * Search backward from the index for the position of the target string.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @param { Int64 } fromIndex - The starting position for the search in the current string. Default is 0.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { ?Int64 } Returns the index of the first occurrence of the target string, or None if not found.
@@ -4357,12 +4397,12 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func indexOf(target: UTF16String, fromIndex: Int64): ?Int64
+    public func indexOf(target: Utf16String, fromIndex: Int64): ?Int64
 
     /**
      * Search forward for the position of the target string.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { ?Int64 } Returns the index of the first occurrence of the target string, or None if not found.
      */
@@ -4370,12 +4410,12 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func lastIndexOf(target: UTF16String): ?Int64
+    public func lastIndexOf(target: Utf16String): ?Int64
 
     /**
      * Search forward from the index for the position of the target string.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @param { Int64 } fromIndex - The starting position for the search in the current string. Default is the string size.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { ?Int64 } Returns the index of the first occurrence of the target string, or None if not found.
@@ -4384,12 +4424,12 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func lastIndexOf(target: UTF16String, fromIndex: Int64): ?Int64
+    public func lastIndexOf(target: Utf16String, fromIndex: Int64): ?Int64
 
     /**
      * Return the number of occurrences of the given substring `src` in the string.
      *
-     * @param { UTF16String } src - The target string.
+     * @param { Utf16String } src - The target string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Int64 } The number of occurrences of the target string.
      */
@@ -4397,87 +4437,87 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func count(src: UTF16String): Int64
+    public func count(src: Utf16String): Int64
 
     /**
      * Split the string.
      *
-     * @param { UTF16String } separator - Separator. When the separator is an empty string, each character is treated as a separate element.
-     * @param { Bool } [remoteEmpty] - Whether to remove empty elements. The default value is false.
+     * @param { Utf16String } separator - Separator. When the separator is an empty string, each character is treated as a separate element.
+     * @param { Bool } [ remoteEmpty ] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
-     * @returns { Array<UTF16String> } Array of split elements.
+     * @returns { Array<Utf16String> } Array of split elements.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func split(separator: UTF16String, remoteEmpty!: Bool = false): Array<UTF16String>
+    public func split(separator: Utf16String, remoteEmpty!: Bool = false): Array<Utf16String>
 
     /**
      * Split the string.
      *
-     * @param { UTF16String } separator - Separator. When the separator is an empty string, each character is treated as a separate element.
+     * @param { Utf16String } separator - Separator. When the separator is an empty string, each character is treated as a separate element.
      * @param { Int64 } maxSplit - Maximum number of splits. 0 means no limit.
      * @param { Bool } [remoteEmpty] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
-     * @returns { Array<UTF16String> } Array of split elements.
+     * @returns { Array<Utf16String> } Array of split elements.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func split(separator: UTF16String, maxSplit: Int64, remoteEmpty!: Bool = false): Array<UTF16String>
+    public func split(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Array<Utf16String>
 
     /**
      * Lazy split the string.
      *
-     * @param { UTF16String } separator - The separator. If the separator is an empty string, each character is treated as a separate element.
-     * @param { Bool } [remoteEmpty] - Whether to remove empty elements. The default value is false.
+     * @param { Utf16String } separator - The separator. If the separator is an empty string, each character is treated as a separate element.
+     * @param { Bool } [ remoteEmpty ] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
-     * @returns { Iterator<UTF16String> } An iterator of the split elements.
+     * @returns { Iterator<Utf16String> } An iterator of the split elements.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func lazySplit(separator: UTF16String, remoteEmpty!: Bool = false): Iterator<UTF16String>
+    public func lazySplit(separator: Utf16String, remoteEmpty!: Bool = false): Iterator<Utf16String>
 
     /**
      * Lazy split the string.
      *
-     * @param { UTF16String } separator - The separator. If the separator is an empty string, each character is treated as a separate element.
+     * @param { Utf16String } separator - The separator. If the separator is an empty string, each character is treated as a separate element.
      * @param { Int64 } maxSplit - The maximum number of splits. 0 means no limit.
-     * @param { Bool } [remoteEmpty] - Whether to remove empty elements. The default value is false.
+     * @param { Bool } [ remoteEmpty ] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
-     * @returns { Iterator<UTF16String> } An iterator of the split elements.
+     * @returns { Iterator<Utf16String> } An iterator of the split elements.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public func lazySplit(separator: UTF16String, maxSplit: Int64, remoteEmpty!: Bool = false): Iterator<UTF16String>
+    public func lazySplit(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Iterator<Utf16String>
 
     /**
      * Return a string which is result of replacing occurrences of `old` in the string with `new`.
      *
-     * @param { UTF16String } old - The element to be replaced.
-     * @param { UTF16String } new - The replacement element.
-     * @param { Int64 } count - The number of replacements.
+     * @param { Utf16String } old - The element to be replaced.
+     * @param { Utf16String } new - The replacement element.
+     * @param { Int64 } [ count ] - The number of replacements.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
-     * @returns { UTF16String } The replaced string.
+     * @returns { Utf16String } The replaced string.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
     @OverflowWrapping
-    public func replace(old: UTF16String, new: UTF16String, count!: Int64 = Int64.Max): UTF16String
+    public func replace(old: Utf16String, new: Utf16String, count!: Int64 = Int64.Max): Utf16String
 
     /**
      * Return true if and only if the current string contains the target string.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Bool } Whether the target string is contained.
      */
@@ -4485,12 +4525,12 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func contains(target: UTF16String): Bool
+    public func contains(target: Utf16String): Bool
 
     /**
      * Return true if and only if this string starts with the given `target`.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Bool } Returns true if the string starts with the target string, otherwise false.
      */
@@ -4498,12 +4538,12 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func startsWith(target: UTF16String): Bool
+    public func startsWith(target: Utf16String): Bool
 
     /**
      * Return true if and only if this string ends with the given `target`.
      *
-     * @param { UTF16String } target - The target string.
+     * @param { Utf16String } target - The target string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Bool } Whether the string ends with the target string.
      */
@@ -4511,21 +4551,23 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func endsWith(target: UTF16String): Bool
+    public func endsWith(target: Utf16String): Bool
 
     /**
      * Return s string which is the result of concatenating `left` and `right`.
      *
+     * @param { Utf16String } right - Target string to concatenate.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @returns { Utf16String } Concatenated string.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public operator func +(right: UTF16String): UTF16String
+    public operator func +(right: Utf16String): Utf16String
 
     /**
-     * Convert UTF16String to JSValue.
+     * Convert Utf16String to JSValue.
      *
      * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
@@ -4539,23 +4581,23 @@ public class UTF16String <: ToString & Equatable<UTF16String> & Hashable & JSKey
     public func toJSValue(context: JSContext): JSValue
 
     /**
-     * Create an UTF16String from JSValue.
+     * Create an Utf16String from JSValue.
      *
      * @param { JSContext } _ - ArkTS interop context.
      * @param { JSValue } value - ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
-     * @returns { UTF16String } Cangjie UTF16String.
+     * @returns { Utf16String } Cangjie Utf16String.
      */
     @!APILevel[
         since: "22",
         throwexception: true
     ]
-    public static func fromJSValue(_: JSContext, value: JSValue): UTF16String
+    public static func fromJSValue(_: JSContext, value: JSValue): Utf16String
 
     /**
-     * Get ArkTS type name of UTF16String.
+     * Get ArkTS type name of Utf16String.
      * @returns { String } Cangjie String.
      */
     @!APILevel[
