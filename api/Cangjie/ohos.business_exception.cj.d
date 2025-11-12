@@ -29,28 +29,28 @@ import ohos.labels.APILevel
 ]
 public class BusinessException <: Exception {
     /**
-    * Defines the basic error code.
-    */
+     * Defines the basic error code.
+     */
     @!APILevel[
         since: "22"
     ]
     public let code: Int32
     
     /**
-    * Defines the additional information for business
-    *
-    * @returns { ?T } Return the business value.
-    */
+     * Defines the additional information for business.
+     *
+     * @returns { ?T } Return the business value.
+     */
     @!APILevel[
         since: "22"
     ]
     public func getData<T>(): ?T
     
     /**
-    * Translate the exception to String.
-    *
-    * @returns { String } String representation of the exception.
-    */
+     * Translate the exception to String.
+     *
+     * @returns { String } String representation of the exception.
+     */
     @!APILevel[
         since: "22"
     ]
@@ -60,8 +60,5 @@ public class BusinessException <: Exception {
 /**
  * Defines the basic async callback.
  */
-@!APILevel[
-    since: "22"
-]
 public type AsyncCallback<T> = (Option<BusinessException>, Option<T>) -> Unit
 

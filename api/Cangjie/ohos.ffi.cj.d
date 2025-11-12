@@ -13,14 +13,10 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 package ohos.ffi
-import std.collection.*
 
-import ohos.hilog.*
+import ohos.hilog.HilogChannel
 import std.collection.HashMap
-import std.math.*
-import std.sync.*
+import std.sync.Mutex
 
 

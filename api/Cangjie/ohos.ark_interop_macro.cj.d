@@ -13,20 +13,26 @@
  * limitations under the License.
  */
 
-// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file of the relevant cangjie wrapper repository.
-
 macro package ohos.ark_interop_macro
-import std.ast.*
-import std.collection.*
-import std.fs.*
-import std.sync.*
-import std.process.*
-import std.io.*
-import std.regex.*
-import std.env.*
+import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex}
+import std.collection.{ArrayList, HashSet, HashMap, forEach}
+import std.fs.{FileInfo, Path, FSException, File, Directory, OpenMode}
+import std.sync.Mutex
+import std.io.readToEnd
+import std.regex.{Regex, RegexFlag}
+import std.env.{getVariable, getHomeDirectory}
 
-import std.core.*
-import std.time.*
+import std.ast.{Decl, FuncDecl, PrimaryCtorDecl, VarDecl, PropDecl, Token, Tokens, ClassDecl, TypeNode, FuncParam, TokenKind, setItem, getChildMessages, ToTokens}
+import std.collection.ArrayList
+import std.ast.{Expr, Tokens, Token, FuncType, TypeNode, TokenKind, parseExprFragment, parseExpr, FuncParam, Decl, diagReport, DiagReportLevel, ToTokens}
+import std.time.DateTime
+import std.fs.{Path, FSException, exists, Directory, File, OpenMode}
+import std.io.{SeekPosition, readToEnd}
+import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens}
+import std.collection.{ArrayList, HashMap}
+import std.ast.{Tokens, ClassDecl, InterfaceDecl, FuncDecl, Decl, parseDecl, assertParentContext}
+import std.ast.{FuncDecl, Token, Tokens, FuncParam, TypeNode, TokenKind, ToTokens}
+import std.ast.{Token, Tokens, FuncDecl, PropDecl, InterfaceDecl, ToTokens}
 
 public macro Interop(attrTokens: Tokens, input: Tokens): Tokens
 
